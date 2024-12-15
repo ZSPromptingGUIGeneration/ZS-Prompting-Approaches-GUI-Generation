@@ -6,4 +6,4 @@ The supplementary material of our paper "Zero-Shot Prompting Approaches for LLM-
 - **evaluation**: This directory contains scripts used to compute the main evaluation results and statistical test. In addition, it also contains the box plots and test result data
 - **notebooks**: This directory contains the jupyter notebooks containing *(1)* the code for sampling the Rico GUI dataset used to create the descriptions, *(2)* the code for creating the description test dataset, *(3)* the code to conduct the *SentenceBERT*-based top-20 retrieval on the test dataset, *(4)* the ZS prompting approaches for LLM-based GUI re-ranking and filtering, *(5)* the ZS prompting approaches for the baselines, PDGG and RAGG, *(6)* the ZS prompting approaches for the SCGG, *(7)* the ZS prompting approaches for GUI content generation, *(8)* the code for constructing the final evaluation dataset and *(9)* the code for the LLM-based GUI relevance filtering evaluation
 
-<img src="" width="100%">
+<img src="https://raw.githubusercontent.com/ZSPromptingGUIGeneration/ZS-Prompting-Approaches-GUI-Generation/refs/heads/main/datasets/materials/prompting_approaches.png" width="100%">
