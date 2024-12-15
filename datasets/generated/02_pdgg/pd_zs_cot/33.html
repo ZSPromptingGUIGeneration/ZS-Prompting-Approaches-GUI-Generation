@@ -1,0 +1,148 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Buy Items
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .content {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .item-card {
+      margin: 10px;
+    }
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <nav>
+   <div class="nav-wrapper">
+    <form>
+     <div class="input-field">
+      <input id="search" required="" type="search"/>
+      <label class="label-icon" for="search">
+       <i class="material-icons">
+        search
+       </i>
+      </label>
+      <i class="material-icons">
+       close
+      </i>
+     </div>
+    </form>
+   </div>
+  </nav>
+  <!-- Main Content -->
+  <div class="content">
+   <div class="container">
+    <!-- Category and Location -->
+    <div class="row">
+     <div class="input-field col s8">
+      <select>
+       <option disabled="" selected="" value="">
+        Choose category
+       </option>
+       <option value="1">
+        Electronics
+       </option>
+       <option value="2">
+        Furniture
+       </option>
+       <option value="3">
+        Clothing
+       </option>
+      </select>
+      <label>
+       Category
+      </label>
+     </div>
+     <div class="col s4">
+      <a class="btn-floating btn-large waves-effect waves-light red">
+       <i class="material-icons">
+        location_on
+       </i>
+      </a>
+     </div>
+    </div>
+    <!-- Suggestions List -->
+    <div class="row">
+     <div class="col s12">
+      <div class="card item-card">
+       <div class="card-image">
+        <img src=""/>
+        <span class="card-title">
+         Item Title
+        </span>
+       </div>
+       <div class="card-content">
+        <p>
+         Short description of the item.
+        </p>
+        <p>
+         <strong>
+          $Price
+         </strong>
+        </p>
+       </div>
+      </div>
+     </div>
+     <!-- Repeat the above card for each item -->
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <footer class="page-footer">
+   <div class="container">
+    <div class="row">
+     <div class="col s4 center-align">
+      <a href="#">
+       <i class="material-icons">
+        home
+       </i>
+       <br/>
+       Home
+      </a>
+     </div>
+     <div class="col s4 center-align">
+      <a href="#">
+       <i class="material-icons">
+        person
+       </i>
+       <br/>
+       Profile
+      </a>
+     </div>
+     <div class="col s4 center-align">
+      <a href="#">
+       <i class="material-icons">
+        settings
+       </i>
+       <br/>
+       Settings
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems);
+    });
+  </script>
+ </body>
+</html>
+<!-- End -->

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Finder
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            overflow: hidden;
+            width: calc(50% - 20px);
+            max-width: 300px;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe-card h3 {
+            margin: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .recipe-card {
+                width: calc(100% - 20px);
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="recipe-card">
+    <img alt="Recipe 1" src=""/>
+    <h3>
+     Delicious Pasta
+    </h3>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe 2" src=""/>
+    <h3>
+     Hearty Salad
+    </h3>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe 3" src=""/>
+    <h3>
+     Grilled Chicken
+    </h3>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe 4" src=""/>
+    <h3>
+     Chocolate Cake
+    </h3>
+   </div>
+  </div>
+ </body>
+</html>

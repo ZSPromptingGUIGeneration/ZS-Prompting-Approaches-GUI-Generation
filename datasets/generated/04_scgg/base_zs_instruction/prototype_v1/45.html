@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Settings
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+        .header {
+            background-color: #6200ea;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .section-header {
+            font-size: 20px;
+            margin: 20px 0 10px;
+            color: #6200ea;
+        }
+        .option {
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .option:last-child {
+            border-bottom: none;
+        }
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+        .option h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .option p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .option .toggle {
+            display: flex;
+            align-items: center;
+        }
+        .option input[type="checkbox"] {
+            width: 40px;
+            height: 20px;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #ddd;
+            outline: none;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option input[type="checkbox"]:checked {
+            background-color: #6200ea;
+        }
+        .option input[type="checkbox"]::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #fff;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s;
+        }
+        .option input[type="checkbox"]:checked::before {
+            transform: translateX(20px);
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .save-btn {
+            background-color: #6200ea;
+            color: #fff;
+        }
+        .cancel-btn {
+            background-color: #ddd;
+            color: #333;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Settings
+    </h1>
+   </div>
+   <div class="section-header">
+    General
+   </div>
+   <div class="option">
+    <div>
+     <h2>
+      Notifications
+     </h2>
+     <p>
+      Receive notifications for updates and offers
+     </p>
+    </div>
+    <div class="toggle">
+     <input checked="" type="checkbox"/>
+    </div>
+   </div>
+   <div class="option">
+    <div>
+     <h2>
+      Auto-Update
+     </h2>
+     <p>
+      Automatically update the application
+     </p>
+    </div>
+    <div class="toggle">
+     <input checked="" type="checkbox"/>
+    </div>
+   </div>
+   <div class="section-header">
+    Appearance
+   </div>
+   <div class="option">
+    <div>
+     <h2>
+      Dark Mode
+     </h2>
+     <p>
+      Enable dark theme for the application
+     </p>
+    </div>
+    <div class="toggle">
+     <input type="checkbox"/>
+    </div>
+   </div>
+   <div class="option">
+    <div>
+     <h2>
+      Text Size
+     </h2>
+     <p>
+      Adjust the text size for better readability
+     </p>
+    </div>
+    <div class="toggle">
+     <input type="checkbox"/>
+    </div>
+   </div>
+   <div class="section-header">
+    Privacy
+   </div>
+   <div class="option">
+    <div>
+     <h2>
+      Location Access
+     </h2>
+     <p>
+      Allow the application to access your location
+     </p>
+    </div>
+    <div class="toggle">
+     <input type="checkbox"/>
+    </div>
+   </div>
+   <div class="buttons">
+    <button class="cancel-btn">
+     Cancel
+    </button>
+    <button class="save-btn">
+     Save
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

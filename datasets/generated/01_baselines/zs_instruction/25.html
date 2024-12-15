@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Healthy Recipes Search
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-left: 0;
+            background-color: #28a745;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .category {
+            flex: 1 1 calc(50% - 10px);
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .category h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search for recipes..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <div class="categories">
+    <div class="category">
+     <img alt="Breakfast" src=""/>
+     <h3>
+      Breakfast
+     </h3>
+    </div>
+    <div class="category">
+     <img alt="Lunch" src=""/>
+     <h3>
+      Lunch
+     </h3>
+    </div>
+    <div class="category">
+     <img alt="Dinner" src=""/>
+     <h3>
+      Dinner
+     </h3>
+    </div>
+    <div class="category">
+     <img alt="Snacks" src=""/>
+     <h3>
+      Snacks
+     </h3>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Language Learning App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .search-bar img {
+            width: 20px;
+            height: 20px;
+        }
+        .filter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .filter button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .phrase-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .phrase-card h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .phrase-card p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .phrase-card .phonetic {
+            color: #888;
+        }
+        .phrase-card .audio-icon, .phrase-card .star-icon {
+            position: absolute;
+            top: 20px;
+            cursor: pointer;
+        }
+        .phrase-card .audio-icon {
+            right: 50px;
+        }
+        .phrase-card .star-icon {
+            right: 20px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .progress-bar div {
+            height: 10px;
+            background-color: #007bff;
+            width: 50%; /* Example progress */
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-top: 1px solid #ddd;
+        }
+        .navigation img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .feedback {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .feedback button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .feedback button img {
+            width: 20px;
+            height: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search phrases..." type="text"/>
+    <img alt="Search" src=""/>
+   </div>
+   <div class="filter">
+    <button>
+     All
+    </button>
+    <button>
+     Travel
+    </button>
+    <button>
+     Food
+    </button>
+    <button>
+     Basics
+    </button>
+   </div>
+   <div class="progress-bar">
+    <div>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <h2>
+     Hola
+    </h2>
+    <p>
+     Hello
+    </p>
+    <p class="phonetic">
+     /oˈla/
+    </p>
+    <img alt="Audio" class="audio-icon" src=""/>
+    <img alt="Star" class="star-icon" src=""/>
+    <div class="feedback">
+     <button>
+      <img alt="Thumbs Up" src=""/>
+     </button>
+     <button>
+      <img alt="Thumbs Down" src=""/>
+     </button>
+    </div>
+   </div>
+   <!-- Repeat .phrase-card for more phrases -->
+  </div>
+  <div class="navigation">
+   <img alt="Back" src=""/>
+   <img alt="Home" src=""/>
+   <img alt="Forward" src=""/>
+  </div>
+ </body>
+</html>

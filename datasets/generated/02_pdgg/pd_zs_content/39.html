@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bicycle Product Page
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 16px;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            display: block;
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+        }
+        .thumbnails img {
+            width: 50px;
+            height: 50px;
+            margin: 0 4px;
+            cursor: pointer;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+        .description {
+            margin-top: 8px;
+        }
+        .description a {
+            color: blue;
+            text-decoration: none;
+        }
+        .key-specs {
+            margin-top: 8px;
+            list-style: none;
+            padding: 0;
+        }
+        .key-specs li {
+            margin-bottom: 4px;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+        .discount-price {
+            color: red;
+            margin-left: 8px;
+        }
+        .original-price {
+            text-decoration: line-through;
+        }
+        .installments {
+            font-size: 14px;
+            color: gray;
+            margin-top: 4px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+        }
+        .buttons button {
+            width: 48%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .add-to-cart {
+            background-color: #ff9800;
+            color: white;
+        }
+        .buy-now {
+            background-color: #4caf50;
+            color: white;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+        }
+        .rating span {
+            margin-left: 4px;
+        }
+        .reviews {
+            margin-top: 16px;
+        }
+        .reviews h3 {
+            margin-top: 0;
+        }
+        .review {
+            margin-bottom: 8px;
+        }
+        .stock-status {
+            margin-top: 16px;
+            font-weight: bold;
+        }
+        .delivery-info {
+            margin-top: 4px;
+            color: gray;
+        }
+        .specifications, .shipping-info {
+            margin-top: 16px;
+        }
+        .specifications ul, .shipping-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .specifications li, .shipping-info li {
+            margin-bottom: 4px;
+        }
+        .related-products {
+            margin-top: 16px;
+        }
+        .related-products h3 {
+            margin-top: 0;
+        }
+        .related-carousel {
+            display: flex;
+            overflow-x: auto;
+        }
+        .related-carousel img {
+            width: 100px;
+            height: 100px;
+            margin-right: 8px;
+        }
+        .wishlist, .share, .seller-info, .contact-support {
+            margin-top: 16px;
+        }
+        .wishlist button, .share button, .contact-support button {
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+        .seller-info {
+            display: flex;
+            align-items: center;
+        }
+        .seller-info img {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+        .bottom-nav a {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+        }
+        .bottom-nav a img {
+            width: 24px;
+            height: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <!-- Image Carousel -->
+   <div class="carousel">
+    <img alt="Mountain Bike X200 Front View" id="img1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6eaf66ff-4d3b-4d92-bc84-67cbe41c8c74.png"/>
+    <img alt="Mountain Bike X200 Side View" id="img2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2f3b1e9d-ecc8-4545-9a59-7ed549dfaacf.png"/>
+   </div>
+   <!-- Thumbnails -->
+   <div class="thumbnails">
+    <img alt="Mountain Bike X200 Thumbnail Front View" id="thumb1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/4fbe7329-c7f7-45cf-97b5-43640605498d.png"/>
+    <img alt="Mountain Bike X200 Thumbnail Side View" id="thumb2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/a03d90f0-0ea1-4993-bc5b-dfab30404809.png"/>
+   </div>
+   <!-- Product Title -->
+   <div class="product-title">
+    Mountain Bike X200
+   </div>
+   <!-- Description -->
+   <div class="description">
+    <p>
+     Experience the thrill of mountain biking with the X200.
+     <a href="#">
+      Read More
+     </a>
+    </p>
+   </div>
+   <!-- Key Specifications -->
+   <ul class="key-specs">
+    <li>
+     Frame Material: Carbon Fiber
+    </li>
+    <li>
+     Gear System: 21-Speed
+    </li>
+    <li>
+     Weight: 12 kg
+    </li>
+    <li>
+     Dimensions: 170 x 60 x 100 cm
+    </li>
+   </ul>
+   <!-- Price Information -->
+   <div class="price">
+    <span class="discount-price">
+     $999.99
+    </span>
+    <span class="original-price">
+     $1299.99
+    </span>
+   </div>
+   <div class="installments">
+    Installment options available
+   </div>
+   <!-- Add to Cart / Buy Now Buttons -->
+   <div class="buttons">
+    <button class="add-to-cart">
+     Add to Cart
+    </button>
+    <button class="buy-now">
+     Buy Now
+    </button>
+   </div>
+   <!-- Customer Reviews and Ratings -->
+   <div class="rating">
+    <img alt="Rating Star" id="star" src="star.png"/>
+    <span>
+     4.5 (200 reviews)
+    </span>
+   </div>
+   <div class="reviews">
+    <h3>
+     Customer Reviews
+    </h3>
+    <div class="review">
+     Great bike! - John Doe
+    </div>
+    <div class="review">
+     Love it! - Jane Smith
+    </div>
+    <a href="#">
+     Read All Reviews
+    </a>
+   </div>
+   <!-- Product Availability -->
+   <div class="stock-status" style="color: green;">
+    In Stock
+   </div>
+   <div class="delivery-info">
+    Estimated Delivery: 3-5 days
+   </div>
+   <!-- Specifications and Features -->
+   <div class="specifications">
+    <h3>
+     Specifications
+    </h3>
+    <ul>
+     <li>
+      Frame Material: Carbon Fiber
+     </li>
+     <li>
+      Gear System: 21-Speed
+     </li>
+     <li>
+      Weight: 12 kg
+     </li>
+     <li>
+      Dimensions: 170 x 60 x 100 cm
+     </li>
+    </ul>
+   </div>
+   <!-- Shipping and Return Information -->
+   <div class="shipping-info">
+    <h3>
+     Shipping and Returns
+    </h3>
+    <ul>
+     <li>
+      Free shipping on orders over $50
+     </li>
+     <li>
+      30-day return policy
+     </li>
+    </ul>
+   </div>
+   <!-- Related Products -->
+   <div class="related-products">
+    <h3>
+     Related Products
+    </h3>
+    <div class="related-carousel">
+     <img alt="Mountain Bike Y100" id="related1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6ca194da-389a-4a90-881b-2c6ef8ae0ff2.png"/>
+     <img alt="Mountain Bike Z300" id="related2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/43e3d190-2ba3-4050-9e2d-51731161618a.png"/>
+    </div>
+   </div>
+   <!-- Wishlist Functionality -->
+   <div class="wishlist">
+    <button>
+     Add to Wishlist
+    </button>
+   </div>
+   <!-- Social Sharing Options -->
+   <div class="share">
+    <button>
+     Share
+    </button>
+   </div>
+   <!-- Seller Information -->
+   <div class="seller-info">
+    <img alt="BikeStore Logo" id="seller_logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d12bf3bc-57b6-47dc-ada5-18feeeba8b49.png"/>
+    <div>
+     <div>
+      Seller: BikeStore
+     </div>
+     <a href="#">
+      View Seller Details
+     </a>
+    </div>
+   </div>
+   <!-- Contact and Support -->
+   <div class="contact-support">
+    <button>
+     Contact Support
+    </button>
+   </div>
+  </div>
+  <!-- Bottom Navigation Bar -->
+  <div class="bottom-nav">
+   <a href="#">
+    <img alt="Home" id="home_icon" src="home_icon.png"/>
+    <br/>
+    Home
+   </a>
+   <a href="#">
+    <img alt="Categories" id="categories_icon" src="categories_icon.png"/>
+    <br/>
+    Categories
+   </a>
+   <a href="#">
+    <img alt="Cart" id="cart_icon" src="cart_icon.png"/>
+    <br/>
+    Cart
+   </a>
+   <a href="#">
+    <img alt="Profile" id="profile_icon" src="profile_icon.png"/>
+    <br/>
+    Profile
+   </a>
+  </div>
+ </body>
+</html>

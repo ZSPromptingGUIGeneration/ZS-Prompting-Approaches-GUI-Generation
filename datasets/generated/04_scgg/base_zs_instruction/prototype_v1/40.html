@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Trading App - Share Value
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .header {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .share-value {
+            font-size: 48px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .share-name {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .share-name img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .price-change {
+            font-size: 18px;
+            color: #f44336;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .price-change.positive {
+            color: #4CAF50;
+        }
+        .price-change span {
+            font-size: 24px;
+            margin-left: 5px;
+        }
+        .metrics {
+            font-size: 16px;
+            color: #777;
+            margin: 20px 0;
+        }
+        .metrics div {
+            margin: 5px 0;
+        }
+        .chart {
+            margin: 20px 0;
+            height: 200px;
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+        .refresh-btn, .currency-selector {
+            margin: 10px 0;
+        }
+        .refresh-btn button, .currency-selector select {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+        .refresh-btn button:hover, .currency-selector select:hover {
+            background-color: #e0e0e0;
+        }
+        .refresh-btn {
+            display: flex;
+            justify-content: center;
+        }
+        .currency-selector {
+            display: flex;
+            justify-content: center;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    Trading App
+   </div>
+   <div class="share-name">
+    <img alt="Apple Logo" src=""/>
+    Apple Inc. (AAPL)
+   </div>
+   <div class="share-value">
+    $250.75
+   </div>
+   <div class="price-change positive">
+    <span>
+     ↑
+    </span>
+    +1.25 (0.50%)
+   </div>
+   <div class="metrics">
+    <div>
+     Market Cap: $2.5T
+    </div>
+    <div>
+     Volume: 75M
+    </div>
+    <div>
+     P/E Ratio: 30.25
+    </div>
+   </div>
+   <div class="chart">
+    [Chart Placeholder]
+   </div>
+   <div class="refresh-btn">
+    <button>
+     Refresh
+    </button>
+   </div>
+   <div class="currency-selector">
+    <select>
+     <option value="USD">
+      USD
+     </option>
+     <option value="EUR">
+      EUR
+     </option>
+     <option value="GBP">
+      GBP
+     </option>
+    </select>
+   </div>
+  </div>
+ </body>
+</html>

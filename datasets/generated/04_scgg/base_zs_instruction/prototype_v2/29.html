@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Clothing App
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #444;
+            padding: 0.5rem;
+            position: fixed;
+            width: 100%;
+            top: 3rem;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+        }
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+        .navbar .hamburger {
+            display: none;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            margin-top: 6rem;
+        }
+        .search-bar input[type="text"] {
+            width: 60%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-bar button {
+            padding: 0.5rem;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .category {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .category:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .category img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .category h2 {
+            margin: 0.5rem 0;
+            font-size: 1.4rem;
+            color: #555;
+        }
+        .category p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .category button {
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 0.5rem;
+        }
+        .footer .social-icons a {
+            margin: 0 0.5rem;
+        }
+        .footer .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar a {
+                display: none;
+            }
+            .navbar .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+            .navbar.active a {
+                display: block;
+            }
+            .search-bar input[type="text"] {
+                width: 80%;
+            }
+        }
+        @media (max-width: 480px) {
+            .search-bar input[type="text"] {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Clothing App
+   </h1>
+  </div>
+  <div class="navbar">
+   <div class="hamburger">
+    ☰
+   </div>
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    Categories
+   </a>
+   <a href="#">
+    Cart
+   </a>
+   <a href="#">
+    Profile
+   </a>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search for items or categories..." type="text"/>
+   <button>
+    Search
+   </button>
+  </div>
+  <div class="container">
+   <div class="category">
+    <img alt="New Arrivals Clothing Category" src=""/>
+    <h2>
+     New Arrivals
+    </h2>
+    <p>
+     Check out the latest trends and styles.
+    </p>
+    <button>
+     Shop Now
+    </button>
+   </div>
+   <div class="category">
+    <img alt="Women Clothing Category" src=""/>
+    <h2>
+     Women
+    </h2>
+    <p>
+     Explore our collection for women.
+    </p>
+    <button>
+     Shop Now
+    </button>
+   </div>
+   <div class="category">
+    <img alt="Men Clothing Category" src=""/>
+    <h2>
+     Men
+    </h2>
+    <p>
+     Find the perfect outfit for men.
+    </p>
+    <button>
+     Shop Now
+    </button>
+   </div>
+   <div class="category">
+    <img alt="Home Clothing Category" src=""/>
+    <h2>
+     Home
+    </h2>
+    <p>
+     Discover our home essentials.
+    </p>
+    <button>
+     Shop Now
+    </button>
+   </div>
+   <!-- Add more categories as needed -->
+  </div>
+  <div class="footer">
+   <p>
+    © 2023 Clothing App. All rights reserved.
+   </p>
+   <div class="social-icons">
+    <a href="#">
+     <img alt="Facebook" src=""/>
+    </a>
+    <a href="#">
+     <img alt="Twitter" src=""/>
+    </a>
+    <a href="#">
+     <img alt="Instagram" src=""/>
+    </a>
+   </div>
+   <a href="#">
+    Contact Us
+   </a>
+   <a href="#">
+    About Us
+   </a>
+   <a href="#">
+    Privacy Policy
+   </a>
+  </div>
+  <script>
+   document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+  </script>
+ </body>
+</html>

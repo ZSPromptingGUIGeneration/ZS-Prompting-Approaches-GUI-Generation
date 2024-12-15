@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restaurant Menu
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            z-index: 1000;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tab.active {
+            border-bottom: 2px solid #000;
+        }
+        .search-bar {
+            display: flex;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-left: 0;
+            border-radius: 0 4px 4px 0;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+        .item-card {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .item-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .item-card .name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .item-card .description {
+            margin: 5px 0;
+        }
+        .item-card .price {
+            font-weight: bold;
+            color: #e91e63;
+        }
+        .item-card .availability {
+            color: green;
+            font-size: 12px;
+        }
+        .item-card .availability.out-of-stock {
+            color: red;
+        }
+        .item-card .save-button {
+            background: none;
+            border: none;
+            color: #e91e63;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .item-card .save-button.saved {
+            color: #e91e63;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+        .bottom-nav .nav-item {
+            text-align: center;
+            cursor: pointer;
+        }
+        .bottom-nav .nav-item.active {
+            color: #e91e63;
+        }
+        .order-history, .order-history .order {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .order-history .order {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .order-history .order .date {
+            font-weight: bold;
+        }
+        .order-history .order .items, .order-history .order .total {
+            margin: 5px 0;
+        }
+        .order-history .order .reorder-button {
+            background: #e91e63;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .location-input, .order-type {
+            padding: 10px;
+        }
+        .location-input input, .order-type select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .location-input .gps-button {
+            background: #e91e63;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .cta-buttons button {
+            background: #e91e63;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="tabs">
+    <div class="tab active">
+     Appetizers
+    </div>
+    <div class="tab">
+     Main Courses
+    </div>
+    <div class="tab">
+     Desserts
+    </div>
+    <div class="tab">
+     Beverages
+    </div>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search..." type="text"/>
+    <button>
+     <span aria-label="search" role="img">
+      🔍
+     </span>
+    </button>
+   </div>
+  </div>
+  <div class="item-card">
+   <img alt="Crispy Spring Rolls" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/8c2c317e-98da-4add-8949-122ed6934d5a.png"/>
+   <div class="name">
+    Crispy Spring Rolls
+   </div>
+   <div class="description">
+    Golden fried rolls stuffed with vegetables and served with a tangy dipping sauce.
+   </div>
+   <div class="price">
+    $5.99
+   </div>
+   <div class="availability">
+    Available
+   </div>
+   <button class="save-button">
+    ♡
+   </button>
+  </div>
+  <div class="item-card">
+   <img alt="Grilled Chicken Salad" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/cf3356d1-ce10-4756-b854-8daebead2d5b.png"/>
+   <div class="name">
+    Grilled Chicken Salad
+   </div>
+   <div class="description">
+    Fresh greens topped with grilled chicken, cherry tomatoes, and a light vinaigrette.
+   </div>
+   <div class="price">
+    $8.99
+   </div>
+   <div class="availability">
+    Available
+   </div>
+   <button class="save-button">
+    ♡
+   </button>
+  </div>
+  <div class="item-card">
+   <img alt="Chocolate Lava Cake" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6f2e5dd0-0419-43ac-bb08-b9a0fd837532.png"/>
+   <div class="name">
+    Chocolate Lava Cake
+   </div>
+   <div class="description">
+    Warm chocolate cake with a gooey molten center, served with vanilla ice cream.
+   </div>
+   <div class="price">
+    $6.99
+   </div>
+   <div class="availability">
+    Available
+   </div>
+   <button class="save-button">
+    ♡
+   </button>
+  </div>
+  <div class="item-card">
+   <img alt="Mango Smoothie" id="image4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/32fc6863-1445-41a9-a043-c378e64304e9.png"/>
+   <div class="name">
+    Mango Smoothie
+   </div>
+   <div class="description">
+    A refreshing blend of ripe mangoes and yogurt, perfect for a hot day.
+   </div>
+   <div class="price">
+    $4.99
+   </div>
+   <div class="availability out-of-stock">
+    Out of Stock
+   </div>
+   <button class="save-button">
+    ♡
+   </button>
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item active">
+    Menu
+   </div>
+   <div class="nav-item">
+    Favorites
+   </div>
+   <div class="nav-item">
+    Order History
+   </div>
+   <div class="nav-item">
+    Location
+   </div>
+   <div class="nav-item">
+    Order Type
+   </div>
+  </div>
+  <div class="order-history">
+   <div class="order">
+    <div class="date">
+     2023-10-01
+    </div>
+    <div class="items">
+     Crispy Spring Rolls, Grilled Chicken Salad
+    </div>
+    <div class="total">
+     $14.98
+    </div>
+    <button class="reorder-button">
+     Reorder
+    </button>
+   </div>
+   <div class="order">
+    <div class="date">
+     2023-09-28
+    </div>
+    <div class="items">
+     Chocolate Lava Cake, Mango Smoothie
+    </div>
+    <div class="total">
+     $11.98
+    </div>
+    <button class="reorder-button">
+     Reorder
+    </button>
+   </div>
+  </div>
+  <div class="location-input">
+   <input placeholder="Enter location..." type="text"/>
+   <button class="gps-button">
+    Use GPS
+   </button>
+  </div>
+  <div class="order-type">
+   <select>
+    <option>
+     Dine-in
+    </option>
+    <option>
+     Takeaway
+    </option>
+    <option>
+     Delivery
+    </option>
+   </select>
+  </div>
+  <div class="cta-buttons">
+   <button>
+    Add to Cart
+   </button>
+   <button>
+    Place Order
+   </button>
+  </div>
+ </body>
+</html>

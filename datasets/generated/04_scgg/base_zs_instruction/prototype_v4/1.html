@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Search
+  </title>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #ff6347;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header h2 {
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .carousel img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar button:hover {
+            background-color: #e5533d;
+        }
+        .search-bar input:focus, .search-bar button:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+        }
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .filters-section {
+            flex: 1;
+        }
+        .filters-section h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .filters select, .filters button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex: 1;
+        }
+        .filters button {
+            background-color: #ccc;
+            color: white;
+            cursor: pointer;
+        }
+        .filters button:hover {
+            background-color: #bbb;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .category {
+            flex: 1 1 calc(50% - 20px);
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            position: relative;
+        }
+        .category img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .category h3 {
+            margin: 10px 0 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .category:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(1.02);
+        }
+        .category .tags, .category .rating, .category .recipe-count {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .category .rating {
+            top: auto;
+            bottom: 10px;
+        }
+        .category .recipe-count {
+            top: auto;
+            bottom: 40px;
+        }
+        .category:hover .preview {
+            display: block;
+        }
+        .preview {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination button {
+            padding: 10px;
+            border: none;
+            background-color: #ff6347;
+            color: white;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .pagination button:hover {
+            background-color: #e5533d;
+        }
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .pagination .current-page {
+            background-color: #e5533d;
+        }
+        @media (max-width: 600px) {
+            .category {
+                flex: 1 1 100%;
+            }
+            .filters {
+                flex-direction: column;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Recipe Search
+    </h1>
+    <h2>
+     Find the perfect recipe for any occasion
+    </h2>
+   </div>
+   <div class="carousel">
+    <img alt="Featured Recipe 1" src=""/>
+    <img alt="Featured Recipe 2" src=""/>
+    <img alt="Featured Recipe 3" src=""/>
+   </div>
+   <div class="search-bar">
+    <input aria-label="Search for recipes" placeholder="Search for recipes by name, ingredient, or category..." type="text"/>
+    <button aria-label="Search recipes">
+     Search
+    </button>
+   </div>
+   <div class="filters">
+    <div class="filters-section">
+     <h3>
+      Dietary Preferences
+     </h3>
+     <label class="visually-hidden" for="dietary-preferences">
+      Dietary Preferences
+     </label>
+     <select id="dietary-preferences" multiple="">
+      <option value="vegetarian">
+       Vegetarian
+      </option>
+      <option value="vegan">
+       Vegan
+      </option>
+      <option value="gluten-free">
+       Gluten-Free
+      </option>
+      <option value="paleo">
+       Paleo
+      </option>
+      <option value="keto">
+       Keto
+      </option>
+     </select>
+    </div>
+    <div class="filters-section">
+     <h3>
+      Difficulty Level
+     </h3>
+     <label class="visually-hidden" for="difficulty-level">
+      Difficulty Level
+     </label>
+     <select id="difficulty-level">
+      <option value="">
+       Difficulty Level
+      </option>
+      <option value="easy">
+       Easy
+      </option>
+      <option value="medium">
+       Medium
+      </option>
+      <option value="hard">
+       Hard
+      </option>
+     </select>
+    </div>
+    <div class="filters-section">
+     <h3>
+      Sort By
+     </h3>
+     <label class="visually-hidden" for="sort-by">
+      Sort By
+     </label>
+     <select id="sort-by">
+      <option value="">
+       Sort By
+      </option>
+      <option value="popularity">
+       Popularity
+      </option>
+      <option value="rating">
+       Rating
+      </option>
+      <option value="prep-time">
+       Preparation Time
+      </option>
+     </select>
+    </div>
+    <div class="filters-section">
+     <h3>
+      Cuisine Type
+     </h3>
+     <label class="visually-hidden" for="cuisine-type">
+      Cuisine Type
+     </label>
+     <select id="cuisine-type">
+      <option value="">
+       Cuisine Type
+      </option>
+      <option value="italian">
+       Italian
+      </option>
+      <option value="chinese">
+       Chinese
+      </option>
+      <option value="indian">
+       Indian
+      </option>
+      <option value="mexican">
+       Mexican
+      </option>
+     </select>
+    </div>
+    <div class="filters-section">
+     <h3>
+      Cooking Time
+     </h3>
+     <label class="visually-hidden" for="cooking-time">
+      Cooking Time
+     </label>
+     <select id="cooking-time">
+      <option value="">
+       Cooking Time
+      </option>
+      <option value="under-30">
+       Under 30 minutes
+      </option>
+      <option value="30-60">
+       30-60 minutes
+      </option>
+      <option value="over-60">
+       Over 60 minutes
+      </option>
+     </select>
+    </div>
+    <div class="filters-section">
+     <h3>
+      Calorie Count
+     </h3>
+     <label class="visually-hidden" for="calorie-count">
+      Calorie Count
+     </label>
+     <select id="calorie-count">
+      <option value="">
+       Calorie Count
+      </option>
+      <option value="under-200">
+       Under 200
+      </option>
+      <option value="200-400">
+       200-400
+      </option>
+      <option value="over-400">
+       Over 400
+      </option>
+     </select>
+    </div>
+    <button>
+     Clear Filters
+    </button>
+   </div>
+   <div class="categories">
+    <div class="category">
+     <img alt="A plate of fluffy pancakes with syrup for Breakfast Recipes" src=""/>
+     <h3>
+      Breakfast
+     </h3>
+     <div class="tags">
+      Quick, Healthy
+     </div>
+     <div class="rating">
+      4.5 ★
+     </div>
+     <div class="recipe-count">
+      25 Recipes
+     </div>
+     <div class="preview">
+      Start your day with these delicious and quick breakfast recipes. Perfect for a healthy start!
+     </div>
+    </div>
+    <div class="category">
+     <img alt="A bowl of fresh salad for Lunch Recipes" src=""/>
+     <h3>
+      Lunch
+     </h3>
+     <div class="tags">
+      Easy, Low-Calorie
+     </div>
+     <div class="rating">
+      4.7 ★
+     </div>
+     <div class="recipe-count">
+      30 Recipes
+     </div>
+     <div class="preview">
+      Try these easy and low-calorie lunch recipes to keep you energized throughout the day.
+     </div>
+    </div>
+    <div class="category">
+     <img alt="A plate of pasta with tomato sauce for Dinner Recipes" src=""/>
+     <h3>
+      Dinner
+     </h3>
+     <div class="tags">
+      Hearty, Comfort Food
+     </div>
+     <div class="rating">
+      4.8 ★
+     </div>
+     <div class="recipe-count">
+      40 Recipes
+     </div>
+     <div class="preview">
+      End your day with these hearty and comforting dinner recipes. Perfect for a family meal!
+     </div>
+    </div>
+    <div class="category">
+     <img alt="A bowl of mixed nuts for Snacks Recipes" src=""/>
+     <h3>
+      Snacks
+     </h3>
+     <div class="tags">
+      Quick, Healthy
+     </div>
+     <div class="rating">
+      4.6 ★
+     </div>
+     <div class="recipe-count">
+      20 Recipes
+     </div>
+     <div class="preview">
+      Enjoy these quick and healthy snack recipes, perfect for any time of the day.
+     </div>
+    </div>
+   </div>
+   <div class="pagination">
+    <button aria-label="Previous Page" disabled="">
+     Previous
+    </button>
+    <button aria-label="Current Page" class="current-page">
+     1
+    </button>
+    <button aria-label="Next Page">
+     Next
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

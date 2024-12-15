@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Player
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 24px;
+        }
+        .now-playing {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .controls button {
+            background-color: #6200ea;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .song-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px;
+        }
+        .song-list li {
+            background-color: #ffffff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .song-list li:hover {
+            background-color: #e0e0e0;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   Music Player
+  </header>
+  <div class="now-playing">
+   <h2>
+    Now Playing
+   </h2>
+   <p>
+    Blinding Lights - The Weeknd
+   </p>
+   <img alt="Album cover of Blinding Lights by The Weeknd" id="now-playing-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e2f88e27-0ff3-43e0-ba03-7c3150912f0b.png"/>
+  </div>
+  <div class="controls">
+   <button>
+    <i class="fas fa-backward">
+    </i>
+   </button>
+   <button>
+    <i class="fas fa-play">
+    </i>
+   </button>
+   <button>
+    <i class="fas fa-pause">
+    </i>
+   </button>
+   <button>
+    <i class="fas fa-forward">
+    </i>
+   </button>
+  </div>
+  <ul class="song-list">
+   <li>
+    <img alt="Album cover of Shape of You by Ed Sheeran" id="song1-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b1a0030a-05db-49f8-92a0-dc9cff87cfb9.png"/>
+    <span>
+     Shape of You - Ed Sheeran
+    </span>
+    <button>
+     <i class="fas fa-play">
+     </i>
+    </button>
+   </li>
+   <li>
+    <img alt="Album cover of Someone Like You by Adele" id="song2-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/3654905c-e3cc-45e4-b426-28e4adf891a0.png"/>
+    <span>
+     Someone Like You - Adele
+    </span>
+    <button>
+     <i class="fas fa-play">
+     </i>
+    </button>
+   </li>
+   <li>
+    <img alt="Album cover of Uptown Funk by Mark Ronson ft. Bruno Mars" id="song3-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ee116272-e3bd-4697-b498-f943dbdf3e6b.png"/>
+    <span>
+     Uptown Funk - Mark Ronson ft. Bruno Mars
+    </span>
+    <button>
+     <i class="fas fa-play">
+     </i>
+    </button>
+   </li>
+   <li>
+    <img alt="Album cover of Rolling in the Deep by Adele" id="song4-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/62433631-e429-45fe-86ff-8432d5706ece.png"/>
+    <span>
+     Rolling in the Deep - Adele
+    </span>
+    <button>
+     <i class="fas fa-play">
+     </i>
+    </button>
+   </li>
+   <li>
+    <img alt="Album cover of Happy by Pharrell Williams" id="song5-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2044bcba-be42-48d6-8724-24296e01db75.png"/>
+    <span>
+     Happy - Pharrell Williams
+    </span>
+    <button>
+     <i class="fas fa-play">
+     </i>
+    </button>
+   </li>
+  </ul>
+ </body>
+</html>
+

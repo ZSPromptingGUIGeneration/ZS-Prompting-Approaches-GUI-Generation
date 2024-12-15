@@ -1,0 +1,119 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Study App - Latest Sessions
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .header {
+            flex: 0 0 auto;
+        }
+        .content {
+            flex: 1 1 auto;
+            overflow-y: auto;
+        }
+        .footer {
+            flex: 0 0 auto;
+        }
+        .list-group-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .list-group-item .subject {
+            font-weight: bold;
+        }
+        .list-group-item .details {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <header class="header bg-primary text-white text-center py-2">
+   <h1 class="m-0">
+    Latest Study Sessions
+   </h1>
+  </header>
+  <main class="content container my-3">
+   <ul class="list-group">
+    <li class="list-group-item">
+     <div class="subject">
+      Mathematics
+     </div>
+     <div class="details">
+      <span>
+       <i class="bi bi-calendar">
+       </i>
+       2023-10-01
+      </span>
+      <span>
+       <i class="bi bi-clock">
+       </i>
+       2 hours
+      </span>
+     </div>
+    </li>
+    <li class="list-group-item">
+     <div class="subject">
+      Physics
+     </div>
+     <div class="details">
+      <span>
+       <i class="bi bi-calendar">
+       </i>
+       2023-10-02
+      </span>
+      <span>
+       <i class="bi bi-clock">
+       </i>
+       1.5 hours
+      </span>
+     </div>
+    </li>
+    <!-- Add more study sessions here -->
+   </ul>
+  </main>
+  <footer class="footer bg-light text-center py-2">
+   <nav class="navbar navbar-expand navbar-light bg-light fixed-bottom">
+    <ul class="navbar-nav nav-justified w-100">
+     <li class="nav-item">
+      <a class="nav-link" href="#">
+       <i class="bi bi-house">
+       </i>
+       Home
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#">
+       <i class="bi bi-journal">
+       </i>
+       Sessions
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#">
+       <i class="bi bi-person">
+       </i>
+       Profile
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

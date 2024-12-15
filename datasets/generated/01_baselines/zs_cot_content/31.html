@@ -1,0 +1,128 @@
+
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tableware Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 1em;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 1em;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 0.5em;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .barcode-scan {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+        .barcode-scan button {
+            padding: 0.5em 1em;
+            border: none;
+            background-color: #FF9800;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .category {
+            flex: 1 1 45%;
+            background-color: white;
+            padding: 1em;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .category img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 0.5em;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Tableware Shop
+   </h1>
+  </header>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search for items..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <div class="barcode-scan">
+    <button>
+     Scan Barcode
+    </button>
+   </div>
+   <div class="categories">
+    <div class="category">
+     <img alt="White Ceramic Plate" id="img-plate" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e308a593-569c-4e44-a921-cbef7afa3baa.png"/>
+     Plates
+    </div>
+    <div class="category">
+     <img alt="Blue Porcelain Bowl" id="img-bowl" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/bc102d86-8c5f-4c10-88d5-5ce66d50838c.png"/>
+     Bowls
+    </div>
+    <div class="category">
+     <img alt="Glass Cup with Handle" id="img-cup" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/591bcb79-73e3-4ebf-b7c3-0b8139ef49b7.png"/>
+     Cups
+    </div>
+    <div class="category">
+     <img alt="Stainless Steel Cutlery Set" id="img-cutlery" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ad4026a3-07c3-4576-b3c2-044501435c12.png"/>
+     Cutlery
+    </div>
+    <div class="category">
+     <img alt="Crystal Glassware Set" id="img-glassware" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0ff9cb4a-db35-4610-b3de-3ec0f02760e6.png"/>
+     Glassware
+    </div>
+    <div class="category">
+     <img alt="Large Serving Dish" id="img-serving-dish" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ab069064-d3e0-4b9d-8484-de90253f7dbb.png"/>
+     Serving Dishes
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->
+

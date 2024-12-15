@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Find Shops
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
+        .header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            position: relative;
+        }
+        .header .close-btn {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #444;
+        }
+        .search-bar input {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .store-list {
+            padding: 10px;
+        }
+        .store-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .store-item .store-details {
+            max-width: 80%;
+        }
+        .store-item .store-distance {
+            font-size: 18px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Select a store
+   <div class="close-btn">
+    ×
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search for a store..." type="text"/>
+   <button>
+    🔍
+   </button>
+  </div>
+  <div class="store-list">
+   <div class="store-item">
+    <div class="store-details">
+     <div class="store-name">
+      Shoppers - Bull Run
+     </div>
+     <div class="store-address">
+      10864 Sudley Manor Dr, Manassas, VA 20109
+     </div>
+    </div>
+    <div class="store-distance">
+     3880.79mi
+    </div>
+   </div>
+   <div class="store-item">
+    <div class="store-details">
+     <div class="store-name">
+      Shoppers - Dulles
+     </div>
+     <div class="store-address">
+      2425 Centreville Rd, Herndon, VA 20171
+     </div>
+    </div>
+    <div class="store-distance">
+     3886.12mi
+    </div>
+   </div>
+   <div class="store-item">
+    <div class="store-details">
+     <div class="store-name">
+      Shoppers - Centreville
+     </div>
+     <div class="store-address">
+      6335 Multiplex Dr, Centreville, VA 20120
+     </div>
+    </div>
+    <div class="store-distance">
+     3886.67mi
+    </div>
+   </div>
+   <div class="store-item">
+    <div class="store-details">
+     <div class="store-name">
+      Shoppers - Sterling
+     </div>
+     <div class="store-address">
+      47100 Community Plaza, Sterling, VA 20164
+     </div>
+    </div>
+    <div class="store-distance">
+     3887.38mi
+    </div>
+   </div>
+   <div class="store-item">
+    <div class="store-details">
+     <div class="store-name">
+      Shoppers - Germantown
+     </div>
+     <div class="store-address">
+      18066 Mateny Rd, Germantown, MD 20874
+     </div>
+    </div>
+    <div class="store-distance">
+     3892.77mi
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

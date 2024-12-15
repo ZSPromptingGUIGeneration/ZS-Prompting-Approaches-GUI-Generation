@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   User Profile
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .profile-header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        .profile-header h1 {
+            margin: 10px 0 5px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .profile-header p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .profile-header .edit-profile {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            color: #4CAF50;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #fff;
+            font-size: 16px;
+        }
+        .profile-header .banner {
+            background-image: url('https://via.placeholder.com/800x200');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            margin-bottom: -100px;
+        }
+        .upload-cover-photo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            color: #4CAF50;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #fff;
+        }
+        .profile-content {
+            padding: 20px;
+        }
+        .profile-content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        .profile-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .profile-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .profile-content ul li {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .profile-content ul li h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .profile-content ul li p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .profile-content ul li .timestamp {
+            font-size: 12px;
+            color: #777;
+            margin-top: 5px;
+        }
+        .contact-info, .friends-list, .photo-gallery, .activity-feed, .profile-stats, .interests-hobbies, .achievements, .mutual-friends, .recent-posts, .user-posts {
+            margin-bottom: 30px;
+        }
+        .contact-info a, .friends-list a, .photo-gallery a, .activity-feed a, .profile-stats a, .interests-hobbies a, .achievements a, .mutual-friends a, .recent-posts a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .contact-info ul, .friends-list ul, .photo-gallery ul, .activity-feed ul, .profile-stats ul, .interests-hobbies ul, .achievements ul, .mutual-friends ul, .recent-posts ul, .user-posts ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .contact-info ul li, .friends-list ul li, .photo-gallery ul li, .activity-feed ul li, .profile-stats ul li, .interests-hobbies ul li, .achievements ul li, .mutual-friends ul li, .recent-posts ul li, .user-posts ul li {
+            flex: 1 1 45%;
+            margin: 10px;
+        }
+        .profile-stats ul li {
+            text-align: center;
+        }
+        .profile-stats ul li span {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .profile-stats ul li p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .profile-stats ul li i {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #4CAF50;
+        }
+        .contact-info ul li a {
+            display: flex;
+            align-items: center;
+        }
+        .contact-info ul li a i {
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+        .photo-gallery ul li img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .photo-gallery ul li img:hover {
+            transform: scale(1.05);
+        }
+        .about-me p, .bio p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .bio {
+            margin: 20px 0;
+        }
+        .bio p {
+            font-size: 18px;
+            color: #555;
+        }
+        .user-actions {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .user-actions a {
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .achievements ul, .mutual-friends ul {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+        .achievements ul li, .mutual-friends ul li {
+            flex: 0 0 auto;
+            margin-right: 10px;
+        }
+        .achievements ul li img, .mutual-friends ul li img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .achievements ul li {
+            text-align: center;
+        }
+        .achievements ul li p {
+            font-size: 12px;
+            color: #555;
+        }
+        .profile-completeness {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .profile-completeness .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .profile-completeness .progress-bar div {
+            height: 100%;
+            width: 60%;
+            background-color: #4CAF50;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+        }
+        @media (max-width: 768px) {
+            .profile-header {
+                padding: 20px;
+            }
+            .profile-header img {
+                width: 120px;
+                height: 120px;
+            }
+            .profile-header h1 {
+                font-size: 28px;
+            }
+            .profile-header p {
+                font-size: 16px;
+            }
+            .profile-content {
+                padding: 15px;
+            }
+            .profile-content h2 {
+                font-size: 22px;
+            }
+            .profile-content ul li {
+                padding: 10px;
+            }
+            .profile-content ul li h3 {
+                font-size: 16px;
+            }
+            .profile-content ul li p {
+                font-size: 14px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="profile-header">
+   <div class="banner">
+   </div>
+   <a class="upload-cover-photo" href="#">
+    Upload Cover Photo
+   </a>
+   <img alt="Profile Picture" src=""/>
+   <h1>
+    John Doe
+   </h1>
+   <p>
+    @johndoe
+   </p>
+   <div class="bio">
+    <p>
+     Short bio about the user. Passionate about technology, photography, and travel.
+    </p>
+   </div>
+   <a class="edit-profile" href="#">
+    Edit Profile
+   </a>
+   <div class="user-actions">
+    <a href="#">
+     Message
+    </a>
+    <a href="#">
+     Add Friend
+    </a>
+    <a href="#">
+     Follow
+    </a>
+   </div>
+   <div class="profile-completeness">
+    <p>
+     Profile Completeness: 60%
+    </p>
+    <div class="progress-bar">
+     <div style="width: 60%;">
+      60%
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="profile-content">
+   <div class="profile-stats">
+    <ul>
+     <li>
+      <i class="fas fa-pencil-alt">
+      </i>
+      <span>
+       120
+      </span>
+      <p>
+       Posts
+      </p>
+     </li>
+     <li>
+      <i class="fas fa-users">
+      </i>
+      <span>
+       350
+      </span>
+      <p>
+       Followers
+      </p>
+     </li>
+     <li>
+      <i class="fas fa-thumbs-up">
+      </i>
+      <span>
+       180
+      </span>
+      <p>
+       Likes
+      </p>
+     </li>
+    </ul>
+   </div>
+   <div class="about-me">
+    <h2>
+     About Me
+    </h2>
+    <p>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien nec sapien vehicula condimentum.
+    </p>
+   </div>
+   <div class="contact-info">
+    <h2>
+     Contact Information
+    </h2>
+    <ul>
+     <li>
+      <a href="mailto:johndoe@example.com">
+       <i class="fas fa-envelope">
+       </i>
+       johndoe@example.com
+      </a>
+     </li>
+     <li>
+      <a href="tel:+1234567890">
+       <i class="fas fa-phone">
+       </i>
+       +123 456 7890
+      </a>
+     </li>
+     <li>
+      <a href="https://twitter.com/johndoe" target="_blank">
+       <i class="fab fa-twitter">
+       </i>
+       Twitter
+      </a>
+     </li>
+     <li>
+      <a href="https://linkedin.com/in/johndoe" target="_blank">
+       <i class="fab fa-linkedin">
+       </i>
+       LinkedIn
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="friends-list">
+    <h2>
+     Friends/Followers
+    </h2>
+    <ul>
+     <li>
+      <a href="#">
+       <img alt="Friend 1" src=""/>
+       Friend 1
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       <img alt="Friend 2" src=""/>
+       Friend 2
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       <img alt="Friend 3" src=""/>
+       Friend 3
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       <img alt="Friend 4" src=""/>
+       Friend 4
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="photo-gallery">
+    <h2>
+     Photo Gallery
+    </h2>
+    <ul>
+     <li>
+      <a href="#">
+       <img alt="Photo 1" src=""/>
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       <img alt="Photo 2" src=""/>
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       <img alt="Photo 3" src=""/>
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       <img alt="Photo 4" src=""/>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="activity-feed">
+    <h2>
+     Activity Feed
+    </h2>
+    <ul>
+     <li>
+      <a href="#">
+       <i class="fas fa-heart">
+       </i>
+       Liked a post
+      </a>
+      <span class="timestamp">
+       2 hours ago
+      </span>
+     </li>
+     <li>
+      <a href="#">
+       <i class="fas fa-comment">
+       </i>
+       Commented on a photo
+      </a>
+      <span class="timestamp">
+       5 hours ago
+      </span>
+     </li>
+     <li>
+      <a href="#">
+       <i class="fas fa-user-plus">
+       </i>
+       Started following Jane
+      </a>
+      <span class="timestamp">
+       1 day ago
+      </span>
+     </li>
+     <li>
+      <a href="#">
+       <i class="fas fa-camera">
+       </i>
+       Updated profile picture
+      </a>
+      <span class="timestamp">
+       2 days ago
+      </span>
+     </li>
+    </ul>
+   </div>
+   <div class="interests-hobbies">
+    <h2>
+     Interests and Hobbies
+    </h2>
+    <ul>
+     <li>
+      <i class="fas fa-book">
+      </i>
+      Reading
+     </li>
+     <li>
+      <i class="fas fa-plane">
+      </i>
+      Traveling
+     </li>
+     <li>
+      <i class="fas fa-camera">
+      </i>
+      Photography
+     </li>
+     <li>
+      <i class="fas fa-utensils">
+      </i>
+      Cooking
+     </li>
+    </ul>
+   </div>
+   <div class="achievements">
+    <h2>
+     Achievements/Badges
+    </h2>
+    <ul>
+     <li>
+      <img alt="Badge 1" src=""/>
+      <p>
+       Badge 1
+      </p>
+     </li>
+     <li>
+      <img alt="Badge 2" src=""/>
+      <p>
+       Badge 2
+      </p>
+     </li>
+     <li>
+      <img alt="Badge 3" src=""/>
+      <p>
+       Badge 3
+      </p>
+     </li>
+     <li>
+      <img alt="Badge 4" src=""/>
+      <p>
+       Badge 4
+      </p>
+     </li>
+    </ul>
+   </div>
+   <div class="mutual-friends">
+    <h2>
+     Mutual Friends
+    </h2>
+    <ul>
+     <li>
+      <img alt="Mutual Friend 1" src=""/>
+      <p>
+       Mutual Friend 1
+      </p>
+     </li>
+     <li>
+      <img alt="Mutual Friend 2" src=""/>
+      <p>
+       Mutual Friend 2
+      </p>
+     </li>
+     <li>
+      <img alt="Mutual Friend 3" src=""/>
+      <p>
+       Mutual Friend 3
+      </p>
+     </li>
+     <li>
+      <img alt="Mutual Friend 4" src=""/>
+      <p>
+       Mutual Friend 4
+      </p>
+     </li>
+    </ul>
+   </div>
+   <div class="recent-posts">
+    <h2>
+     Recent Posts
+    </h2>
+    <ul>
+     <li>
+      <h3>
+       Post Title 1
+      </h3>
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="timestamp">
+       Posted on January 1, 2023
+      </p>
+     </li>
+     <li>
+      <h3>
+       Post Title 2
+      </h3>
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="timestamp">
+       Posted on February 1, 2023
+      </p>
+     </li>
+     <li>
+      <h3>
+       Post Title 3
+      </h3>
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="timestamp">
+       Posted on March 1, 2023
+      </p>
+     </li>
+    </ul>
+   </div>
+   <div class="user-posts">
+    <h2>
+     User's Posts
+    </h2>
+    <ul>
+     <li>
+      <h3>
+       My Post Title 1
+      </h3>
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="timestamp">
+       Posted on January 1, 2023
+      </p>
+     </li>
+     <li>
+      <h3>
+       My Post Title 2
+      </h3>
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="timestamp">
+       Posted on February 1, 2023
+      </p>
+     </li>
+     <li>
+      <h3>
+       My Post Title 3
+      </h3>
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="timestamp">
+       Posted on March 1, 2023
+      </p>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </body>
+</html>

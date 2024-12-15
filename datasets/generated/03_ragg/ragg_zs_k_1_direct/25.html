@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Healthy Meals Search
+  </title>
+  <style>
+   body, html {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-bar button {
+            background-color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .category {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+        .category img {
+            width: 100%;
+            height: auto;
+        }
+        .category h2 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .recipes {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+            background-color: white;
+        }
+        .recipes .recipe {
+            flex: 0 0 auto;
+            width: 150px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: white;
+        }
+        .recipes img {
+            width: 100%;
+            height: auto;
+        }
+        .recipes .recipe-info {
+            padding: 10px;
+        }
+        .recipes .recipe-info h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .recipes .recipe-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="search-bar">
+   <button>
+    ☰
+   </button>
+   <input placeholder="Search..." type="text"/>
+   <button>
+    🔍
+   </button>
+  </div>
+  <div class="category">
+   <img alt="Frying Peaks" src=""/>
+   <h2>
+    FRYING PEAKS
+   </h2>
+  </div>
+  <div class="category">
+   <img alt="Paleo" src=""/>
+   <h2>
+    PALEO
+   </h2>
+   <div class="recipes">
+    <div class="recipe">
+     <img alt="Paleo Granola" src=""/>
+     <div class="recipe-info">
+      <h3>
+       Paleo Granola
+      </h3>
+      <p>
+       25 Min
+      </p>
+     </div>
+    </div>
+    <div class="recipe">
+     <img alt="Paleo Pancakes" src=""/>
+     <div class="recipe-info">
+      <h3>
+       Paleo Pancakes
+      </h3>
+      <p>
+       510 Min
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="category">
+   <img alt="Mexican Recipes" src=""/>
+   <h2>
+    MEXICAN RECIPES
+   </h2>
+  </div>
+ </body>
+</html>

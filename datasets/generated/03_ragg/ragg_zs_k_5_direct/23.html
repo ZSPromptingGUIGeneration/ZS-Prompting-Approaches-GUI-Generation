@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports Team App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .team-info {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .team-info h1 {
+            margin: 0;
+        }
+        .team-info h2 {
+            color: #757575;
+            margin: 5px 0;
+        }
+        .statistics, .roster, .depth-chart, .injuries {
+            display: inline-block;
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+        }
+        .statistics h3, .roster h3, .depth-chart h3, .injuries h3 {
+            color: #d32f2f;
+            margin: 10px 0;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .stats div {
+            text-align: center;
+        }
+        .games, .next-match {
+            background-color: white;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .games h3, .next-match h3 {
+            margin: 0;
+            color: #757575;
+        }
+        .games table, .standings table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .games table th, .games table td, .standings table th, .standings table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .standings {
+            background-color: white;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .standings h3 {
+            margin: 0;
+            color: #757575;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    TEAM
+   </h1>
+  </div>
+  <div class="team-info">
+   <h1>
+    Houston Rockets
+   </h1>
+   <h2>
+    Southwest Division
+   </h2>
+  </div>
+  <div class="statistics">
+   <h3>
+    STATISTICS
+   </h3>
+   <div class="stats">
+    <div>
+     <p>
+      115.3
+     </p>
+     <p>
+      PTS
+     </p>
+    </div>
+    <div>
+     <p>
+      .463
+     </p>
+     <p>
+      FG%
+     </p>
+    </div>
+    <div>
+     <p>
+      .361
+     </p>
+     <p>
+      3PT%
+     </p>
+    </div>
+    <div>
+     <p>
+      .764
+     </p>
+     <p>
+      FT%
+     </p>
+    </div>
+    <div>
+     <p>
+      44.3
+     </p>
+     <p>
+      REB
+     </p>
+    </div>
+    <div>
+     <p>
+      25.3
+     </p>
+     <p>
+      AST
+     </p>
+    </div>
+    <div>
+     <p>
+      8.3
+     </p>
+     <p>
+      STL
+     </p>
+    </div>
+    <div>
+     <p>
+      4.4
+     </p>
+     <p>
+      BLK
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="roster">
+   <h3>
+    ROSTER
+   </h3>
+  </div>
+  <div class="depth-chart">
+   <h3>
+    DEPTH CHART
+   </h3>
+  </div>
+  <div class="injuries">
+   <h3>
+    INJURIES
+   </h3>
+  </div>
+  <div class="games">
+   <h3>
+    Last 3 Games
+   </h3>
+   <table>
+    <tr>
+     <th>
+      Opponent
+     </th>
+     <th>
+      Date
+     </th>
+     <th>
+      Score
+     </th>
+    </tr>
+    <tr>
+     <td>
+      vs. DEN
+     </td>
+     <td>
+      Tue, Mar 21
+     </td>
+     <td>
+      124-125 W
+     </td>
+    </tr>
+    <tr>
+     <td>
+      @ DEN
+     </td>
+     <td>
+      Sun, Mar 19
+     </td>
+     <td>
+      109-105 W
+     </td>
+    </tr>
+    <tr>
+     <td>
+      @ NOP
+     </td>
+     <td>
+      Sat, Mar 18
+     </td>
+     <td>
+      112-128 L
+     </td>
+    </tr>
+   </table>
+  </div>
+  <div class="next-match">
+   <h3>
+    Next Match
+   </h3>
+   <p>
+    SAT 11/03/2017
+   </p>
+   <table>
+    <tr>
+     <td>
+      NA Hussein Dey
+     </td>
+     <td>
+      14:00
+     </td>
+     <td>
+      MC Oran
+     </td>
+    </tr>
+   </table>
+  </div>
+  <div class="standings">
+   <h3>
+    Standings
+   </h3>
+   <table>
+    <tr>
+     <th>
+      Team
+     </th>
+     <th>
+      W
+     </th>
+     <th>
+      L
+     </th>
+     <th>
+      GB
+     </th>
+     <th>
+      PCT
+     </th>
+    </tr>
+    <tr>
+     <td>
+      Spurs
+     </td>
+     <td>
+      53
+     </td>
+     <td>
+      16
+     </td>
+     <td>
+      0.0
+     </td>
+     <td>
+      .768
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Lions
+     </td>
+     <td>
+      9
+     </td>
+     <td>
+      7
+     </td>
+     <td>
+      0.0
+     </td>
+     <td>
+      .563
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Vikings
+     </td>
+     <td>
+      8
+     </td>
+     <td>
+      8
+     </td>
+     <td>
+      2.4
+     </td>
+     <td>
+      .500
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Bears
+     </td>
+     <td>
+      3
+     </td>
+     <td>
+      13
+     </td>
+     <td>
+      8.0
+     </td>
+     <td>
+      .188
+     </td>
+    </tr>
+   </table>
+  </div>
+ </body>
+</html>

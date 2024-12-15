@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .header .icons {
+            display: flex;
+            gap: 15px;
+        }
+        .header .icons i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            background-image: url('https://via.placeholder.com/600x200');
+            background-size: cover;
+            background-position: center;
+        }
+        .call-to-action {
+            text-align: center;
+            padding: 20px;
+        }
+        .call-to-action button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .recipe-details {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 20px;
+            background-color: #f1f1f1;
+        }
+        .tab-navigation {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ccc;
+        }
+        .tab-navigation div {
+            padding: 15px 0;
+            cursor: pointer;
+        }
+        .tab-navigation .active {
+            border-bottom: 2px solid #ff6347;
+            color: #ff6347;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .ingredients-list {
+            list-style: none;
+            padding: 0;
+        }
+        .ingredients-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .ingredients-list li button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .instructions {
+            list-style: none;
+            padding: 0;
+        }
+        .instructions li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <i class="back-button">
+    ←
+   </i>
+   <div class="title">
+    Recipe Title
+   </div>
+   <div class="icons">
+    <i class="search-icon">
+     🔍
+    </i>
+    <i class="share-icon">
+     🔗
+    </i>
+    <i class="folder-icon">
+     📁
+    </i>
+   </div>
+  </div>
+  <div class="recipe-image">
+  </div>
+  <div class="call-to-action">
+   <p>
+    Want to save to your recipe box?
+   </p>
+   <button>
+    Log In
+   </button>
+  </div>
+  <div class="recipe-details">
+   <div>
+    Prep Time: 15 mins
+   </div>
+   <div>
+    Total Time: 30 mins
+   </div>
+   <div>
+    Servings: 4
+   </div>
+  </div>
+  <div class="tab-navigation">
+   <div class="active" onclick="showTab('ingredients')">
+    Ingredients
+   </div>
+   <div onclick="showTab('instructions')">
+    Instructions
+   </div>
+   <div onclick="showTab('nutrition')">
+    Nutrition Info
+   </div>
+  </div>
+  <div class="main-content" id="ingredients">
+   <ul class="ingredients-list">
+    <li>
+     <span>
+      1 cup of flour
+     </span>
+     <button>
+      +
+     </button>
+    </li>
+    <li>
+     <span>
+      2 eggs
+     </span>
+     <button>
+      +
+     </button>
+    </li>
+    <li>
+     <span>
+      1/2 cup of milk
+     </span>
+     <button>
+      +
+     </button>
+    </li>
+   </ul>
+   <button>
+    Add All
+   </button>
+  </div>
+  <div class="main-content" id="instructions" style="display: none;">
+   <ul class="instructions">
+    <li>
+     Step 1: Mix ingredients.
+    </li>
+    <li>
+     Step 2: Bake at 350°F for 20 minutes.
+    </li>
+    <li>
+     Step 3: Let cool and serve.
+    </li>
+   </ul>
+  </div>
+  <div class="main-content" id="nutrition" style="display: none;">
+   <p>
+    Calories: 200
+   </p>
+   <p>
+    Protein: 5g
+   </p>
+   <p>
+    Fat: 10g
+   </p>
+  </div>
+  <button class="fab">
+   🍴
+  </button>
+  <script>
+   function showTab(tab) {
+            document.getElementById('ingredients').style.display = 'none';
+            document.getElementById('instructions').style.display = 'none';
+            document.getElementById('nutrition').style.display = 'none';
+            document.querySelectorAll('.tab-navigation div').forEach(div => div.classList.remove('active'));
+            document.querySelector(`.tab-navigation div[onclick="showTab('${tab}')"]`).classList.add('active');
+            document.getElementById(tab).style.display = 'block';
+        }
+  </script>
+ </body>
+</html>

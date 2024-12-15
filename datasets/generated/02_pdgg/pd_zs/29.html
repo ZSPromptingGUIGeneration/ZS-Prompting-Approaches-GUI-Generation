@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Clothing App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        header .icons {
+            display: flex;
+            gap: 20px;
+        }
+        header .icons i {
+            font-size: 1.5em;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+        }
+        .tabs div {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .tabs .active {
+            border-bottom: 2px solid #000;
+        }
+        .search-bar {
+            display: flex;
+            padding: 10px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .search-bar input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        .search-bar i {
+            margin-left: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .grid-item button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .promo-carousel {
+            padding: 10px;
+        }
+        .promo-carousel img {
+            width: 100%;
+            border-radius: 5px;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    Brand
+   </div>
+   <div class="icons">
+    <i class="material-icons">
+     account_circle
+    </i>
+    <i class="material-icons">
+     shopping_cart
+    </i>
+   </div>
+  </header>
+  <div class="tabs">
+   <div class="tab active">
+    New Arrivals
+   </div>
+   <div class="tab">
+    Women
+   </div>
+   <div class="tab">
+    Men
+   </div>
+   <div class="tab">
+    Home
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search..." type="text"/>
+   <i class="material-icons">
+    mic
+   </i>
+  </div>
+  <div class="promo-carousel">
+   <img alt="Promo 1" src=""/>
+   <img alt="Promo 2" src=""/>
+  </div>
+  <div class="grid-container">
+   <div class="grid-item">
+    <img alt="Product 1" src=""/>
+    <button>
+     Quick View
+    </button>
+   </div>
+   <div class="grid-item">
+    <img alt="Product 2" src=""/>
+    <button>
+     Quick View
+    </button>
+   </div>
+   <div class="grid-item">
+    <img alt="Product 3" src=""/>
+    <button>
+     Quick View
+    </button>
+   </div>
+   <div class="grid-item">
+    <img alt="Product 4" src=""/>
+    <button>
+     Quick View
+    </button>
+   </div>
+  </div>
+  <div class="fab">
+   <i class="material-icons">
+    filter_list
+   </i>
+  </div>
+ </body>
+</html>

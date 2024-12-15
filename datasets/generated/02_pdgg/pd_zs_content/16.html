@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Discounted Products
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            background-color: #f1f1f1;
+        }
+        .search-bar input {
+            border: none;
+            background: none;
+            outline: none;
+            flex-grow: 1;
+            padding: 0 10px;
+        }
+        .search-bar i {
+            margin-left: 10px;
+            color: #999;
+        }
+        .nav-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .nav-icons i {
+            font-size: 20px;
+            color: #555;
+        }
+        .product-listings {
+            padding: 10px;
+        }
+        .product {
+            background-color: #fff;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-title {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .discount-label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+        .price {
+            display: flex;
+            align-items: center;
+        }
+        .price .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 10px;
+        }
+        .price .discounted-price {
+            font-weight: bold;
+            color: #e60000;
+        }
+        .description {
+            font-size: 14px;
+            color: #555;
+            margin: 10px 0;
+        }
+        .add-to-cart {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .filter-sort {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px 0;
+        }
+        .filter-sort i {
+            font-size: 20px;
+            color: #555;
+            margin-left: 20px;
+        }
+        .star-ratings {
+            color: gold;
+        }
+        .review-snippets {
+            font-style: italic;
+            font-size: 12px;
+            color: #777;
+        }
+        .highlight-banner {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .countdown-timer {
+            color: #e60000;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .cart-icon {
+            position: relative;
+        }
+        .cart-icon .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: #fff;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 12px;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .bottom-nav i {
+            font-size: 24px;
+            color: #555;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .cta-buttons .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .help-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="header-title">
+    Discounted Products
+   </div>
+   <div class="search-bar">
+    <i class="fa fa-search">
+    </i>
+    <input placeholder="Search products..." type="text"/>
+   </div>
+   <div class="nav-icons">
+    <i class="fa fa-bars">
+    </i>
+    <div>
+     <i class="fa fa-home">
+     </i>
+     <i class="fa fa-list">
+     </i>
+     <i class="fa fa-shopping-cart cart-icon">
+      <span class="badge">
+       3
+      </span>
+     </i>
+     <i class="fa fa-user">
+     </i>
+    </div>
+   </div>
+  </header>
+  <div class="product-listings">
+   <div class="highlight-banner">
+    Special Promotion: Up to 50% off!
+   </div>
+   <div class="product">
+    <div class="discount-label">
+     -30%
+    </div>
+    <img alt="Stylish Modern Watch" id="product-image-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0955b900-6042-43e0-9598-e815c21e2569.png"/>
+    <div class="product-title">
+     Stylish Modern Watch
+    </div>
+    <div class="star-ratings">
+     ★★★★☆
+    </div>
+    <div class="review-snippets">
+     "Great product, highly recommend!"
+    </div>
+    <div class="price">
+     <div class="original-price">
+      $100.00
+     </div>
+     <div class="discounted-price">
+      $70.00
+     </div>
+    </div>
+    <div class="description">
+     A stylish modern watch with a sleek design and reliable performance.
+    </div>
+    <div class="add-to-cart">
+     Add to Cart
+    </div>
+    <div class="countdown-timer">
+     Hurry! Offer ends in 2h 30m
+    </div>
+   </div>
+   <div class="product">
+    <div class="discount-label">
+     -20%
+    </div>
+    <img alt="Comfortable Running Shoes" id="product-image-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/9de849c1-0b9d-4a09-8c25-679a3458ec7e.png"/>
+    <div class="product-title">
+     Comfortable Running Shoes
+    </div>
+    <div class="star-ratings">
+     ★★★★★
+    </div>
+    <div class="review-snippets">
+     "Best running shoes I've ever owned!"
+    </div>
+    <div class="price">
+     <div class="original-price">
+      $80.00
+     </div>
+     <div class="discounted-price">
+      $64.00
+     </div>
+    </div>
+    <div class="description">
+     High-quality running shoes designed for maximum comfort and durability.
+    </div>
+    <div class="add-to-cart">
+     Add to Cart
+    </div>
+    <div class="countdown-timer">
+     Hurry! Offer ends in 3h 45m
+    </div>
+   </div>
+   <div class="product">
+    <div class="discount-label">
+     -40%
+    </div>
+    <img alt="Wireless Noise-Canceling Headphones" id="product-image-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/338dc328-8971-46a4-a64c-d75585a47cd2.png"/>
+    <div class="product-title">
+     Wireless Noise-Canceling Headphones
+    </div>
+    <div class="star-ratings">
+     ★★★★☆
+    </div>
+    <div class="review-snippets">
+     "Excellent sound quality and noise cancellation."
+    </div>
+    <div class="price">
+     <div class="original-price">
+      $150.00
+     </div>
+     <div class="discounted-price">
+      $90.00
+     </div>
+    </div>
+    <div class="description">
+     Enjoy your music with these wireless headphones featuring advanced noise-canceling technology.
+    </div>
+    <div class="add-to-cart">
+     Add to Cart
+    </div>
+    <div class="countdown-timer">
+     Hurry! Offer ends in 1h 10m
+    </div>
+   </div>
+   <div class="product">
+    <div class="discount-label">
+     -35%
+    </div>
+    <img alt="Smart Home Speaker" id="product-image-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/4e42ff95-b01f-45e6-99b1-356940372c29.png"/>
+    <div class="product-title">
+     Smart Home Speaker
+    </div>
+    <div class="star-ratings">
+     ★★★★☆
+    </div>
+    <div class="review-snippets">
+     "Great addition to my smart home setup!"
+    </div>
+    <div class="price">
+     <div class="original-price">
+      $120.00
+     </div>
+     <div class="discounted-price">
+      $78.00
+     </div>
+    </div>
+    <div class="description">
+     Control your smart home devices with this versatile and powerful smart speaker.
+    </div>
+    <div class="add-to-cart">
+     Add to Cart
+    </div>
+    <div class="countdown-timer">
+     Hurry! Offer ends in 4h 20m
+    </div>
+   </div>
+  </div>
+  <div class="filter-sort">
+   <i class="fa fa-filter">
+   </i>
+   <i class="fa fa-sort">
+   </i>
+  </div>
+  <div class="bottom-nav">
+   <i class="fa fa-home">
+   </i>
+   <i class="fa fa-list">
+   </i>
+   <i class="fa fa-shopping-cart">
+   </i>
+   <i class="fa fa-user">
+   </i>
+  </div>
+  <div class="help-icon">
+   <i class="fa fa-question">
+   </i>
+  </div>
+  <div class="cta-buttons">
+   <div class="btn">
+    Buy Now
+   </div>
+   <div class="btn">
+    Apply Coupon
+   </div>
+  </div>
+ </body>
+</html>

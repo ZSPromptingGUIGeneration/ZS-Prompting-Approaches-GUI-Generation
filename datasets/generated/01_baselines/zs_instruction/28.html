@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Radio Player App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .radio-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .radio-list li {
+            margin: 10px 0;
+        }
+        .radio-list button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .radio-list button:hover {
+            background-color: #0056b3;
+        }
+        audio {
+            margin-top: 20px;
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Radio Player
+   </h1>
+   <ul class="radio-list">
+    <li>
+     <button onclick="playRadio('http://stream-url-1.com')">
+      Radio Station 1
+     </button>
+    </li>
+    <li>
+     <button onclick="playRadio('http://stream-url-2.com')">
+      Radio Station 2
+     </button>
+    </li>
+    <li>
+     <button onclick="playRadio('http://stream-url-3.com')">
+      Radio Station 3
+     </button>
+    </li>
+   </ul>
+   <audio controls="" id="audioPlayer">
+   </audio>
+  </div>
+  <script>
+   function playRadio(url) {
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = url;
+            audioPlayer.play();
+        }
+  </script>
+ </body>
+</html>

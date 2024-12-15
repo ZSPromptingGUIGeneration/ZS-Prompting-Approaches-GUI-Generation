@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bidding App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+        }
+        .offer-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            position: relative;
+        }
+        .offer-card.open {
+            border-left: 5px solid green;
+        }
+        .offer-card.closed {
+            border-left: 5px solid grey;
+        }
+        .offer-card .status {
+            font-size: 14px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .offer-card .status.open {
+            color: green;
+        }
+        .offer-card .status.closed {
+            color: grey;
+        }
+        .offer-card .status i {
+            margin-right: 5px;
+        }
+        .offer-card h2 {
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+        .offer-card p {
+            font-size: 16px;
+            color: #666;
+            margin: 0 0 20px 0;
+        }
+        .offer-card .bid-amount {
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+            margin-bottom: 10px;
+        }
+        .offer-card .time-remaining {
+            font-size: 14px;
+            color: #888;
+        }
+        .offer-card .end-date {
+            font-size: 14px;
+            color: #888;
+        }
+        .offer-card .bid-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .offer-card .bid-button.disabled {
+            background-color: grey;
+            cursor: not-allowed;
+        }
+        .bottom-nav {
+            background-color: white;
+            box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .bottom-nav a {
+            color: #666;
+            text-decoration: none;
+            text-align: center;
+        }
+        .bottom-nav a.active {
+            color: blue;
+        }
+        .bottom-nav i {
+            display: block;
+            font-size: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="offer-card open">
+    <div class="status open">
+     <i>
+      ✔
+     </i>
+     Open
+    </div>
+    <h2>
+     Offer Title 1
+    </h2>
+    <p>
+     Brief description of the offer goes here. This provides additional context.
+    </p>
+    <div class="bid-amount">
+     $150
+    </div>
+    <div class="time-remaining">
+     Time Remaining: 2h 30m
+    </div>
+    <button class="bid-button">
+     Bid
+    </button>
+   </div>
+   <div class="offer-card closed">
+    <div class="status closed">
+     <i>
+      ✖
+     </i>
+     Closed
+    </div>
+    <h2>
+     Offer Title 2
+    </h2>
+    <p>
+     Brief description of the offer goes here. This provides additional context.
+    </p>
+    <div class="bid-amount">
+     $200
+    </div>
+    <div class="end-date">
+     Ended on: 2023-10-01 15:00
+    </div>
+    <button class="bid-button disabled" disabled="">
+     Bid
+    </button>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <a class="active" href="#">
+    <i>
+     🏠
+    </i>
+    Home
+   </a>
+   <a href="#">
+    <i>
+     📦
+    </i>
+    Offers
+   </a>
+   <a href="#">
+    <i>
+     👤
+    </i>
+    Profile
+   </a>
+   <a href="#">
+    <i>
+     🔔
+    </i>
+    Notifications
+   </a>
+  </div>
+ </body>
+</html>

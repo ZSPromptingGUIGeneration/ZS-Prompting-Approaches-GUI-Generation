@@ -1,0 +1,110 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+        }
+        .weather-card {
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        .forecast-container {
+            display: flex;
+            overflow-x: scroll;
+        }
+        .forecast-card {
+            flex: 0 0 auto;
+            width: 120px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            background: #e9ecef;
+            text-align: center;
+        }
+        .weather-icon {
+            width: 50px;
+            height: 50px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <!-- Header Section -->
+   <div class="header my-4">
+    <div class="input-group">
+     <input aria-label="City" class="form-control" placeholder="Enter city" type="text"/>
+     <div class="input-group-append">
+      <button class="btn btn-primary" type="button">
+       Search
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Current Weather Section -->
+   <div class="current-weather weather-card">
+    <div class="d-flex justify-content-between align-items-center">
+     <div>
+      <h4>
+       Current Weather
+      </h4>
+      <p>
+       City Name
+      </p>
+     </div>
+     <img alt="Weather Icon" class="weather-icon" src=""/>
+    </div>
+    <h2>
+     25°C
+    </h2>
+    <p>
+     Sunny
+    </p>
+   </div>
+   <!-- 7-Day Forecast Section -->
+   <div class="forecast-container">
+    <div class="forecast-card">
+     <p>
+      Mon
+     </p>
+     <img alt="Weather Icon" class="weather-icon" src=""/>
+     <p>
+      High: 28°C
+     </p>
+     <p>
+      Low: 18°C
+     </p>
+    </div>
+    <div class="forecast-card">
+     <p>
+      Tue
+     </p>
+     <img alt="Weather Icon" class="weather-icon" src=""/>
+     <p>
+      High: 26°C
+     </p>
+     <p>
+      Low: 17°C
+     </p>
+    </div>
+    <!-- Repeat similar blocks for other days -->
+   </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

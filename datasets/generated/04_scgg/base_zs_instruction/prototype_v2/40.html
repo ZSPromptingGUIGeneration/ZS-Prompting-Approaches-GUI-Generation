@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Trading App - Share Value
+  </title>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+        .header {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .share-name {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .share-name img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .share-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .share-value::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            width: 10px;
+            height: 10px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .price-change {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .price-change.positive {
+            color: #4CAF50;
+        }
+        .price-change.negative {
+            color: #f44336;
+        }
+        .price-change span {
+            font-size: 24px;
+            margin-left: 5px;
+        }
+        .metrics {
+            font-size: 16px;
+            color: #777;
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .chart {
+            margin: 20px 0;
+            height: 200px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #777;
+        }
+        .refresh-btn, .currency-selector {
+            margin: 10px 0;
+        }
+        .refresh-btn button, .currency-selector select {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .refresh-btn button:hover, .currency-selector select:hover {
+            background-color: #45a049;
+        }
+        .refresh-btn {
+            display: flex;
+            justify-content: center;
+        }
+        .currency-selector {
+            display: flex;
+            justify-content: center;
+        }
+        .currency-selector label {
+            margin-right: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+        .historical-data {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #777;
+        }
+        .news-section {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #777;
+            text-align: left;
+        }
+        .news-section h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .news-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .news-section ul li {
+            margin-bottom: 10px;
+        }
+        .news-section ul li a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .news-section ul li a:hover {
+            text-decoration: underline;
+        }
+        .comparison-feature {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #777;
+        }
+        .portfolio {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #777;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    Trading App
+   </div>
+   <div class="share-name">
+    <img alt="Apple Logo" src=""/>
+    Apple Inc. (AAPL)
+   </div>
+   <div class="share-value">
+    $250.75
+   </div>
+   <div class="price-change positive">
+    <span>
+     ↑
+    </span>
+    +1.25 (0.50%)
+   </div>
+   <div class="metrics">
+    <div>
+     Market Cap: $2.5T
+    </div>
+    <div>
+     Volume: 75M
+    </div>
+    <div>
+     P/E Ratio: 30.25
+    </div>
+    <div>
+     EPS: 3.28
+    </div>
+    <div>
+     Dividend Yield: 1.2%
+    </div>
+    <div>
+     52-Week High: $260.00
+    </div>
+    <div>
+     52-Week Low: $200.00
+    </div>
+   </div>
+   <div class="chart">
+    Live Share Price Chart
+   </div>
+   <div class="refresh-btn">
+    <button>
+     Refresh
+    </button>
+   </div>
+   <div class="currency-selector">
+    <label for="currency">
+     Currency:
+    </label>
+    <select id="currency">
+     <option value="USD">
+      USD
+     </option>
+     <option value="EUR">
+      EUR
+     </option>
+     <option value="GBP">
+      GBP
+     </option>
+    </select>
+   </div>
+   <div class="historical-data">
+    <h2>
+     Historical Data
+    </h2>
+    <p>
+     Past Week: $245.00 - $250.75
+    </p>
+    <p>
+     Past Month: $230.00 - $250.75
+    </p>
+   </div>
+   <div class="news-section">
+    <h2>
+     Recent News
+    </h2>
+    <ul>
+     <li>
+      <a href="#">
+       Apple releases new iPhone model
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Apple's Q3 earnings beat expectations
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Apple announces new partnership with XYZ
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="comparison-feature">
+    <h2>
+     Compare with
+    </h2>
+    <select>
+     <option value="MSFT">
+      Microsoft (MSFT)
+     </option>
+     <option value="GOOGL">
+      Google (GOOGL)
+     </option>
+     <option value="AMZN">
+      Amazon (AMZN)
+     </option>
+    </select>
+   </div>
+   <div class="portfolio">
+    <button>
+     Add to Portfolio
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

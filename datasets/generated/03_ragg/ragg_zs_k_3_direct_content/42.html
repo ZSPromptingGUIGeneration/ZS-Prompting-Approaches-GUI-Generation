@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+        .container {
+            padding: 20px;
+        }
+        .location {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .time {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .temperature {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .feels-like,
+        .details {
+            font-size: 18px;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .day {
+            text-align: center;
+        }
+        .day img {
+            width: 50px;
+            height: 50px;
+        }
+        .day p {
+            margin: 5px 0;
+        }
+        .weather-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .weather-details div {
+            width: 30%;
+        }
+        .weather-details img {
+            width: 100%;
+            height: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="location">
+    San Francisco
+   </div>
+   <div class="time">
+    4:15 PM, 12/23 (GMT-08:00)
+   </div>
+   <div class="temperature">
+    55°F
+   </div>
+   <div class="feels-like">
+    Feels like 55°F
+   </div>
+   <div class="details">
+    <p>
+     Light rain
+    </p>
+    <p>
+     Sunrise: 7:22 AM | Sunset: 4:55 PM
+    </p>
+    <p>
+     Duration of day: 9 h, 33 m
+    </p>
+    <p>
+     Latest update: 0 minutes ago
+    </p>
+   </div>
+   <div class="weather-details">
+    <div>
+     <img alt="Humidity image showing a humid environment" id="humidity-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b6dbf466-6719-436a-aae9-07a7330367be.png"/>
+     <p>
+      Humidity: 87%
+     </p>
+     <p>
+      Wind: 6 MPH ESE
+     </p>
+    </div>
+    <div>
+     <img alt="Sunrise image showing the sun rising over a horizon" id="sunrise-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/80040f4c-16d9-41c9-9901-e2241479aa7f.png"/>
+     <p>
+      Rise: 07:14 AM
+     </p>
+     <p>
+      Set: 05:34 PM
+     </p>
+    </div>
+    <div>
+     <img alt="Sunrise image showing the sun rising over a different horizon" id="sunrise2-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/68818bfc-8561-4eb2-aa5b-237e6ef067d9.png"/>
+     <p>
+      Rise: 10:05 AM
+     </p>
+     <p>
+      Set: 10:46 PM
+     </p>
+    </div>
+   </div>
+   <div class="forecast">
+    <div class="day">
+     <img alt="Cloudy weather icon" id="cloudy-img" src="cloudy.png"/>
+     <p>
+      WED
+     </p>
+     <p>
+      52/38°F
+     </p>
+     <p>
+      Overcast
+     </p>
+    </div>
+    <div class="day">
+     <img alt="Rainy weather icon" id="rain-img-1" src="rain.png"/>
+     <p>
+      THU
+     </p>
+     <p>
+      56/52°F
+     </p>
+     <p>
+      Light rain shower
+     </p>
+    </div>
+    <div class="day">
+     <img alt="Rainy weather icon" id="rain-img-2" src="rain.png"/>
+     <p>
+      FRI
+     </p>
+     <p>
+      55/52°F
+     </p>
+     <p>
+      Light rain shower
+     </p>
+    </div>
+    <div class="day">
+     <img alt="Rainy weather icon" id="rain-img-3" src="rain.png"/>
+     <p>
+      SAT
+     </p>
+     <p>
+      57/51°F
+     </p>
+     <p>
+      Light rain shower
+     </p>
+    </div>
+    <div class="day">
+     <img alt="Cloudy weather icon" id="cloudy-img-2" src="cloudy.png"/>
+     <p>
+      SUN
+     </p>
+     <p>
+      58/52°F
+     </p>
+     <p>
+      Overcast
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

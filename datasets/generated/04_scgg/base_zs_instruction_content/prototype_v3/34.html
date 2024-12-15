@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Child Development Journal
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .header {
+            background-color: #6C63FF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        .nav-bar {
+            background-color: #4E4CFF;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+        .nav-bar a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .child-info {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .child-info h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+        .child-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .child-info img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 2px solid #6C63FF;
+        }
+        .development-stage {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .development-stage h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .development-stage p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .development-stage .notes {
+            margin: 10px 0;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .timeline {
+            padding: 20px;
+            background: #6C63FF;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .timeline h2 {
+            margin: 0 0 20px;
+            font-size: 22px;
+            color: white;
+        }
+        .timeline .stage {
+            padding: 10px 0;
+            border-bottom: 1px solid white;
+        }
+        .timeline .stage:last-child {
+            border-bottom: none;
+        }
+        .timeline .stage h3 {
+            margin: 0 0 5px;
+            font-size: 20px;
+            color: white;
+        }
+        .timeline .stage p {
+            margin: 0;
+            font-size: 16px;
+            color: white;
+        }
+        .editable {
+            background-color: #4E4CFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .editable:hover {
+            background-color: #3b3a99;
+        }
+        .additional-info {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .additional-info h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .additional-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 13px;
+            padding: 3px;
+            margin: 10px 0;
+        }
+        .progress-bar-fill {
+            display: block;
+            height: 20px;
+            width: 70%;
+            background-color: #4E4CFF;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+        }
+        .search-bar {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+        }
+        .print-button {
+            background-color: #4E4CFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+            display: block;
+            text-align: center;
+        }
+        .print-button:hover {
+            background-color: #3b3a99;
+        }
+        .footer {
+            background-color: #4E4CFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .photo-gallery {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .photo-gallery h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .photo-gallery img {
+            border-radius: 8px;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin: 5px;
+            border: 2px solid #6C63FF;
+        }
+        .daily-log {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .daily-log h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .daily-log textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .medical-records {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .medical-records h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .medical-records p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .privacy-settings {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .privacy-settings h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .privacy-settings p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Child Development Journal
+   </h1>
+  </div>
+  <div class="nav-bar" role="navigation">
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    Milestones
+   </a>
+   <a href="#">
+    Health Records
+   </a>
+   <a href="#">
+    Notes
+   </a>
+  </div>
+  <div class="container">
+   <div class="child-info">
+    <img alt="Smiling child wearing a blue shirt" id="child-photo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/3cd3c2f0-9a0d-4ab0-9e56-35141b2213b7.png"/>
+    <h2 contenteditable="true">
+     John Doe
+    </h2>
+    <p contenteditable="true">
+     Age: 2 years
+    </p>
+    <p contenteditable="true">
+     Birthday: January 1, 2021
+    </p>
+    <p contenteditable="true">
+     Height: 34 inches
+    </p>
+    <p contenteditable="true">
+     Weight: 28 lbs
+    </p>
+    <button class="editable">
+     Edit
+    </button>
+   </div>
+   <div class="additional-info">
+    <h3>
+     Additional Information
+    </h3>
+    <p contenteditable="true">
+     Blood Type: O+
+    </p>
+    <p contenteditable="true">
+     Allergies: None
+    </p>
+    <p contenteditable="true">
+     Emergency Contact: Jane Doe (555-1234)
+    </p>
+    <p contenteditable="true">
+     Favorite Activities: Playing with blocks, drawing
+    </p>
+    <button class="editable">
+     Edit
+    </button>
+   </div>
+   <div class="timeline">
+    <h2>
+     Development Timeline
+    </h2>
+    <div class="stage">
+     <h3>
+      Stage: Walking
+     </h3>
+     <p>
+      Date: March 15, 2023
+     </p>
+     <ul class="notes">
+      <li>
+       John took his first steps today!
+      </li>
+      <li>
+       He was very excited and proud of himself.
+      </li>
+     </ul>
+    </div>
+    <div class="stage">
+     <h3>
+      Stage: First Words
+     </h3>
+     <p>
+      Date: February 10, 2023
+     </p>
+     <ul class="notes">
+      <li>
+       John said "Mama" for the first time.
+      </li>
+      <li>
+       It was a very emotional moment for everyone.
+      </li>
+     </ul>
+    </div>
+    <button class="editable">
+     Add New Stage
+    </button>
+   </div>
+   <div class="development-stage">
+    <h3>
+     Milestone Progress
+    </h3>
+    <div class="progress-bar">
+     <span class="progress-bar-fill">
+      70%
+     </span>
+    </div>
+   </div>
+   <div class="photo-gallery">
+    <h3>
+     Photo Gallery
+    </h3>
+    <img alt="Child playing with blocks" id="photo1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/58b6531e-afdb-4b7f-a426-005a0bf052ee.png"/>
+    <img alt="Child drawing with crayons" id="photo2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/35cc9121-0b6b-4d90-bddf-37275ecbac2b.png"/>
+    <img alt="Child smiling in the park" id="photo3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7a935eb7-2749-403b-a575-771da6cc51c8.png"/>
+   </div>
+   <div class="daily-log">
+    <h3>
+     Daily Log
+    </h3>
+    <textarea placeholder="Write daily observations here..."></textarea>
+   </div>
+   <div class="medical-records">
+    <h3>
+     Medical Records
+    </h3>
+    <p>
+     Vaccinations: Up to date
+    </p>
+    <p>
+     Doctor Visits: Last visit on March 1, 2023
+    </p>
+   </div>
+   <div class="privacy-settings">
+    <h3>
+     Privacy Settings
+    </h3>
+    <p>
+     Control who can view specific information.
+    </p>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search milestones..." type="text"/>
+   </div>
+   <button class="print-button">
+    Print Journal
+   </button>
+  </div>
+  <div class="footer">
+   <p>
+    Child Development Journal - Version 1.0
+   </p>
+  </div>
+ </body>
+</html>
+

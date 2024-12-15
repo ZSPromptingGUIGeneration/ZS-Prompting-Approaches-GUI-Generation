@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Soup Recipes
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #8aacc8;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .menu-icon {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .carousel {
+            position: relative;
+            margin: 20px 0;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+        .carousel .left-arrow,
+        .carousel .right-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel .left-arrow {
+            left: 10px;
+        }
+        .carousel .right-arrow {
+            right: 10px;
+        }
+        .carousel .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            font-size: 18px;
+        }
+        .soup-category {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+        }
+        .soup-category img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+        .soup-category h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #8a2b2b;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu-icon">
+    ☰
+   </div>
+   <h1>
+    Soup Recipes
+   </h1>
+  </div>
+  <div class="carousel">
+   <img alt="Wild Rice Soup" src=""/>
+   <div class="left-arrow">
+    ◀
+   </div>
+   <div class="right-arrow">
+    ▶
+   </div>
+   <div class="caption">
+    Wild Rice Soup
+   </div>
+  </div>
+  <div class="soup-category">
+   <img alt="Hot Soups" src=""/>
+   <h2>
+    Hot Soups
+   </h2>
+  </div>
+  <div class="soup-category">
+   <img alt="Cold Soups" src=""/>
+   <h2>
+    Cold Soups
+   </h2>
+  </div>
+  <div class="soup-category">
+   <img alt="Cream Soups" src=""/>
+   <h2>
+    Cream Soups
+   </h2>
+  </div>
+  <div class="soup-category">
+   <img alt="Other Soups" src=""/>
+   <h2>
+    Other Soups
+   </h2>
+  </div>
+ </body>
+</html>

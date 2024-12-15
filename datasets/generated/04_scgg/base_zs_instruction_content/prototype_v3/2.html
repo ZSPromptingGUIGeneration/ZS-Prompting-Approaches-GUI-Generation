@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Fashion Q&amp;A
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .header nav a.active {
+            background-color: #e65c54;
+        }
+        .container {
+            padding: 20px;
+        }
+        .notification {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .notification .dismiss {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .search-bar input {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .search-bar .clear-button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.2em;
+            color: #999;
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .filters button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .filters button:hover {
+            background-color: #e65c54;
+        }
+        .question {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .question h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .question p a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .question .details {
+            font-size: 0.9em;
+            color: #999;
+        }
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .tags span {
+            background-color: #ff6f61;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+        .tags span:hover {
+            background-color: #e65c54;
+        }
+        .sort-options {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .sort-options label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .sort-options select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .answer {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .answer p {
+            margin: 0;
+        }
+        .answer .avatar {
+            margin-right: 10px;
+        }
+        .answer .avatar img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+        .answer .content {
+            flex-grow: 1;
+        }
+        .answer .content .timestamp {
+            font-size: 0.8em;
+            color: #999;
+        }
+        .answer .content .edit-delete {
+            font-size: 0.8em;
+            color: #ff6f61;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .answer .content .edit-delete:hover {
+            color: #e65c54;
+        }
+        .answer .content .flag {
+            font-size: 0.8em;
+            color: #ff6f61;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .answer .content .flag:hover {
+            color: #e65c54;
+        }
+        .answer-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            padding: 15px;
+        }
+        .answer-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        .answer-form .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .answer-form .form-actions .char-count {
+            font-size: 0.9em;
+            color: #999;
+        }
+        .answer-form button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .answer-form button:hover {
+            background-color: #e65c54;
+        }
+        .upvote-downvote {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        .upvote-downvote span {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .upvote-downvote .count {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .upvote-downvote button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #ff6f61;
+            font-size: 1.2em;
+        }
+        .upvote-downvote button:hover {
+            color: #e65c54;
+        }
+        .upvote-downvote button:focus {
+            color: #e65c54;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            margin: 0 5px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+        }
+        .pagination a:hover {
+            background-color: #e65c54;
+        }
+        .pagination a.current {
+            background-color: #e65c54;
+        }
+        .comment-section {
+            margin-top: 20px;
+        }
+        .comment-section h4 {
+            margin-top: 0;
+        }
+        .comment {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .comment .avatar {
+            margin-right: 10px;
+        }
+        .comment .avatar img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+        .comment .content {
+            flex-grow: 1;
+        }
+        .comment .content .timestamp {
+            font-size: 0.8em;
+            color: #999;
+        }
+        .comment .content .edit-delete {
+            font-size: 0.8em;
+            color: #ff6f61;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .comment .content .edit-delete:hover {
+            color: #e65c54;
+        }
+        .user-badge {
+            background-color: #ff6f61;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Fashion Q&amp;A
+   </h1>
+   <nav>
+    <a class="active" href="#">
+     Home
+    </a>
+    <a href="#">
+     Ask a Question
+    </a>
+    <a href="#">
+     My Profile
+    </a>
+   </nav>
+  </div>
+  <div class="container">
+   <div class="notification">
+    You have 3 new answers on your question!
+    <span class="dismiss">
+     ×
+    </span>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for questions or tags..." type="text"/>
+    <button class="clear-button">
+     <i class="fas fa-times">
+     </i>
+    </button>
+   </div>
+   <div class="filters">
+    <button>
+     Casual
+    </button>
+    <button>
+     Formal
+    </button>
+    <button>
+     Seasonal
+    </button>
+    <button>
+     Men's Fashion
+    </button>
+    <button>
+     Women's Fashion
+    </button>
+    <button>
+     Accessories
+    </button>
+   </div>
+   <div class="question">
+    <h2>
+     What should I wear to a summer wedding?
+    </h2>
+    <p>
+     <a href="#">
+      Fashionista101
+     </a>
+     <span class="user-badge">
+      Fashion Guru
+     </span>
+    </p>
+    <div class="details">
+     <span>
+      Posted on: 2023-10-12
+     </span>
+     |
+     <span>
+      Views: 123
+     </span>
+     |
+     <span>
+      Answers: 2
+     </span>
+    </div>
+    <div class="tags">
+     <span>
+      Wedding
+     </span>
+     <span>
+      Summer
+     </span>
+     <span>
+      Fashion
+     </span>
+    </div>
+   </div>
+   <div class="question">
+    <h2>
+     How to style a denim jacket?
+    </h2>
+    <p>
+     <a href="#">
+      StyleSeeker
+     </a>
+     <span class="user-badge">
+      Newbie
+     </span>
+    </p>
+    <div class="details">
+     <span>
+      Posted on: 2023-10-10
+     </span>
+     |
+     <span>
+      Views: 98
+     </span>
+     |
+     <span>
+      Answers: 5
+     </span>
+    </div>
+    <div class="tags">
+     <span>
+      Denim
+     </span>
+     <span>
+      Jacket
+     </span>
+     <span>
+      Casual
+     </span>
+    </div>
+   </div>
+   <div class="question">
+    <h2>
+     Best accessories for a black dress?
+    </h2>
+    <p>
+     <a href="#">
+      TrendSetter
+     </a>
+     <span class="user-badge">
+      Fashion Enthusiast
+     </span>
+    </p>
+    <div class="details">
+     <span>
+      Posted on: 2023-10-09
+     </span>
+     |
+     <span>
+      Views: 145
+     </span>
+     |
+     <span>
+      Answers: 3
+     </span>
+    </div>
+    <div class="tags">
+     <span>
+      Accessories
+     </span>
+     <span>
+      Black Dress
+     </span>
+     <span>
+      Formal
+     </span>
+    </div>
+   </div>
+   <div class="sort-options">
+    <label for="sort">
+     Sort by:
+    </label>
+    <select id="sort">
+     <option value="recent">
+      Most Recent
+     </option>
+     <option value="upvoted">
+      Most Upvoted
+     </option>
+     <option value="oldest">
+      Oldest
+     </option>
+     <option value="helpful">
+      Most Helpful
+     </option>
+     <option value="discussed">
+      Most Discussed
+     </option>
+    </select>
+   </div>
+   <div class="answer">
+    <div class="avatar">
+     <img alt="Avatar of User456" id="avatar1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/47e4ff99-be94-409e-8d00-b3676b04dc58.png"/>
+    </div>
+    <div class="content">
+     <p>
+      <strong>
+       <a href="#">
+        FashionGuru
+       </a>
+       :
+      </strong>
+      A light, flowy dress in pastel colors would be perfect!
+     </p>
+     <div class="timestamp">
+      2 hours ago
+     </div>
+     <div class="upvote-downvote">
+      <button>
+       <i class="fas fa-arrow-up">
+       </i>
+      </button>
+      <div class="count">
+       <span>
+        10
+       </span>
+       Upvotes |
+       <span>
+        2
+       </span>
+       Downvotes
+      </div>
+      <button>
+       <i class="fas fa-arrow-down">
+       </i>
+      </button>
+     </div>
+     <div class="edit-delete">
+      Edit | Delete
+     </div>
+     <div class="flag">
+      Flag
+     </div>
+    </div>
+   </div>
+   <div class="answer">
+    <div class="avatar">
+     <img alt="Avatar of User789" id="avatar2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fe9dbb9f-223c-48df-af3e-7154d1f2e964.png"/>
+    </div>
+    <div class="content">
+     <p>
+      <strong>
+       <a href="#">
+        StyleMaster
+       </a>
+       :
+      </strong>
+      Consider a linen suit if you prefer wearing pants.
+     </p>
+     <div class="timestamp">
+      1 hour ago
+     </div>
+     <div class="upvote-downvote">
+      <button>
+       <i class="fas fa-arrow-up">
+       </i>
+      </button>
+      <div class="count">
+       <span>
+        8
+       </span>
+       Upvotes |
+       <span>
+        1
+       </span>
+       Downvotes
+      </div>
+      <button>
+       <i class="fas fa-arrow-down">
+       </i>
+      </button>
+     </div>
+     <div class="edit-delete">
+      Edit | Delete
+     </div>
+     <div class="flag">
+      Flag
+     </div>
+    </div>
+   </div>
+   <div class="comment-section">
+    <h4>
+     Comments:
+    </h4>
+    <div class="comment">
+     <div class="avatar">
+      <img alt="Avatar of User101" id="avatar3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7b6336e3-2c99-4711-92b9-345e920ac90d.png"/>
+     </div>
+     <div class="content">
+      <p>
+       <strong>
+        <a href="#">
+         FashionLover
+        </a>
+        :
+       </strong>
+       I agree, pastel colors are great for a summer wedding!
+      </p>
+      <div class="timestamp">
+       30 minutes ago
+      </div>
+      <div class="edit-delete">
+       Edit | Delete
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="answer-form">
+    <h3>
+     Your Answer:
+    </h3>
+    <textarea maxlength="500" oninput="document.querySelector('.char-count').innerText = `${this.value.length}/500`" placeholder="Share your fashion advice here..." rows="4"></textarea>
+    <div class="form-actions">
+     <span class="char-count">
+      0/500
+     </span>
+     <button>
+      Submit Answer
+     </button>
+    </div>
+   </div>
+   <div class="pagination">
+    <a class="current" href="#">
+     1
+    </a>
+    <a href="#">
+     2
+    </a>
+    <a href="#">
+     3
+    </a>
+    <a href="#">
+     4
+    </a>
+    <a href="#">
+     Next
+    </a>
+    <a href="#">
+     Last
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

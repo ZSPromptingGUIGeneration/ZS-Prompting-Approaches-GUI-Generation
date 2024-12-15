@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Trip Booking
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="date"] {
+            padding: 9px 10px;
+        }
+        .form-group input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        .form-group input[type="number"]::-webkit-outer-spin-button,
+        .form-group input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Trip Booking
+   </h1>
+   <form>
+    <div class="form-group">
+     <label for="destination">
+      Destination
+     </label>
+     <input id="destination" name="destination" placeholder="Enter destination" type="text"/>
+    </div>
+    <div class="form-group">
+     <label for="travel-time">
+      Travel Time
+     </label>
+     <input id="travel-time" name="travel-time" type="date"/>
+    </div>
+    <div class="form-group">
+     <label for="people">
+      Number of People
+     </label>
+     <input id="people" min="1" name="people" placeholder="Enter number of people" type="number"/>
+    </div>
+    <button class="btn" type="submit">
+     Search
+    </button>
+   </form>
+  </div>
+ </body>
+</html>

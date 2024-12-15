@@ -1,0 +1,142 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Notification Settings
+  </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {display: none;}
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .slider.round {
+            border-radius: 34px;
+        }
+        .slider.round:before {
+            border-radius: 50%;
+        }
+  </style>
+ </head>
+ <body>
+  <nav class="navbar navbar-light bg-light">
+   <a class="navbar-brand" href="#">
+    Back
+   </a>
+   <span class="navbar-text mx-auto">
+    Notification Settings
+   </span>
+  </nav>
+  <div class="container mt-4">
+   <div class="text-center mb-4">
+    <h5>
+     Selected Location: New York, NY
+    </h5>
+   </div>
+   <div class="card mb-4">
+    <div class="card-header">
+     Notification Toggles
+    </div>
+    <ul class="list-group list-group-flush">
+     <li class="list-group-item d-flex justify-content-between align-items-center">
+      Rain
+      <label class="switch">
+       <input checked="" type="checkbox"/>
+       <span class="slider round">
+       </span>
+      </label>
+     </li>
+     <li class="list-group-item d-flex justify-content-between align-items-center">
+      Snow
+      <label class="switch">
+       <input type="checkbox"/>
+       <span class="slider round">
+       </span>
+      </label>
+     </li>
+     <li class="list-group-item d-flex justify-content-between align-items-center">
+      Extreme Temperatures
+      <label class="switch">
+       <input type="checkbox"/>
+       <span class="slider round">
+       </span>
+      </label>
+     </li>
+    </ul>
+   </div>
+   <div class="card mb-4">
+    <div class="card-header">
+     Notification Methods
+    </div>
+    <ul class="list-group list-group-flush">
+     <li class="list-group-item">
+      <div class="form-check">
+       <input checked="" class="form-check-input" id="pushNotifications" type="checkbox" value=""/>
+       <label class="form-check-label" for="pushNotifications">
+        Push Notifications
+       </label>
+      </div>
+     </li>
+     <li class="list-group-item">
+      <div class="form-check">
+       <input class="form-check-input" id="emailNotifications" type="checkbox" value=""/>
+       <label class="form-check-label" for="emailNotifications">
+        Email
+       </label>
+      </div>
+     </li>
+     <li class="list-group-item">
+      <div class="form-check">
+       <input class="form-check-input" id="smsNotifications" type="checkbox" value=""/>
+       <label class="form-check-label" for="smsNotifications">
+        SMS
+       </label>
+      </div>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <footer class="fixed-bottom bg-light p-2 text-center">
+   <button class="btn btn-primary">
+    Save Settings
+   </button>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

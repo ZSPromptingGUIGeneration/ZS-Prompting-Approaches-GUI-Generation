@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e0f7fa, #80deea);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+            background: #00acc1;
+            color: white;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #00acc1;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer button {
+            background: white;
+            color: #00acc1;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Weather Notifications
+   </h1>
+   <p>
+    Selected Location: San Francisco, CA
+   </p>
+  </div>
+  <div class="container">
+   <div class="section">
+    <div class="section-title">
+     Weather Alerts
+    </div>
+    <div class="toggle">
+     <span>
+      Severe Weather Alerts
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <div class="toggle">
+     <span>
+      Lightning Alerts
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <div class="toggle">
+     <span>
+      Station Alerts
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <div class="toggle">
+     <span>
+      Precipitation Alerts
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <div class="toggle">
+     <span>
+      Temperature Display
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <div class="toggle">
+     <span>
+      Lock Screen Weather Banner
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+   </div>
+   <div class="section">
+    <div class="section-title">
+     Show Alerts in Status Bar
+    </div>
+    <div class="checkbox-group">
+     <label>
+      <input checked="" type="checkbox"/>
+      Sounds
+     </label>
+     <label>
+      <input checked="" type="checkbox"/>
+      Lights
+     </label>
+     <label>
+      <input checked="" type="checkbox"/>
+      Vibration
+     </label>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <button>
+    Done
+   </button>
+  </div>
+ </body>
+</html>

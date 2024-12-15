@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .playlist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+        }
+        .playlist-header h2 {
+            margin: 0;
+        }
+        .playlist-header .add-playlist {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .playlists {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .playlists li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            background-color: white;
+        }
+        .playlists li:last-child {
+            border-bottom: none;
+        }
+        .playlists li .playlist-info {
+            display: flex;
+            align-items: center;
+        }
+        .playlists li .playlist-info img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .playlists li .playlist-info span {
+            font-size: 16px;
+        }
+        .playlists li .playlist-actions {
+            display: flex;
+            align-items: center;
+        }
+        .playlists li .playlist-actions input {
+            margin-left: 10px;
+        }
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .floating-buttons button {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Music Player
+   </h1>
+  </header>
+  <div class="playlist-header">
+   <h2>
+    Playlists
+   </h2>
+   <div class="add-playlist">
+    +
+   </div>
+  </div>
+  <div class="content">
+   <ul class="playlists">
+    <li>
+     <div class="playlist-info">
+      <img alt="Icon" src=""/>
+      <span>
+       Last downloads (251)
+      </span>
+     </div>
+     <div class="playlist-actions">
+      <input type="checkbox"/>
+     </div>
+    </li>
+    <li>
+     <div class="playlist-info">
+      <img alt="Icon" src=""/>
+      <span>
+       Top rated (1)
+      </span>
+     </div>
+     <div class="playlist-actions">
+      <input type="checkbox"/>
+     </div>
+    </li>
+    <li>
+     <div class="playlist-info">
+      <img alt="Icon" src=""/>
+      <span>
+       Favorites (1)
+      </span>
+     </div>
+     <div class="playlist-actions">
+      <input type="checkbox"/>
+     </div>
+    </li>
+    <li>
+     <div class="playlist-info">
+      <img alt="Icon" src=""/>
+      <span>
+       New playlist 1 (1)
+      </span>
+     </div>
+     <div class="playlist-actions">
+      <input type="checkbox"/>
+     </div>
+    </li>
+   </ul>
+  </div>
+  <div class="floating-buttons">
+   <button>
+    +
+   </button>
+   <button>
+    ▶
+   </button>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ff4c4c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+        }
+        .header img {
+            height: 30px;
+            vertical-align: middle;
+        }
+        .header .menu, .header .search, .header .cart {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .header .menu {
+            left: 10px;
+        }
+        .header .search {
+            right: 50px;
+        }
+        .header .cart {
+            right: 10px;
+        }
+        .banner {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .categories div {
+            text-align: center;
+        }
+        .categories img {
+            width: 50px;
+            height: 50px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        .product {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product .name {
+            font-weight: bold;
+        }
+        .product .price {
+            color: red;
+        }
+        .product .original-price {
+            text-decoration: line-through;
+            color: grey;
+        }
+        .product .discount {
+            color: green;
+        }
+        .footer {
+            background-color: #ff4c4c;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <span class="menu">
+    ☰
+   </span>
+   <img alt="Logo" src=""/>
+   <span class="search">
+    🔍
+   </span>
+   <span class="cart">
+    🛒
+   </span>
+  </div>
+  <div class="banner">
+   <img alt="Banner" src=""/>
+  </div>
+  <div class="categories">
+   <div>
+    <img alt="Category 1" src=""/>
+    <p>
+     Women
+    </p>
+   </div>
+   <div>
+    <img alt="Category 2" src=""/>
+    <p>
+     Men
+    </p>
+   </div>
+   <div>
+    <img alt="Category 3" src=""/>
+    <p>
+     Jewelry
+    </p>
+   </div>
+   <div>
+    <img alt="Category 4" src=""/>
+    <p>
+     Bags
+    </p>
+   </div>
+  </div>
+  <div class="products">
+   <div class="product">
+    <img alt="Product 1" src=""/>
+    <p class="name">
+     Light Blue &amp; Beige Asher Rug
+    </p>
+    <p class="price">
+     $59.99
+    </p>
+    <p class="original-price">
+     $207.96
+    </p>
+   </div>
+   <div class="product">
+    <img alt="Product 2" src=""/>
+    <p class="name">
+     Cream Inspired India Rug
+    </p>
+    <p class="price">
+     $139.99
+    </p>
+    <p class="original-price">
+     $350.00
+    </p>
+   </div>
+   <div class="product">
+    <img alt="Product 3" src=""/>
+    <p class="name">
+     Top with Pleats
+    </p>
+    <p class="price">
+     $9.99
+    </p>
+    <p class="original-price">
+     $12.99
+    </p>
+    <p class="discount">
+     Special
+    </p>
+   </div>
+   <div class="product">
+    <img alt="Product 4" src=""/>
+    <p class="name">
+     Jane blue store Timberland high Cut boots
+    </p>
+    <p class="price">
+     RM 460.00
+    </p>
+    <p class="original-price">
+     RM 575.00
+    </p>
+    <p class="discount">
+     20% off
+    </p>
+   </div>
+  </div>
+  <div class="footer">
+   <p>
+    © 2023 Shopping App
+   </p>
+  </div>
+ </body>
+</html>

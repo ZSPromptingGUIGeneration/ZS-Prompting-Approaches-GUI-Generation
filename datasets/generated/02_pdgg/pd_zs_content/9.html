@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+        .header-image {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            background: url('high-quality-image.jpg') no-repeat center center/cover;
+        }
+        .header-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+        }
+        .header-title {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+        }
+        .steps {
+            list-style: none;
+            padding: 0;
+        }
+        .step {
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .step-number {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .step-text {
+            flex-grow: 1;
+            font-size: 16px;
+        }
+        .step-checkbox {
+            margin-left: 10px;
+        }
+        .ingredient-list {
+            display: none;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .ingredient-button {
+            background: #ff5722;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .timer-icon {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .nav-button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            color: #ff5722;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header-image" id="header-image">
+   <div class="header-title">
+    Spaghetti Carbonara
+   </div>
+  </div>
+  <div class="sticky-header">
+   Recipe Steps
+  </div>
+  <div class="content">
+   <button class="ingredient-button" onclick="toggleIngredients()">
+    Show Ingredients
+   </button>
+   <div class="ingredient-list" id="ingredient-list">
+    <ul>
+     <li>
+      200g Spaghetti
+     </li>
+     <li>
+      100g Pancetta
+     </li>
+     <li>
+      2 large eggs
+     </li>
+     <li>
+      50g Pecorino cheese
+     </li>
+     <li>
+      50g Parmesan
+     </li>
+     <li>
+      Freshly ground black pepper
+     </li>
+     <li>
+      Salt
+     </li>
+     <li>
+      2 cloves of garlic
+     </li>
+     <li>
+      50g unsalted butter
+     </li>
+    </ul>
+   </div>
+   <ul class="steps">
+    <li class="step">
+     <span class="step-number">
+      1
+     </span>
+     <span class="step-text">
+      Step 1: Cook the spaghetti in a large pot of boiling salted water until al dente.
+      <i class="fas fa-clock timer-icon">
+      </i>
+     </span>
+     <input class="step-checkbox" type="checkbox"/>
+    </li>
+    <li class="step">
+     <span class="step-number">
+      2
+     </span>
+     <span class="step-text">
+      Step 2: Fry the pancetta with the garlic.
+      <i class="fas fa-clock timer-icon">
+      </i>
+     </span>
+     <input class="step-checkbox" type="checkbox"/>
+    </li>
+    <li class="step">
+     <span class="step-number">
+      3
+     </span>
+     <span class="step-text">
+      Step 3: Beat the eggs in a bowl, then add the cheeses and mix.
+      <i class="fas fa-clock timer-icon">
+      </i>
+     </span>
+     <input class="step-checkbox" type="checkbox"/>
+    </li>
+    <li class="step">
+     <span class="step-number">
+      4
+     </span>
+     <span class="step-text">
+      Step 4: Drain the spaghetti and add to the pancetta. Remove from heat and mix in the egg mixture.
+      <i class="fas fa-clock timer-icon">
+      </i>
+     </span>
+     <input class="step-checkbox" type="checkbox"/>
+    </li>
+    <li class="step">
+     <span class="step-number">
+      5
+     </span>
+     <span class="step-text">
+      Step 5: Serve immediately with extra cheese and black pepper.
+      <i class="fas fa-clock timer-icon">
+      </i>
+     </span>
+     <input class="step-checkbox" type="checkbox"/>
+    </li>
+   </ul>
+  </div>
+  <div class="bottom-nav">
+   <button class="nav-button">
+    Back
+   </button>
+   <button class="nav-button">
+    Home
+   </button>
+  </div>
+  <script>
+   function toggleIngredients() {
+            const ingredientList = document.getElementById('ingredient-list');
+            if (ingredientList.style.display === 'none' || ingredientList.style.display === '') {
+                ingredientList.style.display = 'block';
+            } else {
+                ingredientList.style.display = 'none';
+            }
+        }
+  </script>
+ </body>
+</html>

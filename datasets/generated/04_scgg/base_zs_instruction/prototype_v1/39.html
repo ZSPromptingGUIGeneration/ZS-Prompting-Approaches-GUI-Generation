@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bicycle Details
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .details h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .details p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .specifications {
+            margin-top: 20px;
+        }
+        .specifications h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .specifications ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .specifications ul li {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .price {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 10px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #3498db;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .reviews {
+            margin-top: 20px;
+        }
+        .reviews h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .reviews p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .availability {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .variants {
+            margin-bottom: 20px;
+        }
+        .variants h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .variants select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .related-products {
+            margin-top: 20px;
+        }
+        .related-products h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .breadcrumb {
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #3498db;
+            margin-right: 5px;
+        }
+        .breadcrumb a::after {
+            content: ">";
+            margin-left: 5px;
+        }
+        .breadcrumb a:last-child::after {
+            content: "";
+        }
+        .social-share {
+            margin-top: 20px;
+        }
+        .social-share a {
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 20px;
+            color: #3498db;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            .button {
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="breadcrumb">
+    <a href="#">
+     Home
+    </a>
+    <a href="#">
+     Bicycles
+    </a>
+    <a href="#">
+     Mountain Bike
+    </a>
+   </div>
+   <img alt="Bicycle" class="image" src=""/>
+   <div class="details">
+    <h1>
+     Mountain Bike
+    </h1>
+    <p>
+     High-quality mountain bike suitable for all terrains. Features a lightweight frame, durable tires, and advanced suspension system.
+    </p>
+    <div class="price">
+     <span class="original-price">
+      $599.99
+     </span>
+     $499.99
+    </div>
+    <div class="availability">
+     In Stock - Estimated Delivery: 3-5 Days
+    </div>
+    <a class="button" href="#">
+     Add to Cart
+    </a>
+   </div>
+   <div class="variants">
+    <h2>
+     Available Options
+    </h2>
+    <select>
+     <option value="red">
+      Red
+     </option>
+     <option value="blue">
+      Blue
+     </option>
+     <option value="green">
+      Green
+     </option>
+    </select>
+   </div>
+   <div class="specifications">
+    <h2>
+     Product Specifications
+    </h2>
+    <ul>
+     <li>
+      Frame Material: Aluminum
+     </li>
+     <li>
+      Gear System: 21-speed
+     </li>
+     <li>
+      Brake Type: Disc Brake
+     </li>
+     <li>
+      Weight: 15kg
+     </li>
+     <li>
+      Dimensions: 68 x 23 x 39 inches
+     </li>
+    </ul>
+   </div>
+   <div class="reviews">
+    <h2>
+     Customer Reviews
+    </h2>
+    <p>
+     ★★★★★ - "Excellent bike for the price!"
+    </p>
+    <p>
+     ★★★★☆ - "Very sturdy and reliable."
+    </p>
+   </div>
+   <div class="related-products">
+    <h2>
+     Related Products
+    </h2>
+    <p>
+     Check out our selection of helmets, locks, and bike lights.
+    </p>
+   </div>
+   <div class="social-share">
+    <h2>
+     Share This Product
+    </h2>
+    <a href="#">
+     Facebook
+    </a>
+    <a href="#">
+     Twitter
+    </a>
+    <a href="#">
+     Instagram
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

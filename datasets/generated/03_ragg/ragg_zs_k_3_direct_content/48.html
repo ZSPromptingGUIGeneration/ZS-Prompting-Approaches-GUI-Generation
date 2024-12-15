@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Find Shops
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #007baf;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .search-bar input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007baf;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .shop-list {
+            padding: 20px;
+        }
+        .shop-item {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .shop-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 15px;
+        }
+        .shop-info {
+            flex-grow: 1;
+        }
+        .shop-info h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .shop-info p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        .shop-distance {
+            font-size: 16px;
+            color: #999;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Find Shops
+  </div>
+  <div class="search-bar">
+   <input placeholder="Enter ZIP code or city" type="text"/>
+   <button>
+    Search
+   </button>
+  </div>
+  <div class="shop-list">
+   <div class="shop-item">
+    <img alt="Grocery Store Front" id="shop-image-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e9764d97-ae5f-4f1e-b282-8183ba8ff4a6.png"/>
+    <div class="shop-info">
+     <h3>
+      Fresh Mart - Bull Run
+     </h3>
+     <p>
+      10864 Sudley Manor Dr, Manassas, VA 20109
+     </p>
+    </div>
+    <div class="shop-distance">
+     3880.79mi
+    </div>
+   </div>
+   <div class="shop-item">
+    <img alt="Grocery Store Front" id="shop-image-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/1c7f4452-0aeb-40ec-9bf4-e18378160f0d.png"/>
+    <div class="shop-info">
+     <h3>
+      Fresh Mart - Dulles
+     </h3>
+     <p>
+      2425 Centreville Rd, Herndon, VA 20171
+     </p>
+    </div>
+    <div class="shop-distance">
+     3886.12mi
+    </div>
+   </div>
+   <div class="shop-item">
+    <img alt="Grocery Store Front" id="shop-image-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7fa59bb9-3898-4ed3-ab0c-9706388de825.png"/>
+    <div class="shop-info">
+     <h3>
+      Fresh Mart - Centreville
+     </h3>
+     <p>
+      6335 Multiplex Dr, Centreville, VA 20120
+     </p>
+    </div>
+    <div class="shop-distance">
+     3886.67mi
+    </div>
+   </div>
+   <div class="shop-item">
+    <img alt="Grocery Store Front" id="shop-image-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0ec49e57-3d1d-4501-8fea-23ac4a4cf55c.png"/>
+    <div class="shop-info">
+     <h3>
+      Fresh Mart - Sterling
+     </h3>
+     <p>
+      47100 Community Plaza, Sterling, VA 20164
+     </p>
+    </div>
+    <div class="shop-distance">
+     3887.38mi
+    </div>
+   </div>
+   <div class="shop-item">
+    <img alt="Grocery Store Front" id="shop-image-5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/44b923c6-80d8-4086-9d9b-fb5d022ea5c2.png"/>
+    <div class="shop-info">
+     <h3>
+      Fresh Mart - Germantown
+     </h3>
+     <p>
+      18066 Mateny Rd, Germantown, MD 20874
+     </p>
+    </div>
+    <div class="shop-distance">
+     3892.77mi
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

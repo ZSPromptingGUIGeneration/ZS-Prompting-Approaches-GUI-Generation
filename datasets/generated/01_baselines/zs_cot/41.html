@@ -1,0 +1,119 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   User Profile
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .user-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .user-bio {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .follow-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .stats div {
+            text-align: center;
+        }
+        .stats div span {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .recent-posts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .recent-posts img {
+            width: 100%;
+            border-radius: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="profile-container">
+   <img alt="Profile Picture" class="profile-pic" src=""/>
+   <div class="user-name">
+    John Doe
+   </div>
+   <div class="user-bio">
+    Web Developer | Tech Enthusiast | Coffee Lover
+   </div>
+   <button class="follow-btn">
+    Follow
+   </button>
+   <div class="stats">
+    <div>
+     <span>
+      120
+     </span>
+     Posts
+    </div>
+    <div>
+     <span>
+      300
+     </span>
+     Followers
+    </div>
+    <div>
+     <span>
+      180
+     </span>
+     Following
+    </div>
+   </div>
+   <div class="recent-posts">
+    <img alt="Post 1" src=""/>
+    <img alt="Post 2" src=""/>
+    <img alt="Post 3" src=""/>
+    <img alt="Post 4" src=""/>
+    <img alt="Post 5" src=""/>
+    <img alt="Post 6" src=""/>
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->

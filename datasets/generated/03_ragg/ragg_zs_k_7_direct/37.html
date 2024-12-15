@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   News App - Top Stories
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header img {
+            height: 30px;
+            vertical-align: middle;
+        }
+        .header h1 {
+            display: inline;
+            margin-left: 10px;
+            vertical-align: middle;
+            font-size: 20px;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 50px;
+            z-index: 1000;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .nav a.active {
+            border-bottom: 2px solid #f00;
+        }
+        .content {
+            margin-top: 100px;
+            padding: 10px;
+        }
+        .story {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .story img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .story .info {
+            flex: 1;
+        }
+        .story .info h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .story .info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Logo" src=""/>
+   <h1>
+    News App
+   </h1>
+  </div>
+  <div class="nav">
+   <a class="active" href="#top-stories">
+    Top Stories
+   </a>
+   <a href="#weather">
+    Weather
+   </a>
+   <a href="#video">
+    Video
+   </a>
+   <a href="#sections">
+    Sections
+   </a>
+  </div>
+  <div class="content">
+   <div class="story">
+    <img alt="Story 1" src=""/>
+    <div class="info">
+     <h2>
+      FORECAST: Back into the 80s, sunny
+     </h2>
+     <p>
+      12:39 AM
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 2" src=""/>
+    <div class="info">
+     <h2>
+      PHOTOS: 100 rejected personalized license plates
+     </h2>
+     <p>
+      Mar 24, 2017 12:42 PM
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 3" src=""/>
+    <div class="info">
+     <h2>
+      PHOTOS: $20M Scottsdale home on the market now
+     </h2>
+     <p>
+      Mar 30, 2017 11:43 AM
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 4" src=""/>
+    <div class="info">
+     <h2>
+      FBI releases unseen photos from Sept. 11
+     </h2>
+     <p>
+      Mar 31, 2017 04:21 PM
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 5" src=""/>
+    <div class="info">
+     <h2>
+      PD: Man dead after Chandler shooting
+     </h2>
+     <p>
+      12:19 AM
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 6" src=""/>
+    <div class="info">
+     <h2>
+      Brazilian football club in air disaster
+     </h2>
+     <p>
+      3 hours ago
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 7" src=""/>
+    <div class="info">
+     <h2>
+      UN alarm as thousands flee Aleppo fight
+     </h2>
+     <p>
+      3h | Middle East
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 8" src=""/>
+    <div class="info">
+     <h2>
+      Mars probe returns first pictures
+     </h2>
+     <p>
+      3h | Science &amp; Environment
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <p>
+    © 2023 News App
+   </p>
+  </div>
+ </body>
+</html>

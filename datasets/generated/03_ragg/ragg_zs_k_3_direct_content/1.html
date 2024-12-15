@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Search
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+        .header input[type="search"] {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .header .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 20px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .tags .tag {
+            background-color: #f1f1f1;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .categories {
+            padding: 20px;
+        }
+        .category {
+            margin-bottom: 20px;
+            position: relative;
+            color: white;
+        }
+        .category img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .category .title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .category .recipes {
+            display: flex;
+            overflow-x: scroll;
+            padding: 10px 0;
+        }
+        .category .recipe {
+            background-color: white;
+            border-radius: 10px;
+            margin-right: 10px;
+            width: 150px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .category .recipe img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .category .recipe .title {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .category .recipe .time {
+            color: #888;
+            font-size: 14px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer .icon {
+            font-size: 20px;
+            color: #888;
+        }
+        .footer .icon.active {
+            color: #e74c3c;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Search
+   </h1>
+   <input placeholder="Search with recipe or ingredient..." type="search"/>
+   <span class="search-icon">
+    <i class="fas fa-search">
+    </i>
+   </span>
+  </div>
+  <div class="tags">
+   <div class="tag">
+    meat
+   </div>
+   <div class="tag">
+    fish &amp; seafood
+   </div>
+   <div class="tag">
+    dairy-free
+   </div>
+   <div class="tag">
+    vegetarian
+   </div>
+   <div class="tag">
+    vegan
+   </div>
+   <div class="tag">
+    gluten-free
+   </div>
+   <div class="tag">
+    spicy
+   </div>
+   <div class="tag">
+    dessert
+   </div>
+   <div class="tag">
+    breakfast
+   </div>
+   <div class="tag">
+    quick meals
+   </div>
+   <div class="tag">
+    healthy
+   </div>
+   <div class="tag">
+    comfort food
+   </div>
+  </div>
+  <div class="categories">
+   <div class="category">
+    <img alt="Delicious dishes for daily picks" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fb4a8b24-21f6-4acc-8b6b-bf05b075bfe8.png"/>
+    <div class="title">
+     Daily Picks
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Yummy dishes for you" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/75de96fb-fb06-4ec6-a583-72664171a686.png"/>
+    <div class="title">
+     Yummies for U
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Trending and hottest recipes" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b18e2c3a-5f30-4be0-94c2-4e4df302b5df.png"/>
+    <div class="title">
+     Hottest
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Easy recipes for clumsy cooks" id="image4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/179df860-2dcf-47ef-9709-b3e681ffad7c.png"/>
+    <div class="title">
+     Aid for Clumsy Cook
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Quick and simple recipes" id="image5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/bf3a958b-3994-450d-a0ad-d8c1c0c393b7.png"/>
+    <div class="title">
+     Speedy &amp; Simple
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Best frying recipes" id="image6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/81a10fdb-7921-4114-a681-0091fbaf159f.png"/>
+    <div class="title">
+     Frying Peaks
+    </div>
+    <div class="recipes">
+     <div class="recipe">
+      <img alt="Delicious paleo granola" id="image7" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/328aee06-e1db-40b8-bcb2-d75fef4b1cb6.png"/>
+      <div class="title">
+       Paleo Granola
+      </div>
+      <div class="time">
+       25 Min
+      </div>
+     </div>
+     <div class="recipe">
+      <img alt="Tasty paleo pancakes" id="image8" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/773a7cac-e917-45c5-b979-7bc73e3ec258.png"/>
+      <div class="title">
+       Paleo Pancakes
+      </div>
+      <div class="time">
+       15 Min
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Healthy paleo recipes" id="image9" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/3f8dae38-717c-425f-81d4-45bf5a3f79e9.png"/>
+    <div class="title">
+     Paleo
+    </div>
+    <div class="recipes">
+     <div class="recipe">
+      <img alt="Nutritious paleo salad" id="image10" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7a023b0d-1be9-4005-8d13-94bd793d2871.png"/>
+      <div class="title">
+       Paleo Salad
+      </div>
+      <div class="time">
+       20 Min
+      </div>
+     </div>
+     <div class="recipe">
+      <img alt="Hearty paleo stew" id="image11" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2d6f4414-da5f-4087-9fc4-c03f7fe7b152.png"/>
+      <div class="title">
+       Paleo Stew
+      </div>
+      <div class="time">
+       45 Min
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Authentic Mexican recipes" id="image12" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/28ade5f9-0a96-42ae-bc82-1948c6bbd95a.png"/>
+    <div class="title">
+     Mexican Recipes
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <div class="icon">
+    <i class="fas fa-home">
+    </i>
+   </div>
+   <div class="icon">
+    <i class="fas fa-tv">
+    </i>
+   </div>
+   <div class="icon active">
+    <i class="fas fa-search">
+    </i>
+   </div>
+   <div class="icon">
+    <i class="fas fa-heart">
+    </i>
+   </div>
+   <div class="icon">
+    <i class="fas fa-user">
+    </i>
+   </div>
+  </div>
+ </body>
+</html>

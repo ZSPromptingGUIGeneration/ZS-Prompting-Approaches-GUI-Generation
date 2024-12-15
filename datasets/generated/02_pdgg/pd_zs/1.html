@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 8px 16px;
+            border-radius: 24px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .search-bar .material-icons {
+            color: #757575;
+        }
+        .category-filters {
+            display: flex;
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+        .category-filters button {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            margin-right: 8px;
+            font-size: 14px;
+            color: #757575;
+            cursor: pointer;
+        }
+        .recipe-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 16px;
+        }
+        .recipe-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+        .recipe-card .content {
+            padding: 8px;
+        }
+        .recipe-card .title {
+            font-size: 14px;
+            font-weight: 500;
+            margin: 8px 0;
+        }
+        .recipe-card .description {
+            font-size: 12px;
+            color: #757575;
+            margin-bottom: 8px;
+        }
+        .recipe-card .rating {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #ffa726;
+        }
+        .recipe-card .rating .material-icons {
+            font-size: 14px;
+            margin-right: 4px;
+        }
+        .recipe-card .bookmark {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .sort-options {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .bottom-nav .nav-item {
+            text-align: center;
+            color: #757575;
+        }
+        .bottom-nav .nav-item .material-icons {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .bottom-nav .nav-item span {
+            font-size: 12px;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin: 16px 0;
+        }
+        .cta-buttons button {
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search recipes..." type="text"/>
+    <span class="material-icons">
+     search
+    </span>
+   </div>
+   <div class="category-filters">
+    <button>
+     Cuisine
+    </button>
+    <button>
+     Meal Type
+    </button>
+    <button>
+     Dietary Restrictions
+    </button>
+   </div>
+   <div class="recipe-thumbnails">
+    <div class="recipe-card">
+     <img alt="Recipe Image" src=""/>
+     <div class="content">
+      <div class="title">
+       Recipe Title
+      </div>
+      <div class="description">
+       Brief description of the recipe.
+      </div>
+      <div class="rating">
+       <span class="material-icons">
+        star
+       </span>
+       4.5 (200)
+      </div>
+     </div>
+     <button class="bookmark">
+      <span class="material-icons">
+       bookmark_border
+      </span>
+     </button>
+    </div>
+    <!-- Repeat .recipe-card for more recipes -->
+   </div>
+   <button class="sort-options">
+    <span class="material-icons">
+     sort
+    </span>
+   </button>
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item">
+    <span class="material-icons">
+     home
+    </span>
+    <span>
+     Home
+    </span>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     person
+    </span>
+    <span>
+     Profile
+    </span>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     shopping_cart
+    </span>
+    <span>
+     Shopping List
+    </span>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     settings
+    </span>
+    <span>
+     Settings
+    </span>
+   </div>
+  </div>
+ </body>
+</html>

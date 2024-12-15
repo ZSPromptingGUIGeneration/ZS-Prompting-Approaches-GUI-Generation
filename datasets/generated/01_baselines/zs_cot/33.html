@@ -1,0 +1,167 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Local Marketplace
+  </title>
+  <style>
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #2196F3;
+      color: white;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .search-bar {
+      width: 70%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .categories, .location, .suggestions {
+      padding: 20px;
+      background-color: white;
+      margin: 10px 0;
+    }
+
+    .category-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .category {
+      padding: 10px 20px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .category:hover {
+      background-color: #1976D2;
+    }
+
+    .location-input {
+      width: calc(100% - 120px);
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .detect-location {
+      padding: 10px 20px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .detect-location:hover {
+      background-color: #1976D2;
+    }
+
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .item {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      width: calc(50% - 10px);
+      box-sizing: border-box;
+    }
+
+    .item img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .item p {
+      margin: 10px 0 0;
+    }
+  </style>
+ </head>
+ <body>
+  <header>
+   <img alt="App Logo" class="logo" src=""/>
+   <input class="search-bar" placeholder="Search items..." type="text"/>
+  </header>
+  <section class="categories">
+   <h2>
+    Categories
+   </h2>
+   <div class="category-list">
+    <button class="category">
+     Electronics
+    </button>
+    <button class="category">
+     Furniture
+    </button>
+    <button class="category">
+     Clothing
+    </button>
+    <button class="category">
+     Books
+    </button>
+    <button class="category">
+     Toys
+    </button>
+   </div>
+  </section>
+  <section class="location">
+   <h2>
+    Location
+   </h2>
+   <input class="location-input" placeholder="Enter your location..." type="text"/>
+   <button class="detect-location">
+    Detect Location
+   </button>
+  </section>
+  <section class="suggestions">
+   <h2>
+    Suggestions
+   </h2>
+   <div class="item-list">
+    <div class="item">
+     <img alt="Item 1" src=""/>
+     <p>
+      Item 1 Description
+     </p>
+    </div>
+    <div class="item">
+     <img alt="Item 2" src=""/>
+     <p>
+      Item 2 Description
+     </p>
+    </div>
+    <!-- Add more items as needed -->
+   </div>
+  </section>
+ </body>
+</html>
+<!-- End -->

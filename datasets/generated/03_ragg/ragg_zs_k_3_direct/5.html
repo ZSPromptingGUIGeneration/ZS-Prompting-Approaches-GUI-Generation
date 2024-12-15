@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Finder
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header .menu-icon, .header .search-icon, .header .add-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .header .toggle {
+            display: flex;
+            align-items: center;
+        }
+        .header .toggle span {
+            margin-left: 10px;
+        }
+        .header .toggle input {
+            display: none;
+        }
+        .header .toggle input + label {
+            cursor: pointer;
+        }
+        .header .toggle input + label:before {
+            content: 'VEG';
+            background-color: #ccc;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        .header .toggle input:checked + label:before {
+            content: 'NON-VEG';
+            background-color: #ff6b6b;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+        }
+        .search-bar .keywords {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .search-bar .keywords span {
+            background-color: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .categories {
+            display: flex;
+            overflow-x: scroll;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .categories span {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .categories span.active {
+            background-color: #ff6b6b;
+            color: #fff;
+        }
+        .recipe-card {
+            background-color: #fff;
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe-card .info {
+            padding: 10px;
+        }
+        .recipe-card .info .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .recipe-card .info .description {
+            color: #666;
+        }
+        .recipe-card .info .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .recipe-card .info .stats span {
+            font-size: 14px;
+            color: #666;
+        }
+        .recipe-card .info .stats span.likes {
+            display: flex;
+            align-items: center;
+        }
+        .recipe-card .info .stats span.likes i {
+            margin-right: 5px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .tabs span {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tabs span.active {
+            border-bottom: 2px solid #ff6b6b;
+            font-weight: bold;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+        .footer .icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu-icon">
+    ☰
+   </div>
+   <div class="toggle">
+    <input id="veg-toggle" type="checkbox"/>
+    <label for="veg-toggle">
+    </label>
+    <span>
+     VEG
+    </span>
+   </div>
+   <div class="search-icon">
+    🔍
+   </div>
+   <div class="add-icon">
+    +
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search with recipe or ingredient." type="text"/>
+  </div>
+  <div class="categories">
+   <span class="active">
+    Maggi Recipes
+   </span>
+   <span>
+    Baisakhi Recipes
+   </span>
+   <span>
+    Indian Desserts
+   </span>
+   <span>
+    Step-by-Step
+   </span>
+  </div>
+  <div class="search-bar keywords">
+   <span>
+    Hot Keywords
+   </span>
+   <span>
+    Spicy
+   </span>
+   <span>
+    Spicy Chicken Stew
+   </span>
+   <span>
+    Cold ramen
+   </span>
+   <span>
+    Boostup dish
+   </span>
+   <span>
+    Spam mayo
+   </span>
+   <span>
+    Hot summer
+   </span>
+  </div>
+  <div class="recipe-card">
+   <img alt="Recipe Image" src=""/>
+   <div class="info">
+    <div class="title">
+     Shahi aloo gobi
+    </div>
+    <div class="description">
+     Yummy tummy
+    </div>
+    <div class="stats">
+     <span>
+      4.5 stars
+     </span>
+     <span class="likes">
+      <i>
+       ♥
+      </i>
+      176 Likes
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="recipe-card">
+   <img alt="Recipe Image" src=""/>
+   <div class="info">
+    <div class="title">
+     Potato-Bacon Casserole Bread with Caramelized Onions
+    </div>
+    <div class="description">
+     Makes: 8-12 servings | Prep: 30 minutes | Rise: 40 minutes | Bake: 45 minutes | Cool: 10 minutes
+    </div>
+   </div>
+  </div>
+  <div class="tabs">
+   <span class="active">
+    Ingredients
+   </span>
+   <span>
+    Steps
+   </span>
+  </div>
+  <div class="footer">
+   <div class="icon">
+    ⌂
+   </div>
+   <div class="icon">
+    💾
+   </div>
+   <div class="icon">
+    💬
+   </div>
+   <div class="icon">
+    🎬
+   </div>
+  </div>
+ </body>
+</html>

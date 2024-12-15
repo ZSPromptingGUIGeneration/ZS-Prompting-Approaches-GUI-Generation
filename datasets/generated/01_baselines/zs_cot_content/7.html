@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Schedule App
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Upcoming Matches
+   </h1>
+  </header>
+  <main>
+   <div class="match">
+    <div class="team-logos">
+     <img alt="Home Team Logo: Blue Dragons" id="home-team-logo-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/97d63542-abbd-43b9-9ea7-b99a3bb35d4c.png"/>
+     <img alt="Enemy Team Logo: Red Warriors" id="enemy-team-logo-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/8c4165d5-2db6-493a-af1a-90b213bbf933.png"/>
+    </div>
+    <div class="match-info">
+     <p>
+      <strong>
+       Enemy Team:
+      </strong>
+      Red Warriors
+     </p>
+     <p>
+      <strong>
+       Location:
+      </strong>
+      Stadium XYZ
+     </p>
+     <p>
+      <strong>
+       Date &amp; Time:
+      </strong>
+      2023-10-15 18:00
+     </p>
+    </div>
+   </div>
+   <div class="match">
+    <div class="team-logos">
+     <img alt="Home Team Logo: Green Giants" id="home-team-logo-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/a5c752a4-5699-4663-92a2-94052af5907c.png"/>
+     <img alt="Enemy Team Logo: Yellow Falcons" id="enemy-team-logo-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/a6f9149e-2a63-414d-8a4c-4beb4ebfb5f4.png"/>
+    </div>
+    <div class="match-info">
+     <p>
+      <strong>
+       Enemy Team:
+      </strong>
+      Yellow Falcons
+     </p>
+     <p>
+      <strong>
+       Location:
+      </strong>
+      Arena ABC
+     </p>
+     <p>
+      <strong>
+       Date &amp; Time:
+      </strong>
+      2023-10-20 20:00
+     </p>
+    </div>
+   </div>
+   <div class="match">
+    <div class="team-logos">
+     <img alt="Home Team Logo: Silver Sharks" id="home-team-logo-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/77a714c0-a535-45ee-9dbb-08f4788fb1cc.png"/>
+     <img alt="Enemy Team Logo: Black Panthers" id="enemy-team-logo-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/46c083a2-bb82-4ceb-9897-c94b3d0a6bd8.png"/>
+    </div>
+    <div class="match-info">
+     <p>
+      <strong>
+       Enemy Team:
+      </strong>
+      Black Panthers
+     </p>
+     <p>
+      <strong>
+       Location:
+      </strong>
+      Dome DEF
+     </p>
+     <p>
+      <strong>
+       Date &amp; Time:
+      </strong>
+      2023-10-25 19:30
+     </p>
+    </div>
+   </div>
+   <div class="match">
+    <div class="team-logos">
+     <img alt="Home Team Logo: White Wolves" id="home-team-logo-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/cb885551-04b4-4ee8-b170-11a0a472f45e.png"/>
+     <img alt="Enemy Team Logo: Golden Eagles" id="enemy-team-logo-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e6eb2248-4d66-4367-8900-8f0fcacf61e4.png"/>
+    </div>
+    <div class="match-info">
+     <p>
+      <strong>
+       Enemy Team:
+      </strong>
+      Golden Eagles
+     </p>
+     <p>
+      <strong>
+       Location:
+      </strong>
+      Park GHI
+     </p>
+     <p>
+      <strong>
+       Date &amp; Time:
+      </strong>
+      2023-10-30 17:00
+     </p>
+    </div>
+   </div>
+  </main>
+ </body>
+</html>
+<style>
+ /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 10px;
+}
+
+.match {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.team-logos img {
+    width: 50px;
+    height: 50px;
+}
+
+.match-info p {
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    .team-logos {
+        flex-direction: column;
+    }
+
+    .team-logos img {
+        margin-bottom: 10px;
+    }
+}
+</style>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Schedule App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .top-nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        .top-nav-bar .title {
+            font-size: 18px;
+        }
+        .top-nav-bar .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .header-section {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-section .league-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .header-section .league-info img {
+            width: 30px;
+            height: 30px;
+        }
+        .tab-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab-bar .tab {
+            font-size: 16px;
+            color: #007bff;
+        }
+        .content-area {
+            padding: 10px;
+        }
+        .match-card {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .match-card .team {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .match-card .team img {
+            width: 40px;
+            height: 40px;
+        }
+        .match-card .match-info {
+            text-align: center;
+        }
+        .match-card .match-info .date {
+            font-size: 14px;
+            color: #888;
+        }
+        .match-card .match-info .time {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .match-card .match-info .status {
+            font-size: 14px;
+            color: #007bff;
+        }
+        .footer-section {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer-section .nav-icon {
+            font-size: 18px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-nav-bar">
+   <div class="title">
+    Schedule App
+   </div>
+   <div class="icons">
+    <span>
+     🏠
+    </span>
+    <span>
+     ⭐
+    </span>
+    <span>
+     🔔
+    </span>
+    <span>
+     🔍
+    </span>
+   </div>
+  </div>
+  <div class="header-section">
+   <div class="league-info">
+    <img alt="League Logo" src=""/>
+    <span>
+     Champions League
+    </span>
+   </div>
+   <span>
+    ≡
+   </span>
+  </div>
+  <div class="tab-bar">
+   <div class="tab">
+    SCHEDULE
+   </div>
+   <div class="tab">
+    STANDINGS
+   </div>
+   <div class="tab">
+    TOP SCORERS
+   </div>
+  </div>
+  <div class="content-area">
+   <div class="match-card">
+    <div class="team">
+     <img alt="Team 1 Logo" src=""/>
+     <span>
+      Team 1
+     </span>
+    </div>
+    <div class="match-info">
+     <div class="date">
+      2023-10-12
+     </div>
+     <div class="time">
+      18:00
+     </div>
+     <div class="status">
+      Upcoming
+     </div>
+    </div>
+    <div class="team">
+     <span>
+      Team 2
+     </span>
+     <img alt="Team 2 Logo" src=""/>
+    </div>
+   </div>
+   <div class="match-card">
+    <div class="team">
+     <img alt="Team 3 Logo" src=""/>
+     <span>
+      Team 3
+     </span>
+    </div>
+    <div class="match-info">
+     <div class="date">
+      2023-10-15
+     </div>
+     <div class="time">
+      20:00
+     </div>
+     <div class="status">
+      Upcoming
+     </div>
+    </div>
+    <div class="team">
+     <span>
+      Team 4
+     </span>
+     <img alt="Team 4 Logo" src=""/>
+    </div>
+   </div>
+  </div>
+  <div class="footer-section">
+   <div class="nav-icon">
+    🏠
+   </div>
+   <div class="nav-icon">
+    📅
+   </div>
+   <div class="nav-icon">
+    🏆
+   </div>
+   <div class="nav-icon">
+    📊
+   </div>
+  </div>
+ </body>
+</html>

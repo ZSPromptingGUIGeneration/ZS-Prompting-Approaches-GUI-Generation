@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Mobile Alarm App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-bar .material-icons {
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        .tab {
+            padding: 8px 16px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        .tab.active {
+            border-bottom: 2px solid #6200ea;
+        }
+        .audio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 16px;
+        }
+        .audio-tile {
+            background-color: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .audio-tile img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .audio-tile .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+        }
+        .audio-tile .actions .material-icons {
+            cursor: pointer;
+        }
+        .fab {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            background-color: #6200ea;
+            color: #fff;
+            font-size: 24px;
+            padding: 16px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .alarm-setup {
+            padding: 16px;
+        }
+        .time-picker {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .time-picker input[type="time"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .time-picker .toggle {
+            margin-left: 8px;
+        }
+        .day-selector {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        .day-selector button {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 0 2px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .day-selector button.active {
+            background-color: #6200ea;
+            color: #fff;
+        }
+        .alarm-name {
+            margin-bottom: 16px;
+        }
+        .alarm-name input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .audio-selection {
+            margin-bottom: 16px;
+        }
+        .audio-selection select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .alarms {
+            padding: 16px;
+        }
+        .alarm-card {
+            background-color: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .alarm-card .details {
+            flex: 1;
+        }
+        .alarm-card .actions {
+            display: flex;
+            align-items: center;
+        }
+        .alarm-card .actions .material-icons {
+            cursor: pointer;
+            margin-left: 8px;
+        }
+        .settings {
+            padding: 16px;
+        }
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .setting-item input[type="range"] {
+            flex: 1;
+            margin-left: 8px;
+        }
+        .setting-item .toggle {
+            cursor: pointer;
+        }
+        .notification-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #6200ea;
+            color: #fff;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .notification-banner .actions {
+            display: flex;
+        }
+        .notification-banner .actions button {
+            background-color: #fff;
+            color: #6200ea;
+            border: none;
+            padding: 8px 16px;
+            margin-left: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search..." type="text"/>
+    <span class="material-icons">
+     search
+    </span>
+   </div>
+   <div class="tabs">
+    <div class="tab active">
+     All
+    </div>
+    <div class="tab">
+     Nature
+    </div>
+    <div class="tab">
+     Music
+    </div>
+    <div class="tab">
+     Others
+    </div>
+   </div>
+   <div class="audio-grid">
+    <div class="audio-tile">
+     <img alt="Album Art" src=""/>
+     <div class="actions">
+      <span class="material-icons">
+       play_arrow
+      </span>
+      <span class="material-icons">
+       file_download
+      </span>
+     </div>
+    </div>
+    <!-- More audio tiles here -->
+   </div>
+  </div>
+  <div class="fab">
+   <span class="material-icons">
+    add
+   </span>
+  </div>
+  <div class="alarm-setup">
+   <div class="time-picker">
+    <input type="time"/>
+    <div class="toggle">
+     <span class="material-icons">
+      access_time
+     </span>
+    </div>
+   </div>
+   <div class="day-selector">
+    <button class="active">
+     S
+    </button>
+    <button>
+     M
+    </button>
+    <button>
+     T
+    </button>
+    <button>
+     W
+    </button>
+    <button>
+     T
+    </button>
+    <button>
+     F
+    </button>
+    <button>
+     S
+    </button>
+   </div>
+   <div class="alarm-name">
+    <input placeholder="Alarm Name" type="text"/>
+   </div>
+   <div class="audio-selection">
+    <select>
+     <option>
+      Default Sound
+     </option>
+     <!-- More options here -->
+    </select>
+   </div>
+  </div>
+  <div class="alarms">
+   <div class="alarm-card">
+    <div class="details">
+     <div>
+      7:00 AM
+     </div>
+     <div>
+      Alarm Name
+     </div>
+     <div>
+      Mon, Wed, Fri
+     </div>
+    </div>
+    <div class="actions">
+     <span class="material-icons">
+      edit
+     </span>
+     <span class="material-icons">
+      delete
+     </span>
+     <label class="switch">
+      <input type="checkbox"/>
+      <span class="slider round">
+      </span>
+     </label>
+    </div>
+   </div>
+   <!-- More alarm cards here -->
+  </div>
+  <div class="settings">
+   <div class="setting-item">
+    <label>
+     Volume
+    </label>
+    <input max="100" min="0" type="range"/>
+   </div>
+   <div class="setting-item">
+    <label>
+     Vibration
+    </label>
+    <div class="toggle">
+     <span class="material-icons">
+      toggle_off
+     </span>
+    </div>
+   </div>
+   <div class="setting-item">
+    <label>
+     Fade In
+    </label>
+    <div class="toggle">
+     <span class="material-icons">
+      toggle_off
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="notification-banner">
+   <div>
+    Alarm: Wake Up
+   </div>
+   <div class="actions">
+    <button>
+     Snooze
+    </button>
+    <button>
+     Dismiss
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

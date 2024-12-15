@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Player
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #282828;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #181818;
+        }
+        .header .search-bar {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+        .header .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #404040;
+            color: #fff;
+        }
+        .header .search-bar input::placeholder {
+            color: #b3b3b3;
+        }
+        .header .search-bar .clear-button {
+            margin-left: -30px;
+            background: none;
+            border: none;
+            color: #b3b3b3;
+            cursor: pointer;
+        }
+        .header .user-profile {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .header .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header .user-profile .dropdown {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: #181818;
+            border-radius: 10px;
+            padding: 10px;
+            width: 150px;
+        }
+        .header .user-profile:hover .dropdown {
+            display: block;
+        }
+        .header .user-profile .dropdown a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 0;
+            border-bottom: 1px solid #404040;
+        }
+        .header .user-profile .dropdown a:last-child {
+            border-bottom: none;
+        }
+        .album-cover {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        .song-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .song-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .artist-name, .album-name, .release-year, .genre {
+            font-size: 18px;
+            color: #b3b3b3;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        .controls button {
+            background-color: #1db954;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .controls button:hover {
+            background-color: #1ed760;
+        }
+        .controls button::before {
+            content: attr(data-tooltip);
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            transition: opacity 0.3s;
+            margin-top: -40px;
+            font-size: 12px;
+        }
+        .controls button:hover::before {
+            visibility: visible;
+            opacity: 1;
+        }
+        .progress-bar {
+            width: 80%;
+            max-width: 300px;
+            height: 5px;
+            background-color: #404040;
+            border-radius: 5px;
+            margin-top: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        .progress {
+            width: 50%;
+            height: 100%;
+            background-color: #1db954;
+            border-radius: 5px;
+        }
+        .time-info {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 300px;
+            margin-top: 5px;
+        }
+        .volume-control {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        .volume-control .volume-icon {
+            margin-right: 10px;
+        }
+        .volume-slider {
+            width: 100px;
+        }
+        .playlist-navigation {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        .additional-controls {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        .additional-controls button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .additional-controls button:hover {
+            color: #1db954;
+        }
+        .additional-controls button::before {
+            content: attr(data-tooltip);
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            transition: opacity 0.3s;
+            margin-top: -40px;
+            font-size: 12px;
+        }
+        .additional-controls button:hover::before {
+            visibility: visible;
+            opacity: 1;
+        }
+        .song-queue {
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+            background-color: #181818;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .song-queue h3 {
+            margin: 0 0 10px 0;
+        }
+        .song-queue ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .song-queue ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid #404040;
+            cursor: grab;
+        }
+        .song-queue ul li:last-child {
+            border-bottom: none;
+        }
+        .lyrics-display {
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+            background-color: #181818;
+            padding: 10px;
+            border-radius: 10px;
+            overflow-y: auto;
+            max-height: 150px;
+        }
+        .lyrics-display h3 {
+            margin: 0 0 10px 0;
+        }
+        .equalizer-settings {
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+            background-color: #181818;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .equalizer-settings h3 {
+            margin: 0 0 10px 0;
+        }
+        .equalizer-settings div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .equalizer-settings input {
+            width: 100px;
+        }
+        .equalizer-settings .reset-button {
+            background-color: #1db954;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        .carousel img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin: 0 10px;
+            object-fit: cover;
+        }
+        .notification {
+            width: 80%;
+            max-width: 300px;
+            margin-top: 20px;
+            background-color: #181818;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .notification h3 {
+            margin: 0 0 10px 0;
+        }
+        .notification ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .notification ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid #404040;
+        }
+        .notification ul li:last-child {
+            border-bottom: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="search-bar">
+    <input placeholder="Search for songs, artists, albums..." type="text"/>
+    <button class="clear-button">
+     ✖
+    </button>
+   </div>
+   <div class="user-profile">
+    <img alt="User Profile" src=""/>
+    <span>
+     User Name
+    </span>
+    <div class="dropdown">
+     <a href="#">
+      Account Settings
+     </a>
+     <a href="#">
+      Subscription Details
+     </a>
+     <a href="#">
+      Logout
+     </a>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+   <div class="carousel">
+    <img alt="Previous Album Cover" src=""/>
+    <img alt="Current Album Cover" class="album-cover" src=""/>
+    <img alt="Next Album Cover" src=""/>
+   </div>
+   <div class="song-info">
+    <h1 class="song-title">
+     Song Title
+    </h1>
+    <h2 class="artist-name">
+     Artist Name
+    </h2>
+    <div class="album-name">
+     Album Name
+    </div>
+    <div class="release-year">
+     Release Year
+    </div>
+    <div class="genre">
+     Genre
+    </div>
+   </div>
+   <div class="controls">
+    <button data-tooltip="Previous">
+     ◀
+    </button>
+    <button data-tooltip="Play">
+     ▶
+    </button>
+    <button data-tooltip="Next">
+     ▶▶
+    </button>
+   </div>
+   <div class="progress-bar">
+    <div class="progress">
+    </div>
+   </div>
+   <div class="time-info">
+    <span>
+     0:00
+    </span>
+    <span>
+     3:30
+    </span>
+   </div>
+   <div class="volume-control">
+    <span class="volume-icon">
+     🔊
+    </span>
+    <input class="volume-slider" id="volume" max="100" min="0" type="range" value="50"/>
+    <button class="mute-button">
+     🔇
+    </button>
+   </div>
+   <div class="playlist-navigation">
+    <button>
+     &lt; Prev
+    </button>
+    <button>
+     Next &gt;
+    </button>
+   </div>
+   <div class="additional-controls">
+    <button data-tooltip="Favorite">
+     ★
+    </button>
+    <button data-tooltip="Download">
+     💾
+    </button>
+    <button data-tooltip="Shuffle">
+     🔁
+    </button>
+    <button data-tooltip="Repeat">
+     🔁
+    </button>
+   </div>
+   <div class="song-queue">
+    <h3>
+     Upcoming Songs
+    </h3>
+    <ul>
+     <li>
+      Song 1
+     </li>
+     <li>
+      Song 2
+     </li>
+     <li>
+      Song 3
+     </li>
+    </ul>
+   </div>
+   <div class="lyrics-display">
+    <h3>
+     Lyrics
+    </h3>
+    <p>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus at turpis fermentum consectetur.
+    </p>
+   </div>
+   <div class="equalizer-settings">
+    <h3>
+     Equalizer
+    </h3>
+    <div>
+     <label for="bass">
+      Bass
+     </label>
+     <input id="bass" max="100" min="0" type="range" value="50"/>
+    </div>
+    <div>
+     <label for="treble">
+      Treble
+     </label>
+     <input id="treble" max="100" min="0" type="range" value="50"/>
+    </div>
+    <button class="reset-button">
+     Reset
+    </button>
+   </div>
+   <div class="notification">
+    <h3>
+     New Releases
+    </h3>
+    <ul>
+     <li>
+      New Album 1
+     </li>
+     <li>
+      New Album 2
+     </li>
+     <li>
+      New Album 3
+     </li>
+    </ul>
+   </div>
+  </div>
+ </body>
+</html>

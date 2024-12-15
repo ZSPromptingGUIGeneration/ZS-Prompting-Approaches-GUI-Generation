@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+        }
+        .current-weather {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .current-weather img {
+            width: 50px;
+            height: 50px;
+        }
+        .forecast {
+            padding: 15px;
+        }
+        .forecast-day {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .forecast-day:last-child {
+            border-bottom: none;
+        }
+        .forecast-day img {
+            width: 30px;
+            height: 30px;
+        }
+        .day {
+            flex: 1;
+        }
+        .temperature {
+            flex: 1;
+            text-align: right;
+        }
+        .precipitation {
+            flex: 1;
+            text-align: right;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div>
+    Current Weather MeteoSwiss
+   </div>
+   <div>
+    S. Antonio (Val Morobbia)
+   </div>
+   <div>
+    Wed, 23:30
+   </div>
+  </div>
+  <div class="current-weather">
+   <div>
+    <img alt="Weather Icon" src=""/>
+    <div>
+     -5.3°
+    </div>
+   </div>
+   <div>
+    <img alt="Map Icon" src=""/>
+   </div>
+  </div>
+  <div class="forecast">
+   <div class="forecast-day">
+    <div class="day">
+     Thursday
+     <br/>
+     12. Jan
+    </div>
+    <img alt="Weather Icon" src=""/>
+    <div class="temperature">
+     -5° | 2°
+    </div>
+    <div class="precipitation">
+     2 mm
+    </div>
+   </div>
+   <div class="forecast-day">
+    <div class="day">
+     Friday
+     <br/>
+     13. Jan
+    </div>
+    <img alt="Weather Icon" src=""/>
+    <div class="temperature">
+     -3° | 3°
+    </div>
+    <div class="precipitation">
+     &lt;1 mm
+    </div>
+   </div>
+   <div class="forecast-day">
+    <div class="day">
+     Saturday
+     <br/>
+     14. Jan
+    </div>
+    <img alt="Weather Icon" src=""/>
+    <div class="temperature">
+     -6° | 3°
+    </div>
+    <div class="precipitation">
+     0 mm
+    </div>
+   </div>
+   <div class="forecast-day">
+    <div class="day">
+     Sunday
+     <br/>
+     15. Jan
+    </div>
+    <img alt="Weather Icon" src=""/>
+    <div class="temperature">
+     -6° | 2°
+    </div>
+    <div class="precipitation">
+     0 mm
+    </div>
+   </div>
+   <div class="forecast-day">
+    <div class="day">
+     Monday
+     <br/>
+     16. Jan
+    </div>
+    <img alt="Weather Icon" src=""/>
+    <div class="temperature">
+     -5° | 0°
+    </div>
+    <div class="precipitation">
+     0 mm
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

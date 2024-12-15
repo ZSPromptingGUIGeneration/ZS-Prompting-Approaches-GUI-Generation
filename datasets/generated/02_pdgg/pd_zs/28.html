@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Radio Player App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 24px;
+            padding: 8px 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .search-bar .material-icons {
+            color: #757575;
+        }
+        .filter-icon {
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 16px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .tab {
+            padding: 16px;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+        }
+        .tab.active {
+            background-color: #6200ea;
+            color: #fff;
+            border-radius: 8px 8px 0 0;
+        }
+        .station-list {
+            margin-top: 16px;
+        }
+        .station-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .station-card img {
+            border-radius: 8px;
+            width: 64px;
+            height: 64px;
+            margin-right: 16px;
+        }
+        .station-info {
+            flex: 1;
+        }
+        .station-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .station-info p {
+            margin: 4px 0 0;
+            color: #757575;
+        }
+        .player-controls {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #6200ea;
+            color: #fff;
+            padding: 16px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .player-controls .material-icons {
+            font-size: 32px;
+        }
+        .volume-slider {
+            flex: 1;
+            margin: 0 16px;
+        }
+        .station-info-top {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .station-info-top img {
+            border-radius: 8px;
+            width: 48px;
+            height: 48px;
+            margin-right: 16px;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .bottom-nav .nav-item {
+            padding: 16px;
+            text-align: center;
+            flex: 1;
+            cursor: pointer;
+        }
+        .bottom-nav .nav-item.active {
+            background-color: #6200ea;
+            color: #fff;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <span class="material-icons">
+     search
+    </span>
+    <input placeholder="Search stations..." type="text"/>
+    <span class="material-icons filter-icon">
+     filter_list
+    </span>
+   </div>
+   <div class="tabs">
+    <div class="tab active">
+     Genres
+    </div>
+    <div class="tab">
+     Countries
+    </div>
+    <div class="tab">
+     Languages
+    </div>
+   </div>
+   <div class="station-list">
+    <div class="station-card">
+     <img alt="Station Thumbnail" src=""/>
+     <div class="station-info">
+      <h3>
+       Station Name
+      </h3>
+      <p>
+       Brief description of the station
+      </p>
+     </div>
+     <span class="material-icons">
+      favorite_border
+     </span>
+    </div>
+    <!-- Repeat station-card for more stations -->
+   </div>
+  </div>
+  <div class="station-info-top">
+   <img alt="Station Logo" src=""/>
+   <div>
+    <h3>
+     Station Name
+    </h3>
+    <p>
+     Current song/show info
+    </p>
+   </div>
+  </div>
+  <div class="player-controls">
+   <span class="material-icons">
+    skip_previous
+   </span>
+   <span class="material-icons">
+    play_arrow
+   </span>
+   <span class="material-icons">
+    skip_next
+   </span>
+   <input class="volume-slider" type="range"/>
+   <span class="material-icons">
+    volume_up
+   </span>
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item active">
+    <span class="material-icons">
+     home
+    </span>
+    <p>
+     Home
+    </p>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     search
+    </span>
+    <p>
+     Search
+    </p>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     favorite
+    </span>
+    <p>
+     Favorites
+    </p>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     person
+    </span>
+    <p>
+     Profile
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

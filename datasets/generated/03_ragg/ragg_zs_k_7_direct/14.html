@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Platform
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .header-icons img {
+            height: 20px;
+        }
+        .search-bar {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .main-content {
+            padding: 10px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .grid-item {
+            width: 48%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .grid-item-title {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .player {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .player img {
+            height: 40px;
+        }
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .player-controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .popup.active {
+            display: block;
+        }
+        .popup-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .popup-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .popup-buttons button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .popup-buttons .favorite {
+            background-color: #d32f2f;
+            color: white;
+        }
+        .popup-buttons .download {
+            background-color: #1976d2;
+            color: white;
+        }
+        .popup-buttons .share {
+            background-color: #388e3c;
+            color: white;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Logo" src=""/>
+   <div class="header-icons">
+    <img alt="Icon1" src=""/>
+    <img alt="Icon2" src=""/>
+    <img alt="Icon3" src=""/>
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search music..." type="text"/>
+  </div>
+  <div class="main-content">
+   <div class="section">
+    <div class="section-title">
+     Trending
+    </div>
+    <div class="grid">
+     <div class="grid-item">
+      <img alt="Trending1" src=""/>
+      <div class="grid-item-title">
+       Trending Song 1
+      </div>
+     </div>
+     <div class="grid-item">
+      <img alt="Trending2" src=""/>
+      <div class="grid-item-title">
+       Trending Song 2
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <div class="section-title">
+     New Releases
+    </div>
+    <div class="grid">
+     <div class="grid-item">
+      <img alt="NewRelease1" src=""/>
+      <div class="grid-item-title">
+       New Release 1
+      </div>
+     </div>
+     <div class="grid-item">
+      <img alt="NewRelease2" src=""/>
+      <div class="grid-item-title">
+       New Release 2
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="player">
+   <img alt="Album Cover" src=""/>
+   <div>
+    <div>
+     Song Title
+    </div>
+    <div>
+     Artist Name
+    </div>
+   </div>
+   <div class="player-controls">
+    <button>
+     ◀
+    </button>
+    <button>
+     ▶
+    </button>
+    <button>
+     ►
+    </button>
+   </div>
+  </div>
+  <div class="popup" id="popup">
+   <div class="popup-title">
+    Like the Song?
+   </div>
+   <div class="popup-buttons">
+    <button class="favorite">
+     Add to Favourites
+    </button>
+    <button class="download">
+     Offline Download
+    </button>
+    <button class="share">
+     Share with Friends
+    </button>
+   </div>
+  </div>
+  <script>
+   // JavaScript to handle popup display
+        function showPopup() {
+            document.getElementById('popup').classList.add('active');
+        }
+        function hidePopup() {
+            document.getElementById('popup').classList.remove('active');
+        }
+        // Example usage: showPopup();
+  </script>
+ </body>
+</html>

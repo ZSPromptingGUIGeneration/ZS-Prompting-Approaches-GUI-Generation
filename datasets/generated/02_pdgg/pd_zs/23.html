@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports Team Mobile App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .tab-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .tab-bar a {
+            text-decoration: none;
+            color: #555;
+            text-align: center;
+        }
+        .tab-bar a.active {
+            color: #007BFF;
+        }
+        .tab-bar a i {
+            display: block;
+            font-size: 24px;
+        }
+        .section {
+            padding: 20px;
+            margin-bottom: 60px; /* Space for the tab bar */
+        }
+        .calendar-view, .list-view, .news-feed, .roster-list {
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .card h3, .card p {
+            margin: 0 0 10px;
+        }
+        .filter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .filter select {
+            padding: 5px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .profile-icon, .back-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .back-button {
+            left: 10px;
+            right: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="profile-icon">
+   P
+  </div>
+  <div class="back-button">
+   ←
+  </div>
+  <div class="section" id="schedule">
+   <div class="search-bar">
+    <input placeholder="Search Schedule..." type="text"/>
+   </div>
+   <div class="filter">
+    <select>
+     <option value="all">
+      All
+     </option>
+     <option value="home">
+      Home
+     </option>
+     <option value="away">
+      Away
+     </option>
+    </select>
+    <select>
+     <option value="all">
+      All Leagues
+     </option>
+     <option value="league1">
+      League 1
+     </option>
+     <option value="league2">
+      League 2
+     </option>
+    </select>
+   </div>
+   <div class="calendar-view">
+    <!-- Calendar grid layout here -->
+   </div>
+   <div class="list-view">
+    <div class="card">
+     <h3>
+      Game 1
+     </h3>
+     <p>
+      Date: 2023-10-01
+     </p>
+     <p>
+      Opponent: Team A
+     </p>
+     <p>
+      Location: Stadium X
+     </p>
+    </div>
+    <div class="card">
+     <h3>
+      Game 2
+     </h3>
+     <p>
+      Date: 2023-10-05
+     </p>
+     <p>
+      Opponent: Team B
+     </p>
+     <p>
+      Location: Stadium Y
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="section" id="news">
+   <div class="search-bar">
+    <input placeholder="Search News..." type="text"/>
+   </div>
+   <div class="news-feed">
+    <div class="card">
+     <img alt="News 1" src=""/>
+     <h3>
+      News Headline 1
+     </h3>
+     <p>
+      Summary of the news article...
+     </p>
+    </div>
+    <div class="card">
+     <img alt="News 2" src=""/>
+     <h3>
+      News Headline 2
+     </h3>
+     <p>
+      Summary of the news article...
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="section" id="team">
+   <div class="search-bar">
+    <input placeholder="Search Team..." type="text"/>
+   </div>
+   <div class="roster-list">
+    <div class="card">
+     <h3>
+      Player 1
+     </h3>
+     <p>
+      Position: Forward
+     </p>
+     <p>
+      Number: 10
+     </p>
+    </div>
+    <div class="card">
+     <h3>
+      Player 2
+     </h3>
+     <p>
+      Position: Goalkeeper
+     </p>
+     <p>
+      Number: 1
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="tab-bar">
+   <a class="active" href="#schedule">
+    <i class="material-icons">
+     calendar_today
+    </i>
+    <span>
+     Schedule
+    </span>
+   </a>
+   <a href="#news">
+    <i class="material-icons">
+     article
+    </i>
+    <span>
+     News
+    </span>
+   </a>
+   <a href="#team">
+    <i class="material-icons">
+     group
+    </i>
+    <span>
+     Team
+    </span>
+   </a>
+  </div>
+ </body>
+</html>

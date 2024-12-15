@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dream Tracker
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .input-section {
+            margin-bottom: 20px;
+        }
+        .input-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .input-section textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        .input-section .record-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .input-section .record-button:hover {
+            background-color: #0056b3;
+        }
+        .entries {
+            margin-top: 20px;
+        }
+        .entry {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .entry:last-child {
+            border-bottom: none;
+        }
+        .entry h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .entry p {
+            margin: 5px 0 0;
+            color: #555;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <h1>
+     Dream Tracker
+    </h1>
+   </header>
+   <div class="input-section">
+    <label for="dream-text">
+     Write your dream:
+    </label>
+    <textarea id="dream-text" placeholder="Describe your dream..." rows="4"></textarea>
+    <button class="record-button">
+     Record Dream
+    </button>
+   </div>
+   <div class="entries">
+    <div class="entry">
+     <h2>
+      Dream 1
+     </h2>
+     <p>
+      This is a description of the first dream...
+     </p>
+    </div>
+    <div class="entry">
+     <h2>
+      Dream 2
+     </h2>
+     <p>
+      This is a description of the second dream...
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

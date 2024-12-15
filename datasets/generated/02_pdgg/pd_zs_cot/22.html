@@ -1,0 +1,157 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Upcoming Shows
+  </title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            padding-top: 56px;
+            padding-bottom: 56px;
+        }
+        .calendar-day {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+        }
+        .calendar-day.highlight {
+            background-color: #f8d7da;
+        }
+        .show-card {
+            margin-bottom: 15px;
+        }
+        .modal-body img {
+            max-width: 100%;
+        }
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+        .footer-nav .nav-link {
+            padding: 15px;
+            text-align: center;
+        }
+  </style>
+ </head>
+ <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+   <a class="navbar-brand mx-auto" href="#">
+    Upcoming Shows
+   </a>
+   <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon">
+    </span>
+   </button>
+  </nav>
+  <div class="container mt-3">
+   <div class="row">
+    <div class="col-12">
+     <div class="calendar mb-4">
+      <div class="row">
+       <!-- Example static calendar grid -->
+       <div class="col calendar-day">
+        1
+       </div>
+       <div class="col calendar-day highlight">
+        2
+       </div>
+       <div class="col calendar-day">
+        3
+       </div>
+       <div class="col calendar-day">
+        4
+       </div>
+       <div class="col calendar-day">
+        5
+       </div>
+       <div class="col calendar-day">
+        6
+       </div>
+       <div class="col calendar-day">
+        7
+       </div>
+       <!-- Continue for the rest of the month -->
+      </div>
+     </div>
+    </div>
+    <div class="col-12">
+     <div class="show-list">
+      <div class="card show-card" data-target="#showModal" data-toggle="modal">
+       <div class="card-body">
+        <h5 class="card-title">
+         Show Title
+        </h5>
+        <p class="card-text">
+         New Season
+        </p>
+        <p class="card-text">
+         <small class="text-muted">
+          Release Date: 2023-10-02
+         </small>
+        </p>
+       </div>
+      </div>
+      <!-- Repeat for other shows -->
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Modal for show details -->
+  <div aria-hidden="true" aria-labelledby="showModalLabel" class="modal fade" id="showModal" tabindex="-1">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h5 class="modal-title" id="showModalLabel">
+       Show Title
+      </h5>
+      <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+       <span aria-hidden="true">
+        ×
+       </span>
+      </button>
+     </div>
+     <div class="modal-body">
+      <img alt="Show Thumbnail" src=""/>
+      <p>
+       Description of the show.
+      </p>
+      <p>
+       <strong>
+        Release Date:
+       </strong>
+       2023-10-02
+      </p>
+      <button class="btn btn-primary">
+       Set Reminder
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Footer navigation -->
+  <nav class="navbar navbar-light bg-light footer-nav">
+   <a class="nav-link" href="#">
+    Calendar View
+   </a>
+   <a class="nav-link" href="#">
+    List View
+   </a>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

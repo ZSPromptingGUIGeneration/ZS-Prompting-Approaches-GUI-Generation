@@ -1,0 +1,121 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Player
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 24px;
+        }
+        .now-playing {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .controls button {
+            background-color: #6200ea;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .song-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px;
+        }
+        .song-list li {
+            background-color: #ffffff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .song-list li:hover {
+            background-color: #e0e0e0;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   Music Player
+  </header>
+  <div class="now-playing">
+   <h2>
+    Now Playing
+   </h2>
+   <p>
+    Song Title - Artist Name
+   </p>
+  </div>
+  <div class="controls">
+   <button>
+    «
+   </button>
+   <button>
+    ►
+   </button>
+   <button>
+    ❚❚
+   </button>
+   <button>
+    »
+   </button>
+  </div>
+  <ul class="song-list">
+   <li>
+    <span>
+     Song 1 - Artist 1
+    </span>
+    <button>
+     ►
+    </button>
+   </li>
+   <li>
+    <span>
+     Song 2 - Artist 2
+    </span>
+    <button>
+     ►
+    </button>
+   </li>
+   <li>
+    <span>
+     Song 3 - Artist 3
+    </span>
+    <button>
+     ►
+    </button>
+   </li>
+  </ul>
+ </body>
+</html>
+<!-- End -->

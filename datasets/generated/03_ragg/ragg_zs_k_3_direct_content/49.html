@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .phrase-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .phrase-card .text {
+            flex: 1;
+        }
+        .phrase-card .text .english {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .phrase-card .text .italian {
+            font-size: 14px;
+            color: #6c757d;
+        }
+        .phrase-card .listen-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Translation App
+   </h1>
+  </div>
+  <div class="container">
+   <div class="phrase-card">
+    <div class="text">
+     <div class="english">
+      Hello
+     </div>
+     <div class="italian">
+      Ciao
+     </div>
+    </div>
+    <button class="listen-btn" onclick="playAudio('hello')">
+     <i class="fas fa-volume-up">
+     </i>
+    </button>
+   </div>
+   <div class="phrase-card">
+    <div class="text">
+     <div class="english">
+      Goodbye
+     </div>
+     <div class="italian">
+      Addio
+     </div>
+    </div>
+    <button class="listen-btn" onclick="playAudio('goodbye')">
+     <i class="fas fa-volume-up">
+     </i>
+    </button>
+   </div>
+   <div class="phrase-card">
+    <div class="text">
+     <div class="english">
+      Thank you
+     </div>
+     <div class="italian">
+      Grazie
+     </div>
+    </div>
+    <button class="listen-btn" onclick="playAudio('thankyou')">
+     <i class="fas fa-volume-up">
+     </i>
+    </button>
+   </div>
+   <div class="phrase-card">
+    <div class="text">
+     <div class="english">
+      Please
+     </div>
+     <div class="italian">
+      Per favore
+     </div>
+    </div>
+    <button class="listen-btn" onclick="playAudio('please')">
+     <i class="fas fa-volume-up">
+     </i>
+    </button>
+   </div>
+   <div class="phrase-card">
+    <div class="text">
+     <div class="english">
+      Good morning
+     </div>
+     <div class="italian">
+      Buongiorno
+     </div>
+    </div>
+    <button class="listen-btn" onclick="playAudio('goodmorning')">
+     <i class="fas fa-volume-up">
+     </i>
+    </button>
+   </div>
+   <div class="phrase-card">
+    <div class="text">
+     <div class="english">
+      Good night
+     </div>
+     <div class="italian">
+      Buonanotte
+     </div>
+    </div>
+    <button class="listen-btn" onclick="playAudio('goodnight')">
+     <i class="fas fa-volume-up">
+     </i>
+    </button>
+   </div>
+   <div class="phrase-card">
+    <div class="text">
+     <div class="english">
+      How are you?
+     </div>
+     <div class="italian">
+      Come stai?
+     </div>
+    </div>
+    <button class="listen-btn" onclick="playAudio('howareyou')">
+     <i class="fas fa-volume-up">
+     </i>
+    </button>
+   </div>
+   <div class="phrase-card">
+    <div class="text">
+     <div class="english">
+      See you later
+     </div>
+     <div class="italian">
+      A dopo
+     </div>
+    </div>
+    <button class="listen-btn" onclick="playAudio('seeyoulater')">
+     <i class="fas fa-volume-up">
+     </i>
+    </button>
+   </div>
+  </div>
+  <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+  <script>
+   function playAudio(phrase) {
+            let audio = new Audio(`audio/${phrase}.mp3`);
+            audio.play();
+        }
+  </script>
+ </body>
+</html>

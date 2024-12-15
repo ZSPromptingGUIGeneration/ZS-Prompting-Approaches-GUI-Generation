@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Registration Page
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .logo img {
+            max-height: 50px;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+        .header-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .content {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .profile-photo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-photo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-photo input {
+            display: none;
+        }
+        .profile-photo label {
+            cursor: pointer;
+            color: #007bff;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .form-group .calendar-icon {
+            position: relative;
+        }
+        .form-group .calendar-icon input[type="date"] {
+            padding-right: 30px;
+        }
+        .form-group .calendar-icon::after {
+            content: '📅';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s;
+        }
+        .modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .modal-content h2 {
+            margin-bottom: 10px;
+        }
+        .modal-content p {
+            margin-bottom: 20px;
+        }
+        .modal-content .form-group {
+            text-align: left;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .buttons .register-btn {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .buttons .skip-btn {
+            background-color: #ccc;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <i class="hamburger-menu">
+    ☰
+   </i>
+   <div class="logo">
+    <img alt="Church's Chicken Logo" src=""/>
+   </div>
+   <div class="header-icons">
+    <span>
+     Español
+    </span>
+    <i class="overflow-menu">
+     ⋮
+    </i>
+   </div>
+  </header>
+  <div class="content">
+   <div class="profile-photo">
+    <img alt="Profile Photo" src=""/>
+    <label for="profile-photo-upload">
+     Change Photo
+    </label>
+    <input id="profile-photo-upload" type="file"/>
+   </div>
+   <div class="form-group">
+    <label for="name">
+     Name
+    </label>
+    <input id="name" type="text"/>
+   </div>
+   <div class="form-group">
+    <label for="email">
+     Email/Username
+    </label>
+    <input id="email" type="email"/>
+   </div>
+   <div class="form-group calendar-icon">
+    <label for="birthday">
+     Birthday
+    </label>
+    <input id="birthday" type="date"/>
+   </div>
+   <div class="form-group">
+    <label for="mobile">
+     Mobile Number
+    </label>
+    <input id="mobile" type="text"/>
+   </div>
+   <div class="form-group">
+    <label for="zip">
+     Zip Code
+    </label>
+    <input id="zip" type="text"/>
+   </div>
+   <div class="form-group">
+    <input id="marketing-consent" type="checkbox"/>
+    <label for="marketing-consent">
+     I agree to receive marketing and promotional materials
+    </label>
+   </div>
+   <div class="form-group">
+    <input id="subscription-consent" type="checkbox"/>
+    <label for="subscription-consent">
+     Subscribe to newsletters and updates
+    </label>
+   </div>
+   <div class="form-group">
+    <label for="location">
+     Choose My Church's
+    </label>
+    <input id="location" type="text"/>
+   </div>
+   <div class="buttons">
+    <button class="register-btn" onclick="toggleModal()">
+     Register
+    </button>
+    <button class="skip-btn">
+     Skip
+    </button>
+   </div>
+  </div>
+  <div class="modal" id="modal">
+   <div class="modal-content">
+    <h2>
+     Create Your Account
+    </h2>
+    <p>
+     Please enter your username and password to create an account.
+    </p>
+    <div class="form-group">
+     <label for="modal-username">
+      Username
+     </label>
+     <input id="modal-username" type="text"/>
+    </div>
+    <div class="form-group">
+     <label for="modal-password">
+      Password
+     </label>
+     <input id="modal-password" type="password"/>
+     <button onclick="togglePassword()" type="button">
+      Show/Hide
+     </button>
+    </div>
+    <div class="buttons">
+     <button class="register-btn" onclick="submitForm()">
+      Create Account
+     </button>
+     <button class="skip-btn" onclick="toggleModal()">
+      Sign In
+     </button>
+    </div>
+   </div>
+  </div>
+  <script>
+   function toggleModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.toggle('active');
+        }
+        function togglePassword() {
+            const passwordInput = document.getElementById('modal-password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        }
+        function submitForm() {
+            alert('Account created successfully!');
+            toggleModal();
+        }
+  </script>
+ </body>
+</html>

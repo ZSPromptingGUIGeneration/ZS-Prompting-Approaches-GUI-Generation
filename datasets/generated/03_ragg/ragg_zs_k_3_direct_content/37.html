@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   News App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .nav a.active {
+            color: #d32f2f;
+        }
+        .news-container {
+            padding: 10px;
+        }
+        .news-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .news-item img {
+            width: 100%;
+            height: auto;
+        }
+        .news-item h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .news-item p {
+            color: #888;
+            font-size: 14px;
+        }
+        .news-item .category {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .news-item .share {
+            align-self: flex-end;
+            color: #888;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    News App
+   </h1>
+  </div>
+  <div class="nav">
+   <a class="active" href="#">
+    Top Stories
+   </a>
+   <a href="#">
+    Weather
+   </a>
+   <a href="#">
+    Video
+   </a>
+   <a href="#">
+    Sections
+   </a>
+  </div>
+  <div class="news-container">
+   <div class="news-item">
+    <img alt="Sunny weather forecast" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/18f5909a-dfcc-4aa3-a106-98943a97fbfd.png"/>
+    <h2>
+     FORECAST: Back into the 80s, sunny
+    </h2>
+    <p>
+     12:39 AM
+    </p>
+    <span class="share">
+     <i class="fas fa-share-alt">
+     </i>
+     Share
+    </span>
+   </div>
+   <div class="news-item">
+    <img alt="Personalized license plates" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/58f12439-e677-4f09-825c-9a0567361e19.png"/>
+    <h2>
+     PHOTOS: 100 rejected personalized license plates
+    </h2>
+    <p>
+     Mar 24, 2017 12:42 PM
+    </p>
+    <span class="share">
+     <i class="fas fa-share-alt">
+     </i>
+     Share
+    </span>
+   </div>
+   <div class="news-item">
+    <img alt="Luxury home in Scottsdale" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/89f69523-61dd-4edf-a1ef-89df9ec7fc7a.png"/>
+    <h2>
+     PHOTOS: $20M Scottsdale home on the market now
+    </h2>
+    <p>
+     Mar 30, 2017 11:43 AM
+    </p>
+    <span class="share">
+     <i class="fas fa-share-alt">
+     </i>
+     Share
+    </span>
+   </div>
+   <div class="news-item">
+    <img alt="Mars probe pictures" id="image8" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fa3b261f-4328-4c2e-8cd1-4d59c143955e.png"/>
+    <h2>
+     Mars probe returns first pictures
+    </h2>
+    <p>
+     3 hours ago |
+     <span class="category">
+      Science &amp; Environment
+     </span>
+    </p>
+    <span class="share">
+     <i class="fas fa-share-alt">
+     </i>
+     Share
+    </span>
+   </div>
+   <div class="news-item">
+    <img alt="Protest against political statement" id="image9" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b1fa554f-e1e1-4505-a0a1-af110ef15e29.png"/>
+    <h2>
+     Citizens criticize political statement
+    </h2>
+    <p>
+     1 hour ago
+    </p>
+    <span class="share">
+     <i class="fas fa-share-alt">
+     </i>
+     Share
+    </span>
+   </div>
+   <div class="news-item">
+    <img alt="Medical research lab" id="image10" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c0259df5-1657-4532-b0a2-1414ca8a2708.png"/>
+    <h2>
+     Research lab receives significant donation
+    </h2>
+    <p>
+     6 hours ago
+    </p>
+    <span class="share">
+     <i class="fas fa-share-alt">
+     </i>
+     Share
+    </span>
+   </div>
+   <div class="news-item">
+    <img alt="Legal proceedings against individual" id="image12" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ed038ba6-bb15-4744-bfab-291e0f3dd238.png"/>
+    <h2>
+     Legal proceedings against individual
+    </h2>
+    <p>
+     8 hours ago
+    </p>
+    <span class="share">
+     <i class="fas fa-share-alt">
+     </i>
+     Share
+    </span>
+   </div>
+  </div>
+ </body>
+</html>

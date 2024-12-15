@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+        }
+        main {
+            padding: 1rem;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 0.5rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .forecast .time {
+            font-size: 1rem;
+            color: #333;
+        }
+        .forecast .temp {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .forecast .icon {
+            font-size: 1.5rem;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   Weather Forecast
+  </header>
+  <main>
+   <div class="forecast">
+    <div class="time">
+     10:00 AM
+    </div>
+    <div class="temp">
+     20°C
+    </div>
+    <i aria-hidden="true" class="fas fa-sun icon" id="sunny-icon">
+    </i>
+   </div>
+   <div class="forecast">
+    <div class="time">
+     11:00 AM
+    </div>
+    <div class="temp">
+     22°C
+    </div>
+    <i aria-hidden="true" class="fas fa-cloud-sun icon" id="partly-cloudy-icon">
+    </i>
+   </div>
+   <div class="forecast">
+    <div class="time">
+     12:00 PM
+    </div>
+    <div class="temp">
+     24°C
+    </div>
+    <i aria-hidden="true" class="fas fa-cloud icon" id="cloudy-icon">
+    </i>
+   </div>
+   <div class="forecast">
+    <div class="time">
+     1:00 PM
+    </div>
+    <div class="temp">
+     26°C
+    </div>
+    <i aria-hidden="true" class="fas fa-cloud-sun-rain icon" id="rainy-icon">
+    </i>
+   </div>
+   <div class="forecast">
+    <div class="time">
+     2:00 PM
+    </div>
+    <div class="temp">
+     27°C
+    </div>
+    <i aria-hidden="true" class="fas fa-sun icon" id="sunny-icon-2">
+    </i>
+   </div>
+   <div class="forecast">
+    <div class="time">
+     3:00 PM
+    </div>
+    <div class="temp">
+     28°C
+    </div>
+    <i aria-hidden="true" class="fas fa-cloud icon" id="cloudy-icon-2">
+    </i>
+   </div>
+  </main>
+ </body>
+</html>
+

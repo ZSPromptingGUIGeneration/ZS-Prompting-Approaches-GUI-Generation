@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Playlist App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        .header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .playlist-management {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .playlist-management button {
+            padding: 10px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .playlist-management button:hover {
+            background-color: #e65c55;
+        }
+        .playlist {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .playlist h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+        .playlist ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .playlist ul li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .playlist ul li:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .playlist ul li:hover {
+            background-color: #f1f1f1;
+        }
+        .playlist ul li:last-child {
+            border-bottom: none;
+        }
+        .song-details {
+            display: flex;
+            flex-direction: column;
+        }
+        .song-details span {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .add-song-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .add-song-btn:hover {
+            background-color: #e65c55;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+        .playlist-duration {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (max-width: 600px) {
+            .playlist-management {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .playlist-management button {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Create Your Playlist
+   </h1>
+  </div>
+  <div class="container">
+   <div class="playlist-management">
+    <input class="search-bar" placeholder="Search songs..." type="text"/>
+    <div>
+     <button>
+      Create Playlist
+     </button>
+     <button>
+      Delete Playlist
+     </button>
+    </div>
+   </div>
+   <div class="playlist">
+    <h2>
+     My Playlist
+    </h2>
+    <button class="add-song-btn">
+     + Add Song
+    </button>
+    <ul>
+     <li>
+      <div class="song-details">
+       <span>
+        Song 1
+       </span>
+       <span>
+        Artist 1 - Album 1
+       </span>
+       <span>
+        3:45
+       </span>
+      </div>
+     </li>
+     <li>
+      <div class="song-details">
+       <span>
+        Song 2
+       </span>
+       <span>
+        Artist 2 - Album 2
+       </span>
+       <span>
+        4:20
+       </span>
+      </div>
+     </li>
+     <li>
+      <div class="song-details">
+       <span>
+        Song 3
+       </span>
+       <span>
+        Artist 3 - Album 3
+       </span>
+       <span>
+        2:50
+       </span>
+      </div>
+     </li>
+    </ul>
+    <div class="playlist-duration">
+     Total Duration: 10:55
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

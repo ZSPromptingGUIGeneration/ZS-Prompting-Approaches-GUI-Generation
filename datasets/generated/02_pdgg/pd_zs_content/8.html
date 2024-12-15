@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Language Learning App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .search-bar i {
+            font-size: 20px;
+            color: #888;
+        }
+        .filter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .filter button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .phrase-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .phrase-card h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .phrase-card p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .phrase-card .phonetic {
+            color: #888;
+        }
+        .phrase-card .audio-icon, .phrase-card .star-icon {
+            position: absolute;
+            top: 20px;
+            cursor: pointer;
+        }
+        .phrase-card .audio-icon {
+            right: 50px;
+        }
+        .phrase-card .star-icon {
+            right: 20px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .progress-bar div {
+            height: 10px;
+            background-color: #007bff;
+            width: 50%; /* Example progress */
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-top: 1px solid #ddd;
+        }
+        .navigation i {
+            font-size: 30px;
+            color: #888;
+            cursor: pointer;
+        }
+        .feedback {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .feedback button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .feedback button i {
+            font-size: 20px;
+            color: #888;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search phrases..." type="text"/>
+    <i class="fas fa-search">
+    </i>
+   </div>
+   <div class="filter">
+    <button>
+     All
+    </button>
+    <button>
+     Travel
+    </button>
+    <button>
+     Food
+    </button>
+    <button>
+     Basics
+    </button>
+   </div>
+   <div class="progress-bar">
+    <div>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <h2>
+     Hola
+    </h2>
+    <p>
+     Hello
+    </p>
+    <p class="phonetic">
+     /oˈla/
+    </p>
+    <i class="fas fa-volume-up audio-icon">
+    </i>
+    <i class="fas fa-star star-icon">
+    </i>
+    <div class="feedback">
+     <button>
+      <i class="fas fa-thumbs-up">
+      </i>
+     </button>
+     <button>
+      <i class="fas fa-thumbs-down">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <h2>
+     Gracias
+    </h2>
+    <p>
+     Thank you
+    </p>
+    <p class="phonetic">
+     /ˈɡɾasjas/
+    </p>
+    <i class="fas fa-volume-up audio-icon">
+    </i>
+    <i class="fas fa-star star-icon">
+    </i>
+    <div class="feedback">
+     <button>
+      <i class="fas fa-thumbs-up">
+      </i>
+     </button>
+     <button>
+      <i class="fas fa-thumbs-down">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <h2>
+     Por favor
+    </h2>
+    <p>
+     Please
+    </p>
+    <p class="phonetic">
+     /poɾ faˈβoɾ/
+    </p>
+    <i class="fas fa-volume-up audio-icon">
+    </i>
+    <i class="fas fa-star star-icon">
+    </i>
+    <div class="feedback">
+     <button>
+      <i class="fas fa-thumbs-up">
+      </i>
+     </button>
+     <button>
+      <i class="fas fa-thumbs-down">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <h2>
+     Buenos días
+    </h2>
+    <p>
+     Good morning
+    </p>
+    <p class="phonetic">
+     /ˈbwenos ˈdias/
+    </p>
+    <i class="fas fa-volume-up audio-icon">
+    </i>
+    <i class="fas fa-star star-icon">
+    </i>
+    <div class="feedback">
+     <button>
+      <i class="fas fa-thumbs-up">
+      </i>
+     </button>
+     <button>
+      <i class="fas fa-thumbs-down">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <h2>
+     Buenas noches
+    </h2>
+    <p>
+     Good night
+    </p>
+    <p class="phonetic">
+     /ˈbwenas ˈnotʃes/
+    </p>
+    <i class="fas fa-volume-up audio-icon">
+    </i>
+    <i class="fas fa-star star-icon">
+    </i>
+    <div class="feedback">
+     <button>
+      <i class="fas fa-thumbs-up">
+      </i>
+     </button>
+     <button>
+      <i class="fas fa-thumbs-down">
+      </i>
+     </button>
+    </div>
+   </div>
+  </div>
+  <div class="navigation">
+   <i class="fas fa-arrow-left">
+   </i>
+   <i class="fas fa-home">
+   </i>
+   <i class="fas fa-arrow-right">
+   </i>
+  </div>
+ </body>
+</html>

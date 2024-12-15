@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0f7fa;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #0288d1;
+            border-radius: 10px;
+        }
+        .current-weather {
+            background: #0288d1;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .current-weather h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+        .current-weather p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .current-weather .details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .current-weather .details div {
+            text-align: left;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .forecast .day {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            width: 13%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            flex-grow: 1;
+            margin: 5px;
+        }
+        .forecast .day h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #0288d1;
+        }
+        .forecast .day p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .forecast .day img {
+            width: 30px;
+            height: 30px;
+        }
+        .temp-toggle {
+            margin-top: 20px;
+        }
+        .temp-toggle button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #0288d1;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            .forecast .day {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search for a location..." type="text"/>
+   </div>
+   <div class="current-weather">
+    <h1>
+     72°F
+    </h1>
+    <p>
+     Sunny
+    </p>
+    <p>
+     New York, NY
+    </p>
+    <div class="details">
+     <div>
+      <p>
+       Humidity: 50%
+      </p>
+      <p>
+       Wind: 10 mph
+      </p>
+     </div>
+     <div>
+      <p>
+       UV Index: 5
+      </p>
+      <p>
+       Date: Oct 5, 2023
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="forecast">
+    <div class="day">
+     <h3>
+      Mon
+     </h3>
+     <img alt="Sunny" src=""/>
+     <p>
+      70°F
+     </p>
+     <p>
+      Sunny
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Tue
+     </h3>
+     <img alt="Cloudy" src=""/>
+     <p>
+      68°F
+     </p>
+     <p>
+      Cloudy
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Wed
+     </h3>
+     <img alt="Partly Cloudy" src=""/>
+     <p>
+      75°F
+     </p>
+     <p>
+      Partly Cloudy
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Thu
+     </h3>
+     <img alt="Sunny" src=""/>
+     <p>
+      78°F
+     </p>
+     <p>
+      Sunny
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Fri
+     </h3>
+     <img alt="Sunny" src=""/>
+     <p>
+      80°F
+     </p>
+     <p>
+      Sunny
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Sat
+     </h3>
+     <img alt="Rain" src=""/>
+     <p>
+      77°F
+     </p>
+     <p>
+      Rain
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Sun
+     </h3>
+     <img alt="Sunny" src=""/>
+     <p>
+      74°F
+     </p>
+     <p>
+      Sunny
+     </p>
+    </div>
+   </div>
+   <div class="temp-toggle">
+    <button>
+     Toggle °F/°C
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

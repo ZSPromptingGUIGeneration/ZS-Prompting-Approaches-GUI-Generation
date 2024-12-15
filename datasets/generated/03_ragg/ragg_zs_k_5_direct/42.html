@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+        .current-weather {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .current-weather .temp {
+            font-size: 60px;
+        }
+        .current-weather .details {
+            font-size: 18px;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .forecast .day {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            width: 18%;
+        }
+        .forecast .day img {
+            width: 50px;
+            height: 50px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: #333;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     San Francisco
+    </h1>
+    <p>
+     4:15 PM, 12/23 (GMT-08:00)
+    </p>
+   </div>
+   <div class="current-weather">
+    <div class="temp">
+     55°F
+    </div>
+    <div class="details">
+     <p>
+      Light rain
+     </p>
+     <p>
+      Feels like 55°F
+     </p>
+     <p>
+      Sunrise: 7:22 AM | Sunset: 4:55 PM
+     </p>
+     <p>
+      Humidity: 83%
+     </p>
+     <p>
+      Wind: 8.7 mph SW
+     </p>
+     <p>
+      Dew point: 48°F
+     </p>
+     <p>
+      Pressure: 1009 mBar
+     </p>
+     <p>
+      Visibility: 8.1 mi
+     </p>
+    </div>
+   </div>
+   <div class="forecast">
+    <div class="day">
+     <p>
+      FRI
+     </p>
+     <img alt="Cloudy" src=""/>
+     <p>
+      55°F/46°F
+     </p>
+    </div>
+    <div class="day">
+     <p>
+      SAT
+     </p>
+     <img alt="Sunny" src=""/>
+     <p>
+      51°F/42°F
+     </p>
+    </div>
+    <div class="day">
+     <p>
+      SUN
+     </p>
+     <img alt="Sunny" src=""/>
+     <p>
+      53°F/41°F
+     </p>
+    </div>
+    <div class="day">
+     <p>
+      MON
+     </p>
+     <img alt="Partly Cloudy" src=""/>
+     <p>
+      51°F/39°F
+     </p>
+    </div>
+    <div class="day">
+     <p>
+      TUE
+     </p>
+     <img alt="Sunny" src=""/>
+     <p>
+      55°F/41°F
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="navbar">
+   <a href="#now">
+    Now
+   </a>
+   <a href="#details">
+    Details
+   </a>
+   <a href="#radar">
+    Radar
+   </a>
+   <a href="#news">
+    News
+   </a>
+  </div>
+ </body>
+</html>

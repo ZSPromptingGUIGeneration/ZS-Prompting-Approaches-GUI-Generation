@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Mobile Weather App
+  </title>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .app-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #6200ea;
+            color: white;
+        }
+        .app-bar .location {
+            display: flex;
+            align-items: center;
+        }
+        .app-bar .location i {
+            margin-right: 10px;
+        }
+        .app-bar .refresh {
+            cursor: pointer;
+        }
+        .forecast-container {
+            padding: 20px;
+        }
+        .graph {
+            margin-bottom: 20px;
+        }
+        .forecast-cards {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+        }
+        .forecast-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            min-width: 100px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .forecast-card:hover {
+            transform: scale(1.05);
+        }
+        .forecast-card.expanded {
+            height: auto;
+        }
+        .forecast-card .time {
+            font-weight: bold;
+        }
+        .forecast-card .details {
+            display: none;
+        }
+        .forecast-card.expanded .details {
+            display: block;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: white;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .bottom-nav .nav-item {
+            text-align: center;
+            cursor: pointer;
+        }
+        .bottom-nav .nav-item i {
+            display: block;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="app-bar">
+   <div class="location">
+    <i class="material-icons">
+     location_on
+    </i>
+    <span>
+     Current Location
+    </span>
+   </div>
+   <i class="material-icons refresh">
+    refresh
+   </i>
+  </div>
+  <div class="forecast-container">
+   <div class="graph">
+    <!-- Placeholder for graph -->
+   </div>
+   <div class="forecast-cards">
+    <div class="forecast-card">
+     <div class="time">
+      1 PM
+     </div>
+     <div class="icon">
+      <i class="material-icons">
+       wb_sunny
+      </i>
+     </div>
+     <div class="temperature">
+      25°C
+     </div>
+     <div class="details">
+      <div>
+       Precipitation: 10%
+      </div>
+      <div>
+       Wind: 10 km/h
+      </div>
+      <div>
+       Humidity: 60%
+      </div>
+     </div>
+    </div>
+    <div class="forecast-card">
+     <div class="time">
+      2 PM
+     </div>
+     <div class="icon">
+      <i class="material-icons">
+       wb_sunny
+      </i>
+     </div>
+     <div class="temperature">
+      26°C
+     </div>
+     <div class="details">
+      <div>
+       Precipitation: 5%
+      </div>
+      <div>
+       Wind: 12 km/h
+      </div>
+      <div>
+       Humidity: 55%
+      </div>
+     </div>
+    </div>
+    <!-- Additional forecast cards go here -->
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item">
+    <i class="material-icons">
+     today
+    </i>
+    <span>
+     Daily
+    </span>
+   </div>
+   <div class="nav-item">
+    <i class="material-icons">
+     view_week
+    </i>
+    <span>
+     Weekly
+    </span>
+   </div>
+   <div class="nav-item">
+    <i class="material-icons">
+     settings
+    </i>
+    <span>
+     Settings
+    </span>
+   </div>
+  </div>
+  <script>
+   document.querySelectorAll('.forecast-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('expanded');
+            });
+        });
+  </script>
+ </body>
+</html>

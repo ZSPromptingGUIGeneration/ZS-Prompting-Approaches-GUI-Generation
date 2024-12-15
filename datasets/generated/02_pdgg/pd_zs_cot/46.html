@@ -1,0 +1,96 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Registration Page
+  </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container form-container">
+   <h2 class="text-center">
+    Register
+   </h2>
+   <form>
+    <div class="form-group">
+     <label for="name">
+      Name
+     </label>
+     <input class="form-control" id="name" placeholder="Enter your name" required="" type="text"/>
+     <div class="invalid-feedback">
+      Please enter your name.
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="email">
+      Email
+     </label>
+     <input class="form-control" id="email" placeholder="Enter your email" required="" type="email"/>
+     <div class="invalid-feedback">
+      Please enter a valid email address.
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="phone">
+      Phone Number
+     </label>
+     <input class="form-control" id="phone" placeholder="Enter your phone number" required="" type="tel"/>
+     <div class="invalid-feedback">
+      Please enter your phone number.
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="password">
+      Password
+     </label>
+     <input class="form-control" id="password" placeholder="Enter your password" required="" type="password"/>
+     <div class="invalid-feedback">
+      Please enter a password.
+     </div>
+    </div>
+    <div class="form-group">
+     <label>
+      Subscription Plan
+     </label>
+     <div class="form-check">
+      <input class="form-check-input" id="basic" name="subscription" required="" type="radio" value="basic"/>
+      <label class="form-check-label" for="basic">
+       Basic
+      </label>
+     </div>
+     <div class="form-check">
+      <input class="form-check-input" id="premium" name="subscription" required="" type="radio" value="premium"/>
+      <label class="form-check-label" for="premium">
+       Premium
+      </label>
+     </div>
+     <div class="invalid-feedback">
+      Please select a subscription plan.
+     </div>
+    </div>
+    <button class="btn btn-primary btn-block" type="submit">
+     Register
+    </button>
+   </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

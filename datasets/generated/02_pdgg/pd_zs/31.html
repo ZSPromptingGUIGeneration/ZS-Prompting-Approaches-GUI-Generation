@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tableware Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 8px 16px;
+            margin-bottom: 16px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .search-bar .icon {
+            margin-right: 8px;
+            font-size: 20px;
+            color: #777;
+        }
+        .search-bar .clear-btn {
+            margin-left: 8px;
+            font-size: 20px;
+            color: #777;
+            cursor: pointer;
+        }
+        .search-bar .voice-search {
+            margin-left: 8px;
+            font-size: 20px;
+            color: #777;
+            cursor: pointer;
+        }
+        .suggestions {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: -8px;
+            padding: 8px;
+            display: none;
+        }
+        .suggestions .suggestion-item {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .suggestions .suggestion-item:last-child {
+            border-bottom: none;
+        }
+        .barcode-btn {
+            background: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .category-menu {
+            display: flex;
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+        .category-menu .category-item {
+            background: white;
+            border-radius: 25px;
+            padding: 8px 16px;
+            margin-right: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .subcategory-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .subcategory-grid .subcategory-item {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .subcategory-grid .subcategory-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .subcategory-grid .subcategory-item span {
+            display: block;
+            font-size: 14px;
+            color: #333;
+        }
+        .loading-indicator {
+            display: none;
+            text-align: center;
+            margin-top: 16px;
+        }
+        .loading-indicator .spinner {
+            border: 4px solid #f5f5f5;
+            border-top: 4px solid #ff5722;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .recent-searches {
+            margin-top: 16px;
+        }
+        .recent-searches .recent-item {
+            background: white;
+            border-radius: 8px;
+            padding: 8px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .recent-searches .recent-item .clear-btn {
+            font-size: 16px;
+            color: #777;
+            cursor: pointer;
+        }
+        .favorites {
+            margin-top: 16px;
+        }
+        .favorites .favorite-item {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .favorites .favorite-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            margin-right: 16px;
+        }
+        .favorites .favorite-item .details {
+            flex: 1;
+        }
+        .favorites .favorite-item .details .title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        .favorites .favorite-item .details .price {
+            font-size: 14px;
+            color: #777;
+        }
+        .favorites .favorite-item .favorite-btn {
+            font-size: 20px;
+            color: #ff5722;
+            cursor: pointer;
+        }
+        .reviews {
+            margin-top: 16px;
+        }
+        .reviews .review-item {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .reviews .review-item .user {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .reviews .review-item .user img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .reviews .review-item .user .username {
+            font-size: 14px;
+            color: #333;
+        }
+        .reviews .review-item .rating {
+            font-size: 14px;
+            color: #ff5722;
+            margin-bottom: 8px;
+        }
+        .reviews .review-item .comment {
+            font-size: 14px;
+            color: #777;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <!-- Search Bar -->
+   <div class="search-bar">
+    <span class="icon">
+     🔍
+    </span>
+    <input placeholder="Search tableware..." type="text"/>
+    <span class="clear-btn">
+     ❌
+    </span>
+    <span class="voice-search">
+     🎤
+    </span>
+   </div>
+   <!-- Auto-suggestions -->
+   <div class="suggestions">
+    <div class="suggestion-item">
+     Suggestion 1
+    </div>
+    <div class="suggestion-item">
+     Suggestion 2
+    </div>
+    <div class="suggestion-item">
+     Suggestion 3
+    </div>
+   </div>
+   <!-- Barcode Scanner Button -->
+   <button class="barcode-btn">
+    📷
+   </button>
+   <!-- Category Menu -->
+   <div class="category-menu">
+    <div class="category-item">
+     Plates
+    </div>
+    <div class="category-item">
+     Bowls
+    </div>
+    <div class="category-item">
+     Cups
+    </div>
+    <div class="category-item">
+     Cutlery
+    </div>
+   </div>
+   <!-- Subcategory Grid -->
+   <div class="subcategory-grid">
+    <div class="subcategory-item">
+     <img alt="Subcategory" src=""/>
+     <span>
+      Subcategory 1
+     </span>
+    </div>
+    <div class="subcategory-item">
+     <img alt="Subcategory" src=""/>
+     <span>
+      Subcategory 2
+     </span>
+    </div>
+   </div>
+   <!-- Loading Indicator -->
+   <div class="loading-indicator">
+    <div class="spinner">
+    </div>
+   </div>
+   <!-- Recent Searches -->
+   <div class="recent-searches">
+    <div class="recent-item">
+     <span>
+      Recent Search 1
+     </span>
+     <span class="clear-btn">
+      ❌
+     </span>
+    </div>
+    <div class="recent-item">
+     <span>
+      Recent Search 2
+     </span>
+     <span class="clear-btn">
+      ❌
+     </span>
+    </div>
+   </div>
+   <!-- Favorites/Wish List -->
+   <div class="favorites">
+    <div class="favorite-item">
+     <img alt="Favorite" src=""/>
+     <div class="details">
+      <div class="title">
+       Favorite Item 1
+      </div>
+      <div class="price">
+       $10.00
+      </div>
+     </div>
+     <span class="favorite-btn">
+      ❤️
+     </span>
+    </div>
+    <div class="favorite-item">
+     <img alt="Favorite" src=""/>
+     <div class="details">
+      <div class="title">
+       Favorite Item 2
+      </div>
+      <div class="price">
+       $15.00
+      </div>
+     </div>
+     <span class="favorite-btn">
+      ❤️
+     </span>
+    </div>
+   </div>
+   <!-- User Reviews and Ratings -->
+   <div class="reviews">
+    <div class="review-item">
+     <div class="user">
+      <img alt="User" src=""/>
+      <span class="username">
+       User 1
+      </span>
+     </div>
+     <div class="rating">
+      ⭐⭐⭐⭐⭐
+     </div>
+     <div class="comment">
+      Great product!
+     </div>
+    </div>
+    <div class="review-item">
+     <div class="user">
+      <img alt="User" src=""/>
+      <span class="username">
+       User 2
+      </span>
+     </div>
+     <div class="rating">
+      ⭐⭐⭐⭐
+     </div>
+     <div class="comment">
+      Very good, but could be improved.
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Radio Player App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header .search {
+            font-size: 24px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f2f2f2;
+            padding: 10px 0;
+        }
+        .tabs div {
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+            padding: 10px 0;
+        }
+        .tabs .active {
+            border-bottom: 2px solid #ff6600;
+            color: #ff6600;
+        }
+        .content {
+            padding: 20px;
+        }
+        .station-list, .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .station-list li, .category-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .station-list li img, .category-list li img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+        .station-list li div, .category-list li div {
+            flex: 1;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer .player {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer .player img {
+            height: 30px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu">
+    ☰
+   </div>
+   <h1>
+    FM India
+   </h1>
+   <div class="search">
+    🔍
+   </div>
+  </div>
+  <div class="tabs">
+   <div class="tab active" onclick="showStations()">
+    Stations
+   </div>
+   <div class="tab" onclick="showFavorites()">
+    Favorites
+   </div>
+  </div>
+  <div class="content">
+   <ul class="station-list" id="station-list">
+    <li>
+     <img alt="" src=""/>
+     <div>
+      <strong>
+       98.3 Radio Mirchi
+      </strong>
+      <br/>
+      <span>
+       96kbps
+      </span>
+     </div>
+    </li>
+    <li>
+     <img alt="" src=""/>
+     <div>
+      <strong>
+       93.5 Red FM
+      </strong>
+      <br/>
+      <span>
+       96kbps
+      </span>
+     </div>
+    </li>
+    <li>
+     <img alt="" src=""/>
+     <div>
+      <strong>
+       104 Fever FM
+      </strong>
+      <br/>
+      <span>
+       96kbps
+      </span>
+     </div>
+    </li>
+   </ul>
+   <ul class="category-list" id="category-list" style="display: none;">
+    <li>
+     <div>
+      Your Stations
+     </div>
+    </li>
+    <li>
+     <div>
+      Recommended
+     </div>
+    </li>
+    <li>
+     <div>
+      Local Radio
+     </div>
+    </li>
+    <li>
+     <div>
+      By Genre
+     </div>
+    </li>
+    <li>
+     <div>
+      By Language
+     </div>
+    </li>
+    <li>
+     <div>
+      By Location
+     </div>
+    </li>
+   </ul>
+  </div>
+  <div class="footer">
+   <div class="player">
+    <img alt="" src=""/>
+    <div>
+     No station selected...
+    </div>
+    <div>
+     ▶
+    </div>
+   </div>
+  </div>
+  <script>
+   function showStations() {
+            document.getElementById('station-list').style.display = 'block';
+            document.getElementById('category-list').style.display = 'none';
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab')[0].classList.add('active');
+        }
+        function showFavorites() {
+            document.getElementById('station-list').style.display = 'none';
+            document.getElementById('category-list').style.display = 'block';
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab')[1].classList.add('active');
+        }
+  </script>
+ </body>
+</html>

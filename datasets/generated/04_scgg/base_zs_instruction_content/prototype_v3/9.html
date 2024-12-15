@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .recipe-image {
+            width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .title {
+            font-size: 2em;
+            font-family: 'Georgia', serif;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .description {
+            font-size: 1em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .metadata {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 1em;
+            color: #666;
+            font-weight: bold;
+        }
+        .metadata span {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        .ingredients, .steps, .nutrition, .reviews, .comments {
+            margin-bottom: 20px;
+        }
+        .ingredients ul, .steps ol {
+            padding-left: 20px;
+        }
+        .ingredients li, .steps li {
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #555;
+        }
+        .steps li {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .steps li:last-child {
+            border-bottom: none;
+        }
+        .nutrition span, .reviews span {
+            display: block;
+            font-size: 1em;
+            color: #666;
+        }
+        .print-button, .bookmark-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #ff6347;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .print-button:hover, .bookmark-button:hover {
+            background-color: #ff4500;
+        }
+        .comments textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .comments button {
+            padding: 10px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .comments button:hover {
+            background-color: #ff4500;
+        }
+        @media (max-width: 600px) {
+            .title {
+                font-size: 1.5em;
+            }
+            .ingredients li, .steps li {
+                font-size: 0.875em;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <img alt="Image of a delicious Italian lasagna" class="recipe-image" id="recipe-image-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d77c4f47-dece-4778-b018-843caa970f33.png"/>
+   <div class="content">
+    <h1 class="title">
+     Classic Italian Lasagna
+    </h1>
+    <div class="metadata">
+     <span>
+      1 hr 30 mins
+     </span>
+     <span>
+      Moderate
+     </span>
+    </div>
+    <p class="description">
+     This classic Italian lasagna is a perfect dish for family dinners. Layered with rich meat sauce and creamy béchamel, it's a crowd-pleaser!
+    </p>
+    <section class="ingredients">
+     <h2>
+      Ingredients
+     </h2>
+     <ul>
+      <li>
+       12 lasagna noodles
+      </li>
+      <li>
+       1 lb ground beef
+      </li>
+      <li>
+       2 cups ricotta cheese
+      </li>
+      <li>
+       2 cups shredded mozzarella cheese
+      </li>
+      <li>
+       1/2 cup grated Parmesan cheese
+      </li>
+      <li>
+       4 cups marinara sauce
+      </li>
+      <li>
+       2 cloves garlic, minced
+      </li>
+      <li>
+       1/4 cup chopped fresh basil
+      </li>
+      <li>
+       1/4 cup chopped fresh parsley
+      </li>
+      <li>
+       1/2 tsp salt
+      </li>
+      <li>
+       1/4 tsp black pepper
+      </li>
+     </ul>
+    </section>
+    <section class="steps">
+     <h2>
+      Steps
+     </h2>
+     <ol>
+      <li>
+       Preheat the oven to 375°F (190°C).
+      </li>
+      <li>
+       Cook the lasagna noodles according to the package instructions. Drain and set aside.
+      </li>
+      <li>
+       In a large skillet, cook the ground beef over medium heat until browned. Add garlic and cook for another minute.
+      </li>
+      <li>
+       Add marinara sauce to the skillet and simmer for 15 minutes.
+      </li>
+      <li>
+       In a bowl, mix ricotta cheese with chopped basil, parsley, salt, and pepper.
+      </li>
+      <li>
+       In a baking dish, spread a layer of meat sauce, followed by a layer of noodles, then a layer of ricotta mixture. Repeat the layers, ending with a layer of meat sauce.
+      </li>
+      <li>
+       Top with shredded mozzarella and grated Parmesan cheese.
+      </li>
+      <li>
+       Cover with aluminum foil and bake for 25 minutes. Remove the foil and bake for another 25 minutes until the cheese is golden and bubbly.
+      </li>
+      <li>
+       Let it cool for 10 minutes before serving. Enjoy!
+      </li>
+     </ol>
+    </section>
+    <section class="nutrition">
+     <h2>
+      Nutrition Information
+     </h2>
+     <span>
+      Serving Size: 1 piece
+     </span>
+     <span>
+      Calories: 450
+     </span>
+     <span>
+      Fat: 20g
+     </span>
+     <span>
+      Protein: 25g
+     </span>
+     <span>
+      Allergens: Dairy, Wheat
+     </span>
+    </section>
+    <section class="reviews">
+     <h2>
+      User Ratings and Reviews
+     </h2>
+     <span>
+      ★★★★☆ (4.5/5)
+     </span>
+     <span>
+      "This lasagna was incredible! My family couldn't get enough of it." - CookLover
+     </span>
+     <span>
+      "A bit time consuming, but totally worth it. The flavors are amazing!" - Foodie123
+     </span>
+    </section>
+    <section class="comments">
+     <h3>
+      Comments
+     </h3>
+     <textarea placeholder="Leave a comment..." rows="4"></textarea>
+     <button type="button">
+      Submit Comment
+     </button>
+    </section>
+    <a aria-label="Print Recipe" class="print-button" href="#">
+     Print Recipe
+    </a>
+    <a aria-label="Bookmark Recipe" class="bookmark-button" href="#">
+     Bookmark Recipe
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

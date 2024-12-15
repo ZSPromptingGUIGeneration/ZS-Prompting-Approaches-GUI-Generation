@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Navigation App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .header, .footer {
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            z-index: 1000;
+        }
+        .header {
+            top: 0;
+        }
+        .footer {
+            bottom: 0;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .content h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .content p {
+            margin: 15px 0;
+            font-size: 20px;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .nav-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 45%;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .nav-buttons button i {
+            margin-right: 5px;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            display: flex;
+            position: relative;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #007bff;
+            border-radius: 0 5px 5px 0;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+        .search-bar input::placeholder {
+            color: #999;
+        }
+        .clear-button {
+            position: absolute;
+            right: 80px;
+            top: 10px;
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .clear-button:hover {
+            color: #666;
+        }
+        .map-placeholder {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background-image: url('map-placeholder.png');
+            background-size: cover;
+            background-position: center;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #666;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+        }
+        .map-placeholder .location-indicator {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .route-info {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .route-info .card {
+            width: 100%;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .route-info h2 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+        }
+        .route-info p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .hamburger-menu {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .hamburger-menu div {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+        }
+        .favorites, .history {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .favorites h2, .history h2 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+        }
+        .favorites ul, .history ul {
+            list-style: none;
+            padding: 0;
+        }
+        .favorites li, .history li {
+            font-size: 18px;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        .favorites li::before, .history li::before {
+            content: '📍';
+            margin-right: 10px;
+        }
+        .delete-button {
+            margin-left: auto;
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+        }
+        .delete-button:hover {
+            color: #666;
+        }
+        .profile-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-section .card {
+            width: 100%;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .profile-section img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .current-location {
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .current-location:hover {
+            background-color: #0056b3;
+        }
+        .map-layers {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .map-layers button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        .map-layers button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .nav-buttons button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .search-bar {
+                flex-direction: column;
+            }
+            .search-bar input, .search-bar button {
+                width: 100%;
+                border-radius: 5px;
+            }
+            .search-bar button {
+                margin-top: 10px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <div class="hamburger-menu">
+     <div>
+     </div>
+     <div>
+     </div>
+     <div>
+     </div>
+    </div>
+    <h1>
+     Navigation App
+    </h1>
+   </div>
+   <div class="content">
+    <h1>
+     Welcome to the Navigation App
+    </h1>
+    <p>
+     Use the search bar to find your destination.
+    </p>
+    <div class="search-bar">
+     <input placeholder="Search for places, addresses, or coordinates" type="text"/>
+     <button>
+      Search
+     </button>
+     <button class="clear-button">
+      ×
+     </button>
+    </div>
+    <button class="current-location">
+     Find My Current Location
+    </button>
+    <div class="map-placeholder">
+     <div class="location-indicator">
+     </div>
+     Map Placeholder
+    </div>
+    <div class="map-layers">
+     <button>
+      Satellite View
+     </button>
+     <button>
+      Terrain View
+     </button>
+    </div>
+    <div class="route-info">
+     <h2>
+      Route Information
+     </h2>
+     <div class="card">
+      <p>
+       Distance: 5 miles
+      </p>
+      <p>
+       Estimated Time: 15 minutes
+      </p>
+      <p>
+       Steps: Head north on Main St, Turn right at 2nd St, Continue to Elm St
+      </p>
+     </div>
+    </div>
+    <div class="favorites">
+     <h2>
+      Favorites
+     </h2>
+     <ul>
+      <li>
+       Central Park
+       <button class="delete-button">
+        Delete
+       </button>
+      </li>
+      <li>
+       Golden Gate Bridge
+       <button class="delete-button">
+        Delete
+       </button>
+      </li>
+      <li>
+       Eiffel Tower
+       <button class="delete-button">
+        Delete
+       </button>
+      </li>
+     </ul>
+    </div>
+    <div class="history">
+     <h2>
+      Navigation History
+     </h2>
+     <ul>
+      <li>
+       Times Square
+       <button class="delete-button">
+        Delete
+       </button>
+      </li>
+      <li>
+       Statue of Liberty
+       <button class="delete-button">
+        Delete
+       </button>
+      </li>
+      <li>
+       Big Ben
+       <button class="delete-button">
+        Delete
+       </button>
+      </li>
+     </ul>
+    </div>
+    <div class="profile-section">
+     <h2>
+      User Profile
+     </h2>
+     <div class="card">
+      <img alt="User Profile Picture" id="profile-pic" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f91afee5-c7f0-40d1-9b2b-5b69ded01073.png"/>
+      <div>
+       <p>
+        Name: Jane Smith
+       </p>
+       <p>
+        Contact: jane.smith@example.com
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="nav-buttons">
+     <button>
+      <i class="fas fa-home">
+      </i>
+      Go to Home
+     </button>
+     <button>
+      <i class="fas fa-cog">
+      </i>
+      Open Settings
+     </button>
+    </div>
+   </div>
+   <div class="footer">
+    <p>
+     © 2023 Navigation App
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

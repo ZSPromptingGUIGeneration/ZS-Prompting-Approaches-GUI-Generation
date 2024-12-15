@@ -1,0 +1,85 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+  <title>
+   Tableware Shopping
+  </title>
+  <style>
+   .search-bar {
+            margin: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            flex: 1;
+            border-radius: 25px;
+            padding: 10px;
+        }
+        .search-bar button {
+            margin-left: 10px;
+            border: none;
+            background: none;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .category-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .category-card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <header class="search-bar">
+   <input class="form-control" placeholder="Search for tableware..." type="text"/>
+   <button>
+    <img alt="Scan Barcode" src="" width="30"/>
+   </button>
+  </header>
+  <main class="category-grid">
+   <div class="category-card">
+    <img alt="Plates" src=""/>
+    <span>
+     Plates
+    </span>
+   </div>
+   <div class="category-card">
+    <img alt="Bowls" src=""/>
+    <span>
+     Bowls
+    </span>
+   </div>
+   <div class="category-card">
+    <img alt="Cups" src=""/>
+    <span>
+     Cups
+    </span>
+   </div>
+   <div class="category-card">
+    <img alt="Cutlery" src=""/>
+    <span>
+     Cutlery
+    </span>
+   </div>
+  </main>
+ </body>
+</html>
+<!-- End -->

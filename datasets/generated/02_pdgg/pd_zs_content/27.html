@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Storage App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #e0e0e0;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .tab.active {
+            background-color: #6200ea;
+            color: white;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            padding: 5px;
+        }
+
+        .app-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .app-item {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-item img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .app-info {
+            flex-grow: 1;
+        }
+
+        .app-info h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .app-info p {
+            margin: 0;
+            color: gray;
+            font-size: 12px;
+        }
+
+        .delete-button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .modal-content button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content .cancel {
+            background-color: #757575;
+            color: white;
+        }
+
+        .modal-content .delete {
+            background-color: #d32f2f;
+            color: white;
+        }
+
+        .snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .snackbar.show {
+            visibility: visible;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="title">
+    Storage App
+   </div>
+   <div class="sort-menu">
+    ⋮
+   </div>
+  </div>
+  <div class="tabs">
+   <div class="tab active">
+    Phone
+   </div>
+   <div class="tab">
+    SD Card
+   </div>
+  </div>
+  <div class="content">
+   <div class="search-bar">
+    <input placeholder="Search apps..." type="text"/>
+   </div>
+   <ul class="app-list">
+    <li class="app-item">
+     <img alt="Social Media App Icon" id="app-icon1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b5429473-2367-4fe6-b952-dfb99b9ca7fc.png"/>
+     <div class="app-info">
+      <h4>
+       Social Media App
+      </h4>
+      <p>
+       Size: 120MB - Location: Phone
+      </p>
+     </div>
+     <button class="delete-button">
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="Music Streaming App Icon" id="app-icon2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d3828e43-0447-4b56-832d-700bdcac9f77.png"/>
+     <div class="app-info">
+      <h4>
+       Music Streaming App
+      </h4>
+      <p>
+       Size: 200MB - Location: Phone
+      </p>
+     </div>
+     <button class="delete-button">
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="Fitness Tracker App Icon" id="app-icon3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b7f84b14-ff5e-4e33-bfe8-2fd486a01019.png"/>
+     <div class="app-info">
+      <h4>
+       Fitness Tracker
+      </h4>
+      <p>
+       Size: 75MB - Location: SD Card
+      </p>
+     </div>
+     <button class="delete-button">
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="Photo Editing App Icon" id="app-icon4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b4996f09-df23-41bf-a386-6fab2e39acab.png"/>
+     <div class="app-info">
+      <h4>
+       Photo Editing App
+      </h4>
+      <p>
+       Size: 150MB - Location: Phone
+      </p>
+     </div>
+     <button class="delete-button">
+      Delete
+     </button>
+    </li>
+   </ul>
+  </div>
+  <button class="fab">
+   🗑️
+  </button>
+  <div class="modal">
+   <div class="modal-content">
+    <p>
+     Are you sure you want to delete the selected apps?
+    </p>
+    <button class="cancel">
+     Cancel
+    </button>
+    <button class="delete">
+     Delete
+    </button>
+   </div>
+  </div>
+  <div class="snackbar">
+   App deleted.
+   <button class="undo">
+    Undo
+   </button>
+  </div>
+  <script>
+   document.querySelectorAll('.delete-button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.modal').style.display = 'flex';
+            });
+        });
+
+        document.querySelector('.modal .cancel').addEventListener('click', () => {
+            document.querySelector('.modal').style.display = 'none';
+        });
+
+        document.querySelector('.modal .delete').addEventListener('click', () => {
+            document.querySelector('.modal').style.display = 'none';
+            const snackbar = document.querySelector('.snackbar');
+            snackbar.className = "snackbar show";
+            setTimeout(() => { snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+        });
+
+        document.querySelector('.fab').addEventListener('click', () => {
+            document.querySelector('.modal').style.display = 'flex';
+        });
+
+        document.querySelector('.snackbar .undo').addEventListener('click', () => {
+            // Undo delete logic here
+        });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Upcoming Shows Calendar
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+        .calendar div {
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            position: relative;
+        }
+        .calendar .today {
+            background-color: #ffeb3b;
+        }
+        .calendar .event::before {
+            content: "•";
+            color: red;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        .toggle-view {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .toggle-view button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .toggle-view button.active {
+            background-color: #0056b3;
+        }
+        .show-list {
+            display: none;
+        }
+        .show-list.active {
+            display: block;
+        }
+        .show-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            position: relative;
+        }
+        .show-item h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .show-item .icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        .show-item .release-date {
+            color: #777;
+            font-size: 14px;
+        }
+        .show-item .more-info {
+            display: none;
+            margin-top: 10px;
+        }
+        .show-item .more-info.active {
+            display: block;
+        }
+        .show-item .toggle-more-info {
+            color: #007bff;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .notification-toggle, .sync-button {
+            display: block;
+            margin-top: 10px;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .filter-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .filter-options select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .thumbnail {
+            width: 50px;
+            height: 50px;
+            background-color: #ddd;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .rating, .review-button {
+            display: block;
+            margin-top: 10px;
+        }
+        .share-button {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .loading-spinner, .offline-indicator {
+            display: none;
+        }
+        .loading-spinner.active, .offline-indicator.active {
+            display: block;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search shows..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <div class="filter-options">
+    <select>
+     <option>
+      Genre
+     </option>
+     <option>
+      Action
+     </option>
+     <option>
+      Drama
+     </option>
+     <option>
+      Comedy
+     </option>
+    </select>
+    <select>
+     <option>
+      Release Date
+     </option>
+     <option>
+      Last 7 days
+     </option>
+     <option>
+      Last 30 days
+     </option>
+    </select>
+    <select>
+     <option>
+      Type
+     </option>
+     <option>
+      New Season
+     </option>
+     <option>
+      New Film
+     </option>
+    </select>
+   </div>
+   <div class="toggle-view">
+    <button class="active" id="calendar-view-btn">
+     Calendar View
+    </button>
+    <button id="list-view-btn">
+     List View
+    </button>
+   </div>
+   <div class="calendar" id="calendar-view">
+    <div class="today">
+     1
+    </div>
+    <div class="event">
+     2
+    </div>
+    <div>
+     3
+    </div>
+    <div>
+     4
+    </div>
+    <div>
+     5
+    </div>
+    <div>
+     6
+    </div>
+    <div>
+     7
+    </div>
+    <div>
+     8
+    </div>
+    <div>
+     9
+    </div>
+    <div>
+     10
+    </div>
+    <div>
+     11
+    </div>
+    <div>
+     12
+    </div>
+    <div>
+     13
+    </div>
+    <div>
+     14
+    </div>
+    <div>
+     15
+    </div>
+    <div>
+     16
+    </div>
+    <div>
+     17
+    </div>
+    <div>
+     18
+    </div>
+    <div>
+     19
+    </div>
+    <div>
+     20
+    </div>
+    <div>
+     21
+    </div>
+    <div>
+     22
+    </div>
+    <div>
+     23
+    </div>
+    <div>
+     24
+    </div>
+    <div>
+     25
+    </div>
+    <div>
+     26
+    </div>
+    <div>
+     27
+    </div>
+    <div>
+     28
+    </div>
+    <div>
+     29
+    </div>
+    <div>
+     30
+    </div>
+    <div>
+     31
+    </div>
+   </div>
+   <div class="show-list" id="list-view">
+    <div class="show-item">
+     <h3>
+      Fantasy World
+      <span class="icon">
+       <i class="fas fa-tv">
+       </i>
+      </span>
+     </h3>
+     <div class="release-date">
+      Release Date: Mar 1, 2023
+     </div>
+     <img alt="Fantasy World show poster" class="thumbnail" id="img1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/55361cf4-796c-4b35-80b5-bf57a9fcc440.png"/>
+     <div class="toggle-more-info">
+      More Info
+     </div>
+     <div class="more-info">
+      <p>
+       Episode 1: Mar 1, 2023
+      </p>
+      <p>
+       Episode 2: Mar 8, 2023
+      </p>
+     </div>
+     <input class="notification-toggle" type="checkbox"/>
+     Set Reminder
+     <button class="sync-button">
+      Sync with Calendar
+     </button>
+     <div class="rating">
+      ⭐⭐⭐⭐⭐
+     </div>
+     <button class="review-button">
+      Write a Review
+     </button>
+     <div class="share-button">
+      Share
+     </div>
+    </div>
+    <div class="show-item">
+     <h3>
+      Adventure Quest
+      <span class="icon">
+       <i class="fas fa-film">
+       </i>
+      </span>
+     </h3>
+     <div class="release-date">
+      Release Date: Mar 5, 2023
+     </div>
+     <img alt="Adventure Quest movie poster" class="thumbnail" id="img2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/1c993a9f-e424-4352-aa98-cfd4d5168a59.png"/>
+     <div class="toggle-more-info">
+      More Info
+     </div>
+     <div class="more-info">
+      <p>
+       Premiere: Mar 5, 2023
+      </p>
+     </div>
+     <input class="notification-toggle" type="checkbox"/>
+     Set Reminder
+     <button class="sync-button">
+      Sync with Calendar
+     </button>
+     <div class="rating">
+      ⭐⭐⭐⭐
+     </div>
+     <button class="review-button">
+      Write a Review
+     </button>
+     <div class="share-button">
+      Share
+     </div>
+    </div>
+    <div class="show-item">
+     <h3>
+      Comedy Nights
+      <span class="icon">
+       <i class="fas fa-tv">
+       </i>
+      </span>
+     </h3>
+     <div class="release-date">
+      Release Date: Mar 10, 2023
+     </div>
+     <img alt="Comedy Nights show poster" class="thumbnail" id="img3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e4fec4b7-2694-4423-8e7f-70b7754d7882.png"/>
+     <div class="toggle-more-info">
+      More Info
+     </div>
+     <div class="more-info">
+      <p>
+       Episode 1: Mar 10, 2023
+      </p>
+      <p>
+       Episode 2: Mar 17, 2023
+      </p>
+     </div>
+     <input class="notification-toggle" type="checkbox"/>
+     Set Reminder
+     <button class="sync-button">
+      Sync with Calendar
+     </button>
+     <div class="rating">
+      ⭐⭐⭐
+     </div>
+     <button class="review-button">
+      Write a Review
+     </button>
+     <div class="share-button">
+      Share
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   const calendarViewBtn = document.getElementById('calendar-view-btn');
+        const listViewBtn = document.getElementById('list-view-btn');
+        const calendarView = document.getElementById('calendar-view');
+        const listView = document.getElementById('list-view');
+
+        calendarViewBtn.addEventListener('click', () => {
+            calendarViewBtn.classList.add('active');
+            listViewBtn.classList.remove('active');
+            calendarView.style.display = 'grid';
+            listView.style.display = 'none';
+        });
+
+        listViewBtn.addEventListener('click', () => {
+            listViewBtn.classList.add('active');
+            calendarViewBtn.classList.remove('active');
+            calendarView.style.display = 'none';
+            listView.style.display = 'block';
+        });
+
+        document.querySelectorAll('.toggle-more-info').forEach(button => {
+            button.addEventListener('click', () => {
+                const moreInfo = button.nextElementSibling;
+                moreInfo.classList.toggle('active');
+            });
+        });
+  </script>
+ </body>
+</html>

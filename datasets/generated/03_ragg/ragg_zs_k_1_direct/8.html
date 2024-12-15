@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Language Learning App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f7f7f7;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .progress {
+            width: 50%;
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 5px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .sentence {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .words {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .word {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            flex: 1;
+            padding: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .button.skip {
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .button.check {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="progress-bar">
+    <div class="progress">
+    </div>
+   </div>
+   <h2>
+    Translate this sentence
+   </h2>
+   <div class="sentence">
+    Hello, good morning.
+   </div>
+   <div class="words">
+    <div class="word">
+     Hola
+    </div>
+    <div class="word">
+     buenos
+    </div>
+    <div class="word">
+     leen
+    </div>
+    <div class="word">
+     un
+    </div>
+    <div class="word">
+     comes
+    </div>
+    <div class="word">
+     nada
+    </div>
+    <div class="word">
+     días
+    </div>
+   </div>
+   <div class="buttons">
+    <button class="button skip">
+     SKIP
+    </button>
+    <button class="button check">
+     CHECK
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

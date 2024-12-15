@@ -1,0 +1,141 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Soups
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   .soup-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .soup-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        .soup-card-content {
+            flex: 1;
+        }
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+  </style>
+ </head>
+ <body>
+  <nav>
+   <div class="nav-wrapper">
+    <a class="brand-logo center" href="#!">
+     Soups
+    </a>
+   </div>
+  </nav>
+  <div class="container">
+   <div class="row">
+    <div class="input-field col s12">
+     <i class="material-icons prefix">
+      search
+     </i>
+     <input id="search" type="text"/>
+     <label for="search">
+      Search for soups...
+     </label>
+    </div>
+   </div>
+   <div class="row">
+    <div class="chips">
+     <div class="chip">
+      Vegetarian
+     </div>
+     <div class="chip">
+      Quick
+     </div>
+     <div class="chip">
+      Popular
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col s12">
+     <div class="card soup-card">
+      <img alt="Soup Thumbnail" src=""/>
+      <div class="soup-card-content">
+       <span class="card-title">
+        Tomato Soup
+       </span>
+       <p>
+        Tomatoes, Basil, Garlic
+       </p>
+       <p>
+        <i class="material-icons">
+         star
+        </i>
+        4.5 | 30 min
+       </p>
+      </div>
+     </div>
+     <div class="card soup-card">
+      <img alt="Soup Thumbnail" src=""/>
+      <div class="soup-card-content">
+       <span class="card-title">
+        Chicken Noodle Soup
+       </span>
+       <p>
+        Chicken, Noodles, Carrots
+       </p>
+       <p>
+        <i class="material-icons">
+         star
+        </i>
+        4.7 | 45 min
+       </p>
+      </div>
+     </div>
+     <!-- Add more soup cards as needed -->
+    </div>
+   </div>
+  </div>
+  <div class="footer-nav">
+   <nav>
+    <div class="nav-wrapper">
+     <ul class="center-align">
+      <li>
+       <a href="#!">
+        <i class="material-icons">
+         home
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="#!">
+        <i class="material-icons">
+         category
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="#!">
+        <i class="material-icons">
+         favorite
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

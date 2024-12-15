@@ -1,0 +1,134 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Alarm App
+  </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            padding: 20px;
+        }
+        .header {
+            padding: 10px 0;
+            text-align: center;
+        }
+        .audio-section, .alarm-section {
+            margin-top: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <!-- Header Section -->
+   <div class="header">
+    <h1>
+     Alarm App
+    </h1>
+   </div>
+   <!-- Audio Download Section -->
+   <div class="audio-section">
+    <h3>
+     Download Audios
+    </h3>
+    <div class="input-group mb-3">
+     <input class="form-control" placeholder="Search audio files" type="text"/>
+     <div class="input-group-append">
+      <button class="btn btn-primary" type="button">
+       Search
+      </button>
+     </div>
+    </div>
+    <ul class="list-group">
+     <li class="list-group-item d-flex justify-content-between align-items-center">
+      Audio 1
+      <button class="btn btn-primary">
+       Download
+      </button>
+     </li>
+     <li class="list-group-item d-flex justify-content-between align-items-center">
+      Audio 2
+      <button class="btn btn-primary">
+       Download
+      </button>
+     </li>
+     <!-- Add more audio items as needed -->
+    </ul>
+   </div>
+   <!-- Audio Playback Section -->
+   <div class="audio-section">
+    <h3>
+     Play Audios
+    </h3>
+    <ul class="list-group">
+     <li class="list-group-item d-flex justify-content-between align-items-center">
+      Downloaded Audio 1
+      <div>
+       <button class="btn btn-success">
+        Play
+       </button>
+       <button class="btn btn-danger">
+        Stop
+       </button>
+      </div>
+     </li>
+     <li class="list-group-item d-flex justify-content-between align-items-center">
+      Downloaded Audio 2
+      <div>
+       <button class="btn btn-success">
+        Play
+       </button>
+       <button class="btn btn-danger">
+        Stop
+       </button>
+      </div>
+     </li>
+     <!-- Add more downloaded audio items as needed -->
+    </ul>
+   </div>
+   <!-- Set Alarm Section -->
+   <div class="alarm-section">
+    <h3>
+     Set Alarm
+    </h3>
+    <form>
+     <div class="form-group">
+      <label for="alarmAudio">
+       Choose Alarm Audio
+      </label>
+      <ul class="list-group">
+       <li class="list-group-item">
+        <input name="alarmAudio" type="radio" value="audio1"/>
+        Downloaded Audio 1
+       </li>
+       <li class="list-group-item">
+        <input name="alarmAudio" type="radio" value="audio2"/>
+        Downloaded Audio 2
+       </li>
+       <!-- Add more radio buttons for downloaded audios as needed -->
+      </ul>
+     </div>
+     <div class="form-group">
+      <label for="alarmTime">
+       Set Alarm Time
+      </label>
+      <input class="form-control" id="alarmTime" type="time"/>
+     </div>
+     <button class="btn btn-warning" type="submit">
+      Set Alarm
+     </button>
+    </form>
+   </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

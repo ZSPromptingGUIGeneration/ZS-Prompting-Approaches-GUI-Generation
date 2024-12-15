@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #4A90E2;
+            color: white;
+        }
+        .header .back-button, .header .info-icon, .header .menu-icon {
+            cursor: pointer;
+        }
+        .header .title {
+            font-size: 20px;
+        }
+        .current-weather {
+            text-align: center;
+            padding: 20px;
+            background: #4A90E2;
+            color: white;
+        }
+        .current-weather .temp {
+            font-size: 50px;
+            margin: 10px 0;
+        }
+        .current-weather .map-thumbnail {
+            width: 100%;
+            height: 150px;
+            background: url('map-thumbnail.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .weekly-forecast {
+            padding: 20px;
+        }
+        .weekly-forecast h2 {
+            margin: 0 0 20px;
+        }
+        .day-forecast {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .day-forecast .date, .day-forecast .icon, .day-forecast .temp-range, .day-forecast .precipitation {
+            flex: 1;
+            text-align: center;
+        }
+        .graph-section {
+            padding: 20px;
+            background: #fff;
+        }
+        .graph-section h2 {
+            margin: 0 0 20px;
+        }
+        .graph {
+            width: 100%;
+            height: 200px;
+            background: url('graph-placeholder.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .hourly-forecast {
+            padding: 20px;
+        }
+        .hourly-forecast h2 {
+            margin: 0 0 20px;
+        }
+        .hourly-forecast .hour {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .hourly-forecast .hour .time, .hourly-forecast .hour .icon, .hourly-forecast .hour .temp {
+            flex: 1;
+            text-align: center;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="back-button">
+    ←
+   </div>
+   <div class="title">
+    San Francisco
+   </div>
+   <div class="info-icon">
+    i
+   </div>
+  </div>
+  <div class="current-weather">
+   <div class="location-time">
+    San Francisco, 2:00 PM
+   </div>
+   <div class="weather-icon">
+    ☀
+   </div>
+   <div class="temp">
+    +21Â°
+   </div>
+   <div class="map-thumbnail">
+   </div>
+  </div>
+  <div class="weekly-forecast">
+   <h2>
+    Forecast for the week
+   </h2>
+   <div class="day-forecast">
+    <div class="date">
+     Mon, 12
+    </div>
+    <div class="icon">
+     ☁
+    </div>
+    <div class="temp-range">
+     +15Â° / +7Â°
+    </div>
+    <div class="precipitation">
+     5mm
+    </div>
+   </div>
+   <div class="day-forecast">
+    <div class="date">
+     Tue, 13
+    </div>
+    <div class="icon">
+     ☂
+    </div>
+    <div class="temp-range">
+     +18Â° / +10Â°
+    </div>
+    <div class="precipitation">
+     2mm
+    </div>
+   </div>
+   <!-- Repeat for each day -->
+  </div>
+  <div class="graph-section">
+   <h2>
+    Temperature and Precipitation Graph
+   </h2>
+   <div class="graph">
+   </div>
+  </div>
+  <div class="hourly-forecast">
+   <h2>
+    Hourly Forecast
+   </h2>
+   <div class="hour">
+    <div class="time">
+     3 PM
+    </div>
+    <div class="icon">
+     ☀
+    </div>
+    <div class="temp">
+     +21Â°
+    </div>
+   </div>
+   <div class="hour">
+    <div class="time">
+     4 PM
+    </div>
+    <div class="icon">
+     ☁
+    </div>
+    <div class="temp">
+     +20Â°
+    </div>
+   </div>
+   <!-- Repeat for each hour -->
+  </div>
+ </body>
+</html>

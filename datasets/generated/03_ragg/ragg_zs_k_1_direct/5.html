@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Finder
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header .menu {
+            font-size: 24px;
+        }
+        .header .search {
+            display: flex;
+            align-items: center;
+        }
+        .header .search input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .header .search .veg-toggle {
+            margin-left: 10px;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+        .categories button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .categories button.active {
+            border-color: #ff9800;
+            color: #ff9800;
+        }
+        .recipe-card {
+            background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe-card .info {
+            padding: 10px;
+        }
+        .recipe-card .info .user {
+            display: flex;
+            align-items: center;
+        }
+        .recipe-card .info .user img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .recipe-card .info .user .name {
+            font-weight: bold;
+        }
+        .recipe-card .info .title {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .recipe-card .info .rating,
+        .recipe-card .info .likes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .recipe-card .info .rating .stars {
+            color: #ff9800;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            color: #888;
+        }
+        .footer .nav-item.active {
+            color: #ff9800;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu">
+    ☰
+   </div>
+   <div class="search">
+    <input placeholder="Search recipes..." type="text"/>
+    <div class="veg-toggle">
+     VEG
+     <input type="checkbox"/>
+    </div>
+   </div>
+   <div class="add">
+    +
+   </div>
+  </div>
+  <div class="categories">
+   <button class="active">
+    Maggi Recipes
+   </button>
+   <button>
+    Baisakhi Recipes
+   </button>
+   <button>
+    Indian Desserts
+   </button>
+   <button>
+    Step-by-step
+   </button>
+  </div>
+  <div class="recipe-card">
+   <img alt="Recipe Image" src=""/>
+   <div class="info">
+    <div class="user">
+     <img alt="User Image" src=""/>
+     <div class="name">
+      Shoba Bharathraj
+     </div>
+    </div>
+    <div class="title">
+     Yummy tummy
+    </div>
+    <div class="rating">
+     <div class="stars">
+      ★★★★☆
+     </div>
+     <div class="likes">
+      176 Likes
+     </div>
+    </div>
+    <div class="recipe-name">
+     Shahi aloo gobi
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <div class="nav-item active">
+    <div>
+     🏠
+    </div>
+    <div>
+     Feed
+    </div>
+   </div>
+   <div class="nav-item">
+    <div>
+     💾
+    </div>
+    <div>
+     Saved recipes
+    </div>
+   </div>
+   <div class="nav-item">
+    <div>
+     🍳
+    </div>
+    <div>
+     What's cooking
+    </div>
+   </div>
+   <div class="nav-item">
+    <div>
+     🎥
+    </div>
+    <div>
+     Videos &amp; more
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

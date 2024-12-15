@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Trip Booking App
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            border-radius: 25px;
+            padding-left: 40px;
+        }
+        .search-bar .input-group-text {
+            border: none;
+            background: transparent;
+            position: absolute;
+            left: 10px;
+            z-index: 10;
+        }
+        .date-picker {
+            margin-bottom: 20px;
+        }
+        .travel-party-info {
+            margin-bottom: 20px;
+        }
+        .search-button {
+            margin-bottom: 20px;
+        }
+        .filter-options {
+            margin-bottom: 20px;
+        }
+        .accommodation-listings .card {
+            margin-bottom: 10px;
+        }
+        .map-view {
+            margin-bottom: 20px;
+        }
+        .user-reviews {
+            margin-bottom: 20px;
+        }
+        .booking-button {
+            margin-bottom: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <!-- Search Bar -->
+   <div class="search-bar">
+    <div class="input-group">
+     <span class="input-group-text">
+      <i class="bi bi-search">
+      </i>
+     </span>
+     <input class="form-control" placeholder="Enter destination" type="text"/>
+    </div>
+   </div>
+   <!-- Date Picker -->
+   <div class="date-picker">
+    <div class="row">
+     <div class="col">
+      <div class="input-group">
+       <span class="input-group-text">
+        <i class="bi bi-calendar">
+        </i>
+       </span>
+       <input class="form-control" placeholder="Check-in" type="text"/>
+      </div>
+     </div>
+     <div class="col">
+      <div class="input-group">
+       <span class="input-group-text">
+        <i class="bi bi-calendar">
+        </i>
+       </span>
+       <input class="form-control" placeholder="Check-out" type="text"/>
+      </div>
+     </div>
+    </div>
+    <div class="form-check mt-2">
+     <input class="form-check-input" id="flexibleDates" type="checkbox" value=""/>
+     <label class="form-check-label" for="flexibleDates">
+      Flexible dates
+     </label>
+    </div>
+   </div>
+   <!-- Travel Party Information -->
+   <div class="travel-party-info">
+    <div class="row">
+     <div class="col">
+      <label for="adults">
+       Adults
+      </label>
+      <input class="form-control" id="adults" min="1" type="number" value="2"/>
+     </div>
+     <div class="col">
+      <label for="children">
+       Children
+      </label>
+      <input class="form-control" id="children" min="0" type="number" value="0"/>
+     </div>
+     <div class="col">
+      <label for="infants">
+       Infants
+      </label>
+      <input class="form-control" id="infants" min="0" type="number" value="0"/>
+     </div>
+    </div>
+    <div class="mt-2">
+     <label for="roomType">
+      Room Type
+     </label>
+     <select class="form-select" id="roomType">
+      <option value="single">
+       Single
+      </option>
+      <option value="double">
+       Double
+      </option>
+      <option value="suite">
+       Suite
+      </option>
+     </select>
+    </div>
+   </div>
+   <!-- Search Button -->
+   <div class="search-button">
+    <button class="btn btn-primary w-100">
+     Search
+    </button>
+   </div>
+   <!-- Filter Options -->
+   <div class="filter-options">
+    <h5>
+     Filter Options
+    </h5>
+    <div class="mb-2">
+     <label>
+      Accommodation Type
+     </label>
+     <div class="form-check">
+      <input class="form-check-input" id="hotel" type="checkbox" value=""/>
+      <label class="form-check-label" for="hotel">
+       Hotel
+      </label>
+     </div>
+     <div class="form-check">
+      <input class="form-check-input" id="apartment" type="checkbox" value=""/>
+      <label class="form-check-label" for="apartment">
+       Apartment
+      </label>
+     </div>
+    </div>
+    <div class="mb-2">
+     <label>
+      Price Range
+     </label>
+     <input class="form-range" max="500" min="0" step="10" type="range"/>
+    </div>
+    <div>
+     <label>
+      Amenities
+     </label>
+     <div class="form-check">
+      <input class="form-check-input" id="wifi" type="checkbox" value=""/>
+      <label class="form-check-label" for="wifi">
+       Wi-Fi
+      </label>
+     </div>
+     <div class="form-check">
+      <input class="form-check-input" id="breakfast" type="checkbox" value=""/>
+      <label class="form-check-label" for="breakfast">
+       Breakfast
+      </label>
+     </div>
+     <div class="form-check">
+      <input class="form-check-input" id="petFriendly" type="checkbox" value=""/>
+      <label class="form-check-label" for="petFriendly">
+       Pet-friendly
+      </label>
+     </div>
+    </div>
+   </div>
+   <!-- Search Results -->
+   <div class="accommodation-listings">
+    <h5>
+     Search Results
+    </h5>
+    <div class="card">
+     <img alt="..." class="card-img-top" src=""/>
+     <div class="card-body">
+      <h5 class="card-title">
+       Accommodation Name
+      </h5>
+      <p class="card-text">
+       $100 per night
+      </p>
+      <p class="card-text">
+       <small class="text-muted">
+        ★★★★☆
+       </small>
+      </p>
+      <p class="card-text">
+       Brief description of the accommodation.
+      </p>
+     </div>
+    </div>
+   </div>
+   <!-- Map View -->
+   <div class="map-view">
+    <button class="btn btn-secondary w-100">
+     Switch to Map View
+    </button>
+   </div>
+   <!-- User Reviews and Ratings -->
+   <div class="user-reviews">
+    <h5>
+     User Reviews
+    </h5>
+    <div class="card">
+     <div class="card-body">
+      <h5 class="card-title">
+       Accommodation Name
+      </h5>
+      <p class="card-text">
+       <small class="text-muted">
+        ★★★★☆
+       </small>
+      </p>
+      <p class="card-text">
+       Review excerpt...
+      </p>
+      <a class="btn btn-link" href="#">
+       Read reviews
+      </a>
+     </div>
+    </div>
+   </div>
+   <!-- Booking Button -->
+   <div class="booking-button">
+    <button class="btn btn-success w-100">
+     Book Now
+    </button>
+   </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+ </body>
+</html>

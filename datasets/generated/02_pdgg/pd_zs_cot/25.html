@@ -1,0 +1,180 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Healthy Recipes Search
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            padding: 10px;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search-bar {
+            width: 90%;
+            padding: 10px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+        }
+        .search-bar .material-icons {
+            color: #aaa;
+        }
+        .category-filters {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .category-filters .chip {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #e0e0e0;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .recipe-list {
+            padding: 10px;
+        }
+        .recipe-card {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe-card .content {
+            padding: 10px;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ccc;
+        }
+        .bottom-nav .nav-item {
+            text-align: center;
+        }
+        .bottom-nav .nav-item .material-icons {
+            display: block;
+            margin: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="search-bar">
+    <span class="material-icons">
+     search
+    </span>
+    <input placeholder="Search for recipes..." type="text"/>
+   </div>
+  </div>
+  <div class="category-filters">
+   <div class="chip">
+    Breakfast
+   </div>
+   <div class="chip">
+    Lunch
+   </div>
+   <div class="chip">
+    Dinner
+   </div>
+   <div class="chip">
+    Snacks
+   </div>
+   <div class="chip">
+    Desserts
+   </div>
+  </div>
+  <div class="recipe-list">
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="content">
+     <h3>
+      Recipe Name
+     </h3>
+     <p>
+      Brief description of the recipe.
+     </p>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="content">
+     <h3>
+      Recipe Name
+     </h3>
+     <p>
+      Brief description of the recipe.
+     </p>
+    </div>
+   </div>
+   <!-- Add more recipe cards as needed -->
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item">
+    <span class="material-icons">
+     home
+    </span>
+    <span>
+     Home
+    </span>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     category
+    </span>
+    <span>
+     Categories
+    </span>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     favorite
+    </span>
+    <span>
+     Favorites
+    </span>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     person
+    </span>
+    <span>
+     Profile
+    </span>
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->

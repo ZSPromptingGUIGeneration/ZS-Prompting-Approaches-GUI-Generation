@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restaurant Menu
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-item img {
+            border-radius: 8px;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .menu-item-info {
+            flex: 1;
+            margin-left: 15px;
+        }
+        .menu-item-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .menu-item-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .menu-item-actions {
+            text-align: right;
+        }
+        .menu-item-actions button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-item-actions button:hover {
+            background-color: #e5533d;
+        }
+        .footer {
+            background-color: #ff6347;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Restaurant Menu
+   </h1>
+  </header>
+  <div class="container">
+   <div class="menu-item">
+    <img alt="Grilled Chicken Salad" id="img1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/305c9e34-fe3d-444b-8017-f7533e5412b2.png"/>
+    <div class="menu-item-info">
+     <h3>
+      Grilled Chicken Salad
+     </h3>
+     <p>
+      Fresh lettuce, grilled chicken breast, tomatoes, cucumbers, and a light vinaigrette.
+     </p>
+    </div>
+    <div class="menu-item-actions">
+     <button>
+      Save
+     </button>
+    </div>
+   </div>
+   <div class="menu-item">
+    <img alt="Margherita Pizza" id="img2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0be2ffc1-55cb-4a6a-a0e2-8321a0f6eaef.png"/>
+    <div class="menu-item-info">
+     <h3>
+      Margherita Pizza
+     </h3>
+     <p>
+      Classic pizza with fresh tomatoes, mozzarella cheese, and basil.
+     </p>
+    </div>
+    <div class="menu-item-actions">
+     <button>
+      Save
+     </button>
+    </div>
+   </div>
+   <div class="menu-item">
+    <img alt="Spaghetti Carbonara" id="img3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b4d6ecf4-150a-4bb5-a616-f9324a9d1a4b.png"/>
+    <div class="menu-item-info">
+     <h3>
+      Spaghetti Carbonara
+     </h3>
+     <p>
+      Spaghetti pasta with creamy sauce, pancetta, and Parmesan cheese.
+     </p>
+    </div>
+    <div class="menu-item-actions">
+     <button>
+      Save
+     </button>
+    </div>
+   </div>
+   <div class="menu-item">
+    <img alt="Cheeseburger" id="img4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c547f851-f970-4fa0-9bd3-ef9f323b2f9e.png"/>
+    <div class="menu-item-info">
+     <h3>
+      Cheeseburger
+     </h3>
+     <p>
+      Juicy beef patty, cheddar cheese, lettuce, tomato, and pickles on a toasted bun.
+     </p>
+    </div>
+    <div class="menu-item-actions">
+     <button>
+      Save
+     </button>
+    </div>
+   </div>
+   <div class="menu-item">
+    <img alt="Chocolate Cake" id="img5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/43eb8a6a-e277-4eae-b84c-de4c41a33b7f.png"/>
+    <div class="menu-item-info">
+     <h3>
+      Chocolate Cake
+     </h3>
+     <p>
+      Rich and moist chocolate cake with a creamy chocolate frosting.
+     </p>
+    </div>
+    <div class="menu-item-actions">
+     <button>
+      Save
+     </button>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <a href="#">
+    Order History
+   </a>
+   <a href="#">
+    Location
+   </a>
+   <a href="#">
+    Order Type
+   </a>
+  </div>
+ </body>
+</html>

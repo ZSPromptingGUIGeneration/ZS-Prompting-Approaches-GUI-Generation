@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports News
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .top-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        .top-nav .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .top-nav .icons {
+            display: flex;
+            align-items: center;
+        }
+        .top-nav .icons > * {
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .search-bar {
+            padding: 10px 20px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .category-tabs {
+            display: flex;
+            overflow-x: auto;
+            background-color: #fff;
+            padding: 10px 20px;
+        }
+        .category-tabs button {
+            background-color: #eee;
+            border: none;
+            padding: 10px 15px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .category-tabs button.active {
+            background-color: #ddd;
+            font-weight: bold;
+        }
+        .content-feed {
+            padding: 20px;
+        }
+        .content-card {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .content-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .content-card h3 {
+            margin: 10px 0;
+        }
+        .content-card .source {
+            color: #888;
+            font-size: 14px;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .bottom-nav .nav-item {
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-nav">
+   <div class="logo">
+    Sports News
+   </div>
+   <div class="icons">
+    <div class="menu-icon">
+     ☰
+    </div>
+    <div class="search-icon">
+     🔍
+    </div>
+    <div class="profile-icon">
+     👤
+    </div>
+    <div class="more-icon">
+     ⋮
+    </div>
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search articles..." type="text"/>
+  </div>
+  <div class="category-tabs">
+   <button class="active">
+    All
+   </button>
+   <button>
+    Football
+   </button>
+   <button>
+    Basketball
+   </button>
+   <button>
+    Tennis
+   </button>
+   <button>
+    Cricket
+   </button>
+  </div>
+  <div class="content-feed">
+   <div class="content-card">
+    <img alt="Article Image" src=""/>
+    <h3>
+     Main News Article Headline
+    </h3>
+    <div class="source">
+     Source: Sports Daily | 2 hours ago
+    </div>
+   </div>
+   <div class="content-card">
+    <img alt="Article Image" src=""/>
+    <h3>
+     Secondary News Article Headline
+    </h3>
+    <div class="source">
+     Source: Sports Weekly | 5 hours ago
+    </div>
+   </div>
+   <div class="content-card">
+    <img alt="Article Image" src=""/>
+    <h3>
+     Another News Article Headline
+    </h3>
+    <div class="source">
+     Source: Sports Monthly | 1 day ago
+    </div>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item">
+    🏠 Home
+   </div>
+   <div class="nav-item">
+    🔄 Refresh
+   </div>
+   <div class="nav-item">
+    🔔 Notifications
+   </div>
+   <div class="nav-item">
+    👤 Profile
+   </div>
+  </div>
+ </body>
+</html>

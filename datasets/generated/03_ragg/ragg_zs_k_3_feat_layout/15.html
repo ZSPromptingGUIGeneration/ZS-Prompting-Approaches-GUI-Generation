@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .icons {
+            display: flex;
+            gap: 15px;
+        }
+        .header .icons i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            border-bottom: 2px solid #ccc;
+        }
+        .tabs div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tabs .active {
+            border-bottom: 2px solid green;
+            color: green;
+        }
+        .content {
+            padding: 20px;
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .top-section .card {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            margin-right: 10px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .top-section .card:last-child {
+            margin-right: 0;
+        }
+        .top-section .card i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .recipe-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe-card .details {
+            padding: 10px;
+        }
+        .recipe-card .details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .recipe-card .details .info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .recipe-card .details .info div {
+            font-size: 14px;
+            color: #666;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+        .bottom-nav div {
+            text-align: center;
+            cursor: pointer;
+        }
+        .bottom-nav div.active {
+            color: green;
+        }
+        .bottom-nav i {
+            font-size: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <i class="hamburger-menu">
+    ☰
+   </i>
+   <div class="title">
+    Recipes
+   </div>
+   <div class="icons">
+    <i class="search">
+     🔍
+    </i>
+    <i class="filter">
+     ⚲
+    </i>
+   </div>
+  </div>
+  <div class="tabs">
+   <div class="active">
+    Home
+   </div>
+   <div>
+    Favourites
+   </div>
+   <div>
+    Featured
+   </div>
+  </div>
+  <div class="content">
+   <div class="top-section">
+    <div class="card">
+     <i class="chef-hat">
+      👨‍🍳
+     </i>
+     <h3>
+      Browse Recipes
+     </h3>
+    </div>
+    <div class="card">
+     <i class="fork-knife">
+      🍴
+     </i>
+     <h3>
+      30 Minute Meal Ideas
+     </h3>
+    </div>
+   </div>
+   <div class="recipe-grid">
+    <div class="recipe-card">
+     <img alt="Recipe 1" src=""/>
+     <div class="details">
+      <h3>
+       Recipe 1
+      </h3>
+      <div class="info">
+       <div>
+        20 mins
+       </div>
+       <div>
+        4 servings
+       </div>
+       <div>
+        300 cal
+       </div>
+       <div>
+        $5/serving
+       </div>
+       <div>
+        ❤️ 150
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="recipe-card">
+     <img alt="Recipe 2" src=""/>
+     <div class="details">
+      <h3>
+       Recipe 2
+      </h3>
+      <div class="info">
+       <div>
+        30 mins
+       </div>
+       <div>
+        2 servings
+       </div>
+       <div>
+        500 cal
+       </div>
+       <div>
+        $7/serving
+       </div>
+       <div>
+        ❤️ 200
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Add more recipe cards as needed -->
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <div class="active">
+    <i>
+     🏠
+    </i>
+    <div>
+     Home
+    </div>
+   </div>
+   <div>
+    <i>
+     🛒
+    </i>
+    <div>
+     Shop
+    </div>
+   </div>
+   <div>
+    <i>
+     ❤️
+    </i>
+    <div>
+     Favourites
+    </div>
+   </div>
+   <div>
+    <i>
+     👤
+    </i>
+    <div>
+     My Account
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,137 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Storage App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .container {
+            padding: 1em;
+        }
+
+        .app-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .app-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 1em;
+            margin-bottom: 0.5em;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-item button {
+            background-color: #ff4f4f;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .app-item button:hover {
+            background-color: #ff0000;
+        }
+
+        .app-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 1em;
+        }
+
+        .app-item span {
+            flex-grow: 1;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Manage Installed Apps
+   </h1>
+  </header>
+  <div class="container">
+   <ul class="app-list">
+    <li class="app-item">
+     <img alt="Weather app icon" id="app-icon-1" src="placeholder.jpg"/>
+     <span>
+      Weather Forecast
+     </span>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="Music player app icon" id="app-icon-2" src="placeholder.jpg"/>
+     <span>
+      Music Player
+     </span>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="Puzzle game app icon" id="app-icon-3" src="placeholder.jpg"/>
+     <span>
+      Puzzle Game
+     </span>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="Social media app icon" id="app-icon-4" src="placeholder.jpg"/>
+     <span>
+      Social Hub
+     </span>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="Fitness tracker app icon" id="app-icon-5" src="placeholder.jpg"/>
+     <span>
+      Fitness Tracker
+     </span>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="News reader app icon" id="app-icon-6" src="placeholder.jpg"/>
+     <span>
+      Daily News
+     </span>
+     <button>
+      Delete
+     </button>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>
+<!-- End -->

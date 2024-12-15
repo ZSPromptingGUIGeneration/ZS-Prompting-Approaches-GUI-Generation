@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0f7fa;
+            color: #00796b;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .current-temp {
+            font-size: 64px;
+            font-weight: 700;
+        }
+        .location {
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: -10px;
+        }
+        .toggle {
+            margin-top: 10px;
+        }
+        .weather-details {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .weather-details div {
+            margin: 0 10px;
+            text-align: center;
+        }
+        .weekly-forecast {
+            margin-top: 30px;
+            display: flex;
+            overflow-x: scroll;
+        }
+        .day-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 0 10px;
+            min-width: 100px;
+            text-align: center;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background: #00796b;
+            padding: 10px 0;
+        }
+        .bottom-nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .icon {
+            font-size: 24px;
+        }
+        .refresh-btn, .settings-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            color: #00796b;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .settings-btn {
+            right: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="current-temp">
+    25°C
+   </div>
+   <div class="location">
+    New York, NY
+   </div>
+   <div class="toggle">
+    <label>
+     <input checked="" name="unit" type="radio"/>
+     °C
+    </label>
+    <label>
+     <input name="unit" type="radio"/>
+     °F
+    </label>
+   </div>
+   <div class="weather-details">
+    <div>
+     <span class="icon">
+      <i class="fas fa-sun">
+      </i>
+     </span>
+     <div>
+      Sunny
+     </div>
+    </div>
+    <div>
+     <span class="icon">
+      <i class="fas fa-tint">
+      </i>
+     </span>
+     <div>
+      60%
+     </div>
+    </div>
+    <div>
+     <span class="icon">
+      <i class="fas fa-wind">
+      </i>
+     </span>
+     <div>
+      15 km/h NW
+     </div>
+    </div>
+    <div>
+     <div>
+      Feels like 27°C
+     </div>
+    </div>
+   </div>
+   <div class="weekly-forecast">
+    <div class="day-card">
+     <div>
+      Mon
+     </div>
+     <div>
+      12/10
+     </div>
+     <div>
+      <i class="fas fa-sun">
+      </i>
+     </div>
+     <div>
+      20°C / 10°C
+     </div>
+     <div>
+      <i class="fas fa-tint">
+      </i>
+      10%
+     </div>
+    </div>
+    <div class="day-card">
+     <div>
+      Tue
+     </div>
+     <div>
+      13/10
+     </div>
+     <div>
+      <i class="fas fa-cloud-showers-heavy">
+      </i>
+     </div>
+     <div>
+      18°C / 12°C
+     </div>
+     <div>
+      <i class="fas fa-tint">
+      </i>
+      70%
+     </div>
+    </div>
+    <div class="day-card">
+     <div>
+      Wed
+     </div>
+     <div>
+      14/10
+     </div>
+     <div>
+      <i class="fas fa-cloud-sun">
+      </i>
+     </div>
+     <div>
+      22°C / 14°C
+     </div>
+     <div>
+      <i class="fas fa-tint">
+      </i>
+      30%
+     </div>
+    </div>
+    <div class="day-card">
+     <div>
+      Thu
+     </div>
+     <div>
+      15/10
+     </div>
+     <div>
+      <i class="fas fa-cloud">
+      </i>
+     </div>
+     <div>
+      19°C / 11°C
+     </div>
+     <div>
+      <i class="fas fa-tint">
+      </i>
+      20%
+     </div>
+    </div>
+    <div class="day-card">
+     <div>
+      Fri
+     </div>
+     <div>
+      16/10
+     </div>
+     <div>
+      <i class="fas fa-cloud-rain">
+      </i>
+     </div>
+     <div>
+      17°C / 9°C
+     </div>
+     <div>
+      <i class="fas fa-tint">
+      </i>
+      50%
+     </div>
+    </div>
+    <div class="day-card">
+     <div>
+      Sat
+     </div>
+     <div>
+      17/10
+     </div>
+     <div>
+      <i class="fas fa-bolt">
+      </i>
+     </div>
+     <div>
+      21°C / 13°C
+     </div>
+     <div>
+      <i class="fas fa-tint">
+      </i>
+      40%
+     </div>
+    </div>
+    <div class="day-card">
+     <div>
+      Sun
+     </div>
+     <div>
+      18/10
+     </div>
+     <div>
+      <i class="fas fa-sun">
+      </i>
+     </div>
+     <div>
+      23°C / 15°C
+     </div>
+     <div>
+      <i class="fas fa-tint">
+      </i>
+      10%
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <a href="#">
+    <i class="fas fa-home">
+    </i>
+    Home
+   </a>
+   <a href="#">
+    <i class="fas fa-map-marker-alt">
+    </i>
+    Locations
+   </a>
+   <a href="#">
+    <i class="fas fa-cog">
+    </i>
+    Settings
+   </a>
+  </div>
+  <div class="refresh-btn">
+   <i class="fas fa-sync-alt">
+   </i>
+  </div>
+  <div class="settings-btn">
+   <i class="fas fa-cog">
+   </i>
+  </div>
+ </body>
+</html>

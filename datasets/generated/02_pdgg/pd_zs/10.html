@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Map App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .app-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+        }
+        .app-bar .material-icons {
+            cursor: pointer;
+        }
+        .settings-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 1000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .settings-menu.active {
+            display: block;
+        }
+        .settings-menu h2 {
+            margin-top: 0;
+        }
+        .settings-section {
+            margin-bottom: 20px;
+        }
+        .settings-section h3 {
+            margin-bottom: 10px;
+        }
+        .settings-section .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .settings-section .item .label {
+            display: flex;
+            align-items: center;
+        }
+        .settings-section .item .label i {
+            margin-right: 10px;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+        .snackbar.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+  </style>
+ </head>
+ <body>
+  <div class="app-bar">
+   <span>
+    Map App
+   </span>
+   <i class="material-icons" id="settings-icon">
+    settings
+   </i>
+  </div>
+  <div class="settings-menu" id="settings-menu">
+   <h2>
+    Settings
+   </h2>
+   <div class="settings-section">
+    <h3>
+     Natural Occurrences or Disaster Alerts
+    </h3>
+    <div class="item">
+     <div class="label">
+      <i class="material-icons">
+       waves
+      </i>
+      <span>
+       Floods
+      </span>
+     </div>
+     <input id="floods-toggle" type="checkbox"/>
+    </div>
+    <div class="item">
+     <div class="label">
+      <i class="material-icons">
+       whatshot
+      </i>
+      <span>
+       Wildfires
+      </span>
+     </div>
+     <input id="wildfires-toggle" type="checkbox"/>
+    </div>
+    <div class="item">
+     <div class="label">
+      <i class="material-icons">
+       earthquake
+      </i>
+      <span>
+       Earthquakes
+      </span>
+     </div>
+     <input id="earthquakes-toggle" type="checkbox"/>
+    </div>
+    <div class="item">
+     <div class="label">
+      <i class="material-icons">
+       hurricane
+      </i>
+      <span>
+       Hurricanes
+      </span>
+     </div>
+     <input id="hurricanes-toggle" type="checkbox"/>
+    </div>
+   </div>
+   <button class="fab" id="save-button">
+    save
+   </button>
+  </div>
+  <div id="snackbar">
+   Settings updated successfully
+  </div>
+  <script>
+   document.getElementById('settings-icon').addEventListener('click', function() {
+            document.getElementById('settings-menu').classList.toggle('active');
+        });
+
+        document.getElementById('save-button').addEventListener('click', function() {
+            document.getElementById('settings-menu').classList.remove('active');
+            var snackbar = document.getElementById('snackbar');
+            snackbar.className = 'snackbar show';
+            setTimeout(function() {
+                snackbar.className = snackbar.className.replace('show', '');
+            }, 3000);
+        });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,52 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Translation App
+   </h1>
+  </header>
+  <main>
+   <section class="phrase-list">
+    <div class="phrase-item">
+     <p class="english">
+      Hello
+     </p>
+     <p class="italian">
+      Ciao
+     </p>
+     <button class="audio-button" onclick="playAudio('ciao.mp3')">
+      🔊
+     </button>
+    </div>
+    <div class="phrase-item">
+     <p class="english">
+      Thank you
+     </p>
+     <p class="italian">
+      Grazie
+     </p>
+     <button class="audio-button" onclick="playAudio('grazie.mp3')">
+      🔊
+     </button>
+    </div>
+    <!-- Add more phrases as needed -->
+   </section>
+  </main>
+  <script>
+   function playAudio(src) {
+            const audio = new Audio(src);
+            audio.play();
+        }
+  </script>
+ </body>
+</html>

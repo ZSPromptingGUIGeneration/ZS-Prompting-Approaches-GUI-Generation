@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Public Transport App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+        }
+        .header .back-button {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .header .title {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .route-info {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+        }
+        .route-options {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-bottom: 1px solid #ddd;
+        }
+        .route-option {
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .search-inputs {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .search-input {
+            flex: 1;
+            margin-right: 5px;
+            position: relative;
+        }
+        .search-input input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .search-input .clear-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .filter-options {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+        }
+        .map-section {
+            height: 300px;
+            background-color: #e9ecef;
+            position: relative;
+        }
+        .map-section .zoom-btn {
+            position: absolute;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .map-section .zoom-in {
+            top: 10px;
+        }
+        .map-section .zoom-out {
+            top: 50px;
+        }
+        .realtime-results {
+            padding: 10px;
+        }
+        .realtime-results .result-card {
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .footer {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+        .bottom-nav .nav-item {
+            text-align: center;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="back-button">
+    ←
+   </div>
+   <div class="title">
+    Route Results
+   </div>
+   <div class="favorites">
+    ★
+   </div>
+  </div>
+  <div class="route-info">
+   Surrey Quays to Southfields
+  </div>
+  <div class="route-options">
+   <div class="route-option">
+    Fast Route
+   </div>
+   <div class="route-option">
+    Simple Route
+   </div>
+  </div>
+  <div class="search-inputs">
+   <div class="search-input">
+    <input placeholder="Starting Point" type="text"/>
+    <div class="clear-btn">
+     ×
+    </div>
+   </div>
+   <div class="search-input">
+    <input placeholder="Destination" type="text"/>
+    <div class="clear-btn">
+     ×
+    </div>
+   </div>
+  </div>
+  <div class="filter-options">
+   <div>
+    Dep now
+   </div>
+   <div>
+    Go →
+   </div>
+  </div>
+  <div class="map-section">
+   <div class="zoom-btn zoom-in">
+    +
+   </div>
+   <div class="zoom-btn zoom-out">
+    -
+   </div>
+  </div>
+  <div class="realtime-results">
+   <div class="result-card">
+    Route 1: 10:00 AM - 10:30 AM
+   </div>
+   <div class="result-card">
+    Route 2: 10:15 AM - 10:45 AM
+   </div>
+  </div>
+  <div class="footer">
+   Note: Real-time results may vary due to traffic conditions.
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item">
+    Bus Stops
+   </div>
+   <div class="nav-item">
+    Map
+   </div>
+   <div class="nav-item">
+    Timetable
+   </div>
+   <div class="nav-item">
+    Notice
+   </div>
+   <div class="nav-item">
+    Remark
+   </div>
+  </div>
+ </body>
+</html>

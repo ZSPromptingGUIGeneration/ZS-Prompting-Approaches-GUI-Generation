@@ -1,0 +1,122 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Picture Submission Form
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        textarea,
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .terms input {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Submit Your Picture
+   </h1>
+   <form id="pictureForm">
+    <label for="email">
+     Email:
+    </label>
+    <input id="email" name="email" required="" type="email"/>
+    <label for="title">
+     Title:
+    </label>
+    <input id="title" name="title" required="" type="text"/>
+    <label for="description">
+     Description:
+    </label>
+    <textarea id="description" name="description"></textarea>
+    <label for="location">
+     Location:
+    </label>
+    <input id="location" name="location" required="" type="text"/>
+    <label for="picture">
+     Upload Picture:
+    </label>
+    <input accept="image/*" id="picture" name="picture" required="" type="file"/>
+    <div class="terms">
+     <input id="terms" name="terms" required="" type="checkbox"/>
+     <label for="terms">
+      I agree to the terms of submission
+     </label>
+    </div>
+    <button type="submit">
+     Submit
+    </button>
+   </form>
+  </div>
+ </body>
+</html>
+<!-- End -->

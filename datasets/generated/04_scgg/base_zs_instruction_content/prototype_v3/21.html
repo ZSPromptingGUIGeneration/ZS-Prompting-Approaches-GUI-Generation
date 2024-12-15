@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bag Info
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 16px;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .breadcrumb a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .product-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .product-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .product-rating .stars {
+            color: #FFD700;
+            font-size: 16px;
+        }
+        .product-rating span {
+            margin-left: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+        .product-price {
+            font-size: 22px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        .product-sku {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .variants {
+            margin-bottom: 20px;
+        }
+        .variants select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .product-description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .product-description h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .product-description p {
+            margin-bottom: 10px;
+        }
+        .product-description ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .specifications, .reviews, .stock-info, .shipping-info, .return-policy, .customer-qa, .product-comparison, .product-video, .size-guide, .availability-notification {
+            margin-bottom: 20px;
+        }
+        .specifications h3, .reviews h3, .stock-info h3, .shipping-info h3, .return-policy h3, .customer-qa h3, .product-comparison h3, .product-video h3, .size-guide h3, .availability-notification h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .specifications ul, .reviews .review, .stock-info p, .shipping-info p, .return-policy p, .customer-qa .qa, .product-comparison p, .product-video p, .size-guide p, .availability-notification p {
+            font-size: 16px;
+            color: #555;
+        }
+        .reviews .review {
+            margin-bottom: 10px;
+        }
+        .reviews .review span {
+            display: block;
+        }
+        .reviews .review span.name {
+            font-weight: bold;
+        }
+        .reviews .review span.rating {
+            color: #e74c3c;
+        }
+        .related-products {
+            margin-bottom: 20px;
+        }
+        .related-products h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .related-products .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .related-products .product img {
+            max-width: 50px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .related-products .product p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .image-carousel {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-carousel img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .image-carousel .thumbnails {
+            display: flex;
+            justify-content: center;
+        }
+        .image-carousel .thumbnails img {
+            max-width: 50px;
+            border-radius: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .add-to-cart-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+        }
+        .quantity-selector input {
+            width: 50px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .add-to-cart-btn {
+            flex-grow: 1;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #2980b9;
+        }
+        .wishlist-btn {
+            margin-left: 10px;
+        }
+        .wishlist-btn button {
+            padding: 10px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .wishlist-btn button:hover {
+            background-color: #e67e22;
+        }
+        .social-sharing {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .social-sharing button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .social-sharing button img {
+            max-width: 30px;
+        }
+        .product-comparison {
+            margin-bottom: 20px;
+        }
+        .product-comparison p {
+            font-size: 16px;
+            color: #555;
+        }
+        .product-video {
+            margin-bottom: 20px;
+        }
+        .product-video iframe {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .size-guide {
+            margin-bottom: 20px;
+        }
+        .size-guide p {
+            font-size: 16px;
+            color: #555;
+        }
+        .availability-notification {
+            margin-bottom: 20px;
+        }
+        .availability-notification p {
+            font-size: 16px;
+            color: #555;
+        }
+        .availability-notification input[type="email"] {
+            width: calc(100% - 120px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .availability-notification button {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .availability-notification button:hover {
+            background-color: #2980b9;
+        }
+        .customer-support {
+            margin-bottom: 20px;
+        }
+        .customer-support button {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .customer-support button:hover {
+            background-color: #2980b9;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="breadcrumb">
+    <a href="#">
+     Home
+    </a>
+    &gt;
+    <a href="#">
+     Bags
+    </a>
+    &gt;
+    <span>
+     Stylish Leather Bag
+    </span>
+   </div>
+   <div class="image-container">
+    <img alt="Stylish leather bag front view" id="bag-image-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/114ed559-3069-4d85-ae93-6b6052992c24.png"/>
+   </div>
+   <div class="product-title">
+    Stylish Leather Bag
+   </div>
+   <div class="product-rating">
+    <div class="stars">
+     ★★★★☆
+    </div>
+    <span>
+     (4.5/5)
+    </span>
+   </div>
+   <div class="product-price">
+    $120.00
+   </div>
+   <div class="product-sku">
+    SKU: 123456789
+   </div>
+   <div class="variants">
+    <select>
+     <option>
+      Select Color
+     </option>
+     <option>
+      Black
+     </option>
+     <option>
+      Brown
+     </option>
+     <option>
+      Tan
+     </option>
+    </select>
+    <select>
+     <option>
+      Select Size
+     </option>
+     <option>
+      Small
+     </option>
+     <option>
+      Medium
+     </option>
+     <option>
+      Large
+     </option>
+    </select>
+   </div>
+   <div class="product-description">
+    <h3>
+     Product Description
+    </h3>
+    <p>
+     This stylish leather bag is perfect for any occasion. Made from high-quality leather, it features multiple compartments to keep your belongings organized.
+    </p>
+    <p>
+     Whether you're heading to work or going out for the evening, this bag is a versatile addition to your wardrobe.
+    </p>
+   </div>
+   <div class="specifications">
+    <h3>
+     Specifications
+    </h3>
+    <ul>
+     <li>
+      Dimensions: 30cm x 20cm x 10cm
+     </li>
+     <li>
+      Material: Genuine Leather
+     </li>
+     <li>
+      Weight: 1.2kg
+     </li>
+     <li>
+      Compartments: 3
+     </li>
+    </ul>
+   </div>
+   <div class="stock-info">
+    <h3>
+     Stock Availability
+    </h3>
+    <p>
+     In Stock
+    </p>
+   </div>
+   <div class="shipping-info">
+    <h3>
+     Shipping Information
+    </h3>
+    <p>
+     Estimated Delivery: 3-5 business days
+    </p>
+    <p>
+     Shipping Cost: $10.00
+    </p>
+   </div>
+   <div class="return-policy">
+    <h3>
+     Return Policy
+    </h3>
+    <p>
+     Returns accepted within 30 days of purchase.
+    </p>
+   </div>
+   <div class="customer-qa">
+    <h3>
+     Customer Questions &amp; Answers
+    </h3>
+    <div class="qa">
+     <p>
+      <strong>
+       Q: Is the bag waterproof?
+      </strong>
+     </p>
+     <p>
+      A: No, the bag is not waterproof.
+     </p>
+    </div>
+    <div class="qa">
+     <p>
+      <strong>
+       Q: Does it come with a shoulder strap?
+      </strong>
+     </p>
+     <p>
+      A: Yes, it comes with a detachable shoulder strap.
+     </p>
+    </div>
+   </div>
+   <div class="reviews">
+    <h3>
+     Customer Reviews
+    </h3>
+    <div class="review">
+     <span class="name">
+      John Doe:
+     </span>
+     <span class="rating">
+      ★★★★★
+     </span>
+     <p>
+      Great quality bag! Very satisfied with my purchase.
+     </p>
+    </div>
+    <div class="review">
+     <span class="name">
+      Jane Smith:
+     </span>
+     <span class="rating">
+      ★★★★☆
+     </span>
+     <p>
+      Love the design, but it could be a bit bigger.
+     </p>
+    </div>
+    <div class="review">
+     <span class="name">
+      Alice Johnson:
+     </span>
+     <span class="rating">
+      ★★★★★
+     </span>
+     <p>
+      Perfect size and very stylish. Highly recommend!
+     </p>
+    </div>
+   </div>
+   <div class="related-products">
+    <h3>
+     Related Products
+    </h3>
+    <div class="product">
+     <img alt="Classic leather wallet" id="related-product-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/aeb1cd63-19f8-4aa4-9a84-2b3c34bb0a99.png"/>
+     <p>
+      Classic Leather Wallet - $50.00
+     </p>
+    </div>
+    <div class="product">
+     <img alt="Leather belt" id="related-product-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c6f8ad27-bad8-4928-9960-8ce311008428.png"/>
+     <p>
+      Leather Belt - $30.00
+     </p>
+    </div>
+    <div class="product">
+     <img alt="Leather keychain" id="related-product-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ff0e72c5-d81a-4736-92fd-8ac3c007835d.png"/>
+     <p>
+      Leather Keychain - $15.00
+     </p>
+    </div>
+   </div>
+   <div class="image-carousel">
+    <img alt="Stylish leather bag side view" id="carousel-image-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/aa4ff574-893f-439c-b50b-55a2be2e8ac6.png"/>
+    <img alt="Stylish leather bag top view" id="carousel-image-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5eee2fcd-7af9-445f-9cd5-594ee1535210.png"/>
+    <img alt="Stylish leather bag inside view" id="carousel-image-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2430f114-4f2c-4a65-97c7-41ea146d0739.png"/>
+    <div class="thumbnails">
+     <img alt="Thumbnail side view" id="thumbnail-1" src="https://via.placeholder.com/50x50"/>
+     <img alt="Thumbnail top view" id="thumbnail-2" src="https://via.placeholder.com/50x50"/>
+     <img alt="Thumbnail inside view" id="thumbnail-3" src="https://via.placeholder.com/50x50"/>
+    </div>
+   </div>
+   <div class="social-sharing">
+    <button>
+     <i class="fab fa-facebook-f">
+     </i>
+    </button>
+    <button>
+     <i class="fab fa-twitter">
+     </i>
+    </button>
+    <button>
+     <i class="fab fa-pinterest">
+     </i>
+    </button>
+   </div>
+   <div class="product-comparison">
+    <h3>
+     Compare with Similar Products
+    </h3>
+    <p>
+     <a href="#">
+      Compare Now
+     </a>
+    </p>
+   </div>
+   <div class="product-video">
+    <h3>
+     Product Video
+    </h3>
+    <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+    </iframe>
+   </div>
+   <div class="size-guide">
+    <h3>
+     Size Guide
+    </h3>
+    <p>
+     <a href="#">
+      View Size Guide
+     </a>
+    </p>
+   </div>
+   <div class="availability-notification">
+    <h3>
+     Notify Me When Available
+    </h3>
+    <p>
+     Enter your email to be notified when this product is back in stock.
+    </p>
+    <input placeholder="Your email" type="email"/>
+    <button>
+     Notify Me
+    </button>
+   </div>
+   <div class="customer-support">
+    <button>
+     Live Customer Support
+    </button>
+   </div>
+   <div class="add-to-cart-section">
+    <div class="quantity-selector">
+     <input min="1" type="number" value="1"/>
+    </div>
+    <button class="add-to-cart-btn">
+     Add to Cart
+    </button>
+    <div class="wishlist-btn">
+     <button>
+      Add to Wishlist
+     </button>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

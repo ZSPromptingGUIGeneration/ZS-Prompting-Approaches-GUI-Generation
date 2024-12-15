@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Study App - Latest Sessions
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header .logo {
+            position: absolute;
+            left: 20px;
+        }
+        .header nav {
+            position: absolute;
+            right: 20px;
+        }
+        .header nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .header nav a.active {
+            background-color: #333;
+        }
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .filters select, .filters input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .filters input {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        .filters .reset-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .filters .reset-btn:hover {
+            opacity: 0.8;
+        }
+        .session {
+            background-color: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: box-shadow 0.3s;
+        }
+        .session:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .session h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .session p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .session .details {
+            flex-grow: 1;
+        }
+        .session .actions {
+            display: flex;
+            align-items: center;
+        }
+        .session .actions button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .session .actions button.edit {
+            background-color: #2196F3;
+        }
+        .session .actions button.delete {
+            background-color: #f44336;
+        }
+        .session .actions button.favorite {
+            background-color: #FFC107;
+        }
+        .session .actions button:hover {
+            opacity: 0.8;
+        }
+        .progress-bar {
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+            position: relative;
+            height: 20px;
+        }
+        .progress-bar .progress {
+            background-color: #4CAF50;
+            height: 100%;
+            transition: width 0.3s;
+        }
+        .progress-bar .progress::after {
+            content: attr(data-progress);
+            position: absolute;
+            right: 10px;
+            color: white;
+            font-size: 12px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .pagination button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pagination button:hover {
+            opacity: 0.8;
+        }
+        .pagination .page-number {
+            background-color: #ddd;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+        @media (max-width: 600px) {
+            .filters {
+                flex-direction: column;
+            }
+            .session {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .session .actions {
+                margin-top: 10px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <div class="logo">
+     <img alt="Logo" src="" width="40"/>
+    </div>
+    <h1>
+     Latest Study Sessions
+    </h1>
+    <nav>
+     <a class="active" href="#">
+      Home
+     </a>
+     <a href="#">
+      Profile
+     </a>
+     <a href="#">
+      Settings
+     </a>
+    </nav>
+   </div>
+   <div class="filters">
+    <select>
+     <option value="date">
+      Filter by Date
+     </option>
+     <option value="subject">
+      Filter by Subject
+     </option>
+     <option value="duration">
+      Filter by Duration
+     </option>
+    </select>
+    <select>
+     <option value="asc">
+      Sort Ascending
+     </option>
+     <option value="desc">
+      Sort Descending
+     </option>
+     <option value="topic">
+      Sort by Topic
+     </option>
+     <option value="progress">
+      Sort by Progress
+     </option>
+    </select>
+    <input placeholder="Search by topic, date, or duration..." type="text"/>
+    <input placeholder="Start Date" type="date"/>
+    <input placeholder="End Date" type="date"/>
+    <button class="reset-btn">
+     Reset Filters
+    </button>
+   </div>
+   <div class="session">
+    <div class="details">
+     <h3>
+      Math Revision
+      <span style="font-size: 12px; color: #4CAF50;">
+       #Math #Algebra #Geometry
+      </span>
+     </h3>
+     <p>
+      Completed on: 2023-10-01
+     </p>
+     <p>
+      Duration: 2 hours
+     </p>
+     <p>
+      Topics: Algebra, Geometry
+     </p>
+     <div class="progress-bar">
+      <div class="progress" data-progress="80%" style="width: 80%;">
+      </div>
+     </div>
+    </div>
+    <div class="actions">
+     <button class="edit">
+      Edit
+     </button>
+     <button class="delete">
+      Delete
+     </button>
+     <button class="favorite">
+      Favorite
+     </button>
+    </div>
+   </div>
+   <div class="session">
+    <div class="details">
+     <h3>
+      History Notes
+      <span style="font-size: 12px; color: #4CAF50;">
+       #History #WWII #AncientRome
+      </span>
+     </h3>
+     <p>
+      Completed on: 2023-09-30
+     </p>
+     <p>
+      Duration: 1.5 hours
+     </p>
+     <p>
+      Topics: World War II, Ancient Rome
+     </p>
+     <div class="progress-bar">
+      <div class="progress" data-progress="60%" style="width: 60%;">
+      </div>
+     </div>
+    </div>
+    <div class="actions">
+     <button class="edit">
+      Edit
+     </button>
+     <button class="delete">
+      Delete
+     </button>
+     <button class="favorite">
+      Favorite
+     </button>
+    </div>
+   </div>
+   <div class="session">
+    <div class="details">
+     <h3>
+      Science Experiment
+      <span style="font-size: 12px; color: #4CAF50;">
+       #Science #Physics #Chemistry
+      </span>
+     </h3>
+     <p>
+      Completed on: 2023-09-29
+     </p>
+     <p>
+      Duration: 3 hours
+     </p>
+     <p>
+      Topics: Physics, Chemistry
+     </p>
+     <div class="progress-bar">
+      <div class="progress" data-progress="90%" style="width: 90%;">
+      </div>
+     </div>
+    </div>
+    <div class="actions">
+     <button class="edit">
+      Edit
+     </button>
+     <button class="delete">
+      Delete
+     </button>
+     <button class="favorite">
+      Favorite
+     </button>
+    </div>
+   </div>
+   <!-- Pagination -->
+   <div class="pagination">
+    <button>
+     Previous
+    </button>
+    <span class="page-number">
+     1
+    </span>
+    <span class="page-number">
+     2
+    </span>
+    <span class="page-number">
+     3
+    </span>
+    <button>
+     Next
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

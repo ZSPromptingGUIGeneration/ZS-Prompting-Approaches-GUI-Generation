@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports Team App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .search-bar input {
+            padding: 0.5rem;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 800px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            padding: 1rem;
+        }
+        .card h2 {
+            background-color: #007BFF;
+            color: white;
+            margin: -1rem -1rem 1rem -1rem;
+            padding: 1rem;
+        }
+        .card p, .card ul {
+            margin: 0 0 1rem 0;
+        }
+        .schedule table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .schedule th, .schedule td {
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        .schedule th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .news article {
+            margin-bottom: 1rem;
+        }
+        .news article h3 {
+            margin: 0 0 0.5rem 0;
+        }
+        .news article time {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #888;
+        }
+        .team .player-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .team .player {
+            flex: 1 1 calc(33.333% - 1rem);
+            background: #f9f9f9;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .team .player img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Sports Team App
+   </h1>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search..." type="text"/>
+  </div>
+  <div class="container">
+   <div class="card schedule">
+    <h2>
+     Schedule
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Date
+       </th>
+       <th>
+        Match
+       </th>
+       <th>
+        Location
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        25th Dec, 2023
+       </td>
+       <td>
+        Team A vs Team B
+       </td>
+       <td>
+        Stadium A
+       </td>
+      </tr>
+      <tr>
+       <td>
+        1st Jan, 2024
+       </td>
+       <td>
+        Team C vs Team D
+       </td>
+       <td>
+        Stadium B
+       </td>
+      </tr>
+      <tr>
+       <td>
+        5th Jan, 2024
+       </td>
+       <td>
+        Team E vs Team F
+       </td>
+       <td>
+        Stadium C
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="card news">
+    <h2>
+     News
+    </h2>
+    <article>
+     <h3>
+      Team A signs new player for the upcoming season
+     </h3>
+     <time datetime="2023-12-10">
+      10th Dec, 2023
+     </time>
+     <p>
+      Team A has signed a new player to strengthen their squad for the upcoming season. The new player is expected to make a significant impact...
+     </p>
+     <a href="#">
+      Read More
+     </a>
+    </article>
+    <article>
+     <h3>
+      Coach of Team B wins the best coach award
+     </h3>
+     <time datetime="2023-12-05">
+      5th Dec, 2023
+     </time>
+     <p>
+      Coach of Team B has been awarded the best coach award for his exceptional leadership and performance throughout the season...
+     </p>
+     <a href="#">
+      Read More
+     </a>
+    </article>
+   </div>
+   <div class="card team">
+    <h2>
+     Team
+    </h2>
+    <p>
+     Coach: John Doe
+    </p>
+    <p>
+     Captain: Jane Smith
+    </p>
+    <div class="player-grid">
+     <div class="player">
+      <img alt="Player 1" src=""/>
+      <p>
+       Player 1
+      </p>
+     </div>
+     <div class="player">
+      <img alt="Player 2" src=""/>
+      <p>
+       Player 2
+      </p>
+     </div>
+     <div class="player">
+      <img alt="Player 3" src=""/>
+      <p>
+       Player 3
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <p>
+    Contact Us:
+    <a href="mailto:info@sportsteam.com">
+     info@sportsteam.com
+    </a>
+    | Phone: 123-456-7890
+   </p>
+   <p>
+    Follow us on:
+    <a href="#">
+     Facebook
+    </a>
+    <a href="#">
+     Twitter
+    </a>
+    <a href="#">
+     Instagram
+    </a>
+   </p>
+  </div>
+ </body>
+</html>

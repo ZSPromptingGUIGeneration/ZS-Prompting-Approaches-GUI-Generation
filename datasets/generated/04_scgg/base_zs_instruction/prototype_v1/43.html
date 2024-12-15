@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App Videos
+  </title>
+  <style>
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+      color: #fff;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    .search-bar {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .search-bar input {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .filters {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .filters button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #4facfe;
+      color: #fff;
+      cursor: pointer;
+    }
+    .filters button:hover {
+      background: #00f2fe;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .video-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .video-card video {
+      width: 100%;
+      height: auto;
+    }
+    .video-info {
+      padding: 15px;
+    }
+    .video-info h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+    .video-info p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #666;
+    }
+    .video-info .duration {
+      font-size: 12px;
+      color: #999;
+    }
+    .video-info .rating {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #f0f0f0;
+      margin-top: 20px;
+    }
+    .footer a {
+      margin: 0 10px;
+      color: #4facfe;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Weather Videos
+    </h1>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for weather videos..." type="text"/>
+   </div>
+   <div class="filters">
+    <button>
+     Daily Forecast
+    </button>
+    <button>
+     Weekly Forecast
+    </button>
+    <button>
+     Climate Change
+    </button>
+   </div>
+   <div class="video-grid">
+    <div class="video-card">
+     <video controls="">
+      <source src="weather1.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+      </source>
+     </video>
+     <div class="video-info">
+      <h2>
+       Today's Weather
+      </h2>
+      <p>
+       Get the latest updates on today's weather conditions.
+      </p>
+      <div class="duration">
+       Duration: 5:32
+      </div>
+      <div class="rating">
+       Rating: ★★★★☆
+      </div>
+     </div>
+    </div>
+    <div class="video-card">
+     <video controls="">
+      <source src="weather2.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+      </source>
+     </video>
+     <div class="video-info">
+      <h2>
+       Weekly Forecast
+      </h2>
+      <p>
+       Find out what the weather will be like this week.
+      </p>
+      <div class="duration">
+       Duration: 7:45
+      </div>
+      <div class="rating">
+       Rating: ★★★★☆
+      </div>
+     </div>
+    </div>
+    <div class="video-card">
+     <video controls="">
+      <source src="weather3.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+      </source>
+     </video>
+     <div class="video-info">
+      <h2>
+       Climate Change
+      </h2>
+      <p>
+       Learn about the impact of climate change on weather patterns.
+      </p>
+      <div class="duration">
+       Duration: 10:20
+      </div>
+      <div class="rating">
+       Rating: ★★★★☆
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="footer">
+    <a href="#">
+     Contact Us
+    </a>
+    <a href="#">
+     Privacy Policy
+    </a>
+    <a href="#">
+     Terms of Service
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

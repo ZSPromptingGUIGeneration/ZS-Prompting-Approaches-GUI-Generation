@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Online Encyclopedia
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header .search {
+            display: flex;
+            align-items: center;
+        }
+        .header .search input {
+            border: none;
+            padding: 5px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        .header .search button {
+            background-color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .article-card {
+            background-color: white;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .article-card img {
+            width: 100%;
+            height: auto;
+        }
+        .article-card .content {
+            padding: 10px;
+        }
+        .article-card .content h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .article-card .content p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .articles-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .articles-grid .article-card {
+            flex: 1 1 calc(50% - 20px);
+            margin: 10px;
+        }
+        @media (max-width: 600px) {
+            .articles-grid .article-card {
+                flex: 1 1 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Logo" src=""/>
+   <div class="search">
+    <input placeholder="Search articles..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+  </div>
+  <div class="article-card">
+   <img alt="Junonia iphita" src=""/>
+   <div class="content">
+    <h2>
+     Junonia iphita
+    </h2>
+    <p>
+     Junonia iphita, the chocolate pansy, is a species of nymphalid butterfly found in Asia.
+    </p>
+   </div>
+  </div>
+  <div class="article-card">
+   <img alt="Noel Park" src=""/>
+   <div class="content">
+    <h2>
+     Noel Park
+    </h2>
+    <p>
+     Noel Park in north London is a planned community developed in the late 19th and early 20th centuries consisting of 2,200 model dwellings, designed by Rowland Plumbe.
+    </p>
+   </div>
+  </div>
+  <div class="articles-grid">
+   <div class="article-card">
+    <img alt="Tramway bridge at Weil am Rhein, Germany" src=""/>
+    <div class="content">
+     <h2>
+      Tramway bridge at Weil am Rhein, Germany
+     </h2>
+     <p>
+      The bridge connects the German city of Weil am Rhein with the French city of Saint-Louis.
+     </p>
+    </div>
+   </div>
+   <div class="article-card">
+    <img alt="Eta Carinae" src=""/>
+    <div class="content">
+     <h2>
+      Eta Carinae
+     </h2>
+     <p>
+      Eta Carinae is a stellar system containing at least two stars with a combined luminosity greater than five million times that of the Sun.
+     </p>
+    </div>
+   </div>
+   <div class="article-card">
+    <img alt="Facebook News" src=""/>
+    <div class="content">
+     <h2>
+      Facebook News
+     </h2>
+     <p>
+      Facebook will now be prioritizing "authentic" news in its news feed algorithm.
+     </p>
+    </div>
+   </div>
+   <div class="article-card">
+    <img alt="Smartwatch" src=""/>
+    <div class="content">
+     <h2>
+      Leaked Smartwatch Images
+     </h2>
+     <p>
+      Check out these leaked images of the upcoming smartwatch.
+     </p>
+    </div>
+   </div>
+   <div class="article-card">
+    <img alt="Facebook Slideshow" src=""/>
+    <div class="content">
+     <h2>
+      Facebook Slideshow
+     </h2>
+     <p>
+      Facebook's Slideshow feature may be coming to mobile devices soon.
+     </p>
+    </div>
+   </div>
+   <div class="article-card">
+    <img alt="Flappy Bird Game" src=""/>
+    <div class="content">
+     <h2>
+      Flappy Bird's New Game
+     </h2>
+     <p>
+      Flappy Bird's developer launched a new game: Ninja Spinki Challenges!!
+     </p>
+    </div>
+   </div>
+   <div class="article-card">
+    <img alt="WhatsApp" src=""/>
+    <div class="content">
+     <h2>
+      WhatsApp Features
+     </h2>
+     <p>
+      Features hidden in WhatsApp that you might not know about.
+     </p>
+    </div>
+   </div>
+   <div class="article-card">
+    <img alt="WhatsApp Recall" src=""/>
+    <div class="content">
+     <h2>
+      WhatsApp Recall
+     </h2>
+     <p>
+      WhatsApp may allow users to recall accidentally sent messages in the future.
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

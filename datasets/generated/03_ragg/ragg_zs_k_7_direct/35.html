@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Study App - Latest Sessions
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .session-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .session-details {
+            flex-grow: 1;
+        }
+        .session-title {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .session-time {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .session-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .session-actions button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .session-actions button:hover {
+            background-color: #45a049;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Latest Study Sessions
+   </h1>
+  </div>
+  <div class="container">
+   <div class="session-card">
+    <div class="session-details">
+     <h2 class="session-title">
+      Math Revision
+     </h2>
+     <p class="session-time">
+      Today, 10:00 AM - 11:00 AM
+     </p>
+    </div>
+    <div class="session-actions">
+     <button>
+      Join
+     </button>
+     <button>
+      Details
+     </button>
+    </div>
+   </div>
+   <div class="session-card">
+    <div class="session-details">
+     <h2 class="session-title">
+      English Literature
+     </h2>
+     <p class="session-time">
+      Today, 1:00 PM - 2:00 PM
+     </p>
+    </div>
+    <div class="session-actions">
+     <button>
+      Join
+     </button>
+     <button>
+      Details
+     </button>
+    </div>
+   </div>
+   <div class="session-card">
+    <div class="session-details">
+     <h2 class="session-title">
+      Chemistry Lab
+     </h2>
+     <p class="session-time">
+      Tomorrow, 9:00 AM - 10:00 AM
+     </p>
+    </div>
+    <div class="session-actions">
+     <button>
+      Join
+     </button>
+     <button>
+      Details
+     </button>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .current-weather {
+            padding: 20px;
+            text-align: center;
+        }
+        .current-weather img {
+            width: 50px;
+        }
+        .forecast {
+            padding: 20px;
+        }
+        .forecast-day {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .forecast-day:last-child {
+            border-bottom: none;
+        }
+        .forecast-day img {
+            width: 30px;
+        }
+        .details {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .details p {
+            margin: 10px 0;
+        }
+        .chart {
+            padding: 20px;
+            background-color: #fff;
+        }
+        .chart img {
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     San Francisco
+    </h1>
+   </div>
+   <div class="current-weather">
+    <img alt="Weather Icon" src=""/>
+    <h2>
+     55°F
+    </h2>
+    <p>
+     Light rain
+    </p>
+    <p>
+     Feels like 55°F
+    </p>
+   </div>
+   <div class="forecast">
+    <div class="forecast-day">
+     <div>
+      <p>
+       Friday, 22 April
+      </p>
+      <p>
+       +21°C
+      </p>
+     </div>
+     <img alt="Weather Icon" src=""/>
+     <p>
+      +11°C
+     </p>
+    </div>
+    <div class="forecast-day">
+     <div>
+      <p>
+       Saturday, 23 April
+      </p>
+      <p>
+       +18°C
+      </p>
+     </div>
+     <img alt="Weather Icon" src=""/>
+     <p>
+      +12°C
+     </p>
+    </div>
+    <div class="forecast-day">
+     <div>
+      <p>
+       Sunday, 24 April
+      </p>
+      <p>
+       +16°C
+      </p>
+     </div>
+     <img alt="Weather Icon" src=""/>
+     <p>
+      +11°C
+     </p>
+    </div>
+    <div class="forecast-day">
+     <div>
+      <p>
+       Monday, 25 April
+      </p>
+      <p>
+       +17°C
+      </p>
+     </div>
+     <img alt="Weather Icon" src=""/>
+     <p>
+      +13°C
+     </p>
+    </div>
+    <div class="forecast-day">
+     <div>
+      <p>
+       Tuesday, 26 April
+      </p>
+      <p>
+       +18°C
+      </p>
+     </div>
+     <img alt="Weather Icon" src=""/>
+     <p>
+      +14°C
+     </p>
+    </div>
+   </div>
+   <div class="details">
+    <p>
+     Sunrise: 7:22 AM
+    </p>
+    <p>
+     Sunset: 4:55 PM
+    </p>
+    <p>
+     Humidity: 83%
+    </p>
+    <p>
+     Pressure: 1009 mBar
+    </p>
+    <p>
+     Visibility: 8.1 miles
+    </p>
+   </div>
+   <div class="chart">
+    <img alt="Weather Chart" src=""/>
+   </div>
+  </div>
+ </body>
+</html>

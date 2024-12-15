@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Child Journal
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header .branding {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .nav-tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-tabs a {
+            text-decoration: none;
+            color: #6a1b9a;
+            font-weight: bold;
+        }
+        .profile-section {
+            background-color: #ffffff;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .profile-section img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .profile-section .details {
+            flex-grow: 1;
+        }
+        .profile-section .details h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .profile-section .details p {
+            margin: 5px 0;
+            color: #777;
+        }
+        .profile-section .edit-icon {
+            cursor: pointer;
+            color: #6a1b9a;
+        }
+        .growth-section {
+            background-color: #ffffff;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .growth-section h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            color: #6a1b9a;
+        }
+        .growth-section .metrics {
+            display: flex;
+            justify-content: space-between;
+        }
+        .growth-section .metrics div {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .growth-section .metrics div:not(:last-child) {
+            border-right: 1px solid #ddd;
+        }
+        .growth-section .metrics div p {
+            margin: 5px 0;
+        }
+        .subsection-navigation {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .subsection-navigation a {
+            text-decoration: none;
+            color: #6a1b9a;
+            font-weight: bold;
+        }
+        .main-content {
+            padding: 15px;
+        }
+        .main-content .celebration {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .main-content .celebration img {
+            width: 100px;
+            height: auto;
+        }
+        .main-content .celebration h2 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #6a1b9a;
+        }
+        .info-section {
+            background-color: #ffffff;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .info-section h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #6a1b9a;
+        }
+        .info-section p {
+            margin: 10px 0 0 0;
+            color: #777;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #6a1b9a;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="branding">
+    Child Journal
+   </div>
+   <div class="icons">
+    <i class="fas fa-bars">
+    </i>
+    <i class="fas fa-bell">
+    </i>
+    <i class="fas fa-ellipsis-v">
+    </i>
+   </div>
+  </div>
+  <div class="nav-tabs">
+   <a href="#">
+    Feed
+   </a>
+   <a href="#">
+    Chat
+   </a>
+   <a href="#">
+    Learn
+   </a>
+   <a href="#">
+    Trackers
+   </a>
+  </div>
+  <div class="profile-section">
+   <img alt="Profile Picture" src=""/>
+   <div class="details">
+    <h2>
+     John Doe
+    </h2>
+    <p>
+     Age: 2 years
+    </p>
+   </div>
+   <i class="fas fa-pencil-alt edit-icon">
+   </i>
+  </div>
+  <div class="growth-section">
+   <h3>
+    Growth Chart
+   </h3>
+   <div class="metrics">
+    <div>
+     <p>
+      Height
+     </p>
+     <p>
+      90 cm
+     </p>
+     <p>
+      Average
+     </p>
+    </div>
+    <div>
+     <p>
+      Weight
+     </p>
+     <p>
+      12 kg
+     </p>
+     <p>
+      Average
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="subsection-navigation">
+   <a href="#">
+    Prev
+   </a>
+   <a href="#">
+    One Year
+   </a>
+   <a href="#">
+    Next
+   </a>
+  </div>
+  <div class="main-content">
+   <div class="celebration">
+    <img alt="Celebration Image" src=""/>
+    <h2>
+     Happy 1st Birthday!
+    </h2>
+   </div>
+   <p>
+    Congratulations on reaching this milestone! Keep track of your child's growth and celebrate every moment.
+   </p>
+  </div>
+  <div class="info-section">
+   <h3>
+    Perfect
+   </h3>
+   <p>
+    Your child is growing perfectly. Keep up the great work!
+   </p>
+  </div>
+  <div class="footer">
+   <a href="#">
+    View More
+   </a>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+ </body>
+</html>

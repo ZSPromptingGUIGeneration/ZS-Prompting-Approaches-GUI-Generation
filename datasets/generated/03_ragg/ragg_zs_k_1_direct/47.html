@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Trip Booking
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group .row .col {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-group .row .col:last-child {
+            margin-right: 0;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #ff6f00;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #e65c00;
+        }
+        .link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Hotel Search
+    </h1>
+   </div>
+   <div class="form-group">
+    <label for="destination">
+     Destination
+    </label>
+    <input id="destination" name="destination" placeholder="Enter destination" type="text"/>
+   </div>
+   <div class="form-group row">
+    <div class="col">
+     <label for="checkin">
+      Check-in
+     </label>
+     <input id="checkin" name="checkin" type="date"/>
+    </div>
+    <div class="col">
+     <label for="checkout">
+      Check-out
+     </label>
+     <input id="checkout" name="checkout" type="date"/>
+    </div>
+   </div>
+   <div class="form-group row">
+    <div class="col">
+     <label for="rooms">
+      Room(s)
+     </label>
+     <input id="rooms" min="1" name="rooms" type="number" value="1"/>
+    </div>
+    <div class="col">
+     <label for="guests">
+      Guests
+     </label>
+     <input id="guests" min="1" name="guests" type="number" value="1"/>
+    </div>
+   </div>
+   <button class="btn">
+    Search Hotels
+   </button>
+   <div class="link">
+    <a href="#">
+     Need a Room for Tonight?
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

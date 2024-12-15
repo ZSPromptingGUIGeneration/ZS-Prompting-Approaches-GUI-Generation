@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Mobile Registration Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .progress-bar {
+            height: 4px;
+            background-color: #e0e0e0;
+            margin: 10px 0;
+            position: relative;
+        }
+        .progress-bar::after {
+            content: '';
+            width: 50%; /* Adjust this to show progress */
+            height: 100%;
+            background-color: #3b82f6;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .input-group .valid-check {
+            position: absolute;
+            right: 10px;
+            top: 35px;
+            color: green;
+            display: none;
+        }
+        .input-group input:valid ~ .valid-check {
+            display: inline;
+        }
+        .password-strength {
+            height: 4px;
+            background-color: #e0e0e0;
+            margin-top: 5px;
+            position: relative;
+        }
+        .password-strength::after {
+            content: '';
+            height: 100%;
+            width: 0;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .password-strength.weak::after {
+            width: 33%;
+            background-color: red;
+        }
+        .password-strength.medium::after {
+            width: 66%;
+            background-color: orange;
+        }
+        .password-strength.strong::after {
+            width: 100%;
+            background-color: green;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        .input-group input:invalid ~ .error-message {
+            display: block;
+        }
+        .subscription-options {
+            display: flex;
+            justify-content: space-between;
+        }
+        .subscription-option {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .subscription-option.selected {
+            border-color: #3b82f6;
+            background-color: #e0f2ff;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-group button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-group .primary {
+            background-color: #3b82f6;
+            color: #fff;
+            margin-right: 10px;
+        }
+        .button-group .secondary {
+            background-color: #ccc;
+            color: #333;
+        }
+        .privacy-policy {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .privacy-policy a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Create Your Account
+    </h1>
+    <div class="progress-bar">
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Personal Information
+    </h2>
+    <div class="input-group">
+     <label for="full-name">
+      Full Name
+     </label>
+     <input id="full-name" placeholder="John Doe" required="" type="text"/>
+    </div>
+    <div class="input-group">
+     <label for="email">
+      Email Address
+     </label>
+     <input id="email" placeholder="johndoe@example.com" required="" type="email"/>
+     <span class="valid-check">
+      ✓
+     </span>
+     <div class="error-message">
+      Invalid email address
+     </div>
+    </div>
+    <div class="input-group">
+     <label for="password">
+      Password
+     </label>
+     <input id="password" placeholder="••••••••" required="" type="password"/>
+     <div class="password-strength">
+     </div>
+    </div>
+    <div class="input-group">
+     <label for="confirm-password">
+      Confirm Password
+     </label>
+     <input id="confirm-password" placeholder="••••••••" required="" type="password"/>
+     <div class="error-message">
+      Passwords do not match
+     </div>
+    </div>
+    <div class="input-group">
+     <label for="phone-number">
+      Phone Number
+     </label>
+     <select id="country-code">
+      <option value="+1">
+       +1
+      </option>
+      <option value="+44">
+       +44
+      </option>
+      <option value="+61">
+       +61
+      </option>
+     </select>
+     <input id="phone-number" placeholder="555-1234" required="" type="tel"/>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Subscription Options
+    </h2>
+    <div class="subscription-options">
+     <div class="subscription-option selected">
+      <p>
+       Basic Plan
+      </p>
+      <p>
+       $10/month
+      </p>
+     </div>
+     <div class="subscription-option">
+      <p>
+       Pro Plan
+      </p>
+      <p>
+       $20/month
+      </p>
+     </div>
+     <div class="subscription-option">
+      <p>
+       Premium Plan
+      </p>
+      <p>
+       $30/month
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="button-group">
+    <button class="primary">
+     Register
+    </button>
+    <button class="secondary">
+     Cancel
+    </button>
+   </div>
+   <div class="privacy-policy">
+    <a href="#">
+     Privacy Policy
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

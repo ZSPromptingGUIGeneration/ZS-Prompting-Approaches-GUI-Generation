@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Healthy Recipes Search
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-left: 0;
+            background-color: #00796b;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .search-bar input:focus, .search-bar button:focus {
+            outline: none;
+            border-color: #00796b;
+        }
+        .filter-sort {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .filter-sort select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .category {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+        .category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .category h3 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #00796b;
+        }
+        .category p {
+            font-size: 14px;
+            color: #666;
+        }
+        .category:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .nutrition-info, .ratings {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+        .ratings span {
+            color: #ff9800;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input aria-label="Search for healthy recipes" placeholder="Search for healthy recipes..." type="text"/>
+    <button aria-label="Search">
+     Search
+    </button>
+   </div>
+   <div class="filter-sort">
+    <select aria-label="Filter by dietary preference">
+     <option value="">
+      Dietary Preference
+     </option>
+     <option value="vegan">
+      Vegan
+     </option>
+     <option value="gluten-free">
+      Gluten-Free
+     </option>
+     <option value="low-carb">
+      Low-Carb
+     </option>
+    </select>
+    <select aria-label="Sort by">
+     <option value="">
+      Sort By
+     </option>
+     <option value="popularity">
+      Popularity
+     </option>
+     <option value="prep-time">
+      Preparation Time
+     </option>
+     <option value="calories">
+      Calories
+     </option>
+    </select>
+   </div>
+   <div class="categories">
+    <div class="category">
+     <img alt="Healthy Breakfast Recipes" src=""/>
+     <h3>
+      Breakfast
+     </h3>
+     <p>
+      A great start to your day with these healthy breakfast recipes.
+     </p>
+     <div class="nutrition-info">
+      Calories: 300 | Protein: 15g | Carbs: 45g | Fats: 10g
+     </div>
+     <div class="ratings">
+      Rating:
+      <span>
+       ★★★★☆
+      </span>
+      (120 reviews)
+     </div>
+    </div>
+    <div class="category">
+     <img alt="Healthy Lunch Recipes" src=""/>
+     <h3>
+      Lunch
+     </h3>
+     <p>
+      Keep your energy up with these nutritious lunch options.
+     </p>
+     <div class="nutrition-info">
+      Calories: 450 | Protein: 25g | Carbs: 60g | Fats: 15g
+     </div>
+     <div class="ratings">
+      Rating:
+      <span>
+       ★★★★★
+      </span>
+      (200 reviews)
+     </div>
+    </div>
+    <div class="category">
+     <img alt="Healthy Dinner Recipes" src=""/>
+     <h3>
+      Dinner
+     </h3>
+     <p>
+      End your day with these delicious and healthy dinner recipes.
+     </p>
+     <div class="nutrition-info">
+      Calories: 500 | Protein: 30g | Carbs: 50g | Fats: 20g
+     </div>
+     <div class="ratings">
+      Rating:
+      <span>
+       ★★★★☆
+      </span>
+      (150 reviews)
+     </div>
+    </div>
+    <div class="category">
+     <img alt="Healthy Snacks Recipes" src=""/>
+     <h3>
+      Snacks
+     </h3>
+     <p>
+      Healthy snacks to keep you going between meals.
+     </p>
+     <div class="nutrition-info">
+      Calories: 200 | Protein: 10g | Carbs: 25g | Fats: 8g
+     </div>
+     <div class="ratings">
+      Rating:
+      <span>
+       ★★★☆☆
+      </span>
+      (80 reviews)
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Radio Player App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f1f1f1;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            height: 24px;
+        }
+        header .search-add {
+            display: flex;
+            align-items: center;
+        }
+        header .search-add img {
+            height: 24px;
+            margin-left: 15px;
+        }
+        nav {
+            display: flex;
+            background: #444;
+            color: #fff;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        nav div {
+            flex: 1;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav .active {
+            border-bottom: 2px solid #00f;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .content ul li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer .ads {
+            background: #444;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    <img alt="Radio Icon" src=""/>
+    <span>
+     Online Radio
+    </span>
+   </div>
+   <div class="search-add">
+    <img alt="Search Icon" src=""/>
+    <img alt="Add Icon" src=""/>
+   </div>
+  </header>
+  <nav>
+   <div class="active">
+    STATIONS
+   </div>
+   <div>
+    FAVORITES
+   </div>
+  </nav>
+  <div class="content">
+   <ul>
+    <li>
+     Your stations
+    </li>
+    <li>
+     Recommended
+    </li>
+    <li>
+     Local Radio
+    </li>
+    <li>
+     By Genre
+    </li>
+    <li>
+     By Language
+    </li>
+    <li>
+     By Location
+    </li>
+   </ul>
+  </div>
+  <div class="footer">
+   <div class="ads">
+    Upgrade to Pro - Support development and remove Ads!
+   </div>
+   <div>
+    No station selected ...
+   </div>
+  </div>
+ </body>
+</html>

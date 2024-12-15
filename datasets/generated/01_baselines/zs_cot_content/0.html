@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Navigation App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 1em;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 0.5em;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .map {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            background-color: #e0e0e0;
+            margin-bottom: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1.5em;
+        }
+        .buttons {
+            display: flex;
+            gap: 1em;
+        }
+        .buttons button {
+            padding: 0.5em 1em;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .buttons .start {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .buttons .stop {
+            background-color: #f44336;
+            color: white;
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 1em;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 0.5em;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Navigation App
+   </h1>
+  </header>
+  <main>
+   <div class="search-bar">
+    <input placeholder="Enter destination (e.g., Central Park, New York)" type="text"/>
+   </div>
+   <div class="map">
+    <img alt="Map showing Central Park, New York" id="map-placeholder" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b07d0fb0-1858-46fd-8171-1e03a371d88b.png" style="width: 100%; height: 100%;"/>
+   </div>
+   <div class="buttons">
+    <button class="start">
+     Start Navigation
+    </button>
+    <button class="stop">
+     Stop Navigation
+    </button>
+   </div>
+  </main>
+  <footer>
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    About
+   </a>
+   <a href="#">
+    Contact
+   </a>
+  </footer>
+ </body>
+</html>
+

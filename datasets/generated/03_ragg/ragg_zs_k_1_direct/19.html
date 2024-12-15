@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bidding App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .offer {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .offer.closed {
+            background-color: #e0e0e0;
+        }
+        .offer h2 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .offer p {
+            margin: 5px 0;
+        }
+        .offer .status {
+            font-weight: bold;
+        }
+        .offer .bid-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .offer .bid-info span {
+            font-size: 18px;
+        }
+        .offer .bid-info button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .offer .bid-info button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Bidding App
+   </h1>
+  </div>
+  <div class="container">
+   <div class="offer">
+    <h2>
+     Offer 1
+    </h2>
+    <p class="status">
+     Status: Open
+    </p>
+    <div class="bid-info">
+     <span>
+      Current Bid: $100
+     </span>
+     <button>
+      Place Bid
+     </button>
+    </div>
+   </div>
+   <div class="offer closed">
+    <h2>
+     Offer 2
+    </h2>
+    <p class="status">
+     Status: Closed
+    </p>
+    <div class="bid-info">
+     <span>
+      Winning Bid: $150
+     </span>
+     <button disabled="">
+      Place Bid
+     </button>
+    </div>
+   </div>
+   <div class="offer">
+    <h2>
+     Offer 3
+    </h2>
+    <p class="status">
+     Status: Open
+    </p>
+    <div class="bid-info">
+     <span>
+      Current Bid: $200
+     </span>
+     <button>
+      Place Bid
+     </button>
+    </div>
+   </div>
+   <div class="offer closed">
+    <h2>
+     Offer 4
+    </h2>
+    <p class="status">
+     Status: Closed
+    </p>
+    <div class="bid-info">
+     <span>
+      Winning Bid: $250
+     </span>
+     <button disabled="">
+      Place Bid
+     </button>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

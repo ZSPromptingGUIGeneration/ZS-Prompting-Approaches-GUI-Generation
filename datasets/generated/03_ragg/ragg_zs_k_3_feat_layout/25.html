@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Healthy Recipes
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .header .title {
+            font-size: 20px;
+        }
+        .header .search-icon {
+            font-size: 20px;
+        }
+        .tab-navigation {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab-navigation .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .tab-navigation .active {
+            border-bottom: 2px solid #4CAF50;
+            color: #4CAF50;
+        }
+        .main-content {
+            padding: 15px;
+        }
+        .category-section {
+            margin-bottom: 20px;
+        }
+        .category-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .category-section .title-overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .recipe-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(50% - 15px);
+        }
+        .recipe-card img {
+            width: 100%;
+        }
+        .recipe-card .info {
+            padding: 10px;
+        }
+        .recipe-card .info h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .recipe-card .info p {
+            margin: 5px 0;
+            color: #777;
+        }
+        .bottom-navigation {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .bottom-navigation .nav-item {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .bottom-navigation .active {
+            color: #4CAF50;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="title">
+    Recipes
+   </div>
+   <div class="search-icon">
+    🔍
+   </div>
+  </div>
+  <div class="tab-navigation">
+   <div class="tab active">
+    Home
+   </div>
+   <div class="tab">
+    Favorites
+   </div>
+   <div class="tab">
+    Featured
+   </div>
+  </div>
+  <div class="main-content">
+   <div class="category-section">
+    <div style="position: relative;">
+     <img alt="Category Image" src=""/>
+     <div class="title-overlay">
+      PALEO
+     </div>
+    </div>
+   </div>
+   <div class="recipe-cards">
+    <div class="recipe-card">
+     <img alt="Recipe Image" src=""/>
+     <div class="info">
+      <h3>
+       Recipe Title
+      </h3>
+      <p>
+       Prep Time: 30 min
+      </p>
+      <p>
+       Cost: $5 per serving
+      </p>
+     </div>
+    </div>
+    <div class="recipe-card">
+     <img alt="Recipe Image" src=""/>
+     <div class="info">
+      <h3>
+       Recipe Title
+      </h3>
+      <p>
+       Prep Time: 30 min
+      </p>
+      <p>
+       Cost: $5 per serving
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="bottom-navigation">
+   <div class="nav-item active">
+    🏠
+   </div>
+   <div class="nav-item">
+    🔍
+   </div>
+   <div class="nav-item">
+    ❤️
+   </div>
+   <div class="nav-item">
+    ⚙️
+   </div>
+  </div>
+ </body>
+</html>

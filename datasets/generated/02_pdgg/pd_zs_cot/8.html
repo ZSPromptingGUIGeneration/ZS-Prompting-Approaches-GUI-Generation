@@ -1,0 +1,122 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Common Phrases
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   .phrase-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .phrase-text {
+            flex-grow: 1;
+        }
+        .audio-icon {
+            margin-left: 10px;
+        }
+        .fixed-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <nav>
+   <div class="nav-wrapper">
+    <a class="brand-logo center" href="#">
+     Common Phrases
+    </a>
+    <ul class="right" id="nav-mobile">
+     <li>
+      <a href="#">
+       <i class="material-icons">
+        search
+       </i>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <!-- Main Content -->
+  <div class="container">
+   <div class="phrase-card">
+    <div class="phrase-text">
+     <strong>
+      Hola
+     </strong>
+     <br/>
+     <small>
+      Hello
+     </small>
+    </div>
+    <a class="audio-icon" href="#">
+     <i class="material-icons">
+      volume_up
+     </i>
+    </a>
+   </div>
+   <div class="phrase-card">
+    <div class="phrase-text">
+     <strong>
+      Gracias
+     </strong>
+     <br/>
+     <small>
+      Thank you
+     </small>
+    </div>
+    <a class="audio-icon" href="#">
+     <i class="material-icons">
+      volume_up
+     </i>
+    </a>
+   </div>
+   <!-- Add more phrases as needed -->
+  </div>
+  <!-- Footer Navigation -->
+  <div class="fixed-footer">
+   <nav>
+    <div class="nav-wrapper">
+     <ul class="left">
+      <li>
+       <a href="#">
+        <i class="material-icons">
+         home
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        <i class="material-icons">
+         list
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        <i class="material-icons">
+         settings
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Start Page
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .facebook {
+            background-color: #3b5998;
+        }
+        .google {
+            background-color: #db4437;
+        }
+        .email {
+            background-color: #555;
+        }
+        .or-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .or-divider::before, .or-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+        .or-divider:not(:empty)::before {
+            margin-right: .25em;
+        }
+        .or-divider:not(:empty)::after {
+            margin-left: .25em;
+        }
+        .account-buttons {
+            display: flex;
+            justify-content: center;
+        }
+        .account-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .sign-in {
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 20px;
+            display: block;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <img alt="Logo" class="logo" src=""/>
+   <div class="social-buttons">
+    <a class="social-button facebook" href="#">
+     Join using Facebook
+    </a>
+    <a class="social-button google" href="#">
+     Join using Google
+    </a>
+   </div>
+   <div class="or-divider">
+    or
+   </div>
+   <a class="social-button email" href="#">
+    Join using email
+   </a>
+   <div class="account-buttons">
+    <a class="account-button" href="#">
+     Create an account
+    </a>
+   </div>
+   <a class="sign-in" href="#">
+    Already on App? Sign in
+   </a>
+  </div>
+ </body>
+</html>

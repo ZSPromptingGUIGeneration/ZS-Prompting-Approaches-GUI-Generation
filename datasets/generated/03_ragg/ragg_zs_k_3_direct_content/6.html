@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #2196F3;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .current-weather {
+            background-color: #ffffff;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .current-weather img {
+            width: 50px;
+            height: 50px;
+        }
+        .current-weather div {
+            text-align: left;
+        }
+        .forecast {
+            background-color: #ffffff;
+            margin: 15px 0;
+            padding: 15px;
+        }
+        .forecast h2 {
+            margin-top: 0;
+        }
+        .forecast-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .forecast-item:last-child {
+            border-bottom: none;
+        }
+        .forecast-item img {
+            width: 30px;
+            height: 30px;
+        }
+        .graph {
+            background-color: #ffffff;
+            padding: 15px;
+        }
+        .graph img {
+            width: 100%;
+            height: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    San Francisco
+   </h1>
+  </div>
+  <div class="current-weather">
+   <div>
+    <h2>
+     Current Weather
+    </h2>
+    <p>
+     21°C
+    </p>
+   </div>
+   <i class="fas fa-sun" style="font-size: 50px; color: #FFD700;">
+   </i>
+  </div>
+  <div class="forecast">
+   <h2>
+    Forecast for the week
+   </h2>
+   <div class="forecast-item">
+    <div>
+     <p>
+      Fri, Today
+     </p>
+     <p>
+      22 April
+     </p>
+    </div>
+    <i class="fas fa-cloud-sun" style="font-size: 30px; color: #FFD700;">
+    </i>
+    <div>
+     <p>
+      21°C | 11°C
+     </p>
+     <p>
+      2 mm
+     </p>
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div>
+     <p>
+      Sat
+     </p>
+     <p>
+      23 April
+     </p>
+    </div>
+    <i class="fas fa-cloud-rain" style="font-size: 30px; color: #00BFFF;">
+    </i>
+    <div>
+     <p>
+      18°C | 12°C
+     </p>
+     <p>
+      1 mm
+     </p>
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div>
+     <p>
+      Sun
+     </p>
+     <p>
+      24 April
+     </p>
+    </div>
+    <i class="fas fa-cloud" style="font-size: 30px; color: #B0C4DE;">
+    </i>
+    <div>
+     <p>
+      16°C | 11°C
+     </p>
+     <p>
+      0 mm
+     </p>
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div>
+     <p>
+      Mon
+     </p>
+     <p>
+      25 April
+     </p>
+    </div>
+    <i class="fas fa-cloud-sun-rain" style="font-size: 30px; color: #00BFFF;">
+    </i>
+    <div>
+     <p>
+      17°C | 13°C
+     </p>
+     <p>
+      0 mm
+     </p>
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div>
+     <p>
+      Tue
+     </p>
+     <p>
+      26 April
+     </p>
+    </div>
+    <i class="fas fa-sun" style="font-size: 30px; color: #FFD700;">
+    </i>
+    <div>
+     <p>
+      17°C | 13°C
+     </p>
+     <p>
+      0 mm
+     </p>
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div>
+     <p>
+      Wed
+     </p>
+     <p>
+      27 April
+     </p>
+    </div>
+    <i class="fas fa-cloud-showers-heavy" style="font-size: 30px; color: #4682B4;">
+    </i>
+    <div>
+     <p>
+      15°C | 10°C
+     </p>
+     <p>
+      5 mm
+     </p>
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div>
+     <p>
+      Thu
+     </p>
+     <p>
+      28 April
+     </p>
+    </div>
+    <i class="fas fa-cloud" style="font-size: 30px; color: #B0C4DE;">
+    </i>
+    <div>
+     <p>
+      16°C | 11°C
+     </p>
+     <p>
+      0 mm
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="graph">
+   <img alt="Weather Graph" id="weather-graph" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/80171556-e5de-4529-989f-717a3e379cdc.png"/>
+  </div>
+ </body>
+</html>

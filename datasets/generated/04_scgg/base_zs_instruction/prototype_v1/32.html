@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather Forecast
+  </title>
+  <style>
+   body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0f7fa;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(90deg, #0288d1, #03a9f4);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            position: relative;
+        }
+        .header .location {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        .header .date {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: #03a9f4;
+            padding: 0.5rem 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+        .navbar a:hover {
+            background: #0288d1;
+        }
+        .forecast {
+            display: flex;
+            overflow-x: auto;
+            padding: 1rem;
+            gap: 1rem;
+        }
+        .hourly {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .time {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .temp {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .details {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        .toggle-units {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: white;
+            color: #0288d1;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="location">
+    Current Location: New York, NY
+   </div>
+   <div class="date">
+    Monday, October 2, 2023
+   </div>
+   <button class="toggle-units">
+    °C / °F
+   </button>
+  </div>
+  <div class="navbar">
+   <a href="#">
+    Hourly
+   </a>
+   <a href="#">
+    Daily
+   </a>
+   <a href="#">
+    Weekly
+   </a>
+  </div>
+  <div class="forecast">
+   <div class="hourly">
+    <div class="time">
+     1 PM
+    </div>
+    <div class="icon">
+     ☀️
+    </div>
+    <div class="temp">
+     75°F
+    </div>
+    <div class="details">
+     Sunny
+    </div>
+    <div class="details">
+     Humidity: 40%
+    </div>
+    <div class="details">
+     Wind: 5 mph
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     2 PM
+    </div>
+    <div class="icon">
+     🌤️
+    </div>
+    <div class="temp">
+     76°F
+    </div>
+    <div class="details">
+     Partly Cloudy
+    </div>
+    <div class="details">
+     Humidity: 42%
+    </div>
+    <div class="details">
+     Wind: 6 mph
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     3 PM
+    </div>
+    <div class="icon">
+     🌥️
+    </div>
+    <div class="temp">
+     74°F
+    </div>
+    <div class="details">
+     Cloudy
+    </div>
+    <div class="details">
+     Humidity: 45%
+    </div>
+    <div class="details">
+     Wind: 7 mph
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     4 PM
+    </div>
+    <div class="icon">
+     ☁️
+    </div>
+    <div class="temp">
+     73°F
+    </div>
+    <div class="details">
+     Overcast
+    </div>
+    <div class="details">
+     Humidity: 50%
+    </div>
+    <div class="details">
+     Wind: 8 mph
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     5 PM
+    </div>
+    <div class="icon">
+     🌧️
+    </div>
+    <div class="temp">
+     70°F
+    </div>
+    <div class="details">
+     Rain
+    </div>
+    <div class="details">
+     Humidity: 60%
+    </div>
+    <div class="details">
+     Wind: 10 mph
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     6 PM
+    </div>
+    <div class="icon">
+     🌦️
+    </div>
+    <div class="temp">
+     68°F
+    </div>
+    <div class="details">
+     Showers
+    </div>
+    <div class="details">
+     Humidity: 65%
+    </div>
+    <div class="details">
+     Wind: 12 mph
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tableware Shopping
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .header {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header input {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .header button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .header button img {
+            width: 20px;
+            height: 20px;
+        }
+        .categories {
+            padding: 20px;
+        }
+        .categories h2 {
+            margin-top: 0;
+        }
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .category-item {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .category-item img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .category-item p {
+            margin: 10px 0 0;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <input placeholder="Search for tableware..." type="text"/>
+   <button>
+    <img alt="Scan Barcode" src=""/>
+   </button>
+  </div>
+  <div class="categories">
+   <h2>
+    Categories
+   </h2>
+   <div class="category-list">
+    <div class="category-item">
+     <img alt="Plates" src=""/>
+     <p>
+      Plates
+     </p>
+    </div>
+    <div class="category-item">
+     <img alt="Bowls" src=""/>
+     <p>
+      Bowls
+     </p>
+    </div>
+    <div class="category-item">
+     <img alt="Cups" src=""/>
+     <p>
+      Cups
+     </p>
+    </div>
+    <div class="category-item">
+     <img alt="Cutlery" src=""/>
+     <p>
+      Cutlery
+     </p>
+    </div>
+    <div class="category-item">
+     <img alt="Glasses" src=""/>
+     <p>
+      Glasses
+     </p>
+    </div>
+    <div class="category-item">
+     <img alt="Serving" src=""/>
+     <p>
+      Serving
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

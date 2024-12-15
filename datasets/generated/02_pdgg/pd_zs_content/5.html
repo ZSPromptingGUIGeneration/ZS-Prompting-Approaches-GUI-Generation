@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Finder
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+        }
+        .recipe-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .recipe-card {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .recipe-title {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 100%;
+            padding: 10px;
+        }
+        .fav-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: red;
+        }
+        .search-bar {
+            margin: 20px 0;
+        }
+        .category-tags {
+            margin: 10px 0;
+            overflow-x: scroll;
+            white-space: nowrap;
+        }
+        .category-tags .chip {
+            display: inline-block;
+            margin: 5px;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .bottom-nav a {
+            padding: 10px 20px;
+            display: inline-block;
+            width: 25%;
+            text-align: center;
+            color: #000;
+        }
+        .bottom-nav a .material-icons {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .filter-panel {
+            padding: 20px;
+        }
+        .filter-panel input, .filter-panel select {
+            margin-bottom: 15px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <!-- Search Bar -->
+   <div class="row search-bar">
+    <div class="input-field col s12">
+     <i class="material-icons prefix">
+      search
+     </i>
+     <input id="search" type="text"/>
+     <label for="search">
+      Search Recipes
+     </label>
+     <i class="material-icons right">
+      mic
+     </i>
+    </div>
+   </div>
+   <!-- Category Tags -->
+   <div class="category-tags">
+    <div class="chip">
+     All
+    </div>
+    <div class="chip">
+     Breakfast
+    </div>
+    <div class="chip">
+     Lunch
+    </div>
+    <div class="chip">
+     Dinner
+    </div>
+    <div class="chip">
+     Desserts
+    </div>
+    <div class="chip">
+     Snacks
+    </div>
+    <div class="chip">
+     Drinks
+    </div>
+   </div>
+   <!-- Recipes -->
+   <div class="row">
+    <div class="col s12 m6 l4">
+     <div class="recipe-card">
+      <img alt="Pancakes with syrup and berries" class="recipe-image" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/3c0d9da6-3169-40a2-84c2-ae3216ea1ad7.png"/>
+      <div class="recipe-title">
+       Pancakes with Berries
+      </div>
+      <i class="material-icons fav-btn">
+       favorite_border
+      </i>
+     </div>
+    </div>
+    <div class="col s12 m6 l4">
+     <div class="recipe-card">
+      <img alt="Grilled chicken with vegetables" class="recipe-image" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b674aebe-18ee-4cd0-a4d9-3c7470875602.png"/>
+      <div class="recipe-title">
+       Grilled Chicken
+      </div>
+      <i class="material-icons fav-btn">
+       favorite_border
+      </i>
+     </div>
+    </div>
+    <div class="col s12 m6 l4">
+     <div class="recipe-card">
+      <img alt="Chocolate cake with strawberries" class="recipe-image" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/155905a8-7bcf-47c5-89c9-ba9d7fd6287f.png"/>
+      <div class="recipe-title">
+       Chocolate Cake
+      </div>
+      <i class="material-icons fav-btn">
+       favorite_border
+      </i>
+     </div>
+    </div>
+    <div class="col s12 m6 l4">
+     <div class="recipe-card">
+      <img alt="Salad with fresh vegetables" class="recipe-image" id="image4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6e365595-8a80-486b-91ca-b0aee527dc3d.png"/>
+      <div class="recipe-title">
+       Fresh Vegetable Salad
+      </div>
+      <i class="material-icons fav-btn">
+       favorite_border
+      </i>
+     </div>
+    </div>
+    <div class="col s12 m6 l4">
+     <div class="recipe-card">
+      <img alt="Spaghetti with tomato sauce" class="recipe-image" id="image5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7f34e9c8-a221-4e67-8a43-6ab78a47ef10.png"/>
+      <div class="recipe-title">
+       Spaghetti Bolognese
+      </div>
+      <i class="material-icons fav-btn">
+       favorite_border
+      </i>
+     </div>
+    </div>
+    <div class="col s12 m6 l4">
+     <div class="recipe-card">
+      <img alt="Smoothie with mixed fruits" class="recipe-image" id="image6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/a93a4370-3ea1-43dc-9419-2d532cafb634.png"/>
+      <div class="recipe-title">
+       Fruit Smoothie
+      </div>
+      <i class="material-icons fav-btn">
+       favorite_border
+      </i>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Filter Panel -->
+  <div class="filter-panel">
+   <h5>
+    Filters
+   </h5>
+   <label>
+    <input type="checkbox">
+     <span>
+      Vegetarian
+     </span>
+    </input>
+   </label>
+   <label>
+    <input type="checkbox"/>
+    <span>
+     Vegan
+    </span>
+   </label>
+   <label>
+    <input type="checkbox"/>
+    <span>
+     Gluten-Free
+    </span>
+   </label>
+   <div class="input-field">
+    <select>
+     <option disabled="" selected="" value="">
+      Choose preparation time
+     </option>
+     <option value="1">
+      Less than 30 mins
+     </option>
+     <option value="2">
+      30-60 mins
+     </option>
+     <option value="3">
+      More than 60 mins
+     </option>
+    </select>
+    <label>
+     Preparation Time
+    </label>
+   </div>
+  </div>
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+   <a href="#">
+    <i class="material-icons">
+     home
+    </i>
+    Home
+   </a>
+   <a href="#">
+    <i class="material-icons">
+     category
+    </i>
+    Categories
+   </a>
+   <a href="#">
+    <i class="material-icons">
+     favorite
+    </i>
+    Favorites
+   </a>
+   <a href="#">
+    <i class="material-icons">
+     person
+    </i>
+    Profile
+   </a>
+  </div>
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            M.FormSelect.init(elems);
+        });
+  </script>
+ </body>
+</html>

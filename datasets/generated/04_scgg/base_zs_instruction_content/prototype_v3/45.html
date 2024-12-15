@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Settings
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+        .header {
+            background-color: #6200ea;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .search-bar input {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .breadcrumb {
+            margin: 10px 0;
+            color: #666;
+        }
+        .breadcrumb a {
+            color: #6200ea;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 60px;
+            height: 60px;
+        }
+        .profile div {
+            color: #333;
+        }
+        .profile div h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .profile div p {
+            margin: 0;
+            color: #666;
+        }
+        .section-header {
+            font-size: 22px;
+            margin: 20px 0 10px;
+            color: #6200ea;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .option {
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .option:last-child {
+            border-bottom: none;
+        }
+        .option:hover {
+            background-color: #eaeaea;
+        }
+        .option h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .option p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .option .toggle {
+            display: flex;
+            align-items: center;
+        }
+        .option input[type="checkbox"] {
+            width: 40px;
+            height: 20px;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #ddd;
+            outline: none;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option input[type="checkbox"]:checked {
+            background-color: #6200ea;
+        }
+        .option input[type="checkbox"]::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #fff;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s;
+        }
+        .option input[type="checkbox"]:checked::before {
+            transform: translateX(20px);
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .buttons button:hover {
+            opacity: 0.9;
+        }
+        .save-btn {
+            background-color: #6200ea;
+            color: #fff;
+        }
+        .cancel-btn {
+            background-color: #ddd;
+            color: #333;
+        }
+        .reset-btn {
+            background-color: #ff4081;
+            color: #fff;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .option label {
+            display: block;
+            cursor: pointer;
+        }
+        .option input[type="checkbox"]:focus {
+            box-shadow: 0 0 3px 3px #6200ea;
+        }
+        .language-select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .help-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .help-link a {
+            color: #6200ea;
+            text-decoration: none;
+        }
+        .help-link a:hover {
+            text-decoration: underline;
+        }
+        .inline-help {
+            margin-left: 5px;
+            color: #6200ea;
+            cursor: pointer;
+        }
+        .collapsible {
+            background-color: #e0e0e0;
+            color: #6200ea;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .active, .collapsible:hover {
+            background-color: #ccc;
+        }
+        .collapsible-content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        .profile-edit {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .profile-edit button {
+            background-color: #6200ea;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .profile-edit button:hover {
+            opacity: 0.9;
+        }
+        @media (max-width: 600px) {
+            .buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .buttons button {
+                margin-bottom: 10px;
+            }
+            .buttons button:last-child {
+                margin-bottom: 0;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Settings
+    </h1>
+    <div class="search-bar">
+     <input placeholder="Search settings..." type="text"/>
+    </div>
+   </div>
+   <div class="breadcrumb">
+    <a href="#">
+     Home
+    </a>
+    &gt;
+    <a href="#">
+     Settings
+    </a>
+   </div>
+   <div class="profile">
+    <img alt="Profile picture of a user" id="profile-pic" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fbbba6bd-7739-4715-a2e1-af7cef043ee8.png"/>
+    <div>
+     <h2>
+      John Doe
+     </h2>
+     <p>
+      john.doe@example.com
+     </p>
+    </div>
+   </div>
+   <div class="profile-edit">
+    <button>
+     Edit Profile
+    </button>
+   </div>
+   <button class="collapsible">
+    General
+   </button>
+   <div class="collapsible-content">
+    <div class="option tooltip">
+     <label>
+      <div>
+       <h2>
+        Notifications
+       </h2>
+       <p>
+        Receive notifications for updates and offers
+       </p>
+      </div>
+      <div class="toggle">
+       <input checked="" id="notifications" type="checkbox"/>
+      </div>
+     </label>
+     <span class="tooltiptext">
+      Enable this to receive updates and offers notifications
+     </span>
+    </div>
+    <div class="option tooltip">
+     <label>
+      <div>
+       <h2>
+        Auto-Update
+       </h2>
+       <p>
+        Automatically update the application
+       </p>
+      </div>
+      <div class="toggle">
+       <input checked="" id="auto-update" type="checkbox"/>
+      </div>
+     </label>
+     <span class="tooltiptext">
+      Enable this to automatically update the application
+     </span>
+    </div>
+   </div>
+   <button class="collapsible">
+    Appearance
+   </button>
+   <div class="collapsible-content">
+    <div class="option tooltip">
+     <label>
+      <div>
+       <h2>
+        Dark Mode
+       </h2>
+       <p>
+        Enable dark theme for the application
+       </p>
+      </div>
+      <div class="toggle">
+       <input id="dark-mode" type="checkbox"/>
+      </div>
+     </label>
+     <span class="tooltiptext">
+      Enable this to switch to dark mode
+     </span>
+    </div>
+    <div class="option tooltip">
+     <label>
+      <div>
+       <h2>
+        Text Size
+       </h2>
+       <p>
+        Adjust the text size for better readability
+       </p>
+      </div>
+      <div class="toggle">
+       <select class="language-select" id="text-size">
+        <option value="small">
+         Small
+        </option>
+        <option selected="" value="medium">
+         Medium
+        </option>
+        <option value="large">
+         Large
+        </option>
+       </select>
+      </div>
+     </label>
+     <span class="tooltiptext">
+      Select the text size for better readability
+     </span>
+    </div>
+   </div>
+   <button class="collapsible">
+    Privacy
+   </button>
+   <div class="collapsible-content">
+    <div class="option tooltip">
+     <label>
+      <div>
+       <h2>
+        Location Access
+       </h2>
+       <p>
+        Allow the application to access your location
+       </p>
+      </div>
+      <div class="toggle">
+       <input id="location-access" type="checkbox"/>
+      </div>
+     </label>
+     <span class="tooltiptext">
+      Enable this to allow the app to access your location
+     </span>
+    </div>
+    <div class="option tooltip">
+     <label>
+      <div>
+       <h2>
+        Camera Access
+       </h2>
+       <p>
+        Allow the application to access your camera
+       </p>
+      </div>
+      <div class="toggle">
+       <input id="camera-access" type="checkbox"/>
+      </div>
+     </label>
+     <span class="tooltiptext">
+      Enable this to allow the app to access your camera
+     </span>
+    </div>
+   </div>
+   <button class="collapsible">
+    Language
+   </button>
+   <div class="collapsible-content">
+    <div class="option tooltip">
+     <label>
+      <div>
+       <h2>
+        Language
+       </h2>
+       <p>
+        Change the language of the app
+       </p>
+      </div>
+      <div class="toggle">
+       <select class="language-select" id="language">
+        <option selected="" value="en">
+         English
+        </option>
+        <option value="es">
+         Spanish
+        </option>
+        <option value="fr">
+         French
+        </option>
+        <option value="de">
+         German
+        </option>
+        <option value="zh">
+         Chinese
+        </option>
+       </select>
+      </div>
+     </label>
+     <span class="tooltiptext">
+      Select the language for the application
+     </span>
+    </div>
+   </div>
+   <div class="buttons">
+    <button class="reset-btn">
+     Reset to Defaults
+    </button>
+    <button class="cancel-btn">
+     Cancel
+    </button>
+    <button class="save-btn">
+     Save
+    </button>
+   </div>
+   <div class="help-link">
+    <a href="#">
+     Need help? Visit our FAQ
+    </a>
+   </div>
+  </div>
+  <script>
+   const collapsibles = document.querySelectorAll(".collapsible");
+        collapsibles.forEach(collapsible => {
+            collapsible.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+  </script>
+ </body>
+</html>

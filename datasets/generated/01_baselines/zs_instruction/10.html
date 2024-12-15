@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Map App Settings
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+
+        .settings-section {
+            margin-top: 20px;
+        }
+
+        .settings-section h2 {
+            font-size: 20px;
+            color: #555;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .option:last-child {
+            border-bottom: none;
+        }
+
+        .option label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 40px;
+            height: 20px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Map App Settings
+   </h1>
+   <div class="settings-section">
+    <h2>
+     Show on Map
+    </h2>
+    <div class="option">
+     <label for="natural-occurrences">
+      Natural Occurrences
+     </label>
+     <label class="toggle-switch">
+      <input id="natural-occurrences" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+    <div class="option">
+     <label for="disasters">
+      Disasters
+     </label>
+     <label class="toggle-switch">
+      <input id="disasters" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Alarm App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #222;
+            padding: 10px 0;
+        }
+        .tabs div {
+            padding: 10px 20px;
+        }
+        .tabs .active {
+            border-bottom: 2px solid #00f;
+        }
+        .content {
+            padding: 10px;
+        }
+        .alarm-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+        .alarm-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            background-color: #222;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .controls div {
+            padding: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Select Track
+   </h1>
+   <button>
+    ✓
+   </button>
+  </div>
+  <div class="tabs">
+   <div>
+    Linn
+   </div>
+   <div class="active">
+    alarms
+   </div>
+   <div>
+    contacts
+   </div>
+  </div>
+  <div class="content">
+   <div class="alarm-item">
+    <div>
+     <input type="checkbox"/>
+     <span>
+      Old Car Horn.mp3
+     </span>
+    </div>
+    <div>
+     <button>
+      â ¿
+     </button>
+     <button>
+      â‹®
+     </button>
+    </div>
+   </div>
+   <div class="alarm-item">
+    <div>
+     <input type="checkbox"/>
+     <span>
+      Rim Shot.mp3
+     </span>
+    </div>
+    <div>
+     <button>
+      â ¿
+     </button>
+     <button>
+      â‹®
+     </button>
+    </div>
+   </div>
+   <div class="alarm-item">
+    <div>
+     <input type="checkbox"/>
+     <span>
+      Uh Oh.mp3
+     </span>
+    </div>
+    <div>
+     <button>
+      â ¿
+     </button>
+     <button>
+      â‹®
+     </button>
+    </div>
+   </div>
+  </div>
+  <div class="controls">
+   <div>
+    ↑
+   </div>
+   <div>
+    ↓
+   </div>
+   <div>
+    ▶
+   </div>
+   <div>
+    ✚
+   </div>
+   <div>
+    🗑
+   </div>
+   <div>
+    ►
+   </div>
+  </div>
+ </body>
+</html>

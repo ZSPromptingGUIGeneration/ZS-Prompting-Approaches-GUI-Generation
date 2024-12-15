@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Storage App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #6200ee;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .app-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .app-info {
+            display: flex;
+            align-items: center;
+        }
+        .app-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+        .app-name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .app-size {
+            font-size: 14px;
+            color: #888;
+        }
+        .delete-btn {
+            background-color: #ff1744;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .delete-btn:hover {
+            background-color: #d50000;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Storage Management
+   </h1>
+  </div>
+  <div class="container">
+   <div class="app-item">
+    <div class="app-info">
+     <img alt="App Icon" class="app-icon" src=""/>
+     <div>
+      <div class="app-name">
+       App Name 1
+      </div>
+      <div class="app-size">
+       50 MB
+      </div>
+     </div>
+    </div>
+    <button class="delete-btn">
+     Delete
+    </button>
+   </div>
+   <div class="app-item">
+    <div class="app-info">
+     <img alt="App Icon" class="app-icon" src=""/>
+     <div>
+      <div class="app-name">
+       App Name 2
+      </div>
+      <div class="app-size">
+       30 MB
+      </div>
+     </div>
+    </div>
+    <button class="delete-btn">
+     Delete
+    </button>
+   </div>
+   <div class="app-item">
+    <div class="app-info">
+     <img alt="App Icon" class="app-icon" src=""/>
+     <div>
+      <div class="app-name">
+       App Name 3
+      </div>
+      <div class="app-size">
+       70 MB
+      </div>
+     </div>
+    </div>
+    <button class="delete-btn">
+     Delete
+    </button>
+   </div>
+   <!-- Add more app items as needed -->
+  </div>
+ </body>
+</html>

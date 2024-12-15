@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Storage App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .storage-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .storage-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .storage-info p.critical {
+            color: #ff4b5c;
+            font-weight: bold;
+        }
+        .progress-bar {
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 5px;
+            position: relative;
+        }
+        .progress-bar div {
+            height: 100%;
+        }
+        .progress-bar .used {
+            background-color: #ff4b5c;
+        }
+        .progress-bar .available {
+            background-color: #4caf50;
+        }
+        .progress-bar span {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+        }
+        .search-bar {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar .clear-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #999;
+        }
+        .filter-sort {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .filter-sort select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .filter-sort .sort-label,
+        .filter-sort .filter-label {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .app-list {
+            list-style: none;
+            padding: 0;
+        }
+        .app-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .app-item h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .app-details {
+            font-size: 14px;
+            color: #666;
+        }
+        .app-item button {
+            background-color: #ff4b5c;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .app-item button:hover {
+            background-color: #ff2b3c;
+        }
+        .bulk-actions {
+            margin-bottom: 20px;
+        }
+        .bulk-actions button {
+            background-color: #ff4b5c;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .bulk-actions button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .bulk-actions button:hover:enabled {
+            background-color: #ff2b3c;
+        }
+        .app-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .select-all {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .select-all input {
+            margin-right: 10px;
+        }
+        .app-storage-type {
+            font-size: 14px;
+            color: #999;
+            margin-left: 10px;
+        }
+        .modal, .tooltip {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .modal.active, .tooltip.active {
+            display: block;
+        }
+        .modal .close, .tooltip .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode .storage-info, .dark-mode .app-item, .dark-mode .search-bar input, .dark-mode .filter-sort select, .dark-mode .bulk-actions button {
+            background-color: #444;
+            color: #fff;
+            border: 1px solid #555;
+        }
+        .dark-mode .progress-bar .used {
+            background-color: #ff4b5c;
+        }
+        .dark-mode .progress-bar .available {
+            background-color: #4caf50;
+        }
+        .dark-mode .progress-bar {
+            background-color: #555;
+        }
+        .dark-mode .search-bar .clear-btn {
+            color: #ccc;
+        }
+        .dark-mode .app-item button {
+            background-color: #ff4b5c;
+        }
+        .dark-mode .app-item button:hover {
+            background-color: #ff2b3c;
+        }
+        .dark-mode .bulk-actions button {
+            background-color: #ff4b5c;
+        }
+        .dark-mode .bulk-actions button:disabled {
+            background-color: #666;
+        }
+        .dark-mode .bulk-actions button:hover:enabled {
+            background-color: #ff2b3c;
+        }
+        .dark-mode .modal, .dark-mode .tooltip {
+            background-color: #444;
+        }
+        .dark-mode .modal .close, .dark-mode .tooltip .close {
+            color: #ccc;
+        }
+        @media (max-width: 600px) {
+            .app-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .app-item button {
+                margin-top: 10px;
+                width: 100%;
+            }
+            .filter-sort {
+                flex-direction: column;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Installed Apps
+   </h1>
+   <div class="storage-info">
+    <div>
+     <p>
+      Total Storage: 64GB
+     </p>
+     <div class="progress-bar">
+      <div class="used" style="width: 68%;">
+      </div>
+      <span>
+       68%
+      </span>
+     </div>
+    </div>
+    <div>
+     <p>
+      Available Storage: 20GB
+     </p>
+     <div class="progress-bar">
+      <div class="available" style="width: 31%;">
+      </div>
+      <span>
+       31%
+      </span>
+     </div>
+    </div>
+    <div>
+     <p>
+      SD Card Storage: 32GB
+     </p>
+     <div class="progress-bar">
+      <div class="used" style="width: 100%;">
+      </div>
+      <span>
+       100%
+      </span>
+     </div>
+    </div>
+    <div>
+     <p class="critical">
+      Available SD Card Storage: 10GB
+     </p>
+     <div class="progress-bar">
+      <div class="available" style="width: 31%;">
+      </div>
+      <span>
+       31%
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search apps by name..." type="text"/>
+    <button class="clear-btn">
+     ×
+    </button>
+   </div>
+   <div class="filter-sort">
+    <div>
+     <span class="sort-label">
+      Sort by:
+     </span>
+     <select>
+      <option value="name">
+       Name
+      </option>
+      <option value="size">
+       Size (Ascending)
+      </option>
+      <option value="size-desc">
+       Size (Descending)
+      </option>
+      <option value="date">
+       Installation Date
+      </option>
+     </select>
+    </div>
+    <div>
+     <span class="filter-label">
+      Filter by:
+     </span>
+     <select>
+      <option value="all">
+       All
+      </option>
+      <option value="phone">
+       Phone Storage
+      </option>
+      <option value="sdcard">
+       SD Card Storage
+      </option>
+      <option value="games">
+       Games
+      </option>
+      <option value="utilities">
+       Utilities
+      </option>
+      <option value="social">
+       Social Media
+      </option>
+      <option value="recently-used">
+       Recently Used
+      </option>
+      <option value="rarely-used">
+       Rarely Used
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="bulk-actions">
+    <button disabled="">
+     Delete Selected
+    </button>
+   </div>
+   <div class="select-all">
+    <input type="checkbox"/>
+    <label>
+     Select All
+    </label>
+   </div>
+   <ul class="app-list">
+    <li class="app-item">
+     <div>
+      <input type="checkbox"/>
+      <h3>
+       App 1
+      </h3>
+      <span class="app-storage-type">
+       (Phone)
+      </span>
+      <p class="app-details">
+       Size: 20MB | Installed: 01/01/2023
+      </p>
+     </div>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <div>
+      <input type="checkbox"/>
+      <h3>
+       App 2
+      </h3>
+      <span class="app-storage-type">
+       (SD Card)
+      </span>
+      <p class="app-details">
+       Size: 50MB | Installed: 02/01/2023
+      </p>
+     </div>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <div>
+      <input type="checkbox"/>
+      <h3>
+       App 3
+      </h3>
+      <span class="app-storage-type">
+       (Phone)
+      </span>
+      <p class="app-details">
+       Size: 30MB | Installed: 03/01/2023
+      </p>
+     </div>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <div>
+      <input type="checkbox"/>
+      <h3>
+       App 4
+      </h3>
+      <span class="app-storage-type">
+       (SD Card)
+      </span>
+      <p class="app-details">
+       Size: 10MB | Installed: 04/01/2023
+      </p>
+     </div>
+     <button>
+      Delete
+     </button>
+    </li>
+   </ul>
+  </div>
+  <div class="modal" id="appDetailsModal">
+   <button class="close" onclick="document.getElementById('appDetailsModal').classList.remove('active')">
+    ×
+   </button>
+   <h2>
+    App Details
+   </h2>
+   <p>
+    Version: 1.0.0
+   </p>
+   <p>
+    Permissions: Camera, Location, Storage
+   </p>
+   <p>
+    Last Used: 01/01/2023
+   </p>
+  </div>
+  <div class="tooltip" id="appDetailsTooltip">
+   <button class="close" onclick="document.getElementById('appDetailsTooltip').classList.remove('active')">
+    ×
+   </button>
+   <h2>
+    App Details
+   </h2>
+   <p>
+    Version: 1.0.0
+   </p>
+   <p>
+    Permissions: Camera, Location, Storage
+   </p>
+   <p>
+    Last Used: 01/01/2023
+   </p>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .app-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+        }
+        .search-bar {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 5px;
+        }
+        .filter-sort-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .filter-sort-bar button,
+        .filter-sort-bar select {
+            padding: 8px;
+            border: none;
+            background-color: #6200ea;
+            color: white;
+            border-radius: 4px;
+        }
+        .recipe-list {
+            padding: 10px;
+        }
+        .recipe-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .recipe-content {
+            padding: 10px;
+        }
+        .recipe-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0;
+        }
+        .estimated-time {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .estimated-time .material-icons {
+            font-size: 1em;
+            margin-right: 5px;
+        }
+        .star-ratings {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: #ffb400;
+            margin: 5px 0;
+        }
+        .save-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #ff4081;
+            cursor: pointer;
+        }
+        .view-recipe {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+            text-decoration: none;
+            border-radius: 0 0 8px 8px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="app-bar">
+   <div class="search-bar">
+    <span class="material-icons">
+     search
+    </span>
+    <input placeholder="Search recipes by name or ingredient" type="text"/>
+   </div>
+  </div>
+  <div class="filter-sort-bar">
+   <button>
+    Filters
+   </button>
+   <select>
+    <option>
+     Popularity
+    </option>
+    <option>
+     Newest
+    </option>
+    <option>
+     Shortest Time
+    </option>
+   </select>
+  </div>
+  <div class="recipe-list" id="recipe-list">
+   <div class="recipe-card">
+    <img alt="A delicious spaghetti carbonara dish" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/155fc577-87ec-431a-ac8f-795dbb133244.png"/>
+    <div class="recipe-content">
+     <div class="recipe-title">
+      Spaghetti Carbonara
+     </div>
+     <div class="estimated-time">
+      <span class="material-icons">
+       access_time
+      </span>
+      <span>
+       25 min
+      </span>
+     </div>
+     <div class="star-ratings">
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star_half
+      </span>
+      <span class="material-icons">
+       star_outline
+      </span>
+      <span>
+       (200 reviews)
+      </span>
+     </div>
+     <span class="material-icons save-icon">
+      favorite_border
+     </span>
+    </div>
+    <a class="view-recipe" href="#">
+     View Recipe
+    </a>
+   </div>
+   <div class="recipe-card">
+    <img alt="A bowl of fresh Caesar salad" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/774bdea5-9a8f-4ef2-a34d-d79ed2d3635d.png"/>
+    <div class="recipe-content">
+     <div class="recipe-title">
+      Caesar Salad
+     </div>
+     <div class="estimated-time">
+      <span class="material-icons">
+       access_time
+      </span>
+      <span>
+       15 min
+      </span>
+     </div>
+     <div class="star-ratings">
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star_outline
+      </span>
+      <span>
+       (150 reviews)
+      </span>
+     </div>
+     <span class="material-icons save-icon">
+      favorite_border
+     </span>
+    </div>
+    <a class="view-recipe" href="#">
+     View Recipe
+    </a>
+   </div>
+   <div class="recipe-card">
+    <img alt="A plate of classic beef tacos" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/644e756d-1200-4a2c-bbed-0ee8bc096bb8.png"/>
+    <div class="recipe-content">
+     <div class="recipe-title">
+      Beef Tacos
+     </div>
+     <div class="estimated-time">
+      <span class="material-icons">
+       access_time
+      </span>
+      <span>
+       20 min
+      </span>
+     </div>
+     <div class="star-ratings">
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star_half
+      </span>
+      <span class="material-icons">
+       star_outline
+      </span>
+      <span>
+       (180 reviews)
+      </span>
+     </div>
+     <span class="material-icons save-icon">
+      favorite_border
+     </span>
+    </div>
+    <a class="view-recipe" href="#">
+     View Recipe
+    </a>
+   </div>
+   <div class="recipe-card">
+    <img alt="A slice of rich chocolate cake" id="image4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7c0c3fe9-b8b5-4803-a880-e11a25b0569f.png"/>
+    <div class="recipe-content">
+     <div class="recipe-title">
+      Chocolate Cake
+     </div>
+     <div class="estimated-time">
+      <span class="material-icons">
+       access_time
+      </span>
+      <span>
+       45 min
+      </span>
+     </div>
+     <div class="star-ratings">
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star_half
+      </span>
+      <span class="material-icons">
+       star_outline
+      </span>
+      <span>
+       (300 reviews)
+      </span>
+     </div>
+     <span class="material-icons save-icon">
+      favorite_border
+     </span>
+    </div>
+    <a class="view-recipe" href="#">
+     View Recipe
+    </a>
+   </div>
+   <div class="recipe-card">
+    <img alt="A bowl of creamy mushroom soup" id="image5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c18baf12-3fbb-4365-b922-6925586f9a92.png"/>
+    <div class="recipe-content">
+     <div class="recipe-title">
+      Mushroom Soup
+     </div>
+     <div class="estimated-time">
+      <span class="material-icons">
+       access_time
+      </span>
+      <span>
+       30 min
+      </span>
+     </div>
+     <div class="star-ratings">
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star
+      </span>
+      <span class="material-icons">
+       star_half
+      </span>
+      <span class="material-icons">
+       star_outline
+      </span>
+      <span>
+       (120 reviews)
+      </span>
+     </div>
+     <span class="material-icons save-icon">
+      favorite_border
+     </span>
+    </div>
+    <a class="view-recipe" href="#">
+     View Recipe
+    </a>
+   </div>
+  </div>
+  <script>
+   // Infinite scroll functionality
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                loadMoreRecipes();
+            }
+        });
+
+        function loadMoreRecipes() {
+            const recipeList = document.getElementById('recipe-list');
+            const recipes = [
+                {
+                    title: "Pancakes",
+                    time: "20 min",
+                    reviews: 250,
+                    rating: 4.5,
+                    image: "https://via.placeholder.com/350x150",
+                    alt: "A stack of fluffy pancakes",
+                    id: "image6"
+                },
+                {
+                    title: "Grilled Chicken",
+                    time: "35 min",
+                    reviews: 180,
+                    rating: 4.2,
+                    image: "https://via.placeholder.com/350x150",
+                    alt: "A plate of grilled chicken with vegetables",
+                    id: "image7"
+                },
+                {
+                    title: "Veggie Stir Fry",
+                    time: "25 min",
+                    reviews: 140,
+                    rating: 4.0,
+                    image: "https://via.placeholder.com/350x150",
+                    alt: "A bowl of veggie stir fry",
+                    id: "image8"
+                },
+                {
+                    title: "Banana Bread",
+                    time: "60 min",
+                    reviews: 300,
+                    rating: 4.8,
+                    image: "https://via.placeholder.com/350x150",
+                    alt: "A loaf of banana bread",
+                    id: "image9"
+                },
+                {
+                    title: "Tomato Soup",
+                    time: "30 min",
+                    reviews: 200,
+                    rating: 4.3,
+                    image: "https://via.placeholder.com/350x150",
+                    alt: "A bowl of tomato soup",
+                    id: "image10"
+                }
+            ];
+
+            recipes.forEach(recipe => {
+                const recipeCard = document.createElement('div');
+                recipeCard.className = 'recipe-card';
+                recipeCard.innerHTML = `
+                    <img src="${recipe.image}" alt="${recipe.alt}" id="${recipe.id}">
+                    <div class="recipe-content">
+                        <div class="recipe-title">${recipe.title}</div>
+                        <div class="estimated-time">
+                            <span class="material-icons">access_time</span>
+                            <span>${recipe.time}</span>
+                        </div>
+                        <div class="star-ratings">
+                            ${'<span class="material-icons">star</span>'.repeat(Math.floor(recipe.rating))}
+                            ${recipe.rating % 1 ? '<span class="material-icons">star_half</span>' : ''}
+                            ${'<span class="material-icons">star_outline</span>'.repeat(5 - Math.ceil(recipe.rating))}
+                            <span>(${recipe.reviews} reviews)</span>
+                        </div>
+                        <span class="material-icons save-icon">favorite_border</span>
+                    </div>
+                    <a href="#" class="view-recipe">View Recipe</a>
+                `;
+                recipeList.appendChild(recipeCard);
+            });
+        }
+  </script>
+ </body>
+</html>
+

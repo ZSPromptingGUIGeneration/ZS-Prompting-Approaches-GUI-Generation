@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dream Tracker
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        header, footer {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        header .search-bar input {
+            border: none;
+            padding: 5px;
+            font-size: 16px;
+            outline: none;
+            margin-left: 10px;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .text-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: none;
+        }
+        .toolbar {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        .toolbar button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .record-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .record-section button {
+            background-color: #ff5252;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .audio-player {
+            margin-top: 10px;
+        }
+        .audio-player button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer .fab {
+            background-color: #ff4081;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            color: #fff;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+        footer nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        footer nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            text-align: center;
+        }
+        footer nav a .icon {
+            font-size: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="search-bar">
+    <span class="icon">
+     🔍
+    </span>
+    <input placeholder="Search..." type="text"/>
+   </div>
+   <div class="settings">
+    <span class="icon">
+     ⚙️
+    </span>
+   </div>
+  </header>
+  <main>
+   <textarea class="text-input" placeholder="Type your dream here..."></textarea>
+   <div class="toolbar">
+    <button>
+     <strong>
+      B
+     </strong>
+    </button>
+    <button>
+     <em>
+      I
+     </em>
+    </button>
+    <button>
+     •
+    </button>
+   </div>
+   <div class="record-section">
+    <button>
+     🎤
+    </button>
+    <div class="audio-player">
+     <button>
+      ▶️
+     </button>
+     <button>
+      ⏸️
+     </button>
+     <button>
+      ⏹️
+     </button>
+    </div>
+    <div class="transcription-toggle">
+     <label>
+      <input type="checkbox"/>
+      Enable Transcription
+     </label>
+    </div>
+   </div>
+  </main>
+  <footer>
+   <button class="fab">
+    +
+   </button>
+   <nav>
+    <a href="#">
+     <span class="icon">
+      🏠
+     </span>
+     <br/>
+     Home
+    </a>
+    <a href="#">
+     <span class="icon">
+      🎤
+     </span>
+     <br/>
+     Record
+    </a>
+    <a href="#">
+     <span class="icon">
+      💾
+     </span>
+     <br/>
+     Save
+    </a>
+    <a href="#">
+     <span class="icon">
+      ✏️
+     </span>
+     <br/>
+     Edit
+    </a>
+   </nav>
+  </footer>
+ </body>
+</html>

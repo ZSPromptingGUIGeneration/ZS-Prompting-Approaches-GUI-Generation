@@ -1,0 +1,114 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tableware Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 1em;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 1em;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 0.5em;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .barcode-scan {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+        .barcode-scan button {
+            padding: 0.5em 1em;
+            border: none;
+            background-color: #FF9800;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .category {
+            flex: 1 1 45%;
+            background-color: white;
+            padding: 1em;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Tableware Shop
+   </h1>
+  </header>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search for items..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <div class="barcode-scan">
+    <button>
+     Scan Barcode
+    </button>
+   </div>
+   <div class="categories">
+    <div class="category">
+     Plates
+    </div>
+    <div class="category">
+     Bowls
+    </div>
+    <div class="category">
+     Cups
+    </div>
+    <div class="category">
+     Cutlery
+    </div>
+    <div class="category">
+     Glassware
+    </div>
+    <div class="category">
+     Serving Dishes
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->

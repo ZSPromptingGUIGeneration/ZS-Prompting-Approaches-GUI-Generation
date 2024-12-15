@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App - Soups
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.75rem;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header .back-button {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+        .header .back-button::before {
+            content: '← ';
+        }
+        .header .profile-link {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            padding: 1.5rem;
+        }
+        .search-bar {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .search-bar form {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+        }
+        .search-bar input, .search-bar select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .search-bar input::placeholder {
+            color: #999;
+        }
+        .search-bar .clear-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .sort-options {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+        .sort-options select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .soup-list {
+            list-style: none;
+            padding: 0;
+        }
+        .soup-item {
+            background-color: white;
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .soup-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .soup-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .soup-item p {
+            margin: 0.5rem 0 0;
+            color: #444;
+        }
+        .soup-item .rating, .soup-item .prep-time, .soup-item .ingredients, .soup-item .nutrition, .soup-item .reviews, .soup-item .tags, .soup-item .difficulty {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #666;
+        }
+        .rating span {
+            color: gold;
+        }
+        .soup-item a {
+            color: #ff6347;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .soup-item a:hover {
+            text-decoration: underline;
+        }
+        .tags {
+            font-style: italic;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .pagination button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .pagination button:disabled {
+            background-color: #ccc;
+        }
+        @media (max-width: 600px) {
+            .soup-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .soup-item img {
+                width: 100%;
+                height: auto;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <a class="back-button" href="#">
+    Back
+   </a>
+   Soups
+   <a class="profile-link" href="#">
+    Profile
+   </a>
+  </div>
+  <div class="container">
+   <div class="search-bar">
+    <form>
+     <input placeholder="Search soups by name, ingredient, or type..." type="text"/>
+     <select>
+      <option value="">
+       Filter by category
+      </option>
+      <optgroup label="Dietary Preferences">
+       <option value="vegetarian">
+        Vegetarian
+       </option>
+       <option value="vegan">
+        Vegan
+       </option>
+       <option value="gluten-free">
+        Gluten-Free
+       </option>
+      </optgroup>
+      <optgroup label="Soup Types">
+       <option value="creamy">
+        Creamy
+       </option>
+       <option value="broth-based">
+        Broth-Based
+       </option>
+       <option value="cold">
+        Cold Soups
+       </option>
+      </optgroup>
+     </select>
+     <button class="clear-button" type="button">
+      Clear
+     </button>
+    </form>
+   </div>
+   <div class="sort-options">
+    <select>
+     <option value="">
+      Sort by
+     </option>
+     <option value="rating">
+      Highest Rated
+     </option>
+     <option value="prep-time">
+      Shortest Prep Time
+     </option>
+     <option value="alphabetical">
+      Alphabetical
+     </option>
+    </select>
+   </div>
+   <ul class="soup-list">
+    <li class="soup-item">
+     <img alt="A bowl of creamy tomato soup garnished with basil" src=""/>
+     <div>
+      <h3>
+       <a href="#">
+        Tomato Soup
+       </a>
+      </h3>
+      <p>
+       A classic and creamy tomato soup.
+      </p>
+      <div class="rating">
+       Rating:
+       <span>
+        ★★★★☆
+       </span>
+      </div>
+      <div class="prep-time">
+       Prep Time: 10 mins
+      </div>
+      <div class="cook-time">
+       Cook Time: 20 mins
+      </div>
+      <div class="ingredients">
+       Ingredients: Tomatoes, Cream, Basil
+      </div>
+      <div class="nutrition">
+       Nutritional Info: 150 kcal, 5g protein, 7g fat, 20g carbs
+      </div>
+      <div class="reviews">
+       User Reviews: 45
+      </div>
+      <div class="tags">
+       Tags: Low-Calorie, Quick
+      </div>
+      <div class="difficulty">
+       Difficulty: Easy
+      </div>
+     </div>
+    </li>
+    <li class="soup-item">
+     <img alt="A bowl of chicken noodle soup with vegetables" src=""/>
+     <div>
+      <h3>
+       <a href="#">
+        Chicken Noodle Soup
+       </a>
+      </h3>
+      <p>
+       Hearty chicken soup with noodles and vegetables.
+      </p>
+      <div class="rating">
+       Rating:
+       <span>
+        ★★★★★
+       </span>
+      </div>
+      <div class="prep-time">
+       Prep Time: 15 mins
+      </div>
+      <div class="cook-time">
+       Cook Time: 30 mins
+      </div>
+      <div class="ingredients">
+       Ingredients: Chicken, Noodles, Carrots
+      </div>
+      <div class="nutrition">
+       Nutritional Info: 250 kcal, 20g protein, 10g fat, 30g carbs
+      </div>
+      <div class="reviews">
+       User Reviews: 60
+      </div>
+      <div class="tags">
+       Tags: High-Protein, Comfort Food
+      </div>
+      <div class="difficulty">
+       Difficulty: Medium
+      </div>
+     </div>
+    </li>
+    <li class="soup-item">
+     <img alt="A bowl of minestrone soup with pasta and beans" src=""/>
+     <div>
+      <h3>
+       <a href="#">
+        Minestrone
+       </a>
+      </h3>
+      <p>
+       Italian vegetable soup with pasta and beans.
+      </p>
+      <div class="rating">
+       Rating:
+       <span>
+        ★★★★☆
+       </span>
+      </div>
+      <div class="prep-time">
+       Prep Time: 20 mins
+      </div>
+      <div class="cook-time">
+       Cook Time: 30 mins
+      </div>
+      <div class="ingredients">
+       Ingredients: Beans, Pasta, Vegetables
+      </div>
+      <div class="nutrition">
+       Nutritional Info: 200 kcal, 8g protein, 5g fat, 35g carbs
+      </div>
+      <div class="reviews">
+       User Reviews: 30
+      </div>
+      <div class="tags">
+       Tags: Vegan, Hearty
+      </div>
+      <div class="difficulty">
+       Difficulty: Medium
+      </div>
+     </div>
+    </li>
+    <li class="soup-item">
+     <img alt="A bowl of French onion soup with melted cheese" src=""/>
+     <div>
+      <h3>
+       <a href="#">
+        French Onion Soup
+       </a>
+      </h3>
+      <p>
+       Rich and flavorful onion soup with melted cheese.
+      </p>
+      <div class="rating">
+       Rating:
+       <span>
+        ★★★★★
+       </span>
+      </div>
+      <div class="prep-time">
+       Prep Time: 15 mins
+      </div>
+      <div class="cook-time">
+       Cook Time: 45 mins
+      </div>
+      <div class="ingredients">
+       Ingredients: Onions, Cheese, Broth
+      </div>
+      <div class="nutrition">
+       Nutritional Info: 300 kcal, 10g protein, 15g fat, 40g carbs
+      </div>
+      <div class="reviews">
+       User Reviews: 50
+      </div>
+      <div class="tags">
+       Tags: Spicy, Comfort Food
+      </div>
+      <div class="difficulty">
+       Difficulty: Hard
+      </div>
+     </div>
+    </li>
+   </ul>
+   <div class="pagination">
+    <button disabled="">
+     Previous
+    </button>
+    <button>
+     1
+    </button>
+    <button>
+     2
+    </button>
+    <button>
+     Next
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

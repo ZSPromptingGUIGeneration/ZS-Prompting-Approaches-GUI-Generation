@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 16px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background-color: #6200ea;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header .settings {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .input-field, .output-field {
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .input-field input, .output-field input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+        }
+        .input-field input:focus, .output-field input:focus {
+            border-color: #6200ea;
+        }
+        .input-field label, .output-field label {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            font-size: 16px;
+            color: #999;
+            transition: all 0.2s ease;
+        }
+        .input-field input:focus + label, .output-field input:focus + label,
+        .input-field input:not(:placeholder-shown) + label, .output-field input:not(:placeholder-shown) + label {
+            top: -8px;
+            left: 8px;
+            font-size: 12px;
+            color: #6200ea;
+        }
+        .char-count {
+            font-size: 12px;
+            color: #999;
+            text-align: right;
+        }
+        .translate-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #6200ea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .translate-button:hover {
+            background-color: #3700b3;
+        }
+        .translate-button:active {
+            background-color: #6200ea;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .translate-button .icon {
+            margin-right: 8px;
+        }
+        .output-field {
+            position: relative;
+        }
+        .output-field input {
+            background-color: #e0e0e0;
+        }
+        .output-icons {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+        }
+        .output-icons .icon {
+            margin-right: 16px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .history {
+            margin-top: 16px;
+        }
+        .history .card {
+            background-color: white;
+            padding: 16px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .history .card h3 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+        }
+        .history .card p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .language-selection {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 16px;
+        }
+        .language-selection select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .voice-input, .voice-output {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .voice-input.active, .voice-output.active {
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .snackbar.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;} 
+            to {bottom: 30px; opacity: 1;}
+        }
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;} 
+            to {bottom: 0; opacity: 0;}
+        }
+        .loading-indicator {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+        .loading-indicator.active {
+            display: flex;
+        }
+        .loading-indicator .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #6200ea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Translate
+   </h1>
+   <div class="settings">
+    ⚙️
+   </div>
+  </div>
+  <div class="container">
+   <div class="language-selection">
+    <select>
+     <option value="es">
+      🇪🇸 Spanish
+     </option>
+     <option value="en">
+      🇬🇧 English
+     </option>
+    </select>
+   </div>
+   <div class="input-field">
+    <input id="spanish-text" maxlength="100" placeholder=" " type="text"/>
+    <label for="spanish-text">
+     Enter Spanish Text
+    </label>
+    <div class="char-count" id="char-count">
+     0/100
+    </div>
+    <div class="voice-input">
+     🎤
+    </div>
+   </div>
+   <button class="translate-button">
+    <span class="icon">
+     🔄
+    </span>
+    Translate
+   </button>
+   <div class="output-field">
+    <input id="english-translation" placeholder=" " readonly="" type="text"/>
+    <label for="english-translation">
+     English Translation
+    </label>
+    <div class="voice-output">
+     🔊
+    </div>
+   </div>
+   <div class="output-icons">
+    <div class="icon">
+     📋
+    </div>
+    <div class="icon">
+     🔗
+    </div>
+   </div>
+   <div class="history">
+    <div class="card">
+     <h3>
+      Hola
+     </h3>
+     <p>
+      Hello
+     </p>
+    </div>
+    <div class="card">
+     <h3>
+      Adiós
+     </h3>
+     <p>
+      Goodbye
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="snackbar" id="snackbar">
+   Error: Please enter text to translate.
+  </div>
+  <div class="loading-indicator" id="loading-indicator">
+   <div class="spinner">
+   </div>
+  </div>
+  <script>
+   document.getElementById('spanish-text').addEventListener('input', function() {
+            document.getElementById('char-count').textContent = `${this.value.length}/100`;
+        });
+        document.querySelector('.translate-button').addEventListener('click', function() {
+            const text = document.getElementById('spanish-text').value;
+            if (!text) {
+                const snackbar = document.getElementById('snackbar');
+                snackbar.className = 'snackbar show';
+                setTimeout(() => snackbar.className = snackbar.className.replace('show', ''), 3000);
+                return;
+            }
+            const loadingIndicator = document.getElementById('loading-indicator');
+            loadingIndicator.classList.add('active');
+            setTimeout(() => {
+                document.getElementById('english-translation').value = 'Translated Text';
+                loadingIndicator.classList.remove('active');
+            }, 2000);
+        });
+  </script>
+ </body>
+</html>

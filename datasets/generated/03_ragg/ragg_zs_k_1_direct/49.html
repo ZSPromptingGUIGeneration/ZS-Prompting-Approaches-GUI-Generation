@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .phrase-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .phrase-item {
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .phrase-item .text {
+            flex-grow: 1;
+        }
+        .phrase-item .listen-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .listen-btn:hover {
+            background-color: #45a049;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Translation App
+   </h1>
+  </div>
+  <div class="container">
+   <ul class="phrase-list">
+    <li class="phrase-item">
+     <div class="text">
+      <p>
+       <strong>
+        English:
+       </strong>
+       Hello
+      </p>
+      <p>
+       <strong>
+        Italian:
+       </strong>
+       Ciao
+      </p>
+     </div>
+     <button class="listen-btn">
+      ▶
+     </button>
+    </li>
+    <li class="phrase-item">
+     <div class="text">
+      <p>
+       <strong>
+        English:
+       </strong>
+       Thank you
+      </p>
+      <p>
+       <strong>
+        Italian:
+       </strong>
+       Grazie
+      </p>
+     </div>
+     <button class="listen-btn">
+      ▶
+     </button>
+    </li>
+    <li class="phrase-item">
+     <div class="text">
+      <p>
+       <strong>
+        English:
+       </strong>
+       Please
+      </p>
+      <p>
+       <strong>
+        Italian:
+       </strong>
+       Per favore
+      </p>
+     </div>
+     <button class="listen-btn">
+      ▶
+     </button>
+    </li>
+    <li class="phrase-item">
+     <div class="text">
+      <p>
+       <strong>
+        English:
+       </strong>
+       Good morning
+      </p>
+      <p>
+       <strong>
+        Italian:
+       </strong>
+       Buongiorno
+      </p>
+     </div>
+     <button class="listen-btn">
+      ▶
+     </button>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>

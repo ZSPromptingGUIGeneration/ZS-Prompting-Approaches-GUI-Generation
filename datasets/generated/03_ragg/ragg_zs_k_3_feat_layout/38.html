@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Submit a Picture
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group .checkbox-label {
+            display: flex;
+            align-items: center;
+        }
+        .form-group .checkbox-label label {
+            margin: 0;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Submit a Picture
+   </h1>
+   <form>
+    <div class="form-group">
+     <label for="email">
+      Email:
+     </label>
+     <input id="email" name="email" required="" type="email"/>
+    </div>
+    <div class="form-group">
+     <label for="title">
+      Title:
+     </label>
+     <input id="title" name="title" required="" type="text"/>
+    </div>
+    <div class="form-group">
+     <label for="description">
+      Description:
+     </label>
+     <textarea id="description" name="description"></textarea>
+    </div>
+    <div class="form-group">
+     <label for="location">
+      Location:
+     </label>
+     <input id="location" name="location" required="" type="text"/>
+    </div>
+    <div class="form-group checkbox-label">
+     <input id="terms" name="terms" required="" type="checkbox"/>
+     <label for="terms">
+      I agree to the terms of submission
+     </label>
+    </div>
+    <button class="submit-btn" type="submit">
+     Submit
+    </button>
+   </form>
+  </div>
+ </body>
+</html>

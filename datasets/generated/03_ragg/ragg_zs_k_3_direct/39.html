@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bicycle Details
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            width: 100%;
+            position: relative;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+        .details {
+            padding: 20px;
+        }
+        .details h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .details .price {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #e74c3c;
+        }
+        .details p {
+            margin: 10px 0;
+            color: #666;
+            line-height: 1.6;
+        }
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            background-color: #27ae60;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background-color: #219150;
+        }
+        .related-products {
+            padding: 20px;
+        }
+        .related-products h2 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .related-products .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .related-products .product img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .related-products .product .info {
+            flex-grow: 1;
+        }
+        .related-products .product .info h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .related-products .product .info .price {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #e74c3c;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="image-container">
+    <img alt="Bicycle" src=""/>
+   </div>
+   <div class="details">
+    <h1>
+     Mountain Bike
+    </h1>
+    <div class="price">
+     $499.99
+    </div>
+    <p>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at semper eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer ut nisi quam.
+    </p>
+    <button class="add-to-cart">
+     Add to Cart
+    </button>
+   </div>
+   <div class="related-products">
+    <h2>
+     Related Products
+    </h2>
+    <div class="product">
+     <img alt="Product 1" src=""/>
+     <div class="info">
+      <h3>
+       Road Bike
+      </h3>
+      <div class="price">
+       $299.99
+      </div>
+     </div>
+    </div>
+    <div class="product">
+     <img alt="Product 2" src=""/>
+     <div class="info">
+      <h3>
+       Hybrid Bike
+      </h3>
+      <div class="price">
+       $399.99
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

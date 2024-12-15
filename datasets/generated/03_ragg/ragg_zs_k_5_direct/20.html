@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports News
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header .menu {
+            display: flex;
+            gap: 10px;
+        }
+        .header .menu i {
+            font-size: 20px;
+        }
+        .search-bar {
+            padding: 10px 15px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .tabs {
+            display: flex;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+        .tabs a {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 2px solid transparent;
+        }
+        .tabs a.active {
+            border-bottom: 2px solid #007bff;
+            color: #007bff;
+        }
+        .article-list {
+            padding: 15px;
+        }
+        .article {
+            background-color: #fff;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .article img {
+            width: 100%;
+            height: auto;
+        }
+        .article-content {
+            padding: 15px;
+        }
+        .article-title {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .article-meta {
+            font-size: 14px;
+            color: #666;
+        }
+        .article-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            background-color: #f5f5f5;
+            border-top: 1px solid #ccc;
+        }
+        .article-actions a {
+            text-decoration: none;
+            color: #007bff;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Sports
+   </h1>
+   <div class="menu">
+    <i class="fa fa-search">
+    </i>
+    <i class="fa fa-filter">
+    </i>
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search or enter address" type="text"/>
+  </div>
+  <div class="tabs">
+   <a class="active" href="#">
+    All
+   </a>
+   <a href="#">
+    NFL
+   </a>
+   <a href="#">
+    NBA
+   </a>
+   <a href="#">
+    MLB
+   </a>
+   <a href="#">
+    NCAAF
+   </a>
+   <a href="#">
+    NCAAB
+   </a>
+  </div>
+  <div class="article-list">
+   <div class="article">
+    <img alt="Article Image" src=""/>
+    <div class="article-content">
+     <div class="article-title">
+      Messi, Madrid and five-goal Paris catch the eye
+     </div>
+     <div class="article-meta">
+      12 hours ago
+     </div>
+    </div>
+    <div class="article-actions">
+     <a href="#">
+      Share
+     </a>
+     <a href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+   <div class="article">
+    <img alt="Article Image" src=""/>
+    <div class="article-content">
+     <div class="article-title">
+      Records set, Griezmann's Atlético honour, Juve's super subs: The week in numbers
+     </div>
+     <div class="article-meta">
+      14 hours ago
+     </div>
+    </div>
+    <div class="article-actions">
+     <a href="#">
+      Share
+     </a>
+     <a href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+   <div class="article">
+    <img alt="Article Image" src=""/>
+    <div class="article-content">
+     <div class="article-title">
+      Emerging NFL Star Forced To Retire At 24 Years Old
+     </div>
+     <div class="article-meta">
+      espn1420.com
+     </div>
+    </div>
+    <div class="article-actions">
+     <a href="#">
+      Share
+     </a>
+     <a href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+   <div class="article">
+    <img alt="Article Image" src=""/>
+    <div class="article-content">
+     <div class="article-title">
+      Dak Prescott And Ezekiel Elliott Get Over Their Loss By Hitting Up Hakkasan In Vegas
+     </div>
+     <div class="article-meta">
+      bustedcoverage.com
+     </div>
+    </div>
+    <div class="article-actions">
+     <a href="#">
+      Share
+     </a>
+     <a href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+   <div class="article">
+    <img alt="Article Image" src=""/>
+    <div class="article-content">
+     <div class="article-title">
+      Jose Mourinho reveals reason Manchester United are not challenging for the title this season
+     </div>
+     <div class="article-meta">
+      manchestereveningnews.co.uk
+     </div>
+    </div>
+    <div class="article-actions">
+     <a href="#">
+      Share
+     </a>
+     <a href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+   <div class="article">
+    <img alt="Article Image" src=""/>
+    <div class="article-content">
+     <div class="article-title">
+      2017 JUCO prospect announces decision to decommit from Alabama
+     </div>
+     <div class="article-meta">
+      saturdaydownsouth.com
+     </div>
+    </div>
+    <div class="article-actions">
+     <a href="#">
+      Share
+     </a>
+     <a href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

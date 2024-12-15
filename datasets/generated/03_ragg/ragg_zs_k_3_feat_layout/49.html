@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: #007BFF;
+            color: white;
+        }
+        .phrase {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .phrase:last-child {
+            border-bottom: none;
+        }
+        .english {
+            flex: 1;
+        }
+        .italian {
+            flex: 1;
+            text-align: right;
+            color: #555;
+        }
+        .listen-btn {
+            background: none;
+            border: none;
+            color: #007BFF;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Translation App
+    </h1>
+   </div>
+   <div class="phrase">
+    <span class="english">
+     Hello
+    </span>
+    <span class="italian">
+     Ciao
+    </span>
+    <button class="listen-btn">
+     🔊
+    </button>
+   </div>
+   <div class="phrase">
+    <span class="english">
+     Goodbye
+    </span>
+    <span class="italian">
+     Addio
+    </span>
+    <button class="listen-btn">
+     🔊
+    </button>
+   </div>
+   <div class="phrase">
+    <span class="english">
+     Please
+    </span>
+    <span class="italian">
+     Per favore
+    </span>
+    <button class="listen-btn">
+     🔊
+    </button>
+   </div>
+   <div class="phrase">
+    <span class="english">
+     Thank you
+    </span>
+    <span class="italian">
+     Grazie
+    </span>
+    <button class="listen-btn">
+     🔊
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

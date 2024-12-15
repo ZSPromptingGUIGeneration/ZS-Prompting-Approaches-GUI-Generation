@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Article List Display
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+        .card-title {
+            font-weight: 700;
+        }
+        .card-text {
+            font-weight: 400;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-muted {
+            font-size: 0.875rem;
+        }
+        .category-filters {
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: 20px;
+        }
+        .category-filters .btn {
+            margin-right: 10px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .interactive-icons {
+            display: flex;
+            align-items: center;
+        }
+        .interactive-icons .icon {
+            margin-right: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <div class="input-group">
+     <input class="form-control" placeholder="Search articles..." type="text"/>
+     <div class="input-group-append">
+      <span class="input-group-text">
+       <i class="fas fa-search">
+       </i>
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="category-filters">
+    <button class="btn btn-outline-secondary">
+     All
+    </button>
+    <button class="btn btn-outline-secondary">
+     Football
+    </button>
+    <button class="btn btn-outline-secondary">
+     Basketball
+    </button>
+    <button class="btn btn-outline-secondary">
+     Tennis
+    </button>
+    <button class="btn btn-outline-secondary">
+     Cricket
+    </button>
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <div class="card">
+      <img alt="Football match action" class="card-img-top" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/34314842-16ca-415c-8383-adcad2ba6e5b.png"/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Thrilling Football Match Ends in Draw
+       </h5>
+       <p class="card-text">
+        A nail-biting football match ended in a 2-2 draw, with both teams showcasing exceptional skill and determination.
+       </p>
+      </div>
+      <div class="card-footer">
+       <small class="text-muted">
+        Published on: Oct 10, 2023
+       </small>
+       <div class="interactive-icons">
+        <span class="icon">
+         <i class="fas fa-bookmark">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-share-alt">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-thumbs-up">
+         </i>
+         120
+        </span>
+        <span class="icon">
+         <i class="fas fa-comments">
+         </i>
+         45
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="card">
+      <img alt="Basketball player scoring" class="card-img-top" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/1a3e71e6-2ffa-4033-a276-0ec3d16dfc5e.png"/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Star Player Scores 50 Points in Epic Game
+       </h5>
+       <p class="card-text">
+        The star player delivered an unforgettable performance, scoring 50 points and leading the team to victory.
+       </p>
+      </div>
+      <div class="card-footer">
+       <small class="text-muted">
+        Published on: Oct 12, 2023
+       </small>
+       <div class="interactive-icons">
+        <span class="icon">
+         <i class="fas fa-bookmark">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-share-alt">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-thumbs-up">
+         </i>
+         200
+        </span>
+        <span class="icon">
+         <i class="fas fa-comments">
+         </i>
+         80
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="card">
+      <img alt="Tennis player serving" class="card-img-top" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/cded1ebf-23fa-48f0-b52a-eff13fc87a24.png"/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Grand Slam Tournament: Day 3 Highlights
+       </h5>
+       <p class="card-text">
+        Catch up on the thrilling highlights from Day 3 of the Grand Slam tournament, featuring intense matches and stunning performances.
+       </p>
+      </div>
+      <div class="card-footer">
+       <small class="text-muted">
+        Published on: Oct 11, 2023
+       </small>
+       <div class="interactive-icons">
+        <span class="icon">
+         <i class="fas fa-bookmark">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-share-alt">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-thumbs-up">
+         </i>
+         150
+        </span>
+        <span class="icon">
+         <i class="fas fa-comments">
+         </i>
+         60
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="card">
+      <img alt="Cricket players celebrating" class="card-img-top" id="image4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5b1dc73a-7c39-42b0-8fd1-571d8374b02d.png"/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Cricket Team Clinches Series Win
+       </h5>
+       <p class="card-text">
+        The cricket team celebrated a series win after a hard-fought match, showcasing excellent teamwork and strategy.
+       </p>
+      </div>
+      <div class="card-footer">
+       <small class="text-muted">
+        Published on: Oct 13, 2023
+       </small>
+       <div class="interactive-icons">
+        <span class="icon">
+         <i class="fas fa-bookmark">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-share-alt">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-thumbs-up">
+         </i>
+         180
+        </span>
+        <span class="icon">
+         <i class="fas fa-comments">
+         </i>
+         70
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="text-center">
+    <button class="btn btn-primary">
+     Load More
+    </button>
+   </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>

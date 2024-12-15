@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Search
+  </title>
+  <style>
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #FF6F61;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+  }
+  .header input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+  }
+  .header .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+  .tags span {
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+  .categories .category {
+    width: 45%;
+    margin: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  .categories .category img {
+    width: 100%;
+    height: auto;
+  }
+  .categories .category .title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .recipe-list {
+    padding: 10px;
+  }
+  .recipe-list .recipe {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .recipe-list .recipe img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .recipe-list .recipe .details {
+    flex: 1;
+  }
+  .recipe-list .recipe .details h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  .recipe-list .recipe .details span {
+    color: #888;
+    font-size: 14px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  .footer div {
+    text-align: center;
+    font-size: 14px;
+  }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <input placeholder="Search with recipe or ingredient..." type="text"/>
+   <span class="search-icon">
+    🔍
+   </span>
+  </div>
+  <div class="tags">
+   <span>
+    meat
+   </span>
+   <span>
+    fish &amp; seafood
+   </span>
+   <span>
+    dairy-free
+   </span>
+   <span>
+    vegetarian
+   </span>
+   <span>
+    vegan
+   </span>
+   <span>
+    gluten-free
+   </span>
+   <span>
+    Spicy
+   </span>
+   <span>
+    Spicy Chicken Stew
+   </span>
+   <span>
+    Cold ramen
+   </span>
+   <span>
+    Boostup dish
+   </span>
+   <span>
+    Spam mayo
+   </span>
+   <span>
+    Hot summer
+   </span>
+  </div>
+  <div class="categories">
+   <div class="category">
+    <img alt="Daily Picks" src=""/>
+    <div class="title">
+     Daily Picks
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Yummies for U" src=""/>
+    <div class="title">
+     Yummies for U
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Hottest" src=""/>
+    <div class="title">
+     Hottest
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Aid for Clumsy Cook" src=""/>
+    <div class="title">
+     Aid for Clumsy Cook
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Speedy &amp; Simple" src=""/>
+    <div class="title">
+     Speedy &amp; Simple
+    </div>
+   </div>
+  </div>
+  <div class="recipe-list">
+   <div class="recipe">
+    <img alt="Easter Bread" src=""/>
+    <div class="details">
+     <h3>
+      Easter Bread
+     </h3>
+     <span>
+      Uncategorized
+     </span>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Easter Cheese Bread" src=""/>
+    <div class="details">
+     <h3>
+      Easter Cheese Bread
+     </h3>
+     <span>
+      Uncategorized
+     </span>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Easter Egg Cookies" src=""/>
+    <div class="details">
+     <h3>
+      Easter Egg Cookies
+     </h3>
+     <span>
+      Uncategorized
+     </span>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Easter Pie" src=""/>
+    <div class="details">
+     <h3>
+      Easter Pie
+     </h3>
+     <span>
+      Uncategorized
+     </span>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Easter Sweet Bread" src=""/>
+    <div class="details">
+     <h3>
+      Easter Sweet Bread
+     </h3>
+     <span>
+      Dessert
+     </span>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Easter Sweet Bread II" src=""/>
+    <div class="details">
+     <h3>
+      Easter Sweet Bread II
+     </h3>
+     <span>
+      Dessert
+     </span>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Easy Cheesy Italian Noodles" src=""/>
+    <div class="details">
+     <h3>
+      Easy Cheesy Italian Noodles
+     </h3>
+     <span>
+      Pasta
+     </span>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Easy Fruit Pizza" src=""/>
+    <div class="details">
+     <h3>
+      Easy Fruit Pizza
+     </h3>
+     <span>
+      Dessert
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <div>
+    Home
+   </div>
+   <div>
+    Shop
+   </div>
+   <div>
+    Favourites
+   </div>
+   <div>
+    My Account
+   </div>
+  </div>
+ </body>
+</html>

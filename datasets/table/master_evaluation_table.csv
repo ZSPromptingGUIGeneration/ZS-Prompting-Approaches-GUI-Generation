@@ -1,0 +1,1001 @@
+RICO GUI,description,method_name,method_id,uuid,key
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",01_baselines_zs_instruction,1,6c1a55c2-0417-42f3-a586-88a22f5d6b31,0001
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",01_baselines_zs_cot,2,b0330c59-cc2e-4756-a325-e45f46e8e94f,0002
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",01_baselines_zs_cot_content,3,d7a8ba95-3ad2-4539-9660-34e539a09fce,0003
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",02_prompt_decomposition_pd_zs,4,8af6f672-a331-456c-ab78-46d8c702d5d3,0004
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",02_prompt_decomposition_pd_zs_cot,5,8c0f4962-dfca-4b96-959f-cd39567fca15,0005
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",02_prompt_decomposition_pd_zs_content,6,f8ab2509-b1e9-4466-a0cb-c63cea3a9241,0006
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",03_rag_zs_k_1_direct,7,cda51b6e-bc47-4d77-bbed-f17fe876feb9,0007
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",03_rag_zs_k_3_direct,8,2cd6205a-5f84-4cdf-8616-127cf12225cc,0008
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",03_rag_zs_k_5_direct,9,803c956e-7a22-432f-abe1-92442eb11479,0009
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",03_rag_zs_k_7_direct,10,f0f9f2b9-07a3-440d-87af-0f26008dd813,0010
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",03_rag_zs_k_3_direct_content,11,70dfda77-6c9f-44cf-b004-37dadf2c32f5,0011
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",03_rag_zs_k_3_direct_pd_zs,12,79fa2ea9-3274-4812-9c26-212b11119289,0012
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",03_rag_zs_k_3_feat_layout,13,78bae775-04ad-4d3c-8f2e-7c32031209a8,0013
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",04_self_critique_base_zs_instruction_k_1,14,e6118f09-4678-42f9-9a7d-b0242bcc9493,0014
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",04_self_critique_base_zs_instruction_k_2,15,f3c09b79-e1bc-459c-8335-5fc74ec45e44,0015
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",04_self_critique_base_zs_instruction_k_3,16,cf56c298-dedc-4b6f-86a1-1b196e0d46fb,0016
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",04_self_critique_base_zs_instruction_k_4,17,d4e2b1ec-c4fe-49d2-8ec3-1b65f312d6c7,0017
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",04_self_critique_base_zs_instruction_content_k_3,18,b0a0785c-fdf0-4d49-a31e-726a10ccd277,0018
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",04_self_critique_base_pd_zs_k_3,19,d5d210c3-7c0c-4059-a5e3-5492c783425e,0019
+4003,"A page from a translation app, that offers translations to italian for commonly used english phrases, with the possibilty to listen to the translation afterwards.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,9e3a4577-ef17-40e5-a8fc-545f67902ed3,0020
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,01_baselines_zs_instruction,1,279f108f-9637-47f8-b729-8ff8b8b3b57e,0021
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,01_baselines_zs_cot,2,273a61c5-46c0-4b22-85d0-1646293f73c0,0022
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,01_baselines_zs_cot_content,3,0480776e-f84c-4c6a-a7fc-4ff398493664,0023
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,02_prompt_decomposition_pd_zs,4,d4f2ea7b-f92d-46eb-b709-23ac3e4f1655,0024
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,02_prompt_decomposition_pd_zs_cot,5,d7599e46-3f07-4bd4-a4ab-801f9556848a,0025
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,02_prompt_decomposition_pd_zs_content,6,42138a47-cae2-4f0a-96b5-03e27ea889cf,0026
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,03_rag_zs_k_1_direct,7,0a853c92-b692-4ba1-8f71-f4fe8355dfc6,0027
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,03_rag_zs_k_3_direct,8,f01181cf-ab87-48f0-8945-75f087be6ae6,0028
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,03_rag_zs_k_5_direct,9,705c02bc-9822-4f0a-b3a3-f2b619bfcfe3,0029
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,03_rag_zs_k_7_direct,10,03d333ea-efac-439e-98a4-a9ed1ad6510b,0030
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,03_rag_zs_k_3_direct_content,11,2750c67d-41a1-49cf-8376-caf2ed2b9b2b,0031
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,03_rag_zs_k_3_direct_pd_zs,12,afe34704-ec78-4c1f-b9fd-8434559ad84d,0032
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,03_rag_zs_k_3_feat_layout,13,3b802dc7-703a-4296-85e5-04f9d0dd0b5f,0033
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,04_self_critique_base_zs_instruction_k_1,14,00b1ddb8-d3a3-41cd-8f25-e965c79894ce,0034
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,04_self_critique_base_zs_instruction_k_2,15,7fd2dfc9-fa5f-4667-8e6c-3340f3df277a,0035
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,04_self_critique_base_zs_instruction_k_3,16,723136e9-47ca-4e78-852e-7a441b86e2b4,0036
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,04_self_critique_base_zs_instruction_k_4,17,1ce2633d-50e2-4bdc-a1e0-6708aa0fbcb5,0037
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,04_self_critique_base_zs_instruction_content_k_3,18,0b45848b-149c-4810-a6db-63f5ddc54af8,0038
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,04_self_critique_base_pd_zs_k_3,19,9cd802bd-c4d4-4083-bf1d-e83d0a0efad9,0039
+7144,A registration GUI that requires personal information from new users and show subscribtion options.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,413acb80-f809-444e-b5a0-b61fb4076eb1,0040
+7749,"A page from a news app, where the top stories are shown.",01_baselines_zs_instruction,1,90309e0e-9187-4cf2-8766-d7a678a4545a,0041
+7749,"A page from a news app, where the top stories are shown.",01_baselines_zs_cot,2,36fd5632-4314-4da6-b1b0-9486ffca44ce,0042
+7749,"A page from a news app, where the top stories are shown.",01_baselines_zs_cot_content,3,5bec4182-2951-4955-9aee-d89638b534dd,0043
+7749,"A page from a news app, where the top stories are shown.",02_prompt_decomposition_pd_zs,4,059330df-a26b-4738-95a4-bfc25162359b,0044
+7749,"A page from a news app, where the top stories are shown.",02_prompt_decomposition_pd_zs_cot,5,79095924-f7fa-4cd7-bc62-b767732c4357,0045
+7749,"A page from a news app, where the top stories are shown.",02_prompt_decomposition_pd_zs_content,6,85c7c54f-9851-4597-a3fc-516576aea2d0,0046
+7749,"A page from a news app, where the top stories are shown.",03_rag_zs_k_1_direct,7,1c211d1c-4bb5-4a39-8c9d-eb703b98375d,0047
+7749,"A page from a news app, where the top stories are shown.",03_rag_zs_k_3_direct,8,a0a60969-7a94-4514-b65d-e743f57c1ddb,0048
+7749,"A page from a news app, where the top stories are shown.",03_rag_zs_k_5_direct,9,fcc0ffab-1c72-45e3-b117-ad1fffccdc5f,0049
+7749,"A page from a news app, where the top stories are shown.",03_rag_zs_k_7_direct,10,6e95c5f3-ba1b-4d8c-8ec7-d74b08e4da3e,0050
+7749,"A page from a news app, where the top stories are shown.",03_rag_zs_k_3_direct_content,11,096fefac-4403-4512-bba5-6da0b10ea351,0051
+7749,"A page from a news app, where the top stories are shown.",03_rag_zs_k_3_direct_pd_zs,12,e6ae8410-4ca7-4374-8720-719904686e06,0052
+7749,"A page from a news app, where the top stories are shown.",03_rag_zs_k_3_feat_layout,13,df284f82-4922-4e7a-bc1f-90c169b952c4,0053
+7749,"A page from a news app, where the top stories are shown.",04_self_critique_base_zs_instruction_k_1,14,e7ce3251-5a07-4668-b02a-d3e75d3fff38,0054
+7749,"A page from a news app, where the top stories are shown.",04_self_critique_base_zs_instruction_k_2,15,9e8d5f3d-9d3c-41d3-8995-2177d3434b87,0055
+7749,"A page from a news app, where the top stories are shown.",04_self_critique_base_zs_instruction_k_3,16,dac0a112-25c6-43cd-990e-eddf9ba75ed5,0056
+7749,"A page from a news app, where the top stories are shown.",04_self_critique_base_zs_instruction_k_4,17,9705a3c2-d354-4624-97b9-0c05bb92a1ba,0057
+7749,"A page from a news app, where the top stories are shown.",04_self_critique_base_zs_instruction_content_k_3,18,2b1c5148-a4bf-487c-9aae-44ddb076fc0a,0058
+7749,"A page from a news app, where the top stories are shown.",04_self_critique_base_pd_zs_k_3,19,f3f96446-03d6-4875-845a-593e479bce69,0059
+7749,"A page from a news app, where the top stories are shown.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,70736be2-d32d-42b9-a562-d5019a36dcab,0060
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",01_baselines_zs_instruction,1,ccd98e02-4a31-4f20-94a2-ae4d6789e1b4,0061
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",01_baselines_zs_cot,2,82b3a68a-4959-4d9c-befb-5b655b4741a9,0062
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",01_baselines_zs_cot_content,3,69afa9a2-3b24-4093-98a9-ba7273a4048b,0063
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",02_prompt_decomposition_pd_zs,4,494be3ef-4a43-4980-a488-0d9af21208ae,0064
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",02_prompt_decomposition_pd_zs_cot,5,11e081bd-b9f2-4ca3-b012-79b2c6b287dd,0065
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",02_prompt_decomposition_pd_zs_content,6,db6ca40a-15d3-4675-ab54-b5134ec9fcae,0066
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",03_rag_zs_k_1_direct,7,d6cedfea-4895-4462-8759-f4d1f51d4b00,0067
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",03_rag_zs_k_3_direct,8,4229fe1a-5027-4b4e-8143-0b6ce478950d,0068
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",03_rag_zs_k_5_direct,9,e7ca0345-00e1-4d43-8c57-71984ed118ae,0069
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",03_rag_zs_k_7_direct,10,6160055f-2e09-4cd2-bb34-5c098b7ae989,0070
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",03_rag_zs_k_3_direct_content,11,d7a2d4b3-d0ea-40b9-96fc-22843c161fb5,0071
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",03_rag_zs_k_3_direct_pd_zs,12,2ce3a70c-71ed-4ba4-8772-82e9880a6537,0072
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",03_rag_zs_k_3_feat_layout,13,71afc738-a163-48fc-a57b-9316f1da82d7,0073
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",04_self_critique_base_zs_instruction_k_1,14,fcd6744a-f579-474c-9901-05de855f7f35,0074
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",04_self_critique_base_zs_instruction_k_2,15,681e5598-ba9b-48b8-89aa-a50ca9934220,0075
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",04_self_critique_base_zs_instruction_k_3,16,d420b177-be43-43a6-a583-63dab1313559,0076
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",04_self_critique_base_zs_instruction_k_4,17,edbe976d-b2a4-4f64-90b6-4ee168d9472d,0077
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",04_self_critique_base_zs_instruction_content_k_3,18,a9355357-d6f2-4ca3-b87a-2a81ae768a01,0078
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",04_self_critique_base_pd_zs_k_3,19,b2b0759a-870a-4686-b2cd-abe6b50de93b,0079
+10428,"an organisational app GUI, allowing the user to list the grocerys and save recipes",04_self_critique_base_rag_zs_k_3_direct_k_3,20,87cc6b14-5a03-481a-a2e3-3216caff28a4,0080
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,01_baselines_zs_instruction,1,d1cc7988-4cfd-457f-a8b4-5092d2a3e375,0081
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,01_baselines_zs_cot,2,25d75730-781c-4903-bc89-83ba5e441c89,0082
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,01_baselines_zs_cot_content,3,3dd16e0b-afe0-4078-8868-746e9b9ef830,0083
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,02_prompt_decomposition_pd_zs,4,6081d750-7c46-4153-9b63-70fec47c0c47,0084
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,02_prompt_decomposition_pd_zs_cot,5,dd93d46e-7ecb-45f4-9dfb-362406873c01,0085
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,02_prompt_decomposition_pd_zs_content,6,4e53a53f-c0e6-49e0-95bc-7e41371acf30,0086
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,03_rag_zs_k_1_direct,7,b5a3ecd7-b9eb-4469-9342-3afa7c0ae26e,0087
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,03_rag_zs_k_3_direct,8,f7f7933d-e359-475e-8248-73f232da5c0e,0088
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,03_rag_zs_k_5_direct,9,d6ebad64-9381-4605-a615-991b7eca4927,0089
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,03_rag_zs_k_7_direct,10,c418fc09-e79f-40c2-b5a9-07f16b326f5a,0090
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,03_rag_zs_k_3_direct_content,11,df0ffcca-dda0-473b-9e11-29950b886c3c,0091
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,03_rag_zs_k_3_direct_pd_zs,12,5d83c7dd-b19d-4b41-8113-14c0f5cf2a0b,0092
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,03_rag_zs_k_3_feat_layout,13,506e691d-0993-4d24-a3de-cd73ee697808,0093
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,04_self_critique_base_zs_instruction_k_1,14,a9b77182-4bb5-4df8-977b-1c209c617a90,0094
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,04_self_critique_base_zs_instruction_k_2,15,5dc73e65-3548-4895-9fdc-508a4f1bf49f,0095
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,04_self_critique_base_zs_instruction_k_3,16,3f103686-785f-4584-a70d-f72c7628fde2,0096
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,04_self_critique_base_zs_instruction_k_4,17,d078efcb-46d6-4fd3-9d83-bfbc788b7e29,0097
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,04_self_critique_base_zs_instruction_content_k_3,18,7632e812-b109-4456-a749-528e330dd7b9,0098
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,04_self_critique_base_pd_zs_k_3,19,58f95ce4-65d2-4cc1-9b2d-aeda1e8914e9,0099
+11579,a page from a language learning app showing common phrases in Spanish and their translations.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,c0e3d26d-37dd-4292-a196-de518b1e4791,0100
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,01_baselines_zs_instruction,1,edb504b4-07d6-4086-b068-1e44f2737a52,0101
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,01_baselines_zs_cot,2,2ed36051-0feb-4aee-8713-2fa53a54a539,0102
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,01_baselines_zs_cot_content,3,ceb38cc6-9b89-4dd7-aa2b-f19b6ed03895,0103
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,02_prompt_decomposition_pd_zs,4,7937037b-4424-4609-b0cb-030d8fe29c59,0104
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,02_prompt_decomposition_pd_zs_cot,5,c9b51f84-26bf-4320-8703-ca440322c84c,0105
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,02_prompt_decomposition_pd_zs_content,6,3da4cfbe-7963-4bcf-84d8-b0c959535a71,0106
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,03_rag_zs_k_1_direct,7,834e3301-6d1a-4d54-807c-8e407559aa09,0107
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,03_rag_zs_k_3_direct,8,2b2bc525-affb-4b1f-b5b3-2cca05249fbe,0108
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,03_rag_zs_k_5_direct,9,306935a9-1128-4644-b73c-b7f6b617d8b0,0109
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,03_rag_zs_k_7_direct,10,c831fde0-42d7-4456-b600-d49dd937d67f,0110
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,03_rag_zs_k_3_direct_content,11,0052fb18-e981-40e3-9b99-a1fef683692a,0111
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,03_rag_zs_k_3_direct_pd_zs,12,a1a981ef-38a4-4221-96f4-95cdad810c69,0112
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,03_rag_zs_k_3_feat_layout,13,5bb1d6d1-83bb-4c04-9b72-7a9847814bf2,0113
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,04_self_critique_base_zs_instruction_k_1,14,e3e709a0-3282-4779-884e-d9ec482095bb,0114
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,04_self_critique_base_zs_instruction_k_2,15,92dd61be-ca1e-4afa-ad64-2798ec66fb30,0115
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,04_self_critique_base_zs_instruction_k_3,16,8a9cc3f7-dbe0-4382-8739-fa4c204a0074,0116
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,04_self_critique_base_zs_instruction_k_4,17,00e93f7e-c5dc-48a6-975d-3460846997d5,0117
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,04_self_critique_base_zs_instruction_content_k_3,18,f1885d3c-bda2-408c-8529-c501ea32af32,0118
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,04_self_critique_base_pd_zs_k_3,19,ddaa9c86-a518-4ffc-b069-b40bb5d3d87b,0119
+12905,This is a plattform which helps you finding the right and the next possible shops for your enquirries.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,c298f02c-db5a-4384-9fac-7720b8bf9054,0120
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,01_baselines_zs_instruction,1,fd2b4010-17e1-48b9-8c8e-f81ba0ecfb38,0121
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,01_baselines_zs_cot,2,52a51f8c-a7a3-4f5b-bd68-cb4ce5d76aa0,0122
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,01_baselines_zs_cot_content,3,8c4407ee-b67c-4322-bd7e-220553e00df3,0123
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,02_prompt_decomposition_pd_zs,4,727bd755-0136-4b43-98a7-21a76c4ff007,0124
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,02_prompt_decomposition_pd_zs_cot,5,5ff2a263-57d7-49f6-902f-cf5971aa4dbb,0125
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,02_prompt_decomposition_pd_zs_content,6,55ae7071-9d22-4855-b21c-15bac0af9815,0126
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,03_rag_zs_k_1_direct,7,f4474b25-f991-4f4e-9cfc-5abf83fd2cd8,0127
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,03_rag_zs_k_3_direct,8,6533818a-0958-4149-994c-4813568a8e33,0128
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,03_rag_zs_k_5_direct,9,42baaaea-cdbe-41fb-b743-9af9a16bc4be,0129
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,03_rag_zs_k_7_direct,10,ae059db5-4932-4622-af69-0278bc04b888,0130
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,03_rag_zs_k_3_direct_content,11,d2281c5f-2837-483e-b433-d12dbd1a5f12,0131
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,03_rag_zs_k_3_direct_pd_zs,12,fe60adbe-15a5-4c31-bde8-badf3d831b52,0132
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,03_rag_zs_k_3_feat_layout,13,8c396170-9a15-4028-ab85-a9af65c28886,0133
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,04_self_critique_base_zs_instruction_k_1,14,986e3087-75dd-429f-a445-5f04e755d1cb,0134
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,04_self_critique_base_zs_instruction_k_2,15,acddf7bd-bfc2-487d-ac44-d940b06be4cf,0135
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,04_self_critique_base_zs_instruction_k_3,16,c9e030a3-07e9-46fe-b3ef-da47e4705e23,0136
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,04_self_critique_base_zs_instruction_k_4,17,bb37e0a1-4658-49da-81de-a83a8f96ca10,0137
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,04_self_critique_base_zs_instruction_content_k_3,18,c005ab20-719a-464e-921b-60eefde4fa1c,0138
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,04_self_critique_base_pd_zs_k_3,19,5437b34f-ea09-4a9a-9d2d-cc618a97b31a,0139
+14854,A weather app GUI that shows the weather forecast for a given city in the following 7 days.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,8267e986-bd61-48f5-b6cf-0f649ab5a661,0140
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",01_baselines_zs_instruction,1,4730af29-bfa2-4f99-ae77-57852c90fbc1,0141
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",01_baselines_zs_cot,2,173afc6f-ad5d-4586-ab5f-61dbe74f270a,0142
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",01_baselines_zs_cot_content,3,a2edd34e-4dc3-455a-b2e7-586dd919fdcd,0143
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",02_prompt_decomposition_pd_zs,4,a223b2af-610b-4ec1-9586-31e00f84d4f6,0144
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",02_prompt_decomposition_pd_zs_cot,5,b3b2f559-8eb7-4797-83dd-394ecad319f4,0145
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",02_prompt_decomposition_pd_zs_content,6,19ea7823-b065-4b69-9a81-c48588d50182,0146
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",03_rag_zs_k_1_direct,7,c6996f8b-5268-4e10-b8fa-9c149a2ca2f5,0147
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",03_rag_zs_k_3_direct,8,539b93cc-f44b-4d16-b8b5-e94c829db592,0148
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",03_rag_zs_k_5_direct,9,0d148925-46e3-4059-be50-23b09346fdbb,0149
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",03_rag_zs_k_7_direct,10,02f954b9-dad9-4920-9d9b-12b19e581bf3,0150
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",03_rag_zs_k_3_direct_content,11,92afcb40-7de6-411c-893c-50038edacfea,0151
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",03_rag_zs_k_3_direct_pd_zs,12,9dcb8e4f-9290-4a2f-9f62-c096ca9164f9,0152
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",03_rag_zs_k_3_feat_layout,13,344f9162-77ca-40b6-95bf-cf41c9a39cb1,0153
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",04_self_critique_base_zs_instruction_k_1,14,3952a15b-8fcd-4d6e-8010-780bc5a0f8a5,0154
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",04_self_critique_base_zs_instruction_k_2,15,31b349de-b184-46da-9642-83f97510f03e,0155
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",04_self_critique_base_zs_instruction_k_3,16,a51bf7e8-733d-4ef2-8355-d6e41925230e,0156
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",04_self_critique_base_zs_instruction_k_4,17,75a6a698-69e2-482e-9005-863aa1e252d1,0157
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",04_self_critique_base_zs_instruction_content_k_3,18,f16da868-2425-4b1b-be84-b33999b92242,0158
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",04_self_critique_base_pd_zs_k_3,19,77ed593b-14ae-4d79-a7e1-fa624e232b93,0159
+18269,"A page of a menu of a restaurunt. An overview of all items is shown, there is an ability to save items and look at the history of orders. The location and order type can be specified",04_self_critique_base_rag_zs_k_3_direct_k_3,20,ebe562e7-6ffc-47cc-8c19-55718cb9cb06,0160
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",01_baselines_zs_instruction,1,bd28e13c-f2fc-4732-a09f-a656609d15d3,0161
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",01_baselines_zs_cot,2,0dd12c9a-fb99-4934-bba8-78116a704f83,0162
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",01_baselines_zs_cot_content,3,5e1952c2-7e5a-4806-be70-122ccfba580d,0163
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",02_prompt_decomposition_pd_zs,4,d42cfb91-0ec4-4ee9-8cdb-015faf365fa0,0164
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",02_prompt_decomposition_pd_zs_cot,5,37897192-8ea1-48df-a79a-b6cf3f23ad70,0165
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",02_prompt_decomposition_pd_zs_content,6,6a770fa8-689c-4d15-b0fa-0252632f36c4,0166
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",03_rag_zs_k_1_direct,7,289a328c-1bc0-473a-bc8a-b557a88f4e59,0167
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",03_rag_zs_k_3_direct,8,aa01483f-b98d-466a-9708-0e4c54fc10c4,0168
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",03_rag_zs_k_5_direct,9,cdfd5226-b9db-46d8-a0d2-52bf93123f44,0169
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",03_rag_zs_k_7_direct,10,4c8b475c-dbf3-4720-9ac0-e17eea6ee245,0170
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",03_rag_zs_k_3_direct_content,11,4e60099b-aad8-4c09-9b9e-ebae37e58271,0171
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",03_rag_zs_k_3_direct_pd_zs,12,f5573dbb-786f-4bf8-9461-e5bcfbe41cc4,0172
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",03_rag_zs_k_3_feat_layout,13,763979eb-9123-4adc-b7e8-ad65e16586f8,0173
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",04_self_critique_base_zs_instruction_k_1,14,dd953dab-1f8d-49f4-b183-36e765cd003f,0174
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",04_self_critique_base_zs_instruction_k_2,15,de52b646-5b24-4b44-b3c1-8e75003b7b09,0175
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",04_self_critique_base_zs_instruction_k_3,16,26d283cc-d568-4aff-8b22-316a07b666f5,0176
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",04_self_critique_base_zs_instruction_k_4,17,3f5d7381-220e-4418-bdc4-eced2a7c4ead,0177
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",04_self_critique_base_zs_instruction_content_k_3,18,36a589b2-db2f-407e-8d32-2d52cc42c143,0178
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",04_self_critique_base_pd_zs_k_3,19,09732b99-d92a-4721-b866-86659958eebb,0179
+19228,"The page shows a form which has to filled out, to submit a picture. The user has to state his or her email, the title of the picture and is free to give a description. The location has to be stated as well and one has to agree to the terms of submission",04_self_critique_base_rag_zs_k_3_direct_k_3,20,42c517b9-1743-456d-b872-6488ff9e0ac7,0180
+23616,This is a music plattform where you can stream music.,01_baselines_zs_instruction,1,cec48d69-4fc6-44cb-8cfd-42c0864384d2,0181
+23616,This is a music plattform where you can stream music.,01_baselines_zs_cot,2,5fbb6926-d927-413a-8b8e-717aaee9ad35,0182
+23616,This is a music plattform where you can stream music.,01_baselines_zs_cot_content,3,852b3b29-6e4b-458e-98e9-8480b022abcd,0183
+23616,This is a music plattform where you can stream music.,02_prompt_decomposition_pd_zs,4,4ebf9c51-9c9a-4fb4-816f-8c91128ba0a0,0184
+23616,This is a music plattform where you can stream music.,02_prompt_decomposition_pd_zs_cot,5,95ebb6e9-fc51-4d82-9e60-f3ac842e11dd,0185
+23616,This is a music plattform where you can stream music.,02_prompt_decomposition_pd_zs_content,6,f895e3cb-23cf-475e-98ec-88f208a232c0,0186
+23616,This is a music plattform where you can stream music.,03_rag_zs_k_1_direct,7,406a8466-5b42-4d0d-9dc7-cf1ba17103d0,0187
+23616,This is a music plattform where you can stream music.,03_rag_zs_k_3_direct,8,9372c6ce-d22c-49d1-89e5-06413226c332,0188
+23616,This is a music plattform where you can stream music.,03_rag_zs_k_5_direct,9,7c7eadb9-1236-4352-aa50-c72b197f183c,0189
+23616,This is a music plattform where you can stream music.,03_rag_zs_k_7_direct,10,7299024d-50ff-42ca-b3ea-eff0197f58bf,0190
+23616,This is a music plattform where you can stream music.,03_rag_zs_k_3_direct_content,11,65407c6b-df6b-4695-9567-a3f616e5ec01,0191
+23616,This is a music plattform where you can stream music.,03_rag_zs_k_3_direct_pd_zs,12,b2265a84-82b2-48ab-892e-f1af2bf2399e,0192
+23616,This is a music plattform where you can stream music.,03_rag_zs_k_3_feat_layout,13,d6ba4c20-ab24-4c5e-abca-71397ca97b1b,0193
+23616,This is a music plattform where you can stream music.,04_self_critique_base_zs_instruction_k_1,14,b5329081-157e-4ca9-8c7c-7bc94288dc6e,0194
+23616,This is a music plattform where you can stream music.,04_self_critique_base_zs_instruction_k_2,15,2a601968-9d3b-4dc8-ab68-7d1147d18f3a,0195
+23616,This is a music plattform where you can stream music.,04_self_critique_base_zs_instruction_k_3,16,e02a8b19-62db-466c-bcd9-9328594bda53,0196
+23616,This is a music plattform where you can stream music.,04_self_critique_base_zs_instruction_k_4,17,cbd3de88-2c9f-48e0-a8d8-1bf9a688d241,0197
+23616,This is a music plattform where you can stream music.,04_self_critique_base_zs_instruction_content_k_3,18,d8363a45-ea06-446e-9722-1c2bf299c873,0198
+23616,This is a music plattform where you can stream music.,04_self_critique_base_pd_zs_k_3,19,25b49afb-cd92-4c90-922f-bbf4ed11dd83,0199
+23616,This is a music plattform where you can stream music.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,ef3bc78a-fa34-4caa-80c5-86a04cde68a9,0200
+24301,a page of a weather app showing different options of videos with information of the weather,01_baselines_zs_instruction,1,d8a152fa-6289-4514-a592-f368aa2a597b,0201
+24301,a page of a weather app showing different options of videos with information of the weather,01_baselines_zs_cot,2,1e70673e-eebc-49a3-bad9-4fc3586e063a,0202
+24301,a page of a weather app showing different options of videos with information of the weather,01_baselines_zs_cot_content,3,91cc22ca-b322-43a2-8951-1a2ff68690e0,0203
+24301,a page of a weather app showing different options of videos with information of the weather,02_prompt_decomposition_pd_zs,4,4c28fa64-2e5d-46d2-9e3f-72c1005a67b0,0204
+24301,a page of a weather app showing different options of videos with information of the weather,02_prompt_decomposition_pd_zs_cot,5,5cc6da19-e9be-4830-b6c5-10d8f7316384,0205
+24301,a page of a weather app showing different options of videos with information of the weather,02_prompt_decomposition_pd_zs_content,6,797a9a42-b2eb-4874-9701-7af3de634766,0206
+24301,a page of a weather app showing different options of videos with information of the weather,03_rag_zs_k_1_direct,7,3014c750-9bef-4ac6-9529-f3009c5054d0,0207
+24301,a page of a weather app showing different options of videos with information of the weather,03_rag_zs_k_3_direct,8,4fc77670-bcac-42f7-a3ce-5bfc27bfe4d1,0208
+24301,a page of a weather app showing different options of videos with information of the weather,03_rag_zs_k_5_direct,9,a64a3f39-9fa8-41f7-be18-5c381c42e601,0209
+24301,a page of a weather app showing different options of videos with information of the weather,03_rag_zs_k_7_direct,10,1009cf52-94c2-4268-bf1b-f072f15251c7,0210
+24301,a page of a weather app showing different options of videos with information of the weather,03_rag_zs_k_3_direct_content,11,0fd7fc2b-e7a7-4875-8b8c-52e1d0d430e0,0211
+24301,a page of a weather app showing different options of videos with information of the weather,03_rag_zs_k_3_direct_pd_zs,12,9d513625-dd38-4447-bb06-07bac61d271b,0212
+24301,a page of a weather app showing different options of videos with information of the weather,03_rag_zs_k_3_feat_layout,13,62caaefb-a92a-4d33-af51-ed205fc0e418,0213
+24301,a page of a weather app showing different options of videos with information of the weather,04_self_critique_base_zs_instruction_k_1,14,a6944cd8-7bf2-43cc-a5a6-ff9205152884,0214
+24301,a page of a weather app showing different options of videos with information of the weather,04_self_critique_base_zs_instruction_k_2,15,e0e4917f-30dd-4f5b-a87d-df7b9b5d74b5,0215
+24301,a page of a weather app showing different options of videos with information of the weather,04_self_critique_base_zs_instruction_k_3,16,64e99611-4b27-4f27-9fb2-1c7782bd0491,0216
+24301,a page of a weather app showing different options of videos with information of the weather,04_self_critique_base_zs_instruction_k_4,17,b24dfffa-0fb2-458b-a797-30a55278b94c,0217
+24301,a page of a weather app showing different options of videos with information of the weather,04_self_critique_base_zs_instruction_content_k_3,18,de28027f-fbb3-4787-aeb5-57f3226f935d,0218
+24301,a page of a weather app showing different options of videos with information of the weather,04_self_critique_base_pd_zs_k_3,19,980fcfe8-c2a0-48b0-a1f7-34bfd1f5f8ce,0219
+24301,a page of a weather app showing different options of videos with information of the weather,04_self_critique_base_rag_zs_k_3_direct_k_3,20,a5db74f8-5ecd-476b-b6f6-18dc877fb6b2,0220
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",01_baselines_zs_instruction,1,4a45bde8-9f61-4135-b65f-a516d9edd859,0221
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",01_baselines_zs_cot,2,3981b9a6-f540-47db-a40d-24a5c85a7500,0222
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",01_baselines_zs_cot_content,3,57feae24-b42e-4cb1-94d3-a3bddad8bda4,0223
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",02_prompt_decomposition_pd_zs,4,018ce35a-ab2f-4b9b-9b60-a8f9c1495ec2,0224
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",02_prompt_decomposition_pd_zs_cot,5,09c4cd2b-6da2-4078-ba26-6a726b223988,0225
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",02_prompt_decomposition_pd_zs_content,6,658cf02f-db05-4870-a183-7790a1204135,0226
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",03_rag_zs_k_1_direct,7,a617a84c-fbd5-416d-981f-fc43bc24fe6e,0227
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",03_rag_zs_k_3_direct,8,d1da16dc-4f55-460f-902f-2eac9cd67102,0228
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",03_rag_zs_k_5_direct,9,9afe0966-b1b9-4561-adc6-b72083236517,0229
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",03_rag_zs_k_7_direct,10,367fe8f3-38da-45e9-9e32-e4816a7c36d9,0230
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",03_rag_zs_k_3_direct_content,11,b27e1698-9eb1-4314-a66c-046705ec4879,0231
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",03_rag_zs_k_3_direct_pd_zs,12,3dc291c9-eaeb-4257-9bd7-72007958d3a3,0232
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",03_rag_zs_k_3_feat_layout,13,c1c51b7e-16aa-45bf-ae5a-d979d8c254b9,0233
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",04_self_critique_base_zs_instruction_k_1,14,497853a9-0f07-410a-97ed-948b9e486ce4,0234
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",04_self_critique_base_zs_instruction_k_2,15,55b9bc58-341b-41f7-bbbf-20608ad47107,0235
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",04_self_critique_base_zs_instruction_k_3,16,ebf2fe09-bccd-4146-9aea-10adea2b5ae5,0236
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",04_self_critique_base_zs_instruction_k_4,17,f4b36efc-6219-4636-8b95-7d480573a0b2,0237
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",04_self_critique_base_zs_instruction_content_k_3,18,abf0e0aa-1c0c-4e6e-ba14-6b411aa96530,0238
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",04_self_critique_base_pd_zs_k_3,19,cad868c0-2357-4781-9394-b8a9e3f84ea8,0239
+28271,"A page from an app to buy different items from people in the own city or region using keywords, categories and the own location to generate suggestions.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,62891bbc-8550-4efa-93d2-5865834f7480,0240
+28918,An app made for navigation.,01_baselines_zs_instruction,1,0bf29899-9413-41db-9d27-9cb784bff6bc,0241
+28918,An app made for navigation.,01_baselines_zs_cot,2,73fe016e-494f-4c66-9c12-d5b56c55dd14,0242
+28918,An app made for navigation.,01_baselines_zs_cot_content,3,a4668213-7386-42bb-ad1a-6148c0cf7028,0243
+28918,An app made for navigation.,02_prompt_decomposition_pd_zs,4,1761bbbf-9188-4838-95c1-b3dc1795ef92,0244
+28918,An app made for navigation.,02_prompt_decomposition_pd_zs_cot,5,40e8f732-320d-404b-98c3-3058106d1a86,0245
+28918,An app made for navigation.,02_prompt_decomposition_pd_zs_content,6,42160f91-a735-40b8-bac2-ef7c042ea428,0246
+28918,An app made for navigation.,03_rag_zs_k_1_direct,7,03f52f5b-1438-4bba-b2db-c1566c2ad111,0247
+28918,An app made for navigation.,03_rag_zs_k_3_direct,8,44acdff9-4b04-4253-8265-8b53bcceaa7e,0248
+28918,An app made for navigation.,03_rag_zs_k_5_direct,9,5a1c89b6-42c1-4b28-bf75-2654e0843a5e,0249
+28918,An app made for navigation.,03_rag_zs_k_7_direct,10,69f2b841-8822-420d-a83d-445666bb64af,0250
+28918,An app made for navigation.,03_rag_zs_k_3_direct_content,11,8b23d472-7cd7-4b6d-9220-7f5426f1b212,0251
+28918,An app made for navigation.,03_rag_zs_k_3_direct_pd_zs,12,96bc1f89-c540-472a-b414-c668766dad40,0252
+28918,An app made for navigation.,03_rag_zs_k_3_feat_layout,13,4d8fca8a-56d5-4503-b122-543245d944ef,0253
+28918,An app made for navigation.,04_self_critique_base_zs_instruction_k_1,14,0c954ffa-d29e-4d63-bdc9-05ea43ca749a,0254
+28918,An app made for navigation.,04_self_critique_base_zs_instruction_k_2,15,3aa91a6d-d737-49c6-a21f-1e71178e892c,0255
+28918,An app made for navigation.,04_self_critique_base_zs_instruction_k_3,16,de01385c-49c9-4873-ba26-5fecfa3fd63d,0256
+28918,An app made for navigation.,04_self_critique_base_zs_instruction_k_4,17,600a5bc7-7666-46f8-a22e-6c051387fe31,0257
+28918,An app made for navigation.,04_self_critique_base_zs_instruction_content_k_3,18,aa94673f-1267-4069-acc6-1abda3b9dc1d,0258
+28918,An app made for navigation.,04_self_critique_base_pd_zs_k_3,19,2acc2a02-d9a9-4c6a-9826-838bb0d9d2d3,0259
+28918,An app made for navigation.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,d656ac06-5110-41db-8289-1b807bddbc81,0260
+29637,"A page from a sports news app, showing a list of articles.",01_baselines_zs_instruction,1,6f36ba2d-6c07-48bf-bd4a-9a1dce8f6f6f,0261
+29637,"A page from a sports news app, showing a list of articles.",01_baselines_zs_cot,2,17c4ef2c-31f4-4638-9e81-6a7741341599,0262
+29637,"A page from a sports news app, showing a list of articles.",01_baselines_zs_cot_content,3,a49119ce-e13d-4390-a6a6-6480f8e009af,0263
+29637,"A page from a sports news app, showing a list of articles.",02_prompt_decomposition_pd_zs,4,9671c44b-588a-4e34-87e6-beba283021df,0264
+29637,"A page from a sports news app, showing a list of articles.",02_prompt_decomposition_pd_zs_cot,5,aacf4ed3-c00f-4c79-85fb-e838ca2b1922,0265
+29637,"A page from a sports news app, showing a list of articles.",02_prompt_decomposition_pd_zs_content,6,4e82f4d2-0ba6-4c57-abed-71140732ac23,0266
+29637,"A page from a sports news app, showing a list of articles.",03_rag_zs_k_1_direct,7,2a8a29b6-468e-4db0-91ac-f1d0896b4973,0267
+29637,"A page from a sports news app, showing a list of articles.",03_rag_zs_k_3_direct,8,83e23da0-0be4-4ab7-bb1c-79951f80d25f,0268
+29637,"A page from a sports news app, showing a list of articles.",03_rag_zs_k_5_direct,9,43490e0f-a607-40d9-9f73-8f2c9b8266f7,0269
+29637,"A page from a sports news app, showing a list of articles.",03_rag_zs_k_7_direct,10,c5a57bad-3115-4413-9419-846816127544,0270
+29637,"A page from a sports news app, showing a list of articles.",03_rag_zs_k_3_direct_content,11,fa7ae29e-5016-487b-b0f3-f95e14819a57,0271
+29637,"A page from a sports news app, showing a list of articles.",03_rag_zs_k_3_direct_pd_zs,12,1262fa17-f4d2-4742-947c-e4c861b4ed9b,0272
+29637,"A page from a sports news app, showing a list of articles.",03_rag_zs_k_3_feat_layout,13,c16ca125-d340-4de6-a47d-954070586283,0273
+29637,"A page from a sports news app, showing a list of articles.",04_self_critique_base_zs_instruction_k_1,14,f6f55730-f8b4-4ab3-9127-bf81ef79db9e,0274
+29637,"A page from a sports news app, showing a list of articles.",04_self_critique_base_zs_instruction_k_2,15,36cc9fd4-b148-49be-a4cc-1d35521c70e1,0275
+29637,"A page from a sports news app, showing a list of articles.",04_self_critique_base_zs_instruction_k_3,16,721869ea-9371-4aba-86a8-b61f593f1777,0276
+29637,"A page from a sports news app, showing a list of articles.",04_self_critique_base_zs_instruction_k_4,17,b913c6d6-e46a-4e56-bec7-f021ea565be0,0277
+29637,"A page from a sports news app, showing a list of articles.",04_self_critique_base_zs_instruction_content_k_3,18,c5767d76-85ce-4d0d-ab41-51d85db9914f,0278
+29637,"A page from a sports news app, showing a list of articles.",04_self_critique_base_pd_zs_k_3,19,e5b33a2e-705d-4b24-99e5-ba5cc0030f30,0279
+29637,"A page from a sports news app, showing a list of articles.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,228cb437-17fc-45ad-acaa-b5921abf4d52,0280
+30144,"A page of an recipe finder, showing pictures of the food",01_baselines_zs_instruction,1,87d38b96-08da-4b42-b736-251f43eee421,0281
+30144,"A page of an recipe finder, showing pictures of the food",01_baselines_zs_cot,2,f52320a0-690b-4efd-bb75-355c26e2add9,0282
+30144,"A page of an recipe finder, showing pictures of the food",01_baselines_zs_cot_content,3,f0b85aea-c26e-4cbe-b92f-cfc3a1e5bb5a,0283
+30144,"A page of an recipe finder, showing pictures of the food",02_prompt_decomposition_pd_zs,4,652c6f40-8a38-4feb-b4eb-b366fd3b5458,0284
+30144,"A page of an recipe finder, showing pictures of the food",02_prompt_decomposition_pd_zs_cot,5,6db4ac1d-4f3e-4459-9251-e9b3daf4cf6f,0285
+30144,"A page of an recipe finder, showing pictures of the food",02_prompt_decomposition_pd_zs_content,6,5bb309f8-b734-4591-95a2-a16b7a1d85df,0286
+30144,"A page of an recipe finder, showing pictures of the food",03_rag_zs_k_1_direct,7,8fbedcce-d603-4e91-b17e-d27d2732e2bb,0287
+30144,"A page of an recipe finder, showing pictures of the food",03_rag_zs_k_3_direct,8,79b16aa6-a466-420a-86f2-6b3499ed9b43,0288
+30144,"A page of an recipe finder, showing pictures of the food",03_rag_zs_k_5_direct,9,b899b3f1-37aa-4c76-a0a3-b34c3742dea8,0289
+30144,"A page of an recipe finder, showing pictures of the food",03_rag_zs_k_7_direct,10,00526848-a03a-4d39-a613-84a7e3d2270c,0290
+30144,"A page of an recipe finder, showing pictures of the food",03_rag_zs_k_3_direct_content,11,3d6d1039-3e3a-4ca9-913c-07a7a28d6b44,0291
+30144,"A page of an recipe finder, showing pictures of the food",03_rag_zs_k_3_direct_pd_zs,12,8877eed5-3a45-4b7c-8a97-509647e27d79,0292
+30144,"A page of an recipe finder, showing pictures of the food",03_rag_zs_k_3_feat_layout,13,7c3590a4-03c2-474b-a59d-0fe7ff7954b2,0293
+30144,"A page of an recipe finder, showing pictures of the food",04_self_critique_base_zs_instruction_k_1,14,49014ade-4d95-46e0-a421-7beaec24270b,0294
+30144,"A page of an recipe finder, showing pictures of the food",04_self_critique_base_zs_instruction_k_2,15,c992d86a-9b2c-4052-a618-b3d0241be838,0295
+30144,"A page of an recipe finder, showing pictures of the food",04_self_critique_base_zs_instruction_k_3,16,e3b0a830-192f-49c1-ae15-9b6d1e19299d,0296
+30144,"A page of an recipe finder, showing pictures of the food",04_self_critique_base_zs_instruction_k_4,17,4901631d-2b0c-4af0-959c-2212f3869771,0297
+30144,"A page of an recipe finder, showing pictures of the food",04_self_critique_base_zs_instruction_content_k_3,18,e77a58ff-d339-463f-a656-70c66572da88,0298
+30144,"A page of an recipe finder, showing pictures of the food",04_self_critique_base_pd_zs_k_3,19,d3c7409c-3283-4119-91ba-5b3150fff193,0299
+30144,"A page of an recipe finder, showing pictures of the food",04_self_critique_base_rag_zs_k_3_direct_k_3,20,68a6dac2-21e7-402a-92e2-2b9c63328c15,0300
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",01_baselines_zs_instruction,1,c8ad102f-8f88-4068-b26a-72d0492a4726,0301
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",01_baselines_zs_cot,2,bd3ca7e8-9c1e-4ffe-acb9-d4f32016894b,0302
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",01_baselines_zs_cot_content,3,0a7d0753-2006-409f-8308-b2142e8a8d8b,0303
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",02_prompt_decomposition_pd_zs,4,e2b904f8-731c-4180-b027-2647a98cede8,0304
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",02_prompt_decomposition_pd_zs_cot,5,3bbceba6-3d8b-4a33-899f-4a05ab58c4e1,0305
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",02_prompt_decomposition_pd_zs_content,6,b104e50f-5432-47b7-84a1-86fae27a0ed8,0306
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",03_rag_zs_k_1_direct,7,d254772d-9569-4d59-8893-0d37114231ff,0307
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",03_rag_zs_k_3_direct,8,1fd16746-315f-44df-a902-cac251504dfd,0308
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",03_rag_zs_k_5_direct,9,30d08a2a-db02-4a65-9fc4-8ca6fed6abaf,0309
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",03_rag_zs_k_7_direct,10,680b14d0-4414-4488-82ba-9f01fa89475d,0310
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",03_rag_zs_k_3_direct_content,11,1ff8860f-b216-4b2d-b442-3be5f4169b74,0311
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",03_rag_zs_k_3_direct_pd_zs,12,e6881e0c-d0ae-4d09-92b4-3db442978ab9,0312
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",03_rag_zs_k_3_feat_layout,13,1ccd8cb4-18ef-487a-b235-fd94b24068a4,0313
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",04_self_critique_base_zs_instruction_k_1,14,2f2d89f3-54cc-41ce-944b-516065d0896d,0314
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",04_self_critique_base_zs_instruction_k_2,15,d7faffd1-c690-4573-85c9-4a623d89bead,0315
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",04_self_critique_base_zs_instruction_k_3,16,95becc30-d539-445d-ae20-7c5596960f77,0316
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",04_self_critique_base_zs_instruction_k_4,17,9796b02d-213f-479e-9a99-f2f43295c17e,0317
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",04_self_critique_base_zs_instruction_content_k_3,18,1aad8f8f-8514-4c52-87bf-ce8cabc6fc69,0318
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",04_self_critique_base_pd_zs_k_3,19,a9188693-3d89-40b7-96b7-fbe4790c8df7,0319
+32930,"A page from map app, showing that in the settings of the map, you can choose to show in the map the natural occurences or disasters which might happen in your daily life.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,effd816b-f7eb-47ec-bf73-025a86576a99,0320
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",01_baselines_zs_instruction,1,6f79bff2-a427-4fe7-9bfb-35b8eff8ddd2,0321
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",01_baselines_zs_cot,2,419b983b-2c62-4d5b-8a70-a77bc844b874,0322
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",01_baselines_zs_cot_content,3,7864b4dd-0dff-4e20-96c9-a85ada6a1946,0323
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",02_prompt_decomposition_pd_zs,4,6c387eda-fa5f-471c-baae-f88affcd4a6d,0324
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",02_prompt_decomposition_pd_zs_cot,5,85f15f42-7a95-4a01-84da-744a86ca999b,0325
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",02_prompt_decomposition_pd_zs_content,6,d238ed93-bf68-4aa0-a861-7a7384c63951,0326
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",03_rag_zs_k_1_direct,7,00b21cc4-ee0a-46ff-af02-c3cab955ef06,0327
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",03_rag_zs_k_3_direct,8,f1add3a5-e05d-422f-95e0-01e1fca8ea1e,0328
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",03_rag_zs_k_5_direct,9,2ed18353-f0c5-46ab-805e-5e6241eea941,0329
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",03_rag_zs_k_7_direct,10,3ec00ed2-0e5b-4ba5-a2a0-7f6cb3e10f70,0330
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",03_rag_zs_k_3_direct_content,11,942dd572-a8c8-462a-8845-f759ea17669c,0331
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",03_rag_zs_k_3_direct_pd_zs,12,18ea69ab-8dc3-4a33-96cc-86eb53a56d45,0332
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",03_rag_zs_k_3_feat_layout,13,8634ebb3-e642-4371-967b-cebae06c3238,0333
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",04_self_critique_base_zs_instruction_k_1,14,5320dad5-7fc4-4969-ba63-c859732a030e,0334
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",04_self_critique_base_zs_instruction_k_2,15,34c0b670-76f0-4201-82b1-c6ffa8b82bda,0335
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",04_self_critique_base_zs_instruction_k_3,16,ecc13609-7540-4c8e-8e7f-eb65c1b8c9ad,0336
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",04_self_critique_base_zs_instruction_k_4,17,c86993ae-d067-4839-99b7-0664726a0fb8,0337
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",04_self_critique_base_zs_instruction_content_k_3,18,c1a80188-e958-4c8e-aca9-e961971846e7,0338
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",04_self_critique_base_pd_zs_k_3,19,05524b24-81b2-4c43-9cf3-8cb8afe4f4a9,0339
+33061,"A GUI from a clothing app showing various categories like New Arrivals, Women, Men, Home, etc.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,a97e9ec2-24ee-4d2b-81f2-e7d814a00308,0340
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",01_baselines_zs_instruction,1,c55b4910-767f-4aa4-8b00-a9186a65dbb9,0341
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",01_baselines_zs_cot,2,6852fa1a-26d7-4a52-9ef6-1a4d78e4ede9,0342
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",01_baselines_zs_cot_content,3,094cb094-1775-4461-a448-d230d340f109,0343
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",02_prompt_decomposition_pd_zs,4,edda6411-e15e-4241-8a70-98927ff06f22,0344
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",02_prompt_decomposition_pd_zs_cot,5,0eed81de-b856-48a7-ab40-4889df94d049,0345
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",02_prompt_decomposition_pd_zs_content,6,34cf1cc6-49e4-4d36-9373-7d1b71209ce1,0346
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",03_rag_zs_k_1_direct,7,981edc2c-1a22-445a-a490-471ebb1f7483,0347
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",03_rag_zs_k_3_direct,8,e04b133a-e84c-4001-bed3-d9d5ba400c2b,0348
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",03_rag_zs_k_5_direct,9,f1be082f-a54e-495c-b7fa-bcf49d9a7f28,0349
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",03_rag_zs_k_7_direct,10,fd9c9e9f-f2c5-4b9c-88a5-23fe20fa86db,0350
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",03_rag_zs_k_3_direct_content,11,a12540f8-6e2d-431a-9507-fde74c1ad4ae,0351
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",03_rag_zs_k_3_direct_pd_zs,12,b9e3bd8e-8605-4ee5-95fd-167133df69eb,0352
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",03_rag_zs_k_3_feat_layout,13,41cade90-389c-4115-9c2e-35269ea51f1a,0353
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",04_self_critique_base_zs_instruction_k_1,14,e846cbc9-17f7-4074-a03c-25744e5ed113,0354
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",04_self_critique_base_zs_instruction_k_2,15,ba18f0e6-a207-4e1f-90b9-0a189efff69b,0355
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",04_self_critique_base_zs_instruction_k_3,16,4524550d-4a6a-451a-9eb6-3e981908c386,0356
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",04_self_critique_base_zs_instruction_k_4,17,1fa7f06b-dadd-469c-8acf-9a4384b4c43e,0357
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",04_self_critique_base_zs_instruction_content_k_3,18,a550fc3f-c777-4550-bf09-01ffcb31603f,0358
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",04_self_critique_base_pd_zs_k_3,19,9a16184a-f8e8-4306-acb0-b86f81f2ee4c,0359
+33575,"A page from a trip booking app, users can enter information about destination, travel time, people who travel etc. to search for options to sleep in.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,6b51e7df-3ed5-4236-8f31-fae693530eaa,0360
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,01_baselines_zs_instruction,1,c4eb0646-1f89-4974-b1a8-360f318caca5,0361
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,01_baselines_zs_cot,2,c50aa374-8272-498c-ba36-21df447a0f31,0362
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,01_baselines_zs_cot_content,3,183dda89-0c3a-4c4d-80fa-d54b4e16ae3c,0363
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,02_prompt_decomposition_pd_zs,4,1c427007-6e75-4021-8c14-bbafc8f78e89,0364
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,02_prompt_decomposition_pd_zs_cot,5,96526659-3feb-4706-bf03-879e0be8fb41,0365
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,02_prompt_decomposition_pd_zs_content,6,10e45ef0-d280-4a05-9d80-191b6a9482e1,0366
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,03_rag_zs_k_1_direct,7,1fca78cb-cb0c-48cb-b7f1-aac4a04870e1,0367
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,03_rag_zs_k_3_direct,8,1ec78fe4-19ab-4c68-93f7-3cbfeffe8b41,0368
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,03_rag_zs_k_5_direct,9,c46e022f-1320-4268-b53e-8033e1b8683c,0369
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,03_rag_zs_k_7_direct,10,f3764fb8-df84-4532-85c9-a87331701e2f,0370
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,03_rag_zs_k_3_direct_content,11,4ffeb88a-2f89-4a3f-99c6-2e5a148bf14e,0371
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,03_rag_zs_k_3_direct_pd_zs,12,ff8d9102-6cf2-44a6-84cf-99408d792399,0372
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,03_rag_zs_k_3_feat_layout,13,771ed7b1-fbc6-4a2b-a9ba-1b065760ef31,0373
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,04_self_critique_base_zs_instruction_k_1,14,cef93b0f-1bdf-4bb8-a16f-3d5086f34c4e,0374
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,04_self_critique_base_zs_instruction_k_2,15,9c55b131-50b0-4138-8d7d-016bf66f4fe1,0375
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,04_self_critique_base_zs_instruction_k_3,16,6ce1b00e-be2e-4f3c-8837-73644e195dbf,0376
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,04_self_critique_base_zs_instruction_k_4,17,a81b03ed-5197-4f8f-975d-f96b4c29845c,0377
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,04_self_critique_base_zs_instruction_content_k_3,18,ddf0621e-76ba-4d9b-8dc9-a6b43926e24c,0378
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,04_self_critique_base_pd_zs_k_3,19,59823eaf-fd39-40ed-824e-b557f3b5a1fd,0379
+34366,This shows the upcoming shows in the personal calender whether it is a new season or a new film.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,f17e2f6e-59e1-44bc-bff3-f4d360fa8db4,0380
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",01_baselines_zs_instruction,1,bba80006-0b0e-46ba-8fb7-1d3fe01d18b8,0381
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",01_baselines_zs_cot,2,44ec2c84-8738-4141-93be-f1053f1b28c6,0382
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",01_baselines_zs_cot_content,3,f38c235f-478d-4fe9-b283-7dcbd61a9915,0383
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",02_prompt_decomposition_pd_zs,4,5b39c694-1594-4de8-a09b-a5d4f0ad0b79,0384
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",02_prompt_decomposition_pd_zs_cot,5,6edf66ab-19f4-4ee4-8985-9e695b540731,0385
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",02_prompt_decomposition_pd_zs_content,6,ca15f856-ff33-4a95-9ea6-9b55d99ac833,0386
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",03_rag_zs_k_1_direct,7,ddb0bf4a-1ae3-452d-9015-78e7a531fa3a,0387
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",03_rag_zs_k_3_direct,8,987fc377-d654-4026-9dc0-746a248191ea,0388
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",03_rag_zs_k_5_direct,9,91a45d49-6707-43d0-add1-6bd5aae444cf,0389
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",03_rag_zs_k_7_direct,10,715019f7-ed41-4f64-b95b-3578d02fea30,0390
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",03_rag_zs_k_3_direct_content,11,726fdc8c-9734-45a8-b1ec-57ce0d177e70,0391
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",03_rag_zs_k_3_direct_pd_zs,12,254ac955-a725-4a60-9fb3-47f3898fbd7f,0392
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",03_rag_zs_k_3_feat_layout,13,2bdee32c-d4dd-42a7-be76-4a8088616e79,0393
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",04_self_critique_base_zs_instruction_k_1,14,185aacec-a9f9-4427-9709-d814413f79b1,0394
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",04_self_critique_base_zs_instruction_k_2,15,8be5bc6e-9f04-4be5-823e-21b31e8378ca,0395
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",04_self_critique_base_zs_instruction_k_3,16,10163046-391b-47f0-b5c7-697b845564b4,0396
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",04_self_critique_base_zs_instruction_k_4,17,a9e279c5-8c76-4edb-a3b6-e3d1a2054d2a,0397
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",04_self_critique_base_zs_instruction_content_k_3,18,aaa4a401-c92e-4706-b49e-c55935384f02,0398
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",04_self_critique_base_pd_zs_k_3,19,6bb4ce0e-0bdc-493f-8b26-866a23bb6297,0399
+34938,"A page from a tableware shopping app, allowing users to search for an item, scan a barcode or look for a category of tableware.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,d4f1f30b-0f55-43aa-a22c-83fb525b875c,0400
+35576,"A page from the settings - options from an app, showing diefferent options",01_baselines_zs_instruction,1,9baa036b-34ee-447c-9946-aaf4c3b5559b,0401
+35576,"A page from the settings - options from an app, showing diefferent options",01_baselines_zs_cot,2,e02297f4-64dc-4b06-b989-35baf523cd14,0402
+35576,"A page from the settings - options from an app, showing diefferent options",01_baselines_zs_cot_content,3,16df28e5-ae59-4c8e-9665-4338933ef14d,0403
+35576,"A page from the settings - options from an app, showing diefferent options",02_prompt_decomposition_pd_zs,4,5f1204b4-cf4a-4f23-a46f-4b7b8579c26b,0404
+35576,"A page from the settings - options from an app, showing diefferent options",02_prompt_decomposition_pd_zs_cot,5,66baaca9-f37e-4cb6-a26f-e9714c69f2fc,0405
+35576,"A page from the settings - options from an app, showing diefferent options",02_prompt_decomposition_pd_zs_content,6,62a092f8-6534-4f22-ab17-5e900686cdf2,0406
+35576,"A page from the settings - options from an app, showing diefferent options",03_rag_zs_k_1_direct,7,6fcd1405-dd93-457f-b311-a82fcad2e425,0407
+35576,"A page from the settings - options from an app, showing diefferent options",03_rag_zs_k_3_direct,8,85267667-c73e-4178-8d13-51ae8ea1f94f,0408
+35576,"A page from the settings - options from an app, showing diefferent options",03_rag_zs_k_5_direct,9,bdd27585-5c7b-4e1c-a9d1-197343740004,0409
+35576,"A page from the settings - options from an app, showing diefferent options",03_rag_zs_k_7_direct,10,b89da9d3-6c85-4578-87f1-b6ba6ac0abfe,0410
+35576,"A page from the settings - options from an app, showing diefferent options",03_rag_zs_k_3_direct_content,11,b59813e7-77f2-4ce9-8967-2be0ef573d1c,0411
+35576,"A page from the settings - options from an app, showing diefferent options",03_rag_zs_k_3_direct_pd_zs,12,9a456f65-c624-46e4-9ed1-c461a4249f41,0412
+35576,"A page from the settings - options from an app, showing diefferent options",03_rag_zs_k_3_feat_layout,13,a34730a8-d5fc-46e2-bcee-d7b34e36d712,0413
+35576,"A page from the settings - options from an app, showing diefferent options",04_self_critique_base_zs_instruction_k_1,14,c610f01b-4ddb-4566-864f-639748b85afc,0414
+35576,"A page from the settings - options from an app, showing diefferent options",04_self_critique_base_zs_instruction_k_2,15,efda7484-5bfd-4a0f-a8a9-c63569ba799f,0415
+35576,"A page from the settings - options from an app, showing diefferent options",04_self_critique_base_zs_instruction_k_3,16,1bbe9648-6667-46c2-b39e-f77ed56c2c81,0416
+35576,"A page from the settings - options from an app, showing diefferent options",04_self_critique_base_zs_instruction_k_4,17,cf72e61c-c4a4-4b64-9b66-1286a0ebc156,0417
+35576,"A page from the settings - options from an app, showing diefferent options",04_self_critique_base_zs_instruction_content_k_3,18,db9bd0b9-17ea-4c83-8efb-311d96832d27,0418
+35576,"A page from the settings - options from an app, showing diefferent options",04_self_critique_base_pd_zs_k_3,19,c9b80fb7-2a85-490c-b7d6-ce852b6c7c6d,0419
+35576,"A page from the settings - options from an app, showing diefferent options",04_self_critique_base_rag_zs_k_3_direct_k_3,20,38ea5ca5-496b-458e-a385-5626ce21c439,0420
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,01_baselines_zs_instruction,1,745410ae-531b-4808-9cae-809d8cb29c63,0421
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,01_baselines_zs_cot,2,fb0a49bb-2af1-40e3-9fed-984e4510b0ab,0422
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,01_baselines_zs_cot_content,3,99a6f6d3-5a60-4829-a034-7481ea3c22f5,0423
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,02_prompt_decomposition_pd_zs,4,1c2db797-ecc8-45f8-b986-af4165c1d329,0424
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,02_prompt_decomposition_pd_zs_cot,5,ca85d694-4d51-498e-8b4b-efb316045d29,0425
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,02_prompt_decomposition_pd_zs_content,6,dd5445d2-fff4-4d6d-a5d4-d2976af6421e,0426
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,03_rag_zs_k_1_direct,7,8dc3824e-d018-40b1-9963-b20f61a10920,0427
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,03_rag_zs_k_3_direct,8,3efe33aa-e3b9-4988-9e17-c68d5691fb1a,0428
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,03_rag_zs_k_5_direct,9,dfbbbfa3-795d-4b43-808e-76c7571b1424,0429
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,03_rag_zs_k_7_direct,10,18aaa50f-4f4c-4946-aa43-b14798fa808a,0430
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,03_rag_zs_k_3_direct_content,11,0d0f1933-341d-47cd-a632-45b115c47fa9,0431
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,03_rag_zs_k_3_direct_pd_zs,12,2147137a-e30b-4dd6-b05c-e11a01512042,0432
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,03_rag_zs_k_3_feat_layout,13,ee26e821-be73-4937-b7b0-a4c8b92d0625,0433
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,04_self_critique_base_zs_instruction_k_1,14,5300fb77-2bfe-4ce4-902c-c7ef814a9402,0434
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,04_self_critique_base_zs_instruction_k_2,15,629225ce-27c2-49b0-8fb5-86adf5f348c7,0435
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,04_self_critique_base_zs_instruction_k_3,16,8d89f85e-7239-4fc1-9089-ef3434da15c4,0436
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,04_self_critique_base_zs_instruction_k_4,17,6a355a24-4866-46d2-a520-a1611e23ecd6,0437
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,04_self_critique_base_zs_instruction_content_k_3,18,a82a9ba5-7165-412d-be93-e4716f510713,0438
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,04_self_critique_base_pd_zs_k_3,19,237617b3-187e-4260-895f-b569d227ae7c,0439
+37394,The page concerning one particular child in a journal app to keep track of various stages of its development,04_self_critique_base_rag_zs_k_3_direct_k_3,20,15e77029-5a0e-449f-af32-b322f14dd3e8,0440
+38729,A page from a recipe app where different recipes with their estimated time are listed,01_baselines_zs_instruction,1,3edb9d20-049b-464e-a28f-d1ae31e1f96b,0441
+38729,A page from a recipe app where different recipes with their estimated time are listed,01_baselines_zs_cot,2,f4be0bd3-8d5c-4eb4-9ad7-9fafd56a57b8,0442
+38729,A page from a recipe app where different recipes with their estimated time are listed,01_baselines_zs_cot_content,3,bf5f5602-ffc9-4d9f-952e-bda6d82944c0,0443
+38729,A page from a recipe app where different recipes with their estimated time are listed,02_prompt_decomposition_pd_zs,4,6693c6d7-8109-416e-a538-0315bc4b4f11,0444
+38729,A page from a recipe app where different recipes with their estimated time are listed,02_prompt_decomposition_pd_zs_cot,5,9901cfd6-eacc-4bd3-891d-e52fe43ed0ea,0445
+38729,A page from a recipe app where different recipes with their estimated time are listed,02_prompt_decomposition_pd_zs_content,6,bc0e587d-04fd-45f4-aabc-2a2e806a27a8,0446
+38729,A page from a recipe app where different recipes with their estimated time are listed,03_rag_zs_k_1_direct,7,74deee57-00bc-421a-aa39-71029c42d5d8,0447
+38729,A page from a recipe app where different recipes with their estimated time are listed,03_rag_zs_k_3_direct,8,18f17b1a-04fe-48e9-b01f-82909e2237f1,0448
+38729,A page from a recipe app where different recipes with their estimated time are listed,03_rag_zs_k_5_direct,9,725c0838-d34c-4ed9-8ccd-d4847b038a67,0449
+38729,A page from a recipe app where different recipes with their estimated time are listed,03_rag_zs_k_7_direct,10,75ff3617-ea45-4ea3-a01e-3ecb598ebbc4,0450
+38729,A page from a recipe app where different recipes with their estimated time are listed,03_rag_zs_k_3_direct_content,11,6c502850-0fc1-4f26-86be-c3b2c39b4f13,0451
+38729,A page from a recipe app where different recipes with their estimated time are listed,03_rag_zs_k_3_direct_pd_zs,12,1798f00e-aef8-4db3-ae31-15a065fd6c53,0452
+38729,A page from a recipe app where different recipes with their estimated time are listed,03_rag_zs_k_3_feat_layout,13,e55927ef-7d6b-4d64-bac0-254e63a9812c,0453
+38729,A page from a recipe app where different recipes with their estimated time are listed,04_self_critique_base_zs_instruction_k_1,14,3e6ec049-d526-4375-a752-c62a795f0dd3,0454
+38729,A page from a recipe app where different recipes with their estimated time are listed,04_self_critique_base_zs_instruction_k_2,15,2c68eaa8-e747-48c4-9cf0-0853635f2c55,0455
+38729,A page from a recipe app where different recipes with their estimated time are listed,04_self_critique_base_zs_instruction_k_3,16,91bb580d-22e2-45ac-8a80-71fc307280f4,0456
+38729,A page from a recipe app where different recipes with their estimated time are listed,04_self_critique_base_zs_instruction_k_4,17,e8bf255f-d447-45cd-9e96-715fdeffac3b,0457
+38729,A page from a recipe app where different recipes with their estimated time are listed,04_self_critique_base_zs_instruction_content_k_3,18,282ef229-00a2-4dc5-9a75-ecdcdbbd125f,0458
+38729,A page from a recipe app where different recipes with their estimated time are listed,04_self_critique_base_pd_zs_k_3,19,2e978f15-3c5a-4930-88f8-792f2124a9f3,0459
+38729,A page from a recipe app where different recipes with their estimated time are listed,04_self_critique_base_rag_zs_k_3_direct_k_3,20,cb60b756-dca2-457f-83b3-da3b6a73d1bc,0460
+41174,A page from the profile of a user in a social network,01_baselines_zs_instruction,1,e235d919-c1dc-4af9-826d-445cdce070fd,0461
+41174,A page from the profile of a user in a social network,01_baselines_zs_cot,2,5bf830d5-dbbc-4035-a757-3fcc8e4d8c94,0462
+41174,A page from the profile of a user in a social network,01_baselines_zs_cot_content,3,a327bd5d-9d3f-433b-a74b-f93b751ac177,0463
+41174,A page from the profile of a user in a social network,02_prompt_decomposition_pd_zs,4,a1f2bc28-5398-49b4-80e8-685efb4243ab,0464
+41174,A page from the profile of a user in a social network,02_prompt_decomposition_pd_zs_cot,5,0e84211d-f5ab-43ef-ad6b-f5b5a4614fa6,0465
+41174,A page from the profile of a user in a social network,02_prompt_decomposition_pd_zs_content,6,4f7c55c7-7903-422d-afbf-8d0a4b572ee1,0466
+41174,A page from the profile of a user in a social network,03_rag_zs_k_1_direct,7,13d2504e-8032-4133-a896-334f2c3ec62b,0467
+41174,A page from the profile of a user in a social network,03_rag_zs_k_3_direct,8,d8594614-8e7d-4a59-9a89-c306f1ca47e5,0468
+41174,A page from the profile of a user in a social network,03_rag_zs_k_5_direct,9,c13483b8-9d5e-40fa-84aa-e489f655242f,0469
+41174,A page from the profile of a user in a social network,03_rag_zs_k_7_direct,10,4ea156ad-145e-4e53-968b-573ed4a19e94,0470
+41174,A page from the profile of a user in a social network,03_rag_zs_k_3_direct_content,11,ec0593d2-efc1-43b8-adf0-7e4f23135206,0471
+41174,A page from the profile of a user in a social network,03_rag_zs_k_3_direct_pd_zs,12,ea713917-0f20-47a9-84d8-a49d64fe8ff1,0472
+41174,A page from the profile of a user in a social network,03_rag_zs_k_3_feat_layout,13,a371ed79-2dd6-454d-8f76-d6f6bb91fb9e,0473
+41174,A page from the profile of a user in a social network,04_self_critique_base_zs_instruction_k_1,14,84d1221e-a51a-408e-9144-e3083f490a97,0474
+41174,A page from the profile of a user in a social network,04_self_critique_base_zs_instruction_k_2,15,37077e2f-6b45-4297-8918-06918cdc06d3,0475
+41174,A page from the profile of a user in a social network,04_self_critique_base_zs_instruction_k_3,16,bc9a1ac3-0163-4ea0-b043-d5afda0572e0,0476
+41174,A page from the profile of a user in a social network,04_self_critique_base_zs_instruction_k_4,17,9283f7e3-71d6-4a9c-9962-5fb0b5a73c46,0477
+41174,A page from the profile of a user in a social network,04_self_critique_base_zs_instruction_content_k_3,18,5d00ca89-991a-4ac7-884b-eb610edae2bb,0478
+41174,A page from the profile of a user in a social network,04_self_critique_base_pd_zs_k_3,19,efd974f5-ecd4-4342-9826-4ac05d1c3d3a,0479
+41174,A page from the profile of a user in a social network,04_self_critique_base_rag_zs_k_3_direct_k_3,20,56b15ffe-2b01-421b-b298-01ed2174da15,0480
+41584,"A page from a recipe app, showing a list of soups.",01_baselines_zs_instruction,1,47d90757-029c-4893-8c59-11d19a3682d0,0481
+41584,"A page from a recipe app, showing a list of soups.",01_baselines_zs_cot,2,7105a903-5de7-41a4-b8ef-56aa11756756,0482
+41584,"A page from a recipe app, showing a list of soups.",01_baselines_zs_cot_content,3,0e89d6d1-9c16-46e8-8f0b-d214f2422db9,0483
+41584,"A page from a recipe app, showing a list of soups.",02_prompt_decomposition_pd_zs,4,f68805a7-2d33-42cc-8c13-c19c5228bbdc,0484
+41584,"A page from a recipe app, showing a list of soups.",02_prompt_decomposition_pd_zs_cot,5,e6014b07-e672-44b4-95be-7e1c5c94e1b8,0485
+41584,"A page from a recipe app, showing a list of soups.",02_prompt_decomposition_pd_zs_content,6,dfb7516b-b8be-49c8-b3e1-30e0856b3c68,0486
+41584,"A page from a recipe app, showing a list of soups.",03_rag_zs_k_1_direct,7,3f983980-d3db-47e0-bc56-00c7b7410b29,0487
+41584,"A page from a recipe app, showing a list of soups.",03_rag_zs_k_3_direct,8,3c275f8e-786f-4bd9-b5e7-2563c0f3657e,0488
+41584,"A page from a recipe app, showing a list of soups.",03_rag_zs_k_5_direct,9,58105ae1-bee6-48ee-9032-4c01d8f29eff,0489
+41584,"A page from a recipe app, showing a list of soups.",03_rag_zs_k_7_direct,10,cdb08a8b-5c5e-4f28-b061-00872828579c,0490
+41584,"A page from a recipe app, showing a list of soups.",03_rag_zs_k_3_direct_content,11,e9189149-7c49-4fde-b779-b3814801b7fc,0491
+41584,"A page from a recipe app, showing a list of soups.",03_rag_zs_k_3_direct_pd_zs,12,cd7b51dd-e29d-4826-be90-632a2d411b1d,0492
+41584,"A page from a recipe app, showing a list of soups.",03_rag_zs_k_3_feat_layout,13,29d256e9-82d0-4ac9-82ad-7065f95585d6,0493
+41584,"A page from a recipe app, showing a list of soups.",04_self_critique_base_zs_instruction_k_1,14,30e74f76-0c7d-4b33-83ba-c39d890af3d6,0494
+41584,"A page from a recipe app, showing a list of soups.",04_self_critique_base_zs_instruction_k_2,15,83e67a73-b923-406d-9e10-86e5a62b2966,0495
+41584,"A page from a recipe app, showing a list of soups.",04_self_critique_base_zs_instruction_k_3,16,d5ef6330-8850-4bd6-9963-a566504292c4,0496
+41584,"A page from a recipe app, showing a list of soups.",04_self_critique_base_zs_instruction_k_4,17,acc337ad-77af-43b0-85da-cc0ebecc92d8,0497
+41584,"A page from a recipe app, showing a list of soups.",04_self_critique_base_zs_instruction_content_k_3,18,81e4b476-3275-4117-b6e5-d8530b1a7b47,0498
+41584,"A page from a recipe app, showing a list of soups.",04_self_critique_base_pd_zs_k_3,19,4ff08ef8-de18-485a-9a50-c1a86dbf444f,0499
+41584,"A page from a recipe app, showing a list of soups.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,f0e77cb1-2093-44e1-abb4-3814fcd4457a,0500
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",01_baselines_zs_instruction,1,b4aa5c90-a0e2-4504-ae52-17045ea94a16,0501
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",01_baselines_zs_cot,2,79efc723-d99e-481a-a64d-c3d8b8b8ec86,0502
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",01_baselines_zs_cot_content,3,d90dce14-b210-4414-b63d-80ba37f5ecf0,0503
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",02_prompt_decomposition_pd_zs,4,0e420057-4b6b-4450-8f23-bf44a23a898b,0504
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",02_prompt_decomposition_pd_zs_cot,5,be5dd14d-a282-4188-b79e-f62ff2c0869f,0505
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",02_prompt_decomposition_pd_zs_content,6,8de6fdb0-4cf0-4402-b170-ea36b9a53153,0506
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",03_rag_zs_k_1_direct,7,b0f08ff8-6445-4e42-9222-7cbd7af96dd6,0507
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",03_rag_zs_k_3_direct,8,bca5ed4a-cdd3-4175-a588-c2f16a0b8e7e,0508
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",03_rag_zs_k_5_direct,9,e7235f1f-6572-4e82-8d34-53205233e51b,0509
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",03_rag_zs_k_7_direct,10,b9dc78b6-55d3-4f65-94db-75d57bad12da,0510
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",03_rag_zs_k_3_direct_content,11,e3adb8dc-c68f-4c3f-b2b5-358a85de935a,0511
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",03_rag_zs_k_3_direct_pd_zs,12,908d7ccd-3e9a-4ca2-a7b9-03f72b87d180,0512
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",03_rag_zs_k_3_feat_layout,13,b020ccc8-432c-44b5-a7eb-635fe53066b5,0513
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",04_self_critique_base_zs_instruction_k_1,14,497c12a1-2793-404e-8020-c9a5cd30cbab,0514
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",04_self_critique_base_zs_instruction_k_2,15,929d7d21-861a-4cfd-b2e9-6c380f738d01,0515
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",04_self_critique_base_zs_instruction_k_3,16,5e53b20b-ae5a-4272-9cfb-27c5e14dee20,0516
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",04_self_critique_base_zs_instruction_k_4,17,3c5c5dc0-25d4-40c1-bc82-ce5f9a502137,0517
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",04_self_critique_base_zs_instruction_content_k_3,18,87c3d99b-4b49-489d-aede-836f1408bc0b,0518
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",04_self_critique_base_pd_zs_k_3,19,28f3b934-927b-492f-a0f3-649de7e1c225,0519
+42825,"A page from a Shopping app, allowing the user buy some discounted products.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,671b1a76-c65a-4e78-b1e1-892157a5e549,0520
+43493,"A page from online-shopping app,showing the bicycle details and price.",01_baselines_zs_instruction,1,4becf4fb-4ba6-47bc-acd8-5226b254e958,0521
+43493,"A page from online-shopping app,showing the bicycle details and price.",01_baselines_zs_cot,2,39922315-de90-450e-b0cf-2d394975dd03,0522
+43493,"A page from online-shopping app,showing the bicycle details and price.",01_baselines_zs_cot_content,3,a51cf6de-36ae-40cc-b395-16d2215f3755,0523
+43493,"A page from online-shopping app,showing the bicycle details and price.",02_prompt_decomposition_pd_zs,4,06ebd86d-60f7-430f-a191-e5de5c430953,0524
+43493,"A page from online-shopping app,showing the bicycle details and price.",02_prompt_decomposition_pd_zs_cot,5,627efb7d-a81c-45f6-86c0-a9294e685744,0525
+43493,"A page from online-shopping app,showing the bicycle details and price.",02_prompt_decomposition_pd_zs_content,6,df33babc-45bb-4878-a1ec-81fd47e59995,0526
+43493,"A page from online-shopping app,showing the bicycle details and price.",03_rag_zs_k_1_direct,7,d579948c-d929-49fc-a84f-1520fc4435a4,0527
+43493,"A page from online-shopping app,showing the bicycle details and price.",03_rag_zs_k_3_direct,8,da804f17-9bf6-4ef7-a420-0f79eff4aec0,0528
+43493,"A page from online-shopping app,showing the bicycle details and price.",03_rag_zs_k_5_direct,9,2a0275ba-dbce-4fd6-9d3c-6608626961f4,0529
+43493,"A page from online-shopping app,showing the bicycle details and price.",03_rag_zs_k_7_direct,10,0cdf4c58-e628-4eee-b74a-ab314f561e54,0530
+43493,"A page from online-shopping app,showing the bicycle details and price.",03_rag_zs_k_3_direct_content,11,8f9c38a1-0fb0-471e-bd00-217e925d610f,0531
+43493,"A page from online-shopping app,showing the bicycle details and price.",03_rag_zs_k_3_direct_pd_zs,12,4d619b26-67d0-4b45-8df3-874c3debcd81,0532
+43493,"A page from online-shopping app,showing the bicycle details and price.",03_rag_zs_k_3_feat_layout,13,2ff6e337-2fdf-49f6-8ec5-3d522dd9de60,0533
+43493,"A page from online-shopping app,showing the bicycle details and price.",04_self_critique_base_zs_instruction_k_1,14,7d8ba1ce-f0fc-408c-b4a6-cf254628e967,0534
+43493,"A page from online-shopping app,showing the bicycle details and price.",04_self_critique_base_zs_instruction_k_2,15,2548b111-0c07-4698-9098-efdce996d406,0535
+43493,"A page from online-shopping app,showing the bicycle details and price.",04_self_critique_base_zs_instruction_k_3,16,7c7d3f82-ce47-4205-92cb-a7761be371e1,0536
+43493,"A page from online-shopping app,showing the bicycle details and price.",04_self_critique_base_zs_instruction_k_4,17,8306f651-0949-4a95-9e3a-8c1821d66af6,0537
+43493,"A page from online-shopping app,showing the bicycle details and price.",04_self_critique_base_zs_instruction_content_k_3,18,512fee2a-01de-4c5d-a29d-6c3aeb4a04fc,0538
+43493,"A page from online-shopping app,showing the bicycle details and price.",04_self_critique_base_pd_zs_k_3,19,3b7b77b3-1fdd-4e83-8d12-ead69e4a08bd,0539
+43493,"A page from online-shopping app,showing the bicycle details and price.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,1a0469e9-fc6e-4086-a50e-adf68717e280,0540
+45600,"a GUI from a traiding app,  that shows the value of a specific share",01_baselines_zs_instruction,1,612991c5-9dc0-46c0-a6bb-eefff0742317,0541
+45600,"a GUI from a traiding app,  that shows the value of a specific share",01_baselines_zs_cot,2,55bc54c9-687c-42e3-96b2-85b0f49183ec,0542
+45600,"a GUI from a traiding app,  that shows the value of a specific share",01_baselines_zs_cot_content,3,72a6a09f-fbaa-4104-bfad-d5e0c2e71f4e,0543
+45600,"a GUI from a traiding app,  that shows the value of a specific share",02_prompt_decomposition_pd_zs,4,ce7ee27c-6949-4562-b6dd-50b52e7eea5f,0544
+45600,"a GUI from a traiding app,  that shows the value of a specific share",02_prompt_decomposition_pd_zs_cot,5,cda23dbe-2cb8-4059-b461-883018461d2b,0545
+45600,"a GUI from a traiding app,  that shows the value of a specific share",02_prompt_decomposition_pd_zs_content,6,2650dc02-89e0-47e3-a215-b7f5c4cc171a,0546
+45600,"a GUI from a traiding app,  that shows the value of a specific share",03_rag_zs_k_1_direct,7,e9a3b00e-e8a3-4670-a5ca-7fc4098c27a9,0547
+45600,"a GUI from a traiding app,  that shows the value of a specific share",03_rag_zs_k_3_direct,8,56ef8b26-38a8-4026-907b-c7d0917db7e9,0548
+45600,"a GUI from a traiding app,  that shows the value of a specific share",03_rag_zs_k_5_direct,9,33a2368e-90e9-4250-83a8-dfc0b130619b,0549
+45600,"a GUI from a traiding app,  that shows the value of a specific share",03_rag_zs_k_7_direct,10,633cd8b5-d2ce-4b95-939c-489c16839c07,0550
+45600,"a GUI from a traiding app,  that shows the value of a specific share",03_rag_zs_k_3_direct_content,11,6e7f16cb-1826-494f-87d5-45539d934a16,0551
+45600,"a GUI from a traiding app,  that shows the value of a specific share",03_rag_zs_k_3_direct_pd_zs,12,0393a2b4-a0de-4a15-a1f8-13dd590b9bf2,0552
+45600,"a GUI from a traiding app,  that shows the value of a specific share",03_rag_zs_k_3_feat_layout,13,a9ec8218-c7c0-4aeb-9483-755cd23437f6,0553
+45600,"a GUI from a traiding app,  that shows the value of a specific share",04_self_critique_base_zs_instruction_k_1,14,37ba6c27-780b-4406-85e8-d93d19bd087a,0554
+45600,"a GUI from a traiding app,  that shows the value of a specific share",04_self_critique_base_zs_instruction_k_2,15,b0b2fcb9-44aa-4abe-8e22-8253525655ff,0555
+45600,"a GUI from a traiding app,  that shows the value of a specific share",04_self_critique_base_zs_instruction_k_3,16,6eebdb2b-c160-49d9-b8a4-d3b5522655f9,0556
+45600,"a GUI from a traiding app,  that shows the value of a specific share",04_self_critique_base_zs_instruction_k_4,17,6afad18c-27bd-441a-8e04-4ca91019d5ce,0557
+45600,"a GUI from a traiding app,  that shows the value of a specific share",04_self_critique_base_zs_instruction_content_k_3,18,ea97396e-cbf6-48f3-9c66-17f01bf1becb,0558
+45600,"a GUI from a traiding app,  that shows the value of a specific share",04_self_critique_base_pd_zs_k_3,19,6b34cca2-9959-4427-9334-85ac2d79451a,0559
+45600,"a GUI from a traiding app,  that shows the value of a specific share",04_self_critique_base_rag_zs_k_3_direct_k_3,20,04b79403-6f45-47da-a960-0f5493dd3e5a,0560
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",01_baselines_zs_instruction,1,8cc85142-648e-4902-96ae-46d89f5abdc2,0561
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",01_baselines_zs_cot,2,2eb188e3-32fb-40e2-8e6d-3fd710624e95,0562
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",01_baselines_zs_cot_content,3,679d51ab-54dc-4192-a884-4d3b3364872e,0563
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",02_prompt_decomposition_pd_zs,4,ec14a449-b93c-44e2-9361-2feed5d9dd0d,0564
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",02_prompt_decomposition_pd_zs_cot,5,69566f81-95ed-49c7-b89f-e97b1cf85ea1,0565
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",02_prompt_decomposition_pd_zs_content,6,38c111ea-8779-4b12-aaf6-91081dceb135,0566
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",03_rag_zs_k_1_direct,7,b73c14fc-6c03-470e-9abf-d3d4526a0a1e,0567
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",03_rag_zs_k_3_direct,8,85e1e20d-a7cc-43f8-b651-c07603f2b5b1,0568
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",03_rag_zs_k_5_direct,9,b0196a53-43cf-4180-b34c-5b8238c861ec,0569
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",03_rag_zs_k_7_direct,10,f6102264-10d6-43bb-b9a6-be82bbccacdc,0570
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",03_rag_zs_k_3_direct_content,11,e52b93ae-2b52-4250-91f3-24b5483a6b70,0571
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",03_rag_zs_k_3_direct_pd_zs,12,b8c596af-51a2-43a2-8392-55a98d558424,0572
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",03_rag_zs_k_3_feat_layout,13,99e34515-3d6a-405d-b73d-ecb7f4bf88ab,0573
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",04_self_critique_base_zs_instruction_k_1,14,4fedaca3-ada7-4c9b-a314-f8a9174c7c21,0574
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",04_self_critique_base_zs_instruction_k_2,15,5b651f70-0c1a-40b5-994d-26f65f4a2f8f,0575
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",04_self_critique_base_zs_instruction_k_3,16,128677cb-672c-4abc-bdc9-cfcce9f27fb3,0576
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",04_self_critique_base_zs_instruction_k_4,17,0ce9b4de-bdeb-4d12-b8ba-49c47d3d01a0,0577
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",04_self_critique_base_zs_instruction_content_k_3,18,f7467998-adf8-4124-9067-75f942e01a4a,0578
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",04_self_critique_base_pd_zs_k_3,19,49bfa765-d954-4c3b-b10a-e4d63d76e3c7,0579
+47890,"A page from a weather app, showing the weather forecast hourly of where you currently are.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,1efa869c-ce2c-421d-95a1-de4ef8d4ccc4,0580
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",01_baselines_zs_instruction,1,70283f78-73ff-4710-bbea-cd77207850f1,0581
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",01_baselines_zs_cot,2,9e8710a8-995a-4628-a98a-9960faf1532f,0582
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",01_baselines_zs_cot_content,3,ce3aa899-90d1-4efb-95c2-3f4c6b077b33,0583
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",02_prompt_decomposition_pd_zs,4,44258870-2d76-42cd-8e77-da217ba4c9c8,0584
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",02_prompt_decomposition_pd_zs_cot,5,50c49f87-1734-4c63-a9b4-d7c10c12446c,0585
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",02_prompt_decomposition_pd_zs_content,6,60e4aede-64d6-4469-9265-f4b2313e6d61,0586
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",03_rag_zs_k_1_direct,7,ea614ddb-5aed-4e03-baa7-2a3a2f610bde,0587
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",03_rag_zs_k_3_direct,8,c48fde99-9fc7-4b6f-a236-70ad87a1f94b,0588
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",03_rag_zs_k_5_direct,9,74ed2ccb-e79b-4299-8d66-2b16e35d923b,0589
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",03_rag_zs_k_7_direct,10,3c41b02f-d7a7-49a7-a6e0-c495f0e65391,0590
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",03_rag_zs_k_3_direct_content,11,3c7b9da9-2d7a-44f8-b2a0-8a7afa21ca24,0591
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",03_rag_zs_k_3_direct_pd_zs,12,02540388-31db-4c5f-a117-6657f1f22605,0592
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",03_rag_zs_k_3_feat_layout,13,7c034f60-8998-4cc1-8a64-c48799b7f787,0593
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",04_self_critique_base_zs_instruction_k_1,14,ffc33bd6-e232-40fc-83cb-feabaa8509e3,0594
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",04_self_critique_base_zs_instruction_k_2,15,8ea81640-26aa-457f-b148-2d94a24af4e4,0595
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",04_self_critique_base_zs_instruction_k_3,16,497f97fe-0710-4466-801d-6454ef4db434,0596
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",04_self_critique_base_zs_instruction_k_4,17,5e50e938-e551-4e84-9800-4b1febcd398d,0597
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",04_self_critique_base_zs_instruction_content_k_3,18,5571aa61-cca3-466f-882d-a94620ab4a2a,0598
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",04_self_critique_base_pd_zs_k_3,19,694185af-cc20-4bbf-8448-4267f81f0aee,0599
+47964,"A page from public transportation app,showing the wy from one place to  the other place.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,2fb20b1c-cad1-4150-b5df-c8bd6f1e7971,0600
+49616,"A page from a study app, that shows the latest study-sessions.",01_baselines_zs_instruction,1,9a0706f1-83d8-4c5c-bb23-3bd564178ecc,0601
+49616,"A page from a study app, that shows the latest study-sessions.",01_baselines_zs_cot,2,28261261-2bf2-4268-b7c6-09b1ee3a2770,0602
+49616,"A page from a study app, that shows the latest study-sessions.",01_baselines_zs_cot_content,3,bfc04954-33c8-45f7-8813-d34f8679f372,0603
+49616,"A page from a study app, that shows the latest study-sessions.",02_prompt_decomposition_pd_zs,4,8de8d6d5-c74e-429c-8504-6ed0a9f34073,0604
+49616,"A page from a study app, that shows the latest study-sessions.",02_prompt_decomposition_pd_zs_cot,5,3643cc09-46ad-48d7-b9a4-8e21981c0184,0605
+49616,"A page from a study app, that shows the latest study-sessions.",02_prompt_decomposition_pd_zs_content,6,93914ca9-1c13-459c-8a94-d6393457bca4,0606
+49616,"A page from a study app, that shows the latest study-sessions.",03_rag_zs_k_1_direct,7,c64e5f64-33f1-445c-b745-46ff15d27486,0607
+49616,"A page from a study app, that shows the latest study-sessions.",03_rag_zs_k_3_direct,8,a7ce22a6-3b58-4a3f-8b0e-b6408f893d9f,0608
+49616,"A page from a study app, that shows the latest study-sessions.",03_rag_zs_k_5_direct,9,283c1c31-7dc9-4255-b017-0cd39737ddb1,0609
+49616,"A page from a study app, that shows the latest study-sessions.",03_rag_zs_k_7_direct,10,3381b2f2-5034-4780-b615-894d164a6d2f,0610
+49616,"A page from a study app, that shows the latest study-sessions.",03_rag_zs_k_3_direct_content,11,11953187-9e9d-43c2-9010-80e1f0dd8840,0611
+49616,"A page from a study app, that shows the latest study-sessions.",03_rag_zs_k_3_direct_pd_zs,12,96a1cf6c-bffc-4da9-8688-0f398934cc37,0612
+49616,"A page from a study app, that shows the latest study-sessions.",03_rag_zs_k_3_feat_layout,13,9c193989-71a8-4b36-a4bb-c1abbd324a96,0613
+49616,"A page from a study app, that shows the latest study-sessions.",04_self_critique_base_zs_instruction_k_1,14,b7a9a20b-de2e-4677-a3e4-3516587967d8,0614
+49616,"A page from a study app, that shows the latest study-sessions.",04_self_critique_base_zs_instruction_k_2,15,cc5d3970-f3ac-4c0c-bca9-913bd3fe8004,0615
+49616,"A page from a study app, that shows the latest study-sessions.",04_self_critique_base_zs_instruction_k_3,16,e98df446-a19a-4afd-a29b-d3309f55bcf7,0616
+49616,"A page from a study app, that shows the latest study-sessions.",04_self_critique_base_zs_instruction_k_4,17,42affbea-a78c-45fe-a0b3-a7da1d071815,0617
+49616,"A page from a study app, that shows the latest study-sessions.",04_self_critique_base_zs_instruction_content_k_3,18,2045d009-4448-4a4b-aa38-963061590691,0618
+49616,"A page from a study app, that shows the latest study-sessions.",04_self_critique_base_pd_zs_k_3,19,9d5016df-a15b-410a-a582-ecf561bb8204,0619
+49616,"A page from a study app, that shows the latest study-sessions.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,ff6382b7-ed19-4a33-b7e2-05d74dbfa6ba,0620
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",01_baselines_zs_instruction,1,4572abc2-5eec-4aed-8ff6-e280cf4b8c50,0621
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",01_baselines_zs_cot,2,7e41feb6-d59b-4944-bd3c-7f2f5659f197,0622
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",01_baselines_zs_cot_content,3,34abe6d2-66b5-4492-995c-c8ede314812c,0623
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",02_prompt_decomposition_pd_zs,4,9f94e828-6240-4d38-a0ae-179183c48b19,0624
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",02_prompt_decomposition_pd_zs_cot,5,d13f7414-098a-4529-a0af-181f801db1a2,0625
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",02_prompt_decomposition_pd_zs_content,6,c960cfe9-09a5-45fa-998f-60afa6a303c2,0626
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",03_rag_zs_k_1_direct,7,4550361e-2b7a-4af2-9186-50d56d54dbd0,0627
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",03_rag_zs_k_3_direct,8,189b65b6-2fef-4097-901c-054f71f1a8ab,0628
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",03_rag_zs_k_5_direct,9,720cbb0d-cd8f-4e50-bdbe-051e1500c09d,0629
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",03_rag_zs_k_7_direct,10,16f541c1-f2c3-4686-8dc5-a2608cb480f2,0630
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",03_rag_zs_k_3_direct_content,11,ca66a361-b980-494f-85da-3d59a674857d,0631
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",03_rag_zs_k_3_direct_pd_zs,12,3671bafc-fa8c-45ef-8814-728c884dfc16,0632
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",03_rag_zs_k_3_feat_layout,13,7ef52d75-4aeb-4229-844f-822342f74651,0633
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",04_self_critique_base_zs_instruction_k_1,14,5a9165f2-e593-4a08-b25b-8e1d22d6cb58,0634
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",04_self_critique_base_zs_instruction_k_2,15,3ec10e59-1bf5-410d-a7a1-6cc44822b811,0635
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",04_self_critique_base_zs_instruction_k_3,16,56120d27-7629-4eb4-938d-d645a4adda54,0636
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",04_self_critique_base_zs_instruction_k_4,17,48b6e00b-9eeb-4983-a1eb-89bf14325ff5,0637
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",04_self_critique_base_zs_instruction_content_k_3,18,a25bfe96-f4b0-4238-ad90-6e261a79aa12,0638
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",04_self_critique_base_pd_zs_k_3,19,9229dc3c-21fc-4372-857a-e94c08045945,0639
+50416,"A page from a storage app, allowing users to examine and delete installed apps on the phone or SDcard.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,0c3f9ada-57fc-4350-b82a-a2e3c2a00de5,0640
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",01_baselines_zs_instruction,1,32b080c9-872b-4796-a1a2-d0f4d240ffab,0641
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",01_baselines_zs_cot,2,828b1218-5404-4914-ab75-3a776b7099fa,0642
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",01_baselines_zs_cot_content,3,bdc673d4-32f5-41dd-bc17-d773c71c8825,0643
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",02_prompt_decomposition_pd_zs,4,f732d6d9-80a8-4172-9e93-70b0cfb2f896,0644
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",02_prompt_decomposition_pd_zs_cot,5,5b2c5a49-c1d5-4e5c-a16e-6c89e46d8e7e,0645
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",02_prompt_decomposition_pd_zs_content,6,997c3987-2e49-4f53-8958-86cebd6cbd45,0646
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",03_rag_zs_k_1_direct,7,8b9ee8ed-d719-4ec5-8033-c775354ea7f3,0647
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",03_rag_zs_k_3_direct,8,fad2e889-8aea-48d8-866a-cb8cf22d67d7,0648
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",03_rag_zs_k_5_direct,9,58e315dc-f3b5-49d9-b7f9-7aeb9f6bdfdd,0649
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",03_rag_zs_k_7_direct,10,0cb01559-7b27-40ac-ba3a-3ce9a639f13d,0650
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",03_rag_zs_k_3_direct_content,11,6dd59033-07e0-4547-9034-f21bf04f7311,0651
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",03_rag_zs_k_3_direct_pd_zs,12,09421e72-c56d-4076-b4c4-4a94a57dad97,0652
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",03_rag_zs_k_3_feat_layout,13,5426a6d4-999c-47f4-858a-0b1614944226,0653
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",04_self_critique_base_zs_instruction_k_1,14,34cad574-d740-4f4b-a709-1a826ac7d777,0654
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",04_self_critique_base_zs_instruction_k_2,15,36ae08d0-e4ea-4a4a-90e8-3446874007fc,0655
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",04_self_critique_base_zs_instruction_k_3,16,a9d15cd9-2d71-4295-b40b-e909e4e219ae,0656
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",04_self_critique_base_zs_instruction_k_4,17,45d24b02-e544-41a8-abe8-2841f2bd0d52,0657
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",04_self_critique_base_zs_instruction_content_k_3,18,902fe768-9411-402a-8929-3df1022709fb,0658
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",04_self_critique_base_pd_zs_k_3,19,021be2db-c460-44c4-93db-cec15bffd74c,0659
+51074,"The page from a wheater app, showing the current tempreature and other stuff at a specific location and the forecast for the week",04_self_critique_base_rag_zs_k_3_direct_k_3,20,14de465f-f710-4cdc-8969-427e5646f96e,0660
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",01_baselines_zs_instruction,1,76a44dac-5ca4-4ec6-87ab-cceeea07ba01,0661
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",01_baselines_zs_cot,2,124912da-cad9-4708-8554-330c3e664027,0662
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",01_baselines_zs_cot_content,3,e7965c28-3640-400c-8cc9-bb092322589a,0663
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",02_prompt_decomposition_pd_zs,4,41d1723e-031c-4f79-8255-4543814bd73c,0664
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",02_prompt_decomposition_pd_zs_cot,5,dd3a7dc3-2e1f-40f5-821f-04202bcbaa76,0665
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",02_prompt_decomposition_pd_zs_content,6,53503e09-c474-438a-b621-7bc796452e3a,0666
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",03_rag_zs_k_1_direct,7,6187245f-9e20-4d5f-8ea7-2455469ef770,0667
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",03_rag_zs_k_3_direct,8,ff416a15-96aa-4d34-8252-372fe33cbec4,0668
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",03_rag_zs_k_5_direct,9,97671be3-3709-4f21-b901-716964174326,0669
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",03_rag_zs_k_7_direct,10,42e416e1-7f0e-431f-baca-32dd671257bf,0670
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",03_rag_zs_k_3_direct_content,11,f4cccb30-50f1-4366-b444-93b286ddbb62,0671
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",03_rag_zs_k_3_direct_pd_zs,12,d7eb0921-9b3a-4c13-9b35-73785cbf6d0b,0672
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",03_rag_zs_k_3_feat_layout,13,a0c3f969-40bf-4d4d-ad8d-e58aa3a4f721,0673
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",04_self_critique_base_zs_instruction_k_1,14,3c3a6c8a-02cc-49aa-a5ec-044d38a528af,0674
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",04_self_critique_base_zs_instruction_k_2,15,eb33816a-61b8-4ad9-815d-02e3f514c2b5,0675
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",04_self_critique_base_zs_instruction_k_3,16,d25579d7-14b9-41dc-8f78-07508ed22b61,0676
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",04_self_critique_base_zs_instruction_k_4,17,bb054e0b-2aa3-48e9-97f3-3a27f7415235,0677
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",04_self_critique_base_zs_instruction_content_k_3,18,a196090e-b8cc-490e-ac59-1b342c8dad89,0678
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",04_self_critique_base_pd_zs_k_3,19,b8aba6b1-c97f-44b8-a4ae-6daa7e39a107,0679
+51979,"The schedule app shows the upcoming matches of a sportsteam. It states the enemy team, where and when the Game will be and shows the logo of each team.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,9ce380a9-153e-4a90-80fc-c66edab472eb,0680
+52757,A page from a recipe app allowing users to search for recipies in different categories,01_baselines_zs_instruction,1,a0902f85-91b9-423f-980b-e2815fe208ba,0681
+52757,A page from a recipe app allowing users to search for recipies in different categories,01_baselines_zs_cot,2,7d84423b-e585-43a3-8e6f-856af7f0df33,0682
+52757,A page from a recipe app allowing users to search for recipies in different categories,01_baselines_zs_cot_content,3,a22f5545-84f3-45e0-9881-9d7ec367d65c,0683
+52757,A page from a recipe app allowing users to search for recipies in different categories,02_prompt_decomposition_pd_zs,4,3bcce42c-8944-4249-993a-604434493025,0684
+52757,A page from a recipe app allowing users to search for recipies in different categories,02_prompt_decomposition_pd_zs_cot,5,ac6fe731-2393-4d60-b7be-25fffe1a998e,0685
+52757,A page from a recipe app allowing users to search for recipies in different categories,02_prompt_decomposition_pd_zs_content,6,b70984cc-14d6-43f8-84e6-ce0b75902524,0686
+52757,A page from a recipe app allowing users to search for recipies in different categories,03_rag_zs_k_1_direct,7,32641d3a-5b6b-4e0a-acd2-7375d09aaa0c,0687
+52757,A page from a recipe app allowing users to search for recipies in different categories,03_rag_zs_k_3_direct,8,a88a3911-773e-4f5c-b123-114198ce8f0d,0688
+52757,A page from a recipe app allowing users to search for recipies in different categories,03_rag_zs_k_5_direct,9,843c9d5c-0493-4191-8d8e-0d883e1c8fb1,0689
+52757,A page from a recipe app allowing users to search for recipies in different categories,03_rag_zs_k_7_direct,10,7eae5822-27a7-4637-bbdf-687f7bec3fe3,0690
+52757,A page from a recipe app allowing users to search for recipies in different categories,03_rag_zs_k_3_direct_content,11,8548117b-e770-4b58-8fa8-5b49eee621a0,0691
+52757,A page from a recipe app allowing users to search for recipies in different categories,03_rag_zs_k_3_direct_pd_zs,12,2a4d1a72-21b1-4abb-94ad-5da14c072d26,0692
+52757,A page from a recipe app allowing users to search for recipies in different categories,03_rag_zs_k_3_feat_layout,13,100aad4a-5552-44d9-962b-43f3343e3fbe,0693
+52757,A page from a recipe app allowing users to search for recipies in different categories,04_self_critique_base_zs_instruction_k_1,14,fb461535-d017-48a8-b448-0db698a3046b,0694
+52757,A page from a recipe app allowing users to search for recipies in different categories,04_self_critique_base_zs_instruction_k_2,15,eedf9ff7-4306-4a5c-a83f-d09d25796f25,0695
+52757,A page from a recipe app allowing users to search for recipies in different categories,04_self_critique_base_zs_instruction_k_3,16,f514a18b-046f-4b77-8ef3-75f333f16ffd,0696
+52757,A page from a recipe app allowing users to search for recipies in different categories,04_self_critique_base_zs_instruction_k_4,17,4e2deda8-b19d-410a-a57b-69a2e7c1e1eb,0697
+52757,A page from a recipe app allowing users to search for recipies in different categories,04_self_critique_base_zs_instruction_content_k_3,18,607ca2c8-f1aa-4174-9eda-3859dd05f28a,0698
+52757,A page from a recipe app allowing users to search for recipies in different categories,04_self_critique_base_pd_zs_k_3,19,b0e087b8-b30e-4271-bcae-098728ee0757,0699
+52757,A page from a recipe app allowing users to search for recipies in different categories,04_self_critique_base_rag_zs_k_3_direct_k_3,20,393747c9-6578-4f5d-af8e-576140fdc8dc,0700
+54927,"A page from translation app,which can translate spanish into  english.",01_baselines_zs_instruction,1,7a970814-07c1-424d-b286-a67719fdde1f,0701
+54927,"A page from translation app,which can translate spanish into  english.",01_baselines_zs_cot,2,86a66030-3b52-4fd7-bad8-274a8b65f3bb,0702
+54927,"A page from translation app,which can translate spanish into  english.",01_baselines_zs_cot_content,3,b6258e7a-fc70-4682-8e9b-23e4c34a0b1e,0703
+54927,"A page from translation app,which can translate spanish into  english.",02_prompt_decomposition_pd_zs,4,7bff89cb-71af-4833-976c-19923e5b3ce1,0704
+54927,"A page from translation app,which can translate spanish into  english.",02_prompt_decomposition_pd_zs_cot,5,c6e54abd-79c1-4d1a-b732-96f8d3d298ba,0705
+54927,"A page from translation app,which can translate spanish into  english.",02_prompt_decomposition_pd_zs_content,6,00cf2f55-9176-4837-8f97-4f0902b354eb,0706
+54927,"A page from translation app,which can translate spanish into  english.",03_rag_zs_k_1_direct,7,28a6391b-eb2a-46f9-b501-f194813c64e5,0707
+54927,"A page from translation app,which can translate spanish into  english.",03_rag_zs_k_3_direct,8,2a64148e-8c96-480c-b794-09c0632abaf7,0708
+54927,"A page from translation app,which can translate spanish into  english.",03_rag_zs_k_5_direct,9,e0b14650-4933-43b3-b9c6-cc195fbfd77c,0709
+54927,"A page from translation app,which can translate spanish into  english.",03_rag_zs_k_7_direct,10,8dbfc2b3-19f8-43ad-827a-2aa876e26658,0710
+54927,"A page from translation app,which can translate spanish into  english.",03_rag_zs_k_3_direct_content,11,95d3f693-117d-4264-9688-ddbb669f5a33,0711
+54927,"A page from translation app,which can translate spanish into  english.",03_rag_zs_k_3_direct_pd_zs,12,39ddedf4-c51f-48c3-913b-7de650e3655f,0712
+54927,"A page from translation app,which can translate spanish into  english.",03_rag_zs_k_3_feat_layout,13,fce527ea-be46-49a9-8eab-1327114745bb,0713
+54927,"A page from translation app,which can translate spanish into  english.",04_self_critique_base_zs_instruction_k_1,14,b06a6383-32b5-494e-b36d-7ca51322c8b6,0714
+54927,"A page from translation app,which can translate spanish into  english.",04_self_critique_base_zs_instruction_k_2,15,b994b87f-df50-4442-9383-45492228a48b,0715
+54927,"A page from translation app,which can translate spanish into  english.",04_self_critique_base_zs_instruction_k_3,16,b86af22c-3584-4e97-8b86-1de47b39b156,0716
+54927,"A page from translation app,which can translate spanish into  english.",04_self_critique_base_zs_instruction_k_4,17,8dce8d17-6421-4ea1-8875-1ccde424b37f,0717
+54927,"A page from translation app,which can translate spanish into  english.",04_self_critique_base_zs_instruction_content_k_3,18,f328b6b8-17df-47c9-bc41-4d9e810bd7d7,0718
+54927,"A page from translation app,which can translate spanish into  english.",04_self_critique_base_pd_zs_k_3,19,d79b4a5d-bcaf-4c93-b854-2e5e2bb25978,0719
+54927,"A page from translation app,which can translate spanish into  english.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,ab18c0cf-14be-41ae-90bb-059915c76343,0720
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,01_baselines_zs_instruction,1,1c86af70-546a-45ea-9af7-08e5b62fef4b,0721
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,01_baselines_zs_cot,2,4b54f591-5ad8-42c1-ba87-e6a64574f485,0722
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,01_baselines_zs_cot_content,3,32cfffce-238f-47e3-98b0-06c72f5d25e4,0723
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,02_prompt_decomposition_pd_zs,4,03641046-5835-4577-86a9-6090d0e8233a,0724
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,02_prompt_decomposition_pd_zs_cot,5,95d9b263-00c2-415c-96b4-88fd0506c0da,0725
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,02_prompt_decomposition_pd_zs_content,6,a0ba7e38-0da9-474c-9929-899845e3d326,0726
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,03_rag_zs_k_1_direct,7,37b381f1-da8b-40a3-bcd6-fcd2002d45bd,0727
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,03_rag_zs_k_3_direct,8,235c8450-dd0e-48ed-b9af-64c744f40da2,0728
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,03_rag_zs_k_5_direct,9,38ccf762-491c-43cd-ba18-9103a574018c,0729
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,03_rag_zs_k_7_direct,10,3af50b0e-726c-4564-8a13-14dd252b6d7f,0730
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,03_rag_zs_k_3_direct_content,11,8374fb63-be09-4606-bc8f-c75ef1123ee1,0731
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,03_rag_zs_k_3_direct_pd_zs,12,c5f04cae-7a76-4970-9f2b-0b960d2de36d,0732
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,03_rag_zs_k_3_feat_layout,13,64b4582f-3194-4bbe-9d9e-b60641c9b5af,0733
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,04_self_critique_base_zs_instruction_k_1,14,71981da3-0ae2-430f-aec0-8ee3912a7153,0734
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,04_self_critique_base_zs_instruction_k_2,15,5c14c46d-2cb8-4ae4-a0b2-6591d6953c44,0735
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,04_self_critique_base_zs_instruction_k_3,16,1ab75484-3129-4cd5-be4c-2cf404b603f1,0736
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,04_self_critique_base_zs_instruction_k_4,17,60b96348-7ac8-4f39-9b3e-82089780515b,0737
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,04_self_critique_base_zs_instruction_content_k_3,18,21e1d500-613d-49a8-8a25-994b49acf3be,0738
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,04_self_critique_base_pd_zs_k_3,19,9553d7d5-2c89-4b05-b818-b999039fd5d2,0739
+56987,This is a radio player app and is basically used to listen via the internet to every kind of radio from all over the world.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,59fb7bb0-f505-4593-a286-fcdb50ff7e9a,0740
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,01_baselines_zs_instruction,1,1e622e2c-adcd-4d8b-8c80-a31f89c6ae68,0741
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,01_baselines_zs_cot,2,f70b16f9-03e6-48e0-9277-d1d4fbceb960,0742
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,01_baselines_zs_cot_content,3,53a3beb2-f0d5-4e30-9d5b-21c248be8122,0743
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,02_prompt_decomposition_pd_zs,4,e70d07f1-be26-46ca-9185-218b8d515de0,0744
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,02_prompt_decomposition_pd_zs_cot,5,ab96bfe8-673d-4462-bd1e-e91a4f97bb69,0745
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,02_prompt_decomposition_pd_zs_content,6,21d7eb17-00b4-46dd-840b-615ccc963e1f,0746
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,03_rag_zs_k_1_direct,7,0e3b7961-9e68-4b0b-9179-dbc172f55a44,0747
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,03_rag_zs_k_3_direct,8,562e9d30-cccc-421d-a11a-2fba0c6821d6,0748
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,03_rag_zs_k_5_direct,9,0c9c2be5-5cb6-4774-9a02-b7b37be9b7fa,0749
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,03_rag_zs_k_7_direct,10,04512382-976b-4b69-bcd0-ca56a41d0f48,0750
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,03_rag_zs_k_3_direct_content,11,ade2cb5f-7a29-445c-900f-82d077b90f45,0751
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,03_rag_zs_k_3_direct_pd_zs,12,0a914499-7322-423f-96c3-682111f6f7af,0752
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,03_rag_zs_k_3_feat_layout,13,5f887d6d-c8a9-4b7d-89c6-a63025f47a19,0753
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,04_self_critique_base_zs_instruction_k_1,14,9eb645b8-4361-4f1c-9af6-7b65ad3ec7ac,0754
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,04_self_critique_base_zs_instruction_k_2,15,bf833f24-7b15-4a4a-a2e6-36c077402b59,0755
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,04_self_critique_base_zs_instruction_k_3,16,1249caa5-e42d-49f3-9b80-4a25c711415f,0756
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,04_self_critique_base_zs_instruction_k_4,17,4c0253ac-5982-4365-8264-10312930e86e,0757
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,04_self_critique_base_zs_instruction_content_k_3,18,04bf1f4f-1f0a-4d0a-bf60-80a0a0ad86aa,0758
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,04_self_critique_base_pd_zs_k_3,19,52540a14-3cd0-4aea-9db9-52714908661e,0759
+59109,A page from an App that is a fashion Q&A where others can help one another with different style choices.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,cd168cba-51aa-42ca-a2d4-daa26b4d69d0,0760
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",01_baselines_zs_instruction,1,ebe6d251-690e-4bdb-b858-ef22d74d5279,0761
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",01_baselines_zs_cot,2,12e8b186-61af-4c25-9d5a-643eba55ea5f,0762
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",01_baselines_zs_cot_content,3,0b96bf52-c210-4c8d-8973-8d3fcefa704a,0763
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",02_prompt_decomposition_pd_zs,4,16097d44-4871-4f79-8e28-eea7eadb03f9,0764
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",02_prompt_decomposition_pd_zs_cot,5,765384b1-0c52-4648-8049-9cdcda96a8f3,0765
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",02_prompt_decomposition_pd_zs_content,6,2bce7646-4704-4cdc-8a91-235c0e3cfcad,0766
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",03_rag_zs_k_1_direct,7,91ae00ed-1c22-46fb-89d1-752af20c8d6c,0767
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",03_rag_zs_k_3_direct,8,dc68b7d5-3f95-4c4a-97d3-056a812b2da6,0768
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",03_rag_zs_k_5_direct,9,97fb321a-7c66-4bad-be87-4ddbe8ee2e7c,0769
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",03_rag_zs_k_7_direct,10,7ce6557e-302f-43bb-9ff4-c126e45ce782,0770
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",03_rag_zs_k_3_direct_content,11,f12b424e-86c1-4029-93d2-3a4d60fc1617,0771
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",03_rag_zs_k_3_direct_pd_zs,12,de1bd634-9818-4d89-b944-5a868c8528ac,0772
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",03_rag_zs_k_3_feat_layout,13,9e462ed3-b272-4932-a9d1-bcb2b28df4be,0773
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",04_self_critique_base_zs_instruction_k_1,14,ea8371ea-5cd1-46e5-b659-31424b85fc1f,0774
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",04_self_critique_base_zs_instruction_k_2,15,379af2c8-fa83-4df5-86f7-a6d8df8ece2c,0775
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",04_self_critique_base_zs_instruction_k_3,16,44d83256-95ed-4e68-b0aa-bd8c8684b6fb,0776
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",04_self_critique_base_zs_instruction_k_4,17,aa75db86-76e8-426d-9e84-bac024b47a88,0777
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",04_self_critique_base_zs_instruction_content_k_3,18,44072a78-2c84-4d7a-84b0-bc93037bba3e,0778
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",04_self_critique_base_pd_zs_k_3,19,64fa57d8-264a-4491-ad8f-1c08f1d7f47b,0779
+60554,"A start page of an unspecified app, where an account can be created or a login with existing accounts is possible.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,5b81370b-289d-43f5-aa13-7af3a8f465e4,0780
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",01_baselines_zs_instruction,1,de5235ce-9055-40ba-a043-0b41e1e0fb61,0781
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",01_baselines_zs_cot,2,23717792-f44f-4705-a372-a751a888d0e5,0782
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",01_baselines_zs_cot_content,3,3d60fbcb-9a0e-4d77-8620-9467d870efd4,0783
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",02_prompt_decomposition_pd_zs,4,0f1305c4-a3db-4f19-8ae7-4ef819cad881,0784
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",02_prompt_decomposition_pd_zs_cot,5,2b09f243-de47-4319-86b6-77be1f6fff71,0785
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",02_prompt_decomposition_pd_zs_content,6,8e9ba655-ca02-4a71-ad90-255f9e55441d,0786
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",03_rag_zs_k_1_direct,7,e7200e4b-3474-4a54-8fa1-7480c5142fa0,0787
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",03_rag_zs_k_3_direct,8,75e64f07-a789-446b-8747-30d6ff9bbbfe,0788
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",03_rag_zs_k_5_direct,9,85f82ea3-4cae-405c-9f67-302014585285,0789
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",03_rag_zs_k_7_direct,10,b346c478-7d21-4519-95fc-d448a8f4d9e9,0790
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",03_rag_zs_k_3_direct_content,11,be1fa511-0e56-416f-8a88-a9991a06ff97,0791
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",03_rag_zs_k_3_direct_pd_zs,12,33f241b6-11aa-41d9-8e52-9dcee087d6e8,0792
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",03_rag_zs_k_3_feat_layout,13,8b35257c-de5c-4e1f-bf30-c888752b39e3,0793
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",04_self_critique_base_zs_instruction_k_1,14,4940743f-9218-40dd-9368-f898cc21b699,0794
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",04_self_critique_base_zs_instruction_k_2,15,5388eb75-e26b-4b50-81f1-55bf81734453,0795
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",04_self_critique_base_zs_instruction_k_3,16,201adfd7-b425-4cf1-afb1-8ab01847cdba,0796
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",04_self_critique_base_zs_instruction_k_4,17,eb8eebb1-b1c1-4634-8172-825903b6b9a5,0797
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",04_self_critique_base_zs_instruction_content_k_3,18,ce093f15-9b67-4e2a-9b29-c318772cd8a9,0798
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",04_self_critique_base_pd_zs_k_3,19,d7eb0501-3b5c-4f88-9ec4-eb59f9daa851,0799
+61579,"A sports team app GUI, that lists information about  schedule, news and team.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,e4c8fe37-7bf4-417d-ab33-dd84a1ed0b5f,0800
+62215,"A page from an shopping app, that gives info about a bag.",01_baselines_zs_instruction,1,647ca0d0-541b-454b-bbc2-26f6223524db,0801
+62215,"A page from an shopping app, that gives info about a bag.",01_baselines_zs_cot,2,b2131779-7563-4058-875d-73ec4b83d952,0802
+62215,"A page from an shopping app, that gives info about a bag.",01_baselines_zs_cot_content,3,f74fbf4c-e31b-4b87-b743-f826092a2023,0803
+62215,"A page from an shopping app, that gives info about a bag.",02_prompt_decomposition_pd_zs,4,8696a6e4-e261-4d7a-9394-8e165ebcadf7,0804
+62215,"A page from an shopping app, that gives info about a bag.",02_prompt_decomposition_pd_zs_cot,5,1b729a06-4396-4e61-9d5b-10aed575bada,0805
+62215,"A page from an shopping app, that gives info about a bag.",02_prompt_decomposition_pd_zs_content,6,4a3d3cca-bb35-4c63-80c2-56f45eea6955,0806
+62215,"A page from an shopping app, that gives info about a bag.",03_rag_zs_k_1_direct,7,74db0c46-aae6-4deb-951d-e6f97f3f37aa,0807
+62215,"A page from an shopping app, that gives info about a bag.",03_rag_zs_k_3_direct,8,82286861-93db-4535-91bb-2949ec05906f,0808
+62215,"A page from an shopping app, that gives info about a bag.",03_rag_zs_k_5_direct,9,29c4c581-51d4-465a-ad75-7ba732ca6001,0809
+62215,"A page from an shopping app, that gives info about a bag.",03_rag_zs_k_7_direct,10,b70a8913-5903-4cfc-9a9b-162c8ffccf45,0810
+62215,"A page from an shopping app, that gives info about a bag.",03_rag_zs_k_3_direct_content,11,7e70d2e0-4663-4362-aeef-5aded1a96702,0811
+62215,"A page from an shopping app, that gives info about a bag.",03_rag_zs_k_3_direct_pd_zs,12,20c2f01b-8154-43e6-a9df-9a6b02addd7e,0812
+62215,"A page from an shopping app, that gives info about a bag.",03_rag_zs_k_3_feat_layout,13,6ad94c34-17e2-4c9c-a6c4-89a60fee1c4e,0813
+62215,"A page from an shopping app, that gives info about a bag.",04_self_critique_base_zs_instruction_k_1,14,d0d8f251-125d-4b49-922d-a454ae906c9f,0814
+62215,"A page from an shopping app, that gives info about a bag.",04_self_critique_base_zs_instruction_k_2,15,d15367a5-1613-4efa-98bf-f9d4bdb5915d,0815
+62215,"A page from an shopping app, that gives info about a bag.",04_self_critique_base_zs_instruction_k_3,16,7dc46d89-e286-4324-b96c-588840bd2e04,0816
+62215,"A page from an shopping app, that gives info about a bag.",04_self_critique_base_zs_instruction_k_4,17,1932b89b-e554-42fd-bffb-de6b731afc23,0817
+62215,"A page from an shopping app, that gives info about a bag.",04_self_critique_base_zs_instruction_content_k_3,18,3f8324c5-953e-4dff-a4c0-ee6734dec31b,0818
+62215,"A page from an shopping app, that gives info about a bag.",04_self_critique_base_pd_zs_k_3,19,09387237-346f-415b-8b17-916197f55292,0819
+62215,"A page from an shopping app, that gives info about a bag.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,07a46d38-857f-4b03-a048-1d640b9e6e06,0820
+64407,A page from a music player app to listen to songs or music albums.,01_baselines_zs_instruction,1,2da59bae-f5f2-4cb5-bdfb-6641d9ee530c,0821
+64407,A page from a music player app to listen to songs or music albums.,01_baselines_zs_cot,2,4f8cbf22-a6ec-479f-b094-48419f301e25,0822
+64407,A page from a music player app to listen to songs or music albums.,01_baselines_zs_cot_content,3,d19b2b7d-2115-4d17-88e0-cd12e6919c4e,0823
+64407,A page from a music player app to listen to songs or music albums.,02_prompt_decomposition_pd_zs,4,772d8912-c848-44f0-a04f-f389b41c21be,0824
+64407,A page from a music player app to listen to songs or music albums.,02_prompt_decomposition_pd_zs_cot,5,2b5734e9-34ea-46dc-b3ac-009e96f83467,0825
+64407,A page from a music player app to listen to songs or music albums.,02_prompt_decomposition_pd_zs_content,6,48471fbb-e72e-4d8b-8689-30a80cc317b0,0826
+64407,A page from a music player app to listen to songs or music albums.,03_rag_zs_k_1_direct,7,c1e9316a-b5d4-41e0-8bfa-f9c4cbbb2bb1,0827
+64407,A page from a music player app to listen to songs or music albums.,03_rag_zs_k_3_direct,8,2133c06e-6291-41fa-bfa6-f33c1dbd5021,0828
+64407,A page from a music player app to listen to songs or music albums.,03_rag_zs_k_5_direct,9,5f02b560-ae9e-4068-b281-e4e327d8c563,0829
+64407,A page from a music player app to listen to songs or music albums.,03_rag_zs_k_7_direct,10,d50c3fbe-6009-4a45-985c-bc131fe3ef15,0830
+64407,A page from a music player app to listen to songs or music albums.,03_rag_zs_k_3_direct_content,11,217b4455-207c-47c1-a1e0-fa79612a8822,0831
+64407,A page from a music player app to listen to songs or music albums.,03_rag_zs_k_3_direct_pd_zs,12,d4a183fd-b916-4747-992c-b453d8ca6432,0832
+64407,A page from a music player app to listen to songs or music albums.,03_rag_zs_k_3_feat_layout,13,07e8aa43-0461-4fae-a164-39b6b3e76b2a,0833
+64407,A page from a music player app to listen to songs or music albums.,04_self_critique_base_zs_instruction_k_1,14,a9e8e5fb-b18b-4ad5-b649-60adc208dc34,0834
+64407,A page from a music player app to listen to songs or music albums.,04_self_critique_base_zs_instruction_k_2,15,7e7bfd76-99bd-4af3-a038-d61d0f91f320,0835
+64407,A page from a music player app to listen to songs or music albums.,04_self_critique_base_zs_instruction_k_3,16,65caa368-424b-4e31-865f-47cbd16e23ee,0836
+64407,A page from a music player app to listen to songs or music albums.,04_self_critique_base_zs_instruction_k_4,17,1fcbe845-bd3a-41a0-a161-e9626cb4a504,0837
+64407,A page from a music player app to listen to songs or music albums.,04_self_critique_base_zs_instruction_content_k_3,18,41c4d4ec-0d58-4e7e-9903-714dbbd10089,0838
+64407,A page from a music player app to listen to songs or music albums.,04_self_critique_base_pd_zs_k_3,19,4736e904-13d2-4cd0-92dc-f8ec16b59fbd,0839
+64407,A page from a music player app to listen to songs or music albums.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,6c7e54d0-fb2f-400a-93d4-a4c178e88af1,0840
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",01_baselines_zs_instruction,1,b08f5bc6-0a5e-4e26-ad26-ed2e57ef3db2,0841
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",01_baselines_zs_cot,2,a37497ff-e45f-4ea9-a542-a80f8dcfe84a,0842
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",01_baselines_zs_cot_content,3,6b2b30b6-f7bd-4356-a1a9-334180cb7f20,0843
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",02_prompt_decomposition_pd_zs,4,7dc92c7d-e0c4-41c8-9ae2-9c934645bf00,0844
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",02_prompt_decomposition_pd_zs_cot,5,177aee7b-ec64-4b8a-b7fd-5454ee0b742d,0845
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",02_prompt_decomposition_pd_zs_content,6,df9d3442-0847-4886-970a-2dd2a80faeae,0846
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",03_rag_zs_k_1_direct,7,231f4501-047b-4c1e-b2a3-89cce64b7eda,0847
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",03_rag_zs_k_3_direct,8,e849e311-4a09-48c3-9bf9-12768684d4f3,0848
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",03_rag_zs_k_5_direct,9,6dacbcdc-89e0-489f-b7a2-d3a4a5a1fc8a,0849
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",03_rag_zs_k_7_direct,10,270e7c2b-914e-4bed-befd-5643cbadde01,0850
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",03_rag_zs_k_3_direct_content,11,ce686e68-1e84-48d7-aa66-26542d9b4705,0851
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",03_rag_zs_k_3_direct_pd_zs,12,86a51adc-8433-46fe-966d-d6e41e9728dd,0852
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",03_rag_zs_k_3_feat_layout,13,87e750f1-58b9-4708-84fc-0a18b451d55e,0853
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",04_self_critique_base_zs_instruction_k_1,14,a1df4af9-cccf-41af-9dbc-567d8503c470,0854
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",04_self_critique_base_zs_instruction_k_2,15,d93d9fa8-4c1f-4973-81a2-af4ac201d5ec,0855
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",04_self_critique_base_zs_instruction_k_3,16,26999447-279b-4d5c-8b53-e43469f4ad9b,0856
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",04_self_critique_base_zs_instruction_k_4,17,168d76fd-ffcc-40ae-8c5c-e8024a0b9b76,0857
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",04_self_critique_base_zs_instruction_content_k_3,18,c9de40aa-7edf-4513-a344-8e46aedc8fde,0858
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",04_self_critique_base_pd_zs_k_3,19,364c1030-c63e-4552-9df2-193887b71173,0859
+65009,"A page from an online encyclopedia, allowing the user to search and scroll through different articles.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,0762d45c-d1a4-47e9-9cd2-ad88f73b2cdf,0860
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",01_baselines_zs_instruction,1,3e990248-1eae-43c2-bafe-1c72b34ae1c9,0861
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",01_baselines_zs_cot,2,cd4c55b0-3f93-4a3d-a110-06776e255f48,0862
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",01_baselines_zs_cot_content,3,79c4319c-cdc8-4c00-91f3-2b0adde7554d,0863
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",02_prompt_decomposition_pd_zs,4,cbd0351b-da09-41ec-977c-0ce010c13a48,0864
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",02_prompt_decomposition_pd_zs_cot,5,187f124c-65b9-4507-8cff-a2b92f364621,0865
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",02_prompt_decomposition_pd_zs_content,6,9899a596-c4b1-41ca-9709-a5bfaab9e3a3,0866
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",03_rag_zs_k_1_direct,7,47df92ac-3a5a-41e2-aa74-68347087c490,0867
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",03_rag_zs_k_3_direct,8,53a8926d-f0c5-4ed9-8eed-10c55931d3a4,0868
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",03_rag_zs_k_5_direct,9,65c23ce9-ebb9-4c49-80b4-ccb2bb218e4a,0869
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",03_rag_zs_k_7_direct,10,efb83a31-f939-4746-84e4-a7aaa65f44f1,0870
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",03_rag_zs_k_3_direct_content,11,59a80a3e-3584-4d0d-9cff-4a74a18b5c39,0871
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",03_rag_zs_k_3_direct_pd_zs,12,34e6a70d-40fe-4dc9-bfca-63b19e3077b5,0872
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",03_rag_zs_k_3_feat_layout,13,33a946cb-69db-4536-be86-f4558ed32fb0,0873
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",04_self_critique_base_zs_instruction_k_1,14,d6acd097-3179-4d52-b4f0-cd4ae47d5300,0874
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",04_self_critique_base_zs_instruction_k_2,15,c999637f-a64e-4823-9b8e-878d2b898128,0875
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",04_self_critique_base_zs_instruction_k_3,16,62d2acbe-d7fa-4883-b7a7-497de632db17,0876
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",04_self_critique_base_zs_instruction_k_4,17,7e77aae6-e395-4ecc-8593-dec9b728c632,0877
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",04_self_critique_base_zs_instruction_content_k_3,18,58c22ec1-a8e0-4576-8a0e-3539cdbe937c,0878
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",04_self_critique_base_pd_zs_k_3,19,13996eca-5c53-47a2-b5f3-cf8ac0970ea6,0879
+66742,"A alarm app GUI, that allows to download and play multiple audios to use as an alarm.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,12dc5c12-e052-49c6-bd88-846664bd8b68,0880
+66798,A page from an app to track the own night's dreams by writing or voice recording.,01_baselines_zs_instruction,1,a2bb00ec-4cd9-434d-94b5-3aff65e29e71,0881
+66798,A page from an app to track the own night's dreams by writing or voice recording.,01_baselines_zs_cot,2,7d9b1bc5-a7c9-4693-947e-10a40fd0cadc,0882
+66798,A page from an app to track the own night's dreams by writing or voice recording.,01_baselines_zs_cot_content,3,47264fd5-4d96-4973-a7a8-a84af370192c,0883
+66798,A page from an app to track the own night's dreams by writing or voice recording.,02_prompt_decomposition_pd_zs,4,93aa2512-6465-4e96-b4c1-55e714aedb64,0884
+66798,A page from an app to track the own night's dreams by writing or voice recording.,02_prompt_decomposition_pd_zs_cot,5,e00f63bc-8baf-4f58-a57e-f98c68552a84,0885
+66798,A page from an app to track the own night's dreams by writing or voice recording.,02_prompt_decomposition_pd_zs_content,6,fbc94f4b-3355-4765-84a9-02c27df54eb8,0886
+66798,A page from an app to track the own night's dreams by writing or voice recording.,03_rag_zs_k_1_direct,7,cf290fb4-7fa9-4ec0-b8ff-b5be22058708,0887
+66798,A page from an app to track the own night's dreams by writing or voice recording.,03_rag_zs_k_3_direct,8,c2587680-d538-48a8-8f90-b80748da0e0c,0888
+66798,A page from an app to track the own night's dreams by writing or voice recording.,03_rag_zs_k_5_direct,9,81153e2b-bd85-470a-81ee-69574d812f00,0889
+66798,A page from an app to track the own night's dreams by writing or voice recording.,03_rag_zs_k_7_direct,10,e6cf44e2-da04-491d-a221-00b41cde21d0,0890
+66798,A page from an app to track the own night's dreams by writing or voice recording.,03_rag_zs_k_3_direct_content,11,5a95a8fb-e163-44ce-9c5c-a666c3f5e0dd,0891
+66798,A page from an app to track the own night's dreams by writing or voice recording.,03_rag_zs_k_3_direct_pd_zs,12,94749d0f-fd05-40ba-a4d9-c2abf063d4df,0892
+66798,A page from an app to track the own night's dreams by writing or voice recording.,03_rag_zs_k_3_feat_layout,13,4f7de27d-8c02-4411-a1d0-6a6c6909ef13,0893
+66798,A page from an app to track the own night's dreams by writing or voice recording.,04_self_critique_base_zs_instruction_k_1,14,19a0dcd6-fa75-477f-81e1-33b7fe45d2f8,0894
+66798,A page from an app to track the own night's dreams by writing or voice recording.,04_self_critique_base_zs_instruction_k_2,15,c679d69f-a2ff-4402-90d9-90e10d74a49b,0895
+66798,A page from an app to track the own night's dreams by writing or voice recording.,04_self_critique_base_zs_instruction_k_3,16,1b8dda73-6c70-47b9-9121-b984cbc8fe63,0896
+66798,A page from an app to track the own night's dreams by writing or voice recording.,04_self_critique_base_zs_instruction_k_4,17,f8357af4-a13d-4ff3-a01d-250e6248a26b,0897
+66798,A page from an app to track the own night's dreams by writing or voice recording.,04_self_critique_base_zs_instruction_content_k_3,18,db492bfd-0caf-4342-bff1-2c8bd73f8e1d,0898
+66798,A page from an app to track the own night's dreams by writing or voice recording.,04_self_critique_base_pd_zs_k_3,19,c1ade47b-a99d-4f14-a477-0f807c82822f,0899
+66798,A page from an app to track the own night's dreams by writing or voice recording.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,611a83cd-ac7f-421d-8ebb-f5e8ac88308a,0900
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,01_baselines_zs_instruction,1,3b4bf61d-35b5-477e-812e-afa829a94712,0901
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,01_baselines_zs_cot,2,e1927d10-1967-4824-9286-4ac507d45b4a,0902
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,01_baselines_zs_cot_content,3,c8df71d4-7305-4c16-aa8f-f235e478faf5,0903
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,02_prompt_decomposition_pd_zs,4,d898a7d3-2644-4dd4-b3c4-6e51f97f3a69,0904
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,02_prompt_decomposition_pd_zs_cot,5,d54fc6cc-bc97-43b7-bdd0-079cc5d0f50c,0905
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,02_prompt_decomposition_pd_zs_content,6,5e801162-ce8f-4133-af0f-b6e9d5f79236,0906
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,03_rag_zs_k_1_direct,7,e2feda55-c66d-4819-bee4-b05b6222f02d,0907
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,03_rag_zs_k_3_direct,8,7715eb8a-b592-4496-a38a-3608e6794dfc,0908
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,03_rag_zs_k_5_direct,9,758325bf-a0ac-4863-aea5-a4075de4648b,0909
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,03_rag_zs_k_7_direct,10,905cd0b9-c113-438f-aa4e-5dccb828c72d,0910
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,03_rag_zs_k_3_direct_content,11,d4e2054c-f503-4951-9878-7d57037dc695,0911
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,03_rag_zs_k_3_direct_pd_zs,12,905d72c3-df63-4f66-818a-7105e1b2c555,0912
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,03_rag_zs_k_3_feat_layout,13,44e08d2c-e7fe-4f7e-94c1-7ed62558bc00,0913
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,04_self_critique_base_zs_instruction_k_1,14,6fd343b8-de84-47d1-86bc-b315677c31c9,0914
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,04_self_critique_base_zs_instruction_k_2,15,d1a4e690-415b-4400-9f63-66ae18c9a0d6,0915
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,04_self_critique_base_zs_instruction_k_3,16,8254c330-1551-463b-8b0d-1b4d49d97774,0916
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,04_self_critique_base_zs_instruction_k_4,17,4665bf2f-54fa-4821-b8f5-cae7d049b25d,0917
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,04_self_critique_base_zs_instruction_content_k_3,18,b9563e27-fd88-4601-a230-86ac51e6c697,0918
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,04_self_critique_base_pd_zs_k_3,19,1eef0a21-75d2-4578-8279-87ab30fde000,0919
+68152,an app's search page offering a pre-selection of recipes for different categories of healthy meals.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,bda46c4c-2ef1-4067-9c3f-96f87c39f56f,0920
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",01_baselines_zs_instruction,1,761a2e93-f7ef-46f1-8ba3-b81296bed8fc,0921
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",01_baselines_zs_cot,2,95e9e138-0530-4cf0-828d-a3a1e05e50d1,0922
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",01_baselines_zs_cot_content,3,f6945314-0c59-47ff-bf0a-65dcca2cf8ef,0923
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",02_prompt_decomposition_pd_zs,4,f0cd04ba-a84f-4c49-ab97-5a347a6bef32,0924
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",02_prompt_decomposition_pd_zs_cot,5,888fb3ce-1ac2-4121-a907-ebda0af7cd62,0925
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",02_prompt_decomposition_pd_zs_content,6,34f27793-2a39-4b84-b50c-c23ee1d2c663,0926
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",03_rag_zs_k_1_direct,7,3891dfff-9bef-4f25-8bfd-e7f20611c9a5,0927
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",03_rag_zs_k_3_direct,8,3d5996d1-d1c4-46c6-a3f5-02177d48dfb4,0928
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",03_rag_zs_k_5_direct,9,41a790b5-0a1b-4961-9370-091e530c31bb,0929
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",03_rag_zs_k_7_direct,10,8ce0268c-0802-40d8-b863-d3395a06ebff,0930
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",03_rag_zs_k_3_direct_content,11,4c0a307a-33a1-4477-85b8-ca4ef80f7a69,0931
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",03_rag_zs_k_3_direct_pd_zs,12,db255484-d68b-4ddb-9039-daa9e4ce3d33,0932
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",03_rag_zs_k_3_feat_layout,13,b65e6f77-d162-4106-9338-fa14497b8b37,0933
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",04_self_critique_base_zs_instruction_k_1,14,a8f18e6d-3f86-4ee0-91a9-aaa6edbc4112,0934
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",04_self_critique_base_zs_instruction_k_2,15,d75aaa1c-f6f1-4291-a5fc-5169a239e3c3,0935
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",04_self_critique_base_zs_instruction_k_3,16,b04db64c-2d1a-4feb-991d-a010a1fdce1c,0936
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",04_self_critique_base_zs_instruction_k_4,17,52bd417f-03d1-4ffc-af0d-81ae87f2a2ff,0937
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",04_self_critique_base_zs_instruction_content_k_3,18,35eda5f7-860a-4f62-a778-281a3037738f,0938
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",04_self_critique_base_pd_zs_k_3,19,4d32dff2-e29d-4ddd-9bf8-c88f8b7e204d,0939
+69312,"The GUI from a recipe app, showing a picture and the step by step directions for the dish",04_self_critique_base_rag_zs_k_3_direct_k_3,20,edb05269-b32c-4368-8f0b-f83cbb8d1bcb,0940
+69340,"A page from a bidding app, where some closed and opened offers are shown.",01_baselines_zs_instruction,1,4849a645-9d30-4091-8952-cfe5441048e5,0941
+69340,"A page from a bidding app, where some closed and opened offers are shown.",01_baselines_zs_cot,2,e7ca8ba8-23a0-46b0-ac6b-8b02cdc1f97d,0942
+69340,"A page from a bidding app, where some closed and opened offers are shown.",01_baselines_zs_cot_content,3,cb3e9a77-0a08-4c80-94fe-137bc269e3ec,0943
+69340,"A page from a bidding app, where some closed and opened offers are shown.",02_prompt_decomposition_pd_zs,4,2ba0d970-8fa9-49cc-ad11-ba6fdde15a82,0944
+69340,"A page from a bidding app, where some closed and opened offers are shown.",02_prompt_decomposition_pd_zs_cot,5,0c72354b-e35b-4078-bfed-f855140c02a7,0945
+69340,"A page from a bidding app, where some closed and opened offers are shown.",02_prompt_decomposition_pd_zs_content,6,0ed1f2e7-04c2-44c1-8f7e-b332ca5097f8,0946
+69340,"A page from a bidding app, where some closed and opened offers are shown.",03_rag_zs_k_1_direct,7,fb0dd360-cec5-4d84-9fb8-4f8e2d8ff112,0947
+69340,"A page from a bidding app, where some closed and opened offers are shown.",03_rag_zs_k_3_direct,8,7168b4cd-cce3-4580-a8a4-a4a5e56547e6,0948
+69340,"A page from a bidding app, where some closed and opened offers are shown.",03_rag_zs_k_5_direct,9,ea43cb36-4afc-4df9-8e66-7b87841f4c4b,0949
+69340,"A page from a bidding app, where some closed and opened offers are shown.",03_rag_zs_k_7_direct,10,acc786c2-3510-4ae2-a806-9dd9fcf10393,0950
+69340,"A page from a bidding app, where some closed and opened offers are shown.",03_rag_zs_k_3_direct_content,11,b65093da-058c-480b-9deb-61ad2a5a7b71,0951
+69340,"A page from a bidding app, where some closed and opened offers are shown.",03_rag_zs_k_3_direct_pd_zs,12,ce18dbbc-70a0-4558-8db5-5567bdd2af37,0952
+69340,"A page from a bidding app, where some closed and opened offers are shown.",03_rag_zs_k_3_feat_layout,13,ae83fe27-af97-4f7e-83f1-f2993204bdca,0953
+69340,"A page from a bidding app, where some closed and opened offers are shown.",04_self_critique_base_zs_instruction_k_1,14,b57cf2c1-9a48-4645-9b74-c2737f08f778,0954
+69340,"A page from a bidding app, where some closed and opened offers are shown.",04_self_critique_base_zs_instruction_k_2,15,bbea584b-e78f-44ae-bd6a-1b649db1d2e4,0955
+69340,"A page from a bidding app, where some closed and opened offers are shown.",04_self_critique_base_zs_instruction_k_3,16,afa450a2-391d-47ac-86e5-85dff09a9ac8,0956
+69340,"A page from a bidding app, where some closed and opened offers are shown.",04_self_critique_base_zs_instruction_k_4,17,a3c40dde-327c-46fa-a065-032203b46b8f,0957
+69340,"A page from a bidding app, where some closed and opened offers are shown.",04_self_critique_base_zs_instruction_content_k_3,18,76630905-4616-4936-a37d-c194eba3fa1b,0958
+69340,"A page from a bidding app, where some closed and opened offers are shown.",04_self_critique_base_pd_zs_k_3,19,67561aa9-3c24-42f7-8968-19d9928ce7f6,0959
+69340,"A page from a bidding app, where some closed and opened offers are shown.",04_self_critique_base_rag_zs_k_3_direct_k_3,20,fe486803-5e6b-4856-8637-8a6513a2ee67,0960
+71954,The GUI of a music app for creating your own playlists,01_baselines_zs_instruction,1,b8cdf4ba-0de4-440c-9827-96620412a05d,0961
+71954,The GUI of a music app for creating your own playlists,01_baselines_zs_cot,2,56afe0fa-a293-484b-a34d-e887d054aefc,0962
+71954,The GUI of a music app for creating your own playlists,01_baselines_zs_cot_content,3,a0947a04-d95f-42f6-ad6c-a16517a34a8d,0963
+71954,The GUI of a music app for creating your own playlists,02_prompt_decomposition_pd_zs,4,f9889876-e8df-42ef-bc7d-ca2e7dd24c78,0964
+71954,The GUI of a music app for creating your own playlists,02_prompt_decomposition_pd_zs_cot,5,04608ccf-3cad-4c13-a1c8-bdf3ba49b504,0965
+71954,The GUI of a music app for creating your own playlists,02_prompt_decomposition_pd_zs_content,6,b177eb1b-2510-42a6-b16e-824f8fcd5bd0,0966
+71954,The GUI of a music app for creating your own playlists,03_rag_zs_k_1_direct,7,7c91095b-c977-45ea-b8bc-af1fe47104bd,0967
+71954,The GUI of a music app for creating your own playlists,03_rag_zs_k_3_direct,8,bbeba0f3-7ab7-40fc-b3f9-92d6c783b3af,0968
+71954,The GUI of a music app for creating your own playlists,03_rag_zs_k_5_direct,9,932a0362-b33d-4c8b-bd7e-3c0ac8e66207,0969
+71954,The GUI of a music app for creating your own playlists,03_rag_zs_k_7_direct,10,e4999a81-6683-4210-97a7-ffd70a687238,0970
+71954,The GUI of a music app for creating your own playlists,03_rag_zs_k_3_direct_content,11,b0201ae6-74a1-441b-b05f-147ec5040326,0971
+71954,The GUI of a music app for creating your own playlists,03_rag_zs_k_3_direct_pd_zs,12,65825d7f-b670-41d9-8745-1a95f0a51bdd,0972
+71954,The GUI of a music app for creating your own playlists,03_rag_zs_k_3_feat_layout,13,6fdcf06e-84c2-4499-aa8c-f003a7dd60ae,0973
+71954,The GUI of a music app for creating your own playlists,04_self_critique_base_zs_instruction_k_1,14,3af2890c-d881-4b03-8735-82f87da8e084,0974
+71954,The GUI of a music app for creating your own playlists,04_self_critique_base_zs_instruction_k_2,15,351cf0ae-52ea-4d1f-82c0-de06fe1c3483,0975
+71954,The GUI of a music app for creating your own playlists,04_self_critique_base_zs_instruction_k_3,16,86aa106e-d10e-40fe-94b3-10287e1061ad,0976
+71954,The GUI of a music app for creating your own playlists,04_self_critique_base_zs_instruction_k_4,17,dc850e7f-9e64-47f5-8571-8114cb323c2d,0977
+71954,The GUI of a music app for creating your own playlists,04_self_critique_base_zs_instruction_content_k_3,18,29cb3b6f-b146-45da-ba9d-edaed1731eaf,0978
+71954,The GUI of a music app for creating your own playlists,04_self_critique_base_pd_zs_k_3,19,db20ec04-84aa-44d6-b557-68b7d9b66b8c,0979
+71954,The GUI of a music app for creating your own playlists,04_self_critique_base_rag_zs_k_3_direct_k_3,20,9eee4fed-51df-49f2-b1d9-e852f9b1433d,0980
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,01_baselines_zs_instruction,1,e8244cea-3163-4ecd-af90-d2afc097244c,0981
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,01_baselines_zs_cot,2,5090240f-2ac4-4092-8cc3-6b989ea2c07e,0982
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,01_baselines_zs_cot_content,3,2318bd72-a902-44c3-bf64-e32d61c2b586,0983
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,02_prompt_decomposition_pd_zs,4,4749329b-32d7-476c-862e-801bc1fd26c5,0984
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,02_prompt_decomposition_pd_zs_cot,5,2d45542e-6704-4bd7-9575-22e23aa8716b,0985
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,02_prompt_decomposition_pd_zs_content,6,68fed7f0-1c37-4812-93f1-25284e94ae19,0986
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,03_rag_zs_k_1_direct,7,c8227190-aba3-4eb4-8396-982ff1edd2cf,0987
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,03_rag_zs_k_3_direct,8,e60475f6-d8a1-4d93-8851-d41f9adf6be6,0988
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,03_rag_zs_k_5_direct,9,65678c45-12d7-4965-9d5e-e3f42761dad3,0989
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,03_rag_zs_k_7_direct,10,a4401c92-6744-412b-967a-13b1b3c9c47e,0990
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,03_rag_zs_k_3_direct_content,11,3537b110-cca9-4edc-9aab-962077d088bf,0991
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,03_rag_zs_k_3_direct_pd_zs,12,8c43996f-86f8-4bfc-ac2d-c28dfc0f8189,0992
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,03_rag_zs_k_3_feat_layout,13,8c7b42fb-578a-489a-8038-5947f887c752,0993
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,04_self_critique_base_zs_instruction_k_1,14,381da0d7-3b12-4376-916a-fa1097b35136,0994
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,04_self_critique_base_zs_instruction_k_2,15,3f38385e-1b86-456a-91e0-aabc48593e6d,0995
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,04_self_critique_base_zs_instruction_k_3,16,bbb44a1d-25e6-4412-9209-e3b1ecab5e61,0996
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,04_self_critique_base_zs_instruction_k_4,17,897c321e-8e99-4194-a925-0b3fbde739e8,0997
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,04_self_critique_base_zs_instruction_content_k_3,18,ca48774a-e1b0-4fe9-a711-23203f62f067,0998
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,04_self_critique_base_pd_zs_k_3,19,8e648f38-fd2f-47ff-b709-d14fc6ad8133,0999
+72192,A page showing notification settings of a weather application in a selected  location. You can toggle under which circumstances the app notifies you as well as how you will be notified in case of alerts.,04_self_critique_base_rag_zs_k_3_direct_k_3,20,faa6e772-0b14-4849-8f03-aeaf2e8e13b9,1000

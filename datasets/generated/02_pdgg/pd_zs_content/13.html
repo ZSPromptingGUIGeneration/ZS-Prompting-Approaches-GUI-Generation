@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Online Encyclopedia
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+        }
+        .search-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .search-bar input {
+            width: calc(100% - 80px);
+            border-radius: 25px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+        }
+        .search-bar .material-icons {
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .nav-wrapper {
+            margin-top: 60px;
+        }
+        .article-list {
+            margin-top: 20px;
+        }
+        .article-card {
+            margin-bottom: 20px;
+        }
+        .fixed-action-btn {
+            bottom: 45px;
+            right: 24px;
+        }
+        .feedback {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        .loading-indicator {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .loading-indicator.active {
+            display: flex;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="search-bar">
+   <i class="material-icons">
+    search
+   </i>
+   <input placeholder="Search..." type="text"/>
+   <i class="material-icons">
+    mic
+   </i>
+   <i class="material-icons">
+    close
+   </i>
+  </div>
+  <div class="navbar-fixed">
+   <nav>
+    <div class="nav-wrapper">
+     <a class="brand-logo center" href="#!">
+      Encyclopedia
+     </a>
+     <a class="sidenav-trigger" data-target="mobile-demo" href="#">
+      <i class="material-icons">
+       menu
+      </i>
+     </a>
+     <ul class="right hide-on-med-and-down">
+      <li>
+       <a href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="popular.html">
+        Popular
+       </a>
+      </li>
+      <li>
+       <a href="account.html">
+        Account
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </div>
+  <ul class="sidenav" id="mobile-demo">
+   <li>
+    <a href="index.html">
+     Home
+    </a>
+   </li>
+   <li>
+    <a href="popular.html">
+     Popular
+    </a>
+   </li>
+   <li>
+    <a href="account.html">
+     Account
+    </a>
+   </li>
+  </ul>
+  <div class="container article-list">
+   <div class="card article-card">
+    <div class="card-image">
+     <img alt="Image depicting a historical event" id="img1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d18fcd8e-3a45-4239-88b5-112f6a3d720b.png"/>
+    </div>
+    <div class="card-content">
+     <span class="card-title">
+      The French Revolution
+     </span>
+     <p>
+      An overview of the French Revolution, a period of radical social and political change in France from 1789 to 1799.
+     </p>
+    </div>
+   </div>
+   <div class="card article-card">
+    <div class="card-image">
+     <img alt="Image of a scientific discovery" id="img2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/80f7b32a-7dd4-49a3-b074-fa24fac5e1b6.png"/>
+    </div>
+    <div class="card-content">
+     <span class="card-title">
+      Discovery of Penicillin
+     </span>
+     <p>
+      The discovery of penicillin by Alexander Fleming in 1928 and its impact on modern medicine.
+     </p>
+    </div>
+   </div>
+   <div class="card article-card">
+    <div class="card-image">
+     <img alt="Image of a famous landmark" id="img3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/79f937ef-53e5-4ae1-a700-37e60b42f837.png"/>
+    </div>
+    <div class="card-content">
+     <span class="card-title">
+      The Great Wall of China
+     </span>
+     <p>
+      A detailed history of the Great Wall of China, its construction, and significance.
+     </p>
+    </div>
+   </div>
+   <div class="card article-card">
+    <div class="card-image">
+     <img alt="Image of a significant cultural event" id="img4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/bc76f9b5-aed2-4d02-8915-1ad4d128fe0e.png"/>
+    </div>
+    <div class="card-content">
+     <span class="card-title">
+      The Renaissance
+     </span>
+     <p>
+      An exploration of the Renaissance period, its key figures, and its influence on art and science.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="fixed-action-btn">
+   <a class="btn-floating btn-large red">
+    <i class="large material-icons">
+     arrow_upward
+    </i>
+   </a>
+  </div>
+  <div class="container feedback">
+   <h5>
+    Feedback
+   </h5>
+   <form>
+    <div class="input-field">
+     <input class="validate" id="name" type="text"/>
+     <label for="name">
+      Name
+     </label>
+    </div>
+    <div class="input-field">
+     <textarea class="materialize-textarea" id="feedback"></textarea>
+     <label for="feedback">
+      Feedback
+     </label>
+    </div>
+    <button class="btn waves-effect waves-light" name="action" type="submit">
+     Submit
+     <i class="material-icons right">
+      send
+     </i>
+    </button>
+   </form>
+  </div>
+  <div class="loading-indicator">
+   <div class="preloader-wrapper big active">
+    <div class="spinner-layer spinner-blue">
+     <div class="circle-clipper left">
+      <div class="circle">
+      </div>
+     </div>
+     <div class="gap-patch">
+      <div class="circle">
+      </div>
+     </div>
+     <div class="circle-clipper right">
+      <div class="circle">
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+  </script>
+ </body>
+</html>

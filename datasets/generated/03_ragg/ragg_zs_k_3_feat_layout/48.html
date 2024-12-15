@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Find Shops
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .top-nav {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-nav .title {
+            font-size: 20px;
+        }
+        .top-nav .close-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .header-section {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header-section .app-logo {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .header-section .tagline {
+            font-size: 14px;
+        }
+        .sub-header {
+            padding: 10px 20px;
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .button-group .near-me-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .input-group {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .input-group input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            width: 200px;
+        }
+        .input-group .search-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .content-list {
+            padding: 10px;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+        .content-list .store-item {
+            display: flex;
+            padding: 10px;
+            background-color: white;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .content-list .store-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .content-list .store-item .store-details {
+            flex: 1;
+        }
+        .content-list .store-item .store-details .store-name {
+            font-weight: bold;
+        }
+        .content-list .store-item .store-details .store-address {
+            font-size: 14px;
+            color: #777;
+        }
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .footer-nav .nav-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-nav">
+   <div class="title">
+    Find Shops
+   </div>
+   <div class="close-icon">
+    X
+   </div>
+  </div>
+  <div class="header-section">
+   <div class="app-logo">
+    favado
+   </div>
+   <div class="tagline">
+    Know before you go
+   </div>
+  </div>
+  <div class="sub-header">
+   NEAR YOU
+  </div>
+  <div class="button-group">
+   <button class="near-me-btn">
+    Near Me
+   </button>
+  </div>
+  <div class="input-group">
+   <input placeholder="Enter ZIP Code" type="text"/>
+   <button class="search-btn">
+    Search
+   </button>
+  </div>
+  <div class="content-list">
+   <div class="store-item">
+    <img alt="Store Image" src=""/>
+    <div class="store-details">
+     <div class="store-name">
+      Shoppers - Bull Run
+     </div>
+     <div class="store-address">
+      123 Main St, Springfield
+     </div>
+    </div>
+   </div>
+   <div class="store-item">
+    <img alt="Store Image" src=""/>
+    <div class="store-details">
+     <div class="store-name">
+      Ashley Antique Photos
+     </div>
+     <div class="store-address">
+      456 Elm St, Springfield
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer-nav">
+   <div class="nav-icon">
+    🏠
+   </div>
+   <div class="nav-icon">
+    🔍
+   </div>
+   <div class="nav-icon">
+    ❤️
+   </div>
+  </div>
+ </body>
+</html>

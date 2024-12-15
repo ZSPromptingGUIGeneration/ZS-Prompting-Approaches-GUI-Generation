@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restaurant Menu
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #ff6347;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-item h3 {
+            margin: 0;
+        }
+        .menu-item button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-item button:hover {
+            background-color: #e5533d;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ff6347;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 50px;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .order-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .order-options select, .order-options input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 48%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Restaurant Menu
+   </h1>
+  </div>
+  <div class="container">
+   <div class="order-options">
+    <select>
+     <option value="pickup">
+      Pickup
+     </option>
+     <option value="delivery">
+      Delivery
+     </option>
+    </select>
+    <input placeholder="Enter location" type="text"/>
+   </div>
+   <div class="menu-item">
+    <h3>
+     Item 1
+    </h3>
+    <button>
+     Save
+    </button>
+   </div>
+   <div class="menu-item">
+    <h3>
+     Item 2
+    </h3>
+    <button>
+     Save
+    </button>
+   </div>
+   <div class="menu-item">
+    <h3>
+     Item 3
+    </h3>
+    <button>
+     Save
+    </button>
+   </div>
+  </div>
+  <div class="nav-bar">
+   <a href="#menu">
+    Menu
+   </a>
+   <a href="#history">
+    Order History
+   </a>
+  </div>
+  <div class="footer">
+   <p>
+    Restaurant Name - All rights reserved
+   </p>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   User Profile
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+        .profile-pic {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        .profile-info {
+            background-color: #5a67d8;
+            padding: 60px 20px 20px;
+            color: white;
+            text-align: center;
+        }
+        .profile-info h1 {
+            margin: 0;
+        }
+        .profile-info p {
+            margin: 5px 0;
+        }
+        .follow-btn {
+            background-color: white;
+            color: #5a67d8;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .post {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+        }
+        .post-header img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .post-content {
+            margin-top: 10px;
+        }
+        .post-time {
+            color: gray;
+            font-size: 12px;
+        }
+        .pinned {
+            background-color: #f1f1f1;
+            padding: 5px;
+            font-size: 12px;
+            color: gray;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Header Image" src=""/>
+   <img alt="Profile Picture" class="profile-pic" src=""/>
+  </div>
+  <div class="profile-info">
+   <h1>
+    CJ Dulberger
+   </h1>
+   <p>
+    Technology
+   </p>
+   <p>
+    "Any sufficiently advanced technology is indistinguishable from magic."
+   </p>
+   <p>
+    84,504 followers - 1,066 posts - Public
+   </p>
+   <button class="follow-btn">
+    FOLLOW
+   </button>
+  </div>
+  <div class="pinned">
+   Pinned by owner
+  </div>
+  <div class="post">
+   <div class="post-header">
+    <img alt="User Picture" src=""/>
+    <div>
+     <strong>
+      CJ Dulberger
+     </strong>
+     <div class="post-time">
+      1w
+     </div>
+    </div>
+   </div>
+   <div class="post-content">
+    <p>
+     "We are called to be architects of the future, not its victims." - R. Buckminster Fuller
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Clothing App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header nav {
+            display: flex;
+            justify-content: space-around;
+        }
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .category {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .category img {
+            max-width: 100px;
+            height: auto;
+        }
+        .category p {
+            margin: 10px 0 0;
+        }
+        .footer {
+            background-color: white;
+            border-top: 1px solid #ddd;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #d32f2f;
+            text-align: center;
+            flex: 1;
+        }
+        .footer a.active {
+            color: #d32f2f;
+        }
+        .footer a img {
+            display: block;
+            margin: 0 auto;
+            max-width: 24px;
+            height: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <nav>
+    <a href="#">
+     FEATURED
+    </a>
+    <a class="active" href="#">
+     DEPARTMENTS
+    </a>
+    <a href="#">
+     COUPONS
+    </a>
+   </nav>
+  </div>
+  <div class="categories">
+   <div class="category">
+    <img alt="For The Home" src=""/>
+    <p>
+     For The Home
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Bed &amp; Bath" src=""/>
+    <p>
+     Bed &amp; Bath
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Window" src=""/>
+    <p>
+     Window
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Appliances" src=""/>
+    <p>
+     Appliances
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Women" src=""/>
+    <p>
+     Women
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Bras, Panties &amp; Lingerie" src=""/>
+    <p>
+     Bras, Panties &amp; Lingerie
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Men" src=""/>
+    <p>
+     Men
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Juniors" src=""/>
+    <p>
+     Juniors
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Kids" src=""/>
+    <p>
+     Kids
+    </p>
+   </div>
+  </div>
+  <div class="footer">
+   <a href="#">
+    <img alt="Saved" src=""/>
+    <br/>
+    Saved
+   </a>
+   <a href="#">
+    <img alt="Search" src=""/>
+    <br/>
+    Search
+   </a>
+   <a class="active" href="#">
+    <img alt="Shop" src=""/>
+    <br/>
+    Shop
+   </a>
+   <a href="#">
+    <img alt="Bag" src=""/>
+    <br/>
+    Bag
+   </a>
+   <a href="#">
+    <img alt="Sign In" src=""/>
+    <br/>
+    Sign In
+   </a>
+  </div>
+ </body>
+</html>

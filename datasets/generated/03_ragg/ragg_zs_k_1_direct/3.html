@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Organisational App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #D32F2F;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #D32F2F;
+            padding: 10px 0;
+            margin-top: 60px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .content {
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .dropdown {
+            margin: 20px 0;
+        }
+        .dropdown select {
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+        .list-section {
+            margin-bottom: 20px;
+        }
+        .list-section h2 {
+            color: #D32F2F;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .list-item {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #D32F2F;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            font-size: 24px;
+            text-align: center;
+            line-height: 56px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Organisational App
+   </h1>
+  </div>
+  <div class="nav">
+   <a href="#">
+    My Recipes
+   </a>
+   <a href="#">
+    Activity
+   </a>
+   <a href="#">
+    Grocery List
+   </a>
+   <a href="#">
+    Menu Planner
+   </a>
+  </div>
+  <div class="content">
+   <div class="dropdown">
+    <label for="department">
+     By Department
+    </label>
+    <select id="department">
+     <option value="breads">
+      Breads
+     </option>
+     <option value="dairy">
+      Dairy
+     </option>
+     <option value="fruits">
+      Fruits
+     </option>
+     <option value="vegetables">
+      Vegetables
+     </option>
+     <!-- Add more options as needed -->
+    </select>
+   </div>
+   <div class="list-section">
+    <h2>
+     Breads
+    </h2>
+    <div class="list-item">
+     <strong>
+      Honey wheat berry bread
+     </strong>
+    </div>
+   </div>
+   <div class="list-section">
+    <h2>
+     Marked
+    </h2>
+    <!-- Add marked items here -->
+   </div>
+  </div>
+  <button class="fab">
+   +
+  </button>
+ </body>
+</html>

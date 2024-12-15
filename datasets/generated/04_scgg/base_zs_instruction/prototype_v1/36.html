@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Public Transportation Route
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007bff;
+            color: #fff;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .route {
+            margin: 20px 0;
+        }
+        .route-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .route-item:last-child {
+            border-bottom: none;
+        }
+        .route-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .route-details {
+            flex: 1;
+        }
+        .route-time {
+            color: #888;
+        }
+        .route-type {
+            font-weight: bold;
+        }
+        .real-time-updates {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #ffeb3b;
+            color: #333;
+            border-radius: 4px;
+        }
+        .map {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .map img {
+            max-width: 100%;
+            height: auto;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007bff;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .search-bar input {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Route from Start Point to Destination
+    </h1>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for a route..." type="text"/>
+   </div>
+   <div class="map">
+    <img alt="Route Map" src=""/>
+   </div>
+   <div class="route">
+    <div class="route-item">
+     <div class="route-icon">
+      1
+     </div>
+     <div class="route-details">
+      <div class="route-type">
+       Bus
+      </div>
+      <div>
+       Start Point
+      </div>
+      <div class="route-time">
+       08:00 AM - 08:15 AM
+      </div>
+     </div>
+    </div>
+    <div class="route-item">
+     <div class="route-icon">
+      2
+     </div>
+     <div class="route-details">
+      <div class="route-type">
+       Bus
+      </div>
+      <div>
+       Bus Stop A
+      </div>
+      <div class="route-time">
+       08:15 AM - 08:30 AM
+      </div>
+     </div>
+    </div>
+    <div class="route-item">
+     <div class="route-icon">
+      3
+     </div>
+     <div class="route-details">
+      <div class="route-type">
+       Train
+      </div>
+      <div>
+       Bus Stop B
+      </div>
+      <div class="route-time">
+       08:30 AM - 08:45 AM
+      </div>
+     </div>
+    </div>
+    <div class="route-item">
+     <div class="route-icon">
+      4
+     </div>
+     <div class="route-details">
+      <div class="route-type">
+       Walk
+      </div>
+      <div>
+       Destination
+      </div>
+      <div class="route-time">
+       08:45 AM
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="real-time-updates">
+    <p>
+     No delays or changes reported.
+    </p>
+   </div>
+   <div class="footer">
+    <p>
+     Estimated Travel Time: 45 minutes | Fare: $2.50
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

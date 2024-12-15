@@ -1,0 +1,121 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-icon {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            cursor: pointer;
+        }
+        .main-content {
+            padding: 70px 20px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .video-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .video-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .video-description {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Weather App
+   <div class="nav-icon">
+    ☰
+   </div>
+  </div>
+  <div class="main-content">
+   <div class="video-item">
+    <img alt="Video Thumbnail 1" src=""/>
+    <div class="play-button">
+     ►
+    </div>
+    <div class="video-description">
+     Weather Update 1
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Video Thumbnail 2" src=""/>
+    <div class="play-button">
+     ►
+    </div>
+    <div class="video-description">
+     Weather Update 2
+    </div>
+   </div>
+   <!-- Add more video items as needed -->
+  </div>
+  <div class="footer">
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    Settings
+   </a>
+   <a href="#">
+    Contact Us
+   </a>
+  </div>
+ </body>
+</html>
+<!-- End -->

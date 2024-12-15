@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Schedule App
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .container {
+            padding: 10px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card img {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+        .opponent {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .details {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+        .details .icon {
+            margin-right: 5px;
+        }
+        .details span {
+            display: block;
+        }
+        .notification {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #6200ea;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .notification .icon {
+            margin-right: 5px;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   Schedule App
+  </header>
+  <div class="container">
+   <div class="card">
+    <div class="card-header">
+     <img alt="Home Team Logo 1" id="home-team-logo-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/cf1a387c-a856-4670-bf0e-cc896c5d1f19.png"/>
+     <div class="opponent">
+      Thunderbolts
+     </div>
+     <img alt="Opponent Team Logo 1" id="opponent-team-logo-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7c0be98f-91c5-473c-84b0-ac16451c6220.png"/>
+    </div>
+    <div class="details">
+     <span>
+      <span class="icon">
+       📅
+      </span>
+      Date: 2023-10-15
+     </span>
+     <span>
+      <span class="icon">
+       ⏰
+      </span>
+      Time: 18:00
+     </span>
+     <span>
+      <span class="icon">
+       📍
+      </span>
+      Venue: Thunder Arena
+     </span>
+    </div>
+    <div class="notification">
+     <span class="icon">
+      🔔
+     </span>
+     Set Reminder
+    </div>
+   </div>
+   <div class="card">
+    <div class="card-header">
+     <img alt="Home Team Logo 2" id="home-team-logo-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ae8adf81-36b2-43a2-a67f-d8dcedd7b3f5.png"/>
+     <div class="opponent">
+      Warriors
+     </div>
+     <img alt="Opponent Team Logo 2" id="opponent-team-logo-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/367d77d1-fb33-439a-8ca1-f1aaa614ee17.png"/>
+    </div>
+    <div class="details">
+     <span>
+      <span class="icon">
+       📅
+      </span>
+      Date: 2023-10-22
+     </span>
+     <span>
+      <span class="icon">
+       ⏰
+      </span>
+      Time: 20:00
+     </span>
+     <span>
+      <span class="icon">
+       📍
+      </span>
+      Venue: Warrior Stadium
+     </span>
+    </div>
+    <div class="notification">
+     <span class="icon">
+      🔔
+     </span>
+     Set Reminder
+    </div>
+   </div>
+   <div class="card">
+    <div class="card-header">
+     <img alt="Home Team Logo 3" id="home-team-logo-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d8e44d0c-7ed3-4a76-b6ca-ee6309b260c2.png"/>
+     <div class="opponent">
+      Dragons
+     </div>
+     <img alt="Opponent Team Logo 3" id="opponent-team-logo-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/df9c33dd-3087-497c-ba1b-6219b8dfb746.png"/>
+    </div>
+    <div class="details">
+     <span>
+      <span class="icon">
+       📅
+      </span>
+      Date: 2023-11-05
+     </span>
+     <span>
+      <span class="icon">
+       ⏰
+      </span>
+      Time: 17:00
+     </span>
+     <span>
+      <span class="icon">
+       📍
+      </span>
+      Venue: Dragon Dome
+     </span>
+    </div>
+    <div class="notification">
+     <span class="icon">
+      🔔
+     </span>
+     Set Reminder
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

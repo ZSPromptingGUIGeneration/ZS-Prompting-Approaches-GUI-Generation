@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Radio Player App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 24px;
+            padding: 8px 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .search-bar .material-icons {
+            color: #757575;
+        }
+        .filter-icon {
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 16px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .tab {
+            padding: 16px;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+        }
+        .tab.active {
+            background-color: #6200ea;
+            color: #fff;
+            border-radius: 8px 8px 0 0;
+        }
+        .station-list {
+            margin-top: 16px;
+        }
+        .station-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .station-card img {
+            border-radius: 8px;
+            width: 64px;
+            height: 64px;
+            margin-right: 16px;
+        }
+        .station-info {
+            flex: 1;
+        }
+        .station-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .station-info p {
+            margin: 4px 0 0;
+            color: #757575;
+        }
+        .player-controls {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #6200ea;
+            color: #fff;
+            padding: 16px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .player-controls .material-icons {
+            font-size: 32px;
+        }
+        .volume-slider {
+            flex: 1;
+            margin: 0 16px;
+        }
+        .station-info-top {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .station-info-top img {
+            border-radius: 8px;
+            width: 48px;
+            height: 48px;
+            margin-right: 16px;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .bottom-nav .nav-item {
+            padding: 16px;
+            text-align: center;
+            flex: 1;
+            cursor: pointer;
+        }
+        .bottom-nav .nav-item.active {
+            background-color: #6200ea;
+            color: #fff;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <span class="material-icons">
+     search
+    </span>
+    <input placeholder="Search stations..." type="text"/>
+    <span class="material-icons filter-icon">
+     filter_list
+    </span>
+   </div>
+   <div class="tabs">
+    <div class="tab active">
+     Genres
+    </div>
+    <div class="tab">
+     Countries
+    </div>
+    <div class="tab">
+     Languages
+    </div>
+   </div>
+   <div class="station-list">
+    <div class="station-card">
+     <img alt="A colorful radio station logo" id="station-thumbnail-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/4caad938-7b36-4906-9361-13551eb07514.png"/>
+     <div class="station-info">
+      <h3>
+       Jazz Beats
+      </h3>
+      <p>
+       24/7 Jazz music from around the world
+      </p>
+     </div>
+     <span class="material-icons">
+      favorite_border
+     </span>
+    </div>
+    <div class="station-card">
+     <img alt="A logo with a guitar and musical notes" id="station-thumbnail-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/852d9009-ca52-4111-bf63-08d0f7995993.png"/>
+     <div class="station-info">
+      <h3>
+       Rock Nation
+      </h3>
+      <p>
+       The best rock hits from the 70s, 80s, and 90s
+      </p>
+     </div>
+     <span class="material-icons">
+      favorite_border
+     </span>
+    </div>
+    <div class="station-card">
+     <img alt="A logo with a microphone and vinyl record" id="station-thumbnail-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/50becc6b-f98a-48f2-8ba8-2069a9d7dbe7.png"/>
+     <div class="station-info">
+      <h3>
+       Classic Hits
+      </h3>
+      <p>
+       Timeless classics and golden oldies
+      </p>
+     </div>
+     <span class="material-icons">
+      favorite_border
+     </span>
+    </div>
+    <div class="station-card">
+     <img alt="A vibrant logo with a DJ turntable" id="station-thumbnail-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5feac026-fa9f-40d0-9c3c-6db7c9237d0b.png"/>
+     <div class="station-info">
+      <h3>
+       EDM Party
+      </h3>
+      <p>
+       Non-stop electronic dance music
+      </p>
+     </div>
+     <span class="material-icons">
+      favorite_border
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="station-info-top">
+   <img alt="A detailed logo of a popular radio station" id="station-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c7183642-164f-4c4b-aaaf-6e4377ebd280.png"/>
+   <div>
+    <h3>
+     Jazz Beats
+    </h3>
+    <p>
+     Currently playing: Miles Davis - So What
+    </p>
+   </div>
+  </div>
+  <div class="player-controls">
+   <span class="material-icons">
+    skip_previous
+   </span>
+   <span class="material-icons">
+    play_arrow
+   </span>
+   <span class="material-icons">
+    skip_next
+   </span>
+   <input class="volume-slider" type="range"/>
+   <span class="material-icons">
+    volume_up
+   </span>
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item active">
+    <span class="material-icons">
+     home
+    </span>
+    <p>
+     Home
+    </p>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     search
+    </span>
+    <p>
+     Search
+    </p>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     favorite
+    </span>
+    <p>
+     Favorites
+    </p>
+   </div>
+   <div class="nav-item">
+    <span class="material-icons">
+     person
+    </span>
+    <p>
+     Profile
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

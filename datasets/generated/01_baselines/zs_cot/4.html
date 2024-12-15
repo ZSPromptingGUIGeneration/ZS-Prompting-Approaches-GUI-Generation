@@ -1,0 +1,115 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Alarm App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .download-section, .audio-list-section {
+            margin-bottom: 20px;
+        }
+        .download-section input[type="file"] {
+            display: none;
+        }
+        .download-section label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .audio-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .audio-list li {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .audio-list button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Alarm App
+   </h1>
+  </header>
+  <div class="container">
+   <div class="download-section">
+    <h2>
+     Download Audio
+    </h2>
+    <input accept="audio/*" id="audioUpload" type="file"/>
+    <label for="audioUpload">
+     Choose Audio File
+    </label>
+   </div>
+   <div class="audio-list-section">
+    <h2>
+     Available Audios
+    </h2>
+    <ul class="audio-list" id="audioList">
+     <!-- Audio items will be added here dynamically -->
+    </ul>
+   </div>
+  </div>
+  <script>
+   document.getElementById('audioUpload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const audioURL = URL.createObjectURL(file);
+                const audioList = document.getElementById('audioList');
+                const listItem = document.createElement('li');
+                
+                const audioName = document.createElement('span');
+                audioName.textContent = file.name;
+                
+                const playButton = document.createElement('button');
+                playButton.textContent = 'Play';
+                playButton.addEventListener('click', function() {
+                    const audio = new Audio(audioURL);
+                    audio.play();
+                });
+                
+                listItem.appendChild(audioName);
+                listItem.appendChild(playButton);
+                audioList.appendChild(listItem);
+            }
+        });
+  </script>
+ </body>
+</html>
+<!-- End -->

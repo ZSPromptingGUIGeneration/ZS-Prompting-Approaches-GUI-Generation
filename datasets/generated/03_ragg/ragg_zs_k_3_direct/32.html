@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1e1e1e;
+        color: #fff;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #2b2b2b;
+    }
+    .header .title {
+        font-size: 20px;
+    }
+    .header .settings {
+        font-size: 20px;
+    }
+    .tabs {
+        display: flex;
+        justify-content: space-around;
+        background-color: #2b2b2b;
+    }
+    .tabs div {
+        padding: 10px 0;
+        cursor: pointer;
+    }
+    .tabs .active {
+        border-bottom: 2px solid #00bcd4;
+    }
+    .content {
+        padding: 15px;
+    }
+    .hourly-forecast {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hourly-forecast .hour {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 5px;
+    }
+    .hourly-forecast .hour .time {
+        font-size: 16px;
+    }
+    .hourly-forecast .hour .weather {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .hourly-forecast .hour .weather img {
+        width: 24px;
+        height: 24px;
+    }
+    .hourly-forecast .hour .temp {
+        font-size: 16px;
+    }
+    .hourly-forecast .hour .wind {
+        font-size: 16px;
+    }
+    .chart-container {
+        margin-top: 20px;
+    }
+    .chart {
+        width: 100%;
+        height: 200px;
+        background-color: #333;
+        border-radius: 5px;
+        padding: 10px;
+    }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="title">
+    Weather App
+   </div>
+   <div class="settings">
+    ⚙
+   </div>
+  </div>
+  <div class="tabs">
+   <div>
+    Forecast
+   </div>
+   <div class="active">
+    Hourly
+   </div>
+   <div>
+    Radar
+   </div>
+  </div>
+  <div class="content">
+   <div class="hourly-forecast">
+    <div class="hour">
+     <div class="time">
+      10AM
+     </div>
+     <div class="weather">
+      <img alt="Sunny" src=""/>
+      <span>
+       M Sunny
+      </span>
+     </div>
+     <div class="temp">
+      55Â°
+     </div>
+     <div class="wind">
+      N15
+     </div>
+    </div>
+    <div class="hour">
+     <div class="time">
+      11AM
+     </div>
+     <div class="weather">
+      <img alt="Sunny" src=""/>
+      <span>
+       M Sunny
+      </span>
+     </div>
+     <div class="temp">
+      55Â°
+     </div>
+     <div class="wind">
+      N15
+     </div>
+    </div>
+    <div class="hour">
+     <div class="time">
+      12PM
+     </div>
+     <div class="weather">
+      <img alt="Partly Cloudy" src=""/>
+      <span>
+       P Cloudy
+      </span>
+     </div>
+     <div class="temp">
+      56Â°
+     </div>
+     <div class="wind">
+      N14
+     </div>
+    </div>
+    <div class="hour">
+     <div class="time">
+      1PM
+     </div>
+     <div class="weather">
+      <img alt="Partly Cloudy" src=""/>
+      <span>
+       P Cloudy
+      </span>
+     </div>
+     <div class="temp">
+      57Â°
+     </div>
+     <div class="wind">
+      N14
+     </div>
+    </div>
+    <div class="hour">
+     <div class="time">
+      2PM
+     </div>
+     <div class="weather">
+      <img alt="Partly Cloudy" src=""/>
+      <span>
+       P Cloudy
+      </span>
+     </div>
+     <div class="temp">
+      58Â°
+     </div>
+     <div class="wind">
+      N14
+     </div>
+    </div>
+    <div class="hour">
+     <div class="time">
+      3PM
+     </div>
+     <div class="weather">
+      <img alt="Partly Cloudy" src=""/>
+      <span>
+       P Cloudy
+      </span>
+     </div>
+     <div class="temp">
+      59Â°
+     </div>
+     <div class="wind">
+      NNW13
+     </div>
+    </div>
+    <div class="hour">
+     <div class="time">
+      4PM
+     </div>
+     <div class="weather">
+      <img alt="Partly Cloudy" src=""/>
+      <span>
+       P Cloudy
+      </span>
+     </div>
+     <div class="temp">
+      60Â°
+     </div>
+     <div class="wind">
+      NNW13
+     </div>
+    </div>
+   </div>
+   <div class="chart-container">
+    <div class="chart" id="chart">
+    </div>
+   </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+  </script>
+  <script>
+   const ctx = document.getElementById('chart').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['11PM', '3AM', '7AM', '11AM', '3PM', '7PM'],
+            datasets: [{
+                label: 'Temperature (Â°F)',
+                borderColor: 'yellow',
+                data: [40, 41, 48, 56, 59, 54],
+                fill: false
+            }, {
+                label: 'Wind Speed (mph)',
+                borderColor: 'green',
+                data: [10, 10, 20, 17, 18, 16],
+                fill: false
+            }, {
+                label: 'Probability of Precipitation (%)',
+                borderColor: 'blue',
+                data: [50, 37, 24, 10, 8, 6],
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: 'Time'
+                    }
+                },
+                y: {
+                    display: true,
+                    title: {
+                        display: true,
+                        text: 'Value'
+                    }
+                }
+            }
+        }
+    });
+  </script>
+ </body>
+</html>

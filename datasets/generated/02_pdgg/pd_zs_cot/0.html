@@ -1,0 +1,136 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Navigation App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .map-container {
+            position: relative;
+            height: 100%;
+        }
+        .search-bar {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            z-index: 1;
+        }
+        .current-location-btn, .zoom-in-btn, .zoom-out-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1;
+        }
+        .zoom-in-btn {
+            bottom: 80px;
+        }
+        .zoom-out-btn {
+            bottom: 140px;
+        }
+        .bottom-sheet {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .user-profile {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+        }
+        .snackbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="map-container">
+   <div class="search-bar">
+    <nav>
+     <div class="nav-wrapper">
+      <form>
+       <div class="input-field">
+        <input id="search" required="" type="search"/>
+        <label class="label-icon" for="search">
+         <i class="material-icons">
+          search
+         </i>
+        </label>
+        <i class="material-icons">
+         close
+        </i>
+       </div>
+      </form>
+     </div>
+    </nav>
+   </div>
+   <div class="user-profile">
+    <a href="#">
+     <i class="material-icons">
+      account_circle
+     </i>
+    </a>
+   </div>
+   <div class="current-location-btn">
+    <a class="btn-floating btn-large waves-effect waves-light red">
+     <i class="material-icons">
+      my_location
+     </i>
+    </a>
+   </div>
+   <div class="zoom-in-btn">
+    <a class="btn-floating btn-small waves-effect waves-light blue">
+     <i class="material-icons">
+      zoom_in
+     </i>
+    </a>
+   </div>
+   <div class="zoom-out-btn">
+    <a class="btn-floating btn-small waves-effect waves-light blue">
+     <i class="material-icons">
+      zoom_out
+     </i>
+    </a>
+   </div>
+   <div class="bottom-sheet">
+    <ul class="collapsible">
+     <li>
+      <div class="collapsible-header">
+       <i class="material-icons">
+        directions
+       </i>
+       Route Information
+      </div>
+      <div class="collapsible-body">
+       <span>
+        Details about the route...
+       </span>
+      </div>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <div class="snackbar">
+   <!-- Snackbar content for notifications -->
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

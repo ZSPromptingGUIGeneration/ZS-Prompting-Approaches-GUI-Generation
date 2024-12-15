@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Online Encyclopedia
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #3367d6;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .header .icons img {
+            width: 24px;
+            height: 24px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .article {
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .article img {
+            width: 100%;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        .article .details {
+            padding: 15px;
+        }
+        .article .details h2 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+        }
+        .article .details p {
+            margin: 0;
+            color: #555;
+        }
+        .article .featured {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .article .featured .star {
+            color: #ffb400;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    WIKIPEDIA
+   </h1>
+   <div class="icons">
+    <img alt="Facebook" src=""/>
+    <img alt="Twitter" src=""/>
+    <img alt="Instagram" src=""/>
+    <img alt="Search" src=""/>
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search articles..." type="text"/>
+  </div>
+  <div class="content">
+   <div class="article">
+    <img alt="Butterfly" src=""/>
+    <div class="details">
+     <p>
+      Junonia iphita.
+     </p>
+     <button>
+      DOWNLOAD
+     </button>
+    </div>
+   </div>
+   <div class="article">
+    <div class="featured">
+     <span class="star">
+      ★ Featured article
+     </span>
+     <span>
+      Apr 10, 2017
+     </span>
+    </div>
+    <img alt="Noel Park" src=""/>
+    <div class="details">
+     <h2>
+      Noel Park
+     </h2>
+     <p>
+      Planned community in north London
+     </p>
+     <p>
+      Noel Park in north London is a planned community developed in the late 19th and early 20th centuries consisting of 2,200 model dwellings, designed by Rowland Plumbe. It was developed in open countryside to the north...
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,198 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports Team App
+  </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   .profile-card {
+            margin: 10px 0;
+        }
+        .news-card {
+            margin: 10px 0;
+        }
+        .list-group-item {
+            margin-bottom: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+   <a class="navbar-brand" href="#">
+    Team Logo
+   </a>
+   <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+     <li class="nav-item">
+      <a class="nav-link" href="#schedule">
+       Schedule
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#news">
+       News
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#team">
+       Team
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <!-- Main Content -->
+  <div class="container mt-5 pt-5">
+   <!-- Schedule Section -->
+   <section id="schedule">
+    <h2 class="my-4">
+     Schedule
+    </h2>
+    <ul class="list-group">
+     <li class="list-group-item">
+      <h5>
+       Game 1
+      </h5>
+      <p>
+       Date: 2023-10-01 | Time: 18:00
+      </p>
+     </li>
+     <li class="list-group-item">
+      <h5>
+       Game 2
+      </h5>
+      <p>
+       Date: 2023-10-05 | Time: 20:00
+      </p>
+     </li>
+    </ul>
+   </section>
+   <!-- News Section -->
+   <section id="news">
+    <h2 class="my-4">
+     News
+    </h2>
+    <div class="card news-card">
+     <img alt="News 1" class="card-img-top" src=""/>
+     <div class="card-body">
+      <h5 class="card-title">
+       News Title 1
+      </h5>
+      <p class="card-text">
+       Brief description of the news article.
+      </p>
+     </div>
+    </div>
+    <div class="card news-card">
+     <img alt="News 2" class="card-img-top" src=""/>
+     <div class="card-body">
+      <h5 class="card-title">
+       News Title 2
+      </h5>
+      <p class="card-text">
+       Brief description of the news article.
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Team Section -->
+   <section id="team">
+    <h2 class="my-4">
+     Team
+    </h2>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+     <li class="nav-item">
+      <a aria-controls="players" aria-selected="true" class="nav-link active" data-toggle="tab" href="#players" id="players-tab" role="tab">
+       Players
+      </a>
+     </li>
+     <li class="nav-item">
+      <a aria-controls="coaches" aria-selected="false" class="nav-link" data-toggle="tab" href="#coaches" id="coaches-tab" role="tab">
+       Coaches
+      </a>
+     </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+     <div aria-labelledby="players-tab" class="tab-pane fade show active" id="players" role="tabpanel">
+      <div class="row">
+       <div class="col-6 profile-card">
+        <div class="card">
+         <img alt="Player 1" class="card-img-top" src=""/>
+         <div class="card-body">
+          <h5 class="card-title">
+           Player 1
+          </h5>
+          <p class="card-text">
+           Position: Forward
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="col-6 profile-card">
+        <div class="card">
+         <img alt="Player 2" class="card-img-top" src=""/>
+         <div class="card-body">
+          <h5 class="card-title">
+           Player 2
+          </h5>
+          <p class="card-text">
+           Position: Goalkeeper
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div aria-labelledby="coaches-tab" class="tab-pane fade" id="coaches" role="tabpanel">
+      <div class="row">
+       <div class="col-6 profile-card">
+        <div class="card">
+         <img alt="Coach 1" class="card-img-top" src=""/>
+         <div class="card-body">
+          <h5 class="card-title">
+           Coach 1
+          </h5>
+          <p class="card-text">
+           Role: Head Coach
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="col-6 profile-card">
+        <div class="card">
+         <img alt="Coach 2" class="card-img-top" src=""/>
+         <div class="card-body">
+          <h5 class="card-title">
+           Coach 2
+          </h5>
+          <p class="card-text">
+           Role: Assistant Coach
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3">
+   <p>
+    Contact us at: info@sportsteam.com | Follow us on social media
+   </p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

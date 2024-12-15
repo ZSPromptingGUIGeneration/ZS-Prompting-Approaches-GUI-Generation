@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tableware Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .header img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .search-bar {
+            display: flex;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-left: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+        .search-bar input::placeholder {
+            color: #aaa;
+        }
+        .search-bar .clear-btn {
+            margin-left: -40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #aaa;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .options button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .options button.scan-barcode {
+            background-color: #ffc107;
+        }
+        .options button:hover {
+            background-color: #218838;
+        }
+        .options button.scan-barcode:hover {
+            background-color: #e0a800;
+        }
+        .options button img {
+            margin-right: 5px;
+            width: 20px;
+            height: 20px;
+        }
+        .categories {
+            margin: 20px 0;
+        }
+        .categories h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .categories ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .categories ul li {
+            flex: 1 1 45%;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .categories ul li:hover {
+            background-color: #f1f1f1;
+        }
+        .categories ul li img {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+        .user-account {
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0;
+        }
+        .user-account button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .user-account button:hover {
+            background-color: #0056b3;
+        }
+        .wishlist {
+            margin: 20px 0;
+        }
+        .wishlist h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .wishlist ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .wishlist ul li {
+            padding: 10px;
+            background-color: white;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .wishlist ul li:hover {
+            background-color: #f1f1f1;
+        }
+        .filters {
+            margin: 20px 0;
+        }
+        .filters h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .filters select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <img alt="Logo" src=""/>
+    <h1>
+     Tableware Shop
+    </h1>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for plates, bowls, cutlery..." type="text"/>
+    <button>
+     Search
+    </button>
+    <button class="clear-btn">
+     ×
+    </button>
+   </div>
+   <div class="options">
+    <button class="scan-barcode">
+     <img alt="Scan Barcode" src=""/>
+     Scan Barcode
+    </button>
+    <button>
+     <img alt="Categories" src=""/>
+     Categories
+    </button>
+   </div>
+   <div class="filters">
+    <h2>
+     Filter Options
+    </h2>
+    <select>
+     <option value="">
+      Sort by
+     </option>
+     <option value="relevance">
+      Relevance
+     </option>
+     <option value="price-asc">
+      Price: Low to High
+     </option>
+     <option value="price-desc">
+      Price: High to Low
+     </option>
+     <option value="popularity">
+      Popularity
+     </option>
+     <option value="newest">
+      Newest Arrivals
+     </option>
+    </select>
+    <select>
+     <option value="">
+      Price Range
+     </option>
+     <option value="under-25">
+      $0 - $25
+     </option>
+     <option value="25-50">
+      $25 - $50
+     </option>
+     <option value="50-100">
+      $50 - $100
+     </option>
+     <option value="over-100">
+      $100+
+     </option>
+    </select>
+    <select>
+     <option value="">
+      Brand
+     </option>
+     <option value="brand1">
+      Brand 1
+     </option>
+     <option value="brand2">
+      Brand 2
+     </option>
+     <option value="brand3">
+      Brand 3
+     </option>
+    </select>
+    <select>
+     <option value="">
+      Material Type
+     </option>
+     <option value="ceramic">
+      Ceramic
+     </option>
+     <option value="glass">
+      Glass
+     </option>
+     <option value="plastic">
+      Plastic
+     </option>
+     <option value="metal">
+      Metal
+     </option>
+    </select>
+   </div>
+   <div class="categories">
+    <h2>
+     Categories
+    </h2>
+    <ul>
+     <li>
+      <img alt="Plates" src=""/>
+      Plates
+     </li>
+     <li>
+      <img alt="Bowls" src=""/>
+      Bowls
+     </li>
+     <li>
+      <img alt="Cutlery" src=""/>
+      Cutlery
+     </li>
+     <li>
+      <img alt="Glasses" src=""/>
+      Glasses
+     </li>
+     <li>
+      <img alt="Cups &amp; Mugs" src=""/>
+      Cups &amp; Mugs
+     </li>
+     <li>
+      <img alt="Serving Dishes" src=""/>
+      Serving Dishes
+     </li>
+    </ul>
+   </div>
+   <div class="wishlist">
+    <h2>
+     Wishlist
+    </h2>
+    <ul>
+     <li>
+      Item 1
+     </li>
+     <li>
+      Item 2
+     </li>
+     <li>
+      Item 3
+     </li>
+    </ul>
+   </div>
+   <div class="user-account">
+    <button>
+     Login / Register
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

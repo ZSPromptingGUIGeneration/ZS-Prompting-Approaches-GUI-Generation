@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Registration Page
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .header p {
+            margin: 5px 0 0;
+            color: #777;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input, .form-group select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group .checkbox-label {
+            display: inline-block;
+            margin-left: 5px;
+            color: #777;
+        }
+        .form-group .profile-photo {
+            display: flex;
+            align-items: center;
+        }
+        .form-group .profile-photo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .form-group .profile-photo button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #ff5722;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group .profile-photo button:hover {
+            background-color: #e64a19;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-actions .register-btn {
+            background-color: #ff5722;
+            color: #fff;
+        }
+        .form-actions .register-btn:hover {
+            background-color: #e64a19;
+        }
+        .form-actions .skip-btn {
+            background-color: #ccc;
+            color: #333;
+        }
+        .form-actions .skip-btn:hover {
+            background-color: #b3b3b3;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Create Your Account
+    </h1>
+    <p>
+     You're one step away from the best insider info and thousands of Black Friday Ads!
+    </p>
+   </div>
+   <form>
+    <div class="form-group">
+     <label for="profile-photo">
+      Profile Photo
+     </label>
+     <div class="profile-photo">
+      <img alt="Profile Photo" src=""/>
+      <button type="button">
+       Upload
+      </button>
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="name">
+      Name*
+     </label>
+     <input id="name" name="name" required="" type="text"/>
+    </div>
+    <div class="form-group">
+     <label for="email">
+      Email*
+     </label>
+     <input id="email" name="email" required="" type="email"/>
+    </div>
+    <div class="form-group">
+     <label for="birthday">
+      Birthday*
+     </label>
+     <input id="birthday" name="birthday" required="" type="date"/>
+    </div>
+    <div class="form-group">
+     <label for="mobile">
+      Mobile#
+     </label>
+     <input id="mobile" name="mobile" type="tel"/>
+    </div>
+    <div class="form-group">
+     <label for="zip">
+      Zip
+     </label>
+     <input id="zip" name="zip" type="text"/>
+    </div>
+    <div class="form-group">
+     <label for="church">
+      Choose My Church's
+     </label>
+     <select id="church" name="church">
+      <option value="">
+       Select
+      </option>
+      <option value="church1">
+       Church 1
+      </option>
+      <option value="church2">
+       Church 2
+      </option>
+     </select>
+    </div>
+    <div class="form-group">
+     <input id="marketing" name="marketing" type="checkbox"/>
+     <label class="checkbox-label" for="marketing">
+      I'd like to receive Marketing and promotional materials from Church’s Chicken.
+     </label>
+    </div>
+    <div class="form-group">
+     <input id="newsletter" name="newsletter" type="checkbox"/>
+     <label class="checkbox-label" for="newsletter">
+      Subscribe to the DealNews Select Newsletter
+     </label>
+    </div>
+    <div class="form-actions">
+     <button class="register-btn" type="submit">
+      REGISTER
+     </button>
+     <button class="skip-btn" type="button">
+      SKIP
+     </button>
+    </div>
+   </form>
+  </div>
+ </body>
+</html>

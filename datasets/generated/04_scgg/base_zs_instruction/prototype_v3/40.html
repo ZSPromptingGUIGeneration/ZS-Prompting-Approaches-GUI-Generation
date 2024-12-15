@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Trading App - Share Value
+  </title>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+        .header {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .share-name {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .share-name img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .share-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            position: relative;
+            transition: color 0.5s;
+        }
+        .share-value.updated {
+            color: #FF9800;
+        }
+        .price-change {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .price-change.positive {
+            color: #4CAF50;
+        }
+        .price-change.negative {
+            color: #f44336;
+        }
+        .price-change span {
+            font-size: 24px;
+            margin-left: 5px;
+        }
+        .metrics {
+            font-size: 16px;
+            color: #777;
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .chart {
+            margin: 20px 0;
+            height: 200px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #777;
+        }
+        .refresh-btn, .currency-selector {
+            margin: 10px 0;
+        }
+        .refresh-btn button, .currency-selector select, .portfolio button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .refresh-btn button:hover, .currency-selector select:hover, .portfolio button:hover {
+            background-color: #45a049;
+        }
+        .refresh-btn {
+            display: flex;
+            justify-content: center;
+        }
+        .currency-selector {
+            display: flex;
+            justify-content: center;
+        }
+        .currency-selector label {
+            margin-right: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+        .historical-data, .news-section, .comparison-feature, .portfolio {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #777;
+        }
+        .news-section h2, .historical-data h2, .comparison-feature h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .news-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .news-section ul li {
+            margin-bottom: 10px;
+        }
+        .news-section ul li a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .news-section ul li a:hover {
+            text-decoration: underline;
+        }
+        .user-auth {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .user-auth button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .user-auth button:hover {
+            background-color: #45a049;
+        }
+        .last-updated {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .dark-mode-toggle {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .dark-mode-toggle button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .dark-mode-toggle button:hover {
+            background-color: #45a049;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode .container {
+            background-color: #444;
+        }
+        .dark-mode .tooltip .tooltiptext {
+            background-color: #777;
+        }
+        .dark-mode .refresh-btn button, .dark-mode .currency-selector select, .dark-mode .portfolio button, .dark-mode .user-auth button, .dark-mode .dark-mode-toggle button {
+            background-color: #555;
+            border: 1px solid #444;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="user-auth">
+    <button>
+     Login
+    </button>
+   </div>
+   <div class="header">
+    Trading App
+   </div>
+   <div class="share-name">
+    <img alt="Apple Logo" src=""/>
+    Apple Inc. (AAPL)
+   </div>
+   <div class="share-value">
+    $250.75
+   </div>
+   <div class="price-change positive">
+    <span>
+     ↑
+    </span>
+    +1.25 (0.50%)
+   </div>
+   <div class="last-updated">
+    Last updated: 1 minute ago
+   </div>
+   <div class="metrics">
+    <div class="tooltip">
+     Market Cap: $2.5T
+     <span class="tooltiptext">
+      Total market value of a company's outstanding shares
+     </span>
+    </div>
+    <div class="tooltip">
+     Volume: 75M
+     <span class="tooltiptext">
+      Number of shares traded
+     </span>
+    </div>
+    <div class="tooltip">
+     P/E Ratio: 30.25
+     <span class="tooltiptext">
+      Price-to-Earnings ratio
+     </span>
+    </div>
+    <div class="tooltip">
+     EPS: 3.28
+     <span class="tooltiptext">
+      Earnings Per Share
+     </span>
+    </div>
+    <div class="tooltip">
+     Dividend Yield: 1.2%
+     <span class="tooltiptext">
+      Dividend per share divided by the price per share
+     </span>
+    </div>
+    <div class="tooltip">
+     52-Week High: $260.00
+     <span class="tooltiptext">
+      Highest price in the last 52 weeks
+     </span>
+    </div>
+    <div class="tooltip">
+     52-Week Low: $200.00
+     <span class="tooltiptext">
+      Lowest price in the last 52 weeks
+     </span>
+    </div>
+   </div>
+   <div class="chart">
+    Live Share Price Chart
+   </div>
+   <div class="refresh-btn">
+    <button>
+     Refresh
+    </button>
+   </div>
+   <div class="currency-selector">
+    <label for="currency">
+     Currency:
+    </label>
+    <select id="currency">
+     <option value="USD">
+      USD
+     </option>
+     <option value="EUR">
+      EUR
+     </option>
+     <option value="GBP">
+      GBP
+     </option>
+    </select>
+   </div>
+   <div class="historical-data">
+    <h2>
+     Historical Data
+    </h2>
+    <p>
+     Past Week: $245.00 - $250.75
+    </p>
+    <p>
+     Past Month: $230.00 - $250.75
+    </p>
+   </div>
+   <div class="news-section">
+    <h2>
+     Recent News
+    </h2>
+    <ul>
+     <li>
+      <a href="#">
+       Apple releases new iPhone model
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Apple's Q3 earnings beat expectations
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Apple announces new partnership with XYZ
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="comparison-feature">
+    <h2>
+     Compare with
+    </h2>
+    <select>
+     <option value="MSFT">
+      Microsoft (MSFT)
+     </option>
+     <option value="GOOGL">
+      Google (GOOGL)
+     </option>
+     <option value="AMZN">
+      Amazon (AMZN)
+     </option>
+    </select>
+   </div>
+   <div class="portfolio">
+    <button>
+     Add to Portfolio
+    </button>
+   </div>
+   <div class="dark-mode-toggle">
+    <button>
+     Toggle Dark Mode
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

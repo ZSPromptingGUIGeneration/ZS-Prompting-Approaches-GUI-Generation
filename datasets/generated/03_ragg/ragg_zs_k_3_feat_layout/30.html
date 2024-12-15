@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather Notifications
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header p {
+            margin: 5px 0 0;
+        }
+        .separator {
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+        .content h2 {
+            color: #007BFF;
+            margin: 0 0 10px;
+        }
+        .toggle-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .toggle-item:last-child {
+            border-bottom: none;
+        }
+        .toggle-item label {
+            font-weight: bold;
+        }
+        .checkbox-group {
+            margin: 20px 0;
+        }
+        .checkbox-group label {
+            display: block;
+            margin: 5px 0;
+        }
+        .action-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Weather Notifications
+   </h1>
+   <p>
+    Little Rock, AR
+   </p>
+  </div>
+  <div class="separator">
+  </div>
+  <div class="container">
+   <div class="content">
+    <h2>
+     WEATHER NOTIFICATIONS
+    </h2>
+    <div class="toggle-item">
+     <label for="severe-weather-alerts">
+      Severe Weather Alerts
+     </label>
+     <input id="severe-weather-alerts" type="checkbox"/>
+    </div>
+    <div class="toggle-item">
+     <label for="station-alerts">
+      Station Alerts
+     </label>
+     <input id="station-alerts" type="checkbox"/>
+    </div>
+    <div class="toggle-item">
+     <label for="temperature-display">
+      Temperature Display
+     </label>
+     <input id="temperature-display" type="checkbox"/>
+    </div>
+    <div class="toggle-item">
+     <label for="lock-screen-banner">
+      Lock Screen Weather Banner
+     </label>
+     <input id="lock-screen-banner" type="checkbox"/>
+    </div>
+    <div class="toggle-item">
+     <label for="status-bar-alerts">
+      Show Alerts in Status Bar
+     </label>
+     <input id="status-bar-alerts" type="checkbox"/>
+    </div>
+    <div class="checkbox-group">
+     <label>
+      <input id="alert-sounds" type="checkbox"/>
+      Sounds
+     </label>
+     <label>
+      <input id="alert-lights" type="checkbox"/>
+      Lights
+     </label>
+     <label>
+      <input id="alert-vibration" type="checkbox"/>
+      Vibration
+     </label>
+    </div>
+    <div class="toggle-item">
+     <label for="precipitation-alerts">
+      Precipitation Alerts
+     </label>
+     <input id="precipitation-alerts" type="checkbox"/>
+    </div>
+    <div class="toggle-item">
+     <label for="lightning-alerts">
+      Lightning Alerts
+     </label>
+     <input id="lightning-alerts" type="checkbox"/>
+    </div>
+   </div>
+   <a class="action-button" href="#">
+    Done
+   </a>
+  </div>
+ </body>
+</html>

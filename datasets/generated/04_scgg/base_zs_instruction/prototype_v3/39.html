@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bicycle Details
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .breadcrumb {
+            margin-bottom: 20px;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #3498db;
+            margin-right: 5px;
+            transition: color 0.3s;
+        }
+        .breadcrumb a:hover {
+            color: #2980b9;
+        }
+        .breadcrumb a::after {
+            content: ">";
+            margin-left: 5px;
+        }
+        .breadcrumb a:last-child::after {
+            content: "";
+        }
+        .image-gallery {
+            display: flex;
+            gap: 10px;
+        }
+        .image-gallery .main-image {
+            width: 70%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .thumbnails {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .thumbnails img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .details h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .details p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-size: 28px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 10px;
+        }
+        .button {
+            display: inline-block;
+            width: auto;
+            padding: 15px;
+            background: #3498db;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #2980b9;
+        }
+        .wishlist {
+            display: inline-block;
+            padding: 15px;
+            background: #f39c12;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .wishlist:hover {
+            background: #e67e22;
+        }
+        .quantity-selector {
+            display: inline-block;
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        .expandable {
+            cursor: pointer;
+            color: #3498db;
+            transition: color 0.3s;
+        }
+        .expandable:hover {
+            color: #2980b9;
+        }
+        .hidden {
+            display: none;
+        }
+        .availability {
+            font-size: 16px;
+            margin-bottom: 20px;
+            background: #dff0d8;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .variants {
+            margin-bottom: 20px;
+        }
+        .variants h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .variants select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .specifications {
+            margin-top: 20px;
+        }
+        .specifications h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .specifications ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .specifications ul li {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .specifications ul li::before {
+            content: "\2022";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .reviews {
+            margin-top: 20px;
+        }
+        .reviews h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .reviews p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .rating {
+            display: inline-block;
+            color: #f39c12;
+        }
+        .rating-breakdown {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .related-products {
+            margin-top: 20px;
+        }
+        .related-products h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .related-products .product {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .related-products .product img {
+            width: 50px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .social-share {
+            margin-top: 20px;
+        }
+        .social-share h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .social-share a {
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 20px;
+            color: #3498db;
+            transition: color 0.3s;
+        }
+        .social-share a:hover {
+            color: #2980b9;
+        }
+        .promotional-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            .button, .wishlist {
+                padding: 10px;
+                font-size: 16px;
+            }
+            .image-gallery {
+                flex-direction: column;
+            }
+            .image-gallery .main-image {
+                width: 100%;
+            }
+            .thumbnails {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="breadcrumb">
+    <a href="#">
+     Home
+    </a>
+    <a href="#">
+     Bicycles
+    </a>
+    <a href="#">
+     Mountain Bike
+    </a>
+   </div>
+   <div class="image-gallery">
+    <img alt="Bicycle" class="main-image" src=""/>
+    <div class="thumbnails">
+     <img alt="Bicycle Thumbnail" src=""/>
+     <img alt="Bicycle Thumbnail" src=""/>
+     <img alt="Bicycle Thumbnail" src=""/>
+    </div>
+   </div>
+   <div class="details">
+    <h1>
+     Mountain Bike
+    </h1>
+    <div class="promotional-badge">
+     Best Seller
+    </div>
+    <p>
+     High-quality mountain bike suitable for all terrains. Features a lightweight frame, durable tires, and advanced suspension system.
+    </p>
+    <div class="price">
+     <span class="original-price">
+      $599.99
+     </span>
+     $499.99
+    </div>
+    <div class="availability">
+     In Stock - Estimated Delivery: 3-5 Days
+    </div>
+    <input class="quantity-selector" min="1" type="number" value="1"/>
+    <a class="button" href="#">
+     Add to Cart
+    </a>
+    <a class="wishlist" href="#">
+     Add to Wishlist
+    </a>
+   </div>
+   <div class="variants">
+    <h2>
+     Available Options
+    </h2>
+    <select>
+     <option value="red">
+      Red
+     </option>
+     <option value="blue">
+      Blue
+     </option>
+     <option value="green">
+      Green
+     </option>
+    </select>
+   </div>
+   <div class="specifications">
+    <h2>
+     Product Specifications
+    </h2>
+    <ul>
+     <li>
+      Frame Material: Aluminum
+     </li>
+     <li>
+      Gear System: 21-speed
+     </li>
+     <li>
+      Brake Type: Disc Brake
+     </li>
+     <li>
+      Weight: 15kg
+     </li>
+     <li>
+      Dimensions: 68 x 23 x 39 inches
+     </li>
+    </ul>
+   </div>
+   <div class="reviews">
+    <h2>
+     Customer Reviews
+    </h2>
+    <p>
+     <span class="rating">
+      ★★★★★
+     </span>
+     - "Excellent bike for the price!"
+    </p>
+    <p>
+     <span class="rating">
+      ★★★★☆
+     </span>
+     - "Very sturdy and reliable."
+    </p>
+    <div class="rating-breakdown">
+     <p>
+      5 stars: 80%
+     </p>
+     <p>
+      4 stars: 15%
+     </p>
+     <p>
+      3 stars: 3%
+     </p>
+     <p>
+      2 stars: 1%
+     </p>
+     <p>
+      1 star: 1%
+     </p>
+    </div>
+   </div>
+   <div class="related-products">
+    <h2>
+     Related Products
+    </h2>
+    <div class="product">
+     <img alt="Helmet" src=""/>
+     <p>
+      Helmet - $29.99
+     </p>
+    </div>
+    <div class="product">
+     <img alt="Lock" src=""/>
+     <p>
+      Lock - $19.99
+     </p>
+    </div>
+    <div class="product">
+     <img alt="Light" src=""/>
+     <p>
+      Bike Light - $24.99
+     </p>
+    </div>
+   </div>
+   <div class="social-share">
+    <h2>
+     Share This Product
+    </h2>
+    <a href="#">
+     Facebook
+    </a>
+    <a href="#">
+     Twitter
+    </a>
+    <a href="#">
+     Instagram
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

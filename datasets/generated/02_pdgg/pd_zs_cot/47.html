@@ -1,0 +1,94 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Trip Booking App
+  </title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            padding: 20px;
+        }
+        .card {
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .btn-search {
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <header class="text-center">
+   <h1>
+    Trip Booking
+   </h1>
+  </header>
+  <div class="card">
+   <form>
+    <div class="form-group">
+     <label for="destination">
+      Destination
+     </label>
+     <input class="form-control" id="destination" placeholder="Enter destination" type="text"/>
+    </div>
+    <div class="form-group">
+     <label for="checkin-date">
+      Check-in Date
+     </label>
+     <input class="form-control" id="checkin-date" type="date"/>
+    </div>
+    <div class="form-group">
+     <label for="checkout-date">
+      Check-out Date
+     </label>
+     <input class="form-control" id="checkout-date" type="date"/>
+    </div>
+    <div class="form-group">
+     <label for="travelers">
+      Number of Travelers
+     </label>
+     <select class="form-control" id="travelers">
+      <option>
+       1 Adult
+      </option>
+      <option>
+       2 Adults
+      </option>
+      <option>
+       3 Adults
+      </option>
+      <option>
+       4 Adults
+      </option>
+      <option>
+       1 Child
+      </option>
+      <option>
+       2 Children
+      </option>
+      <option>
+       3 Children
+      </option>
+      <option>
+       4 Children
+      </option>
+     </select>
+    </div>
+    <button class="btn btn-primary btn-search" type="submit">
+     Search
+    </button>
+   </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Clothing App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        header .icons {
+            display: flex;
+            gap: 20px;
+        }
+        header .icons i {
+            font-size: 1.5em;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+        }
+        .tabs div {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .tabs .active {
+            border-bottom: 2px solid #000;
+        }
+        .search-bar {
+            display: flex;
+            padding: 10px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .search-bar input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        .search-bar i {
+            margin-left: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .grid-item button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .promo-carousel {
+            padding: 10px;
+        }
+        .promo-carousel img {
+            width: 100%;
+            border-radius: 5px;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    FashionHub
+   </div>
+   <div class="icons">
+    <i class="material-icons">
+     account_circle
+    </i>
+    <i class="material-icons">
+     shopping_cart
+    </i>
+   </div>
+  </header>
+  <div class="tabs">
+   <div class="tab active">
+    New Arrivals
+   </div>
+   <div class="tab">
+    Women
+   </div>
+   <div class="tab">
+    Men
+   </div>
+   <div class="tab">
+    Home
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search..." type="text"/>
+   <i class="material-icons">
+    mic
+   </i>
+  </div>
+  <div class="promo-carousel">
+   <img alt="Promo banner showcasing the latest summer collection" id="promo1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/bfa0f917-48d6-4d88-bffc-fdd780cdde89.png"/>
+   <img alt="Promo banner for a 50% off sale on selected items" id="promo2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/1f0886dc-8fd2-4c5a-8fd3-953f6bf0f4c1.png"/>
+  </div>
+  <div class="grid-container">
+   <div class="grid-item">
+    <img alt="Red summer dress for women" id="product1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/795aee7c-20e3-4ecb-a580-ff446680a2dc.png"/>
+    <button>
+     Quick View
+    </button>
+   </div>
+   <div class="grid-item">
+    <img alt="Men's casual blue shirt" id="product2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/05b9e665-7319-441f-b75d-92b852b149de.png"/>
+    <button>
+     Quick View
+    </button>
+   </div>
+   <div class="grid-item">
+    <img alt="Stylish sunglasses for women" id="product3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5ef8bfa8-35d8-4d58-a4f5-5384cad22ab6.png"/>
+    <button>
+     Quick View
+    </button>
+   </div>
+   <div class="grid-item">
+    <img alt="Men's running shoes" id="product4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5b364077-71d5-4ab9-a02a-66dc44c55866.png"/>
+    <button>
+     Quick View
+    </button>
+   </div>
+   <div class="grid-item">
+    <img alt="Elegant wristwatch for men" id="product5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b0d72287-e6cf-4dd2-8f86-4d1346dfbdce.png"/>
+    <button>
+     Quick View
+    </button>
+   </div>
+   <div class="grid-item">
+    <img alt="Women's leather handbag" id="product6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/78abe5a3-2da7-4c9a-95a7-45cf0359e17d.png"/>
+    <button>
+     Quick View
+    </button>
+   </div>
+  </div>
+  <div class="fab">
+   <i class="material-icons">
+    filter_list
+   </i>
+  </div>
+ </body>
+</html>

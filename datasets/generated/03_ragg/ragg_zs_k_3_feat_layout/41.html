@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   User Profile
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-image: url('cover-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+        .header .back-arrow, .header .settings-icon {
+            position: absolute;
+            top: 20px;
+            font-size: 24px;
+        }
+        .header .back-arrow {
+            left: 20px;
+        }
+        .header .settings-icon {
+            right: 20px;
+        }
+        .header .title {
+            margin-top: 60px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .profile {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            margin-top: -60px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .profile .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .profile .username {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .profile .additional-info {
+            color: #666;
+            margin-top: 5px;
+        }
+        .main-content {
+            padding: 20px;
+            background-color: white;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .main-content .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .main-content .description {
+            margin-top: 10px;
+            color: #666;
+        }
+        .main-content .statistics {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            color: #666;
+        }
+        .main-content .follow-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .pinned-post {
+            padding: 20px;
+            background-color: white;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .pinned-post .pinned-indicator {
+            font-size: 12px;
+            color: #007bff;
+        }
+        .pinned-post .post-content {
+            margin-top: 10px;
+        }
+        .photos-section, .info-section {
+            padding: 20px;
+            background-color: white;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .photos-section .title, .info-section .title {
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .photos-section .content, .info-section .details {
+            margin-top: 10px;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .bottom-nav .nav-icon {
+            font-size: 24px;
+            color: #666;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <span class="back-arrow">
+    ←
+   </span>
+   <span class="settings-icon">
+    ⚙
+   </span>
+   <div class="title">
+    User Profile
+   </div>
+  </div>
+  <div class="profile">
+   <img alt="Profile Picture" class="profile-picture" src=""/>
+   <div class="username">
+    Username
+   </div>
+   <div class="additional-info">
+    Age, Location
+   </div>
+  </div>
+  <div class="main-content">
+   <div class="title">
+    Profile Description
+   </div>
+   <div class="description">
+    This is a brief description or quote about the user.
+   </div>
+   <div class="statistics">
+    <div>
+     Posts: 100
+    </div>
+    <div>
+     Followers: 200
+    </div>
+    <div>
+     Ranking: 1
+    </div>
+   </div>
+   <a class="follow-button" href="#">
+    FOLLOW
+   </a>
+  </div>
+  <div class="pinned-post">
+   <div class="pinned-indicator">
+    Pinned Post
+   </div>
+   <div class="post-content">
+    <img alt="Profile Picture" class="profile-picture" src="" style="width: 50px; height: 50px; margin-right: 10px; float: left;"/>
+    <div>
+     <div class="username" style="font-size: 16px;">
+      Username
+     </div>
+     <div class="time" style="color: #666; font-size: 12px;">
+      2 hours ago
+     </div>
+    </div>
+    <div style="clear: both; margin-top: 10px;">
+     This is the content of the pinned post.
+    </div>
+   </div>
+  </div>
+  <div class="photos-section">
+   <div class="title">
+    <span>
+     PHOTOS
+    </span>
+    <span style="font-size: 24px;">
+     +
+    </span>
+   </div>
+   <div class="content">
+    <!-- Photo thumbnails go here -->
+   </div>
+  </div>
+  <div class="info-section">
+   <div class="title">
+    INFO
+   </div>
+   <div class="details">
+    <div>
+     Visits: 500
+    </div>
+    <div>
+     Profile Created: Jan 1, 2020
+    </div>
+    <div>
+     Last Connection: 1 hour ago
+    </div>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <span class="nav-icon">
+    ⌂
+   </span>
+   <span class="nav-icon">
+    🔔
+   </span>
+   <span class="nav-icon">
+    💬
+   </span>
+   <span class="nav-icon">
+    👥
+   </span>
+   <span class="nav-icon">
+    ⚙
+   </span>
+  </div>
+ </body>
+</html>

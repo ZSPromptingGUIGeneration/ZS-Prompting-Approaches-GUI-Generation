@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tableware Shopping
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header input[type="text"] {
+            width: 60%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .header button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .header button:focus {
+            outline: none;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .category {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 30%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .category img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .category h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <input placeholder="Search for tableware..." type="text"/>
+   <button>
+    Search
+   </button>
+   <button>
+    Scan Barcode
+   </button>
+  </div>
+  <div class="categories">
+   <div class="category">
+    <img alt="Plates" src=""/>
+    <h3>
+     Plates
+    </h3>
+   </div>
+   <div class="category">
+    <img alt="Bowls" src=""/>
+    <h3>
+     Bowls
+    </h3>
+   </div>
+   <div class="category">
+    <img alt="Cups" src=""/>
+    <h3>
+     Cups
+    </h3>
+   </div>
+   <div class="category">
+    <img alt="Cutlery" src=""/>
+    <h3>
+     Cutlery
+    </h3>
+   </div>
+   <div class="category">
+    <img alt="Glassware" src=""/>
+    <h3>
+     Glassware
+    </h3>
+   </div>
+   <div class="category">
+    <img alt="Serving Dishes" src=""/>
+    <h3>
+     Serving Dishes
+    </h3>
+   </div>
+  </div>
+ </body>
+</html>

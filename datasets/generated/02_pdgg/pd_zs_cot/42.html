@@ -1,0 +1,106 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   .current-weather {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .current-weather .temperature {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .current-weather .description {
+            font-size: 1.2em;
+            color: gray;
+        }
+        .additional-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .additional-info div {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .forecast {
+            margin-top: 20px;
+        }
+        .forecast .day-card {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .forecast .day-card .day {
+            font-weight: bold;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header text-center">
+    <h1>
+     New York, NY
+    </h1>
+    <p>
+     Monday, April 3, 2023 - 12:00 PM
+    </p>
+   </div>
+   <div class="current-weather">
+    <div class="temperature">
+     72°F
+    </div>
+    <div class="description">
+     Sunny
+    </div>
+    <div class="weather-icon">
+     <img alt="Sunny" src=""/>
+    </div>
+   </div>
+   <div class="additional-info">
+    <div>
+     Humidity: 45%
+    </div>
+    <div>
+     Wind: 5 mph
+    </div>
+    <div>
+     Precipitation: 0%
+    </div>
+   </div>
+   <div class="forecast">
+    <div class="row">
+     <div class="col-12 day-card">
+      <div class="day">
+       Tuesday
+      </div>
+      <div class="weather-icon">
+       <img alt="Cloudy" src=""/>
+      </div>
+      <div class="temperatures">
+       High: 68°F, Low: 50°F
+      </div>
+     </div>
+     <div class="col-12 day-card">
+      <div class="day">
+       Wednesday
+      </div>
+      <div class="weather-icon">
+       <img alt="Rainy" src=""/>
+      </div>
+      <div class="temperatures">
+       High: 65°F, Low: 48°F
+      </div>
+     </div>
+     <!-- Repeat for other days -->
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->

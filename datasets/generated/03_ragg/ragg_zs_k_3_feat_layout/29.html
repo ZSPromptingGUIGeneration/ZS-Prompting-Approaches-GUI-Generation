@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Clothing App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .top-nav, .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .top-nav {
+            border-bottom: 1px solid #ddd;
+        }
+        .top-nav div, .bottom-nav div {
+            padding: 15px 0;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+        }
+        .top-nav .active {
+            border-bottom: 3px solid red;
+            color: red;
+        }
+        .main-content {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .category {
+            text-align: center;
+        }
+        .category img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ddd;
+        }
+        .bottom-nav div {
+            flex-direction: column;
+        }
+        .bottom-nav .active {
+            color: red;
+        }
+        .bottom-nav i {
+            display: block;
+            margin-bottom: 5px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-nav">
+   <div>
+    FEATURED
+   </div>
+   <div class="active">
+    DEPARTMENTS
+   </div>
+   <div>
+    COUPONS
+   </div>
+  </div>
+  <div class="main-content">
+   <div class="category">
+    <img alt="For The Home" src=""/>
+    <p>
+     For The Home
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Bed &amp; Bath" src=""/>
+    <p>
+     Bed &amp; Bath
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Window" src=""/>
+    <p>
+     Window
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Appliances" src=""/>
+    <p>
+     Appliances
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Women" src=""/>
+    <p>
+     Women
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Bras, Panties &amp; Lingerie" src=""/>
+    <p>
+     Bras, Panties &amp; Lingerie
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Men" src=""/>
+    <p>
+     Men
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Juniors" src=""/>
+    <p>
+     Juniors
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Kids" src=""/>
+    <p>
+     Kids
+    </p>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <div>
+    <i class="fa fa-heart">
+    </i>
+    Saved
+   </div>
+   <div>
+    <i class="fa fa-search">
+    </i>
+    Search
+   </div>
+   <div class="active">
+    <i class="fa fa-shopping-bag">
+    </i>
+    Shop
+   </div>
+   <div>
+    <i class="fa fa-shopping-cart">
+    </i>
+    Bag
+   </div>
+   <div>
+    <i class="fa fa-user">
+    </i>
+    Sign In
+   </div>
+  </div>
+ </body>
+</html>

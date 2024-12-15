@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Trip Booking
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .form-group {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group .flex div {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .form-group .flex div:last-child {
+            margin-right: 0;
+        }
+
+        .btn-search {
+            background-color: #ff5733;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-search:hover {
+            background-color: #e64a19;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Hotel Search
+  </div>
+  <div class="container">
+   <div class="form-group">
+    <label for="destination">
+     Destination
+    </label>
+    <input id="destination" placeholder="Enter a city, airport or landmark" type="text"/>
+   </div>
+   <div class="form-group flex">
+    <div>
+     <label for="checkin">
+      Check-in
+     </label>
+     <input id="checkin" type="date"/>
+    </div>
+    <div>
+     <label for="checkout">
+      Check-out
+     </label>
+     <input id="checkout" type="date"/>
+    </div>
+   </div>
+   <div class="form-group flex">
+    <div>
+     <label for="rooms">
+      Room(s)
+     </label>
+     <input id="rooms" min="1" type="number" value="1"/>
+    </div>
+    <div>
+     <label for="adults">
+      Adults
+     </label>
+     <input id="adults" min="1" type="number" value="1"/>
+    </div>
+    <div>
+     <label for="children">
+      Children
+     </label>
+     <input id="children" min="0" type="number" value="0"/>
+    </div>
+   </div>
+   <button class="btn-search">
+    Search Hotels
+   </button>
+  </div>
+ </body>
+</html>

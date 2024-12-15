@@ -1,0 +1,171 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Notification Settings
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .section {
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .toggle input {
+            display: none;
+        }
+        .toggle label {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+        .toggle label:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+        .toggle label:after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .toggle input:checked + label:before {
+            background-color: #4CAF50;
+        }
+        .toggle input:checked + label:after {
+            transform: translateX(20px);
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Notification Settings
+   </h1>
+  </div>
+  <div class="container">
+   <div class="section">
+    <h2>
+     Location: New York, NY
+    </h2>
+   </div>
+   <div class="section">
+    <h2>
+     Notify Me When:
+    </h2>
+    <div class="toggle">
+     <span>
+      Severe Weather
+     </span>
+     <input id="severe-weather" type="checkbox"/>
+     <label for="severe-weather">
+     </label>
+    </div>
+    <div class="toggle">
+     <span>
+      Daily Forecast
+     </span>
+     <input id="daily-forecast" type="checkbox"/>
+     <label for="daily-forecast">
+     </label>
+    </div>
+    <div class="toggle">
+     <span>
+      Weather Alerts
+     </span>
+     <input id="weather-alerts" type="checkbox"/>
+     <label for="weather-alerts">
+     </label>
+    </div>
+    <div class="toggle">
+     <span>
+      Weekly Summary
+     </span>
+     <input id="weekly-summary" type="checkbox"/>
+     <label for="weekly-summary">
+     </label>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Notification Methods:
+    </h2>
+    <div class="toggle">
+     <span>
+      Push Notification
+     </span>
+     <input id="push-notification" type="checkbox"/>
+     <label for="push-notification">
+     </label>
+    </div>
+    <div class="toggle">
+     <span>
+      Email
+     </span>
+     <input id="email" type="checkbox"/>
+     <label for="email">
+     </label>
+    </div>
+    <div class="toggle">
+     <span>
+      SMS
+     </span>
+     <input id="sms" type="checkbox"/>
+     <label for="sms">
+     </label>
+    </div>
+    <div class="toggle">
+     <span>
+      In-App Notification
+     </span>
+     <input id="in-app-notification" type="checkbox"/>
+     <label for="in-app-notification">
+     </label>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->

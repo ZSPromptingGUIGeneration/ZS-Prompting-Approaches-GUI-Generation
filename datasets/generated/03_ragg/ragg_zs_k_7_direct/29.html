@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Clothing App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #d32f2f;
+            padding: 10px 0;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .category {
+            flex-basis: 30%;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .category img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+        .category p {
+            margin: 10px 0 0 0;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .footer a {
+            color: #d32f2f;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer a.active {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .footer img {
+            max-width: 25px;
+            max-height: 25px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Departments
+  </div>
+  <div class="nav-bar">
+   <a href="#">
+    Featured
+   </a>
+   <a class="active" href="#">
+    Departments
+   </a>
+   <a href="#">
+    Coupons
+   </a>
+  </div>
+  <div class="categories">
+   <div class="category">
+    <img alt="For The Home" src=""/>
+    <p>
+     For The Home
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Bed &amp; Bath" src=""/>
+    <p>
+     Bed &amp; Bath
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Window" src=""/>
+    <p>
+     Window
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Appliances" src=""/>
+    <p>
+     Appliances
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Women" src=""/>
+    <p>
+     Women
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Bras, Panties &amp; Lingerie" src=""/>
+    <p>
+     Bras, Panties &amp; Lingerie
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Men" src=""/>
+    <p>
+     Men
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Juniors" src=""/>
+    <p>
+     Juniors
+    </p>
+   </div>
+   <div class="category">
+    <img alt="Kids" src=""/>
+    <p>
+     Kids
+    </p>
+   </div>
+  </div>
+  <div class="footer">
+   <a href="#">
+    <img alt="Saved" src=""/>
+    <br/>
+    Saved
+   </a>
+   <a href="#">
+    <img alt="Search" src=""/>
+    <br/>
+    Search
+   </a>
+   <a class="active" href="#">
+    <img alt="Shop" src=""/>
+    <br/>
+    Shop
+   </a>
+   <a href="#">
+    <img alt="Bag" src=""/>
+    <br/>
+    Bag
+   </a>
+   <a href="#">
+    <img alt="Sign In" src=""/>
+    <br/>
+    Sign In
+   </a>
+  </div>
+ </body>
+</html>

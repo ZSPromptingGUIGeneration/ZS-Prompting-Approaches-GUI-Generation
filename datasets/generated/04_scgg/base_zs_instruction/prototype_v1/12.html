@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App - Soups
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.5rem;
+            position: relative;
+        }
+        .header .back-button {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            padding: 1rem;
+        }
+        .search-bar {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .search-bar input, .search-bar select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .soup-list {
+            list-style: none;
+            padding: 0;
+        }
+        .soup-item {
+            background-color: white;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .soup-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .soup-item h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: #333;
+        }
+        .soup-item p {
+            margin: 0.5rem 0 0;
+            color: #444;
+        }
+        .soup-item .rating, .soup-item .prep-time, .soup-item .ingredients {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #666;
+        }
+        .rating span {
+            color: gold;
+        }
+        @media (max-width: 600px) {
+            .soup-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .soup-item img {
+                width: 100%;
+                height: auto;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <a class="back-button" href="#">
+    Back
+   </a>
+   Soups
+  </div>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search soups..." type="text"/>
+    <select>
+     <option value="">
+      Filter by category
+     </option>
+     <option value="vegetarian">
+      Vegetarian
+     </option>
+     <option value="vegan">
+      Vegan
+     </option>
+     <option value="gluten-free">
+      Gluten-Free
+     </option>
+    </select>
+   </div>
+   <ul class="soup-list">
+    <li class="soup-item">
+     <img alt="Tomato Soup" src=""/>
+     <div>
+      <h3>
+       Tomato Soup
+      </h3>
+      <p>
+       A classic and creamy tomato soup.
+      </p>
+      <div class="rating">
+       Rating:
+       <span>
+        ★★★★☆
+       </span>
+      </div>
+      <div class="prep-time">
+       Prep Time: 30 mins
+      </div>
+      <div class="ingredients">
+       Ingredients: Tomatoes, Cream, Basil
+      </div>
+     </div>
+    </li>
+    <li class="soup-item">
+     <img alt="Chicken Noodle Soup" src=""/>
+     <div>
+      <h3>
+       Chicken Noodle Soup
+      </h3>
+      <p>
+       Hearty chicken soup with noodles and vegetables.
+      </p>
+      <div class="rating">
+       Rating:
+       <span>
+        ★★★★★
+       </span>
+      </div>
+      <div class="prep-time">
+       Prep Time: 45 mins
+      </div>
+      <div class="ingredients">
+       Ingredients: Chicken, Noodles, Carrots
+      </div>
+     </div>
+    </li>
+    <li class="soup-item">
+     <img alt="Minestrone" src=""/>
+     <div>
+      <h3>
+       Minestrone
+      </h3>
+      <p>
+       Italian vegetable soup with pasta and beans.
+      </p>
+      <div class="rating">
+       Rating:
+       <span>
+        ★★★★☆
+       </span>
+      </div>
+      <div class="prep-time">
+       Prep Time: 50 mins
+      </div>
+      <div class="ingredients">
+       Ingredients: Beans, Pasta, Vegetables
+      </div>
+     </div>
+    </li>
+    <li class="soup-item">
+     <img alt="French Onion Soup" src=""/>
+     <div>
+      <h3>
+       French Onion Soup
+      </h3>
+      <p>
+       Rich and flavorful onion soup with melted cheese.
+      </p>
+      <div class="rating">
+       Rating:
+       <span>
+        ★★★★★
+       </span>
+      </div>
+      <div class="prep-time">
+       Prep Time: 60 mins
+      </div>
+      <div class="ingredients">
+       Ingredients: Onions, Cheese, Broth
+      </div>
+     </div>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>

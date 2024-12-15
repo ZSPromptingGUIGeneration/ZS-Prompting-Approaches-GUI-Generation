@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports Team App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 15px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #d32f2f;
+            padding-bottom: 5px;
+        }
+        .stats, .games, .standings {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .stats div, .games div, .standings div {
+            flex: 1 1 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .standings table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .standings th, .standings td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .standings th {
+            background-color: #f2f2f2;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Sports Team App
+   </h1>
+  </div>
+  <div class="content">
+   <div class="section">
+    <h2>
+     Team Information
+    </h2>
+    <div class="stats">
+     <div>
+      <h3>
+       Statistics
+      </h3>
+      <p>
+       PTS: 115.3
+      </p>
+      <p>
+       FG%: .463
+      </p>
+      <p>
+       3PT%: .361
+      </p>
+      <p>
+       FT%: .764
+      </p>
+      <p>
+       REB: 44.3
+      </p>
+      <p>
+       AST: 25.3
+      </p>
+      <p>
+       STL: 8.3
+      </p>
+      <p>
+       BLK: 4.4
+      </p>
+     </div>
+     <div>
+      <h3>
+       Depth Chart
+      </h3>
+      <p>
+       PTS: 21.6
+      </p>
+      <p>
+       YDS: 338.8
+      </p>
+      <p>
+       PASS YDS: 256.9
+      </p>
+      <p>
+       RUSH YDS: 81.9
+      </p>
+      <p>
+       PTS (D): 22.4
+      </p>
+      <p>
+       YDS (D): 354.8
+      </p>
+      <p>
+       PASS (D): 248.4
+      </p>
+      <p>
+       RUSH (D): 106.3
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Schedule
+    </h2>
+    <div class="games">
+     <div>
+      <h3>
+       Last 3 Games
+      </h3>
+      <p>
+       vs. DEN - Tue, Mar 21 - 124-125 W
+      </p>
+      <p>
+       @ DEN - Sun, Mar 19 - 109-105 W
+      </p>
+      <p>
+       @ NOP - Sat, Mar 18 - 112-128 L
+      </p>
+     </div>
+     <div>
+      <h3>
+       Next Match
+      </h3>
+      <p>
+       vs. MC Oran - Sat, Mar 11 - 14:00
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Standings
+    </h2>
+    <div class="standings">
+     <table>
+      <thead>
+       <tr>
+        <th>
+         Team
+        </th>
+        <th>
+         W
+        </th>
+        <th>
+         L
+        </th>
+        <th>
+         GB
+        </th>
+        <th>
+         PCT
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         Spurs
+        </td>
+        <td>
+         53
+        </td>
+        <td>
+         16
+        </td>
+        <td>
+         0.0
+        </td>
+        <td>
+         .768
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Lions
+        </td>
+        <td>
+         9
+        </td>
+        <td>
+         7
+        </td>
+        <td>
+         0
+        </td>
+        <td>
+         .563
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Vikings
+        </td>
+        <td>
+         8
+        </td>
+        <td>
+         8
+        </td>
+        <td>
+         0.0
+        </td>
+        <td>
+         .500
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Bears
+        </td>
+        <td>
+         3
+        </td>
+        <td>
+         13
+        </td>
+        <td>
+         0.0
+        </td>
+        <td>
+         .188
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Local Marketplace
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+        }
+        .search-bar {
+            display: flex;
+            padding: 10px;
+            background: white;
+        }
+        .search-bar input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background: white;
+            margin-top: 10px;
+        }
+        .categories div {
+            padding: 10px;
+            background: #ddd;
+            border-radius: 5px;
+        }
+        .suggestions {
+            padding: 10px;
+        }
+        .item {
+            background: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .item-details {
+            flex: 1;
+        }
+        .item-details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .item-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Local Marketplace
+   </h1>
+  </header>
+  <div class="search-bar">
+   <input placeholder="Search items..." type="text"/>
+   <button>
+    Search
+   </button>
+  </div>
+  <div class="categories">
+   <div>
+    Electronics
+   </div>
+   <div>
+    Furniture
+   </div>
+   <div>
+    Clothing
+   </div>
+   <div>
+    Books
+   </div>
+  </div>
+  <div class="suggestions">
+   <div class="item">
+    <img alt="Item Image" src=""/>
+    <div class="item-details">
+     <h3>
+      Item Title 1
+     </h3>
+     <p>
+      Item description goes here. It is a brief detail of the item.
+     </p>
+    </div>
+   </div>
+   <div class="item">
+    <img alt="Item Image" src=""/>
+    <div class="item-details">
+     <h3>
+      Item Title 2
+     </h3>
+     <p>
+      Item description goes here. It is a brief detail of the item.
+     </p>
+    </div>
+   </div>
+   <div class="item">
+    <img alt="Item Image" src=""/>
+    <div class="item-details">
+     <h3>
+      Item Title 3
+     </h3>
+     <p>
+      Item description goes here. It is a brief detail of the item.
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

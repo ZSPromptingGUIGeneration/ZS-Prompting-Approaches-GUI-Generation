@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+        .container {
+            padding: 20px;
+        }
+        .location {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .time {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .temperature {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .feels-like,
+        .details {
+            font-size: 18px;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .day {
+            text-align: center;
+        }
+        .day img {
+            width: 50px;
+            height: 50px;
+        }
+        .day p {
+            margin: 5px 0;
+        }
+        .weather-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .weather-details div {
+            width: 30%;
+        }
+        .weather-details img {
+            width: 100%;
+            height: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="location">
+    San Francisco
+   </div>
+   <div class="time">
+    4:15 PM, 12/23 (GMT-08:00)
+   </div>
+   <div class="temperature">
+    55°F
+   </div>
+   <div class="feels-like">
+    Feels like 55°F
+   </div>
+   <div class="details">
+    <p>
+     Light rain
+    </p>
+    <p>
+     Sunrise: 7:22 AM | Sunset: 4:55 PM
+    </p>
+    <p>
+     Duration of day: 9 h, 33 m
+    </p>
+    <p>
+     Latest update: 0 minutes ago
+    </p>
+   </div>
+   <div class="weather-details">
+    <div>
+     <img alt="Humidity" src=""/>
+     <p>
+      Humidity: 87%
+     </p>
+     <p>
+      Wind: 6 MPH ESE
+     </p>
+    </div>
+    <div>
+     <img alt="Sunrise" src=""/>
+     <p>
+      Rise: 07:14 AM
+     </p>
+     <p>
+      Set: 05:34 PM
+     </p>
+    </div>
+    <div>
+     <img alt="Sunrise" src=""/>
+     <p>
+      Rise: 10:05 AM
+     </p>
+     <p>
+      Set: 10:46 PM
+     </p>
+    </div>
+   </div>
+   <div class="forecast">
+    <div class="day">
+     <img alt="Cloudy" src=""/>
+     <p>
+      WED
+     </p>
+     <p>
+      52/38°F
+     </p>
+     <p>
+      Overcast
+     </p>
+    </div>
+    <div class="day">
+     <img alt="Rain" src=""/>
+     <p>
+      THU
+     </p>
+     <p>
+      56/52°F
+     </p>
+     <p>
+      Light rain shower
+     </p>
+    </div>
+    <div class="day">
+     <img alt="Rain" src=""/>
+     <p>
+      FRI
+     </p>
+     <p>
+      55/52°F
+     </p>
+     <p>
+      Light rain shower
+     </p>
+    </div>
+    <div class="day">
+     <img alt="Rain" src=""/>
+     <p>
+      SAT
+     </p>
+     <p>
+      57/51°F
+     </p>
+     <p>
+      Light rain shower
+     </p>
+    </div>
+    <div class="day">
+     <img alt="Cloudy" src=""/>
+     <p>
+      SUN
+     </p>
+     <p>
+      58/52°F
+     </p>
+     <p>
+      Overcast
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,108 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bidding App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   .offer-card {
+            margin: 10px 0;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <nav>
+   <div class="nav-wrapper">
+    <a class="brand-logo center" href="#">
+     Bidding App
+    </a>
+    <ul class="right" id="nav-mobile">
+     <li>
+      <a href="#">
+       <i class="material-icons">
+        search
+       </i>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <div class="container">
+   <ul class="tabs">
+    <li class="tab col s3">
+     <a class="active" href="#open-offers">
+      Open Offers
+     </a>
+    </li>
+    <li class="tab col s3">
+     <a href="#closed-offers">
+      Closed Offers
+     </a>
+    </li>
+   </ul>
+   <div class="col s12" id="open-offers">
+    <div class="offer-card card">
+     <div class="card-content">
+      <span class="card-title">
+       Item 1
+      </span>
+      <p>
+       Current Bid: $100
+      </p>
+      <p>
+       Time Remaining: 2h 30m
+      </p>
+     </div>
+     <div class="card-action">
+      <span class="new badge blue" data-badge-caption="Open">
+      </span>
+     </div>
+    </div>
+    <!-- Add more open offer cards as needed -->
+   </div>
+   <div class="col s12" id="closed-offers">
+    <div class="offer-card card">
+     <div class="card-content">
+      <span class="card-title">
+       Item 2
+      </span>
+      <p>
+       Final Bid: $150
+      </p>
+     </div>
+     <div class="card-action">
+      <span class="new badge grey" data-badge-caption="Closed">
+      </span>
+     </div>
+    </div>
+    <!-- Add more closed offer cards as needed -->
+   </div>
+  </div>
+  <div class="fixed-action-btn fab">
+   <a class="btn-floating btn-large red">
+    <i class="large material-icons">
+     add
+    </i>
+   </a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tabs');
+            var instances = M.Tabs.init(elems);
+        });
+  </script>
+ </body>
+</html>
+<!-- End -->

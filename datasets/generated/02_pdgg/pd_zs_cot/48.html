@@ -1,0 +1,145 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shop Finder
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        .location-btn {
+            background-color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .filters {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        .shop-list {
+            padding: 10px;
+        }
+        .shop-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .shop-card h3 {
+            margin: 0 0 10px;
+        }
+        .shop-card p {
+            margin: 5px 0;
+        }
+        .footer {
+            position: sticky;
+            bottom: 0;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="search-bar">
+    <input placeholder="Search for shops..." type="text"/>
+   </div>
+   <button class="location-btn">
+    📍
+   </button>
+  </div>
+  <div class="filters">
+   <button>
+    Filter
+   </button>
+   <button>
+    Sort
+   </button>
+  </div>
+  <div class="shop-list">
+   <div class="shop-card">
+    <h3>
+     Shop Name 1
+    </h3>
+    <p>
+     Address: 123 Main St
+    </p>
+    <p>
+     Distance: 1.2 miles
+    </p>
+    <p>
+     Rating: ⭐⭐⭐⭐
+    </p>
+   </div>
+   <div class="shop-card">
+    <h3>
+     Shop Name 2
+    </h3>
+    <p>
+     Address: 456 Elm St
+    </p>
+    <p>
+     Distance: 2.5 miles
+    </p>
+    <p>
+     Rating: ⭐⭐⭐⭐⭐
+    </p>
+   </div>
+   <!-- Add more shop cards as needed -->
+  </div>
+  <div class="footer">
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    Search
+   </a>
+   <a href="#">
+    Favorites
+   </a>
+   <a href="#">
+    Profile
+   </a>
+  </div>
+ </body>
+</html>
+<!-- End -->

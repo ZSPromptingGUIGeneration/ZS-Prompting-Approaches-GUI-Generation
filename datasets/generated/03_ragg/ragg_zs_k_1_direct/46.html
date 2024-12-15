@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Registration Page
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 10px;
+        }
+        .profile-photo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-photo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #d32f2f;
+        }
+        .profile-photo button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            width: 48%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .register-btn {
+            background-color: #d32f2f;
+            color: white;
+        }
+        .skip-btn {
+            background-color: #f5f5dc;
+            color: #d32f2f;
+            border: 2px solid #d32f2f;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Register and Receive Exclusive Offers!
+   </h1>
+  </div>
+  <div class="container">
+   <div class="profile-photo">
+    <img alt="Profile Photo" src=""/>
+    <button>
+     Upload Photo
+    </button>
+   </div>
+   <form>
+    <div class="form-group">
+     <label for="name">
+      Name*
+     </label>
+     <input id="name" name="name" required="" type="text"/>
+    </div>
+    <div class="form-group">
+     <label for="email">
+      Email*
+     </label>
+     <input id="email" name="email" required="" type="email"/>
+    </div>
+    <div class="form-group">
+     <label for="birthday">
+      Birthday*
+     </label>
+     <input id="birthday" name="birthday" required="" type="date"/>
+    </div>
+    <div class="form-group">
+     <label for="mobile">
+      Mobile#
+     </label>
+     <input id="mobile" name="mobile" type="tel"/>
+    </div>
+    <div class="form-group">
+     <label for="zip">
+      Zip
+     </label>
+     <input id="zip" name="zip" type="text"/>
+    </div>
+    <div class="form-group">
+     <label for="church">
+      Choose My Church's
+     </label>
+     <select id="church" name="church">
+      <option value="">
+       Select Church
+      </option>
+      <option value="church1">
+       Church 1
+      </option>
+      <option value="church2">
+       Church 2
+      </option>
+     </select>
+    </div>
+    <div class="form-group">
+     <input id="marketing" name="marketing" type="checkbox"/>
+     <label for="marketing">
+      I'd like to receive Marketing and promotional materials.
+     </label>
+    </div>
+    <div class="buttons">
+     <button class="register-btn" type="submit">
+      REGISTER
+     </button>
+     <button class="skip-btn" type="button">
+      SKIP
+     </button>
+    </div>
+   </form>
+  </div>
+ </body>
+</html>

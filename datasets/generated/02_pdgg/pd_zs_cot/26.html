@@ -1,0 +1,132 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dream Tracker
+  </title>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+        .content {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+        .text-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .save-button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .save-button:hover {
+            background-color: #45a049;
+        }
+        .record-button {
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .dream-list {
+            margin-top: 1rem;
+        }
+        .dream-item {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #6200ea;
+            padding: 0.5rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .bottom-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   Dream Tracker
+  </header>
+  <div class="content">
+   <textarea class="text-input" placeholder="Describe your dream..."></textarea>
+   <button class="save-button">
+    Save
+   </button>
+   <div class="dream-list">
+    <div class="dream-item">
+     Dream 1: Lorem ipsum dolor sit amet...
+    </div>
+    <div class="dream-item">
+     Dream 2: Consectetur adipiscing elit...
+    </div>
+    <!-- More dream items can be added here -->
+   </div>
+  </div>
+  <button class="record-button">
+   🎤
+  </button>
+  <div class="bottom-nav">
+   <a href="#">
+    ⌂
+   </a>
+   <a href="#">
+    💬
+   </a>
+   <a href="#">
+    ⚙
+   </a>
+  </div>
+ </body>
+</html>
+<!-- End -->

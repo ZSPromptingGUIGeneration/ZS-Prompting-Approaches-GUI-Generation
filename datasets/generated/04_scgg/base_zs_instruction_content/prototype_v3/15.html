@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        .header input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .header input[type="text"]::placeholder {
+            color: #aaa;
+        }
+        .header .clear-btn {
+            position: absolute;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            color: #aaa;
+        }
+        .filters {
+            display: flex;
+            gap: 10px;
+        }
+        .filters select {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .recipe {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            cursor: pointer;
+        }
+        .recipe:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background-color: #f0f0f0;
+        }
+        .recipe img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-content {
+            padding: 20px;
+        }
+        .recipe h2 {
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+        }
+        .recipe p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #666;
+        }
+        .recipe .tags, .recipe .difficulty, .recipe .rating, .recipe .nutritional-info {
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #888;
+        }
+        .recipe .ingredients {
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .recipe .tags span, .recipe .difficulty span, .recipe .rating span {
+            display: inline-block;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+        .recipe .nutritional-info span {
+            display: inline-block;
+            background-color: #d1e7dd;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+        .recipe .reviews {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #444;
+        }
+        .recipe .save-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .recipe .save-btn:hover {
+            background-color: #e5533d;
+        }
+        .favorite-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            color: #ff6347;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .filters {
+                flex-direction: column;
+                width: 100%;
+            }
+            .filters select {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <input placeholder="Search for recipes..." type="text"/>
+    <button class="clear-btn">
+     ×
+    </button>
+    <div class="filters">
+     <select>
+      <option value="">
+       All Categories
+      </option>
+      <option value="vegetarian">
+       Vegetarian
+      </option>
+      <option value="quick-meal">
+       Quick Meal
+      </option>
+      <option value="italian">
+       Italian
+      </option>
+      <option value="asian">
+       Asian
+      </option>
+     </select>
+     <select>
+      <option value="">
+       All Times
+      </option>
+      <option value="under-30-minutes">
+       Under 30 Minutes
+      </option>
+      <option value="30-60-minutes">
+       30 to 60 Minutes
+      </option>
+      <option value="over-60-minutes">
+       Over 60 Minutes
+      </option>
+     </select>
+     <select>
+      <option value="">
+       Sort By
+      </option>
+      <option value="time">
+       Estimated Time
+      </option>
+      <option value="difficulty">
+       Difficulty
+      </option>
+      <option value="rating">
+       Rating
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="grid">
+    <div class="recipe">
+     <img alt="Spaghetti Carbonara Recipe Image" id="spaghetti-carbonara" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b83aec68-1d04-4145-95e3-9a90e24c5a6f.png"/>
+     <div class="recipe-content">
+      <span class="favorite-icon">
+       ❤️
+      </span>
+      <h2>
+       Spaghetti Carbonara
+      </h2>
+      <p>
+       Estimated Time: 30 minutes
+      </p>
+      <div class="tags">
+       <span>
+        Quick Meal
+       </span>
+       <span>
+        Italian
+       </span>
+      </div>
+      <div class="difficulty">
+       <span>
+        Easy
+       </span>
+      </div>
+      <div class="rating">
+       <span>
+        ★★★★☆
+       </span>
+      </div>
+      <div class="nutritional-info">
+       <span>
+        Calories: 400
+       </span>
+       <span>
+        Protein: 20g
+       </span>
+      </div>
+      <div class="ingredients">
+       Ingredients: Spaghetti, Eggs, Parmesan, Pancetta
+      </div>
+      <div class="reviews">
+       User Reviews:
+       <a href="#">
+        Read reviews
+       </a>
+      </div>
+      <button class="save-btn">
+       Save Recipe
+      </button>
+     </div>
+    </div>
+    <div class="recipe">
+     <img alt="Chicken Curry Recipe Image" id="chicken-curry" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e00acabc-eb83-4b5a-aba0-52099d767529.png"/>
+     <div class="recipe-content">
+      <span class="favorite-icon">
+       ❤️
+      </span>
+      <h2>
+       Chicken Curry
+      </h2>
+      <p>
+       Estimated Time: 45 minutes
+      </p>
+      <div class="tags">
+       <span>
+        Spicy
+       </span>
+       <span>
+        Asian
+       </span>
+      </div>
+      <div class="difficulty">
+       <span>
+        Medium
+       </span>
+      </div>
+      <div class="rating">
+       <span>
+        ★★★★☆
+       </span>
+      </div>
+      <div class="nutritional-info">
+       <span>
+        Calories: 500
+       </span>
+       <span>
+        Protein: 30g
+       </span>
+      </div>
+      <div class="ingredients">
+       Ingredients: Chicken, Curry Powder, Coconut Milk, Onion
+      </div>
+      <div class="reviews">
+       User Reviews:
+       <a href="#">
+        Read reviews
+       </a>
+      </div>
+      <button class="save-btn">
+       Save Recipe
+      </button>
+     </div>
+    </div>
+    <div class="recipe">
+     <img alt="Beef Stew Recipe Image" id="beef-stew" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7bcdc1f1-d8bd-43ab-ad4d-43b6d492e309.png"/>
+     <div class="recipe-content">
+      <span class="favorite-icon">
+       ❤️
+      </span>
+      <h2>
+       Beef Stew
+      </h2>
+      <p>
+       Estimated Time: 1 hour 30 minutes
+      </p>
+      <div class="tags">
+       <span>
+        Hearty
+       </span>
+       <span>
+        Comfort Food
+       </span>
+      </div>
+      <div class="difficulty">
+       <span>
+        Hard
+       </span>
+      </div>
+      <div class="rating">
+       <span>
+        ★★★☆☆
+       </span>
+      </div>
+      <div class="nutritional-info">
+       <span>
+        Calories: 600
+       </span>
+       <span>
+        Protein: 40g
+       </span>
+      </div>
+      <div class="ingredients">
+       Ingredients: Beef, Carrots, Potatoes, Onion, Celery
+      </div>
+      <div class="reviews">
+       User Reviews:
+       <a href="#">
+        Read reviews
+       </a>
+      </div>
+      <button class="save-btn">
+       Save Recipe
+      </button>
+     </div>
+    </div>
+    <div class="recipe">
+     <img alt="Vegetable Stir Fry Recipe Image" id="vegetable-stir-fry" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/525a3023-998a-4eba-bffe-96116433f37d.png"/>
+     <div class="recipe-content">
+      <span class="favorite-icon">
+       ❤️
+      </span>
+      <h2>
+       Vegetable Stir Fry
+      </h2>
+      <p>
+       Estimated Time: 20 minutes
+      </p>
+      <div class="tags">
+       <span>
+        Vegetarian
+       </span>
+       <span>
+        Quick Meal
+       </span>
+      </div>
+      <div class="difficulty">
+       <span>
+        Easy
+       </span>
+      </div>
+      <div class="rating">
+       <span>
+        ★★★★★
+       </span>
+      </div>
+      <div class="nutritional-info">
+       <span>
+        Calories: 200
+       </span>
+       <span>
+        Protein: 10g
+       </span>
+      </div>
+      <div class="ingredients">
+       Ingredients: Bell Peppers, Broccoli, Soy Sauce, Garlic
+      </div>
+      <div class="reviews">
+       User Reviews:
+       <a href="#">
+        Read reviews
+       </a>
+      </div>
+      <button class="save-btn">
+       Save Recipe
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="no-results" style="display: none; text-align: center; color: #888; margin-top: 20px;">
+    <p>
+     No recipes match your search or filter criteria.
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

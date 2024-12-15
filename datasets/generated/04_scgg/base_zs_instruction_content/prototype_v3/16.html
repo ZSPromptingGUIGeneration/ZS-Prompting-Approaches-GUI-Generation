@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shopping App - Discounts
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #ff6347;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        .breadcrumb {
+            padding: 10px 15px;
+            background-color: #fff;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .breadcrumb a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 15px;
+        }
+        .sidebar {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            color: #555;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            position: relative;
+        }
+        .discount-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff6347;
+            color: white;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .product-details {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-title {
+            font-size: 20px;
+            margin: 0 0 10px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .product-description {
+            font-size: 14px;
+            color: #555;
+            margin: 0 0 10px;
+        }
+        .product-availability {
+            color: green;
+            font-size: 14px;
+            margin: 0 0 10px;
+        }
+        .product-price {
+            color: #ff6347;
+            font-size: 18px;
+            margin: 0 0 10px;
+            font-weight: bold;
+        }
+        .product-discount {
+            color: #888;
+            font-size: 14px;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        .buy-button {
+            background-color: #ff6347;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+            width: 48%;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        .buy-button:hover {
+            background-color: #e5533d;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .wishlist-button {
+            background-color: #555;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 8px;
+            text-align: center;
+            width: 48%;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        .wishlist-button:hover {
+            background-color: #444;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .product-rating {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .product-rating span {
+            margin-left: 5px;
+            font-size: 14px;
+            color: #888;
+        }
+        .star {
+            color: gold;
+            font-size: 18px;
+        }
+        .filter-sort {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+        .filter-sort label {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        .filter-sort select {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .pagination button {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            background-color: white;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .pagination button:hover {
+            background-color: #f0f0f0;
+        }
+        .pagination .active {
+            background-color: #ff6347;
+            color: white;
+            border-color: #ff6347;
+        }
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Discounted Products
+   </h1>
+   <input placeholder="Search for products..." type="text"/>
+  </div>
+  <div class="breadcrumb">
+   <a href="#">
+    Home
+   </a>
+   &gt;
+   <a href="#">
+    Discounts
+   </a>
+  </div>
+  <div class="container">
+   <div class="sidebar">
+    <h2>
+     Categories
+    </h2>
+    <ul>
+     <li>
+      <a href="#">
+       All Categories
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Electronics
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Fashion
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Home
+      </a>
+     </li>
+    </ul>
+    <h2>
+     Price Range
+    </h2>
+    <input max="1000" min="0" step="10" type="range"/>
+   </div>
+   <div class="main">
+    <div class="filter-sort">
+     <div>
+      <label for="sort">
+       Sort By:
+      </label>
+      <select id="sort">
+       <option value="relevance">
+        Relevance
+       </option>
+       <option value="price-low-high">
+        Price: Low to High
+       </option>
+       <option value="price-high-low">
+        Price: High to Low
+       </option>
+       <option value="discount">
+        Discount Percentage
+       </option>
+       <option value="rating">
+        Customer Ratings
+       </option>
+       <option value="newest">
+        Newest Arrivals
+       </option>
+      </select>
+     </div>
+     <div>
+      <label for="filter">
+       Filter By:
+      </label>
+      <select id="filter">
+       <option value="all">
+        All Categories
+       </option>
+       <option value="electronics">
+        Electronics
+       </option>
+       <option value="fashion">
+        Fashion
+       </option>
+       <option value="home">
+        Home
+       </option>
+      </select>
+     </div>
+    </div>
+    <div class="product-card">
+     <div class="product-image">
+      <img alt="Smartphone with a sleek design" class="product-image" id="product1-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c767f099-8b33-4479-bc2c-ef0e6a0ad481.png"/>
+      <div class="discount-tag">
+       50% OFF
+      </div>
+     </div>
+     <div class="product-details">
+      <div>
+       <h2 class="product-title">
+        Smartphone XYZ
+       </h2>
+       <p class="product-description">
+        Experience the latest technology with Smartphone XYZ.
+        <a href="#">
+         Read more
+        </a>
+       </p>
+       <div class="product-rating">
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span>
+         4.0 out of 5 stars
+        </span>
+       </div>
+       <p class="product-availability">
+        In Stock
+       </p>
+       <p class="product-price">
+        $299.99
+        <span class="product-discount">
+         $599.99
+        </span>
+       </p>
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+       <button class="buy-button">
+        Buy Now
+       </button>
+       <button class="wishlist-button">
+        Add to Wishlist
+       </button>
+      </div>
+     </div>
+    </div>
+    <div class="product-card">
+     <div class="product-image">
+      <img alt="Stylish leather jacket" class="product-image" id="product2-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0e01777c-90af-4708-82a5-968915ef1d0c.png"/>
+      <div class="discount-tag">
+       40% OFF
+      </div>
+     </div>
+     <div class="product-details">
+      <div>
+       <h2 class="product-title">
+        Leather Jacket
+       </h2>
+       <p class="product-description">
+        Stay warm and stylish with this premium leather jacket.
+        <a href="#">
+         Read more
+        </a>
+       </p>
+       <div class="product-rating">
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span>
+         4.0 out of 5 stars
+        </span>
+       </div>
+       <p class="product-availability">
+        In Stock
+       </p>
+       <p class="product-price">
+        $89.99
+        <span class="product-discount">
+         $149.99
+        </span>
+       </p>
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+       <button class="buy-button">
+        Buy Now
+       </button>
+       <button class="wishlist-button">
+        Add to Wishlist
+       </button>
+      </div>
+     </div>
+    </div>
+    <div class="product-card">
+     <div class="product-image">
+      <img alt="Modern table lamp" class="product-image" id="product3-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2ceb8a0f-e9fa-4724-b595-ff5456fe726d.png"/>
+      <div class="discount-tag">
+       50% OFF
+      </div>
+     </div>
+     <div class="product-details">
+      <div>
+       <h2 class="product-title">
+        Modern Table Lamp
+       </h2>
+       <p class="product-description">
+        Brighten up your space with this modern table lamp.
+        <a href="#">
+         Read more
+        </a>
+       </p>
+       <div class="product-rating">
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span>
+         4.0 out of 5 stars
+        </span>
+       </div>
+       <p class="product-availability">
+        In Stock
+       </p>
+       <p class="product-price">
+        $29.99
+        <span class="product-discount">
+         $59.99
+        </span>
+       </p>
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+       <button class="buy-button">
+        Buy Now
+       </button>
+       <button class="wishlist-button">
+        Add to Wishlist
+       </button>
+      </div>
+     </div>
+    </div>
+    <div class="product-card">
+     <div class="product-image">
+      <img alt="Wireless headphones" class="product-image" id="product4-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/49de4847-38f6-4185-8ca2-e63b60b7e224.png"/>
+      <div class="discount-tag">
+       30% OFF
+      </div>
+     </div>
+     <div class="product-details">
+      <div>
+       <h2 class="product-title">
+        Wireless Headphones
+       </h2>
+       <p class="product-description">
+        Enjoy high-quality sound with these wireless headphones.
+        <a href="#">
+         Read more
+        </a>
+       </p>
+       <div class="product-rating">
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span class="star">
+         ★
+        </span>
+        <span>
+         4.5 out of 5 stars
+        </span>
+       </div>
+       <p class="product-availability">
+        In Stock
+       </p>
+       <p class="product-price">
+        $69.99
+        <span class="product-discount">
+         $99.99
+        </span>
+       </p>
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+       <button class="buy-button">
+        Buy Now
+       </button>
+       <button class="wishlist-button">
+        Add to Wishlist
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="pagination">
+   <button>
+    First
+   </button>
+   <button>
+    Previous
+   </button>
+   <button class="active">
+    1
+   </button>
+   <button>
+    2
+   </button>
+   <button>
+    3
+   </button>
+   <button>
+    Next
+   </button>
+   <button>
+    Last
+   </button>
+  </div>
+ </body>
+</html>
+

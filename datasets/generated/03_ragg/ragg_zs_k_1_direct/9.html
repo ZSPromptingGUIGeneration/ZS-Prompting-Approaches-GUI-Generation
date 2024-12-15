@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f44336;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            position: relative;
+        }
+        .header .back {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+        .header .search {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+        .container {
+            padding: 15px;
+        }
+        .meal-plan {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .meal-plan img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .ingredients, .directions {
+            margin-bottom: 20px;
+        }
+        .ingredients .item, .directions .step {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .ingredients .item img, .directions .step img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .footer div {
+            text-align: center;
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00bcd4;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .floating-button img {
+            width: 24px;
+            height: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <span class="back">
+    ←
+   </span>
+   Alfredo Sauce
+   <span class="search">
+    🔍
+   </span>
+  </div>
+  <div class="container">
+   <div class="meal-plan">
+    <img alt="calendar icon" src=""/>
+    <span>
+     Schedule a meal plan
+    </span>
+   </div>
+   <div class="ingredients">
+    <h2>
+     Ingredients required
+    </h2>
+    <div class="item">
+     <img alt="plus icon" src=""/>
+     <span>
+      375g dried fettuccine
+     </span>
+    </div>
+    <div class="item">
+     <img alt="plus icon" src=""/>
+     <span>
+      25g butter
+     </span>
+    </div>
+    <div class="item">
+     <img alt="plus icon" src=""/>
+     <span>
+      4 garlic cloves, crushed
+     </span>
+    </div>
+    <div class="item">
+     <img alt="plus icon" src=""/>
+     <span>
+      300ml thickened cream
+     </span>
+    </div>
+    <div class="item">
+     <img alt="plus icon" src=""/>
+     <span>
+      2 tablespoons chopped flat-leaf parsley leaves
+     </span>
+    </div>
+    <div class="item">
+     <img alt="plus icon" src=""/>
+     <span>
+      1/3 cup finely grated parmesan cheese or vegetarian hard cheese
+     </span>
+    </div>
+   </div>
+   <div class="directions">
+    <h2>
+     Directions for preparation
+    </h2>
+    <div class="step">
+     <img alt="step icon" src=""/>
+     <span>
+      Step 1: Cook the fettuccine according to the package instructions.
+     </span>
+    </div>
+    <div class="step">
+     <img alt="step icon" src=""/>
+     <span>
+      Step 2: Melt the butter in a pan over medium heat, then add the garlic and cook until fragrant.
+     </span>
+    </div>
+    <div class="step">
+     <img alt="step icon" src=""/>
+     <span>
+      Step 3: Add the cream and bring to a simmer, then stir in the parmesan cheese.
+     </span>
+    </div>
+    <div class="step">
+     <img alt="step icon" src=""/>
+     <span>
+      Step 4: Add the cooked fettuccine to the sauce and toss to coat.
+     </span>
+    </div>
+    <div class="step">
+     <img alt="step icon" src=""/>
+     <span>
+      Step 5: Garnish with parsley and serve immediately.
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <div>
+    <img alt="share icon" src=""/>
+    <span>
+     Share
+    </span>
+   </div>
+   <div>
+    <img alt="smartwatch icon" src=""/>
+    <span>
+     Smart Watch
+    </span>
+   </div>
+  </div>
+  <div class="floating-button">
+   <img alt="fork icon" src=""/>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .phrase {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .phrase:last-child {
+            border-bottom: none;
+        }
+        .english {
+            font-weight: bold;
+        }
+        .italian {
+            font-style: italic;
+            text-align: right;
+        }
+        .listen {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .listen:hover {
+            background-color: #0056b3;
+        }
+        .listen:focus, .listen:active {
+            outline: none;
+            background-color: #004494;
+        }
+        .listen[aria-label]::before {
+            content: attr(aria-label);
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+        }
+        .category-filters, .translation-history, .user-feedback, .language-toggle {
+            margin: 20px 0;
+        }
+        .category-filters select, .language-toggle select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .translation-history ul, .user-feedback ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .translation-history li, .user-feedback li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .translation-history li:last-child, .user-feedback li:last-child {
+            border-bottom: none;
+        }
+        .user-feedback button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .user-feedback button:hover {
+            background-color: #218838;
+        }
+        .user-feedback button:focus, .user-feedback button:active {
+            outline: none;
+            background-color: #1e7e34;
+        }
+        @media (max-width: 600px) {
+            .phrase {
+                grid-template-columns: 1fr auto;
+                grid-template-rows: auto auto;
+            }
+            .italian {
+                text-align: left;
+                margin-top: 5px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Translation App
+   </h1>
+   <div class="search-bar">
+    <input placeholder="Search phrases..." type="text"/>
+   </div>
+   <div class="category-filters">
+    <select>
+     <option value="">
+      All Categories
+     </option>
+     <option value="greetings">
+      Greetings
+     </option>
+     <option value="common">
+      Common Phrases
+     </option>
+     <option value="travel">
+      Travel
+     </option>
+    </select>
+   </div>
+   <div class="phrase">
+    <div class="english">
+     Hello
+    </div>
+    <div class="italian">
+     Ciao
+    </div>
+    <button aria-label="Play Hello in Italian" class="listen">
+     Listen
+    </button>
+   </div>
+   <div class="phrase">
+    <div class="english">
+     Goodbye
+    </div>
+    <div class="italian">
+     Arrivederci
+    </div>
+    <button aria-label="Play Goodbye in Italian" class="listen">
+     Listen
+    </button>
+   </div>
+   <div class="phrase">
+    <div class="english">
+     Please
+    </div>
+    <div class="italian">
+     Per favore
+    </div>
+    <button aria-label="Play Please in Italian" class="listen">
+     Listen
+    </button>
+   </div>
+   <div class="phrase">
+    <div class="english">
+     Thank you
+    </div>
+    <div class="italian">
+     Grazie
+    </div>
+    <button aria-label="Play Thank you in Italian" class="listen">
+     Listen
+    </button>
+   </div>
+   <div class="translation-history">
+    <h2>
+     Translation History
+    </h2>
+    <ul>
+     <li>
+      Hello - Ciao
+     </li>
+     <li>
+      Goodbye - Arrivederci
+     </li>
+     <li>
+      Please - Per favore
+     </li>
+    </ul>
+   </div>
+   <div class="user-feedback">
+    <h2>
+     Provide Feedback
+    </h2>
+    <ul>
+     <li>
+      Hello - Ciao
+      <button>
+       Rate
+      </button>
+     </li>
+     <li>
+      Goodbye - Arrivederci
+      <button>
+       Rate
+      </button>
+     </li>
+    </ul>
+   </div>
+   <div class="language-toggle">
+    <select>
+     <option value="italian">
+      Italian
+     </option>
+     <option value="spanish">
+      Spanish
+     </option>
+     <option value="french">
+      French
+     </option>
+    </select>
+   </div>
+  </div>
+ </body>
+</html>

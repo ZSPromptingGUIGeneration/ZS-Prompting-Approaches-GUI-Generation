@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .top-nav {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-nav .location-time {
+            font-size: 1.2em;
+        }
+        .top-nav .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .top-nav .icons img {
+            width: 24px;
+            height: 24px;
+        }
+        .tab-bar {
+            background-color: #0056b3;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .tab-bar img {
+            width: 24px;
+            height: 24px;
+        }
+        .main-weather {
+            text-align: center;
+            padding: 20px;
+            background-image: url('map-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .main-weather .temperature {
+            font-size: 3em;
+            margin: 10px 0;
+        }
+        .main-weather .condition {
+            font-size: 1.2em;
+        }
+        .additional-details {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: white;
+        }
+        .additional-details .detail {
+            text-align: center;
+        }
+        .forecast {
+            padding: 20px;
+            background-color: white;
+        }
+        .forecast .day {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .forecast .day:last-child {
+            border-bottom: none;
+        }
+        .forecast .day img {
+            width: 24px;
+            height: 24px;
+        }
+        .ad-banner {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        .bottom-nav {
+            background-color: #007BFF;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .bottom-nav img {
+            width: 24px;
+            height: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-nav">
+   <div class="location-time">
+    San Francisco, 4:15 PM
+   </div>
+   <div class="icons">
+    <img alt="Menu" src=""/>
+    <img alt="Share" src=""/>
+    <img alt="Refresh" src=""/>
+   </div>
+  </div>
+  <div class="tab-bar">
+   <img alt="Home" src=""/>
+   <img alt="Radar" src=""/>
+   <img alt="Settings" src=""/>
+  </div>
+  <div class="main-weather">
+   <div class="temperature">
+    55°F
+   </div>
+   <div class="condition">
+    Light Rain
+   </div>
+   <img alt="Weather Icon" src=""/>
+  </div>
+  <div class="additional-details">
+   <div class="detail">
+    <div>
+     Feels Like
+    </div>
+    <div>
+     50°F
+    </div>
+   </div>
+   <div class="detail">
+    <div>
+     Humidity
+    </div>
+    <div>
+     80%
+    </div>
+   </div>
+   <div class="detail">
+    <div>
+     Wind
+    </div>
+    <div>
+     10 mph
+    </div>
+   </div>
+   <div class="detail">
+    <div>
+     Sunrise
+    </div>
+    <div>
+     7:22 AM
+    </div>
+   </div>
+   <div class="detail">
+    <div>
+     Sunset
+    </div>
+    <div>
+     4:55 PM
+    </div>
+   </div>
+   <div class="detail">
+    <div>
+     Last Update
+    </div>
+    <div>
+     0 minutes ago
+    </div>
+   </div>
+  </div>
+  <div class="forecast">
+   <div class="day">
+    <div>
+     Monday
+    </div>
+    <img alt="Sunny" src=""/>
+    <div>
+     High: 60°F Low: 45°F
+    </div>
+   </div>
+   <div class="day">
+    <div>
+     Tuesday
+    </div>
+    <img alt="Cloudy" src=""/>
+    <div>
+     High: 58°F Low: 47°F
+    </div>
+   </div>
+   <div class="day">
+    <div>
+     Wednesday
+    </div>
+    <img alt="Rain" src=""/>
+    <div>
+     High: 55°F Low: 46°F
+    </div>
+   </div>
+   <div class="day">
+    <div>
+     Thursday
+    </div>
+    <img alt="Sunny" src=""/>
+    <div>
+     High: 57°F Low: 44°F
+    </div>
+   </div>
+   <div class="day">
+    <div>
+     Friday
+    </div>
+    <img alt="Cloudy" src=""/>
+    <div>
+     High: 56°F Low: 45°F
+    </div>
+   </div>
+  </div>
+  <div class="ad-banner">
+   <img alt="Advertisement" src=""/>
+  </div>
+  <div class="bottom-nav">
+   <img alt="Home" src=""/>
+   <img alt="Radar" src=""/>
+   <img alt="Settings" src=""/>
+  </div>
+ </body>
+</html>

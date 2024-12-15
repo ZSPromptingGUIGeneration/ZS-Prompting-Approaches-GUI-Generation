@@ -1,0 +1,134 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f8ff;
+        }
+
+        header {
+            background-color: #00aaff;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 70%;
+            margin-right: 10px;
+        }
+
+        .search-box button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #00aaff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .forecast {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .day {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px;
+            width: calc(100% / 2 - 10px);
+            text-align: center;
+        }
+
+        .day h3 {
+            margin: 10px 0;
+        }
+
+        .day p {
+            margin: 5px 0;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Weather App
+   </h1>
+  </header>
+  <div class="container">
+   <div class="search-box">
+    <input id="city" placeholder="Enter city name" type="text"/>
+    <button onclick="getWeather()">
+     Get Weather
+    </button>
+   </div>
+   <div class="forecast" id="forecast">
+    <!-- Weather forecast for 7 days will be displayed here -->
+   </div>
+  </div>
+  <script>
+   function getWeather() {
+            const city = document.getElementById('city').value;
+            // For the sake of this example, let's assume we have static data
+            const weatherData = [
+                { day: 'Monday', temp: '22°C', description: 'Sunny' },
+                { day: 'Tuesday', temp: '24°C', description: 'Partly Cloudy' },
+                { day: 'Wednesday', temp: '20°C', description: 'Rainy' },
+                { day: 'Thursday', temp: '21°C', description: 'Cloudy' },
+                { day: 'Friday', temp: '23°C', description: 'Sunny' },
+                { day: 'Saturday', temp: '25°C', description: 'Sunny' },
+                { day: 'Sunday', temp: '22°C', description: 'Partly Cloudy' }
+            ];
+
+            const forecastContainer = document.getElementById('forecast');
+            forecastContainer.innerHTML = '';
+
+            weatherData.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'day';
+                dayElement.innerHTML = `
+                    <h3>${day.day}</h3>
+                    <p>${day.temp}</p>
+                    <p>${day.description}</p>
+                `;
+                forecastContainer.appendChild(dayElement);
+            });
+        }
+  </script>
+ </body>
+</html>
+<!-- End -->

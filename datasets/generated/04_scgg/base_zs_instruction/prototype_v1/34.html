@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Child Development Journal
+  </title>
+  <style>
+   body {
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .header {
+            background-color: #FFB6C1;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        .nav-bar {
+            background-color: #FF69B4;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav-bar a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .child-info {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .child-info h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+        .child-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .child-info img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .development-stage {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .development-stage h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .development-stage p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .development-stage .notes {
+            margin: 10px 0;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .timeline {
+            padding: 20px;
+            background: #FFB6C1;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .timeline h2 {
+            margin: 0 0 20px;
+            font-size: 22px;
+            color: white;
+        }
+        .timeline .stage {
+            padding: 10px 0;
+            border-bottom: 1px solid white;
+        }
+        .timeline .stage:last-child {
+            border-bottom: none;
+        }
+        .timeline .stage h3 {
+            margin: 0 0 5px;
+            font-size: 20px;
+            color: white;
+        }
+        .timeline .stage p {
+            margin: 0;
+            font-size: 16px;
+            color: white;
+        }
+        .editable {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Child Development Journal
+   </h1>
+  </div>
+  <div class="nav-bar">
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    Milestones
+   </a>
+   <a href="#">
+    Health Records
+   </a>
+   <a href="#">
+    Notes
+   </a>
+  </div>
+  <div class="container">
+   <div class="child-info">
+    <img alt="Child Photo" src=""/>
+    <h2>
+     John Doe
+    </h2>
+    <p>
+     Age: 2 years
+    </p>
+    <p>
+     Birthday: January 1, 2021
+    </p>
+    <p>
+     Height: 34 inches
+    </p>
+    <p>
+     Weight: 28 lbs
+    </p>
+    <button class="editable">
+     Edit
+    </button>
+   </div>
+   <div class="timeline">
+    <h2>
+     Development Timeline
+    </h2>
+    <div class="stage">
+     <h3>
+      Stage: Walking
+     </h3>
+     <p>
+      Date: March 15, 2023
+     </p>
+     <ul class="notes">
+      <li>
+       John took his first steps today!
+      </li>
+      <li>
+       He was very excited and proud of himself.
+      </li>
+     </ul>
+    </div>
+    <div class="stage">
+     <h3>
+      Stage: First Words
+     </h3>
+     <p>
+      Date: February 10, 2023
+     </p>
+     <ul class="notes">
+      <li>
+       John said "Mama" for the first time.
+      </li>
+      <li>
+       It was a very emotional moment for everyone.
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

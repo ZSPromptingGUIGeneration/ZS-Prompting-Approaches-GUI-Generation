@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dream Tracker
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #00796b;
+        }
+        .input-group {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+        .voice-record {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .record-btn {
+            background-color: #ff5e57;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .record-btn::after {
+            content: 'Record';
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #333;
+        }
+        .record-btn:active {
+            background-color: #ff3b30;
+        }
+        .save-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .save-btn:active {
+            background-color: #004d40;
+        }
+        .save-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.5);
+        }
+        .header {
+            background-color: #00796b;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .rating label {
+            margin-right: 10px;
+        }
+        .rating select {
+            width: auto;
+        }
+        .emotion-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .emotion-group label {
+            margin-right: 10px;
+        }
+        .emotion-group select {
+            width: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <img alt="Dream Icon" src=""/>
+    <h1>
+     Dream Tracker
+    </h1>
+   </div>
+   <div class="input-group">
+    <label for="dream-date">
+     Date of Dream
+    </label>
+    <input id="dream-date" type="date"/>
+   </div>
+   <div class="input-group">
+    <label for="dream-time">
+     Time of Dream
+    </label>
+    <input id="dream-time" type="time"/>
+   </div>
+   <div class="input-group">
+    <label for="dream-text">
+     Describe your dream
+    </label>
+    <textarea id="dream-text" placeholder="Write your dream here... Describe the setting, people involved, and events."></textarea>
+   </div>
+   <div class="input-group">
+    <label for="dream-tags">
+     Tags or Categories
+    </label>
+    <input id="dream-tags" placeholder="e.g., nightmare, lucid dream, recurring dream" type="text"/>
+   </div>
+   <div class="input-group emotion-group">
+    <label for="dream-emotion">
+     Emotion
+    </label>
+    <select id="dream-emotion">
+     <option value="">
+      Select Emotion
+     </option>
+     <option value="happy">
+      Happy
+     </option>
+     <option value="sad">
+      Sad
+     </option>
+     <option value="scared">
+      Scared
+     </option>
+     <option value="confused">
+      Confused
+     </option>
+     <option value="excited">
+      Excited
+     </option>
+    </select>
+   </div>
+   <div class="input-group rating">
+    <label for="dream-rating">
+     Dream Rating
+    </label>
+    <select id="dream-rating">
+     <option value="1">
+      1 - Low
+     </option>
+     <option value="2">
+      2
+     </option>
+     <option value="3">
+      3 - Medium
+     </option>
+     <option value="4">
+      4
+     </option>
+     <option value="5">
+      5 - High
+     </option>
+    </select>
+   </div>
+   <div class="voice-record">
+    <button class="record-btn">
+     🎤
+    </button>
+   </div>
+   <button class="save-btn">
+    Save Dream
+   </button>
+  </div>
+ </body>
+</html>

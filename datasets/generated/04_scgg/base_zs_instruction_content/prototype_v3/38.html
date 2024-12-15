@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Submit a Picture
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group .terms-label {
+            display: inline;
+            margin-left: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .submit-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: #999;
+        }
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: green;
+        }
+        .image-preview {
+            display: none;
+            margin-top: 10px;
+        }
+        .image-preview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .char-counter {
+            font-size: 12px;
+            color: #666;
+            text-align: right;
+        }
+        .privacy-notice {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            display: none;
+            background-color: #f8d7da;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h2>
+    Submit a Picture
+   </h2>
+   <form>
+    <div class="form-group">
+     <label for="email">
+      Email:
+     </label>
+     <input aria-describedby="email-error" aria-required="true" id="email" name="email" placeholder="john.doe@example.com" required="" type="email"/>
+     <div class="error-message" id="email-error">
+      Please enter a valid email address.
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="title">
+      Title:
+      <span class="tooltip">
+       <i class="fas fa-info-circle">
+       </i>
+       <span class="tooltiptext">
+        Max 50 characters
+       </span>
+      </span>
+     </label>
+     <input aria-describedby="title-counter" aria-required="true" id="title" maxlength="50" name="title" placeholder="Sunset at the Beach" required="" type="text"/>
+     <div class="char-counter" id="title-counter">
+      50 characters remaining
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="description">
+      Description:
+      <span class="tooltip">
+       <i class="fas fa-info-circle">
+       </i>
+       <span class="tooltiptext">
+        Max 200 characters
+       </span>
+      </span>
+     </label>
+     <textarea aria-describedby="description-counter" id="description" maxlength="200" name="description" placeholder="A beautiful sunset over the ocean with waves crashing on the shore." rows="4"></textarea>
+     <div class="char-counter" id="description-counter">
+      200 characters remaining
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="location">
+      Location:
+     </label>
+     <input aria-describedby="location-error" aria-required="true" id="location" name="location" placeholder="Miami Beach, FL" required="" type="text"/>
+     <div class="error-message" id="location-error">
+      Location is required.
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="image">
+      Upload Image:
+     </label>
+     <input accept="image/*" aria-describedby="image-error" aria-required="true" id="image" name="image" required="" type="file"/>
+     <div class="error-message" id="image-error">
+      Please upload an image.
+     </div>
+     <div class="image-preview" id="image-preview">
+      <img alt="Image Preview" id="uploaded-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/deabc4a0-e0e6-43bc-b2fa-7818a9128073.png"/>
+     </div>
+    </div>
+    <div class="form-group">
+     <input aria-describedby="terms-error" aria-required="true" id="terms" name="terms" required="" type="checkbox"/>
+     <label class="terms-label" for="terms">
+      I agree to the terms of submission
+     </label>
+     <div class="error-message" id="terms-error">
+      You must agree to the terms of submission.
+     </div>
+    </div>
+    <button class="submit-btn" type="submit">
+     Submit
+    </button>
+   </form>
+   <div class="confirmation-message" id="confirmation-message">
+    Thank you for your submission!
+   </div>
+   <div class="privacy-notice">
+    By submitting, you agree to our
+    <a href="#">
+     privacy policy
+    </a>
+    .
+   </div>
+  </div>
+ </body>
+</html>

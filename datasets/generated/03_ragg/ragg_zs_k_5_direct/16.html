@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ff4757;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+        .header img {
+            height: 40px;
+            vertical-align: middle;
+        }
+        .header .menu, .header .cart, .header .search {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .header .menu {
+            left: 10px;
+        }
+        .header .cart, .header .search {
+            right: 10px;
+        }
+        .header .cart {
+            right: 50px;
+        }
+        .banner {
+            text-align: center;
+            padding: 20px;
+            background: url('banner.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .banner p {
+            margin: 5px 0;
+        }
+        .banner .cta {
+            background-color: #ff4757;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .product-section {
+            padding: 20px;
+        }
+        .product-section h2 {
+            margin: 0 0 10px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .product-card {
+            flex: 1 1 calc(50% - 10px);
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .product-card .price {
+            color: #ff4757;
+            font-size: 18px;
+        }
+        .product-card .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 10px;
+        }
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .filters button {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Menu" class="menu" src=""/>
+   <span>
+    Shopping App
+   </span>
+   <img alt="Search" class="search" src=""/>
+   <img alt="Cart" class="cart" src=""/>
+  </div>
+  <div class="banner">
+   <h1>
+    Valentine's Day Gifts
+   </h1>
+   <p>
+    65% off for every sweetheart
+   </p>
+   <button class="cta">
+    Show Your Love
+   </button>
+  </div>
+  <div class="filters">
+   <button>
+    Filter
+   </button>
+   <button>
+    Sort
+   </button>
+  </div>
+  <div class="product-section">
+   <h2>
+    Discounted Products
+   </h2>
+   <div class="product-grid">
+    <div class="product-card">
+     <img alt="Product 1" src=""/>
+     <h3>
+      Light Blue &amp; Beige Asher Rug
+     </h3>
+     <div class="price">
+      $59.99
+      <span class="original-price">
+       $207.96
+      </span>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Product 2" src=""/>
+     <h3>
+      Cream Inspired India Rug
+     </h3>
+     <div class="price">
+      $139.99
+      <span class="original-price">
+       $350.00
+      </span>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Product 3" src=""/>
+     <h3>
+      Top with Pleats
+     </h3>
+     <div class="price">
+      $9.99
+      <span class="original-price">
+       $12.99
+      </span>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Product 4" src=""/>
+     <h3>
+      Hang-Qiao Snow Boots
+     </h3>
+     <div class="price">
+      RM 49.49
+      <span class="original-price">
+       RM 211.04
+      </span>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

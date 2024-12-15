@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tableware Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .header img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .search-bar {
+            display: flex;
+            margin: 20px 0;
+            position: relative;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+        .search-bar button.search-btn {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-left: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .search-bar button.search-btn:hover {
+            background-color: #0056b3;
+        }
+        .search-bar input::placeholder {
+            color: #aaa;
+        }
+        .search-bar .clear-btn {
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #aaa;
+            font-size: 20px;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .options button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .options button.scan-barcode {
+            background-color: #ffc107;
+        }
+        .options button i {
+            margin-right: 5px;
+            font-size: 25px;
+        }
+        .options button:hover {
+            background-color: #218838;
+        }
+        .options button.scan-barcode:hover {
+            background-color: #e0a800;
+        }
+        .filters {
+            margin: 20px 0;
+        }
+        .filters h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .filters .filter-group {
+            margin-bottom: 10px;
+        }
+        .filters select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .categories {
+            margin: 20px 0;
+        }
+        .categories h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .categories ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .categories ul li {
+            flex: 1 1 45%;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .categories ul li:hover {
+            background-color: #f1f1f1;
+        }
+        .categories ul li img {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+        .user-account {
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0;
+        }
+        .user-account button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .user-account button:hover {
+            background-color: #0056b3;
+        }
+        .wishlist {
+            margin: 20px 0;
+        }
+        .wishlist h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .wishlist ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .wishlist ul li {
+            padding: 10px;
+            background-color: white;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .wishlist ul li img {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+        .wishlist ul li:hover {
+            background-color: #f1f1f1;
+        }
+        .wishlist .remove-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: red;
+            font-size: 16px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .pagination button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .pagination button:hover {
+            background-color: #0056b3;
+        }
+        .breadcrumb {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #007bff;
+            margin-right: 5px;
+        }
+        .breadcrumb span {
+            margin-right: 5px;
+        }
+        .reviews {
+            margin: 20px 0;
+        }
+        .reviews h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .reviews ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .reviews ul li {
+            padding: 10px;
+            background-color: white;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .reviews ul li .rating {
+            color: #ffc107;
+        }
+        .product-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .product-modal .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .product-modal .close-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #aaa;
+        }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <img alt="Logo" id="logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/671da411-3baf-4dfa-b3d0-bd5a1bec4767.png"/>
+    <h1>
+     Tableware Shop
+    </h1>
+   </div>
+   <div class="breadcrumb">
+    <a href="#">
+     Home
+    </a>
+    <span>
+     &gt;
+    </span>
+    <a href="#">
+     Category
+    </a>
+    <span>
+     &gt;
+    </span>
+    <span>
+     Current Page
+    </span>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for plates, bowls, cutlery..." type="text"/>
+    <button class="search-btn">
+     Search
+    </button>
+    <button class="clear-btn">
+     ×
+    </button>
+   </div>
+   <div class="options">
+    <button class="scan-barcode">
+     <i class="fas fa-barcode">
+     </i>
+     Scan Barcode
+    </button>
+    <button>
+     <i class="fas fa-th-large">
+     </i>
+     Categories
+    </button>
+   </div>
+   <div class="filters">
+    <h2>
+     Filter Options
+    </h2>
+    <div class="filter-group">
+     <select>
+      <option value="">
+       Sort by
+      </option>
+      <option value="relevance">
+       Relevance
+      </option>
+      <option value="price-asc">
+       Price: Low to High
+      </option>
+      <option value="price-desc">
+       Price: High to Low
+      </option>
+      <option value="popularity">
+       Popularity
+      </option>
+      <option value="newest">
+       Newest Arrivals
+      </option>
+     </select>
+    </div>
+    <div class="filter-group">
+     <select>
+      <option value="">
+       Price Range
+      </option>
+      <option value="under-25">
+       $0 - $25
+      </option>
+      <option value="25-50">
+       $25 - $50
+      </option>
+      <option value="50-100">
+       $50 - $100
+      </option>
+      <option value="over-100">
+       $100+
+      </option>
+     </select>
+    </div>
+    <div class="filter-group">
+     <select>
+      <option value="">
+       Brand
+      </option>
+      <option value="brand1">
+       Brand 1
+      </option>
+      <option value="brand2">
+       Brand 2
+      </option>
+      <option value="brand3">
+       Brand 3
+      </option>
+     </select>
+    </div>
+    <div class="filter-group">
+     <select>
+      <option value="">
+       Material Type
+      </option>
+      <option value="ceramic">
+       Ceramic
+      </option>
+      <option value="glass">
+       Glass
+      </option>
+      <option value="plastic">
+       Plastic
+      </option>
+      <option value="metal">
+       Metal
+      </option>
+     </select>
+    </div>
+    <div class="filter-group">
+     <select>
+      <option value="">
+       Color
+      </option>
+      <option value="white">
+       White
+      </option>
+      <option value="black">
+       Black
+      </option>
+      <option value="red">
+       Red
+      </option>
+      <option value="blue">
+       Blue
+      </option>
+      <option value="green">
+       Green
+      </option>
+     </select>
+    </div>
+    <div class="filter-group">
+     <select>
+      <option value="">
+       Customer Ratings
+      </option>
+      <option value="4up">
+       4 stars &amp; up
+      </option>
+      <option value="3up">
+       3 stars &amp; up
+      </option>
+      <option value="2up">
+       2 stars &amp; up
+      </option>
+      <option value="1up">
+       1 star &amp; up
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="categories">
+    <h2>
+     Categories
+    </h2>
+    <ul>
+     <li>
+      <img alt="Plates" id="plates-icon" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c5865e06-9749-4f93-a76c-a83b91fc698d.png"/>
+      Plates
+     </li>
+     <li>
+      <img alt="Bowls" id="bowls-icon" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/961cf836-a09c-4b9c-b941-1da7914e15f7.png"/>
+      Bowls
+     </li>
+     <li>
+      <img alt="Cutlery" id="cutlery-icon" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/711f9b18-fa75-4e59-98df-9f646adbcadc.png"/>
+      Cutlery
+     </li>
+     <li>
+      <img alt="Glasses" id="glasses-icon" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fac69702-5250-4f47-91f6-da14d3044b16.png"/>
+      Glasses
+     </li>
+     <li>
+      <img alt="Cups &amp; Mugs" id="cups-icon" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/74c3a7a0-d66e-4234-9ffe-6c27ffda4c1e.png"/>
+      Cups &amp; Mugs
+     </li>
+     <li>
+      <img alt="Serving Dishes" id="serving-icon" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ad1e17d9-d570-45a4-951d-d823e8fd8f21.png"/>
+      Serving Dishes
+     </li>
+    </ul>
+   </div>
+   <div class="wishlist">
+    <h2>
+     Wishlist
+    </h2>
+    <ul>
+     <li>
+      <img alt="White Ceramic Plate" id="item1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/aab20abe-3d35-41a6-9b8e-8002376e8ff4.png"/>
+      White Ceramic Plate
+      <button class="remove-btn">
+       ×
+      </button>
+     </li>
+     <li>
+      <img alt="Glass Bowl" id="item2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fc4bb2a8-35d3-4417-a752-d4d412053f7c.png"/>
+      Glass Bowl
+      <button class="remove-btn">
+       ×
+      </button>
+     </li>
+     <li>
+      <img alt="Stainless Steel Cutlery Set" id="item3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/63ab1582-f54b-4d13-b5f2-bb4ae1c39470.png"/>
+      Stainless Steel Cutlery Set
+      <button class="remove-btn">
+       ×
+      </button>
+     </li>
+    </ul>
+    <div class="pagination">
+     <button>
+      Previous
+     </button>
+     <button>
+      Next
+     </button>
+    </div>
+   </div>
+   <div class="reviews">
+    <h2>
+     User Reviews
+    </h2>
+    <ul>
+     <li>
+      <div class="rating">
+       ★★★★☆
+      </div>
+      <p>
+       Great product, highly recommend!
+      </p>
+     </li>
+     <li>
+      <div class="rating">
+       ★★★☆☆
+      </div>
+      <p>
+       Good quality, but a bit expensive.
+      </p>
+     </li>
+     <li>
+      <div class="rating">
+       ★★★★★
+      </div>
+      <p>
+       Excellent! Will buy again.
+      </p>
+     </li>
+    </ul>
+   </div>
+   <div class="user-account">
+    <button>
+     Login / Register
+    </button>
+   </div>
+  </div>
+  <div class="product-modal">
+   <div class="modal-content">
+    <button class="close-btn">
+     ×
+    </button>
+    <h2>
+     Product Details
+    </h2>
+    <p>
+     More information about the product will be displayed here.
+    </p>
+   </div>
+  </div>
+ </body>
+</html>
+

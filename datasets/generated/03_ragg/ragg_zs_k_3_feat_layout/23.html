@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports Team App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        .header .menu-icon, .header .refresh-icon {
+            cursor: pointer;
+        }
+        .team-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .team-info .team-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .team-info .team-division {
+            font-size: 14px;
+            color: #666;
+        }
+        .team-info .team-logo img {
+            height: 50px;
+        }
+        .nav-options {
+            display: flex;
+            justify-content: space-around;
+            background-color: #eee;
+            padding: 10px 0;
+        }
+        .nav-options button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        .statistics, .recent-games, .upcoming-games, .standings {
+            background-color: #fff;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .statistics h2, .recent-games h2, .upcoming-games h2, .standings h2 {
+            margin-top: 0;
+        }
+        .statistics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .statistics-grid div {
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .games-list {
+            list-style: none;
+            padding: 0;
+        }
+        .games-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .games-list li:last-child {
+            border-bottom: none;
+        }
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .standings-table th, .standings-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .standings-table th {
+            background-color: #f4f4f4;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .bottom-nav button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu-icon">
+    ☰
+   </div>
+   <div class="screen-title">
+    TEAM
+   </div>
+   <div class="refresh-icon">
+    ↻
+   </div>
+  </div>
+  <div class="team-info">
+   <div>
+    <div class="team-name">
+     HOUSTON ROCKETS
+    </div>
+    <div class="team-division">
+     Southwest Division
+    </div>
+   </div>
+   <div class="team-logo">
+    <img alt="Team Logo" src=""/>
+   </div>
+  </div>
+  <div class="nav-options">
+   <button>
+    STATISTICS
+   </button>
+   <button>
+    ROSTER
+   </button>
+   <button>
+    DEPTH CHART
+   </button>
+   <button>
+    INJURIES
+   </button>
+  </div>
+  <div class="statistics">
+   <h2>
+    Statistics
+   </h2>
+   <div class="statistics-grid">
+    <div>
+     PTS: 110.5
+    </div>
+    <div>
+     FG%: 45.3
+    </div>
+    <div>
+     3PT%: 35.7
+    </div>
+    <div>
+     FT%: 78.2
+    </div>
+    <div>
+     REB: 44.1
+    </div>
+    <div>
+     AST: 22.3
+    </div>
+    <div>
+     STL: 7.5
+    </div>
+    <div>
+     BLK: 5.1
+    </div>
+   </div>
+  </div>
+  <div class="recent-games">
+   <h2>
+    Last 3 Games
+   </h2>
+   <ul class="games-list">
+    <li>
+     <div>
+      Opponent 1
+     </div>
+     <div>
+      Date: 01/01/2023
+     </div>
+     <div>
+      Score: 100-98
+     </div>
+    </li>
+    <li>
+     <div>
+      Opponent 2
+     </div>
+     <div>
+      Date: 01/03/2023
+     </div>
+     <div>
+      Score: 105-102
+     </div>
+    </li>
+    <li>
+     <div>
+      Opponent 3
+     </div>
+     <div>
+      Date: 01/05/2023
+     </div>
+     <div>
+      Score: 98-101
+     </div>
+    </li>
+   </ul>
+  </div>
+  <div class="upcoming-games">
+   <h2>
+    Next Match
+   </h2>
+   <ul class="games-list">
+    <li>
+     <div>
+      Opponent
+     </div>
+     <div>
+      Date: 01/10/2023
+     </div>
+     <div>
+      Time: 7:00 PM
+     </div>
+    </li>
+   </ul>
+  </div>
+  <div class="standings">
+   <h2>
+    Division Standings
+   </h2>
+   <table class="standings-table">
+    <thead>
+     <tr>
+      <th>
+       Team
+      </th>
+      <th>
+       W
+      </th>
+      <th>
+       L
+      </th>
+      <th>
+       GB
+      </th>
+      <th>
+       PCT
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       Team 1
+      </td>
+      <td>
+       10
+      </td>
+      <td>
+       5
+      </td>
+      <td>
+       0
+      </td>
+      <td>
+       .667
+      </td>
+     </tr>
+     <tr>
+      <td>
+       Team 2
+      </td>
+      <td>
+       9
+      </td>
+      <td>
+       6
+      </td>
+      <td>
+       1
+      </td>
+      <td>
+       .600
+      </td>
+     </tr>
+     <tr>
+      <td>
+       Team 3
+      </td>
+      <td>
+       8
+      </td>
+      <td>
+       7
+      </td>
+      <td>
+       2
+      </td>
+      <td>
+       .533
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="bottom-nav">
+   <button>
+    Home
+   </button>
+   <button>
+    Standings
+   </button>
+   <button>
+    More
+   </button>
+  </div>
+ </body>
+</html>

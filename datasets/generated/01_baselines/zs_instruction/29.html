@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Clothing App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+        .category {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0.5rem;
+            flex: 1 1 calc(50% - 1rem);
+            text-align: center;
+            padding: 1rem;
+            transition: transform 0.2s;
+        }
+        .category:hover {
+            transform: scale(1.05);
+        }
+        .category img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .category h2 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Clothing App
+   </h1>
+  </div>
+  <div class="container">
+   <div class="category">
+    <img alt="New Arrivals" src=""/>
+    <h2>
+     New Arrivals
+    </h2>
+   </div>
+   <div class="category">
+    <img alt="Women" src=""/>
+    <h2>
+     Women
+    </h2>
+   </div>
+   <div class="category">
+    <img alt="Men" src=""/>
+    <h2>
+     Men
+    </h2>
+   </div>
+   <div class="category">
+    <img alt="Home" src=""/>
+    <h2>
+     Home
+    </h2>
+   </div>
+   <!-- Add more categories as needed -->
+  </div>
+ </body>
+</html>

@@ -1,0 +1,136 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2196F3;
+            color: white;
+            width: 100%;
+        }
+        .header .location {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .header .current-weather {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .header .current-weather img {
+            width: 40px;
+            height: 40px;
+        }
+        .header .current-weather .temperature {
+            font-size: 32px;
+            margin-left: 10px;
+        }
+        .hourly-forecast {
+            display: flex;
+            overflow-x: scroll;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .hourly-forecast .forecast-card {
+            flex: 0 0 auto;
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            margin-right: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .hourly-forecast .forecast-card img {
+            width: 30px;
+            height: 30px;
+            margin: 10px 0;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        .footer .nav-item {
+            text-align: center;
+        }
+        .footer .nav-item img {
+            width: 24px;
+            height: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="location">
+    Current Location
+   </div>
+   <div class="current-weather">
+    <img alt="Current Weather Icon" src=""/>
+    <div class="temperature">
+     25°C
+    </div>
+   </div>
+  </div>
+  <div class="hourly-forecast">
+   <div class="forecast-card">
+    <div class="time">
+     12:00 PM
+    </div>
+    <img alt="Weather Icon" src=""/>
+    <div class="temperature">
+     23°C
+    </div>
+   </div>
+   <div class="forecast-card">
+    <div class="time">
+     1:00 PM
+    </div>
+    <img alt="Weather Icon" src=""/>
+    <div class="temperature">
+     24°C
+    </div>
+   </div>
+   <!-- Repeat forecast cards as needed -->
+  </div>
+  <div class="footer">
+   <div class="nav-item">
+    <img alt="Home" src=""/>
+    <div>
+     Home
+    </div>
+   </div>
+   <div class="nav-item">
+    <img alt="Settings" src=""/>
+    <div>
+     Settings
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->

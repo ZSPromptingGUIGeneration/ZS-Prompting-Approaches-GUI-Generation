@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   User Profile
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+        .header img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .header .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 3px solid white;
+        }
+        .header .user-info {
+            margin-top: 60px;
+        }
+        .header .user-info h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header .user-info p {
+            margin: 5px 0;
+        }
+        .header .follow-btn {
+            background-color: #4267b2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content .section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .content .section h2 {
+            margin-top: 0;
+        }
+        .content .section p {
+            margin: 10px 0;
+        }
+        .content .section .interests {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content .section .interests .interest {
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+        }
+        .navbar a {
+            text-align: center;
+            color: #888;
+            text-decoration: none;
+        }
+        .navbar a.active {
+            color: #4267b2;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Header Background" src=""/>
+   <img alt="Profile Picture" class="profile-pic" src=""/>
+   <div class="user-info">
+    <h1>
+     Jon Brown
+    </h1>
+    <p>
+     Nurse
+    </p>
+    <p>
+     Hospitales Star Medica
+    </p>
+    <p>
+     Cardiology, Devices: CRT &amp; ICD, Heart Failure
+    </p>
+    <button class="follow-btn">
+     Follow
+    </button>
+   </div>
+  </div>
+  <div class="content">
+   <div class="section">
+    <h2>
+     Profile
+    </h2>
+    <p>
+     Nickname: Jon Brown
+    </p>
+    <p>
+     Birth: 1989-02-13
+    </p>
+   </div>
+   <div class="section">
+    <h2>
+     Interests
+    </h2>
+    <div class="interests">
+     <div class="interest">
+      Sports
+     </div>
+     <div class="interest">
+      Movie
+     </div>
+     <div class="interest">
+      Books
+     </div>
+     <div class="interest">
+      Shopping
+     </div>
+     <div class="interest">
+      Music
+     </div>
+     <div class="interest">
+      Friendship
+     </div>
+     <div class="interest">
+      Fashion / Beauty
+     </div>
+     <div class="interest">
+      Social drink
+     </div>
+     <div class="interest">
+      Management / Business
+     </div>
+     <div class="interest">
+      Others
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Posts
+    </h2>
+    <p>
+     Valentine's Day Gift: Bought a ring!
+    </p>
+   </div>
+  </div>
+  <div class="navbar">
+   <a class="active" href="#">
+    Home
+   </a>
+   <a href="#">
+    Explore
+   </a>
+   <a href="#">
+    Messages
+   </a>
+   <a href="#">
+    Me
+   </a>
+  </div>
+ </body>
+</html>

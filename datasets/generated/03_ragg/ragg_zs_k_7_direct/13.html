@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Online Encyclopedia
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #3367d6;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .article {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .article img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .article h2 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .article p {
+            color: #666;
+        }
+        .article .date {
+            color: #999;
+            font-size: 12px;
+        }
+        .article .download {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .article .download button {
+            background-color: #3367d6;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .grid-item img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .grid-item h3 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .grid-item p {
+            color: #666;
+            font-size: 14px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Online Encyclopedia" src=""/>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search articles..." type="text"/>
+  </div>
+  <div class="article">
+   <img alt="Butterfly" src=""/>
+   <div class="download">
+    <span>
+     Junonia iphita.
+    </span>
+    <button>
+     Download
+    </button>
+   </div>
+  </div>
+  <div class="article">
+   <h2>
+    Featured article
+   </h2>
+   <span class="date">
+    Apr 10, 2017
+   </span>
+   <img alt="Noel Park" src=""/>
+   <h2>
+    Noel Park
+   </h2>
+   <p>
+    Planned community in north London
+   </p>
+   <p>
+    Noel Park in north London is a planned community developed in the late 19th and early 20th centuries consisting of 2,200 model dwellings, designed by Rowland Plumbe. It was developed in open countryside to the north...
+   </p>
+  </div>
+  <div class="article">
+   <h2>
+    Featured article
+   </h2>
+   <span class="date">
+    Mar 12, 2017
+   </span>
+   <img alt="Eta Carinae" src=""/>
+   <h2>
+    Eta Carinae
+   </h2>
+   <p>
+    Stellar system in the constellation Carina
+   </p>
+   <p>
+    Eta Carinae (abbreviated to η Carinae or η Car), formerly known as Eta Argus, is a stellar system containing at least two stars with a combined luminosity greater than five million times that of the Sun, located around 7,500 light-y...
+   </p>
+  </div>
+  <div class="grid">
+   <div class="grid-item">
+    <img alt="Facebook" src=""/>
+    <h3>
+     Facebook will now be prioritizing "authentic"...
+    </h3>
+   </div>
+   <div class="grid-item">
+    <img alt="Watch" src=""/>
+    <h3>
+     Check out these leaked images of the upcoming...
+    </h3>
+   </div>
+   <div class="grid-item">
+    <img alt="Facebook Slideshow" src=""/>
+    <h3>
+     Facebook's Slideshow feature may be coming to...
+    </h3>
+   </div>
+   <div class="grid-item">
+    <img alt="Flappy Bird" src=""/>
+    <h3>
+     Flappy Bird's developer launched a new game: Nin...
+    </h3>
+   </div>
+   <div class="grid-item">
+    <img alt="WhatsApp" src=""/>
+    <h3>
+     Features hidden in WhatsApp
+    </h3>
+   </div>
+   <div class="grid-item">
+    <img alt="WhatsApp Recall" src=""/>
+    <h3>
+     WhatsApp may allow users to recall accidentally sent...
+    </h3>
+   </div>
+   <div class="grid-item">
+    <img alt="Netflix" src=""/>
+    <h3>
+     Netflix's new feature...
+    </h3>
+   </div>
+   <div class="grid-item">
+    <img alt="Google Chrome" src=""/>
+    <h3>
+     Google Chrome's latest update...
+    </h3>
+   </div>
+  </div>
+ </body>
+</html>

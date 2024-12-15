@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bag Info Page
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+        .header .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons img {
+            margin-left: 10px;
+            width: 24px;
+            height: 24px;
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-info .name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-info .price {
+            font-size: 18px;
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
+        .product-info .availability {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        .product-info .description {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .product-info .ask-question {
+            color: #e67e22;
+            font-size: 14px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .add-to-cart {
+            background-color: #e67e22;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .suggestions {
+            padding: 15px;
+        }
+        .suggestions .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .suggestions .items {
+            display: flex;
+            overflow-x: scroll;
+        }
+        .suggestions .item {
+            flex: 0 0 auto;
+            width: 150px;
+            margin-right: 10px;
+        }
+        .suggestions .item img {
+            width: 100%;
+            height: auto;
+        }
+        .suggestions .item .name {
+            font-size: 14px;
+            color: #333;
+            margin-top: 5px;
+        }
+        .suggestions .item .price {
+            font-size: 14px;
+            color: #e67e22;
+        }
+        .review-link {
+            color: #1abc9c;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            margin: 20px 15px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="title">
+    Black Leather Shopper
+   </div>
+   <div class="icons">
+    <img alt="Back" src=""/>
+    <img alt="Favorite" src=""/>
+    <img alt="Search" src=""/>
+    <img alt="Cart" src=""/>
+   </div>
+  </div>
+  <img alt="Black Leather Shopper" class="product-image" src=""/>
+  <div class="product-info">
+   <div class="name">
+    Black Leather Shopper, Leather Tote, Shoulder Bag
+   </div>
+   <div class="price">
+    $138.37
+   </div>
+   <div class="availability">
+    Only 1 Available
+   </div>
+   <div class="description">
+    <p>
+     Two interior slip pockets. Imported.
+    </p>
+    <p>
+     Measurements:
+    </p>
+    <ul>
+     <li>
+      Bottom Width: 18 in
+     </li>
+     <li>
+      Depth: 7 in
+     </li>
+     <li>
+      Height: 13 in
+     </li>
+     <li>
+      Strap Length: 24 in
+     </li>
+     <li>
+      Strap Drop: 10 in
+     </li>
+     <li>
+      Weight: 1 lb 7 oz
+     </li>
+    </ul>
+    <p>
+     This product may have a manufacturer's warranty. Please visit the manufacturer's website or contact us at warranty@support.zappos.com for full manufacturer warranty details.
+    </p>
+   </div>
+   <a class="ask-question" href="#">
+    Ask a Question
+   </a>
+  </div>
+  <a class="add-to-cart" href="#">
+   Add to Cart
+  </a>
+  <a class="review-link" href="#">
+   WRITE A REVIEW
+  </a>
+  <div class="suggestions">
+   <div class="title">
+    You Might Also Like
+   </div>
+   <div class="items">
+    <div class="item">
+     <img alt="Amuse Society Runaway Tote Bag" src=""/>
+     <div class="name">
+      Amuse Society Runaway Tote Bag
+     </div>
+     <div class="price">
+      $98.00
+     </div>
+    </div>
+    <div class="item">
+     <img alt="San Diego Hat Company BSB1551 Quilted PU Interior" src=""/>
+     <div class="name">
+      San Diego Hat Company BSB1551 Quilted PU Interior
+     </div>
+     <div class="price">
+      $98.00
+     </div>
+    </div>
+    <div class="item">
+     <img alt="LAUREN Ralph Lauren Carslisle Afton Shoulder" src=""/>
+     <div class="name">
+      LAUREN Ralph Lauren Carslisle Afton Shoulder
+     </div>
+     <div class="price">
+      $98.00
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

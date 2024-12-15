@@ -1,0 +1,132 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Public Transport App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+        header button {
+            background-color: white;
+            color: #007BFF;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        main {
+            padding: 20px;
+        }
+        .route-info {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .route-info h2 {
+            margin-top: 0;
+        }
+        .steps {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .steps ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .steps li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <button onclick="window.history.back();">
+    Back
+   </button>
+   <h1>
+    Public Transport App
+   </h1>
+  </header>
+  <main>
+   <div class="route-info">
+    <h2>
+     Route Information
+    </h2>
+    <p>
+     <strong>
+      From:
+     </strong>
+     Place A
+    </p>
+    <p>
+     <strong>
+      To:
+     </strong>
+     Place B
+    </p>
+   </div>
+   <div class="steps">
+    <h2>
+     Steps
+    </h2>
+    <ul>
+     <li>
+      Step 1: Take bus number 10 from Place A.
+     </li>
+     <li>
+      Step 2: Get off at Station X.
+     </li>
+     <li>
+      Step 3: Take metro line 2 towards Place B.
+     </li>
+     <li>
+      Step 4: Get off at Place B.
+     </li>
+    </ul>
+   </div>
+  </main>
+  <footer>
+   <p>
+    Additional Information or Actions
+   </p>
+  </footer>
+ </body>
+</html>
+<!-- End -->

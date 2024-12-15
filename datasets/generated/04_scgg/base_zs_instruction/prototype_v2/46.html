@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Registration Page
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group input[type="radio"], .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group .radio-group, .form-group .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group .radio-group label, .form-group .checkbox-group label {
+            flex: 1;
+            text-align: center;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        .form-group input:invalid {
+            border-color: red;
+        }
+        .form-group input:valid {
+            border-color: green;
+        }
+        .tooltip {
+            display: inline-block;
+            position: relative;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .form-group.error input, .form-group.error select {
+            border-color: red;
+        }
+        .form-group.error .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .form-group.success input, .form-group.success select {
+            border-color: green;
+        }
+        .form-group.success .success-message {
+            color: green;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .form-group label {
+                margin-bottom: 5px;
+            }
+            .submit-btn {
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h2>
+    Register
+   </h2>
+   <form>
+    <div class="form-group">
+     <label for="first-name">
+      First Name
+     </label>
+     <input id="first-name" name="first-name" required="" type="text"/>
+     <span class="tooltip">
+      <span class="tooltiptext">
+       Enter your first name
+      </span>
+     </span>
+    </div>
+    <div class="form-group">
+     <label for="last-name">
+      Last Name
+     </label>
+     <input id="last-name" name="last-name" required="" type="text"/>
+     <span class="tooltip">
+      <span class="tooltiptext">
+       Enter your last name
+      </span>
+     </span>
+    </div>
+    <div class="form-group">
+     <label for="email">
+      Email
+     </label>
+     <input id="email" name="email" required="" type="email"/>
+     <span class="tooltip">
+      <span class="tooltiptext">
+       Enter a valid email address
+      </span>
+     </span>
+    </div>
+    <div class="form-group">
+     <label for="password">
+      Password
+     </label>
+     <input id="password" name="password" required="" type="password"/>
+     <span class="tooltip">
+      <span class="tooltiptext">
+       Create a strong password
+      </span>
+     </span>
+    </div>
+    <div class="form-group">
+     <label for="confirm-password">
+      Confirm Password
+     </label>
+     <input id="confirm-password" name="confirm-password" required="" type="password"/>
+     <span class="tooltip">
+      <span class="tooltiptext">
+       Re-enter your password
+      </span>
+     </span>
+    </div>
+    <div class="form-group">
+     <label for="phone">
+      Phone Number
+     </label>
+     <input id="phone" name="phone" type="tel"/>
+     <span class="tooltip">
+      <span class="tooltiptext">
+       Enter your phone number
+      </span>
+     </span>
+    </div>
+    <div class="form-group">
+     <label for="gender">
+      Gender
+     </label>
+     <select id="gender" name="gender">
+      <option value="male">
+       Male
+      </option>
+      <option value="female">
+       Female
+      </option>
+      <option value="other">
+       Other
+      </option>
+     </select>
+     <span class="tooltip">
+      <span class="tooltiptext">
+       Select your gender
+      </span>
+     </span>
+    </div>
+    <div class="form-group">
+     <label for="country">
+      Country/Region
+     </label>
+     <input id="country" list="country-list" name="country" type="text"/>
+     <datalist id="country-list">
+      <option value="United States">
+      </option>
+      <option value="Canada">
+      </option>
+      <option value="United Kingdom">
+       <!-- Add more options as needed -->
+      </option>
+     </datalist>
+     <span class="tooltip">
+      <span class="tooltiptext">
+       Enter your country/region
+      </span>
+     </span>
+    </div>
+    <fieldset class="form-group">
+     <legend>
+      Subscription Options
+     </legend>
+     <div class="radio-group">
+      <label>
+       <input name="subscription" required="" type="radio" value="basic"/>
+       Basic
+      </label>
+      <label>
+       <input name="subscription" type="radio" value="premium"/>
+       Premium
+      </label>
+      <label>
+       <input name="subscription" type="radio" value="vip"/>
+       VIP
+      </label>
+     </div>
+    </fieldset>
+    <fieldset class="form-group">
+     <legend>
+      Subscribe to Newsletter
+     </legend>
+     <div class="checkbox-group">
+      <label>
+       <input name="newsletter" type="checkbox" value="yes"/>
+       Yes
+      </label>
+     </div>
+    </fieldset>
+    <div class="form-group">
+     <label for="terms">
+      <input id="terms" name="terms" required="" type="checkbox"/>
+      I agree to the
+      <a href="#">
+       terms and conditions
+      </a>
+      and
+      <a href="#">
+       privacy policy
+      </a>
+     </label>
+    </div>
+    <button class="submit-btn" type="submit">
+     Register
+    </button>
+   </form>
+  </div>
+ </body>
+</html>

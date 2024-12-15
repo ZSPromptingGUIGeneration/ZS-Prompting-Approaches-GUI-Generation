@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Study App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #6200ea;
+            color: white;
+            padding: 15px 20px;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .main-content .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-bar .search-icon {
+            margin-left: -30px;
+            cursor: pointer;
+        }
+
+        .filter-button {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .session-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .session-item {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .session-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .session-details {
+            flex: 1;
+        }
+
+        .session-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .session-info {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .session-topic {
+            font-style: italic;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background-color: #ccc;
+            border-radius: 2px;
+            margin-top: 5px;
+        }
+
+        .progress-bar .progress {
+            height: 100%;
+            background-color: #6200ea;
+            border-radius: 2px;
+        }
+
+        .join-button {
+            background-color: #03dac6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .footer {
+            background-color: #6200ea;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .quick-links,
+        .footer .social-media {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer .social-media a {
+            font-size: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu-icon">
+    ☰
+   </div>
+   <div class="logo">
+    StudyApp
+   </div>
+  </div>
+  <div class="main-content">
+   <div class="title">
+    Latest Study Sessions
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search sessions..." type="text"/>
+    <div class="search-icon">
+     🔍
+    </div>
+   </div>
+   <button class="filter-button">
+    Filter
+   </button>
+   <ul class="session-list">
+    <li class="session-item">
+     <img alt="Thumbnail" src=""/>
+     <div class="session-details">
+      <div class="session-title">
+       Math Study Group
+      </div>
+      <div class="session-info">
+       <div class="session-date-time">
+        📅 Oct 10, 2023 - 🕒 10:00 AM
+       </div>
+       <div class="session-topic">
+        Algebra
+       </div>
+       <div class="session-duration">
+        ⏳ 2 hours
+       </div>
+      </div>
+      <div class="progress-bar">
+       <div class="progress" style="width: 50%;">
+       </div>
+      </div>
+      <button class="join-button">
+       Join Now
+      </button>
+     </div>
+    </li>
+    <!-- Repeat session-item as needed -->
+   </ul>
+  </div>
+  <div class="footer">
+   <div class="quick-links">
+    <a href="#">
+     Help
+    </a>
+    <a href="#">
+     Contact Us
+    </a>
+    <a href="#">
+     Terms of Service
+    </a>
+   </div>
+   <div class="social-media">
+    <a href="#">
+     
+    </a>
+    <a href="#">
+     
+    </a>
+    <a href="#">
+     
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tableware Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .search-bar {
+            display: flex;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-left: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .options button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .options button:hover {
+            background-color: #218838;
+        }
+        .categories {
+            margin: 20px 0;
+        }
+        .categories h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .categories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .categories ul li {
+            padding: 10px;
+            background-color: white;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .categories ul li:hover {
+            background-color: #f1f1f1;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Tableware Shop
+    </h1>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for an item..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <div class="options">
+    <button>
+     Scan Barcode
+    </button>
+    <button>
+     Categories
+    </button>
+   </div>
+   <div class="categories">
+    <h2>
+     Categories
+    </h2>
+    <ul>
+     <li>
+      Plates
+     </li>
+     <li>
+      Bowls
+     </li>
+     <li>
+      Cutlery
+     </li>
+     <li>
+      Glasses
+     </li>
+     <li>
+      Cups &amp; Mugs
+     </li>
+     <li>
+      Serving Dishes
+     </li>
+    </ul>
+   </div>
+  </div>
+ </body>
+</html>

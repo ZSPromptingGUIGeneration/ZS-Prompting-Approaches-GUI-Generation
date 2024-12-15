@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Public Transportation App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        .header img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .route-info {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .route-info h2 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .route-card {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .route-card .route-type {
+            font-size: 14px;
+            color: #666;
+        }
+        .route-card .route-time {
+            font-size: 18px;
+            color: #333;
+            margin-top: 5px;
+        }
+        .route-card .route-icons {
+            display: flex;
+            margin-top: 5px;
+        }
+        .route-card .route-icons span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .route-card .route-icons .orange { background-color: orange; }
+        .route-card .route-icons .gray { background-color: gray; }
+        .route-card .route-icons .green { background-color: green; }
+        .realtime-results {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .realtime-results h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .realtime-results p {
+            font-size: 12px;
+            color: #666;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Back" src=""/>
+   <h1>
+    Route Results
+   </h1>
+  </div>
+  <div class="route-info">
+   <h2>
+    Surrey Quays to Southfields
+   </h2>
+  </div>
+  <div class="route-card">
+   <div class="route-type">
+    Fast Route
+   </div>
+   <div class="route-time">
+    47 min
+   </div>
+   <div class="route-icons">
+    <span class="orange">
+    </span>
+    <span class="gray">
+    </span>
+    <span class="green">
+    </span>
+   </div>
+  </div>
+  <div class="route-card">
+   <div class="route-type">
+    Simple Route
+   </div>
+   <div class="route-time">
+    54 min
+   </div>
+   <div class="route-icons">
+    <span class="orange">
+    </span>
+    <span class="green">
+    </span>
+   </div>
+  </div>
+  <div class="realtime-results">
+   <h3>
+    Realtime Results
+   </h3>
+   <div class="route-card">
+    <div class="route-type">
+     10:53 to 11:38
+    </div>
+    <div class="route-time">
+     45 min
+    </div>
+    <div class="route-icons">
+     <span class="orange">
+     </span>
+     <span class="gray">
+     </span>
+     <span class="green">
+     </span>
+    </div>
+   </div>
+   <div class="route-card">
+    <div class="route-type">
+     10:56 to 11:41
+    </div>
+    <div class="route-time">
+     45 min
+    </div>
+    <div class="route-icons">
+     <span class="orange">
+     </span>
+     <span class="gray">
+     </span>
+     <span class="green">
+     </span>
+    </div>
+   </div>
+   <div class="route-card">
+    <div class="route-type">
+     10:56 to 11:43
+    </div>
+    <div class="route-time">
+     47 min
+    </div>
+    <div class="route-icons">
+     <span class="orange">
+     </span>
+     <span class="green">
+     </span>
+    </div>
+   </div>
+   <div class="route-card">
+    <div class="route-type">
+     11:00 to 11:46
+    </div>
+    <div class="route-time">
+     46 min
+    </div>
+    <div class="route-icons">
+     <span class="orange">
+     </span>
+     <span class="gray">
+     </span>
+     <span class="green">
+     </span>
+    </div>
+   </div>
+   <p>
+    Realtime results are scheduled routes that allow for and avoid known disruptions.
+   </p>
+  </div>
+ </body>
+</html>

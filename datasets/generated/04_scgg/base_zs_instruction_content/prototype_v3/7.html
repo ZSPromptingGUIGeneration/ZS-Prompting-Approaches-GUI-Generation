@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Schedule App
+  </title>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .filter-sort {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .match {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .team-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .team-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .match-info {
+            flex-grow: 1;
+            margin: 0 15px;
+        }
+
+        .team-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .match-details {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .match-status {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .match-status[data-status="upcoming"] {
+            background-color: #28a745;
+        }
+
+        .match-status[data-status="ongoing"] {
+            background-color: #ffc107;
+        }
+
+        .match-status[data-status="completed"] {
+            background-color: #dc3545;
+        }
+
+        .team-record {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .match-highlights {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .countdown {
+            font-size: 14px;
+            color: #007bff;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .hover-highlight:hover {
+            background-color: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .match {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .team-logo {
+                margin-bottom: 10px;
+            }
+        }
+
+        .filter-options {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-options select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: #0056b3;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="filter-sort">
+    <input class="search-bar" placeholder="Search matches by team, date, or location" type="text"/>
+    <div class="filter-options">
+     <label for="sort-options">
+      Sort by:
+     </label>
+     <select id="sort-options">
+      <option value="date">
+       Date
+      </option>
+      <option value="team">
+       Team
+      </option>
+      <option value="status">
+       Status
+      </option>
+     </select>
+     <label for="filter-team">
+      Filter by Team:
+     </label>
+     <select id="filter-team">
+      <option value="all">
+       All Teams
+      </option>
+      <option value="team1">
+       Team 1
+      </option>
+      <option value="team2">
+       Team 2
+      </option>
+      <option value="team3">
+       Team 3
+      </option>
+      <option value="team4">
+       Team 4
+      </option>
+     </select>
+     <label for="filter-location">
+      Filter by Location:
+     </label>
+     <select id="filter-location">
+      <option value="all">
+       All Locations
+      </option>
+      <option value="stadium-a">
+       Stadium A
+      </option>
+      <option value="stadium-b">
+       Stadium B
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="match hover-highlight">
+    <img alt="Logo of the first team" class="team-logo" id="team1-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/9668ebc8-a423-4e69-8fcc-f100d1c8b011.png"/>
+    <div class="match-info">
+     <div class="team-name">
+      <a href="#">
+       Lions
+      </a>
+      vs.
+      <a href="#">
+       Tigers
+      </a>
+     </div>
+     <div class="team-record">
+      Lions: 10-5, Tigers: 8-7
+     </div>
+     <div class="match-details">
+      Location: Stadium A
+     </div>
+     <div class="match-details">
+      Date: 2023-10-01
+     </div>
+     <div class="match-details">
+      Time: 19:00
+     </div>
+     <div class="match-highlights">
+      Star Players:
+      <a href="#">
+       John Doe
+      </a>
+      ,
+      <a href="#">
+       Jane Smith
+      </a>
+     </div>
+     <div class="countdown">
+      Countdown: 5 days
+     </div>
+    </div>
+    <div class="match-status" data-status="upcoming">
+     <span>
+      Upcoming
+     </span>
+    </div>
+    <img alt="Logo of the second team" class="team-logo" id="team2-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/586df8ef-b160-4703-b5b5-ab411f8dead0.png"/>
+   </div>
+   <div class="match hover-highlight">
+    <img alt="Logo of the third team" class="team-logo" id="team3-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/73e087e3-1563-4e3e-a75a-29948f0ad9b8.png"/>
+    <div class="match-info">
+     <div class="team-name">
+      <a href="#">
+       Eagles
+      </a>
+      vs.
+      <a href="#">
+       Sharks
+      </a>
+     </div>
+     <div class="team-record">
+      Eagles: 12-3, Sharks: 9-6
+     </div>
+     <div class="match-details">
+      Location: Stadium B
+     </div>
+     <div class="match-details">
+      Date: 2023-10-05
+     </div>
+     <div class="match-details">
+      Time: 18:00
+     </div>
+     <div class="match-highlights">
+      Important Milestone: 100th Game
+     </div>
+     <div class="countdown">
+      Countdown: 9 days
+     </div>
+    </div>
+    <div class="match-status" data-status="ongoing">
+     <span>
+      Ongoing
+     </span>
+    </div>
+    <img alt="Logo of the fourth team" class="team-logo" id="team4-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f5914aa4-e894-44be-ab1f-6d820d011b9e.png"/>
+   </div>
+   <div class="match hover-highlight">
+    <img alt="Logo of the fifth team" class="team-logo" id="team5-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/68056acb-a429-48d6-8db1-e5b7c3c2bbec.png"/>
+    <div class="match-info">
+     <div class="team-name">
+      <a href="#">
+       Panthers
+      </a>
+      vs.
+      <a href="#">
+       Wolves
+      </a>
+     </div>
+     <div class="team-record">
+      Panthers: 11-4, Wolves: 7-8
+     </div>
+     <div class="match-details">
+      Location: Stadium A
+     </div>
+     <div class="match-details">
+      Date: 2023-10-10
+     </div>
+     <div class="match-details">
+      Time: 20:00
+     </div>
+     <div class="match-highlights">
+      Star Players:
+      <a href="#">
+       Alice Blue
+      </a>
+      ,
+      <a href="#">
+       Bob Green
+      </a>
+     </div>
+     <div class="countdown">
+      Countdown: 14 days
+     </div>
+    </div>
+    <div class="match-status" data-status="upcoming">
+     <span>
+      Upcoming
+     </span>
+    </div>
+    <img alt="Logo of the sixth team" class="team-logo" id="team6-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/579d71ea-b359-4105-a306-89aac6fc44a3.png"/>
+   </div>
+   <div class="pagination">
+    <button>
+     Previous
+    </button>
+    <button>
+     Next
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

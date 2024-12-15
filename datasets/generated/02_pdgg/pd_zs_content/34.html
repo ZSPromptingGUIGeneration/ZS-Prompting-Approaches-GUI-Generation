@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Child Development Tracker
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            padding: 16px;
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-right: 16px;
+        }
+        .profile-header .name {
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+        .profile-header .dob {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .timeline {
+            padding: 16px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .timeline .milestone {
+            padding: 16px;
+            border-bottom: 1px solid #ddd;
+        }
+        .timeline .milestone:last-child {
+            border-bottom: none;
+        }
+        .milestone .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        .milestone-title {
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        .milestone-description {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .milestone-date {
+            font-size: 0.8em;
+            color: #777;
+            text-align: right;
+        }
+        .fab {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            width: 56px;
+            height: 56px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2em;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        .entry-form {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .entry-form .form-content {
+            background-color: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+        }
+        .entry-form input, .entry-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .entry-form .media-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .entry-form .media-icons i {
+            font-size: 1.5em;
+        }
+        .entry-form .tags {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+        .entry-form .tags i {
+            margin-right: 8px;
+            font-size: 1.5em;
+        }
+        .charts {
+            padding: 16px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .chart {
+            margin-bottom: 16px;
+        }
+        .chart:last-child {
+            margin-bottom: 0;
+        }
+        .notifications {
+            padding: 16px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .notifications .icon {
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
+        .share-icon {
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0;
+        }
+        .bottom-nav i {
+            font-size: 1.5em;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .search-bar i {
+            margin-left: 8px;
+            font-size: 1.5em;
+        }
+        .settings {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            background-color: #fff;
+        }
+        .settings .option {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .settings .option:last-child {
+            border-bottom: none;
+        }
+        .sync-indicator {
+            padding: 16px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .help {
+            padding: 16px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .help .icon {
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="profile-header">
+    <img alt="Smiling child with brown hair" id="child-photo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ba4ce008-9a68-4e48-bc70-7f813047e215.png"/>
+    <div>
+     <div class="name">
+      Emma Smith
+     </div>
+     <div class="dob">
+      Born: February 14, 2021
+     </div>
+    </div>
+   </div>
+   <div class="timeline">
+    <div class="milestone">
+     <div class="milestone-title">
+      First Smile
+     </div>
+     <div class="milestone-description">
+      Emma smiled for the first time today!
+     </div>
+     <div class="milestone-date">
+      April 10, 2021
+     </div>
+    </div>
+    <div class="milestone">
+     <div class="milestone-title">
+      First Steps
+     </div>
+     <div class="milestone-description">
+      Emma took her first steps today!
+     </div>
+     <div class="milestone-date">
+      August 5, 2022
+     </div>
+    </div>
+    <div class="milestone">
+     <div class="milestone-title">
+      First Words
+     </div>
+     <div class="milestone-description">
+      Emma said her first words: "Mama" and "Dada".
+     </div>
+     <div class="milestone-date">
+      October 12, 2022
+     </div>
+    </div>
+    <div class="milestone">
+     <div class="milestone-title">
+      First Birthday
+     </div>
+     <div class="milestone-description">
+      Celebrated Emma's first birthday with family and friends.
+     </div>
+     <div class="milestone-date">
+      February 14, 2022
+     </div>
+    </div>
+   </div>
+   <div class="charts">
+    <div class="chart">
+     Height Chart
+    </div>
+    <div class="chart">
+     Weight Chart
+    </div>
+   </div>
+   <div class="notifications">
+    <i class="fas fa-bell icon">
+    </i>
+    Upcoming Milestones
+   </div>
+   <div class="sync-indicator">
+    Data is synced to the cloud.
+   </div>
+   <div class="help">
+    <i class="fas fa-question-circle icon">
+    </i>
+    Help and Support
+   </div>
+  </div>
+  <div class="fab" onclick="toggleEntryForm()">
+   +
+  </div>
+  <div class="entry-form" id="entry-form">
+   <div class="form-content">
+    <input placeholder="Title" type="text"/>
+    <textarea placeholder="Description"></textarea>
+    <div class="media-icons">
+     <i class="fas fa-camera icon">
+     </i>
+     <i class="fas fa-video icon">
+     </i>
+    </div>
+    <div class="tags">
+     <i class="fas fa-smile icon">
+     </i>
+     <i class="fas fa-running icon">
+     </i>
+    </div>
+    <button onclick="toggleEntryForm()">
+     Close
+    </button>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <i class="fas fa-home icon">
+   </i>
+   <i class="fas fa-calendar-alt icon">
+   </i>
+   <i class="fas fa-chart-bar icon">
+   </i>
+   <i class="fas fa-cog icon">
+   </i>
+  </div>
+  <script>
+   function toggleEntryForm() {
+            const form = document.getElementById('entry-form');
+            form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
+        }
+  </script>
+ </body>
+</html>

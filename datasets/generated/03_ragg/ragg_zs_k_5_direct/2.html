@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Fashion Q&amp;A
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            padding: 15px;
+        }
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .question img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .question-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .question-description {
+            font-size: 14px;
+            color: #666;
+        }
+        .answer {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .answer img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .answer-text {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .input-section {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 15px;
+        }
+        .input-section input[type="text"], .input-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input-section button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .input-section button:hover {
+            background-color: #e65b50;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   Fashion Q&amp;A
+  </header>
+  <div class="container">
+   <div class="question">
+    <img alt="Fashion Question" src=""/>
+    <div class="question-title">
+     What do you think of this outfit?
+    </div>
+    <div class="question-description">
+     I'm trying to decide if this outfit is suitable for a casual dinner. Any thoughts?
+    </div>
+   </div>
+   <div class="answer">
+    <img alt="Answer Image" src=""/>
+    <div class="answer-text">
+     I think it looks great! The colors are perfect for a casual dinner.
+    </div>
+   </div>
+   <div class="answer">
+    <img alt="Answer Image" src=""/>
+    <div class="answer-text">
+     Maybe add a jacket if it gets chilly. Otherwise, it's a nice choice!
+    </div>
+   </div>
+   <div class="input-section">
+    <input placeholder="Your Name" type="text"/>
+    <textarea placeholder="Your Answer" rows="4"></textarea>
+    <button>
+     Submit
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

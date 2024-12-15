@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Schedule App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .tab-menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff;
+            border-bottom: 1px solid #dddddd;
+        }
+        .tab-menu div {
+            padding: 10px 0;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+        }
+        .tab-menu div.active {
+            border-bottom: 3px solid #003366;
+            color: #003366;
+        }
+        .match-day {
+            background-color: #ffffff;
+            margin-top: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #dddddd;
+        }
+        .match-day h3 {
+            margin: 0;
+            color: #666666;
+            font-size: 14px;
+        }
+        .match {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .match:last-child {
+            border-bottom: none;
+        }
+        .team {
+            display: flex;
+            align-items: center;
+        }
+        .team-logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .team-name {
+            font-size: 16px;
+            color: #333333;
+        }
+        .match-time {
+            font-size: 14px;
+            color: #999999;
+        }
+        .notification {
+            font-size: 18px;
+            color: #cccccc;
+            margin-right: 10px;
+        }
+        .result {
+            font-size: 16px;
+            color: #333333;
+        }
+        .result.postp {
+            color: red;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Schedule App
+  </div>
+  <div class="tab-menu">
+   <div class="active">
+    Schedule
+   </div>
+   <div>
+    Standings
+   </div>
+   <div>
+    Top Scorers
+   </div>
+  </div>
+  <div class="match-day">
+   <h3>
+    SUNDAY, MARCH 12, 2017
+   </h3>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Team A Logo" class="team-logo" id="team-a-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/3241be14-51bd-4156-a1a7-f9dc38cccf5f.png"/>
+     <span class="team-name">
+      Team A
+     </span>
+    </div>
+    <div class="match-time">
+     09:30
+    </div>
+    <div class="result postp">
+     Postp.
+    </div>
+    <div class="team">
+     <img alt="Team B Logo" class="team-logo" id="team-b-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6237eb9e-e9de-4694-9ed9-784c6db1521b.png"/>
+     <span class="team-name">
+      Team B
+     </span>
+    </div>
+   </div>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Team C Logo" class="team-logo" id="team-c-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fad335b3-f9d7-4607-bd19-35e0f27adf3b.png"/>
+     <span class="team-name">
+      Team C
+     </span>
+    </div>
+    <div class="result">
+     2 - 1
+    </div>
+    <div class="team">
+     <img alt="Team D Logo" class="team-logo" id="team-d-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/a1757d88-ae98-439f-908e-d7cf952f27b4.png"/>
+     <span class="team-name">
+      Team D
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="match-day">
+   <h3>
+    MONDAY, MARCH 13, 2017
+   </h3>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Team E Logo" class="team-logo" id="team-e-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e9681739-0e5a-468d-9717-e43ff57badf5.png"/>
+     <span class="team-name">
+      Team E
+     </span>
+    </div>
+    <div class="match-time">
+     16:00
+    </div>
+    <div class="result postp">
+     Postp.
+    </div>
+    <div class="team">
+     <img alt="Team F Logo" class="team-logo" id="team-f-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ce1c1c37-2e64-48b2-8e16-13275e119c36.png"/>
+     <span class="team-name">
+      Team F
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="match-day">
+   <h3>
+    SATURDAY, MARCH 18, 2017
+   </h3>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Team G Logo" class="team-logo" id="team-g-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5a1a2b79-7e7a-4294-abb0-23e4046c25b2.png"/>
+     <span class="team-name">
+      Team G
+     </span>
+    </div>
+    <div class="match-time">
+     08:30
+    </div>
+    <div class="team">
+     <img alt="Team H Logo" class="team-logo" id="team-h-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ce7d1ed0-08c2-4cc7-95bc-9a1434e30d9d.png"/>
+     <span class="team-name">
+      Team H
+     </span>
+    </div>
+   </div>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Team I Logo" class="team-logo" id="team-i-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2e2a3674-338d-40ac-8078-ea99abdd5080.png"/>
+     <span class="team-name">
+      Team I
+     </span>
+    </div>
+    <div class="match-time">
+     11:00
+    </div>
+    <div class="team">
+     <img alt="Team J Logo" class="team-logo" id="team-j-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/918c8881-8558-4caf-8dba-4b53f56cd3e5.png"/>
+     <span class="team-name">
+      Team J
+     </span>
+    </div>
+   </div>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Team K Logo" class="team-logo" id="team-k-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/08fa320b-42b4-4bfb-93b1-5a69b33c68d7.png"/>
+     <span class="team-name">
+      Team K
+     </span>
+    </div>
+    <div class="match-time">
+     11:00
+    </div>
+    <div class="team">
+     <img alt="Team L Logo" class="team-logo" id="team-l-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/429d2861-3903-46d9-bc36-1680d2d71a7c.png"/>
+     <span class="team-name">
+      Team L
+     </span>
+    </div>
+   </div>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Team M Logo" class="team-logo" id="team-m-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/35026822-1fc2-464b-9c0c-8c2ece9e122a.png"/>
+     <span class="team-name">
+      Team M
+     </span>
+    </div>
+    <div class="match-time">
+     11:00
+    </div>
+    <div class="team">
+     <img alt="Team N Logo" class="team-logo" id="team-n-logo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f8094ba1-dd02-4362-863f-2389a4f1125d.png"/>
+     <span class="team-name">
+      Team N
+     </span>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+

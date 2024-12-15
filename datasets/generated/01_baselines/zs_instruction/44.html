@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restaurant Menu
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .menu-item {
+            background-color: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item h3 {
+            margin: 0;
+        }
+        .menu-item button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-item button:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            padding: 20px;
+        }
+        .history, .location, .order-type {
+            margin: 20px 0;
+        }
+        .history button, .location button, .order-type button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .history button:hover, .location button:hover, .order-type button:hover {
+            background-color: #218838;
+        }
+        .input-group {
+            margin: 10px 0;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Restaurant Menu
+   </h1>
+  </header>
+  <div class="container">
+   <div class="menu-item">
+    <h3>
+     Item 1
+    </h3>
+    <p>
+     Description of item 1
+    </p>
+    <button>
+     Save Item
+    </button>
+   </div>
+   <div class="menu-item">
+    <h3>
+     Item 2
+    </h3>
+    <p>
+     Description of item 2
+    </p>
+    <button>
+     Save Item
+    </button>
+   </div>
+   <div class="menu-item">
+    <h3>
+     Item 3
+    </h3>
+    <p>
+     Description of item 3
+    </p>
+    <button>
+     Save Item
+    </button>
+   </div>
+   <div class="history">
+    <h2>
+     Order History
+    </h2>
+    <button>
+     View History
+    </button>
+   </div>
+   <div class="location">
+    <h2>
+     Specify Location
+    </h2>
+    <div class="input-group">
+     <label for="location">
+      Location:
+     </label>
+     <input id="location" name="location" type="text"/>
+    </div>
+   </div>
+   <div class="order-type">
+    <h2>
+     Specify Order Type
+    </h2>
+    <div class="input-group">
+     <label for="order-type">
+      Order Type:
+     </label>
+     <select id="order-type" name="order-type">
+      <option value="dine-in">
+       Dine In
+      </option>
+      <option value="takeaway">
+       Takeaway
+      </option>
+      <option value="delivery">
+       Delivery
+      </option>
+     </select>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

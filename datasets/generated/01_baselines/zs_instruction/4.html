@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Alarm App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .audio-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .audio-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .audio-item:last-child {
+            border-bottom: none;
+        }
+        .audio-name {
+            font-size: 16px;
+            color: #333;
+        }
+        .audio-controls button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .audio-controls button:disabled {
+            background-color: #ccc;
+        }
+        .audio-controls button:not(:last-child) {
+            margin-right: 8px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Alarm App
+   </h1>
+   <ul class="audio-list">
+    <li class="audio-item">
+     <span class="audio-name">
+      Alarm Sound 1
+     </span>
+     <div class="audio-controls">
+      <button onclick="downloadAudio('audio1.mp3')">
+       Download
+      </button>
+      <button onclick="playAudio('audio1')">
+       Play
+      </button>
+      <audio id="audio1" src="audio1.mp3">
+      </audio>
+     </div>
+    </li>
+    <li class="audio-item">
+     <span class="audio-name">
+      Alarm Sound 2
+     </span>
+     <div class="audio-controls">
+      <button onclick="downloadAudio('audio2.mp3')">
+       Download
+      </button>
+      <button onclick="playAudio('audio2')">
+       Play
+      </button>
+      <audio id="audio2" src="audio2.mp3">
+      </audio>
+     </div>
+    </li>
+    <li class="audio-item">
+     <span class="audio-name">
+      Alarm Sound 3
+     </span>
+     <div class="audio-controls">
+      <button onclick="downloadAudio('audio3.mp3')">
+       Download
+      </button>
+      <button onclick="playAudio('audio3')">
+       Play
+      </button>
+      <audio id="audio3" src="audio3.mp3">
+      </audio>
+     </div>
+    </li>
+   </ul>
+  </div>
+  <script>
+   function downloadAudio(audioSrc) {
+            const link = document.createElement('a');
+            link.href = audioSrc;
+            link.download = audioSrc;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function playAudio(audioId) {
+            const audio = document.getElementById(audioId);
+            audio.play();
+        }
+  </script>
+ </body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App Notification Settings
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .toggle-group, .dropdown-group, .checkbox-group, .radio-group {
+            margin-bottom: 15px;
+        }
+        .toggle-group label, .checkbox-group label, .radio-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .toggle-group label span, .checkbox-group label span, .radio-group label span {
+            margin-left: 10px;
+        }
+        .toggle-group input, .checkbox-group input, .radio-group input {
+            margin-right: 10px;
+        }
+        .dropdown-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-group button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .save-button {
+            background-color: #6200ea;
+            color: #fff;
+        }
+        .reset-button {
+            background-color: #ccc;
+        }
+        .icon {
+            font-size: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="section">
+    <div class="section-title">
+     Notification Circumstances
+    </div>
+    <div class="toggle-group">
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       rain
+      </i>
+      <span>
+       Rain
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       ac_unit
+      </i>
+      <span>
+       Snow
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       flash_on
+      </i>
+      <span>
+       Thunderstorms
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       wb_sunny
+      </i>
+      <span>
+       Extreme Heat
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       ac_unit
+      </i>
+      <span>
+       Extreme Cold
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       filter_drama
+      </i>
+      <span>
+       Fog
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       waves
+      </i>
+      <span>
+       High Winds
+      </span>
+     </label>
+    </div>
+    <div class="section-title">
+     Severity Levels
+    </div>
+    <div class="toggle-group">
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Mild
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Moderate
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Severe
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Extreme
+      </span>
+     </label>
+    </div>
+    <div class="section-title">
+     Time-Based Alerts
+    </div>
+    <div class="dropdown-group">
+     <select>
+      <option value="morning">
+       Morning
+      </option>
+      <option value="afternoon">
+       Afternoon
+      </option>
+      <option value="evening">
+       Evening
+      </option>
+      <option value="night">
+       Night
+      </option>
+      <option value="weekend">
+       Weekend
+      </option>
+     </select>
+    </div>
+    <div class="section-title">
+     Location-Based Alerts
+    </div>
+    <div class="checkbox-group">
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Central Park
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Downtown
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Suburbs
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Beachside
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Mountain Area
+      </span>
+     </label>
+    </div>
+   </div>
+   <div class="section">
+    <div class="section-title">
+     Notification Methods
+    </div>
+    <div class="toggle-group">
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       notifications
+      </i>
+      <span>
+       Push Notifications
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       email
+      </i>
+      <span>
+       Email Notifications
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       sms
+      </i>
+      <span>
+       SMS Notifications
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       app
+      </i>
+      <span>
+       In-App Alerts
+      </span>
+     </label>
+     <label>
+      <input type="checkbox"/>
+      <i class="material-icons icon">
+       phone
+      </i>
+      <span>
+       Voice Call
+      </span>
+     </label>
+    </div>
+   </div>
+   <div class="section">
+    <div class="section-title">
+     Customization Options
+    </div>
+    <div class="dropdown-group">
+     <label>
+      Sound and Vibration
+     </label>
+     <select>
+      <option value="sound1">
+       Chime
+      </option>
+      <option value="sound2">
+       Bell
+      </option>
+      <option value="vibration1">
+       Short Vibration
+      </option>
+      <option value="vibration2">
+       Long Vibration
+      </option>
+     </select>
+    </div>
+    <div class="toggle-group">
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Do Not Disturb
+      </span>
+     </label>
+     <input type="time"/>
+    </div>
+    <div class="toggle-group">
+     <label>
+      <input type="checkbox"/>
+      <span>
+       Show Notification Previews
+      </span>
+     </label>
+    </div>
+   </div>
+   <div class="section">
+    <div class="section-title">
+     Accessibility Features
+    </div>
+    <div class="toggle-group">
+     <label>
+      <input type="checkbox"/>
+      <span>
+       High Contrast Mode
+      </span>
+     </label>
+    </div>
+    <div class="dropdown-group">
+     <label>
+      Text Size
+     </label>
+     <select>
+      <option value="small">
+       Small
+      </option>
+      <option value="medium">
+       Medium
+      </option>
+      <option value="large">
+       Large
+      </option>
+      <option value="extra-large">
+       Extra Large
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="button-group">
+    <button class="reset-button">
+     Reset to Default
+    </button>
+    <button class="save-button">
+     Save Changes
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

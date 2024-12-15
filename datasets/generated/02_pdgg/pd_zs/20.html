@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Article List Display
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+        .card-title {
+            font-weight: 700;
+        }
+        .card-text {
+            font-weight: 400;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-muted {
+            font-size: 0.875rem;
+        }
+        .category-filters {
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: 20px;
+        }
+        .category-filters .btn {
+            margin-right: 10px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .interactive-icons {
+            display: flex;
+            align-items: center;
+        }
+        .interactive-icons .icon {
+            margin-right: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <div class="input-group">
+     <input class="form-control" placeholder="Search articles..." type="text"/>
+     <div class="input-group-append">
+      <span class="input-group-text">
+       <i class="fas fa-search">
+       </i>
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="category-filters">
+    <button class="btn btn-outline-secondary">
+     All
+    </button>
+    <button class="btn btn-outline-secondary">
+     Technology
+    </button>
+    <button class="btn btn-outline-secondary">
+     Health
+    </button>
+    <button class="btn btn-outline-secondary">
+     Science
+    </button>
+    <button class="btn btn-outline-secondary">
+     Business
+    </button>
+   </div>
+   <div class="row">
+    <div class="col-md-4">
+     <div class="card">
+      <img alt="Article Thumbnail" class="card-img-top" src=""/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Article Headline
+       </h5>
+       <p class="card-text">
+        This is a brief description of the article content, providing a quick overview.
+       </p>
+      </div>
+      <div class="card-footer">
+       <small class="text-muted">
+        Published on: Oct 10, 2023
+       </small>
+       <div class="interactive-icons">
+        <span class="icon">
+         <i class="fas fa-bookmark">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-share-alt">
+         </i>
+        </span>
+        <span class="icon">
+         <i class="fas fa-thumbs-up">
+         </i>
+         10
+        </span>
+        <span class="icon">
+         <i class="fas fa-comments">
+         </i>
+         5
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Repeat the above block for more articles -->
+   </div>
+   <div class="text-center">
+    <button class="btn btn-primary">
+     Load More
+    </button>
+   </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>

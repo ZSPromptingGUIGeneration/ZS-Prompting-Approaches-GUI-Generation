@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Player
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .header .back-button, .header .menu-icon, .header .search-icon, .header .options-icon {
+            cursor: pointer;
+        }
+        .header .app-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .tabs div {
+            cursor: pointer;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .media-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .media-display img {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        .media-display .like-dislike {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 300px;
+            margin-top: 10px;
+        }
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .content-grid .grid-item {
+            flex: 1 1 45%;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content-grid .grid-item img {
+            width: 100%;
+        }
+        .content-grid .grid-item .info {
+            padding: 10px;
+        }
+        .content-grid .grid-item .info .title {
+            font-weight: bold;
+        }
+        .content-grid .grid-item .info .overflow-menu {
+            float: right;
+            cursor: pointer;
+        }
+        .progress-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .progress-section .track-info {
+            text-align: center;
+        }
+        .progress-section .progress-bar {
+            width: 80%;
+            margin: 10px 0;
+            position: relative;
+        }
+        .progress-section .progress-bar input[type="range"] {
+            width: 100%;
+        }
+        .progress-section .time-indicators {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .playback-controls {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        .playback-controls .control-button {
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="back-button">
+    ←
+   </div>
+   <div class="app-name">
+    Pulsar
+   </div>
+   <div class="menu-icon">
+    ≡
+   </div>
+   <div class="search-icon">
+    🔍
+   </div>
+   <div class="options-icon">
+    ⋮
+   </div>
+  </div>
+  <div class="tabs">
+   <div>
+    ALBUMS
+   </div>
+   <div>
+    ARTISTS
+   </div>
+   <div>
+    FOLDERS
+   </div>
+   <div>
+    GENRES
+   </div>
+   <div>
+    SONGS
+   </div>
+  </div>
+  <div class="media-display">
+   <img alt="Album Art" src=""/>
+   <div class="like-dislike">
+    <div class="like-button">
+     👍
+    </div>
+    <div class="dislike-button">
+     👎
+    </div>
+   </div>
+  </div>
+  <div class="content-grid">
+   <div class="grid-item">
+    <img alt="Album 1" src=""/>
+    <div class="info">
+     <div class="title">
+      Album 1
+     </div>
+     <div class="artist">
+      Artist 1
+     </div>
+     <div class="overflow-menu">
+      ⋮
+     </div>
+    </div>
+   </div>
+   <div class="grid-item">
+    <img alt="Album 2" src=""/>
+    <div class="info">
+     <div class="title">
+      Album 2
+     </div>
+     <div class="artist">
+      Artist 2
+     </div>
+     <div class="overflow-menu">
+      ⋮
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="progress-section">
+   <div class="track-info">
+    <div class="track-title">
+     Track Title
+    </div>
+    <div class="track-artist">
+     Track Artist
+    </div>
+   </div>
+   <div class="progress-bar">
+    <input max="100" min="0" type="range" value="50"/>
+   </div>
+   <div class="time-indicators">
+    <div class="elapsed-time">
+     0:07
+    </div>
+    <div class="total-duration">
+     3:09
+    </div>
+   </div>
+  </div>
+  <div class="playback-controls">
+   <div class="control-button">
+    ⏮
+   </div>
+   <div class="control-button">
+    ⏯
+   </div>
+   <div class="control-button">
+    ⏭
+   </div>
+  </div>
+ </body>
+</html>

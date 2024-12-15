@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports News
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .search-bar {
+            margin: 1rem;
+            text-align: center;
+        }
+        .search-bar input {
+            padding: 0.5rem;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .article-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .article-item {
+            background-color: #fff;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: calc(100% - 2rem);
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .article-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .article-title {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+        }
+        .article-title a:hover {
+            text-decoration: underline;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: #999;
+            text-align: center;
+        }
+        .article-snippet {
+            color: #666;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+        .read-more {
+            color: #0066cc;
+            text-decoration: none;
+            margin-top: 0.5rem;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        @media (min-width: 768px) {
+            .article-item {
+                width: calc(50% - 2rem);
+            }
+        }
+        @media (min-width: 1024px) {
+            .article-item {
+                width: calc(33.33% - 2rem);
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Sports News
+   </h1>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search articles..." type="text"/>
+  </div>
+  <ul class="article-list">
+   <li class="article-item">
+    <img alt="Article Image" src=""/>
+    <div class="article-title">
+     <a href="#">
+      Exciting Match Ends in a Draw
+     </a>
+    </div>
+    <div class="article-meta">
+     By John Doe | Published on 2023-10-01 | Football
+    </div>
+    <div class="article-snippet">
+     In an exhilarating match last night, both teams showed incredible skill and determination...
+    </div>
+    <a class="read-more" href="#">
+     Read More
+    </a>
+   </li>
+   <li class="article-item">
+    <img alt="Article Image" src=""/>
+    <div class="article-title">
+     <a href="#">
+      Top Player Transfers of the Season
+     </a>
+    </div>
+    <div class="article-meta">
+     By Jane Smith | Published on 2023-10-02 | Transfers
+    </div>
+    <div class="article-snippet">
+     This season has seen some of the most surprising and high-profile player transfers...
+    </div>
+    <a class="read-more" href="#">
+     Read More
+    </a>
+   </li>
+   <li class="article-item">
+    <img alt="Article Image" src=""/>
+    <div class="article-title">
+     <a href="#">
+      Upcoming Sports Events to Watch
+     </a>
+    </div>
+    <div class="article-meta">
+     By Mike Johnson | Published on 2023-10-03 | Events
+    </div>
+    <div class="article-snippet">
+     Get ready for an action-packed month with these upcoming sports events that are sure to thrill...
+    </div>
+    <a class="read-more" href="#">
+     Read More
+    </a>
+   </li>
+  </ul>
+ </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .input-section, .output-section {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons .english-btn {
+            background-color: black;
+            color: white;
+        }
+        .buttons .spanish-btn {
+            background-color: #2196f3;
+            color: white;
+        }
+        .result {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #3f3f3f;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer img {
+            width: 24px;
+            height: 24px;
+        }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    English Spanish Translation
+   </h1>
+  </div>
+  <div class="container">
+   <div class="input-section">
+    <textarea id="inputText" placeholder="Type the English translation" rows="4" style="width: 100%;">Hello, how are you?</textarea>
+   </div>
+   <div class="buttons">
+    <button class="english-btn">
+     English
+    </button>
+    <button class="spanish-btn">
+     Spanish
+    </button>
+   </div>
+   <div class="output-section">
+    <div class="result" id="outputText">
+     Hola, ¿cómo estás?
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <i alt="Download" class="fas fa-download" id="download-icon">
+   </i>
+   <i alt="Share" class="fas fa-share-alt" id="share-icon">
+   </i>
+   <i alt="History" class="fas fa-history" id="history-icon">
+   </i>
+   <i alt="Like" class="fas fa-thumbs-up" id="like-icon">
+   </i>
+  </div>
+  <script>
+   document.querySelector('.spanish-btn').addEventListener('click', function() {
+            const inputText = document.getElementById('inputText').value;
+            document.getElementById('outputText').innerText = translateToSpanish(inputText);
+        });
+
+        function translateToSpanish(text) {
+            // Placeholder for translation logic
+            return "Texto traducido al español";
+        }
+  </script>
+ </body>
+</html>

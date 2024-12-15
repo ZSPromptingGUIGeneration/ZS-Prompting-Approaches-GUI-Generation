@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Fashion Q&amp;A App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            padding: 20px;
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+        }
+        .username {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .bio {
+            font-style: italic;
+            color: #666;
+        }
+        .question-submission {
+            margin-bottom: 20px;
+        }
+        .question-input {
+            width: calc(100% - 40px);
+            height: 60px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .icon-button {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .question-feed {
+            margin-bottom: 20px;
+        }
+        .question-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        .question-details {
+            margin-bottom: 10px;
+        }
+        .timestamp {
+            font-size: 0.8em;
+            color: #999;
+            text-align: right;
+        }
+        .answer-input {
+            width: calc(100% - 40px);
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .interaction-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .interaction-options .icon-button {
+            margin-right: 5px;
+        }
+        .navigation-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .navigation-bar .icon-button {
+            margin: 0 10px;
+        }
+        .filter-sort {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .filter-sort select {
+            padding: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .report-button {
+            float: right;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="profile-section">
+    <img alt="Profile picture of a user" class="profile-picture" id="profile-picture-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/00fc8efe-c89c-46df-8785-0c8ea2fe3f6a.png"/>
+    <div>
+     <div class="username">
+      Fashionista123
+     </div>
+     <div class="bio">
+      Lover of all things stylish and chic. Here to share and learn!
+     </div>
+    </div>
+   </div>
+   <div class="question-submission">
+    <textarea class="question-input" placeholder="Type your question..."></textarea>
+    <div class="icon-button">
+     📷
+    </div>
+    <button class="submit-button">
+     Submit
+    </button>
+   </div>
+   <div class="filter-sort">
+    <select>
+     <option>
+      Filter by Category
+     </option>
+     <option>
+      Casual Wear
+     </option>
+     <option>
+      Formal Wear
+     </option>
+     <option>
+      Accessories
+     </option>
+    </select>
+    <select>
+     <option>
+      Sort by
+     </option>
+     <option>
+      Popular
+     </option>
+     <option>
+      Recent
+     </option>
+    </select>
+   </div>
+   <div class="question-feed">
+    <div class="question-card">
+     <div class="question-details">
+      <img alt="Profile picture of a user" class="profile-picture" id="profile-picture-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0b328df3-13d4-46ac-b874-abb354b834cb.png" style="width: 30px; height: 30px;"/>
+      <span class="username">
+       StyleGuru89
+      </span>
+      <p>
+       What shoes would go well with a navy blue blazer?
+      </p>
+     </div>
+     <div class="timestamp">
+      2 hours ago
+     </div>
+     <textarea class="answer-input" placeholder="Type your answer..."></textarea>
+     <div class="icon-button">
+      📷
+     </div>
+     <button class="submit-button">
+      Submit
+     </button>
+     <div class="interaction-options">
+      <div class="icon-button">
+       👍 15
+      </div>
+      <div class="icon-button">
+       💬
+      </div>
+      <div class="icon-button">
+       🔗
+      </div>
+     </div>
+     <div class="report-button">
+      ⚑
+     </div>
+    </div>
+    <div class="question-card">
+     <div class="question-details">
+      <img alt="Profile picture of a user" class="profile-picture" id="profile-picture-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fa39c34d-e1f0-45d7-8932-8c1ac782ed6b.png" style="width: 30px; height: 30px;"/>
+      <span class="username">
+       TrendyTina
+      </span>
+      <p>
+       Can someone suggest a good handbag to pair with a summer dress?
+      </p>
+     </div>
+     <div class="timestamp">
+      5 hours ago
+     </div>
+     <textarea class="answer-input" placeholder="Type your answer..."></textarea>
+     <div class="icon-button">
+      📷
+     </div>
+     <button class="submit-button">
+      Submit
+     </button>
+     <div class="interaction-options">
+      <div class="icon-button">
+       👍 8
+      </div>
+      <div class="icon-button">
+       💬
+      </div>
+      <div class="icon-button">
+       🔗
+      </div>
+     </div>
+     <div class="report-button">
+      ⚑
+     </div>
+    </div>
+    <div class="question-card">
+     <div class="question-details">
+      <img alt="Profile picture of a user" class="profile-picture" id="profile-picture-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/29c3d1f1-e601-483f-a1ea-283fb39214b3.png" style="width: 30px; height: 30px;"/>
+      <span class="username">
+       ChicChloe
+      </span>
+      <p>
+       Is it okay to wear white after Labor Day?
+      </p>
+     </div>
+     <div class="timestamp">
+      1 day ago
+     </div>
+     <textarea class="answer-input" placeholder="Type your answer..."></textarea>
+     <div class="icon-button">
+      📷
+     </div>
+     <button class="submit-button">
+      Submit
+     </button>
+     <div class="interaction-options">
+      <div class="icon-button">
+       👍 22
+      </div>
+      <div class="icon-button">
+       💬
+      </div>
+      <div class="icon-button">
+       🔗
+      </div>
+     </div>
+     <div class="report-button">
+      ⚑
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="navigation-bar">
+   <div class="icon-button">
+    🏠
+   </div>
+   <div class="icon-button">
+    🔍
+   </div>
+   <div class="icon-button">
+    🔔
+   </div>
+   <div class="icon-button">
+    👤
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   App Start Page
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input:valid {
+            border-color: #4CAF50;
+        }
+        input:invalid {
+            border-color: #f44336;
+        }
+        .error-message {
+            color: #f44336;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-create {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        .btn-create:hover,
+        .btn-create:focus {
+            background-color: #45a049;
+        }
+        .btn-login {
+            background-color: #008CBA;
+            color: #fff;
+        }
+        .btn-login:hover,
+        .btn-login:focus {
+            background-color: #007bb5;
+        }
+        .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .link {
+            color: #008CBA;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .link:hover,
+        .link:focus {
+            text-decoration: underline;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        .footer-links {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        .footer-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer-links a:hover,
+        .footer-links a:focus {
+            text-decoration: underline;
+        }
+        .language-selection {
+            margin-top: 20px;
+        }
+        select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .password-strength {
+            text-align: left;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .password-strength span {
+            font-weight: bold;
+        }
+        .social-login {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .social-btn {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .social-btn-google {
+            background-color: #de5246;
+            color: #fff;
+        }
+        .social-btn-google:hover,
+        .social-btn-google:focus {
+            background-color: #c43e3a;
+        }
+        .social-btn-facebook {
+            background-color: #3b5998;
+            color: #fff;
+        }
+        .social-btn-facebook:hover,
+        .social-btn-facebook:focus {
+            background-color: #2d4373;
+        }
+        .hidden {
+            display: none;
+        }
+        .toggle-password {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-left: -30px;
+        }
+        .toggle-password::before {
+            content: '👁';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            margin-left: -80px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .profile-picture {
+            margin-bottom: 20px;
+        }
+        .profile-picture img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .multi-step {
+            display: none;
+        }
+        .multi-step.active {
+            display: block;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container" role="form">
+   <header>
+    <h1>
+     Welcome to Our App
+    </h1>
+   </header>
+   <main>
+    <div class="form-group">
+     <label for="username">
+      Username
+     </label>
+     <input aria-label="Username" id="username" placeholder="Username" required="" type="text"/>
+     <div aria-live="polite" class="error-message hidden" id="username-error">
+      Username is required.
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="email">
+      Email
+     </label>
+     <input aria-label="Email" id="email" placeholder="Email" required="" type="email"/>
+     <div aria-live="polite" class="error-message hidden" id="email-error">
+      Invalid email format.
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="password">
+      Password
+     </label>
+     <div class="tooltip">
+      <input aria-label="Password" id="password" minlength="6" placeholder="Password" required="" type="password"/>
+      <span class="tooltiptext">
+       Password must be at least 6 characters
+      </span>
+     </div>
+     <div class="password-strength">
+      Password strength:
+      <span id="password-strength-text">
+       Weak
+      </span>
+     </div>
+     <div class="toggle-password" onclick="togglePasswordVisibility('password')">
+     </div>
+    </div>
+    <div class="form-group hidden" id="confirm-password-group">
+     <label for="confirm-password">
+      Confirm Password
+     </label>
+     <input aria-label="Confirm Password" id="confirm-password" minlength="6" placeholder="Confirm Password" required="" type="password"/>
+     <div class="toggle-password" onclick="togglePasswordVisibility('confirm-password')">
+     </div>
+    </div>
+    <div class="form-group profile-picture hidden" id="profile-picture-group">
+     <label for="profile-picture">
+      Profile Picture
+     </label>
+     <input accept="image/*" aria-label="Profile Picture" id="profile-picture" type="file"/>
+     <img alt="Profile Picture Preview" class="hidden" id="profile-picture-preview" src=""/>
+    </div>
+    <div class="multi-step" id="step-1">
+     <button class="btn btn-create" onclick="showNextStep(2)">
+      Next
+     </button>
+    </div>
+    <div class="multi-step" id="step-2">
+     <button class="btn btn-create" onclick="showNextStep(3)">
+      Next
+     </button>
+    </div>
+    <div class="multi-step" id="step-3">
+     <button class="btn btn-create">
+      Create Account
+     </button>
+    </div>
+    <button class="btn btn-login">
+     Login
+    </button>
+    <div class="checkbox-group">
+     <input aria-label="Remember Me" id="remember-me" type="checkbox"/>
+     <label for="remember-me">
+      Remember Me
+     </label>
+    </div>
+    <a class="link" href="#">
+     Forgot Password?
+    </a>
+    <div class="footer-links">
+     <a href="#">
+      Terms and Conditions
+     </a>
+     |
+     <a href="#">
+      Privacy Policy
+     </a>
+    </div>
+    <div class="language-selection">
+     <label for="language">
+      Language:
+     </label>
+     <select aria-label="Language Selection" id="language">
+      <option value="en">
+       English
+      </option>
+      <option value="es">
+       Spanish
+      </option>
+      <option value="fr">
+       French
+      </option>
+      <!-- Add more languages as needed -->
+     </select>
+    </div>
+    <div class="social-login">
+     <button class="social-btn social-btn-google">
+      Google
+     </button>
+     <button class="social-btn social-btn-facebook">
+      Facebook
+     </button>
+    </div>
+   </main>
+  </div>
+  <script>
+   function togglePasswordVisibility(fieldId) {
+            const field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                field.type = "text";
+            } else {
+                field.type = "password";
+            }
+        }
+        function showNextStep(step) {
+            document.querySelectorAll('.multi-step').forEach(el => el.classList.remove('active'));
+            document.getElementById('step-' + step).classList.add('active');
+            if (step === 2) {
+                document.getElementById('confirm-password-group').classList.remove('hidden');
+            }
+            if (step === 3) {
+                document.getElementById('profile-picture-group').classList.remove('hidden');
+            }
+        }
+  </script>
+ </body>
+</html>

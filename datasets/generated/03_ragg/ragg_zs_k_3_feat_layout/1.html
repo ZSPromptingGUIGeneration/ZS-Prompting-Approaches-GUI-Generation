@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .top-nav-bar {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-nav-bar .hamburger-menu {
+            font-size: 24px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-bar .microphone {
+            margin-left: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .tags {
+            padding: 10px;
+            display: flex;
+            overflow-x: scroll;
+        }
+        .tags button {
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .featured-content {
+            position: relative;
+            background-image: url('featured.jpg');
+            background-size: cover;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .featured-content h2 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .category-section {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: white;
+        }
+        .category-section h3 {
+            margin: 0 0 10px 0;
+        }
+        .category-section .thumbnails {
+            display: flex;
+            overflow-x: scroll;
+        }
+        .category-section .thumbnails .thumbnail {
+            margin-right: 10px;
+            position: relative;
+        }
+        .category-section .thumbnails .thumbnail img {
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+        }
+        .category-section .thumbnails .thumbnail .prep-time {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        .bottom-nav-bar {
+            background-color: white;
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .bottom-nav-bar .nav-item {
+            text-align: center;
+        }
+        .bottom-nav-bar .nav-item i {
+            font-size: 24px;
+        }
+        .bottom-nav-bar .nav-item span {
+            display: block;
+            font-size: 12px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-nav-bar">
+   <div class="hamburger-menu">
+    ☰
+   </div>
+   <div class="social-icons">
+    <i class="fa fa-facebook">
+    </i>
+    <i class="fa fa-twitter">
+    </i>
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search for recipes..." type="text"/>
+   <div class="microphone">
+    🎤
+   </div>
+  </div>
+  <div class="tags">
+   <button>
+    Hot Keywords
+   </button>
+   <button>
+    Spicy
+   </button>
+   <button>
+    Cold Ramen
+   </button>
+   <button>
+    Meat
+   </button>
+   <button>
+    Fish &amp; Seafood
+   </button>
+   <button>
+    Dairy-Free
+   </button>
+  </div>
+  <div class="featured-content">
+   <h2>
+    FRYING PEAKS
+   </h2>
+  </div>
+  <div class="category-section">
+   <h3>
+    Daily Picks
+   </h3>
+   <div class="thumbnails">
+    <div class="thumbnail">
+     <img alt="Recipe 1" src=""/>
+     <div class="prep-time">
+      30 mins
+     </div>
+    </div>
+    <div class="thumbnail">
+     <img alt="Recipe 2" src=""/>
+     <div class="prep-time">
+      20 mins
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="category-section">
+   <h3>
+    Yummies for U
+   </h3>
+   <div class="thumbnails">
+    <div class="thumbnail">
+     <img alt="Recipe 3" src=""/>
+     <div class="prep-time">
+      15 mins
+     </div>
+    </div>
+    <div class="thumbnail">
+     <img alt="Recipe 4" src=""/>
+     <div class="prep-time">
+      25 mins
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="category-section">
+   <h3>
+    Hottest
+   </h3>
+   <div class="thumbnails">
+    <div class="thumbnail">
+     <img alt="Recipe 5" src=""/>
+     <div class="prep-time">
+      10 mins
+     </div>
+    </div>
+    <div class="thumbnail">
+     <img alt="Recipe 6" src=""/>
+     <div class="prep-time">
+      40 mins
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="category-section">
+   <h3>
+    Aid for Clumsy Cook
+   </h3>
+   <div class="thumbnails">
+    <div class="thumbnail">
+     <img alt="Recipe 7" src=""/>
+     <div class="prep-time">
+      35 mins
+     </div>
+    </div>
+    <div class="thumbnail">
+     <img alt="Recipe 8" src=""/>
+     <div class="prep-time">
+      50 mins
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="category-section">
+   <h3>
+    Speedy &amp; Simple
+   </h3>
+   <div class="thumbnails">
+    <div class="thumbnail">
+     <img alt="Recipe 9" src=""/>
+     <div class="prep-time">
+      5 mins
+     </div>
+    </div>
+    <div class="thumbnail">
+     <img alt="Recipe 10" src=""/>
+     <div class="prep-time">
+      10 mins
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="bottom-nav-bar">
+   <div class="nav-item">
+    <i class="fa fa-home">
+    </i>
+    <span>
+     Home
+    </span>
+   </div>
+   <div class="nav-item">
+    <i class="fa fa-search">
+    </i>
+    <span>
+     Search
+    </span>
+   </div>
+   <div class="nav-item">
+    <i class="fa fa-heart">
+    </i>
+    <span>
+     Favorites
+    </span>
+   </div>
+   <div class="nav-item">
+    <i class="fa fa-user">
+    </i>
+    <span>
+     Profile
+    </span>
+   </div>
+  </div>
+ </body>
+</html>

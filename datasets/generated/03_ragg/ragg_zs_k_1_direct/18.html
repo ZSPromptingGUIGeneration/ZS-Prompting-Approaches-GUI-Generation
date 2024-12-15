@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .input-box, .output-box {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button-english {
+            background-color: black;
+            color: white;
+        }
+        .button-spanish {
+            background-color: #2196F3;
+            color: white;
+        }
+        .result {
+            margin: 10px 0;
+        }
+        .result-text {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer img {
+            width: 20px;
+            height: 20px;
+            margin: 0 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    English Spanish Translation
+   </h1>
+  </div>
+  <div class="container">
+   <textarea class="input-box" placeholder="Enter text to translate..." rows="4"></textarea>
+   <div class="buttons">
+    <button class="button button-english">
+     English
+    </button>
+    <button class="button button-spanish">
+     Spanish
+    </button>
+   </div>
+   <div class="result">
+    <p>
+     Result
+    </p>
+    <div class="result-text">
+     ¿Hola cómo estás?
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <img alt="Download" src=""/>
+   <img alt="Share" src=""/>
+   <img alt="History" src=""/>
+   <img alt="Like" src=""/>
+  </div>
+ </body>
+</html>

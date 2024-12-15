@@ -1,0 +1,137 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Upcoming Shows
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        #shows {
+            padding: 1rem;
+        }
+
+        .show {
+            background-color: #fff;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .show.film {
+            border-left: 5px solid #ff6347; /* Tomato color for films */
+        }
+
+        .show.season {
+            border-left: 5px solid #4682b4; /* SteelBlue color for seasons */
+        }
+
+        .show img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .show-content {
+            display: flex;
+            align-items: center;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Upcoming Shows
+   </h1>
+  </header>
+  <section id="shows">
+   <div class="show film">
+    <div class="show-content">
+     <img alt="Poster of the movie 'The Adventure Begins'" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/bc52ebbc-d897-442a-adf8-c2ee719e02d1.png"/>
+     <div>
+      <h2>
+       New Film: The Adventure Begins
+      </h2>
+      <p>
+       Date: October 15, 2023
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="show season">
+    <div class="show-content">
+     <img alt="Poster of 'Mystery Chronicles Season 2'" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c06ce654-c1c7-4f51-89e3-8fd7f29d2a02.png"/>
+     <div>
+      <h2>
+       New Season: Mystery Chronicles Season 2
+      </h2>
+      <p>
+       Date: November 1, 2023
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="show film">
+    <div class="show-content">
+     <img alt="Poster of the movie 'Romantic Escapades'" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fafd333f-efaa-4616-ab69-09e4406f66ca.png"/>
+     <div>
+      <h2>
+       New Film: Romantic Escapades
+      </h2>
+      <p>
+       Date: December 20, 2023
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="show season">
+    <div class="show-content">
+     <img alt="Poster of 'Sci-Fi Legends Season 3'" id="image4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/4bfcf128-4b40-4c8d-9a68-9347645b55bc.png"/>
+     <div>
+      <h2>
+       New Season: Sci-Fi Legends Season 3
+      </h2>
+      <p>
+       Date: January 10, 2024
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer>
+   <p>
+    © 2023 Personal Calendar
+   </p>
+  </footer>
+ </body>
+</html>
+<!-- End -->

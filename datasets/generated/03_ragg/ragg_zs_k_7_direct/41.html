@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   User Profile
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+        .header img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .profile-info {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .profile-info h1 {
+            margin: 10px 0;
+        }
+        .profile-info p {
+            color: #888;
+        }
+        .follow-btn {
+            background-color: #4267b2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            color: #4267b2;
+            margin-bottom: 10px;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .tabs a {
+            text-decoration: none;
+            color: #888;
+            padding: 10px;
+            display: block;
+        }
+        .tabs a.active {
+            color: #4267b2;
+            border-bottom: 2px solid #4267b2;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #888;
+            text-align: center;
+        }
+        .footer a.active {
+            color: #4267b2;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Cover Image" src=""/>
+   <img alt="Profile Picture" class="profile-pic" src=""/>
+  </div>
+  <div class="profile-info">
+   <h1>
+    Jon Brown
+   </h1>
+   <p>
+    Nurse at Hospitales Star Medica
+   </p>
+   <p>
+    Cardiology, Devices: CRT &amp; ICD, Heart Failure
+   </p>
+   <button class="follow-btn">
+    Follow
+   </button>
+  </div>
+  <div class="tabs">
+   <a class="active" href="#">
+    Profile
+   </a>
+   <a href="#">
+    Photos
+   </a>
+   <a href="#">
+    Friends
+   </a>
+  </div>
+  <div class="content">
+   <h2>
+    About
+   </h2>
+   <p>
+    We are called to be architects of the future, not its victims. - R. Buckminster Fuller
+   </p>
+   <h2>
+    Info
+   </h2>
+   <p>
+    Visits: 80
+   </p>
+   <p>
+    Profile Created On: Mar 22, 2017
+   </p>
+   <p>
+    Last Connection: Mar 22, 2017
+   </p>
+   <h2>
+    Interests
+   </h2>
+   <div>
+    <button>
+     Sports
+    </button>
+    <button>
+     Movie
+    </button>
+    <button>
+     Books
+    </button>
+    <button>
+     Shopping
+    </button>
+    <button>
+     Music
+    </button>
+    <button>
+     Friendship
+    </button>
+    <button>
+     Fashion / Beauty
+    </button>
+    <button>
+     Social drink
+    </button>
+    <button>
+     Management / Business
+    </button>
+    <button>
+     Others
+    </button>
+   </div>
+  </div>
+  <div class="footer">
+   <a class="active" href="#">
+    Home
+   </a>
+   <a href="#">
+    Explore
+   </a>
+   <a href="#">
+    Add
+   </a>
+   <a href="#">
+    Friends
+   </a>
+   <a href="#">
+    Profile
+   </a>
+  </div>
+ </body>
+</html>

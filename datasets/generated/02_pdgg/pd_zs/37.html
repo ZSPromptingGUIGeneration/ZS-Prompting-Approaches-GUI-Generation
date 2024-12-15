@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   News App
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #6200ee;
+            color: white;
+            padding: 10px 20px;
+        }
+        .header .search-bar {
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+        .header input {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+        .news-item {
+            background-color: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .news-item .headline {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 10px 0 5px;
+        }
+        .news-item .sub-headline {
+            font-size: 14px;
+            font-weight: 400;
+            color: #666;
+        }
+        .news-item .meta {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .news-item .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .news-item .actions .icon {
+            cursor: pointer;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+        .bottom-nav .nav-item {
+            text-align: center;
+            color: #6200ee;
+        }
+        .bottom-nav .nav-item .icon {
+            display: block;
+            font-size: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="hamburger-menu icon">
+    ☰
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search..." type="text"/>
+   </div>
+   <div class="profile icon">
+    👤
+   </div>
+   <div class="notifications icon">
+    🔔
+   </div>
+  </div>
+  <div class="news-item">
+   <img alt="Thumbnail" src=""/>
+   <div class="headline">
+    Sample Headline
+   </div>
+   <div class="sub-headline">
+    This is a brief summary of the news article.
+   </div>
+   <div class="meta">
+    Published on Jan 1, 2023, 10:00 AM
+   </div>
+   <div class="actions">
+    <div class="share icon">
+     🔁
+    </div>
+    <div class="bookmark icon">
+     ☆
+    </div>
+   </div>
+  </div>
+  <div class="news-item">
+   <img alt="Thumbnail" src=""/>
+   <div class="headline">
+    Another Headline
+   </div>
+   <div class="sub-headline">
+    This is another brief summary of the news article.
+   </div>
+   <div class="meta">
+    Published on Jan 2, 2023, 11:00 AM
+   </div>
+   <div class="actions">
+    <div class="share icon">
+     🔁
+    </div>
+    <div class="bookmark icon">
+     ☆
+    </div>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item">
+    <div class="icon">
+     ⌂
+    </div>
+    <div class="label">
+     Home
+    </div>
+   </div>
+   <div class="nav-item">
+    <div class="icon">
+     📄
+    </div>
+    <div class="label">
+     Categories
+    </div>
+   </div>
+   <div class="nav-item">
+    <div class="icon">
+     👤
+    </div>
+    <div class="label">
+     Profile
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

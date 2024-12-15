@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Radio Player App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        main {
+            padding: 1rem;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 0.5rem;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .radio-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .radio-list li {
+            background-color: white;
+            margin-bottom: 0.5rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .radio-list button {
+            padding: 0.5rem;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .radio-list img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        .radio-list .station-info {
+            display: flex;
+            align-items: center;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Radio Player App
+   </h1>
+  </header>
+  <main>
+   <div class="search-bar">
+    <input placeholder="Search for a radio station..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <ul class="radio-list">
+    <li>
+     <div class="station-info">
+      <img alt="Logo of Jazz Beats Radio" id="img1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e3a562f3-425c-4a3f-a240-7e9f51320585.png"/>
+      <span>
+       Jazz Beats Radio
+      </span>
+     </div>
+     <button>
+      Play
+     </button>
+    </li>
+    <li>
+     <div class="station-info">
+      <img alt="Logo of Classical Harmony" id="img2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7b80a7a8-d689-49e2-afdf-77e027d8b2ed.png"/>
+      <span>
+       Classical Harmony
+      </span>
+     </div>
+     <button>
+      Play
+     </button>
+    </li>
+    <li>
+     <div class="station-info">
+      <img alt="Logo of Rock Nation" id="img3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5c4bdb1f-c80a-4a65-ba22-3e47b404594f.png"/>
+      <span>
+       Rock Nation
+      </span>
+     </div>
+     <button>
+      Play
+     </button>
+    </li>
+    <li>
+     <div class="station-info">
+      <img alt="Logo of Pop Hits Live" id="img4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ef6dc161-68b0-4bde-9c16-5bea53997810.png"/>
+      <span>
+       Pop Hits Live
+      </span>
+     </div>
+     <button>
+      Play
+     </button>
+    </li>
+    <li>
+     <div class="station-info">
+      <img alt="Logo of News 24/7" id="img5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c86209f6-89e3-4944-acb8-bc4a70510142.png"/>
+      <span>
+       News 24/7
+      </span>
+     </div>
+     <button>
+      Play
+     </button>
+    </li>
+    <li>
+     <div class="station-info">
+      <img alt="Logo of Indie Vibes" id="img6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0c980edc-f41d-4f2e-8c59-a8ade7efaf5a.png"/>
+      <span>
+       Indie Vibes
+      </span>
+     </div>
+     <button>
+      Play
+     </button>
+    </li>
+    <li>
+     <div class="station-info">
+      <img alt="Logo of Chillout Lounge" id="img7" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/669bdd69-f589-478b-b651-8ee32d17ec7a.png"/>
+      <span>
+       Chillout Lounge
+      </span>
+     </div>
+     <button>
+      Play
+     </button>
+    </li>
+   </ul>
+  </main>
+  <footer>
+   <p>
+    © 2023 Radio Player App
+   </p>
+  </footer>
+ </body>
+</html>

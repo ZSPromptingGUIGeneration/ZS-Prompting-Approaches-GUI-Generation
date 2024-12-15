@@ -1,0 +1,109 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Finder
+  </title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   .recipe-card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <!-- Search Bar -->
+   <div class="input-group my-3">
+    <input class="form-control" placeholder="Search recipes..." type="text"/>
+    <div class="input-group-append">
+     <button class="btn btn-outline-secondary" type="button">
+      Search
+     </button>
+    </div>
+   </div>
+   <!-- Filter Options -->
+   <div aria-label="Filter options" class="btn-group mb-3" role="group">
+    <button class="btn btn-secondary" type="button">
+     All
+    </button>
+    <button class="btn btn-secondary" type="button">
+     Vegetarian
+    </button>
+    <button class="btn btn-secondary" type="button">
+     Vegan
+    </button>
+    <button class="btn btn-secondary" type="button">
+     Gluten-Free
+    </button>
+   </div>
+   <!-- Recipe Thumbnails -->
+   <div class="row">
+    <div class="col-6 mb-4">
+     <div class="card recipe-card">
+      <img alt="Recipe 1" class="card-img-top" src=""/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Recipe 1
+       </h5>
+       <p class="card-text">
+        A short description of Recipe 1.
+       </p>
+       <span class="badge badge-warning">
+        4.5
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="col-6 mb-4">
+     <div class="card recipe-card">
+      <img alt="Recipe 2" class="card-img-top" src=""/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Recipe 2
+       </h5>
+       <p class="card-text">
+        A short description of Recipe 2.
+       </p>
+       <span class="badge badge-warning">
+        4.0
+       </span>
+      </div>
+     </div>
+    </div>
+    <!-- Add more recipe cards as needed -->
+   </div>
+  </div>
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-light bg-light">
+   <a class="navbar-brand" href="#">
+    Home
+   </a>
+   <a class="navbar-brand" href="#">
+    Categories
+   </a>
+   <a class="navbar-brand" href="#">
+    Favorites
+   </a>
+   <a class="navbar-brand" href="#">
+    Profile
+   </a>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

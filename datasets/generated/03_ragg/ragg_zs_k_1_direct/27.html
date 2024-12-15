@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Storage App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .app-list {
+            list-style: none;
+            padding: 0;
+        }
+        .app-item {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .app-item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+        }
+        .app-details {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        .app-details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .app-details p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        .delete-btn {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Storage Manager
+   </h1>
+  </div>
+  <div class="container">
+   <ul class="app-list">
+    <li class="app-item">
+     <img alt="App Icon" src=""/>
+     <div class="app-details">
+      <h3>
+       App Name 1
+      </h3>
+      <p>
+       Size: 150MB
+      </p>
+     </div>
+     <button class="delete-btn">
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="App Icon" src=""/>
+     <div class="app-details">
+      <h3>
+       App Name 2
+      </h3>
+      <p>
+       Size: 200MB
+      </p>
+     </div>
+     <button class="delete-btn">
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <img alt="App Icon" src=""/>
+     <div class="app-details">
+      <h3>
+       App Name 3
+      </h3>
+      <p>
+       Size: 75MB
+      </p>
+     </div>
+     <button class="delete-btn">
+      Delete
+     </button>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>

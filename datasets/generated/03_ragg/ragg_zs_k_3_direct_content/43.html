@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather Videos
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #1e1e1e;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .header .settings {
+            font-size: 24px;
+        }
+        .video-list {
+            padding: 10px;
+        }
+        .video-item {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .video-item img {
+            width: 80px;
+            height: 60px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .video-item .details {
+            flex-grow: 1;
+        }
+        .video-item .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .video-item .date {
+            font-size: 12px;
+            color: #bbb;
+            margin: 5px 0;
+        }
+        .video-item .description {
+            font-size: 12px;
+            color: #bbb;
+        }
+        .footer {
+            background-color: #1e1e1e;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #444;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Weather App Logo" src="logo.png"/>
+   <div class="title">
+    Weather Videos
+   </div>
+   <div class="settings">
+    <i class="fas fa-cog">
+    </i>
+   </div>
+  </div>
+  <div class="video-list">
+   <div class="video-item">
+    <img alt="Thumbnail of a stormy weather video" id="video1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/37831113-8390-48cc-a4eb-ebba6ded523c.png"/>
+    <div class="details">
+     <div class="title">
+      Storms, cooler temps today
+     </div>
+     <div class="date">
+      Mar 21, 2017 9:57 AM GMT+00:00
+     </div>
+     <div class="description">
+      Expect thunderstorms and a significant drop in temperature today.
+     </div>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Thumbnail of a rainy weather video" id="video2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/96f15b99-4b0e-4637-a16f-21b7d3dffc3a.png"/>
+    <div class="details">
+     <div class="title">
+      Cooler weather and rain this week
+     </div>
+     <div class="date">
+      Mar 20, 2017 11:15 PM GMT+00:00
+     </div>
+     <div class="description">
+      Prepare for cooler temperatures and consistent rain throughout the week.
+     </div>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Thumbnail of a sunny weather video" id="video3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/9fc381af-aa90-4de9-8e0a-9f4f634367a0.png"/>
+    <div class="details">
+     <div class="title">
+      Mid 80s for the start of spring
+     </div>
+     <div class="date">
+      Mar 20, 2017 5:34 PM GMT+00:00
+     </div>
+     <div class="description">
+      Spring begins with warm temperatures reaching the mid-80s.
+     </div>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Thumbnail of a summer weather video" id="video4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/24321938-fb04-47dc-9171-ef0bfe304b46.png"/>
+    <div class="details">
+     <div class="title">
+      Summer temps for first day of spring
+     </div>
+     <div class="date">
+      Mar 20, 2017 10:23 AM GMT+00:00
+     </div>
+     <div class="description">
+      The first day of spring feels more like summer with high temperatures.
+     </div>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Thumbnail of a warm weather video" id="video5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fb34c7be-dd7e-407e-b434-8ff0a2959ad6.png"/>
+    <div class="details">
+     <div class="title">
+      The start of spring will bring warm temps
+     </div>
+     <div class="date">
+      Mar 19, 2017 10:22 PM GMT+00:00
+     </div>
+     <div class="description">
+      Another warm day ahead as spring begins.
+     </div>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Thumbnail of a snowy weather video" id="video6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d095c939-2e6d-49d9-8a54-9efac13f27ab.png"/>
+    <div class="details">
+     <div class="title">
+      Unexpected snow in April
+     </div>
+     <div class="date">
+      Apr 15, 2017 8:30 AM GMT+00:00
+     </div>
+     <div class="description">
+      Surprise snowfall in mid-April, causing disruptions.
+     </div>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Thumbnail of a windy weather video" id="video7" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/725d783d-3ed8-4c05-a633-92d6f08ede83.png"/>
+    <div class="details">
+     <div class="title">
+      Strong winds expected tomorrow
+     </div>
+     <div class="date">
+      Apr 14, 2017 6:00 PM GMT+00:00
+     </div>
+     <div class="description">
+      Be prepared for strong winds and possible power outages.
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    10 Day
+   </a>
+   <a href="#">
+    Hourly
+   </a>
+   <a href="#">
+    Blog
+   </a>
+   <a href="#">
+    Video
+   </a>
+  </div>
+ </body>
+</html>

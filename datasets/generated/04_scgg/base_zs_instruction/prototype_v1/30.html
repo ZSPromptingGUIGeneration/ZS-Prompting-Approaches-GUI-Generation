@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App Notification Settings
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            color: #333;
+        }
+        .section label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #555;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+        .notification-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .notification-method input {
+            margin-right: 10px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        legend {
+            padding: 0 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .location-selector {
+            margin-bottom: 20px;
+        }
+        .location-selector select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .time-preferences, .frequency-preferences {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .time-preferences select, .frequency-preferences select {
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .buttons .save-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+        .buttons .cancel-btn {
+            background-color: #ccc;
+            color: #333;
+        }
+        .help-icon {
+            font-size: 1em;
+            margin-left: 5px;
+            color: #888;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="location-selector section">
+    <h2>
+     Select Location
+    </h2>
+    <select>
+     <option value="new-york">
+      New York
+     </option>
+     <option value="los-angeles">
+      Los Angeles
+     </option>
+     <option value="chicago">
+      Chicago
+     </option>
+     <option value="houston">
+      Houston
+     </option>
+     <option value="miami">
+      Miami
+     </option>
+    </select>
+   </div>
+   <fieldset class="section">
+    <legend>
+     Notification Settings
+    </legend>
+    <label>
+     <span class="toggle-switch">
+      <input type="checkbox"/>
+      <span class="slider">
+      </span>
+     </span>
+     Severe Weather Alerts
+     <span class="help-icon">
+      ?
+     </span>
+    </label>
+    <label>
+     <span class="toggle-switch">
+      <input type="checkbox"/>
+      <span class="slider">
+      </span>
+     </span>
+     Daily Forecast
+     <span class="help-icon">
+      ?
+     </span>
+    </label>
+    <label>
+     <span class="toggle-switch">
+      <input type="checkbox"/>
+      <span class="slider">
+      </span>
+     </span>
+     Rain Alerts
+     <span class="help-icon">
+      ?
+     </span>
+    </label>
+   </fieldset>
+   <fieldset class="section">
+    <legend>
+     Notification Methods
+    </legend>
+    <div class="notification-method">
+     <input id="email" name="method" type="checkbox"/>
+     <label for="email">
+      Email
+     </label>
+     <span class="help-icon">
+      ?
+     </span>
+    </div>
+    <div class="notification-method">
+     <input id="sms" name="method" type="checkbox"/>
+     <label for="sms">
+      SMS
+     </label>
+     <span class="help-icon">
+      ?
+     </span>
+    </div>
+    <div class="notification-method">
+     <input id="push" name="method" type="checkbox"/>
+     <label for="push">
+      Push Notification
+     </label>
+     <span class="help-icon">
+      ?
+     </span>
+    </div>
+   </fieldset>
+   <fieldset class="section">
+    <legend>
+     Time Preferences
+    </legend>
+    <div class="time-preferences">
+     <label for="time">
+      Preferred Time:
+     </label>
+     <select id="time">
+      <option value="morning">
+       Morning
+      </option>
+      <option value="afternoon">
+       Afternoon
+      </option>
+      <option value="evening">
+       Evening
+      </option>
+     </select>
+    </div>
+   </fieldset>
+   <fieldset class="section">
+    <legend>
+     Frequency of Notifications
+    </legend>
+    <div class="frequency-preferences">
+     <label for="frequency">
+      Frequency:
+     </label>
+     <select id="frequency">
+      <option value="once-a-day">
+       Once a day
+      </option>
+      <option value="multiple-times-a-day">
+       Multiple times a day
+      </option>
+      <option value="weekly">
+       Weekly
+      </option>
+     </select>
+    </div>
+   </fieldset>
+   <div class="buttons">
+    <button class="save-btn">
+     Save
+    </button>
+    <button class="cancel-btn">
+     Cancel
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

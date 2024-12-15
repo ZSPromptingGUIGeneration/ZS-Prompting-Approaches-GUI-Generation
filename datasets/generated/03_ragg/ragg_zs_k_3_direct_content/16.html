@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f44336;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        header .menu, header .search, header .cart {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        header .menu {
+            left: 10px;
+        }
+        header .search {
+            right: 50px;
+        }
+        header .cart {
+            right: 10px;
+        }
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+        .banner .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        .category {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .category div {
+            text-align: center;
+        }
+        .category img {
+            width: 50px;
+            height: auto;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .product {
+            width: 45%;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product .details {
+            padding: 10px;
+        }
+        .product .price {
+            color: red;
+            font-weight: bold;
+        }
+        .product .original-price {
+            text-decoration: line-through;
+            color: #888;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="menu">
+    ☰
+   </div>
+   <div class="title">
+    Shopping App
+   </div>
+   <div class="search">
+    🔍
+   </div>
+   <div class="cart">
+    🛒
+   </div>
+  </header>
+  <div class="banner">
+   <img alt="Valentine's Day Sale Banner" id="banner-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/50c64af7-f976-4c25-b633-8d3912f71f6d.png"/>
+   <div class="text">
+    <h1>
+     Valentine's Day Gifts
+    </h1>
+    <p>
+     65% off for every sweetheart
+    </p>
+   </div>
+  </div>
+  <div class="category">
+   <div>
+    <img alt="Women's Fashion" id="category-women" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/537fd400-2b0c-4cc3-81a2-3e290da99172.png"/>
+    <p>
+     Women
+    </p>
+   </div>
+   <div>
+    <img alt="Men's Fashion" id="category-men" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fdf10a42-57a1-4b55-a859-7118c3e43beb.png"/>
+    <p>
+     Men
+    </p>
+   </div>
+   <div>
+    <img alt="Jewelry" id="category-jewelry" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/629de5d4-64dd-4920-b26e-82f41d7bc071.png"/>
+    <p>
+     Jewelry
+    </p>
+   </div>
+   <div>
+    <img alt="Bags and Accessories" id="category-bags" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/272e127c-9a02-45cc-a106-a69cf11f584b.png"/>
+    <p>
+     Bags
+    </p>
+   </div>
+  </div>
+  <div class="products">
+   <div class="product">
+    <img alt="Light Blue &amp; Beige Asher Rug" id="product-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/3be41a3a-920f-4a36-ba74-539a351ed152.png"/>
+    <div class="details">
+     <p>
+      Light Blue &amp; Beige Asher Rug
+     </p>
+     <p class="price">
+      $59.99
+     </p>
+     <p class="original-price">
+      $207.96
+     </p>
+    </div>
+   </div>
+   <div class="product">
+    <img alt="Cream Inspired India Rug" id="product-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b087418a-2d2c-41e7-9b65-143fe05b0283.png"/>
+    <div class="details">
+     <p>
+      Cream Inspired India Rug
+     </p>
+     <p class="price">
+      $139.99
+     </p>
+     <p class="original-price">
+      $350.00
+     </p>
+    </div>
+   </div>
+   <div class="product">
+    <img alt="Sunsonic Tablet" id="product-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/10d5d5f2-c7fa-40e7-80d2-14d44faef9c3.png"/>
+    <div class="details">
+     <p>
+      Sunsonic Tablet
+     </p>
+     <p class="price">
+      $1,899.00
+     </p>
+     <p class="original-price">
+      $4,450.00
+     </p>
+    </div>
+   </div>
+   <div class="product">
+    <img alt="EKEN Action Camera" id="product-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/36cbb130-e1f7-4aac-bc93-f4758eeed1a0.png"/>
+    <div class="details">
+     <p>
+      EKEN Action Camera
+     </p>
+     <p class="price">
+      $3,153.00
+     </p>
+     <p class="original-price">
+      $5,990.00
+     </p>
+    </div>
+   </div>
+   <div class="product">
+    <img alt="Game Controller" id="product-5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/4f51f909-e2b9-4aee-be11-df88a06914f1.png"/>
+    <div class="details">
+     <p>
+      Game Controller
+     </p>
+     <p class="price">
+      $799.00
+     </p>
+     <p class="original-price">
+      $1,999.00
+     </p>
+    </div>
+   </div>
+   <div class="product">
+    <img alt="Wireless Earbuds" id="product-6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/20bf1a40-d5fc-4182-88a3-6c64c5b61824.png"/>
+    <div class="details">
+     <p>
+      Wireless Earbuds
+     </p>
+     <p class="price">
+      $49.99
+     </p>
+     <p class="original-price">
+      $99.99
+     </p>
+    </div>
+   </div>
+   <div class="product">
+    <img alt="Smart Watch" id="product-7" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/205abc48-64a3-49be-914b-d7568bb580ae.png"/>
+    <div class="details">
+     <p>
+      Smart Watch
+     </p>
+     <p class="price">
+      $199.99
+     </p>
+     <p class="original-price">
+      $299.99
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

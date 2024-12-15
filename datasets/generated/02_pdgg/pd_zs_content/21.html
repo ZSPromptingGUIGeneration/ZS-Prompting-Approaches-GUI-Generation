@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shopping App
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 16px;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            display: block;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+        }
+        .carousel-indicators div {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 4px;
+        }
+        .carousel-indicators .active {
+            background-color: #333;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+        .product-description {
+            margin-top: 8px;
+        }
+        .read-more {
+            color: #007BFF;
+            cursor: pointer;
+        }
+        .price-info {
+            font-size: 20px;
+            margin-top: 16px;
+        }
+        .discount-info {
+            color: red;
+            margin-left: 8px;
+        }
+        .buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .buttons button {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .add-to-cart {
+            background-color: #28a745;
+        }
+        .buy-now {
+            background-color: #007bff;
+        }
+        .reviews {
+            margin-top: 16px;
+        }
+        .star-rating {
+            display: flex;
+            gap: 4px;
+        }
+        .star-rating i {
+            color: gold;
+        }
+        .review-section {
+            margin-top: 8px;
+        }
+        .availability {
+            margin-top: 16px;
+        }
+        .availability .in-stock {
+            color: green;
+        }
+        .availability .out-of-stock {
+            color: red;
+        }
+        .color-options, .size-options {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .color-options div, .size-options select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .wishlist {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 24px;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .specifications {
+            margin-top: 16px;
+        }
+        .related-products {
+            margin-top: 16px;
+        }
+        .related-products h3 {
+            margin-bottom: 8px;
+        }
+        .related-products .products {
+            display: flex;
+            overflow-x: scroll;
+            gap: 16px;
+        }
+        .related-products .product {
+            background-color: #fff;
+            padding: 8px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .related-products .product img {
+            width: 100px;
+            height: 100px;
+        }
+        .share, .return-policy, .customer-support, .breadcrumbs, .payment-icons {
+            margin-top: 16px;
+        }
+        .payment-icons img {
+            width: 40px;
+            margin-right: 8px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="wishlist">
+    <i class="fas fa-heart">
+    </i>
+   </div>
+   <div class="carousel">
+    <img alt="Front view of a stylish black leather bag" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/9f7d6765-3e9b-47d1-a5a5-b841a038e153.png"/>
+    <img alt="Side view of a stylish black leather bag" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/01ffa31b-191c-4d3a-8bd0-d001dd707681.png"/>
+    <img alt="Interior view of a stylish black leather bag" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/770db69c-f655-4c7b-998e-b292ec529166.png"/>
+    <div class="carousel-indicators">
+     <div class="active">
+     </div>
+     <div>
+     </div>
+     <div>
+     </div>
+    </div>
+   </div>
+   <div class="product-title">
+    Stylish Black Leather Bag
+   </div>
+   <div class="product-description">
+    This stylish black leather bag is perfect for any occasion. It features multiple compartments, high-quality leather, and a sleek design.
+    <span class="read-more">
+     Read More
+    </span>
+   </div>
+   <div class="price-info">
+    $99.99
+    <span class="discount-info">
+     $129.99 (20% off)
+    </span>
+   </div>
+   <div class="buttons">
+    <button class="add-to-cart">
+     Add to Cart
+    </button>
+    <button class="buy-now">
+     Buy Now
+    </button>
+   </div>
+   <div class="reviews">
+    <div class="star-rating">
+     <i class="fas fa-star">
+     </i>
+     <i class="fas fa-star">
+     </i>
+     <i class="fas fa-star">
+     </i>
+     <i class="fas fa-star">
+     </i>
+     <i class="fas fa-star">
+     </i>
+    </div>
+    <div class="review-section">
+     "This bag is amazing! The quality is top-notch and it looks great with any outfit." - Jane Doe
+     <span class="read-more">
+      View All Reviews
+     </span>
+    </div>
+   </div>
+   <div class="availability">
+    <div class="in-stock">
+     In Stock
+    </div>
+    <div class="delivery-estimate">
+     Delivery by Mon, Oct 18
+    </div>
+   </div>
+   <div class="color-options">
+    <div style="background-color: #000;">
+    </div>
+    <div style="background-color: #fff;">
+    </div>
+    <div style="background-color: #f00;">
+    </div>
+   </div>
+   <div class="size-options">
+    <select>
+     <option>
+      Small
+     </option>
+     <option>
+      Medium
+     </option>
+     <option>
+      Large
+     </option>
+    </select>
+   </div>
+   <div class="specifications">
+    <div class="accordion">
+     <h4>
+      Specifications
+     </h4>
+     <ul>
+      <li>
+       Material: Genuine Leather
+      </li>
+      <li>
+       Dimensions: 10" x 8" x 4"
+      </li>
+      <li>
+       Weight: 1.5 lbs
+      </li>
+      <li>
+       Color: Black
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="related-products">
+    <h3>
+     You May Also Like
+    </h3>
+    <div class="products">
+     <div class="product">
+      <img alt="Brown leather handbag with gold accents" id="related1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/500167d1-bffc-49c7-bd48-67b9be9478ea.png"/>
+      <div>
+       Brown Leather Handbag
+      </div>
+      <div>
+       $49.99
+      </div>
+     </div>
+     <div class="product">
+      <img alt="Red leather tote bag with spacious interior" id="related2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7ccb4ca4-fda8-4de0-befb-08102db57845.png"/>
+      <div>
+       Red Leather Tote
+      </div>
+      <div>
+       $59.99
+      </div>
+     </div>
+     <div class="product">
+      <img alt="Blue suede shoulder bag with adjustable strap" id="related3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6e54d1e9-2c5b-478d-a10b-9732649192bd.png"/>
+      <div>
+       Blue Suede Shoulder Bag
+      </div>
+      <div>
+       $69.99
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="share">
+    <i class="fas fa-share-alt">
+    </i>
+    Share
+   </div>
+   <div class="return-policy">
+    Return Policy and Warranty Information here.
+   </div>
+   <div class="customer-support">
+    Customer Support
+   </div>
+   <div class="breadcrumbs">
+    Home &gt; Bags &gt; Stylish Black Leather Bag
+   </div>
+   <div class="payment-icons">
+    <img alt="Visa" id="visa" src="visa.png"/>
+    <img alt="MasterCard" id="mastercard" src="mastercard.png"/>
+    <img alt="PayPal" id="paypal" src="paypal.png"/>
+   </div>
+  </div>
+ </body>
+</html>

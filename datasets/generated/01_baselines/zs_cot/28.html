@@ -1,0 +1,125 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Radio Player App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        main {
+            padding: 1rem;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 0.5rem;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .radio-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .radio-list li {
+            background-color: white;
+            margin-bottom: 0.5rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .radio-list button {
+            padding: 0.5rem;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Radio Player App
+   </h1>
+  </header>
+  <main>
+   <div class="search-bar">
+    <input placeholder="Search for a radio station..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <ul class="radio-list">
+    <li>
+     <span>
+      Radio Station 1
+     </span>
+     <button>
+      Play
+     </button>
+    </li>
+    <li>
+     <span>
+      Radio Station 2
+     </span>
+     <button>
+      Play
+     </button>
+    </li>
+    <li>
+     <span>
+      Radio Station 3
+     </span>
+     <button>
+      Play
+     </button>
+    </li>
+    <!-- Add more stations as needed -->
+   </ul>
+  </main>
+  <footer>
+   <p>
+    © 2023 Radio Player App
+   </p>
+  </footer>
+ </body>
+</html>
+<!-- End -->

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather Notification Settings
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .notification-section {
+            margin-top: 20px;
+        }
+        .notification-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .notification-item h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .notification-item p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+        }
+        .toggle-switch input {
+            display: none;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 25px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 21px;
+            width: 21px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(25px);
+        }
+        .continue-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .continue-button button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Weather Notifications
+   </h1>
+   <h2>
+    Searching
+   </h2>
+   <div class="notification-section">
+    <div class="notification-item">
+     <div>
+      <h3>
+       Severe Weather Alerts
+      </h3>
+      <p>
+       Issued by the US National Weather Service.
+      </p>
+     </div>
+     <label class="toggle-switch">
+      <input checked="" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+    <div class="notification-item">
+     <div>
+      <h3>
+       Lightning Alerts
+      </h3>
+      <p>
+       Be notified when lightning strikes within 5 miles. Available only when you are within your station's broadcast area.
+      </p>
+     </div>
+     <label class="toggle-switch">
+      <input checked="" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+    <div class="notification-item">
+     <div>
+      <h3>
+       Station Alerts
+      </h3>
+      <p>
+       Weather alerts issued by your local TV station.
+      </p>
+     </div>
+     <label class="toggle-switch">
+      <input checked="" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+    <div class="notification-item">
+     <div>
+      <h3>
+       Precipitation Alerts
+      </h3>
+      <p>
+       Be notified when heavy precipitation is detected within 5 miles.
+      </p>
+     </div>
+     <label class="toggle-switch">
+      <input checked="" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+    <div class="notification-item">
+     <div>
+      <h3>
+       Temperature Display
+      </h3>
+      <p>
+       Display the current temperature for your selected Alert Location in the status bar and notifications drawer.
+      </p>
+     </div>
+     <label class="toggle-switch">
+      <input checked="" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+   </div>
+  </div>
+  <div class="continue-button">
+   <button>
+    Continue
+   </button>
+  </div>
+ </body>
+</html>

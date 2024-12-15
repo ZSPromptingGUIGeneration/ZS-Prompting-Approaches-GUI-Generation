@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Finder
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+        .header button {
+            background: none;
+            border: none;
+            font-size: 20px;
+        }
+        .category-tabs {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .category-tabs button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #f5f5f5;
+            cursor: pointer;
+        }
+        .category-tabs button.active {
+            background-color: #ffcc00;
+        }
+        .recipes {
+            padding: 10px;
+        }
+        .recipe-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe-info {
+            padding: 10px;
+        }
+        .recipe-info h3 {
+            margin: 0 0 10px;
+        }
+        .recipe-info p {
+            margin: 0;
+            color: #777;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer button {
+            background: none;
+            border: none;
+            font-size: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <input placeholder="Search with recipe or ingredient" type="text"/>
+   <button>
+    🔍
+   </button>
+  </div>
+  <div class="category-tabs">
+   <button class="active">
+    All
+   </button>
+   <button>
+    My Recipes
+   </button>
+   <button>
+    Cooks
+   </button>
+  </div>
+  <div class="recipes">
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="recipe-info">
+     <h3>
+      Shahi Aloo Gobi
+     </h3>
+     <p>
+      By Shoba Bharathraj
+     </p>
+     <p>
+      176 Likes
+     </p>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="recipe-info">
+     <h3>
+      Potato-Bacon Casserole Bread
+     </h3>
+     <p>
+      By ChefSandrine
+     </p>
+     <p>
+      8-12 servings, 30 min prep
+     </p>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="recipe-info">
+     <h3>
+      Healthy Carrot Cake
+     </h3>
+     <p>
+      By ChefSandrine
+     </p>
+     <p>
+      4.5 stars
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <button>
+    ⌂
+   </button>
+   <button>
+    💾
+   </button>
+   <button>
+    📖
+   </button>
+   <button>
+    📹
+   </button>
+  </div>
+ </body>
+</html>

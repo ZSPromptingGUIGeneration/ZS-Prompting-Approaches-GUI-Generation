@@ -1,0 +1,154 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shopping App
+  </title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   .navbar-fixed-bottom {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .product-card {
+            margin: 10px 0;
+        }
+        .product-image {
+            height: 150px;
+            object-fit: cover;
+        }
+        .badge {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <!-- Header Section -->
+   <div class="row mt-3">
+    <div class="col-12">
+     <div class="input-group">
+      <input class="form-control" placeholder="Search for products..." type="text"/>
+      <div class="input-group-append">
+       <span class="input-group-text">
+        <i class="fa fa-search">
+        </i>
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Filter Section -->
+   <div class="row mt-3">
+    <div class="col-4">
+     <select class="form-control">
+      <option>
+       Category
+      </option>
+      <option>
+       Electronics
+      </option>
+      <option>
+       Fashion
+      </option>
+      <option>
+       Home
+      </option>
+     </select>
+    </div>
+    <div class="col-4">
+     <select class="form-control">
+      <option>
+       Price Range
+      </option>
+      <option>
+       $0 - $50
+      </option>
+      <option>
+       $50 - $100
+      </option>
+      <option>
+       $100 - $200
+      </option>
+     </select>
+    </div>
+    <div class="col-4">
+     <select class="form-control">
+      <option>
+       Discount
+      </option>
+      <option>
+       10%
+      </option>
+      <option>
+       20%
+      </option>
+      <option>
+       30%
+      </option>
+     </select>
+    </div>
+   </div>
+   <!-- Main Content -->
+   <div class="row mt-3">
+    <!-- Example Product Card -->
+    <div class="col-6 product-card">
+     <div class="card">
+      <img alt="Product Image" class="card-img-top product-image" src=""/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Product Name
+       </h5>
+       <p class="card-text">
+        $50
+        <span class="text-danger">
+         20% off
+        </span>
+       </p>
+       <a class="btn btn-primary" href="#">
+        Add to Cart
+       </a>
+      </div>
+     </div>
+    </div>
+    <!-- Repeat for more products -->
+   </div>
+  </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-light bg-light navbar-fixed-bottom">
+   <a class="navbar-brand" href="#">
+    <i class="fa fa-home">
+    </i>
+   </a>
+   <a class="navbar-brand" href="#">
+    <i class="fa fa-list">
+    </i>
+   </a>
+   <a class="navbar-brand position-relative" href="#">
+    <i class="fa fa-shopping-cart">
+    </i>
+    <span class="badge badge-danger">
+     3
+    </span>
+   </a>
+   <a class="navbar-brand" href="#">
+    <i class="fa fa-user">
+    </i>
+   </a>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

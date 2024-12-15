@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .weather-app {
+            width: 90%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: #1e90ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .forecast {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .day {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .day:last-child {
+            border-bottom: none;
+        }
+        .day p {
+            margin: 0;
+        }
+        .day .date {
+            font-weight: bold;
+        }
+        .day .temp {
+            color: #1e90ff;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="weather-app">
+   <div class="header">
+    <h1>
+     Weather Forecast
+    </h1>
+    <p>
+     City Name
+    </p>
+   </div>
+   <div class="forecast">
+    <div class="day">
+     <p class="date">
+      Day 1
+     </p>
+     <p class="temp">
+      25°C
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Day 2
+     </p>
+     <p class="temp">
+      22°C
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Day 3
+     </p>
+     <p class="temp">
+      28°C
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Day 4
+     </p>
+     <p class="temp">
+      24°C
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Day 5
+     </p>
+     <p class="temp">
+      26°C
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Day 6
+     </p>
+     <p class="temp">
+      23°C
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Day 7
+     </p>
+     <p class="temp">
+      27°C
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

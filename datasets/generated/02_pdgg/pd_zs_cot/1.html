@@ -1,0 +1,147 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        .search-bar {
+            margin: 20px;
+        }
+        .category-filters {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 20px;
+        }
+        .category-filters .chip {
+            margin-right: 10px;
+        }
+        .recipe-card {
+            margin: 10px;
+        }
+        .recipe-card .card-image img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="search-bar">
+    <nav>
+     <div class="nav-wrapper">
+      <form>
+       <div class="input-field">
+        <input id="search" required="" type="search"/>
+        <label class="label-icon" for="search">
+         <i class="material-icons">
+          search
+         </i>
+        </label>
+        <i class="material-icons">
+         close
+        </i>
+       </div>
+      </form>
+     </div>
+    </nav>
+   </div>
+  </header>
+  <main>
+   <div class="category-filters">
+    <div class="chip">
+     Breakfast
+    </div>
+    <div class="chip">
+     Lunch
+    </div>
+    <div class="chip">
+     Dinner
+    </div>
+    <div class="chip">
+     Desserts
+    </div>
+    <div class="chip">
+     Snacks
+    </div>
+   </div>
+   <div class="container">
+    <div class="row">
+     <div class="col s12 m6">
+      <div class="card recipe-card">
+       <div class="card-image">
+        <img src=""/>
+       </div>
+       <div class="card-content">
+        <span class="card-title">
+         Recipe Title 1
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="col s12 m6">
+      <div class="card recipe-card">
+       <div class="card-image">
+        <img src=""/>
+       </div>
+       <div class="card-content">
+        <span class="card-title">
+         Recipe Title 2
+        </span>
+       </div>
+      </div>
+     </div>
+     <!-- Add more recipe cards as needed -->
+    </div>
+   </div>
+  </main>
+  <footer class="bottom-nav">
+   <div class="nav-wrapper">
+    <ul class="tabs tabs-fixed-width">
+     <li class="tab">
+      <a class="active" href="#home">
+       <i class="material-icons">
+        home
+       </i>
+      </a>
+     </li>
+     <li class="tab">
+      <a href="#favorites">
+       <i class="material-icons">
+        favorite
+       </i>
+      </a>
+     </li>
+     <li class="tab">
+      <a href="#profile">
+       <i class="material-icons">
+        person
+       </i>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

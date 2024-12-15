@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Translation App
+   </h1>
+  </header>
+  <main>
+   <section class="phrase-list">
+    <div class="phrase-item">
+     <p class="english">
+      Hello
+     </p>
+     <p class="italian">
+      Ciao
+     </p>
+     <button class="audio-button" onclick="playAudio('ciao.mp3')">
+      <i class="fas fa-volume-up">
+      </i>
+     </button>
+    </div>
+    <div class="phrase-item">
+     <p class="english">
+      Thank you
+     </p>
+     <p class="italian">
+      Grazie
+     </p>
+     <button class="audio-button" onclick="playAudio('grazie.mp3')">
+      <i class="fas fa-volume-up">
+      </i>
+     </button>
+    </div>
+    <div class="phrase-item">
+     <p class="english">
+      Good morning
+     </p>
+     <p class="italian">
+      Buongiorno
+     </p>
+     <button class="audio-button" onclick="playAudio('buongiorno.mp3')">
+      <i class="fas fa-volume-up">
+      </i>
+     </button>
+    </div>
+    <div class="phrase-item">
+     <p class="english">
+      Good night
+     </p>
+     <p class="italian">
+      Buonanotte
+     </p>
+     <button class="audio-button" onclick="playAudio('buonanotte.mp3')">
+      <i class="fas fa-volume-up">
+      </i>
+     </button>
+    </div>
+    <div class="phrase-item">
+     <p class="english">
+      How are you?
+     </p>
+     <p class="italian">
+      Come stai?
+     </p>
+     <button class="audio-button" onclick="playAudio('comestai.mp3')">
+      <i class="fas fa-volume-up">
+      </i>
+     </button>
+    </div>
+    <div class="phrase-item">
+     <p class="english">
+      Excuse me
+     </p>
+     <p class="italian">
+      Scusami
+     </p>
+     <button class="audio-button" onclick="playAudio('scusami.mp3')">
+      <i class="fas fa-volume-up">
+      </i>
+     </button>
+    </div>
+    <div class="phrase-item">
+     <p class="english">
+      Please
+     </p>
+     <p class="italian">
+      Per favore
+     </p>
+     <button class="audio-button" onclick="playAudio('perfavore.mp3')">
+      <i class="fas fa-volume-up">
+      </i>
+     </button>
+    </div>
+   </section>
+  </main>
+  <script>
+   function playAudio(src) {
+            const audio = new Audio(src);
+            audio.play();
+        }
+  </script>
+ </body>
+</html>
+<style>
+ /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 1em;
+}
+
+.phrase-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.phrase-item {
+    background-color: white;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.english {
+    font-weight: bold;
+}
+
+.italian {
+    color: #4CAF50;
+}
+
+.audio-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .phrase-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>

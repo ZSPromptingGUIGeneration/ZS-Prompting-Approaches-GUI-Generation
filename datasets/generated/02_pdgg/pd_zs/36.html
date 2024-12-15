@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Public Transportation App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .search-bar {
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        .map-container {
+            flex: 1;
+            position: relative;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        .route-details {
+            padding: 10px;
+            background-color: #fff;
+        }
+        .transport-options {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #eeeeee;
+        }
+        .transport-options .option {
+            text-align: center;
+        }
+        .transport-options .option i {
+            font-size: 24px;
+        }
+        .route-info {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .fare-info {
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        .service-updates {
+            padding: 10px;
+            background-color: #ffeb3b;
+            text-align: center;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Search Bar -->
+  <div class="search-bar">
+   <div class="input-field">
+    <input class="validate" id="origin" type="text"/>
+    <label for="origin">
+     Enter Origin
+    </label>
+   </div>
+   <div class="input-field">
+    <input class="validate" id="destination" type="text"/>
+    <label for="destination">
+     Enter Destination
+    </label>
+   </div>
+  </div>
+  <!-- Map Integration -->
+  <div class="map-container">
+   <div id="map">
+   </div>
+  </div>
+  <!-- Route Details -->
+  <div class="route-details">
+   <div class="route-info">
+    <h6>
+     Duration: 30 mins | Distance: 10 km
+    </h6>
+   </div>
+   <ul class="collapsible">
+    <li>
+     <div class="collapsible-header">
+      <i class="material-icons">
+       directions_bus
+      </i>
+      Step-by-step Directions
+     </div>
+     <div class="collapsible-body">
+      <span>
+       Take the bus from A to B.
+      </span>
+     </div>
+    </li>
+   </ul>
+  </div>
+  <!-- Transportation Options -->
+  <div class="transport-options">
+   <div class="option">
+    <i class="material-icons">
+     directions_bus
+    </i>
+    <p>
+     Bus
+    </p>
+   </div>
+   <div class="option">
+    <i class="material-icons">
+     train
+    </i>
+    <p>
+     Train
+    </p>
+   </div>
+  </div>
+  <!-- Fare Information -->
+  <div class="fare-info">
+   <p>
+    Fare: $2.50
+   </p>
+  </div>
+  <!-- Service Updates -->
+  <div class="service-updates">
+   <p>
+    Service Update: No delays
+   </p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems);
+        });
+
+        // Initialize Google Maps
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+        }
+  </script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap">
+  </script>
+ </body>
+</html>

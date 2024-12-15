@@ -1,0 +1,103 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Map Settings
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   .container {
+            padding: 20px;
+        }
+        .switch label {
+            display: flex;
+            align-items: center;
+        }
+        .switch label .lever {
+            margin: 0 10px;
+        }
+        .fixed-action-btn {
+            bottom: 45px;
+            right: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <nav>
+   <div class="nav-wrapper">
+    <a class="brand-logo center" href="#!">
+     Map Settings
+    </a>
+    <ul class="left">
+     <li>
+      <a href="#!">
+       <i class="material-icons">
+        arrow_back
+       </i>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <!-- Main Content -->
+  <div class="container">
+   <div class="switch">
+    <label>
+     Show Natural Occurrences/Disasters
+     <input type="checkbox"/>
+     <span class="lever">
+     </span>
+    </label>
+   </div>
+   <ul class="collection">
+    <li class="collection-item">
+     <div class="switch">
+      <label>
+       Earthquakes
+       <input type="checkbox"/>
+       <span class="lever">
+       </span>
+      </label>
+     </div>
+    </li>
+    <li class="collection-item">
+     <div class="switch">
+      <label>
+       Floods
+       <input type="checkbox"/>
+       <span class="lever">
+       </span>
+      </label>
+     </div>
+    </li>
+    <li class="collection-item">
+     <div class="switch">
+      <label>
+       Storms
+       <input type="checkbox"/>
+       <span class="lever">
+       </span>
+      </label>
+     </div>
+    </li>
+    <!-- Add more items as needed -->
+   </ul>
+  </div>
+  <!-- Footer -->
+  <div class="fixed-action-btn">
+   <a class="btn-floating btn-large red">
+    <i class="large material-icons">
+     save
+    </i>
+   </a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

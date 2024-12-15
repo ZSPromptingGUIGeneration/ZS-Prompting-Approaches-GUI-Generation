@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Online Encyclopedia
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #3367d6;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 24px;
+            margin-right: 10px;
+        }
+        .header .title {
+            display: flex;
+            align-items: center;
+        }
+        .header .title h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .header .icons .fa {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        .search-bar {
+            padding: 10px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .content {
+            padding: 10px;
+        }
+        .article {
+            background-color: white;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .article img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .article .info {
+            padding: 10px;
+        }
+        .article .info h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+        .article .info p {
+            margin: 0;
+            color: #666;
+        }
+        .footer {
+            background-color: #3367d6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="title">
+    <img alt="Logo" src="logo.png"/>
+    <h1>
+     Online Encyclopedia
+    </h1>
+   </div>
+   <div class="icons">
+    <i class="fa fa-search">
+    </i>
+    <i class="fa fa-bars">
+    </i>
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search articles..." type="text"/>
+  </div>
+  <div class="content">
+   <div class="article">
+    <img alt="Aerial view of a planned community in north London" id="img1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e3ac3f61-71d6-4d91-90b6-15562fe2ab5f.png"/>
+    <div class="info">
+     <h2>
+      Noel Park
+     </h2>
+     <p>
+      Planned community in north London
+     </p>
+     <p>
+      Noel Park in north London is a planned community developed in the late 19th and early 20th centuries, featuring distinctive architecture and a strong sense of community...
+     </p>
+    </div>
+   </div>
+   <div class="article">
+    <img alt="Stellar system Eta Carinae in the constellation Carina" id="img2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d56c51d3-4d67-470b-9034-2a7be1990583.png"/>
+    <div class="info">
+     <h2>
+      Eta Carinae
+     </h2>
+     <p>
+      Stellar system in the constellation Carina
+     </p>
+     <p>
+      Eta Carinae (abbreviated to η Carinae or η Car) is a stellar system containing at least two stars. It is known for its massive eruptions and the Homunculus Nebula...
+     </p>
+    </div>
+   </div>
+   <div class="article">
+    <img alt="Facebook's logo with a digital background" id="img3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/4bb6ba03-4b16-413e-83fe-699351dc4fbd.png"/>
+    <div class="info">
+     <h2>
+      Facebook's New Algorithm
+     </h2>
+     <p>
+      Prioritizing authentic content
+     </p>
+     <p>
+      Facebook announced changes to its algorithm to prioritize authentic content, aiming to reduce the spread of misinformation and improve user engagement...
+     </p>
+    </div>
+   </div>
+   <div class="article">
+    <img alt="Leaked images of a new tech device" id="img4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f46413ae-5b08-4e06-bfd7-656447e432be.png"/>
+    <div class="info">
+     <h2>
+      Upcoming Tech Gadgets
+     </h2>
+     <p>
+      Leaked images and speculations
+     </p>
+     <p>
+      Recent leaks have revealed images of upcoming tech gadgets, sparking excitement and speculation among tech enthusiasts about new features and innovations...
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <p>
+    © 2023 Online Encyclopedia
+   </p>
+  </div>
+ </body>
+</html>

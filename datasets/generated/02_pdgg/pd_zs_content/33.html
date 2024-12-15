@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Local Items
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .search-bar {
+            margin: 10px;
+        }
+        .category-filters {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+        }
+        .category-filters .chip {
+            margin-right: 10px;
+        }
+        .location-filter {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .location-filter .switch {
+            margin-right: 10px;
+        }
+        .suggestions, .item-listings {
+            padding: 10px;
+        }
+        .item-card {
+            margin-bottom: 20px;
+        }
+        .sort-options {
+            margin: 10px;
+        }
+        .contact-button, .favorite-button {
+            margin-top: 10px;
+        }
+        .card-image img {
+            width: 100%;
+            height: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <div class="input-field">
+     <i class="material-icons prefix">
+      search
+     </i>
+     <input id="search" placeholder="Search for items..." type="text"/>
+    </div>
+   </div>
+   <div class="category-filters">
+    <div class="chip">
+     <i class="material-icons">
+      devices
+     </i>
+     Electronics
+    </div>
+    <div class="chip">
+     <i class="material-icons">
+      weekend
+     </i>
+     Furniture
+    </div>
+    <div class="chip">
+     <i class="material-icons">
+      checkroom
+     </i>
+     Clothing
+    </div>
+    <div class="chip">
+     <i class="material-icons">
+      sports_esports
+     </i>
+     Games
+    </div>
+    <div class="chip">
+     <i class="material-icons">
+      directions_car
+     </i>
+     Vehicles
+    </div>
+   </div>
+   <div class="location-filter">
+    <div class="switch">
+     <label>
+      Off
+      <input type="checkbox"/>
+      <span class="lever">
+      </span>
+      On
+     </label>
+    </div>
+    <select class="browser-default">
+     <option value="5">
+      5 km
+     </option>
+     <option value="10">
+      10 km
+     </option>
+     <option value="20">
+      20 km
+     </option>
+     <option value="50">
+      50 km
+     </option>
+    </select>
+   </div>
+   <div class="suggestions">
+    <h5>
+     Items Near You
+    </h5>
+    <div class="row">
+     <div class="col s6">
+      <div class="card item-card">
+       <div class="card-image">
+        <img alt="Second-hand smartphone" id="item1-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c6d0b76b-ad76-4a1b-a572-72c2a9a7e2d1.png"/>
+       </div>
+       <div class="card-content">
+        <span class="card-title">
+         Used Smartphone
+        </span>
+        <p>
+         Gently used smartphone with minimal scratches, 64GB storage.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="col s6">
+      <div class="card item-card">
+       <div class="card-image">
+        <img alt="Wooden dining table" id="item2-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/708ca6c1-aeb9-4da7-9ad6-3736e530f40e.png"/>
+       </div>
+       <div class="card-content">
+        <span class="card-title">
+         Wooden Dining Table
+        </span>
+        <p>
+         Solid oak dining table, seats 6 people, in excellent condition.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="sort-options">
+    <select class="browser-default">
+     <option value="relevance">
+      Sort by Relevance
+     </option>
+     <option value="price">
+      Sort by Price
+     </option>
+     <option value="distance">
+      Sort by Distance
+     </option>
+    </select>
+   </div>
+   <div class="item-listings">
+    <div class="card item-card">
+     <div class="card-image">
+      <img alt="Mountain bike" id="item3-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5011c242-dc78-43a2-8cc1-dd943edc664b.png"/>
+     </div>
+     <div class="card-content">
+      <span class="card-title">
+       Mountain Bike
+      </span>
+      <p>
+       High-quality mountain bike, perfect for off-road trails.
+      </p>
+      <p>
+       Price: $150
+      </p>
+      <p>
+       Distance: 8 km
+      </p>
+      <a class="btn contact-button" href="#">
+       Contact Seller
+      </a>
+      <a class="btn favorite-button" href="#">
+       Add to Favorites
+      </a>
+     </div>
+    </div>
+    <div class="card item-card">
+     <div class="card-image">
+      <img alt="Leather jacket" id="item4-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/cfe49c54-d435-4e76-a9f4-e308834ad6f9.png"/>
+     </div>
+     <div class="card-content">
+      <span class="card-title">
+       Leather Jacket
+      </span>
+      <p>
+       Stylish leather jacket, barely worn, size M.
+      </p>
+      <p>
+       Price: $80
+      </p>
+      <p>
+       Distance: 12 km
+      </p>
+      <a class="btn contact-button" href="#">
+       Contact Seller
+      </a>
+      <a class="btn favorite-button" href="#">
+       Add to Favorites
+      </a>
+     </div>
+    </div>
+    <div class="card item-card">
+     <div class="card-image">
+      <img alt="Gaming console" id="item5-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d2f5752a-7469-456a-b4ae-6368d4890896.png"/>
+     </div>
+     <div class="card-content">
+      <span class="card-title">
+       Gaming Console
+      </span>
+      <p>
+       Latest model gaming console, includes two controllers and three games.
+      </p>
+      <p>
+       Price: $300
+      </p>
+      <p>
+       Distance: 15 km
+      </p>
+      <a class="btn contact-button" href="#">
+       Contact Seller
+      </a>
+      <a class="btn favorite-button" href="#">
+       Add to Favorites
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+ </body>
+</html>

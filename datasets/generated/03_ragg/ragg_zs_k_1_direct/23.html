@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sports Team App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #D32F2F;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header .menu-icon {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 24px;
+        }
+        .header .refresh-icon {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 24px;
+        }
+        .team-info {
+            text-align: center;
+            padding: 20px;
+        }
+        .team-info h2 {
+            margin: 5px 0;
+        }
+        .team-info h3 {
+            margin: 5px 0;
+            color: #757575;
+        }
+        .stats, .roster {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        .stats div, .roster div {
+            text-align: center;
+        }
+        .section-title {
+            text-align: center;
+            color: #D32F2F;
+            margin: 20px 0 10px 0;
+            font-weight: bold;
+        }
+        .games {
+            padding: 0 10px;
+        }
+        .games .game {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        .games .game:last-child {
+            border-bottom: none;
+        }
+        .standings {
+            padding: 10px;
+            background-color: #F5F5F5;
+        }
+        .standings table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .standings th, .standings td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #E0E0E0;
+        }
+        .standings th {
+            background-color: #424242;
+            color: white;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <span class="menu-icon">
+    ☰
+   </span>
+   <h1>
+    TEAM
+   </h1>
+   <span class="refresh-icon">
+    ↻
+   </span>
+  </div>
+  <div class="team-info">
+   <h2>
+    HOUSTON ROCKETS
+   </h2>
+   <h3>
+    SOUTHWEST DIVISION
+   </h3>
+  </div>
+  <div class="stats">
+   <div>
+    <h4>
+     115.3
+    </h4>
+    <p>
+     PTS
+    </p>
+   </div>
+   <div>
+    <h4>
+     .463
+    </h4>
+    <p>
+     FG%
+    </p>
+   </div>
+   <div>
+    <h4>
+     .361
+    </h4>
+    <p>
+     3PT%
+    </p>
+   </div>
+   <div>
+    <h4>
+     .764
+    </h4>
+    <p>
+     FT%
+    </p>
+   </div>
+   <div>
+    <h4>
+     44.3
+    </h4>
+    <p>
+     REB
+    </p>
+   </div>
+   <div>
+    <h4>
+     25.3
+    </h4>
+    <p>
+     AST
+    </p>
+   </div>
+   <div>
+    <h4>
+     8.3
+    </h4>
+    <p>
+     STL
+    </p>
+   </div>
+   <div>
+    <h4>
+     4.4
+    </h4>
+    <p>
+     BLK
+    </p>
+   </div>
+  </div>
+  <div class="section-title">
+   LAST 3 GAMES
+  </div>
+  <div class="games">
+   <div class="game">
+    <span>
+     vs. DEN
+    </span>
+    <span>
+     Tue, Mar 21
+    </span>
+    <span>
+     124-125 W
+    </span>
+   </div>
+   <div class="game">
+    <span>
+     @ DEN
+    </span>
+    <span>
+     Sun, Mar 19
+    </span>
+    <span>
+     109-105 W
+    </span>
+   </div>
+   <div class="game">
+    <span>
+     @ NOP
+    </span>
+    <span>
+     Sat, Mar 18
+    </span>
+    <span>
+     112-128 L
+    </span>
+   </div>
+  </div>
+  <div class="section-title">
+   GAME TRACKER
+  </div>
+  <div class="standings">
+   <table>
+    <thead>
+     <tr>
+      <th>
+       SOUTHWEST
+      </th>
+      <th>
+       W
+      </th>
+      <th>
+       L
+      </th>
+      <th>
+       GB
+      </th>
+      <th>
+       PCT
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       Spurs
+      </td>
+      <td>
+       53
+      </td>
+      <td>
+       16
+      </td>
+      <td>
+       0.0
+      </td>
+      <td>
+       .768
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+ </body>
+</html>

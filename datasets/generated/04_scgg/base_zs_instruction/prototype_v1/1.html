@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Search
+  </title>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #ff6347;
+            color: white;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar button:hover {
+            background-color: #e5533d;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .category {
+            flex: 1 1 calc(50% - 20px);
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .category img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .category h3 {
+            margin: 10px 0 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .category:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filters select {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        @media (max-width: 600px) {
+            .category {
+                flex: 1 1 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Recipe Search
+    </h1>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for recipes by name or ingredient..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <div class="filters">
+    <select>
+     <option value="">
+      Dietary Preferences
+     </option>
+     <option value="vegetarian">
+      Vegetarian
+     </option>
+     <option value="vegan">
+      Vegan
+     </option>
+     <option value="gluten-free">
+      Gluten-Free
+     </option>
+    </select>
+    <select>
+     <option value="">
+      Difficulty Level
+     </option>
+     <option value="easy">
+      Easy
+     </option>
+     <option value="medium">
+      Medium
+     </option>
+     <option value="hard">
+      Hard
+     </option>
+    </select>
+   </div>
+   <div class="categories">
+    <div class="category">
+     <img alt="Category 1" src=""/>
+     <h3>
+      Breakfast
+     </h3>
+    </div>
+    <div class="category">
+     <img alt="Category 2" src=""/>
+     <h3>
+      Lunch
+     </h3>
+    </div>
+    <div class="category">
+     <img alt="Category 3" src=""/>
+     <h3>
+      Dinner
+     </h3>
+    </div>
+    <div class="category">
+     <img alt="Category 4" src=""/>
+     <h3>
+      Snacks
+     </h3>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

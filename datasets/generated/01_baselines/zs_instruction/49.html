@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .phrase {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .phrase:last-child {
+            border-bottom: none;
+        }
+        .english, .italian {
+            flex: 1;
+        }
+        .listen {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .listen:hover {
+            background-color: #0056b3;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Translation App
+   </h1>
+   <div class="phrase">
+    <div class="english">
+     Hello
+    </div>
+    <div class="italian">
+     Ciao
+    </div>
+    <button class="listen" onclick="playAudio('ciao')">
+     Listen
+    </button>
+   </div>
+   <div class="phrase">
+    <div class="english">
+     Goodbye
+    </div>
+    <div class="italian">
+     Arrivederci
+    </div>
+    <button class="listen" onclick="playAudio('arrivederci')">
+     Listen
+    </button>
+   </div>
+   <div class="phrase">
+    <div class="english">
+     Please
+    </div>
+    <div class="italian">
+     Per favore
+    </div>
+    <button class="listen" onclick="playAudio('per_favore')">
+     Listen
+    </button>
+   </div>
+   <div class="phrase">
+    <div class="english">
+     Thank you
+    </div>
+    <div class="italian">
+     Grazie
+    </div>
+    <button class="listen" onclick="playAudio('grazie')">
+     Listen
+    </button>
+   </div>
+  </div>
+  <audio id="ciao" src="audio/ciao.mp3">
+  </audio>
+  <audio id="arrivederci" src="audio/arrivederci.mp3">
+  </audio>
+  <audio id="per_favore" src="audio/per_favore.mp3">
+  </audio>
+  <audio id="grazie" src="audio/grazie.mp3">
+  </audio>
+  <script>
+   function playAudio(id) {
+            document.getElementById(id).play();
+        }
+  </script>
+ </body>
+</html>

@@ -1,0 +1,102 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Online Encyclopedia
+  </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .main-content {
+            margin-top: 60px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .article-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .article-card img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            padding: 10px 0;
+            text-align: center;
+        }
+        .footer-nav a {
+            margin: 0 15px;
+            color: #007bff;
+            text-decoration: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <input class="form-control" placeholder="Search articles..." type="text"/>
+  </div>
+  <div class="main-content">
+   <div class="article-card">
+    <h5>
+     Article Title 1
+    </h5>
+    <p>
+     Brief description of the article. This is a summary of the content.
+    </p>
+    <img alt="Thumbnail 1" src=""/>
+   </div>
+   <div class="article-card">
+    <h5>
+     Article Title 2
+    </h5>
+    <p>
+     Brief description of the article. This is a summary of the content.
+    </p>
+    <img alt="Thumbnail 2" src=""/>
+   </div>
+   <!-- Additional article cards can be added here -->
+  </div>
+  <div class="footer-nav">
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    Search
+   </a>
+   <a href="#">
+    More
+   </a>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

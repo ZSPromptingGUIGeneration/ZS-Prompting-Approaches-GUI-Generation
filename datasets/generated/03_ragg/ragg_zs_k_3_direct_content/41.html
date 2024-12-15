@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   User Profile
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #673ab7;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .header img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .profile-info {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .profile-info h1 {
+            margin: 10px 0;
+        }
+        .profile-info p {
+            color: #888;
+        }
+        .follow-button {
+            background-color: #673ab7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .stats div {
+            margin: 0 10px;
+            text-align: center;
+        }
+        .posts {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .post {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .post:last-child {
+            border-bottom: none;
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+        }
+        .post-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post-header div {
+            flex-grow: 1;
+        }
+        .post-header span {
+            color: #888;
+        }
+        .post-content {
+            margin-top: 10px;
+        }
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #888;
+            text-align: center;
+        }
+        .navbar a.active {
+            color: #673ab7;
+        }
+        .navbar a img {
+            width: 24px;
+            height: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Beautiful landscape with mountains and a lake" id="cover-photo" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6b8e6745-fd8e-47ff-8ea5-72bc3b963331.png"/>
+   <img alt="Profile picture of user" class="profile-pic" id="profile-pic" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/bee5428f-02f7-471f-9947-9cd9ba902365.png"/>
+  </div>
+  <div class="profile-info">
+   <h1>
+    John Doe
+   </h1>
+   <p>
+    New York, USA
+   </p>
+   <button class="follow-button">
+    Follow
+   </button>
+  </div>
+  <div class="stats">
+   <div>
+    <h3>
+     84,504
+    </h3>
+    <p>
+     Followers
+    </p>
+   </div>
+   <div>
+    <h3>
+     1,066
+    </h3>
+    <p>
+     Posts
+    </p>
+   </div>
+  </div>
+  <div class="posts">
+   <div class="post">
+    <div class="post-header">
+     <img alt="Profile picture of user" id="post1-user-pic" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/a3467f6a-27cf-4fde-a231-b4b842b544c2.png"/>
+     <div>
+      <strong>
+       John Doe
+      </strong>
+      <span>
+       1w
+      </span>
+     </div>
+    </div>
+    <div class="post-content">
+     <p>
+      "We are called to be architects of the future, not its victims." - R. Buckminster Fuller
+     </p>
+    </div>
+   </div>
+   <div class="post">
+    <div class="post-header">
+     <img alt="Profile picture of user" id="post2-user-pic" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/74bcf394-520b-4f1a-8033-6ac7a5137570.png"/>
+     <div>
+      <strong>
+       John Doe
+      </strong>
+      <span>
+       2w
+      </span>
+     </div>
+    </div>
+    <div class="post-content">
+     <p>
+      Bought a new watch! #time
+     </p>
+    </div>
+   </div>
+   <div class="post">
+    <div class="post-header">
+     <img alt="Profile picture of user" id="post3-user-pic" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0999019f-a893-4016-8775-8cfec50cea02.png"/>
+     <div>
+      <strong>
+       John Doe
+      </strong>
+      <span>
+       3w
+      </span>
+     </div>
+    </div>
+    <div class="post-content">
+     <p>
+      Had an amazing hike today! #nature
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="navbar">
+   <a class="active" href="#">
+    <img alt="Home icon" id="icon-home" src="https://via.placeholder.com/24"/>
+    <p>
+     Home
+    </p>
+   </a>
+   <a href="#">
+    <img alt="Explore icon" id="icon-explore" src="https://via.placeholder.com/24"/>
+    <p>
+     Explore
+    </p>
+   </a>
+   <a href="#">
+    <img alt="Messages icon" id="icon-messages" src="https://via.placeholder.com/24"/>
+    <p>
+     Messages
+    </p>
+   </a>
+   <a href="#">
+    <img alt="Profile icon" id="icon-profile" src="https://via.placeholder.com/24"/>
+    <p>
+     Me
+    </p>
+   </a>
+  </div>
+ </body>
+</html>
+

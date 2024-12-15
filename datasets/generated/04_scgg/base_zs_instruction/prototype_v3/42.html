@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0f7fa;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .search-bar input {
+            padding: 10px 40px 10px 20px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #0288d1;
+            border-radius: 10px;
+        }
+        .search-bar .search-icon {
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+        }
+        .search-bar .clear-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .current-weather {
+            background: #0288d1;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .current-weather h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+        .current-weather p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .current-weather .details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .current-weather .details div {
+            text-align: left;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .forecast .day {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            width: 13%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            flex-grow: 1;
+            margin: 5px;
+        }
+        .forecast .day h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #0288d1;
+        }
+        .forecast .day p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .forecast .day img {
+            width: 30px;
+            height: 30px;
+        }
+        .temp-toggle {
+            margin-top: 20px;
+        }
+        .temp-toggle button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #0288d1;
+            color: white;
+            cursor: pointer;
+        }
+        .temp-toggle button:hover {
+            background: #026c9c;
+        }
+        .temp-toggle button:disabled {
+            background: #b3e5fc;
+            cursor: not-allowed;
+        }
+        .additional-details {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .additional-details h2 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+            color: #0288d1;
+        }
+        .additional-details p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .weather-alerts {
+            background: #ffccbc;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .weather-alerts h2 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+            color: #d32f2f;
+        }
+        .weather-alerts p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        @media (max-width: 600px) {
+            .forecast .day {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Enter city or ZIP code" type="text"/>
+    <img alt="Search" class="search-icon" src=""/>
+    <img alt="Clear" class="clear-icon" src=""/>
+   </div>
+   <div class="current-weather">
+    <h1>
+     72°F / 22°C
+    </h1>
+    <p>
+     Sunny
+    </p>
+    <p>
+     New York, NY
+    </p>
+    <div class="details">
+     <div>
+      <p>
+       Humidity: 50%
+      </p>
+      <p>
+       Wind: 10 mph
+      </p>
+      <p>
+       Precipitation: 10%
+      </p>
+     </div>
+     <div>
+      <p>
+       UV Index: 5
+      </p>
+      <p>
+       Date: Oct 5, 2023
+      </p>
+      <p>
+       Air Quality: Good
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="forecast">
+    <div class="day">
+     <h3>
+      Mon
+     </h3>
+     <img alt="Sunny" src=""/>
+     <p>
+      70°F / 21°C
+     </p>
+     <p>
+      Sunny
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Tue
+     </h3>
+     <img alt="Cloudy" src=""/>
+     <p>
+      68°F / 20°C
+     </p>
+     <p>
+      Cloudy
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Wed
+     </h3>
+     <img alt="Partly Cloudy" src=""/>
+     <p>
+      75°F / 24°C
+     </p>
+     <p>
+      Partly Cloudy
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Thu
+     </h3>
+     <img alt="Sunny" src=""/>
+     <p>
+      78°F / 25°C
+     </p>
+     <p>
+      Sunny
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Fri
+     </h3>
+     <img alt="Sunny" src=""/>
+     <p>
+      80°F / 27°C
+     </p>
+     <p>
+      Sunny
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Sat
+     </h3>
+     <img alt="Rain" src=""/>
+     <p>
+      77°F / 25°C
+     </p>
+     <p>
+      Rain
+     </p>
+    </div>
+    <div class="day">
+     <h3>
+      Sun
+     </h3>
+     <img alt="Sunny" src=""/>
+     <p>
+      74°F / 23°C
+     </p>
+     <p>
+      Sunny
+     </p>
+    </div>
+   </div>
+   <div class="temp-toggle">
+    <button>
+     Toggle °F/°C
+    </button>
+   </div>
+   <div class="additional-details">
+    <h2>
+     Additional Details
+    </h2>
+    <p>
+     Sunrise: 6:45 AM
+    </p>
+    <p>
+     Sunset: 6:30 PM
+    </p>
+    <p>
+     Feels Like: 70°F / 21°C
+    </p>
+    <p>
+     Dew Point: 50°F / 10°C
+    </p>
+   </div>
+   <div class="weather-alerts">
+    <h2>
+     Weather Alerts
+    </h2>
+    <p>
+     Severe Thunderstorm Warning
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

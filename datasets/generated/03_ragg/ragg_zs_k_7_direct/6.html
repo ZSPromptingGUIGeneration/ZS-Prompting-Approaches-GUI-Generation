@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .current-weather {
+            background-color: #87ceeb;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .forecast {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .forecast-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .forecast-item:last-child {
+            border-bottom: none;
+        }
+        .forecast-item .day {
+            font-weight: bold;
+        }
+        .forecast-item .temp {
+            font-weight: bold;
+        }
+        .details {
+            margin: 10px;
+            padding: 10px;
+            background-color: #d3d3d3;
+            border-radius: 10px;
+        }
+        .chart {
+            margin: 10px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Weather App
+   </h1>
+  </div>
+  <div class="current-weather">
+   <h2>
+    San Francisco
+   </h2>
+   <div>
+    <span>
+     55°F
+    </span>
+    <span>
+     Light Rain
+    </span>
+   </div>
+   <div>
+    <span>
+     Feels like 55°F
+    </span>
+   </div>
+  </div>
+  <div class="forecast">
+   <div class="forecast-item">
+    <div class="day">
+     Friday, 12 Jan
+    </div>
+    <div class="icon">
+     🌧️
+    </div>
+    <div class="temp">
+     0° | 3°
+    </div>
+    <div class="precipitation">
+     4 mm
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div class="day">
+     Saturday, 13 Jan
+    </div>
+    <div class="icon">
+     🌧️
+    </div>
+    <div class="temp">
+     0° | 2°
+    </div>
+    <div class="precipitation">
+     6 mm
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div class="day">
+     Sunday, 14 Jan
+    </div>
+    <div class="icon">
+     🌧️
+    </div>
+    <div class="temp">
+     -4° | -1°
+    </div>
+    <div class="precipitation">
+     11 mm
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div class="day">
+     Monday, 15 Jan
+    </div>
+    <div class="icon">
+     🌧️
+    </div>
+    <div class="temp">
+     -5° | -2°
+    </div>
+    <div class="precipitation">
+     1 mm
+    </div>
+   </div>
+   <div class="forecast-item">
+    <div class="day">
+     Tuesday, 16 Jan
+    </div>
+    <div class="icon">
+     ⛅
+    </div>
+    <div class="temp">
+     -5° | -1°
+    </div>
+    <div class="precipitation">
+     0 mm
+    </div>
+   </div>
+  </div>
+  <div class="details">
+   <h3>
+    Details
+   </h3>
+   <p>
+    Wind: 8.7 mph SW
+   </p>
+   <p>
+    Humidity: 83%
+   </p>
+   <p>
+    Pressure: 1009 mBar
+   </p>
+   <p>
+    Visibility: 8.1 mi
+   </p>
+  </div>
+  <div class="chart">
+   <h3>
+    Temperature Chart
+   </h3>
+   <img alt="Temperature Chart" src=""/>
+  </div>
+ </body>
+</html>

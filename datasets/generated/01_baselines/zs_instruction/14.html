@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Platform
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #1db954;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .music-item {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .music-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .music-item .details {
+            flex-grow: 1;
+        }
+        .music-item .details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .music-item .details p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        .music-item .play-button {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Music Platform
+   </h1>
+  </header>
+  <div class="container">
+   <div class="music-item">
+    <img alt="Album Art" src=""/>
+    <div class="details">
+     <h3>
+      Song Title 1
+     </h3>
+     <p>
+      Artist Name
+     </p>
+    </div>
+    <button class="play-button">
+     ▶
+    </button>
+   </div>
+   <div class="music-item">
+    <img alt="Album Art" src=""/>
+    <div class="details">
+     <h3>
+      Song Title 2
+     </h3>
+     <p>
+      Artist Name
+     </p>
+    </div>
+    <button class="play-button">
+     ▶
+    </button>
+   </div>
+   <div class="music-item">
+    <img alt="Album Art" src=""/>
+    <div class="details">
+     <h3>
+      Song Title 3
+     </h3>
+     <p>
+      Artist Name
+     </p>
+    </div>
+    <button class="play-button">
+     ▶
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

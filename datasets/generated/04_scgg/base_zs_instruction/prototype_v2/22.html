@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Upcoming Shows
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #eaeaea;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .search-filter-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-bar {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .filter-options {
+            display: flex;
+            gap: 10px;
+        }
+        .filter-options select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .show-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .show-item {
+            border-bottom: 1px solid #ddd;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: background-color 0.3s;
+        }
+        .show-item:last-child {
+            border-bottom: none;
+        }
+        .show-item:hover {
+            background-color: #f9f9f9;
+        }
+        .show-thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .show-details {
+            flex: 1;
+        }
+        .show-title {
+            font-size: 22px;
+            color: #333;
+            font-weight: bold;
+        }
+        .show-type {
+            font-size: 14px;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 5px 10px;
+            border-radius: 12px;
+            margin-right: 10px;
+        }
+        .show-type.film {
+            background-color: #FF5722;
+        }
+        .show-description {
+            font-size: 14px;
+            color: #777;
+            margin-top: 5px;
+        }
+        .show-date-time {
+            font-size: 14px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .show-genre {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+        .user-notes {
+            margin-top: 10px;
+        }
+        .user-notes textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .sort-options {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .sort-options select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    Upcoming Shows
+   </div>
+   <div class="search-filter-container">
+    <div class="search-bar">
+     <input placeholder="Search shows..." type="text"/>
+    </div>
+    <div class="filter-options">
+     <select>
+      <option value="">
+       Filter by Genre
+      </option>
+      <option value="drama">
+       Drama
+      </option>
+      <option value="action">
+       Action
+      </option>
+      <option value="comedy">
+       Comedy
+      </option>
+      <option value="thriller">
+       Thriller
+      </option>
+     </select>
+     <select>
+      <option value="">
+       Filter by Type
+      </option>
+      <option value="season">
+       New Season
+      </option>
+      <option value="film">
+       New Film
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="sort-options">
+    <select>
+     <option value="">
+      Sort by
+     </option>
+     <option value="date">
+      Date
+     </option>
+     <option value="title">
+      Title
+     </option>
+     <option value="genre">
+      Genre
+     </option>
+    </select>
+   </div>
+   <ul class="show-list">
+    <li class="show-item">
+     <img alt="Show Thumbnail" class="show-thumbnail" src=""/>
+     <div class="show-details">
+      <span class="show-title">
+       Show Title 1
+      </span>
+      <span class="show-type">
+       New Season
+      </span>
+      <div class="show-description">
+       A brief description of Show Title 1.
+      </div>
+      <div class="show-date-time">
+       Date: 2023-10-15, Time: 20:00
+      </div>
+      <div class="show-genre">
+       Genre: Drama
+      </div>
+      <div class="user-notes">
+       <textarea placeholder="Add personal notes..."></textarea>
+      </div>
+     </div>
+    </li>
+    <li class="show-item">
+     <img alt="Show Thumbnail" class="show-thumbnail" src=""/>
+     <div class="show-details">
+      <span class="show-title">
+       Show Title 2
+      </span>
+      <span class="show-type film">
+       New Film
+      </span>
+      <div class="show-description">
+       A brief description of Show Title 2.
+      </div>
+      <div class="show-date-time">
+       Date: 2023-10-20, Time: 18:00
+      </div>
+      <div class="show-genre">
+       Genre: Action
+      </div>
+      <div class="user-notes">
+       <textarea placeholder="Add personal notes..."></textarea>
+      </div>
+     </div>
+    </li>
+    <li class="show-item">
+     <img alt="Show Thumbnail" class="show-thumbnail" src=""/>
+     <div class="show-details">
+      <span class="show-title">
+       Show Title 3
+      </span>
+      <span class="show-type">
+       New Season
+      </span>
+      <div class="show-description">
+       A brief description of Show Title 3.
+      </div>
+      <div class="show-date-time">
+       Date: 2023-10-25, Time: 21:00
+      </div>
+      <div class="show-genre">
+       Genre: Comedy
+      </div>
+      <div class="user-notes">
+       <textarea placeholder="Add personal notes..."></textarea>
+      </div>
+     </div>
+    </li>
+    <li class="show-item">
+     <img alt="Show Thumbnail" class="show-thumbnail" src=""/>
+     <div class="show-details">
+      <span class="show-title">
+       Show Title 4
+      </span>
+      <span class="show-type film">
+       New Film
+      </span>
+      <div class="show-description">
+       A brief description of Show Title 4.
+      </div>
+      <div class="show-date-time">
+       Date: 2023-10-30, Time: 19:00
+      </div>
+      <div class="show-genre">
+       Genre: Thriller
+      </div>
+      <div class="user-notes">
+       <textarea placeholder="Add personal notes..."></textarea>
+      </div>
+     </div>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>

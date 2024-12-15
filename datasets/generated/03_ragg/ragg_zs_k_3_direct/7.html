@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Schedule App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .tab-menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff;
+            border-bottom: 1px solid #dddddd;
+        }
+        .tab-menu div {
+            padding: 10px 0;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+        }
+        .tab-menu div.active {
+            border-bottom: 3px solid #003366;
+            color: #003366;
+        }
+        .match-day {
+            background-color: #ffffff;
+            margin-top: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #dddddd;
+        }
+        .match-day h3 {
+            margin: 0;
+            color: #666666;
+            font-size: 14px;
+        }
+        .match {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .match:last-child {
+            border-bottom: none;
+        }
+        .team {
+            display: flex;
+            align-items: center;
+        }
+        .team-logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .team-name {
+            font-size: 16px;
+            color: #333333;
+        }
+        .match-time {
+            font-size: 14px;
+            color: #999999;
+        }
+        .notification {
+            font-size: 18px;
+            color: #cccccc;
+            margin-right: 10px;
+        }
+        .result {
+            font-size: 16px;
+            color: #333333;
+        }
+        .result.postp {
+            color: red;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Schedule App
+  </div>
+  <div class="tab-menu">
+   <div class="active">
+    Schedule
+   </div>
+   <div>
+    Standings
+   </div>
+   <div>
+    Top Scorers
+   </div>
+  </div>
+  <div class="match-day">
+   <h3>
+    SUNDAY, MARCH 12, 2017
+   </h3>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Southampton" class="team-logo" src=""/>
+     <span class="team-name">
+      Southampton
+     </span>
+    </div>
+    <div class="match-time">
+     09:30
+    </div>
+    <div class="result postp">
+     Postp.
+    </div>
+    <div class="team">
+     <img alt="Manchester United" class="team-logo" src=""/>
+     <span class="team-name">
+      Manchester United
+     </span>
+    </div>
+   </div>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Liverpool" class="team-logo" src=""/>
+     <span class="team-name">
+      Liverpool
+     </span>
+    </div>
+    <div class="result">
+     2 - 1
+    </div>
+    <div class="team">
+     <img alt="Burnley" class="team-logo" src=""/>
+     <span class="team-name">
+      Burnley
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="match-day">
+   <h3>
+    MONDAY, MARCH 13, 2017
+   </h3>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Chelsea" class="team-logo" src=""/>
+     <span class="team-name">
+      Chelsea
+     </span>
+    </div>
+    <div class="match-time">
+     16:00
+    </div>
+    <div class="result postp">
+     Postp.
+    </div>
+    <div class="team">
+     <img alt="Watford" class="team-logo" src=""/>
+     <span class="team-name">
+      Watford
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="match-day">
+   <h3>
+    SATURDAY, MARCH 18, 2017
+   </h3>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="West Bromwich Albion" class="team-logo" src=""/>
+     <span class="team-name">
+      West Bromwich Albion
+     </span>
+    </div>
+    <div class="match-time">
+     08:30
+    </div>
+    <div class="team">
+     <img alt="Arsenal" class="team-logo" src=""/>
+     <span class="team-name">
+      Arsenal
+     </span>
+    </div>
+   </div>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Crystal Palace" class="team-logo" src=""/>
+     <span class="team-name">
+      Crystal Palace
+     </span>
+    </div>
+    <div class="match-time">
+     11:00
+    </div>
+    <div class="team">
+     <img alt="Watford" class="team-logo" src=""/>
+     <span class="team-name">
+      Watford
+     </span>
+    </div>
+   </div>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Everton" class="team-logo" src=""/>
+     <span class="team-name">
+      Everton
+     </span>
+    </div>
+    <div class="match-time">
+     11:00
+    </div>
+    <div class="team">
+     <img alt="Hull City" class="team-logo" src=""/>
+     <span class="team-name">
+      Hull City
+     </span>
+    </div>
+   </div>
+   <div class="match">
+    <div class="notification">
+     🔔
+    </div>
+    <div class="team">
+     <img alt="Stoke City" class="team-logo" src=""/>
+     <span class="team-name">
+      Stoke City
+     </span>
+    </div>
+    <div class="match-time">
+     11:00
+    </div>
+    <div class="team">
+     <img alt="Chelsea" class="team-logo" src=""/>
+     <span class="team-name">
+      Chelsea
+     </span>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

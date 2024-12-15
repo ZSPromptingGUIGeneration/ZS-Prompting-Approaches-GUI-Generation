@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather Forecast
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0f7fa;
+        }
+        .header {
+            background: #0288d1;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .location {
+            font-size: 1.2rem;
+        }
+        .forecast {
+            display: flex;
+            overflow-x: auto;
+            padding: 1rem;
+        }
+        .hourly {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-right: 1rem;
+            padding: 1rem;
+            text-align: center;
+            min-width: 80px;
+        }
+        .hourly:last-child {
+            margin-right: 0;
+        }
+        .time {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .temp {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="location">
+    Current Location: New York, NY
+   </div>
+  </div>
+  <div class="forecast">
+   <div class="hourly">
+    <div class="time">
+     1 PM
+    </div>
+    <div class="icon">
+     ☀️
+    </div>
+    <div class="temp">
+     75°F
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     2 PM
+    </div>
+    <div class="icon">
+     🌤️
+    </div>
+    <div class="temp">
+     76°F
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     3 PM
+    </div>
+    <div class="icon">
+     🌥️
+    </div>
+    <div class="temp">
+     74°F
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     4 PM
+    </div>
+    <div class="icon">
+     ☁️
+    </div>
+    <div class="temp">
+     73°F
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     5 PM
+    </div>
+    <div class="icon">
+     🌧️
+    </div>
+    <div class="temp">
+     70°F
+    </div>
+   </div>
+   <div class="hourly">
+    <div class="time">
+     6 PM
+    </div>
+    <div class="icon">
+     🌦️
+    </div>
+    <div class="temp">
+     68°F
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

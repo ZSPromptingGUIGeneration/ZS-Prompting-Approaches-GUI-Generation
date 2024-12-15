@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Public Transportation Route
+  </title>
+  <style>
+   body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #007bff;
+            color: #fff;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .search-bar {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .search-bar label {
+            width: 80%;
+            text-align: left;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .search-bar input::placeholder {
+            color: #888;
+        }
+        .filter-options {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .filter-options label {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .filter-options input[type="checkbox"] {
+            display: none;
+        }
+        .filter-options input[type="checkbox"]:checked + label {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .filter-options button {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .route-summary {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .route-summary p {
+            margin: 10px 0;
+        }
+        .map {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .map img {
+            max-width: 100%;
+            height: auto;
+        }
+        .route {
+            margin: 20px 0;
+        }
+        .route-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .route-item:last-child {
+            border-bottom: none;
+        }
+        .route-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .route-details {
+            flex: 1;
+        }
+        .route-time, .fare-breakdown {
+            color: #888;
+        }
+        .route-type {
+            font-weight: bold;
+        }
+        .real-time-updates {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .alternative-routes {
+            margin: 20px 0;
+        }
+        .alternative-route {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .alternative-route p {
+            margin: 0;
+            flex: 1;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007bff;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .search-bar input {
+                width: 100%;
+            }
+            .route-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Route from Start Point to Destination
+    </h1>
+   </div>
+   <div class="search-bar">
+    <label for="start-point">
+     Start Point
+    </label>
+    <input aria-label="Enter start point" id="start-point" placeholder="Enter start point" type="text"/>
+    <label for="destination">
+     Destination
+    </label>
+    <input aria-label="Enter destination" id="destination" placeholder="Enter destination" type="text"/>
+    <label for="datetime">
+     Date and Time
+    </label>
+    <input aria-label="Select date and time" id="datetime" type="datetime-local"/>
+   </div>
+   <div class="filter-options">
+    <input id="bus" type="checkbox"/>
+    <label for="bus">
+     Bus
+    </label>
+    <input id="train" type="checkbox"/>
+    <label for="train">
+     Train
+    </label>
+    <input id="walk" type="checkbox"/>
+    <label for="walk">
+     Walk
+    </label>
+    <input id="shortest-time" type="checkbox"/>
+    <label for="shortest-time">
+     Shortest Time
+    </label>
+    <input id="least-transfers" type="checkbox"/>
+    <label for="least-transfers">
+     Least Transfers
+    </label>
+    <input id="most-accessible" type="checkbox"/>
+    <label for="most-accessible">
+     Most Accessible
+    </label>
+    <button>
+     Apply Filters
+    </button>
+   </div>
+   <div class="route-summary">
+    <p>
+     <strong>
+      Total Distance:
+     </strong>
+     10 miles
+    </p>
+    <p>
+     <strong>
+      Total Time:
+     </strong>
+     45 minutes
+    </p>
+    <p>
+     <strong>
+      Total Fare:
+     </strong>
+     $2.50
+    </p>
+   </div>
+   <div class="map">
+    <img alt="Map showing the route from Start Point to Destination" src=""/>
+   </div>
+   <div class="route">
+    <div class="route-item">
+     <div class="route-icon">
+      1
+     </div>
+     <div class="route-details">
+      <div class="route-type">
+       Bus
+      </div>
+      <div>
+       Start Point
+      </div>
+      <div class="route-time">
+       08:00 AM - 08:15 AM
+      </div>
+      <div class="fare-breakdown">
+       Fare: $0.50
+      </div>
+     </div>
+    </div>
+    <div class="route-item">
+     <div class="route-icon">
+      2
+     </div>
+     <div class="route-details">
+      <div class="route-type">
+       Bus
+      </div>
+      <div>
+       Bus Stop A
+      </div>
+      <div class="route-time">
+       08:15 AM - 08:30 AM
+      </div>
+      <div class="fare-breakdown">
+       Fare: $0.50
+      </div>
+     </div>
+    </div>
+    <div class="route-item">
+     <div class="route-icon">
+      3
+     </div>
+     <div class="route-details">
+      <div class="route-type">
+       Train
+      </div>
+      <div>
+       Bus Stop B
+      </div>
+      <div class="route-time">
+       08:30 AM - 08:45 AM
+      </div>
+      <div class="fare-breakdown">
+       Fare: $1.00
+      </div>
+     </div>
+    </div>
+    <div class="route-item">
+     <div class="route-icon">
+      4
+     </div>
+     <div class="route-details">
+      <div class="route-type">
+       Walk
+      </div>
+      <div>
+       Destination
+      </div>
+      <div class="route-time">
+       08:45 AM
+      </div>
+      <div class="fare-breakdown">
+       Fare: $0.50
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="real-time-updates">
+    <p>
+     No delays or changes reported.
+     <br/>
+     <small>
+      Last updated: 08:00 AM
+     </small>
+    </p>
+   </div>
+   <div class="alternative-routes">
+    <h2>
+     Alternative Routes
+    </h2>
+    <div class="alternative-route">
+     <p>
+      Alternative Route 1: 50 minutes | Fare: $2.00
+     </p>
+    </div>
+    <div class="alternative-route">
+     <p>
+      Alternative Route 2: 60 minutes | Fare: $2.50
+     </p>
+    </div>
+   </div>
+   <div class="footer">
+    <p>
+     Estimated Travel Time: 45 minutes | Fare: $2.50
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Settings
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+        .header {
+            background-color: #6200ea;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .profile div {
+            color: #fff;
+        }
+        .section-header {
+            font-size: 22px;
+            margin: 20px 0 10px;
+            color: #6200ea;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .option {
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .option:last-child {
+            border-bottom: none;
+        }
+        .option:hover {
+            background-color: #eaeaea;
+        }
+        .option h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .option p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .option .toggle {
+            display: flex;
+            align-items: center;
+        }
+        .option input[type="checkbox"] {
+            width: 40px;
+            height: 20px;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #ddd;
+            outline: none;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option input[type="checkbox"]:checked {
+            background-color: #6200ea;
+        }
+        .option input[type="checkbox"]::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #fff;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s;
+        }
+        .option input[type="checkbox"]:checked::before {
+            transform: translateX(20px);
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .buttons button:hover {
+            opacity: 0.9;
+        }
+        .save-btn {
+            background-color: #6200ea;
+            color: #fff;
+        }
+        .cancel-btn {
+            background-color: #ddd;
+            color: #333;
+        }
+        .reset-btn {
+            background-color: #ff4081;
+            color: #fff;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .option label {
+            display: block;
+            cursor: pointer;
+        }
+        .option input[type="checkbox"]:focus {
+            box-shadow: 0 0 3px 3px #6200ea;
+        }
+        .language-select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .help-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .help-link a {
+            color: #6200ea;
+            text-decoration: none;
+        }
+        .help-link a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .buttons button {
+                margin-bottom: 10px;
+            }
+            .buttons button:last-child {
+                margin-bottom: 0;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Settings
+    </h1>
+   </div>
+   <div class="profile">
+    <img alt="Profile Picture" height="50" src="" width="50"/>
+    <div>
+     <h2>
+      User Name
+     </h2>
+     <p>
+      user@example.com
+     </p>
+    </div>
+   </div>
+   <div class="section-header">
+    General
+   </div>
+   <div class="option tooltip">
+    <label>
+     <div>
+      <h2>
+       Notifications
+      </h2>
+      <p>
+       Receive notifications for updates and offers
+      </p>
+     </div>
+     <div class="toggle">
+      <input checked="" id="notifications" type="checkbox"/>
+     </div>
+    </label>
+    <span class="tooltiptext">
+     Enable this to receive updates and offers notifications
+    </span>
+   </div>
+   <div class="option tooltip">
+    <label>
+     <div>
+      <h2>
+       Auto-Update
+      </h2>
+      <p>
+       Automatically update the application
+      </p>
+     </div>
+     <div class="toggle">
+      <input checked="" id="auto-update" type="checkbox"/>
+     </div>
+    </label>
+    <span class="tooltiptext">
+     Enable this to automatically update the application
+    </span>
+   </div>
+   <div class="section-header">
+    Appearance
+   </div>
+   <div class="option tooltip">
+    <label>
+     <div>
+      <h2>
+       Dark Mode
+      </h2>
+      <p>
+       Enable dark theme for the application
+      </p>
+     </div>
+     <div class="toggle">
+      <input id="dark-mode" type="checkbox"/>
+     </div>
+    </label>
+    <span class="tooltiptext">
+     Enable this to switch to dark mode
+    </span>
+   </div>
+   <div class="option tooltip">
+    <label>
+     <div>
+      <h2>
+       Text Size
+      </h2>
+      <p>
+       Adjust the text size for better readability
+      </p>
+     </div>
+     <div class="toggle">
+      <select class="language-select" id="text-size">
+       <option value="small">
+        Small
+       </option>
+       <option selected="" value="medium">
+        Medium
+       </option>
+       <option value="large">
+        Large
+       </option>
+      </select>
+     </div>
+    </label>
+    <span class="tooltiptext">
+     Select the text size for better readability
+    </span>
+   </div>
+   <div class="section-header">
+    Privacy
+   </div>
+   <div class="option tooltip">
+    <label>
+     <div>
+      <h2>
+       Location Access
+      </h2>
+      <p>
+       Allow the application to access your location
+      </p>
+     </div>
+     <div class="toggle">
+      <input id="location-access" type="checkbox"/>
+     </div>
+    </label>
+    <span class="tooltiptext">
+     Enable this to allow the app to access your location
+    </span>
+   </div>
+   <div class="section-header">
+    Language
+   </div>
+   <div class="option tooltip">
+    <label>
+     <div>
+      <h2>
+       Language
+      </h2>
+      <p>
+       Change the language of the app
+      </p>
+     </div>
+     <div class="toggle">
+      <select class="language-select" id="language">
+       <option selected="" value="en">
+        English
+       </option>
+       <option value="es">
+        Spanish
+       </option>
+       <option value="fr">
+        French
+       </option>
+       <option value="de">
+        German
+       </option>
+      </select>
+     </div>
+    </label>
+    <span class="tooltiptext">
+     Select the language for the application
+    </span>
+   </div>
+   <div class="buttons">
+    <button class="reset-btn">
+     Reset to Defaults
+    </button>
+    <button class="cancel-btn">
+     Cancel
+    </button>
+    <button class="save-btn">
+     Save
+    </button>
+   </div>
+   <div class="help-link">
+    <a href="#">
+     Need help? Visit our FAQ
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Mobile Profile Page
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        .cover-photo {
+            width: 100%;
+            height: 200px;
+            background: url('cover-photo.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url('profile-picture.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .user-info {
+            text-align: center;
+            padding: 60px 20px 20px;
+        }
+        .user-info h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .user-info p {
+            color: #555;
+            margin: 5px 0;
+        }
+        .buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .follow-btn {
+            background-color: #6200ea;
+            color: #fff;
+        }
+        .message-btn {
+            background-color: #03dac6;
+            color: #fff;
+        }
+        .more-options {
+            background: none;
+            font-size: 24px;
+        }
+        .activity-overview {
+            padding: 20px;
+        }
+        .activity-overview .section-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .posts, .photos, .friends {
+            margin-bottom: 20px;
+        }
+        .post, .photo, .friend {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .engagement-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .engagement-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #6200ea;
+            color: #fff;
+        }
+        .tabs button {
+            flex: 1;
+            padding: 10px;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .contextual-info, .contact-info {
+            padding: 20px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        .contextual-info h2, .contact-info h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .stories {
+            display: flex;
+            overflow-x: scroll;
+            padding: 10px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        .story {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: url('story.jpg') no-repeat center center;
+            background-size: cover;
+            margin-right: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="cover-photo" id="cover-photo-1">
+   </div>
+   <div class="profile-picture" id="profile-picture-1">
+   </div>
+   <div class="user-info">
+    <h1>
+     Jane Smith
+    </h1>
+    <p>
+     @janesmith
+    </p>
+    <p>
+     Graphic Designer, Art Lover
+    </p>
+   </div>
+   <div class="buttons">
+    <button class="follow-btn">
+     Follow
+    </button>
+    <button class="message-btn">
+     Message
+    </button>
+    <button class="more-options">
+     ⋮
+    </button>
+   </div>
+   <div class="activity-overview">
+    <div class="posts">
+     <div class="section-title">
+      Posts
+     </div>
+     <div class="post">
+      <p>
+       Excited to share my latest artwork! #art #design
+      </p>
+      <div class="engagement-buttons">
+       <button>
+        Like
+       </button>
+       <button>
+        Comment
+       </button>
+       <button>
+        Share
+       </button>
+      </div>
+     </div>
+     <div class="post">
+      <p>
+       Had a great time at the art exhibition today. #inspiration
+      </p>
+      <div class="engagement-buttons">
+       <button>
+        Like
+       </button>
+       <button>
+        Comment
+       </button>
+       <button>
+        Share
+       </button>
+      </div>
+     </div>
+     <div class="post">
+      <p>
+       Working on a new project, stay tuned! #creativeprocess
+      </p>
+      <div class="engagement-buttons">
+       <button>
+        Like
+       </button>
+       <button>
+        Comment
+       </button>
+       <button>
+        Share
+       </button>
+      </div>
+     </div>
+    </div>
+    <div class="photos">
+     <div class="section-title">
+      Photos
+     </div>
+     <div class="photo" id="photo-1">
+      Sunset over mountains
+     </div>
+     <div class="photo" id="photo-2">
+      City skyline at night
+     </div>
+     <div class="photo" id="photo-3">
+      Abstract painting
+     </div>
+    </div>
+    <div class="friends">
+     <div class="section-title">
+      Friends
+     </div>
+     <div class="friend" id="friend-1">
+      Alice Johnson
+     </div>
+     <div class="friend" id="friend-2">
+      Robert Brown
+     </div>
+     <div class="friend" id="friend-3">
+      Emily Davis
+     </div>
+    </div>
+   </div>
+   <div class="tabs">
+    <button>
+     Posts
+    </button>
+    <button>
+     Photos
+    </button>
+    <button>
+     Friends
+    </button>
+   </div>
+   <div class="contextual-info">
+    <h2>
+     About
+    </h2>
+    <p>
+     Location: Los Angeles, USA
+    </p>
+    <p>
+     Work: Graphic Designer at ABC Studio
+    </p>
+    <p>
+     Education: B.A. in Fine Arts
+    </p>
+   </div>
+   <div class="contact-info">
+    <h2>
+     Contact
+    </h2>
+    <p>
+     Email: janesmith@example.com
+    </p>
+    <p>
+     Phone: +9876543210
+    </p>
+   </div>
+   <div class="stories">
+    <div class="story" id="story-1">
+    </div>
+    <div class="story" id="story-2">
+    </div>
+    <div class="story" id="story-3">
+    </div>
+    <div class="story" id="story-4">
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

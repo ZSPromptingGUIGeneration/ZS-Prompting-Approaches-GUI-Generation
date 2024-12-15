@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Finder
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .top-nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .top-nav-bar .menu-icon, .top-nav-bar .veg-toggle, .top-nav-bar .add-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+        }
+        .category-tabs {
+            display: flex;
+            overflow-x: auto;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .category-tabs .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .content-section {
+            padding: 20px;
+        }
+        .content-section .section-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .content-section .recipe-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .content-section .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+        .content-section .recipe-card .info {
+            padding: 10px;
+        }
+        .content-section .recipe-card .info .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .content-section .recipe-card .info .description {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .bottom-nav-bar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .bottom-nav-bar .nav-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-nav-bar">
+   <div class="menu-icon">
+    ☰
+   </div>
+   <div class="veg-toggle">
+    VEG
+   </div>
+   <div class="add-icon">
+    +
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search for recipes..." type="text"/>
+  </div>
+  <div class="category-tabs">
+   <div class="tab">
+    Daily Picks
+   </div>
+   <div class="tab">
+    Yummies for U
+   </div>
+   <div class="tab">
+    Hottest
+   </div>
+   <div class="tab">
+    Aid for Clumsy Cook
+   </div>
+   <div class="tab">
+    Speedy &amp; Simple
+   </div>
+  </div>
+  <div class="content-section">
+   <div class="section-title">
+    Daily Picks
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="info">
+     <div class="title">
+      Delicious Pasta
+     </div>
+     <div class="description">
+      A simple and tasty pasta recipe for you to try.
+     </div>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="info">
+     <div class="title">
+      Yummy Pancakes
+     </div>
+     <div class="description">
+      Fluffy and delicious pancakes for breakfast.
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="bottom-nav-bar">
+   <div class="nav-icon">
+    ⌂
+   </div>
+   <div class="nav-icon">
+    ★
+   </div>
+   <div class="nav-icon">
+    📖
+   </div>
+   <div class="nav-icon">
+    📷
+   </div>
+   <div class="nav-icon">
+    🛒
+   </div>
+  </div>
+ </body>
+</html>

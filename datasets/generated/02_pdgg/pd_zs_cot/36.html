@@ -1,0 +1,115 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Public Transport App
+  </title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   .map-container {
+            height: 50vh;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .toast {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1;
+        }
+  </style>
+ </head>
+ <body>
+  <nav class="navbar navbar-light bg-light">
+   <button class="btn btn-outline-secondary">
+    Back
+   </button>
+   <span class="navbar-brand mx-auto">
+    Transport App
+   </span>
+   <div class="btn-group">
+    <button class="btn btn-outline-secondary">
+     Refresh
+    </button>
+    <button class="btn btn-outline-secondary">
+     Settings
+    </button>
+   </div>
+  </nav>
+  <div class="container mt-3">
+   <div class="form-group">
+    <input class="form-control mb-2" placeholder="Enter origin" type="text"/>
+    <input class="form-control mb-2" placeholder="Enter destination" type="text"/>
+    <button class="btn btn-primary btn-block">
+     Search
+    </button>
+   </div>
+   <div class="map-container bg-secondary">
+    <!-- Map will be embedded here -->
+   </div>
+   <ul class="list-group mt-3">
+    <li class="list-group-item">
+     <div class="d-flex justify-content-between">
+      <span>
+       Bus 101
+      </span>
+      <span>
+       Departure: 10:00 AM
+      </span>
+      <span>
+       Arrival: 10:30 AM
+      </span>
+      <span>
+       30 mins
+      </span>
+     </div>
+    </li>
+    <li class="list-group-item">
+     <div class="d-flex justify-content-between">
+      <span>
+       Train A
+      </span>
+      <span>
+       Departure: 10:15 AM
+      </span>
+      <span>
+       Arrival: 10:45 AM
+      </span>
+      <span>
+       30 mins
+      </span>
+     </div>
+    </li>
+    <!-- More transportation options -->
+   </ul>
+  </div>
+  <div aria-atomic="true" aria-live="assertive" class="toast" role="alert">
+   <div class="toast-header">
+    <strong class="mr-auto">
+     Update
+    </strong>
+    <small>
+     Just now
+    </small>
+    <button aria-label="Close" class="ml-2 mb-1 close" data-dismiss="toast" type="button">
+     <span aria-hidden="true">
+      ×
+     </span>
+    </button>
+   </div>
+   <div class="toast-body">
+    There is a 5-minute delay on Bus 101.
+   </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

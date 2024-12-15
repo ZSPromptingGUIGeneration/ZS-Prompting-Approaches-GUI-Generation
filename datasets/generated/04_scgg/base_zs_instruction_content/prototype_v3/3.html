@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Organisational App
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .input-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .input-group select, .input-group input, .input-group textarea {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+        .input-group button {
+            padding: 10px 15px;
+            border: none;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .input-group button:hover {
+            background: #218838;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e9ecef;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul li button {
+            background: #dc3545;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+        ul li button:hover {
+            background: #c82333;
+        }
+        ul li:hover {
+            background: #d6d8db;
+        }
+        .notes {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .category {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .search-bar button {
+            padding: 10px 15px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 10px;
+            font-size: 1em;
+        }
+        .search-bar button:hover {
+            background: #0056b3;
+        }
+        .sort-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .sort-options button {
+            padding: 10px 15px;
+            border: none;
+            background: #17a2b8;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .sort-options button:hover {
+            background: #138496;
+        }
+        .priority {
+            margin-right: 10px;
+        }
+        .quantity {
+            margin-right: 10px;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .section h2 {
+                font-size: 1.5em;
+            }
+            .input-group {
+                flex-direction: column;
+            }
+            .input-group select, .input-group input, .input-group button, .input-group textarea {
+                margin: 5px 0;
+                flex: none;
+            }
+            .search-bar {
+                flex-direction: column;
+            }
+            .search-bar input, .search-bar button {
+                margin: 5px 0;
+            }
+            .sort-options {
+                flex-direction: column;
+            }
+            .sort-options button {
+                margin: 5px 0;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Organisational App
+   </h1>
+   <div class="section">
+    <h2>
+     Grocery List
+    </h2>
+    <div class="search-bar">
+     <input id="grocery-search" placeholder="Search grocery items..." type="text"/>
+     <button aria-label="Search grocery items">
+      Search
+     </button>
+    </div>
+    <div class="sort-options">
+     <button aria-label="Sort grocery items alphabetically">
+      Sort A-Z
+     </button>
+     <button aria-label="Sort grocery items by date added">
+      Sort by Date
+     </button>
+    </div>
+    <div class="input-group">
+     <select aria-label="Select grocery category" id="grocery-category">
+      <option value="">
+       Select category...
+      </option>
+      <option value="fruits">
+       Fruits
+      </option>
+      <option value="vegetables">
+       Vegetables
+      </option>
+      <option value="dairy">
+       Dairy
+      </option>
+      <option value="bakery">
+       Bakery
+      </option>
+      <option value="meat">
+       Meat
+      </option>
+     </select>
+     <input id="grocery-input" placeholder="Enter a grocery item (e.g., 2 liters of Milk)" required="" type="text"/>
+     <input class="quantity" id="grocery-quantity" min="1" placeholder="Quantity" required="" type="number"/>
+     <select aria-label="Select priority level" class="priority" id="grocery-priority">
+      <option value="">
+       Priority...
+      </option>
+      <option value="high">
+       High
+      </option>
+      <option value="medium">
+       Medium
+      </option>
+      <option value="low">
+       Low
+      </option>
+     </select>
+     <button aria-label="Add grocery item" onclick="addGrocery()">
+      Add
+     </button>
+    </div>
+    <ul aria-live="polite" id="grocery-list">
+     <li>
+      <span>
+       2 liters of Milk
+      </span>
+      <button aria-label="Remove Milk">
+       Remove
+      </button>
+     </li>
+     <li>
+      <span>
+       1 dozen Eggs
+      </span>
+      <button aria-label="Remove Eggs">
+       Remove
+      </button>
+     </li>
+     <li>
+      <span>
+       1 loaf of Bread
+      </span>
+      <button aria-label="Remove Bread">
+       Remove
+      </button>
+     </li>
+     <li>
+      <span>
+       6 Apples
+      </span>
+      <button aria-label="Remove Apples">
+       Remove
+      </button>
+     </li>
+     <li>
+      <span>
+       500g Chicken Breast
+      </span>
+      <button aria-label="Remove Chicken">
+       Remove
+      </button>
+     </li>
+    </ul>
+   </div>
+   <div class="section">
+    <h2>
+     Saved Recipes
+    </h2>
+    <div class="search-bar">
+     <input id="recipe-search" placeholder="Search recipes..." type="text"/>
+     <button aria-label="Search recipes">
+      Search
+     </button>
+    </div>
+    <div class="sort-options">
+     <button aria-label="Sort recipes alphabetically">
+      Sort A-Z
+     </button>
+     <button aria-label="Sort recipes by date added">
+      Sort by Date
+     </button>
+    </div>
+    <div class="input-group">
+     <select aria-label="Select recipe category" id="recipe-category">
+      <option value="">
+       Select category...
+      </option>
+      <option value="desserts">
+       Desserts
+      </option>
+      <option value="main-courses">
+       Main Courses
+      </option>
+      <option value="appetizers">
+       Appetizers
+      </option>
+      <option value="beverages">
+       Beverages
+      </option>
+      <option value="salads">
+       Salads
+      </option>
+     </select>
+     <input id="recipe-input" placeholder="Enter recipe name (e.g., Chocolate Cake)" required="" type="text"/>
+     <input class="quantity" id="recipe-quantity" min="1" placeholder="Quantity" required="" type="number"/>
+     <select aria-label="Select priority level" class="priority" id="recipe-priority">
+      <option value="">
+       Priority...
+      </option>
+      <option value="high">
+       High
+      </option>
+      <option value="medium">
+       Medium
+      </option>
+      <option value="low">
+       Low
+      </option>
+     </select>
+     <button aria-label="Save recipe" onclick="addRecipe()">
+      Save
+     </button>
+    </div>
+    <ul aria-live="polite" id="recipe-list">
+     <li>
+      <span>
+       Chocolate Cake
+      </span>
+      <button aria-label="Remove Chocolate Cake">
+       Remove
+      </button>
+     </li>
+     <li>
+      <span>
+       Spaghetti Carbonara
+      </span>
+      <button aria-label="Remove Spaghetti Carbonara">
+       Remove
+      </button>
+     </li>
+     <li>
+      <span>
+       Caesar Salad
+      </span>
+      <button aria-label="Remove Caesar Salad">
+       Remove
+      </button>
+     </li>
+     <li>
+      <span>
+       Chicken Curry
+      </span>
+      <button aria-label="Remove Chicken Curry">
+       Remove
+      </button>
+     </li>
+     <li>
+      <span>
+       Blueberry Muffins
+      </span>
+      <button aria-label="Remove Blueberry Muffins">
+       Remove
+      </button>
+     </li>
+    </ul>
+   </div>
+   <div class="section">
+    <h2>
+     Notes
+    </h2>
+    <div class="input-group">
+     <textarea id="notes" placeholder="Enter your notes here..." required="" rows="4"></textarea>
+     <select aria-label="Select notes category" id="notes-category">
+      <option value="">
+       Category...
+      </option>
+      <option value="personal">
+       Personal
+      </option>
+      <option value="work">
+       Work
+      </option>
+      <option value="miscellaneous">
+       Miscellaneous
+      </option>
+     </select>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

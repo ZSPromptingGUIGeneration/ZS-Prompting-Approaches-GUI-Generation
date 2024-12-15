@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App - Soups
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 50px;
+            background-color: #f1f1f1;
+            margin-left: 10px;
+        }
+        .search-bar .material-icons {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .filter-options {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .recipe-card {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .recipe-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .recipe-details {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .recipe-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .recipe-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .recipe-meta {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #999;
+        }
+        .recipe-meta .material-icons {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+        .bookmark-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .share-btn {
+            position: absolute;
+            top: 10px;
+            right: 40px;
+            cursor: pointer;
+        }
+        .comment-btn {
+            position: absolute;
+            top: 10px;
+            right: 70px;
+            cursor: pointer;
+        }
+        .filter-icon {
+            cursor: pointer;
+        }
+        .filter-panel {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+        }
+        .filter-panel label {
+            display: block;
+            margin: 5px 0;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="search-bar">
+   <span class="material-icons">
+    search
+   </span>
+   <input placeholder="Search for soups..." type="text"/>
+   <span class="material-icons filter-icon">
+    filter_list
+   </span>
+  </div>
+  <div class="filter-panel">
+   <label>
+    <input type="checkbox"/>
+    Vegetarian
+   </label>
+   <label>
+    <input type="checkbox"/>
+    Vegan
+   </label>
+   <label>
+    <input type="checkbox"/>
+    Gluten-Free
+   </label>
+  </div>
+  <div class="recipe-card">
+   <img alt="Soup Thumbnail" src=""/>
+   <div class="recipe-details">
+    <div class="recipe-title">
+     Tomato Soup
+    </div>
+    <div class="recipe-description">
+     A delicious tomato soup with fresh herbs.
+    </div>
+    <div class="recipe-meta">
+     <span class="material-icons">
+      star
+     </span>
+     4.5 (200 reviews)
+     <span class="material-icons">
+      access_time
+     </span>
+     30 mins
+    </div>
+   </div>
+   <span class="material-icons bookmark-btn">
+    bookmark_border
+   </span>
+   <span class="material-icons share-btn">
+    share
+   </span>
+   <span class="material-icons comment-btn">
+    comment
+   </span>
+  </div>
+  <div class="recipe-card">
+   <img alt="Soup Thumbnail" src=""/>
+   <div class="recipe-details">
+    <div class="recipe-title">
+     Chicken Noodle Soup
+    </div>
+    <div class="recipe-description">
+     A hearty chicken noodle soup for the soul.
+    </div>
+    <div class="recipe-meta">
+     <span class="material-icons">
+      star
+     </span>
+     4.7 (150 reviews)
+     <span class="material-icons">
+      access_time
+     </span>
+     45 mins
+    </div>
+   </div>
+   <span class="material-icons bookmark-btn">
+    bookmark_border
+   </span>
+   <span class="material-icons share-btn">
+    share
+   </span>
+   <span class="material-icons comment-btn">
+    comment
+   </span>
+  </div>
+  <script>
+   document.querySelector('.filter-icon').addEventListener('click', () => {
+            document.querySelector('.filter-panel').style.display = 
+                document.querySelector('.filter-panel').style.display === 'block' ? 'none' : 'block';
+        });
+  </script>
+ </body>
+</html>

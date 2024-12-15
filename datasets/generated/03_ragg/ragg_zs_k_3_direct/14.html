@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Platform
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-size: 24px;
+        }
+        .header .icons {
+            display: flex;
+            gap: 15px;
+        }
+        .header .icons i {
+            font-size: 20px;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .section {
+            padding: 15px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            margin: 0;
+        }
+        .player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px;
+        }
+        .player .info {
+            flex: 1;
+        }
+        .player .controls {
+            display: flex;
+            gap: 10px;
+        }
+        .player .controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+        .popup.active {
+            display: block;
+        }
+        .popup button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            background-color: #d32f2f;
+            color: white;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="logo">
+    Music Platform
+   </div>
+   <div class="icons">
+    <i class="fa fa-bell">
+    </i>
+    <i class="fa fa-cloud-download">
+    </i>
+    <i class="fa fa-search">
+    </i>
+   </div>
+  </div>
+  <div class="nav-bar">
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    Radio
+   </a>
+   <a href="#">
+    Discover
+   </a>
+   <a href="#">
+    My Music
+   </a>
+  </div>
+  <div class="section">
+   <h2>
+    Trending
+   </h2>
+   <div class="card">
+    <img alt="Trending 1" src=""/>
+    <div class="card-content">
+     <h3>
+      Trending Song 1
+     </h3>
+    </div>
+   </div>
+   <h2>
+    For You
+   </h2>
+   <div class="card">
+    <img alt="For You 1" src=""/>
+    <div class="card-content">
+     <h3>
+      For You Song 1
+     </h3>
+    </div>
+   </div>
+   <h2>
+    New Releases
+   </h2>
+   <div class="card">
+    <img alt="New Release 1" src=""/>
+    <div class="card-content">
+     <h3>
+      New Release Song 1
+     </h3>
+    </div>
+   </div>
+  </div>
+  <div class="player">
+   <div class="info">
+    <div>
+     Utani Penda
+    </div>
+    <div>
+     Diamond Platnumz
+    </div>
+   </div>
+   <div class="controls">
+    <button>
+     <i class="fa fa-thumbs-up">
+     </i>
+    </button>
+    <button>
+     <i class="fa fa-pause">
+     </i>
+    </button>
+    <button>
+     <i class="fa fa-play">
+     </i>
+    </button>
+    <button>
+     <i class="fa fa-thumbs-down">
+     </i>
+    </button>
+   </div>
+  </div>
+  <div class="popup" id="popup">
+   <h3>
+    Nana
+   </h3>
+   <p>
+    Like the Song?
+   </p>
+   <button onclick="addToFavourites()">
+    Add to Favourites
+   </button>
+   <button onclick="offlineDownload()">
+    Offline Download
+   </button>
+   <button onclick="shareWithFriends()">
+    Share with Friends
+   </button>
+  </div>
+  <script>
+   function addToFavourites() {
+            alert("Added to Favourites");
+        }
+        function offlineDownload() {
+            alert("Downloaded for Offline");
+        }
+        function shareWithFriends() {
+            alert("Shared with Friends");
+        }
+        // Show popup for demonstration
+        document.getElementById('popup').classList.add('active');
+  </script>
+ </body>
+</html>

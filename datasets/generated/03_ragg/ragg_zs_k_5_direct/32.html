@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #263238;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header .settings {
+            font-size: 24px;
+        }
+        .main {
+            padding: 20px;
+        }
+        .current-weather {
+            text-align: center;
+        }
+        .current-weather h2 {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+        .current-weather p {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+        .hourly-forecast {
+            display: flex;
+            overflow-x: scroll;
+            padding: 10px 0;
+        }
+        .hourly-forecast div {
+            flex: 0 0 80px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .hourly-forecast div p {
+            margin: 5px 0;
+        }
+        .chart-container {
+            background-color: #263238;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .chart {
+            width: 100%;
+            height: 200px;
+        }
+        .footer {
+            background-color: #263238;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer div {
+            text-align: center;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Weather App
+   </h1>
+   <div class="settings">
+    ⚙
+   </div>
+  </div>
+  <div class="main">
+   <div class="current-weather">
+    <h2>
+     11°
+    </h2>
+    <p>
+     Mostly clear
+    </p>
+    <p>
+     Urbana
+    </p>
+   </div>
+   <div class="hourly-forecast">
+    <div>
+     <p>
+      Now
+     </p>
+     <p>
+      13°
+     </p>
+     <p>
+      ðŸŒ¤
+     </p>
+    </div>
+    <div>
+     <p>
+      08:00
+     </p>
+     <p>
+      13°
+     </p>
+     <p>
+      ðŸŒ¤
+     </p>
+    </div>
+    <div>
+     <p>
+      09:00
+     </p>
+     <p>
+      15°
+     </p>
+     <p>
+      ðŸŒ¤
+     </p>
+    </div>
+    <div>
+     <p>
+      10:00
+     </p>
+     <p>
+      18°
+     </p>
+     <p>
+      ðŸŒ¤
+     </p>
+    </div>
+    <div>
+     <p>
+      11:00
+     </p>
+     <p>
+      20°
+     </p>
+     <p>
+      ðŸŒ¤
+     </p>
+    </div>
+    <div>
+     <p>
+      12:00
+     </p>
+     <p>
+      21°
+     </p>
+     <p>
+      ðŸŒ¤
+     </p>
+    </div>
+    <div>
+     <p>
+      13:00
+     </p>
+     <p>
+      21°
+     </p>
+     <p>
+      ðŸŒ¤
+     </p>
+    </div>
+   </div>
+   <div class="chart-container">
+    <canvas class="chart" id="weatherChart">
+    </canvas>
+   </div>
+  </div>
+  <div class="footer">
+   <div>
+    <p>
+     Home
+    </p>
+   </div>
+   <div>
+    <p>
+     Hourly
+    </p>
+   </div>
+   <div>
+    <p>
+     Daily
+    </p>
+   </div>
+   <div>
+    <p>
+     Radar
+    </p>
+   </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+  </script>
+  <script>
+   const ctx = document.getElementById('weatherChart').getContext('2d');
+        const weatherChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['11pm', '3am', '7am', '11am', '3pm', '7pm'],
+                datasets: [
+                    {
+                        label: 'Temperature (Â°F)',
+                        data: [41, 40, 20, 49, 58, 54],
+                        borderColor: 'yellow',
+                        fill: false
+                    },
+                    {
+                        label: 'Wind Speed (mph)',
+                        data: [10, 10, 20, 49, 56, 54],
+                        borderColor: 'green',
+                        fill: false
+                    },
+                    {
+                        label: 'Probability of Precipitation (%)',
+                        data: [91, 75, 48, 49, 40, 40],
+                        borderColor: 'blue',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+  </script>
+ </body>
+</html>

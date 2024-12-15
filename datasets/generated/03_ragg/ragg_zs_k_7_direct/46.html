@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Registration Page
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h2 {
+            margin: 0;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group .checkbox-label {
+            display: inline-block;
+            margin-left: 5px;
+            color: #333;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-actions button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-actions .register-btn {
+            background-color: #d32f2f;
+        }
+        .form-actions .skip-btn {
+            background-color: #757575;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h2>
+     Create Your Account
+    </h2>
+    <p>
+     You're one step away from the best insider info and thousands of offers!
+    </p>
+   </div>
+   <div class="form-group">
+    <label for="profile-photo">
+     Profile Photo
+    </label>
+    <input id="profile-photo" type="file"/>
+   </div>
+   <div class="form-group">
+    <label for="name">
+     Name*
+    </label>
+    <input id="name" required="" type="text"/>
+   </div>
+   <div class="form-group">
+    <label for="email">
+     Email*
+    </label>
+    <input id="email" required="" type="email"/>
+   </div>
+   <div class="form-group">
+    <label for="birthday">
+     Birthday*
+    </label>
+    <input id="birthday" required="" type="date"/>
+   </div>
+   <div class="form-group">
+    <label for="mobile">
+     Mobile*
+    </label>
+    <input id="mobile" required="" type="tel"/>
+   </div>
+   <div class="form-group">
+    <label for="zip">
+     Zip*
+    </label>
+    <input id="zip" required="" type="text"/>
+   </div>
+   <div class="form-group">
+    <label for="church">
+     Choose My Church's
+    </label>
+    <select id="church">
+     <option value="">
+      Select Church
+     </option>
+     <option value="church1">
+      Church 1
+     </option>
+     <option value="church2">
+      Church 2
+     </option>
+    </select>
+   </div>
+   <div class="form-group">
+    <input id="marketing" type="checkbox"/>
+    <label class="checkbox-label" for="marketing">
+     I'd like to receive Marketing and promotional materials.
+    </label>
+   </div>
+   <div class="form-group">
+    <input id="newsletter" type="checkbox"/>
+    <label class="checkbox-label" for="newsletter">
+     Subscribe to the Newsletter.
+    </label>
+   </div>
+   <div class="form-actions">
+    <button class="register-btn">
+     REGISTER
+    </button>
+    <button class="skip-btn">
+     SKIP
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

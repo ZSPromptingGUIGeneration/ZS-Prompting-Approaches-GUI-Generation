@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .current-weather {
+            background: url('https://via.placeholder.com/768x400') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .current-weather h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .current-weather p {
+            margin: 5px 0;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+        }
+        .forecast-day {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            flex: 1;
+            margin: 0 5px;
+        }
+        .forecast-day img {
+            width: 50px;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .details div {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            flex: 1;
+            margin: 0 5px;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .bottom-nav div {
+            text-align: center;
+        }
+        .bottom-nav div img {
+            width: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="current-weather">
+    <h1>
+     55°F
+    </h1>
+    <p>
+     San Francisco
+    </p>
+    <p>
+     Light Rain
+    </p>
+    <p>
+     Feels like 55°F
+    </p>
+    <p>
+     Sunrise: 7:22 AM
+    </p>
+    <p>
+     Sunset: 4:55 PM
+    </p>
+   </div>
+   <div class="forecast">
+    <div class="forecast-day">
+     <p>
+      Fri
+     </p>
+     <img alt="weather icon" src=""/>
+     <p>
+      55°F/46°F
+     </p>
+    </div>
+    <div class="forecast-day">
+     <p>
+      Sat
+     </p>
+     <img alt="weather icon" src=""/>
+     <p>
+      51°F/42°F
+     </p>
+    </div>
+    <div class="forecast-day">
+     <p>
+      Sun
+     </p>
+     <img alt="weather icon" src=""/>
+     <p>
+      53°F/41°F
+     </p>
+    </div>
+    <div class="forecast-day">
+     <p>
+      Mon
+     </p>
+     <img alt="weather icon" src=""/>
+     <p>
+      51°F/39°F
+     </p>
+    </div>
+    <div class="forecast-day">
+     <p>
+      Tue
+     </p>
+     <img alt="weather icon" src=""/>
+     <p>
+      55°F/41°F
+     </p>
+    </div>
+   </div>
+   <div class="details">
+    <div>
+     <p>
+      Humidity
+     </p>
+     <p>
+      83%
+     </p>
+    </div>
+    <div>
+     <p>
+      Wind
+     </p>
+     <p>
+      8.7 mph SW
+     </p>
+    </div>
+    <div>
+     <p>
+      Pressure
+     </p>
+     <p>
+      1009 mBar
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <div>
+    <img alt="home icon" src=""/>
+    <p>
+     Home
+    </p>
+   </div>
+   <div>
+    <img alt="details icon" src=""/>
+    <p>
+     Details
+    </p>
+   </div>
+   <div>
+    <img alt="radar icon" src=""/>
+    <p>
+     Radar
+    </p>
+   </div>
+   <div>
+    <img alt="news icon" src=""/>
+    <p>
+     News
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

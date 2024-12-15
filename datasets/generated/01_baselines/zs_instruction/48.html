@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shop Finder
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            padding: 1rem;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+        .shop-list {
+            list-style: none;
+            padding: 0;
+        }
+        .shop-item {
+            background-color: white;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .shop-item h3 {
+            margin: 0 0 0.5rem;
+        }
+        .shop-item p {
+            margin: 0;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Shop Finder
+   </h1>
+  </header>
+  <div class="container">
+   <div class="search-bar">
+    <input placeholder="Search for shops..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <ul class="shop-list">
+    <li class="shop-item">
+     <h3>
+      Shop Name 1
+     </h3>
+     <p>
+      Shop Address 1
+     </p>
+    </li>
+    <li class="shop-item">
+     <h3>
+      Shop Name 2
+     </h3>
+     <p>
+      Shop Address 2
+     </p>
+    </li>
+    <li class="shop-item">
+     <h3>
+      Shop Name 3
+     </h3>
+     <p>
+      Shop Address 3
+     </p>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>

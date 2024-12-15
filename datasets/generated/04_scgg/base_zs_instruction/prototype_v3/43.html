@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App Videos
+  </title>
+  <style>
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e0f7fa;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+      color: #fff;
+      position: sticky;
+      top: 0;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    .search-bar {
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .search-bar input {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #888;
+      border-radius: 4px;
+      color: #555;
+    }
+    .search-bar .clear-btn {
+      position: absolute;
+      right: 12%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      color: #888;
+    }
+    .filters {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .filters button {
+      padding: 12px 24px;
+      margin: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #4facfe;
+      color: #fff;
+      cursor: pointer;
+    }
+    .filters button.active {
+      background: #00f2fe;
+      border-color: #00f2fe;
+    }
+    .filters button:hover {
+      background: #00d4fc;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .video-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: transform 0.2s;
+      padding: 10px;
+    }
+    .video-card:hover {
+      transform: translateY(-5px);
+    }
+    .video-card img {
+      width: 100%;
+      height: auto;
+    }
+    .video-info {
+      padding: 15px;
+    }
+    .video-info h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    .video-info p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #666;
+    }
+    .video-info .duration {
+      font-size: 12px;
+      color: #999;
+    }
+    .video-info .rating {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+    .video-info .watch-later {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #4facfe;
+      cursor: pointer;
+    }
+    .video-info .watch-later:hover {
+      text-decoration: underline;
+    }
+    .video-info .like-dislike {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #666;
+    }
+    .video-info .like-dislike button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #4facfe;
+    }
+    .video-info .comments {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #f0f0f0;
+      margin-top: 20px;
+      position: sticky;
+      bottom: 0;
+    }
+    .footer a {
+      margin: 0 10px;
+      color: #4facfe;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background: #4facfe;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      color: #fff;
+    }
+    .sidebar h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <div class="sidebar">
+   <h2>
+    Categories
+   </h2>
+   <ul>
+    <li>
+     <a href="#">
+      Daily Forecast
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Weekly Forecast
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Climate Change
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Trending
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Most Watched
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Weather Videos
+    </h1>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for weather videos..." type="text"/>
+    <button class="clear-btn">
+     ✖
+    </button>
+   </div>
+   <div class="filters">
+    <button class="active">
+     Daily Forecast
+    </button>
+    <button>
+     Weekly Forecast
+    </button>
+    <button>
+     Climate Change
+    </button>
+    <button>
+     Trending
+    </button>
+    <button>
+     Most Watched
+    </button>
+   </div>
+   <div class="video-grid">
+    <div class="video-card">
+     <img alt="Today's Weather" src=""/>
+     <div class="video-info">
+      <h2>
+       Today's Weather
+      </h2>
+      <p>
+       Get the latest updates on today's weather conditions.
+      </p>
+      <div class="duration">
+       Duration: 5:32
+      </div>
+      <div class="rating">
+       Rating: ★★★★☆
+      </div>
+      <div class="watch-later">
+       Watch Later
+      </div>
+      <div class="like-dislike">
+       <button>
+        👍 Like
+       </button>
+       <button>
+        👎 Dislike
+       </button>
+      </div>
+      <div class="comments">
+       Comments: 12
+      </div>
+     </div>
+    </div>
+    <div class="video-card">
+     <img alt="Weekly Forecast" src=""/>
+     <div class="video-info">
+      <h2>
+       Weekly Forecast
+      </h2>
+      <p>
+       Find out what the weather will be like this week.
+      </p>
+      <div class="duration">
+       Duration: 7:45
+      </div>
+      <div class="rating">
+       Rating: ★★★★☆
+      </div>
+      <div class="watch-later">
+       Watch Later
+      </div>
+      <div class="like-dislike">
+       <button>
+        👍 Like
+       </button>
+       <button>
+        👎 Dislike
+       </button>
+      </div>
+      <div class="comments">
+       Comments: 8
+      </div>
+     </div>
+    </div>
+    <div class="video-card">
+     <img alt="Climate Change" src=""/>
+     <div class="video-info">
+      <h2>
+       Climate Change
+      </h2>
+      <p>
+       Learn about the impact of climate change on weather patterns.
+      </p>
+      <div class="duration">
+       Duration: 10:20
+      </div>
+      <div class="rating">
+       Rating: ★★★★☆
+      </div>
+      <div class="watch-later">
+       Watch Later
+      </div>
+      <div class="like-dislike">
+       <button>
+        👍 Like
+       </button>
+       <button>
+        👎 Dislike
+       </button>
+      </div>
+      <div class="comments">
+       Comments: 15
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="footer">
+    <a href="#">
+     Contact Us
+    </a>
+    <a href="#">
+     Privacy Policy
+    </a>
+    <a href="#">
+     Terms of Service
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

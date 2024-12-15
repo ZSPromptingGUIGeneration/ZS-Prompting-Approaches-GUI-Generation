@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Storage App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #6200ea;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .app-item {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .app-info {
+            display: flex;
+            align-items: center;
+        }
+        .app-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            margin-right: 15px;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .app-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .app-size {
+            color: #757575;
+        }
+        .delete-btn {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .delete-btn:hover {
+            background-color: #b71c1c;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Manage Installed Apps
+   </h1>
+  </div>
+  <div class="container">
+   <div class="app-item">
+    <div class="app-info">
+     <div class="app-icon">
+      📱
+     </div>
+     <div>
+      <div class="app-name">
+       App 1
+      </div>
+      <div class="app-size">
+       50 MB
+      </div>
+     </div>
+    </div>
+    <button class="delete-btn">
+     Delete
+    </button>
+   </div>
+   <div class="app-item">
+    <div class="app-info">
+     <div class="app-icon">
+      📱
+     </div>
+     <div>
+      <div class="app-name">
+       App 2
+      </div>
+      <div class="app-size">
+       30 MB
+      </div>
+     </div>
+    </div>
+    <button class="delete-btn">
+     Delete
+    </button>
+   </div>
+   <div class="app-item">
+    <div class="app-info">
+     <div class="app-icon">
+      📱
+     </div>
+     <div>
+      <div class="app-name">
+       App 3
+      </div>
+      <div class="app-size">
+       70 MB
+      </div>
+     </div>
+    </div>
+    <button class="delete-btn">
+     Delete
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

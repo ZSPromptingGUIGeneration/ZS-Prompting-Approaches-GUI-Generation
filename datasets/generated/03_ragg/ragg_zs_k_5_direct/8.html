@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Language Learning App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .progress {
+            width: 70%;
+            height: 10px;
+            background-color: #4caf50;
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .sentence {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .words {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .word {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .answer {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .answer-box {
+            width: 60px;
+            height: 40px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .skip-button {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+        }
+        .check-button {
+            background-color: #4caf50;
+            color: #ffffff;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="progress-bar">
+    <div class="progress">
+    </div>
+   </div>
+   <div class="title">
+    Translate this sentence
+   </div>
+   <div class="sentence">
+    Hello, good morning.
+   </div>
+   <div class="words">
+    <div class="word">
+     Hola
+    </div>
+    <div class="word">
+     buenos
+    </div>
+    <div class="word">
+     leen
+    </div>
+    <div class="word">
+     un
+    </div>
+    <div class="word">
+     comes
+    </div>
+    <div class="word">
+     nada
+    </div>
+    <div class="word">
+     días
+    </div>
+   </div>
+   <div class="answer">
+    <div class="answer-box">
+    </div>
+    <div class="answer-box">
+    </div>
+    <div class="answer-box">
+    </div>
+   </div>
+   <div class="buttons">
+    <button class="button skip-button">
+     SKIP
+    </button>
+    <button class="button check-button">
+     CHECK
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

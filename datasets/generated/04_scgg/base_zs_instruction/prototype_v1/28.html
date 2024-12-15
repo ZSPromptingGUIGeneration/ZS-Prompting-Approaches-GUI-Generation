@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Radio Player App
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            width: 95%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+        .radio-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .radio-list li {
+            margin: 15px 0;
+        }
+        .radio-list button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .radio-list button:hover {
+            background-color: #0056b3;
+        }
+        .radio-list button:focus {
+            outline: 3px solid #ffcc00;
+        }
+        audio {
+            margin-top: 25px;
+            width: 100%;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .volume-control {
+            margin-top: 15px;
+        }
+        .volume-control input {
+            width: 100%;
+        }
+        .favorites, .recently-played {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .favorites h2, .recently-played h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .favorites ul, .recently-played ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .favorites li, .recently-played li {
+            margin: 5px 0;
+        }
+        .station-info {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #555;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Radio Player
+   </h1>
+   <div class="search-bar">
+    <input placeholder="Search for stations..." type="text"/>
+   </div>
+   <ul class="radio-list">
+    <li>
+     <button onclick="playRadio('http://stream-url-1.com')">
+      Radio Station 1
+     </button>
+    </li>
+    <li>
+     <button onclick="playRadio('http://stream-url-2.com')">
+      Radio Station 2
+     </button>
+    </li>
+    <li>
+     <button onclick="playRadio('http://stream-url-3.com')">
+      Radio Station 3
+     </button>
+    </li>
+   </ul>
+   <audio controls="" id="audioPlayer">
+   </audio>
+   <div class="volume-control">
+    <input id="volumeSlider" max="1" min="0" step="0.01" type="range"/>
+   </div>
+   <div class="station-info" id="stationInfo">
+    Station Info: None
+   </div>
+   <div class="favorites">
+    <h2>
+     Favorites
+    </h2>
+    <ul>
+     <li>
+      Favorite Station 1
+     </li>
+     <li>
+      Favorite Station 2
+     </li>
+    </ul>
+   </div>
+   <div class="recently-played">
+    <h2>
+     Recently Played
+    </h2>
+    <ul>
+     <li>
+      Recently Played Station 1
+     </li>
+     <li>
+      Recently Played Station 2
+     </li>
+    </ul>
+   </div>
+  </div>
+  <script>
+   document.getElementById('volumeSlider').addEventListener('input', function() {
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.volume = this.value;
+        });
+
+        function playRadio(url) {
+            const audioPlayer = document.getElementById('audioPlayer');
+            const stationInfo = document.getElementById('stationInfo');
+            audioPlayer.src = url;
+            audioPlayer.play();
+            stationInfo.textContent = `Station Info: ${url}`;
+        }
+  </script>
+ </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bidding App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .offer {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .offer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .offer-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .offer-status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #fff;
+        }
+        .open {
+            background-color: #28a745;
+        }
+        .closed {
+            background-color: #dc3545;
+        }
+        .offer-details {
+            font-size: 14px;
+            color: #555;
+        }
+        .offer-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        .offer-actions button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .offer-actions button:hover {
+            background-color: #0056b3;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="offer">
+    <div class="offer-header">
+     <div class="offer-title">
+      Offer 1
+     </div>
+     <div class="offer-status open">
+      Open
+     </div>
+    </div>
+    <div class="offer-details">
+     <p>
+      Starting Bid: $100
+     </p>
+     <p>
+      Current Bid: $150
+     </p>
+     <p>
+      Time Left: 2h 30m
+     </p>
+    </div>
+    <div class="offer-actions">
+     <button>
+      Place Bid
+     </button>
+    </div>
+   </div>
+   <div class="offer">
+    <div class="offer-header">
+     <div class="offer-title">
+      Offer 2
+     </div>
+     <div class="offer-status closed">
+      Closed
+     </div>
+    </div>
+    <div class="offer-details">
+     <p>
+      Starting Bid: $200
+     </p>
+     <p>
+      Final Bid: $250
+     </p>
+     <p>
+      Closed At: 10:00 AM
+     </p>
+    </div>
+   </div>
+   <div class="offer">
+    <div class="offer-header">
+     <div class="offer-title">
+      Offer 3
+     </div>
+     <div class="offer-status open">
+      Open
+     </div>
+    </div>
+    <div class="offer-details">
+     <p>
+      Starting Bid: $300
+     </p>
+     <p>
+      Current Bid: $350
+     </p>
+     <p>
+      Time Left: 1h 15m
+     </p>
+    </div>
+    <div class="offer-actions">
+     <button>
+      Place Bid
+     </button>
+    </div>
+   </div>
+   <div class="offer">
+    <div class="offer-header">
+     <div class="offer-title">
+      Offer 4
+     </div>
+     <div class="offer-status closed">
+      Closed
+     </div>
+    </div>
+    <div class="offer-details">
+     <p>
+      Starting Bid: $150
+     </p>
+     <p>
+      Final Bid: $180
+     </p>
+     <p>
+      Closed At: 9:00 AM
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

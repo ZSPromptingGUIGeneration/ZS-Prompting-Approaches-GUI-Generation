@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Platform
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #1db954;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-bar {
+            margin: 0 auto;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 20px;
+            color: #333;
+        }
+        .search-bar input::placeholder {
+            color: #999;
+        }
+        .search-bar button {
+            background-color: #1db954;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .search-bar button:hover {
+            background-color: #17a44a;
+        }
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #1db954;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.2s;
+        }
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #1db954;
+            bottom: -5px;
+            left: 0;
+        }
+        nav a:hover {
+            color: #17a44a;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .music-item {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .music-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        .music-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .music-item .details {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .music-item .details h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .music-item .details p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        .music-item .details .album {
+            color: #999;
+            font-size: 14px;
+        }
+        .music-item .play-button {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+        .music-item .play-button:hover {
+            background-color: #17a44a;
+        }
+        .music-item .play-button i {
+            font-size: 16px;
+        }
+        .footer {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #1db954;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: #17a44a;
+            text-decoration: underline;
+        }
+        .now-playing-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        .now-playing-bar .details {
+            display: flex;
+            align-items: center;
+        }
+        .now-playing-bar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .now-playing-bar .details h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .now-playing-bar .details p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        .volume-control {
+            display: flex;
+            align-items: center;
+        }
+        .volume-control input {
+            margin-left: 10px;
+        }
+        @media (max-width: 600px) {
+            .music-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .music-item img {
+                margin-bottom: 10px;
+            }
+            .music-item .details {
+                align-items: flex-start;
+            }
+            header {
+                flex-direction: column;
+            }
+        }
+        .user-auth {
+            display: flex;
+            gap: 10px;
+        }
+        .user-auth a {
+            color: white;
+            text-decoration: none;
+            background-color: #1db954;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.2s;
+        }
+        .user-auth a:hover {
+            background-color: #17a44a;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .profile a {
+            color: white;
+            text-decoration: none;
+            background-color: #1db954;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.2s;
+        }
+        .profile a:hover {
+            background-color: #17a44a;
+        }
+        .song-queue {
+            margin-top: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .song-queue h2 {
+            margin-top: 0;
+        }
+        .lyrics {
+            margin-top: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .lyrics h2 {
+            margin-top: 0;
+        }
+        .playback-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .playback-controls button {
+            background-color: #1db954;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .playback-controls button:hover {
+            background-color: #17a44a;
+        }
+        .social-sharing {
+            display: flex;
+            gap: 10px;
+        }
+        .social-sharing a {
+            color: white;
+            text-decoration: none;
+            background-color: #1db954;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.2s;
+        }
+        .social-sharing a:hover {
+            background-color: #17a44a;
+        }
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .filters select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Music Platform
+   </h1>
+   <div class="search-bar">
+    <input placeholder="Search for songs, albums, artists, or genres..." type="text"/>
+    <button>
+     <i class="fas fa-search">
+     </i>
+    </button>
+   </div>
+   <div class="user-auth">
+    <a href="#">
+     Sign Up
+    </a>
+    <a href="#">
+     Login
+    </a>
+   </div>
+  </header>
+  <nav>
+   <a class="active" href="#">
+    Playlists
+   </a>
+   <a href="#">
+    Albums
+   </a>
+   <a href="#">
+    Artists
+   </a>
+   <a href="#">
+    Genres
+   </a>
+   <a href="#">
+    Profile
+   </a>
+  </nav>
+  <div class="container">
+   <div class="filters">
+    <select>
+     <option value="">
+      Genre
+     </option>
+     <option value="pop">
+      Pop
+     </option>
+     <option value="rock">
+      Rock
+     </option>
+     <option value="jazz">
+      Jazz
+     </option>
+     <option value="classical">
+      Classical
+     </option>
+    </select>
+    <select>
+     <option value="">
+      Mood
+     </option>
+     <option value="happy">
+      Happy
+     </option>
+     <option value="sad">
+      Sad
+     </option>
+     <option value="energetic">
+      Energetic
+     </option>
+     <option value="calm">
+      Calm
+     </option>
+    </select>
+   </div>
+   <div class="music-item">
+    <img alt="Album Art" src=""/>
+    <div class="details">
+     <h3>
+      Song Title 1
+     </h3>
+     <p>
+      Artist Name
+     </p>
+     <p class="album">
+      Album Name • Release Date
+     </p>
+    </div>
+    <button class="play-button">
+     <i class="fas fa-play">
+     </i>
+    </button>
+   </div>
+   <div class="music-item">
+    <img alt="Album Art" src=""/>
+    <div class="details">
+     <h3>
+      Song Title 2
+     </h3>
+     <p>
+      Artist Name
+     </p>
+     <p class="album">
+      Album Name • Release Date
+     </p>
+    </div>
+    <button class="play-button">
+     <i class="fas fa-play">
+     </i>
+    </button>
+   </div>
+   <div class="music-item">
+    <img alt="Album Art" src=""/>
+    <div class="details">
+     <h3>
+      Song Title 3
+     </h3>
+     <p>
+      Artist Name
+     </p>
+     <p class="album">
+      Album Name • Release Date
+     </p>
+    </div>
+    <button class="play-button">
+     <i class="fas fa-play">
+     </i>
+    </button>
+   </div>
+   <div class="song-queue">
+    <h2>
+     Up Next
+    </h2>
+    <div class="music-item">
+     <img alt="Album Art" src=""/>
+     <div class="details">
+      <h3>
+       Song Title 4
+      </h3>
+      <p>
+       Artist Name
+      </p>
+      <p class="album">
+       Album Name • Release Date
+      </p>
+     </div>
+     <button class="play-button">
+      <i class="fas fa-play">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="lyrics">
+    <h2>
+     Lyrics
+    </h2>
+    <p>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+    </p>
+   </div>
+  </div>
+  <footer class="footer">
+   <a href="#">
+    Terms of Service
+   </a>
+   <a href="#">
+    Privacy Policy
+   </a>
+   <a href="#">
+    Contact
+   </a>
+   <a href="#">
+    FAQ
+   </a>
+  </footer>
+  <div class="now-playing-bar">
+   <div class="details">
+    <img alt="Album Art" src=""/>
+    <div>
+     <h3>
+      Now Playing: Song Title
+     </h3>
+     <p>
+      Artist Name
+     </p>
+    </div>
+   </div>
+   <div class="playback-controls">
+    <button>
+     <i class="fas fa-step-backward">
+     </i>
+    </button>
+    <button>
+     <i class="fas fa-play">
+     </i>
+    </button>
+    <button>
+     <i class="fas fa-step-forward">
+     </i>
+    </button>
+    <button>
+     <i class="fas fa-random">
+     </i>
+    </button>
+    <button>
+     <i class="fas fa-redo">
+     </i>
+    </button>
+   </div>
+   <div class="volume-control">
+    <i class="fas fa-volume-up">
+    </i>
+    <input max="100" min="0" type="range" value="50"/>
+   </div>
+  </div>
+ </body>
+</html>

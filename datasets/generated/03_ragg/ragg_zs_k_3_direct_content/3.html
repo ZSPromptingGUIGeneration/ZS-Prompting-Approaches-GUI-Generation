@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Organisational App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #d32f2f;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 50px;
+            z-index: 999;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .nav-bar a.active {
+            border-bottom: 2px solid white;
+        }
+
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        .grocery-list,
+        .recipes {
+            margin-bottom: 20px;
+        }
+
+        .grocery-list h2,
+        .recipes h2 {
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+
+        .grocery-list ul,
+        .recipes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .grocery-list ul li,
+        .recipes ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        .grocery-list ul li img,
+        .recipes ul li img {
+            margin-right: 10px;
+        }
+
+        .add-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .categories div {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .categories div img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .categories div span {
+            vertical-align: middle;
+        }
+
+        .footer {
+            background-color: #8bc34a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="App Logo" id="logo-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b3c7e844-b4f8-4c85-8e62-66d6649c2c25.png" width="30"/>
+   Organisational App
+  </div>
+  <div class="nav-bar">
+   <a class="active" href="#grocery-list">
+    Grocery List
+   </a>
+   <a href="#recipes">
+    Recipes
+   </a>
+  </div>
+  <div class="content">
+   <div class="grocery-list" id="grocery-list">
+    <h2>
+     Grocery List
+    </h2>
+    <div class="categories">
+     <div>
+      <img alt="Assorted Vegetables" id="vegetables-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/61afcc89-ee25-4e8d-8c65-df4a3e7bef89.png" width="30"/>
+      <span>
+       Vegetables
+      </span>
+     </div>
+     <div>
+      <img alt="Assorted Fruits" id="fruits-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/cf82a12b-2955-4d38-840d-3fafbe16319b.png" width="30"/>
+      <span>
+       Fruits
+      </span>
+     </div>
+     <div>
+      <img alt="Dairy Products and Eggs" id="dairy-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ed357434-d37a-43fa-afbb-cc09107cc529.png" width="30"/>
+      <span>
+       Dairy &amp; Eggs
+      </span>
+     </div>
+     <div>
+      <img alt="Various Meats" id="meats-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/cc5ba221-9ae1-427b-9b93-cfd8243a64f5.png" width="30"/>
+      <span>
+       Meats
+      </span>
+     </div>
+     <div>
+      <img alt="Seafood Selection" id="seafood-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/18d17745-ea69-416e-b2f6-f6fac39a0ef4.png" width="30"/>
+      <span>
+       Seafood
+      </span>
+     </div>
+     <div>
+      <img alt="Cereal and Breakfast Foods" id="breakfast-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c047d6cf-025e-4512-a270-3f084f424abe.png" width="30"/>
+      <span>
+       Cereal &amp; Breakfast Foods
+      </span>
+     </div>
+     <div>
+      <img alt="Frozen Foods and Ice Cream" id="frozen-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d96b955e-d170-4a86-95ef-919ccdcecd78.png" width="30"/>
+      <span>
+       Frozen Foods &amp; Ice Cream
+      </span>
+     </div>
+     <div>
+      <img alt="Assorted Beverages" id="beverages-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2e611599-26e4-4eee-a1f3-faaf9ab5087a.png" width="30"/>
+      <span>
+       Beverages
+      </span>
+     </div>
+     <div>
+      <img alt="Bread and Bakery Items" id="bread-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ca0718a0-eed9-40b4-b553-ef36fc48f959.png" width="30"/>
+      <span>
+       Bread &amp; Bakery
+      </span>
+     </div>
+    </div>
+    <ul>
+     <li>
+      <img alt="Honey Wheat Berry Bread" id="grocery-bread-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5a9b976f-fb78-48cb-9376-5dfc7d0113de.png" width="30"/>
+      Honey wheat berry bread
+     </li>
+     <li>
+      <img alt="Fresh Carrots" id="grocery-carrots-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/8a99e8ee-43b9-4925-92a1-c229c759d0a4.png" width="30"/>
+      Carrots
+     </li>
+     <li>
+      <img alt="Red Apples" id="grocery-apples-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/59e732bb-c498-4eb6-9514-5acb177109fb.png" width="30"/>
+      Red Apples
+     </li>
+     <li>
+      <img alt="Whole Milk" id="grocery-milk-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/20fdda3b-fc43-496f-968d-7c1ee357ff9c.png" width="30"/>
+      Whole Milk
+     </li>
+     <li>
+      <img alt="Chicken Breast" id="grocery-chicken-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0137f77e-7559-4218-8c05-9f506f2bce47.png" width="30"/>
+      Chicken Breast
+     </li>
+    </ul>
+   </div>
+   <div class="recipes" id="recipes">
+    <h2>
+     Recipes
+    </h2>
+    <ul>
+     <li>
+      <i class="fas fa-book">
+      </i>
+      All (3 recipes)
+     </li>
+     <li>
+      <i class="fas fa-plus-circle">
+      </i>
+      Added (1 recipe)
+     </li>
+     <li>
+      <i class="fas fa-heart">
+      </i>
+      Favorites (1 recipe)
+     </li>
+     <li>
+      <i class="fas fa-utensils">
+      </i>
+      Try (1 recipe)
+     </li>
+    </ul>
+    <ul>
+     <li>
+      <img alt="Spaghetti Bolognese" id="recipe-spaghetti-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2fc48e17-411d-41ed-8133-fa1cb6e8f984.png" width="30"/>
+      Spaghetti Bolognese
+     </li>
+     <li>
+      <img alt="Chicken Caesar Salad" id="recipe-salad-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/966f2bfd-a524-4fc2-945b-7bcfacd79796.png" width="30"/>
+      Chicken Caesar Salad
+     </li>
+     <li>
+      <img alt="Vegetable Stir Fry" id="recipe-stirfry-img" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/3ce3ca9c-7dfb-4775-8517-88a7693f8976.png" width="30"/>
+      Vegetable Stir Fry
+     </li>
+    </ul>
+   </div>
+  </div>
+  <button class="add-button">
+   +
+  </button>
+  <div class="footer">
+   My Shopping List
+  </div>
+ </body>
+</html>

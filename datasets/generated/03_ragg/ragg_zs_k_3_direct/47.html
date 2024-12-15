@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Trip Booking
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #2196F3;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .input-group {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-button {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Hotel Search
+  </div>
+  <div class="container">
+   <div class="input-group">
+    <label for="destination">
+     Destination
+    </label>
+    <input id="destination" placeholder="Enter Location" type="text"/>
+   </div>
+   <div class="input-group">
+    <label for="checkin">
+     Check In
+    </label>
+    <input id="checkin" type="date"/>
+   </div>
+   <div class="input-group">
+    <label for="checkout">
+     Check Out
+    </label>
+    <input id="checkout" type="date"/>
+   </div>
+   <div class="input-group">
+    <label for="rooms">
+     Rooms
+    </label>
+    <input id="rooms" min="1" type="number" value="1"/>
+   </div>
+   <div class="input-group">
+    <label for="adults">
+     Adults
+    </label>
+    <input id="adults" min="1" type="number" value="1"/>
+   </div>
+   <div class="input-group">
+    <label for="children">
+     Children
+    </label>
+    <input id="children" min="0" type="number" value="0"/>
+   </div>
+   <button class="search-button">
+    Search Hotels
+   </button>
+  </div>
+ </body>
+</html>

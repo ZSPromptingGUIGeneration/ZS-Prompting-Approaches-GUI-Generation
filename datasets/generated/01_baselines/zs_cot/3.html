@@ -1,0 +1,172 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Organizational App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #555;
+            border-bottom: 2px solid #dedede;
+            padding-bottom: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .input-group input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .input-group button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .input-group button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: white;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul li button {
+            background-color: #ff4d4d;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        ul li button:hover {
+            background-color: #ff1a1a;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Organizational App
+   </h1>
+   <div class="section" id="grocery-section">
+    <h2>
+     Grocery List
+    </h2>
+    <div class="input-group">
+     <input id="grocery-input" placeholder="Add a grocery item" type="text"/>
+     <button onclick="addGrocery()">
+      Add
+     </button>
+    </div>
+    <ul id="grocery-list">
+    </ul>
+   </div>
+   <div class="section" id="recipe-section">
+    <h2>
+     Saved Recipes
+    </h2>
+    <div class="input-group">
+     <input id="recipe-input" placeholder="Add a recipe" type="text"/>
+     <button onclick="addRecipe()">
+      Save
+     </button>
+    </div>
+    <ul id="recipe-list">
+    </ul>
+   </div>
+  </div>
+  <script>
+   function addGrocery() {
+            const groceryInput = document.getElementById('grocery-input');
+            const groceryList = document.getElementById('grocery-list');
+            const groceryItem = groceryInput.value.trim();
+
+            if (groceryItem) {
+                const li = document.createElement('li');
+                li.textContent = groceryItem;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = () => groceryList.removeChild(li);
+
+                li.appendChild(deleteButton);
+                groceryList.appendChild(li);
+
+                groceryInput.value = '';
+            }
+        }
+
+        function addRecipe() {
+            const recipeInput = document.getElementById('recipe-input');
+            const recipeList = document.getElementById('recipe-list');
+            const recipeItem = recipeInput.value.trim();
+
+            if (recipeItem) {
+                const li = document.createElement('li');
+                li.textContent = recipeItem;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = () => recipeList.removeChild(li);
+
+                li.appendChild(deleteButton);
+                recipeList.appendChild(li);
+
+                recipeInput.value = '';
+            }
+        }
+  </script>
+ </body>
+</html>
+<!-- End -->

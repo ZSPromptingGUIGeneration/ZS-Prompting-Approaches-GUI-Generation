@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bidding App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .offer {
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+        .offer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .offer-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .offer-status {
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 12px;
+        }
+        .open {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .closed {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .offer-details {
+            font-size: 14px;
+            color: #666;
+        }
+        .bid-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .bid-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="offer">
+    <div class="offer-header">
+     <div class="offer-title">
+      Offer 1
+     </div>
+     <div class="offer-status open">
+      Open
+     </div>
+    </div>
+    <div class="offer-details">
+     <p>
+      Starting bid: $100
+     </p>
+     <p>
+      Current highest bid: $150
+     </p>
+    </div>
+    <button class="bid-button">
+     Place a Bid
+    </button>
+   </div>
+   <div class="offer">
+    <div class="offer-header">
+     <div class="offer-title">
+      Offer 2
+     </div>
+     <div class="offer-status closed">
+      Closed
+     </div>
+    </div>
+    <div class="offer-details">
+     <p>
+      Starting bid: $200
+     </p>
+     <p>
+      Final bid: $300
+     </p>
+    </div>
+    <button class="bid-button" disabled="">
+     Offer Closed
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

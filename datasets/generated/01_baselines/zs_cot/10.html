@@ -1,0 +1,128 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Map Settings
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .setting-item {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .setting-item label {
+            font-size: 16px;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+        .toggle-switch input {
+            display: none;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 20px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 12px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #007BFF;
+        }
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Map Settings
+   </h1>
+  </div>
+  <div class="container">
+   <div class="setting-item">
+    <label for="earthquakes">
+     Show Earthquakes
+    </label>
+    <label class="toggle-switch">
+     <input id="earthquakes" type="checkbox"/>
+     <span class="slider">
+     </span>
+    </label>
+   </div>
+   <div class="setting-item">
+    <label for="floods">
+     Show Floods
+    </label>
+    <label class="toggle-switch">
+     <input id="floods" type="checkbox"/>
+     <span class="slider">
+     </span>
+    </label>
+   </div>
+   <div class="setting-item">
+    <label for="wildfires">
+     Show Wildfires
+    </label>
+    <label class="toggle-switch">
+     <input id="wildfires" type="checkbox"/>
+     <span class="slider">
+     </span>
+    </label>
+   </div>
+   <div class="setting-item">
+    <label for="storms">
+     Show Storms
+    </label>
+    <label class="toggle-switch">
+     <input id="storms" type="checkbox"/>
+     <span class="slider">
+     </span>
+    </label>
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->

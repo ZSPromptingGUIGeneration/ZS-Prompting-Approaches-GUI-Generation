@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bag Info
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .product-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .product-price {
+            font-size: 22px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        .product-description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .product-description h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .product-description ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .add-to-cart-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #2980b9;
+        }
+        .variants, .reviews, .specifications, .related-products, .stock-info, .shipping-info, .wishlist-btn {
+            margin-bottom: 20px;
+        }
+        .variants select, .wishlist-btn button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .reviews h3, .specifications h3, .related-products h3, .stock-info h3, .shipping-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .reviews .review, .related-products .product, .specifications ul, .stock-info p, .shipping-info p {
+            font-size: 16px;
+            color: #555;
+        }
+        .image-carousel img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="image-container">
+    <img alt="Bag Image" src=""/>
+   </div>
+   <div class="product-title">
+    Stylish Leather Bag
+   </div>
+   <div class="product-price">
+    $120.00
+   </div>
+   <div class="variants">
+    <select>
+     <option>
+      Select Color
+     </option>
+     <option>
+      Black
+     </option>
+     <option>
+      Brown
+     </option>
+     <option>
+      Tan
+     </option>
+    </select>
+    <select>
+     <option>
+      Select Size
+     </option>
+     <option>
+      Small
+     </option>
+     <option>
+      Medium
+     </option>
+     <option>
+      Large
+     </option>
+    </select>
+   </div>
+   <div class="product-description">
+    <h3>
+     Product Description
+    </h3>
+    <p>
+     This stylish leather bag is perfect for any occasion. Made from high-quality leather, it features multiple compartments to keep your belongings organized. Whether you're heading to work or going out for the evening, this bag is a versatile addition to your wardrobe.
+    </p>
+   </div>
+   <div class="specifications">
+    <h3>
+     Specifications
+    </h3>
+    <ul>
+     <li>
+      Dimensions: 30cm x 20cm x 10cm
+     </li>
+     <li>
+      Material: Genuine Leather
+     </li>
+     <li>
+      Weight: 1.2kg
+     </li>
+     <li>
+      Compartments: 3
+     </li>
+    </ul>
+   </div>
+   <div class="stock-info">
+    <h3>
+     Stock Availability
+    </h3>
+    <p>
+     In Stock
+    </p>
+   </div>
+   <div class="shipping-info">
+    <h3>
+     Shipping Information
+    </h3>
+    <p>
+     Estimated Delivery: 3-5 business days
+    </p>
+    <p>
+     Shipping Cost: $10.00
+    </p>
+   </div>
+   <div class="wishlist-btn">
+    <button>
+     Add to Wishlist
+    </button>
+   </div>
+   <div class="reviews">
+    <h3>
+     Customer Reviews
+    </h3>
+    <div class="review">
+     <p>
+      John Doe: ★★★★★
+     </p>
+     <p>
+      Great quality bag! Very satisfied with my purchase.
+     </p>
+    </div>
+    <div class="review">
+     <p>
+      Jane Smith: ★★★★☆
+     </p>
+     <p>
+      Love the design, but it could be a bit bigger.
+     </p>
+    </div>
+   </div>
+   <div class="related-products">
+    <h3>
+     Related Products
+    </h3>
+    <div class="product">
+     <p>
+      Classic Leather Wallet - $50.00
+     </p>
+    </div>
+    <div class="product">
+     <p>
+      Leather Belt - $30.00
+     </p>
+    </div>
+   </div>
+   <div class="image-carousel">
+    <img alt="Bag Image 1" src=""/>
+    <img alt="Bag Image 2" src=""/>
+    <img alt="Bag Image 3" src=""/>
+   </div>
+   <button class="add-to-cart-btn">
+    Add to Cart
+   </button>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Search
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #e91e63;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            background-color: #e91e63;
+        }
+        .category {
+            background-color: white;
+            color: #e91e63;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .main-content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .main-content .search-icon-large {
+            font-size: 50px;
+            color: #e91e63;
+        }
+        .main-content h1 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .main-content p {
+            color: #666;
+            font-size: 16px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: white;
+            border-top: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer .footer-item {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+        }
+        .footer .footer-item.active {
+            color: #e91e63;
+        }
+        .footer .footer-item i {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <span>
+    Search
+   </span>
+   <i class="search-icon">
+    🔍
+   </i>
+  </div>
+  <div class="categories">
+   <div class="category">
+    meat
+   </div>
+   <div class="category">
+    fish &amp; seafood
+   </div>
+   <div class="category">
+    dairy-free
+   </div>
+   <div class="category">
+    vegetarian
+   </div>
+   <div class="category">
+    vegan
+   </div>
+   <div class="category">
+    gluten-free
+   </div>
+  </div>
+  <div class="main-content">
+   <i class="search-icon-large">
+    🔍
+   </i>
+   <h1>
+    SEARCH FOR RECIPES
+   </h1>
+   <p>
+    Use the search bar, or click a tag and browse options below. Enjoy!
+   </p>
+  </div>
+  <div class="footer">
+   <div class="footer-item">
+    <i>
+     🍴
+    </i>
+    <span>
+     Recipes
+    </span>
+   </div>
+   <div class="footer-item">
+    <i>
+     ▶️
+    </i>
+    <span>
+     How To
+    </span>
+   </div>
+   <div class="footer-item active">
+    <i>
+     🔍
+    </i>
+    <span>
+     Search
+    </span>
+   </div>
+   <div class="footer-item">
+    <i>
+     ❤️
+    </i>
+    <span>
+     Favorites
+    </span>
+   </div>
+   <div class="footer-item">
+    <i>
+     👤
+    </i>
+    <span>
+     Profile
+    </span>
+   </div>
+  </div>
+ </body>
+</html>

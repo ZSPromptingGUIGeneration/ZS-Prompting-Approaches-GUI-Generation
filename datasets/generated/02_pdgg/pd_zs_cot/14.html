@@ -1,0 +1,186 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Streaming Platform
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .search-bar {
+            padding: 10px;
+        }
+        .recommendations, .playlist {
+            flex: 1;
+            overflow-y: auto;
+        }
+        .recommendations .card, .playlist .card {
+            margin: 10px;
+        }
+        .music-player-controls {
+            position: fixed;
+            bottom: 56px;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        .navigation-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="search-bar">
+   <nav>
+    <div class="nav-wrapper">
+     <form>
+      <div class="input-field">
+       <input id="search" required="" type="search"/>
+       <label class="label-icon" for="search">
+        <i class="material-icons">
+         search
+        </i>
+       </label>
+       <i class="material-icons">
+        close
+       </i>
+      </div>
+     </form>
+    </div>
+   </nav>
+  </div>
+  <div class="recommendations">
+   <h5>
+    Recommendations
+   </h5>
+   <div class="row">
+    <div class="col s4">
+     <div class="card">
+      <div class="card-image">
+       <img alt="Album Art" src=""/>
+       <span class="card-title">
+        Album 1
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="col s4">
+     <div class="card">
+      <div class="card-image">
+       <img alt="Album Art" src=""/>
+       <span class="card-title">
+        Album 2
+       </span>
+      </div>
+     </div>
+    </div>
+    <!-- Add more recommendations as needed -->
+   </div>
+  </div>
+  <div class="playlist">
+   <h5>
+    Playlist
+   </h5>
+   <ul class="collection">
+    <li class="collection-item avatar">
+     <img alt="" class="circle" src=""/>
+     <span class="title">
+      Song 1
+     </span>
+     <p>
+      Artist 1
+     </p>
+    </li>
+    <li class="collection-item avatar">
+     <img alt="" class="circle" src=""/>
+     <span class="title">
+      Song 2
+     </span>
+     <p>
+      Artist 2
+     </p>
+    </li>
+    <!-- Add more playlist items as needed -->
+   </ul>
+  </div>
+  <div class="music-player-controls">
+   <div class="row">
+    <div class="col s2">
+     <img alt="Current Song Art" class="circle responsive-img" src=""/>
+    </div>
+    <div class="col s8">
+     <span>
+      Current Song Title
+     </span>
+     <br/>
+     <span>
+      Current Artist
+     </span>
+    </div>
+    <div class="col s2">
+     <a href="#">
+      <i class="material-icons">
+       play_arrow
+      </i>
+     </a>
+     <a href="#">
+      <i class="material-icons">
+       skip_next
+      </i>
+     </a>
+    </div>
+   </div>
+  </div>
+  <div class="navigation-bar">
+   <nav>
+    <div class="nav-wrapper">
+     <ul class="tabs tabs-fixed-width">
+      <li class="tab col s3">
+       <a href="#home">
+        <i class="material-icons">
+         home
+        </i>
+       </a>
+      </li>
+      <li class="tab col s3">
+       <a href="#library">
+        <i class="material-icons">
+         library_music
+        </i>
+       </a>
+      </li>
+      <li class="tab col s3">
+       <a href="#search">
+        <i class="material-icons">
+         search
+        </i>
+       </a>
+      </li>
+      <li class="tab col s3">
+       <a href="#profile">
+        <i class="material-icons">
+         person
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

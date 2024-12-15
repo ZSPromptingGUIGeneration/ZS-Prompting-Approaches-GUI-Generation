@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Streaming Platform
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            margin-left: 10px;
+        }
+        .search-bar input:focus {
+            outline: none;
+        }
+        .navigation-menu {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+        .navigation-menu a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .now-playing-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            bottom: 50px;
+            width: 100%;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .now-playing-bar .controls {
+            display: flex;
+            align-items: center;
+        }
+        .now-playing-bar .controls button {
+            background: none;
+            border: none;
+            margin: 0 10px;
+        }
+        .now-playing-bar .song-info {
+            flex: 1;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .now-playing-bar .song-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .volume-control {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .volume-control input[type="range"] {
+            width: 80%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="search-bar">
+   <i class="fas fa-search">
+   </i>
+   <input placeholder="Search for songs, artists, albums..." type="text"/>
+  </div>
+  <div class="navigation-menu">
+   <a href="#">
+    <i class="fas fa-home">
+    </i>
+    <span>
+     Home
+    </span>
+   </a>
+   <a href="#">
+    <i class="fas fa-music">
+    </i>
+    <span>
+     Library
+    </span>
+   </a>
+   <a href="#">
+    <i class="fas fa-compass">
+    </i>
+    <span>
+     Browse
+    </span>
+   </a>
+   <a href="#">
+    <i class="fas fa-cog">
+    </i>
+    <span>
+     Settings
+    </span>
+   </a>
+  </div>
+  <div class="now-playing-bar">
+   <div class="song-info">
+    <img alt="Album cover of 'Shape of You'" id="album-art-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0eae4b48-f311-4d46-b03c-dac66b0abd90.png"/>
+    <div>
+     <div>
+      Shape of You
+     </div>
+     <div>
+      Ed Sheeran
+     </div>
+    </div>
+   </div>
+   <div class="controls">
+    <button>
+     <i class="fas fa-backward">
+     </i>
+    </button>
+    <button>
+     <i class="fas fa-play">
+     </i>
+    </button>
+    <button>
+     <i class="fas fa-forward">
+     </i>
+    </button>
+   </div>
+  </div>
+  <div class="volume-control">
+   <i class="fas fa-volume-down">
+   </i>
+   <input max="100" min="0" type="range" value="50"/>
+   <i class="fas fa-volume-up">
+   </i>
+  </div>
+ </body>
+</html>
+

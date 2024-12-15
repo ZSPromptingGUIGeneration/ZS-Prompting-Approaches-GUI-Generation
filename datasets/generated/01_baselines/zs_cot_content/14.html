@@ -1,0 +1,211 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Platform
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+        .search-bar {
+            margin: 1em;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 0.5em;
+            font-size: 1em;
+        }
+        .featured, .playlist {
+            margin: 1em;
+        }
+        .featured h2, .playlist h2 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+        .song {
+            background-color: #fff;
+            margin: 0.5em 0;
+            padding: 1em;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .song img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 1em;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer nav {
+            display: flex;
+            justify-content: space-around;
+        }
+        footer nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    MusicStream
+   </div>
+   <nav>
+    <a href="#home">
+     Home
+    </a>
+    <a href="#browse">
+     Browse
+    </a>
+    <a href="#profile">
+     Profile
+    </a>
+   </nav>
+  </header>
+  <main>
+   <div class="search-bar">
+    <input placeholder="Search for music..." type="text"/>
+   </div>
+   <div class="featured">
+    <h2>
+     Featured Songs
+    </h2>
+    <div class="song">
+     <img alt="Album cover of 'Sunset Vibes'" id="featured-song-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fda2875c-6f7b-41ba-a02d-48b928595e7e.png"/>
+     <div>
+      <div>
+       Sunset Vibes
+      </div>
+      <div>
+       DJ Chill
+      </div>
+     </div>
+    </div>
+    <div class="song">
+     <img alt="Album cover of 'Mountain Echoes'" id="featured-song-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/4d8203d0-ea60-4ba1-a1ef-168bcc1cd1f0.png"/>
+     <div>
+      <div>
+       Mountain Echoes
+      </div>
+      <div>
+       Nature Sounds
+      </div>
+     </div>
+    </div>
+    <div class="song">
+     <img alt="Album cover of 'City Lights'" id="featured-song-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ebd3a81d-7839-4d58-a962-c5d2324a6d6f.png"/>
+     <div>
+      <div>
+       City Lights
+      </div>
+      <div>
+       Urban Beats
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="playlist">
+    <h2>
+     Your Playlist
+    </h2>
+    <div class="song">
+     <img alt="Album cover of 'Ocean Waves'" id="playlist-song-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fcb3156c-189b-498c-803b-6aa6585e2de8.png"/>
+     <div>
+      <div>
+       Ocean Waves
+      </div>
+      <div>
+       Relaxing Sounds
+      </div>
+     </div>
+    </div>
+    <div class="song">
+     <img alt="Album cover of 'Forest Ambience'" id="playlist-song-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/81ac6a76-04c9-4309-81fb-43719ff3d708.png"/>
+     <div>
+      <div>
+       Forest Ambience
+      </div>
+      <div>
+       Nature Sounds
+      </div>
+     </div>
+    </div>
+    <div class="song">
+     <img alt="Album cover of 'Jazz Nights'" id="playlist-song-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/26453e7f-f8f5-4c5b-8cf0-71b78380b215.png"/>
+     <div>
+      <div>
+       Jazz Nights
+      </div>
+      <div>
+       Smooth Jazz Band
+      </div>
+     </div>
+    </div>
+    <div class="song">
+     <img alt="Album cover of 'Morning Dew'" id="playlist-song-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/44a69230-ef6c-47a9-94a7-07e312edcd8c.png"/>
+     <div>
+      <div>
+       Morning Dew
+      </div>
+      <div>
+       Acoustic Mornings
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+  <footer>
+   <nav>
+    <a href="#home">
+     Home
+    </a>
+    <a href="#browse">
+     Browse
+    </a>
+    <a href="#profile">
+     Profile
+    </a>
+   </nav>
+  </footer>
+ </body>
+</html>
+<!-- End -->

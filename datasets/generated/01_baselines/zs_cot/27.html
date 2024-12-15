@@ -1,0 +1,96 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Storage App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .container {
+            padding: 1em;
+        }
+
+        .app-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .app-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 1em;
+            margin-bottom: 0.5em;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-item button {
+            background-color: #ff4f4f;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .app-item button:hover {
+            background-color: #ff0000;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Manage Installed Apps
+   </h1>
+  </header>
+  <div class="container">
+   <ul class="app-list">
+    <li class="app-item">
+     <span>
+      App 1
+     </span>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <span>
+      App 2
+     </span>
+     <button>
+      Delete
+     </button>
+    </li>
+    <li class="app-item">
+     <span>
+      App 3
+     </span>
+     <button>
+      Delete
+     </button>
+    </li>
+    <!-- Add more apps as needed -->
+   </ul>
+  </div>
+ </body>
+</html>
+<!-- End -->

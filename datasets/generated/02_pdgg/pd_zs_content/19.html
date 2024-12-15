@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bidding App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+        }
+        .offer-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            position: relative;
+        }
+        .offer-card.open {
+            border-left: 5px solid green;
+        }
+        .offer-card.closed {
+            border-left: 5px solid grey;
+        }
+        .offer-card .status {
+            font-size: 14px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .offer-card .status.open {
+            color: green;
+        }
+        .offer-card .status.closed {
+            color: grey;
+        }
+        .offer-card .status i {
+            margin-right: 5px;
+        }
+        .offer-card h2 {
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+        .offer-card p {
+            font-size: 16px;
+            color: #666;
+            margin: 0 0 20px 0;
+        }
+        .offer-card .bid-amount {
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+            margin-bottom: 10px;
+        }
+        .offer-card .time-remaining {
+            font-size: 14px;
+            color: #888;
+        }
+        .offer-card .end-date {
+            font-size: 14px;
+            color: #888;
+        }
+        .offer-card .bid-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .offer-card .bid-button.disabled {
+            background-color: grey;
+            cursor: not-allowed;
+        }
+        .bottom-nav {
+            background-color: white;
+            box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .bottom-nav a {
+            color: #666;
+            text-decoration: none;
+            text-align: center;
+        }
+        .bottom-nav a.active {
+            color: blue;
+        }
+        .bottom-nav i {
+            display: block;
+            font-size: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="offer-card open">
+    <div class="status open">
+     <i class="fas fa-check-circle">
+     </i>
+     Open
+    </div>
+    <h2>
+     Vintage Wooden Chair
+    </h2>
+    <p>
+     A beautifully crafted vintage wooden chair, perfect for adding a touch of elegance to any room.
+    </p>
+    <div class="bid-amount">
+     $150
+    </div>
+    <div class="time-remaining">
+     Time Remaining: 2h 30m
+    </div>
+    <button class="bid-button">
+     Bid
+    </button>
+   </div>
+   <div class="offer-card closed">
+    <div class="status closed">
+     <i class="fas fa-times-circle">
+     </i>
+     Closed
+    </div>
+    <h2>
+     Antique Silverware Set
+    </h2>
+    <p>
+     An exquisite set of antique silverware, ideal for collectors or for special occasions.
+    </p>
+    <div class="bid-amount">
+     $200
+    </div>
+    <div class="end-date">
+     Ended on: 2023-10-01 15:00
+    </div>
+    <button class="bid-button disabled" disabled="">
+     Bid
+    </button>
+   </div>
+   <div class="offer-card open">
+    <div class="status open">
+     <i class="fas fa-check-circle">
+     </i>
+     Open
+    </div>
+    <h2>
+     Handmade Ceramic Vase
+    </h2>
+    <p>
+     A unique handmade ceramic vase, perfect for displaying fresh flowers or as a decorative piece.
+    </p>
+    <div class="bid-amount">
+     $75
+    </div>
+    <div class="time-remaining">
+     Time Remaining: 5h 15m
+    </div>
+    <button class="bid-button">
+     Bid
+    </button>
+   </div>
+   <div class="offer-card closed">
+    <div class="status closed">
+     <i class="fas fa-times-circle">
+     </i>
+     Closed
+    </div>
+    <h2>
+     Luxury Leather Wallet
+    </h2>
+    <p>
+     A high-quality luxury leather wallet, a perfect accessory for any outfit.
+    </p>
+    <div class="bid-amount">
+     $120
+    </div>
+    <div class="end-date">
+     Ended on: 2023-09-30 12:00
+    </div>
+    <button class="bid-button disabled" disabled="">
+     Bid
+    </button>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <a class="active" href="#">
+    <i class="fas fa-home">
+    </i>
+    Home
+   </a>
+   <a href="#">
+    <i class="fas fa-box">
+    </i>
+    Offers
+   </a>
+   <a href="#">
+    <i class="fas fa-user">
+    </i>
+    Profile
+   </a>
+   <a href="#">
+    <i class="fas fa-bell">
+    </i>
+    Notifications
+   </a>
+  </div>
+ </body>
+</html>
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   News App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        .header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .nav {
+            display: flex;
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            justify-content: space-around;
+        }
+        .nav div {
+            cursor: pointer;
+        }
+        .top-stories {
+            padding: 10px;
+        }
+        .top-stories h2 {
+            margin-top: 0;
+        }
+        .story {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .story img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .story-content {
+            flex: 1;
+        }
+        .story-content h3 {
+            margin: 0 0 5px 0;
+        }
+        .story-content p {
+            margin: 0;
+            color: #555;
+        }
+        .story-content .time {
+            color: #999;
+        }
+        .notification-bar {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .notification-bar button {
+            background-color: white;
+            color: #007bff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Logo" src=""/>
+   <h1>
+    News App
+   </h1>
+  </div>
+  <div class="nav">
+   <div>
+    LIVE
+   </div>
+   <div>
+    Top Stories
+   </div>
+   <div>
+    My News
+   </div>
+   <div>
+    Most Read
+   </div>
+  </div>
+  <div class="notification-bar">
+   <p>
+    Stay in the know? Get notifications when important news unfolds. You can turn notifications off at any time from settings.
+   </p>
+   <button>
+    No Thanks
+   </button>
+   <button>
+    Yes
+   </button>
+  </div>
+  <div class="top-stories">
+   <h2>
+    Top Stories
+   </h2>
+   <div class="story">
+    <img alt="Story 1" src=""/>
+    <div class="story-content">
+     <h3>
+      FORECAST: Back into the 80s, sunny
+     </h3>
+     <p class="time">
+      12:39 AM
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 2" src=""/>
+    <div class="story-content">
+     <h3>
+      PHOTOS: 100 rejected personalized license plates
+     </h3>
+     <p class="time">
+      Mar 24, 2017 12:42 PM
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 3" src=""/>
+    <div class="story-content">
+     <h3>
+      PHOTOS: $20M Scottsdale home on the market now
+     </h3>
+     <p class="time">
+      Mar 30, 2017 11:43 AM
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 4" src=""/>
+    <div class="story-content">
+     <h3>
+      FBI releases unseen photos from Sept. 11
+     </h3>
+     <p class="time">
+      Mar 31, 2017 04:21 PM
+     </p>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story 5" src=""/>
+    <div class="story-content">
+     <h3>
+      PD: Man dead after Chandler shooting
+     </h3>
+     <p class="time">
+      12:19 AM
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

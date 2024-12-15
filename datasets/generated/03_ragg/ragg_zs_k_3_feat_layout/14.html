@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Platform
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        .top-nav .left, .top-nav .right {
+            display: flex;
+            align-items: center;
+        }
+        .top-nav .left img, .top-nav .right img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .top-nav .center {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .content-section {
+            margin: 20px;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .section-header h2 {
+            margin: 0;
+        }
+        .horizontal-list {
+            display: flex;
+            overflow-x: scroll;
+        }
+        .horizontal-list img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+        .player-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .player-bar img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .player-bar .info {
+            display: flex;
+            align-items: center;
+        }
+        .player-bar .controls {
+            display: flex;
+            align-items: center;
+        }
+        .player-bar .controls img {
+            width: 24px;
+            height: 24px;
+            margin: 0 10px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background-color: #555;
+            position: relative;
+            margin-top: 5px;
+        }
+        .progress-bar .progress {
+            height: 100%;
+            background-color: #1db954;
+            width: 50%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-nav">
+   <div class="left">
+    <img alt="Menu" src=""/>
+    <img alt="Back" src=""/>
+   </div>
+   <div class="center">
+    <h1>
+     Music Platform
+    </h1>
+   </div>
+   <div class="right">
+    <img alt="Search" src=""/>
+    <img alt="Notifications" src=""/>
+    <img alt="Downloads" src=""/>
+   </div>
+  </div>
+  <div class="content-section">
+   <div class="section-header">
+    <h2>
+     Trending
+    </h2>
+    <a href="#">
+     See All
+    </a>
+   </div>
+   <div class="horizontal-list">
+    <img alt="Album 1" src=""/>
+    <img alt="Album 2" src=""/>
+    <img alt="Album 3" src=""/>
+    <img alt="Album 4" src=""/>
+   </div>
+  </div>
+  <div class="content-section">
+   <div class="section-header">
+    <h2>
+     For You
+    </h2>
+    <a href="#">
+     See All
+    </a>
+   </div>
+   <div class="horizontal-list">
+    <img alt="Album 5" src=""/>
+    <img alt="Album 6" src=""/>
+    <img alt="Album 7" src=""/>
+    <img alt="Album 8" src=""/>
+   </div>
+  </div>
+  <div class="content-section">
+   <div class="section-header">
+    <h2>
+     New Releases
+    </h2>
+    <a href="#">
+     See All
+    </a>
+   </div>
+   <div class="horizontal-list">
+    <img alt="Album 9" src=""/>
+    <img alt="Album 10" src=""/>
+    <img alt="Album 11" src=""/>
+    <img alt="Album 12" src=""/>
+   </div>
+  </div>
+  <div class="player-bar">
+   <div class="info">
+    <img alt="Album Art" src=""/>
+    <div>
+     <div>
+      Song Title
+     </div>
+     <div>
+      Artist Name
+     </div>
+    </div>
+   </div>
+   <div class="controls">
+    <img alt="Previous" src=""/>
+    <img alt="Play" src=""/>
+    <img alt="Next" src=""/>
+   </div>
+  </div>
+  <div class="progress-bar">
+   <div class="progress">
+   </div>
+  </div>
+ </body>
+</html>

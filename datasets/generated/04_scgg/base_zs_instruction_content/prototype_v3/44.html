@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restaurant Menu
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header .search-bar {
+            background-color: white;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 5px 10px;
+            width: 300px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+        .menu-item:hover {
+            transform: scale(1.02);
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .menu-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+        .menu-item p {
+            margin: 0 0 10px 0;
+        }
+        .menu-item .details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-item .actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .menu-item .actions button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            transition: background-color 0.2s;
+        }
+        .menu-item .actions button:hover {
+            background-color: #0056b3;
+        }
+        .menu-item .actions .price {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .history, .location, .order-type {
+            margin: 20px 0;
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .history button, .location button, .order-type button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .history button:hover, .location button:hover, .order-type button:hover {
+            background-color: #218838;
+        }
+        .input-group {
+            margin: 10px 0;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+        .input-group input:invalid {
+            border-color: red;
+        }
+        .input-group select {
+            appearance: none;
+            background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="5" viewBox="0 0 4 5"><path fill="#000" d="M2 0L0 2h4L2 0zM2 5L0 3h4L2 5z"/></svg>') no-repeat right 10px center;
+            background-size: 10px 10px;
+        }
+        .filter-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .filter-container select, .filter-container input {
+            margin-right: 10px;
+        }
+        .filter-container input[type="range"] {
+            width: 100%;
+        }
+        .ratings {
+            display: flex;
+            align-items: center;
+        }
+        .ratings span {
+            margin-left: 5px;
+            font-size: 0.9em;
+            color: #ffc107;
+        }
+        .promotion {
+            background-color: #ffc107;
+            color: #343a40;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .category {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        .sort-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .sort-container select {
+            margin-left: 10px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.2s;
+        }
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Restaurant Menu
+   </h1>
+   <input class="search-bar" placeholder="Search for items or categories..." type="text"/>
+  </header>
+  <div class="container">
+   <div class="filter-container">
+    <select>
+     <option value="">
+      All Categories
+     </option>
+     <option value="appetizers">
+      Appetizers
+     </option>
+     <option value="main-courses">
+      Main Courses
+     </option>
+     <option value="desserts">
+      Desserts
+     </option>
+    </select>
+    <input max="50" min="0" step="1" type="range"/>
+    <select>
+     <option value="">
+      All Nutritional Info
+     </option>
+     <option value="low-calorie">
+      Low Calorie
+     </option>
+     <option value="vegan">
+      Vegan
+     </option>
+     <option value="gluten-free">
+      Gluten-Free
+     </option>
+     <option value="vegetarian">
+      Vegetarian
+     </option>
+     <option value="halal">
+      Halal
+     </option>
+     <option value="kosher">
+      Kosher
+     </option>
+    </select>
+   </div>
+   <div class="sort-container">
+    <label for="sort">
+     Sort by:
+    </label>
+    <select id="sort">
+     <option value="price">
+      Price
+     </option>
+     <option value="popularity">
+      Popularity
+     </option>
+     <option value="rating">
+      Rating
+     </option>
+    </select>
+   </div>
+   <div class="menu-item">
+    <img alt="Grilled Chicken Salad" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f618a165-824f-4e6b-8879-0a81ac0cd85f.png"/>
+    <div class="details">
+     <h3>
+      Grilled Chicken Salad
+     </h3>
+     <p>
+      Fresh greens topped with grilled chicken, tomatoes, cucumbers, and a light vinaigrette dressing.
+     </p>
+     <p>
+      Nutritional Info: 250 kcal
+     </p>
+     <div class="ratings">
+      <span>
+       ⭐⭐⭐⭐⭐
+      </span>
+      <span>
+       (4.5)
+      </span>
+     </div>
+     <div class="promotion">
+      Promotion
+     </div>
+     <div class="category">
+      Appetizers
+     </div>
+    </div>
+    <div class="actions">
+     <span class="price">
+      $10.00
+     </span>
+     <button>
+      Add to Favorites
+     </button>
+     <button>
+      More Details
+     </button>
+    </div>
+   </div>
+   <div class="menu-item">
+    <img alt="Spaghetti Carbonara" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/61b7a16b-eb65-41ce-af29-39f2faca4fe9.png"/>
+    <div class="details">
+     <h3>
+      Spaghetti Carbonara
+     </h3>
+     <p>
+      Classic Italian pasta with creamy sauce, bacon bits, and a sprinkle of Parmesan cheese.
+     </p>
+     <p>
+      Nutritional Info: 300 kcal
+     </p>
+     <div class="ratings">
+      <span>
+       ⭐⭐⭐⭐
+      </span>
+      <span>
+       (4.0)
+      </span>
+     </div>
+     <div class="category">
+      Main Courses
+     </div>
+    </div>
+    <div class="actions">
+     <span class="price">
+      $12.00
+     </span>
+     <button>
+      Add to Favorites
+     </button>
+     <button>
+      More Details
+     </button>
+    </div>
+   </div>
+   <div class="menu-item">
+    <img alt="Chocolate Lava Cake" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c753d86b-e07a-4b1b-80a8-956a57b28eb8.png"/>
+    <div class="details">
+     <h3>
+      Chocolate Lava Cake
+     </h3>
+     <p>
+      Warm chocolate cake with a gooey molten center, served with a scoop of vanilla ice cream.
+     </p>
+     <p>
+      Nutritional Info: 200 kcal
+     </p>
+     <div class="ratings">
+      <span>
+       ⭐⭐⭐⭐⭐
+      </span>
+      <span>
+       (4.8)
+      </span>
+     </div>
+     <div class="category">
+      Desserts
+     </div>
+    </div>
+    <div class="actions">
+     <span class="price">
+      $8.00
+     </span>
+     <button>
+      Add to Favorites
+     </button>
+     <button>
+      More Details
+     </button>
+    </div>
+   </div>
+   <div class="menu-item">
+    <img alt="Caesar Salad" id="image4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f345bf11-1c0e-4c0e-8f44-78b8643cfe3d.png"/>
+    <div class="details">
+     <h3>
+      Caesar Salad
+     </h3>
+     <p>
+      Crisp romaine lettuce, croutons, and Parmesan cheese, tossed in Caesar dressing.
+     </p>
+     <p>
+      Nutritional Info: 180 kcal
+     </p>
+     <div class="ratings">
+      <span>
+       ⭐⭐⭐⭐⭐
+      </span>
+      <span>
+       (4.7)
+      </span>
+     </div>
+     <div class="category">
+      Appetizers
+     </div>
+    </div>
+    <div class="actions">
+     <span class="price">
+      $9.00
+     </span>
+     <button>
+      Add to Favorites
+     </button>
+     <button>
+      More Details
+     </button>
+    </div>
+   </div>
+   <div class="menu-item">
+    <img alt="Beef Burger" id="image5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e67c6d3b-72f0-4492-864c-b3298c54f557.png"/>
+    <div class="details">
+     <h3>
+      Beef Burger
+     </h3>
+     <p>
+      Juicy beef patty with lettuce, tomato, and cheese, served with a side of fries.
+     </p>
+     <p>
+      Nutritional Info: 450 kcal
+     </p>
+     <div class="ratings">
+      <span>
+       ⭐⭐⭐⭐
+      </span>
+      <span>
+       (4.2)
+      </span>
+     </div>
+     <div class="category">
+      Main Courses
+     </div>
+    </div>
+    <div class="actions">
+     <span class="price">
+      $11.00
+     </span>
+     <button>
+      Add to Favorites
+     </button>
+     <button>
+      More Details
+     </button>
+    </div>
+   </div>
+   <div class="menu-item">
+    <img alt="Tiramisu" id="image6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/703c75ba-33b7-4a08-b923-1f4678e688ba.png"/>
+    <div class="details">
+     <h3>
+      Tiramisu
+     </h3>
+     <p>
+      Traditional Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cheese.
+     </p>
+     <p>
+      Nutritional Info: 320 kcal
+     </p>
+     <div class="ratings">
+      <span>
+       ⭐⭐⭐⭐⭐
+      </span>
+      <span>
+       (4.9)
+      </span>
+     </div>
+     <div class="category">
+      Desserts
+     </div>
+    </div>
+    <div class="actions">
+     <span class="price">
+      $7.00
+     </span>
+     <button>
+      Add to Favorites
+     </button>
+     <button>
+      More Details
+     </button>
+    </div>
+   </div>
+   <div class="history">
+    <h2>
+     Order History
+    </h2>
+    <button>
+     View History
+    </button>
+   </div>
+   <div class="location">
+    <h2>
+     Specify Location
+    </h2>
+    <div class="input-group">
+     <label for="location">
+      Location:
+     </label>
+     <input id="location" name="location" required="" type="text"/>
+    </div>
+   </div>
+   <div class="order-type">
+    <h2>
+     Specify Order Type
+    </h2>
+    <div class="input-group">
+     <label for="order-type">
+      Order Type:
+     </label>
+     <select id="order-type" name="order-type">
+      <option value="dine-in">
+       Dine In
+      </option>
+      <option value="takeaway">
+       Takeaway
+      </option>
+      <option value="delivery">
+       Delivery
+      </option>
+     </select>
+    </div>
+   </div>
+  </div>
+  <div class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+   Back to Top
+  </div>
+  <script>
+   window.addEventListener('scroll', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+  </script>
+ </body>
+</html>

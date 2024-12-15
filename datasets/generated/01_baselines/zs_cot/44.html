@@ -1,0 +1,145 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restaurant Menu
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 1em;
+        }
+        .section-title {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+        .location-order-type, .menu-items, .order-history {
+            margin-bottom: 1.5em;
+        }
+        .input-group {
+            margin-bottom: 0.5em;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 0.3em;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 0.5em;
+        }
+        .menu-item button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .menu-item button:hover {
+            background-color: #e5533d;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Restaurant Menu
+   </h1>
+  </header>
+  <div class="container">
+   <div class="location-order-type">
+    <div class="section-title">
+     Specify Location and Order Type
+    </div>
+    <div class="input-group">
+     <label for="location">
+      Location:
+     </label>
+     <input id="location" placeholder="Enter your location" type="text"/>
+    </div>
+    <div class="input-group">
+     <label for="order-type">
+      Order Type:
+     </label>
+     <select id="order-type">
+      <option value="dine-in">
+       Dine In
+      </option>
+      <option value="takeaway">
+       Takeaway
+      </option>
+      <option value="delivery">
+       Delivery
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="menu-items">
+    <div class="section-title">
+     Menu Items
+    </div>
+    <div class="menu-item">
+     <span>
+      Pizza
+     </span>
+     <button>
+      Save
+     </button>
+    </div>
+    <div class="menu-item">
+     <span>
+      Burger
+     </span>
+     <button>
+      Save
+     </button>
+    </div>
+    <div class="menu-item">
+     <span>
+      Pasta
+     </span>
+     <button>
+      Save
+     </button>
+    </div>
+    <!-- Add more menu items as needed -->
+   </div>
+   <div class="order-history">
+    <div class="section-title">
+     Order History
+    </div>
+    <p>
+     No previous orders.
+    </p>
+    <!-- This section can be dynamically updated with JavaScript to show order history -->
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->

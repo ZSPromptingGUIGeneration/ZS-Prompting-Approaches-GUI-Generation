@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Mobile Form
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .character-limit {
+            font-size: 12px;
+            color: #888;
+        }
+        .required:after {
+            content: "*";
+            color: red;
+            margin-left: 5px;
+        }
+        .file-upload {
+            display: flex;
+            align-items: center;
+        }
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        .file-upload label {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .file-upload img {
+            max-width: 100px;
+            margin-left: 10px;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:disabled {
+            background-color: #ccc;
+        }
+        .validation-message {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .validation-message.success {
+            color: green;
+        }
+        .validation-message.error {
+            color: red;
+        }
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 15px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="form-container">
+   <form id="submissionForm">
+    <div class="form-group">
+     <label class="required" for="email">
+      Email
+     </label>
+     <input id="email" name="email" placeholder="Enter your email" required="" type="email"/>
+     <div class="validation-message" id="emailValidation">
+     </div>
+    </div>
+    <div class="form-group">
+     <label class="required" for="title">
+      Title
+     </label>
+     <input id="title" maxlength="50" name="title" placeholder="Enter the title of the picture" required="" type="text"/>
+     <div class="character-limit" id="titleCharLimit">
+      0/50
+     </div>
+     <div class="validation-message" id="titleValidation">
+     </div>
+    </div>
+    <div class="form-group">
+     <label for="description">
+      Description
+     </label>
+     <textarea id="description" maxlength="200" name="description" placeholder="Enter a description (optional)"></textarea>
+     <div class="character-limit" id="descriptionCharLimit">
+      0/200
+     </div>
+    </div>
+    <div class="form-group">
+     <label class="required" for="location">
+      Location
+     </label>
+     <input id="location" name="location" placeholder="Enter the location" required="" type="text"/>
+     <div class="validation-message" id="locationValidation">
+     </div>
+    </div>
+    <div class="form-group file-upload">
+     <label for="picture">
+      Upload Picture
+     </label>
+     <input accept="image/jpeg, image/png" id="picture" name="picture" required="" type="file"/>
+     <label for="picture">
+      Upload Picture
+     </label>
+     <img alt="Image Preview" id="picturePreview" src="" style="display:none;"/>
+     <div class="validation-message" id="pictureValidation">
+     </div>
+    </div>
+    <div class="form-group checkbox-group">
+     <input id="terms" name="terms" required="" type="checkbox"/>
+     <label for="terms">
+      I agree to the
+      <a href="#" target="_blank">
+       terms of submission
+      </a>
+     </label>
+     <div class="validation-message" id="termsValidation">
+     </div>
+    </div>
+    <button class="submit-btn" disabled="" id="submitBtn" type="submit">
+     Submit
+    </button>
+   </form>
+  </div>
+  <script>
+   const emailField = document.getElementById('email');
+        const titleField = document.getElementById('title');
+        const descriptionField = document.getElementById('description');
+        const locationField = document.getElementById('location');
+        const pictureField = document.getElementById('picture');
+        const termsField = document.getElementById('terms');
+        const submitBtn = document.getElementById('submitBtn');
+
+        const emailValidation = document.getElementById('emailValidation');
+        const titleValidation = document.getElementById('titleValidation');
+        const locationValidation = document.getElementById('locationValidation');
+        const pictureValidation = document.getElementById('pictureValidation');
+        const termsValidation = document.getElementById('termsValidation');
+
+        const titleCharLimit = document.getElementById('titleCharLimit');
+        const descriptionCharLimit = document.getElementById('descriptionCharLimit');
+
+        const picturePreview = document.getElementById('picturePreview');
+
+        function validateEmail() {
+            const email = emailField.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailRegex.test(email)) {
+                emailValidation.textContent = 'Valid email address';
+                emailValidation.className = 'validation-message success';
+                return true;
+            } else {
+                emailValidation.textContent = 'Please enter a valid email address';
+                emailValidation.className = 'validation-message error';
+                return false;
+            }
+        }
+
+        function updateCharLimit(field, limitElement, maxLength) {
+            const length = field.value.length;
+            limitElement.textContent = `${length}/${maxLength}`;
+        }
+
+        function validateForm() {
+            const isEmailValid = validateEmail();
+            const isTitleValid = titleField.value.trim() !== '';
+            const isLocationValid = locationField.value.trim() !== '';
+            const isPictureValid = pictureField.files.length > 0;
+            const isTermsChecked = termsField.checked;
+
+            if (isTitleValid) {
+                titleValidation.textContent = '';
+            } else {
+                titleValidation.textContent = 'Title is required';
+                titleValidation.className = 'validation-message error';
+            }
+
+            if (isLocationValid) {
+                locationValidation.textContent = '';
+            } else {
+                locationValidation.textContent = 'Location is required';
+                locationValidation.className = 'validation-message error';
+            }
+
+            if (isPictureValid) {
+                pictureValidation.textContent = '';
+            } else {
+                pictureValidation.textContent = 'Picture is required';
+                pictureValidation.className = 'validation-message error';
+            }
+
+            if (isTermsChecked) {
+                termsValidation.textContent = '';
+            } else {
+                termsValidation.textContent = 'You must agree to the terms';
+                termsValidation.className = 'validation-message error';
+            }
+
+            submitBtn.disabled = !(isEmailValid && isTitleValid && isLocationValid && isPictureValid && isTermsChecked);
+        }
+
+        emailField.addEventListener('input', () => {
+            validateEmail();
+            validateForm();
+        });
+
+        titleField.addEventListener('input', () => {
+            updateCharLimit(titleField, titleCharLimit, 50);
+            validateForm();
+        });
+
+        descriptionField.addEventListener('input', () => {
+            updateCharLimit(descriptionField, descriptionCharLimit, 200);
+        });
+
+        locationField.addEventListener('input', validateForm);
+        pictureField.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    picturePreview.src = e.target.result;
+                    picturePreview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+            validateForm();
+        });
+
+        termsField.addEventListener('change', validateForm);
+
+        document.getElementById('submissionForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Form submitted successfully!');
+        });
+  </script>
+ </body>
+</html>

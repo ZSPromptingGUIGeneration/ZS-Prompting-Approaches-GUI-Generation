@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f44336;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            padding: 15px;
+        }
+        .recipe-image {
+            width: 100%;
+            height: auto;
+        }
+        .login-box {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .login-box button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .info-box {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .tab-box {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        .tab-box div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tab-box .active {
+            border-bottom: 2px solid #f44336;
+        }
+        .ingredients, .instructions {
+            margin: 10px 0;
+        }
+        .ingredients ul, .instructions ol {
+            list-style: none;
+            padding: 0;
+        }
+        .ingredients ul li, .instructions ol li {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ingredients ul li span, .instructions ol li span {
+            flex-grow: 1;
+        }
+        .ingredients ul li button, .instructions ol li button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .share-box {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        .share-box div {
+            text-align: center;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Recipe Name
+  </div>
+  <div class="container">
+   <img alt="Recipe Image" class="recipe-image" src=""/>
+   <div class="login-box">
+    <button>
+     Log In
+    </button>
+   </div>
+   <div class="info-box">
+    <div>
+     Prep Time: 15 min
+    </div>
+    <div>
+     Total Time: 25 min
+    </div>
+    <div>
+     Serves: 4
+    </div>
+   </div>
+   <div class="tab-box">
+    <div class="active">
+     Ingredients
+    </div>
+    <div>
+     Instructions
+    </div>
+    <div>
+     Nutrition Info
+    </div>
+   </div>
+   <div class="ingredients">
+    <h3>
+     Ingredients
+    </h3>
+    <ul>
+     <li>
+      <span>
+       375g dried fettuccine
+      </span>
+      <button>
+       +
+      </button>
+     </li>
+     <li>
+      <span>
+       25g butter
+      </span>
+      <button>
+       +
+      </button>
+     </li>
+     <li>
+      <span>
+       4 garlic cloves, crushed
+      </span>
+      <button>
+       +
+      </button>
+     </li>
+     <li>
+      <span>
+       300ml thickened cream
+      </span>
+      <button>
+       +
+      </button>
+     </li>
+     <li>
+      <span>
+       2 tablespoons chopped flat-leaf parsley leaves
+      </span>
+      <button>
+       +
+      </button>
+     </li>
+     <li>
+      <span>
+       1/3 cup finely grated parmesan cheese or vegetarian hard cheese
+      </span>
+      <button>
+       +
+      </button>
+     </li>
+    </ul>
+   </div>
+   <div class="instructions">
+    <h3>
+     Directions for preparation
+    </h3>
+    <ol>
+     <li>
+      <span>
+       Step 1: Description of step 1
+      </span>
+      <button>
+       ✔
+      </button>
+     </li>
+     <li>
+      <span>
+       Step 2: Description of step 2
+      </span>
+      <button>
+       ✔
+      </button>
+     </li>
+     <li>
+      <span>
+       Step 3: Description of step 3
+      </span>
+      <button>
+       ✔
+      </button>
+     </li>
+     <li>
+      <span>
+       Step 4: Description of step 4
+      </span>
+      <button>
+       ✔
+      </button>
+     </li>
+    </ol>
+   </div>
+   <div class="share-box">
+    <div>
+     <img alt="Share Icon" src=""/>
+     <div>
+      Share
+     </div>
+    </div>
+    <div>
+     <img alt="Smart Watch Icon" src=""/>
+     <div>
+      Smart Watch
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

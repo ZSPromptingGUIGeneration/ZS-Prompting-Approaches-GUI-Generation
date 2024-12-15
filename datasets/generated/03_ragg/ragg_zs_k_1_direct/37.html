@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   News App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header img {
+            height: 40px;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f1f1f1;
+            padding: 10px 0;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .nav a.active {
+            border-bottom: 2px solid #007bff;
+        }
+        .news-item {
+            display: flex;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .news-item .content {
+            flex-grow: 1;
+        }
+        .news-item .content h2 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .news-item .content p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .news-item .content .time {
+            color: #aaa;
+            font-size: 12px;
+        }
+        .news-item .share {
+            display: flex;
+            align-items: center;
+            color: #007bff;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Logo" src=""/>
+   <img alt="Menu" src=""/>
+  </div>
+  <div class="nav">
+   <a class="active" href="#">
+    Top Stories
+   </a>
+   <a href="#">
+    Weather
+   </a>
+   <a href="#">
+    Video
+   </a>
+   <a href="#">
+    Sections
+   </a>
+  </div>
+  <div class="news-item">
+   <img alt="News Image" src=""/>
+   <div class="content">
+    <h2>
+     FORECAST: Back into the 80s, sunny
+    </h2>
+    <p class="time">
+     12:39 AM
+    </p>
+   </div>
+   <div class="share">
+    🔁
+   </div>
+  </div>
+  <div class="news-item">
+   <img alt="News Image" src=""/>
+   <div class="content">
+    <h2>
+     PHOTOS: 100 rejected personalized license plates
+    </h2>
+    <p class="time">
+     Mar 24, 2017 12:42 PM
+    </p>
+   </div>
+   <div class="share">
+    🔁
+   </div>
+  </div>
+  <div class="news-item">
+   <img alt="News Image" src=""/>
+   <div class="content">
+    <h2>
+     PHOTOS: $20M Scottsdale home on the market now
+    </h2>
+    <p class="time">
+     Mar 30, 2017 11:43 AM
+    </p>
+   </div>
+   <div class="share">
+    🔁
+   </div>
+  </div>
+  <div class="news-item">
+   <img alt="News Image" src=""/>
+   <div class="content">
+    <h2>
+     FBI releases unseen photos from Sept. 11
+    </h2>
+    <p class="time">
+     Mar 31, 2017 04:21 PM
+    </p>
+   </div>
+   <div class="share">
+    🔁
+   </div>
+  </div>
+  <div class="news-item">
+   <img alt="News Image" src=""/>
+   <div class="content">
+    <h2>
+     PD: Man dead after Chandler shooting
+    </h2>
+    <p class="time">
+     12:19 AM
+    </p>
+   </div>
+   <div class="share">
+    🔁
+   </div>
+  </div>
+ </body>
+</html>

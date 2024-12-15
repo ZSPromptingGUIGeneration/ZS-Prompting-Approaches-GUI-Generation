@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Online Radio
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            color: white;
+        }
+        .header .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .header .icons {
+            display: flex;
+            gap: 15px;
+        }
+        .header .icons i {
+            cursor: pointer;
+        }
+        .tab-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab-bar .tab {
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        .tab-bar .tab.active {
+            border-bottom: 2px solid #1e90ff;
+            color: #1e90ff;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .section-title h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .section-title a {
+            font-size: 12px;
+            color: #1e90ff;
+            text-decoration: none;
+        }
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+        }
+        .station-card {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-width: 100px;
+        }
+        .station-card img {
+            width: 50px;
+            height: 50px;
+        }
+        .station-card .name {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .station-card .bitrate {
+            font-size: 12px;
+            color: #666;
+        }
+        .now-playing-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .now-playing-bar .info {
+            display: flex;
+            align-items: center;
+        }
+        .now-playing-bar img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .now-playing-bar .controls i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .fab {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background-color: #1e90ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="title">
+    Online Radio
+   </div>
+   <div class="icons">
+    <i class="search-icon">
+     🔍
+    </i>
+    <i class="add-icon">
+     ➕
+    </i>
+    <i class="menu-icon">
+     ☰
+    </i>
+   </div>
+  </div>
+  <div class="tab-bar">
+   <div class="tab active">
+    STATIONS
+   </div>
+   <div class="tab">
+    FAVORITES
+   </div>
+   <div class="tab">
+    RECOMMENDED
+   </div>
+  </div>
+  <div class="content">
+   <div class="section-title">
+    <h2>
+     Your Stations
+    </h2>
+    <a href="#">
+     See all &gt;&gt;
+    </a>
+   </div>
+   <div class="horizontal-scroll">
+    <div class="station-card">
+     <img alt="Station Logo" src=""/>
+     <div class="name">
+      Station 1
+     </div>
+     <div class="bitrate">
+      128 kbps
+     </div>
+    </div>
+    <div class="station-card">
+     <img alt="Station Logo" src=""/>
+     <div class="name">
+      Station 2
+     </div>
+     <div class="bitrate">
+      128 kbps
+     </div>
+    </div>
+   </div>
+   <div class="section-title">
+    <h2>
+     Bengaluru Live
+    </h2>
+    <a href="#">
+     See all &gt;&gt;
+    </a>
+   </div>
+   <div class="horizontal-scroll">
+    <div class="station-card">
+     <img alt="Station Logo" src=""/>
+     <div class="name">
+      Station 3
+     </div>
+     <div class="bitrate">
+      128 kbps
+     </div>
+    </div>
+    <div class="station-card">
+     <img alt="Station Logo" src=""/>
+     <div class="name">
+      Station 4
+     </div>
+     <div class="bitrate">
+      128 kbps
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="now-playing-bar">
+   <div class="info">
+    <img alt="Station Logo" src=""/>
+    <div>
+     <div class="name">
+      Now Playing: Station Name
+     </div>
+     <div class="location">
+      Location
+     </div>
+    </div>
+   </div>
+   <div class="controls">
+    <i class="play-pause-icon">
+     ⏯
+    </i>
+   </div>
+  </div>
+  <div class="fab">
+   ⚙
+  </div>
+ </body>
+</html>

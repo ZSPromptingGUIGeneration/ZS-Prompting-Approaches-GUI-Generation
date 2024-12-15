@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Child Development Journal
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #ff4081;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+        }
+        .tabs div {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            color: #757575;
+        }
+        .tabs .active {
+            color: #ff4081;
+            border-bottom: 2px solid #ff4081;
+        }
+        .profile-card, .growth-chart, .message-card, .birthday-card {
+            background-color: #fff;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .profile-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        .profile-card h2 {
+            text-align: center;
+            margin: 10px 0 5px;
+        }
+        .profile-card p {
+            text-align: center;
+            color: #757575;
+        }
+        .growth-chart h3, .message-card h3 {
+            color: #ff4081;
+            margin-bottom: 10px;
+        }
+        .growth-chart .details, .message-card .details {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .growth-chart .details div, .message-card .details div {
+            text-align: center;
+        }
+        .growth-chart .details img, .message-card .details img {
+            width: 50px;
+            height: 50px;
+        }
+        .growth-chart .details p, .message-card .details p {
+            margin: 5px 0;
+        }
+        .growth-chart .update-btn, .message-card .update-btn {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+            text-align: center;
+        }
+        .birthday-card img {
+            width: 100%;
+            max-width: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        .birthday-card p {
+            text-align: center;
+            margin-top: 10px;
+            color: #757575;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Child Development Journal
+  </div>
+  <div class="tabs">
+   <div class="tab">
+    Feed
+   </div>
+   <div class="tab">
+    Chat
+   </div>
+   <div class="tab">
+    Learn
+   </div>
+   <div class="tab active">
+    Kids
+   </div>
+  </div>
+  <div class="profile-card">
+   <img alt="Smiling baby girl" id="profile-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2a3aaedc-5a38-4208-83de-5d52e7fbe9dc.png"/>
+   <h2>
+    Emma
+   </h2>
+   <p>
+    1 year 1 month old girl
+   </p>
+  </div>
+  <div class="growth-chart">
+   <h3>
+    Growth Chart
+   </h3>
+   <div class="details">
+    <div>
+     <i class="fas fa-ruler-vertical">
+     </i>
+     <p>
+      Height
+     </p>
+     <p>
+      67.7 - 78.5cm
+     </p>
+     <p>
+      (Ideal height)
+     </p>
+    </div>
+    <div>
+     <i class="fas fa-weight">
+     </i>
+     <p>
+      Weight
+     </p>
+     <p>
+      7.7 - 11.5kg
+     </p>
+     <p>
+      (Ideal weight)
+     </p>
+    </div>
+   </div>
+   <button class="update-btn">
+    Update now
+   </button>
+  </div>
+  <div class="message-card">
+   <h3>
+    Perfect
+   </h3>
+   <div class="details">
+    <div>
+     <i class="fas fa-comment">
+     </i>
+    </div>
+    <div>
+     <p>
+      Congratulations! Your little one is growing up perfectly okay. There is nothing for you to worry about so far. Good job on taking care of your parenting role so well and raising a healthy and fit kid. Keep answering the questions on time so that you don't miss a single tick box of your baby's health and stay tuned for more blogs and news related to your baby.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="birthday-card">
+   <h3>
+    Happy 1st Birthday!
+   </h3>
+   <img alt="Birthday cake with candles" id="birthday-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/27161df8-c0fc-4658-9ca8-423c81e90f4e.png"/>
+   <p>
+    Go to ‘My Firsts’ in your Baby Book &amp; capture this special day
+   </p>
+  </div>
+ </body>
+</html>

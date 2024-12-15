@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Language Learning App
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header img {
+            width: 40px;
+            height: 40px;
+        }
+        .header .language-toggle {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .header .language-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .search-bar {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .search-bar input::placeholder {
+            color: #999;
+        }
+        .phrase-card {
+            background-color: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #4CAF50;
+        }
+        .phrase-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #4CAF50;
+        }
+        .phrase-card p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .phrase-card .actions {
+            display: flex;
+            align-items: center;
+        }
+        .phrase-card .actions button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+        .phrase-card .actions button:hover {
+            transform: scale(1.1);
+        }
+        .phrase-card .actions button img {
+            width: 24px;
+            height: 24px;
+        }
+        .category {
+            font-size: 22px;
+            margin: 20px 0 10px 0;
+            color: #4CAF50;
+        }
+        .progress-bar {
+            margin: 20px 0;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar div {
+            height: 10px;
+            width: 50%;
+            background-color: #4CAF50;
+            transition: width 0.3s;
+        }
+        .progress-bar span {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #4CAF50;
+        }
+        .feedback {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .feedback textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            resize: none;
+        }
+        .feedback button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .feedback button:hover {
+            background-color: #45a049;
+        }
+        .feedback .char-counter {
+            font-size: 12px;
+            color: #555;
+            text-align: right;
+        }
+        .difficulty {
+            font-size: 14px;
+            color: #888;
+        }
+        .phonetic {
+            font-size: 14px;
+            color: #888;
+        }
+        .learned {
+            color: #4CAF50;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .filter-bar {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .filter-bar select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .dark-mode-toggle {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+        .dark-mode-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header h1 {
+                margin-bottom: 10px;
+            }
+            .header .language-toggle,
+            .header .dark-mode-toggle {
+                margin-top: 10px;
+            }
+            .search-bar input {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <img alt="App Logo" src=""/>
+    <h1>
+     Common Spanish Phrases
+    </h1>
+    <div>
+     <button class="language-toggle">
+      EN/ES
+     </button>
+     <button class="dark-mode-toggle">
+      Dark Mode
+     </button>
+    </div>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for a phrase..." type="text"/>
+   </div>
+   <div class="progress-bar">
+    <div style="width: 50%;">
+    </div>
+    <span>
+     50% of phrases learned
+    </span>
+   </div>
+   <div class="filter-bar">
+    <select>
+     <option value="all">
+      All Categories
+     </option>
+     <option value="greetings">
+      Greetings
+     </option>
+     <option value="questions">
+      Questions
+     </option>
+     <option value="common">
+      Common Phrases
+     </option>
+    </select>
+   </div>
+   <div class="category">
+    Greetings
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Hola
+     </h3>
+     <p>
+      Hello
+     </p>
+     <p class="difficulty">
+      Beginner
+     </p>
+     <p class="phonetic">
+      [o-la]
+     </p>
+     <p class="learned">
+      Learned
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      ¿Cómo estás?
+     </h3>
+     <p>
+      How are you?
+     </p>
+     <p class="difficulty">
+      Beginner
+     </p>
+     <p class="phonetic">
+      [ko-mo es-tas]
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Gracias
+     </h3>
+     <p>
+      Thank you
+     </p>
+     <p class="difficulty">
+      Beginner
+     </p>
+     <p class="phonetic">
+      [gra-syas]
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Por favor
+     </h3>
+     <p>
+      Please
+     </p>
+     <p class="difficulty">
+      Beginner
+     </p>
+     <p class="phonetic">
+      [por fa-vor]
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Buenos días
+     </h3>
+     <p>
+      Good morning
+     </p>
+     <p class="difficulty">
+      Beginner
+     </p>
+     <p class="phonetic">
+      [bwe-nos dee-as]
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Buenas noches
+     </h3>
+     <p>
+      Good night
+     </p>
+     <p class="difficulty">
+      Beginner
+     </p>
+     <p class="phonetic">
+      [bwe-nas no-ches]
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="feedback">
+    <textarea placeholder="Leave your feedback..."></textarea>
+    <div class="char-counter">
+     0/500
+    </div>
+    <button>
+     Submit
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

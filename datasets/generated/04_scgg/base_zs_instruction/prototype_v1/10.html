@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Map App Settings
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .settings-section {
+            margin-top: 30px;
+        }
+
+        .settings-section h2 {
+            font-size: 22px;
+            color: #555;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .option:last-child {
+            border-bottom: none;
+        }
+
+        .option label {
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .option .info-icon {
+            margin-left: 10px;
+            font-size: 14px;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons .save-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .buttons .reset-button {
+            background-color: #f44336;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .option {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .toggle-switch {
+                margin-top: 10px;
+            }
+            .buttons {
+                flex-direction: column;
+            }
+            .buttons button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Map App Settings
+   </h1>
+   <div class="settings-section">
+    <h2>
+     Show on Map
+    </h2>
+    <div class="option">
+     <label for="earthquakes">
+      Earthquakes
+      <span class="info-icon" title="Show earthquake occurrences on the map">
+       ℹ️
+      </span>
+     </label>
+     <label class="toggle-switch">
+      <input id="earthquakes" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+    <div class="option">
+     <label for="floods">
+      Floods
+      <span class="info-icon" title="Show flood occurrences on the map">
+       ℹ️
+      </span>
+     </label>
+     <label class="toggle-switch">
+      <input id="floods" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+    <div class="option">
+     <label for="wildfires">
+      Wildfires
+      <span class="info-icon" title="Show wildfire occurrences on the map">
+       ℹ️
+      </span>
+     </label>
+     <label class="toggle-switch">
+      <input id="wildfires" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+    <div class="option">
+     <label for="hurricanes">
+      Hurricanes
+      <span class="info-icon" title="Show hurricane occurrences on the map">
+       ℹ️
+      </span>
+     </label>
+     <label class="toggle-switch">
+      <input id="hurricanes" type="checkbox"/>
+      <span class="slider">
+      </span>
+     </label>
+    </div>
+   </div>
+   <div class="buttons">
+    <button class="save-button">
+     Save
+    </button>
+    <button class="reset-button">
+     Reset to Default
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

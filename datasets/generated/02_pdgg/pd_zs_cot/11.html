@@ -1,0 +1,122 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music App
+  </title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   .navbar-fixed-bottom {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+   <a class="navbar-brand" href="#">
+    MusicApp
+   </a>
+   <button class="btn btn-primary ml-auto">
+    Create Playlist
+   </button>
+  </nav>
+  <div class="container mt-5">
+   <div class="row">
+    <div class="col-12">
+     <input class="form-control my-3" placeholder="Search for songs..." type="text"/>
+    </div>
+   </div>
+   <!-- Main Content -->
+   <div class="row">
+    <!-- Playlist Section -->
+    <div class="col-12">
+     <h4>
+      Your Playlists
+     </h4>
+     <div class="card-deck">
+      <div class="card">
+       <div class="card-body">
+        <h5 class="card-title">
+         Playlist 1
+        </h5>
+        <button class="btn btn-warning btn-sm">
+         Edit
+        </button>
+        <button class="btn btn-danger btn-sm">
+         Delete
+        </button>
+       </div>
+      </div>
+      <div class="card">
+       <div class="card-body">
+        <h5 class="card-title">
+         Playlist 2
+        </h5>
+        <button class="btn btn-warning btn-sm">
+         Edit
+        </button>
+        <button class="btn btn-danger btn-sm">
+         Delete
+        </button>
+       </div>
+      </div>
+      <!-- Add more playlists as needed -->
+     </div>
+    </div>
+    <!-- Song List Section -->
+    <div class="col-12 mt-4">
+     <h4>
+      Available Songs
+     </h4>
+     <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+       Song 1
+       <button class="btn btn-success btn-sm">
+        Add to Playlist
+       </button>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+       Song 2
+       <button class="btn btn-success btn-sm">
+        Add to Playlist
+       </button>
+      </li>
+      <!-- Add more songs as needed -->
+     </ul>
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <nav class="navbar navbar-light bg-light navbar-fixed-bottom">
+   <div class="container d-flex justify-content-around">
+    <button class="btn btn-light">
+     <i class="fas fa-backward">
+     </i>
+    </button>
+    <button class="btn btn-light">
+     <i class="fas fa-play">
+     </i>
+    </button>
+    <button class="btn btn-light">
+     <i class="fas fa-forward">
+     </i>
+    </button>
+   </div>
+  </nav>
+  <script src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+ </body>
+</html>
+<!-- End -->

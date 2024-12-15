@@ -1,0 +1,138 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bag Details - Shopping App
+  </title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .price {
+            color: green;
+            font-size: 20px;
+        }
+        .add-to-cart-btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .wishlist-btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .reviews, .related-products {
+            margin-top: 20px;
+        }
+        .related-products .card {
+            width: 120px;
+        }
+  </style>
+ </head>
+ <body>
+  <header class="navbar navbar-dark bg-dark">
+   <a class="navbar-brand" href="#">
+    Shopping App
+   </a>
+   <button class="btn btn-outline-light" onclick="history.back()">
+    Back
+   </button>
+  </header>
+  <main class="container mt-4">
+   <div class="product-image">
+    <img alt="Bag Image" class="img-fluid" src=""/>
+   </div>
+   <div class="product-info">
+    <div class="product-name">
+     Stylish Leather Bag
+    </div>
+    <div class="price">
+     $199.99
+    </div>
+    <div class="description">
+     <p>
+      This stylish leather bag is perfect for any occasion. It features multiple compartments, a sleek design, and durable material.
+     </p>
+    </div>
+    <button class="btn btn-primary add-to-cart-btn">
+     Add to Cart
+    </button>
+    <button class="btn btn-secondary wishlist-btn">
+     Add to Wishlist
+    </button>
+   </div>
+   <div class="reviews">
+    <h5>
+     Customer Reviews
+    </h5>
+    <div class="card mb-2">
+     <div class="card-body">
+      <h6 class="card-title">
+       John Doe
+      </h6>
+      <p class="card-text">
+       Great bag! Very stylish and durable.
+      </p>
+      <div class="rating">
+       ★★★★☆
+      </div>
+     </div>
+    </div>
+    <div class="card mb-2">
+     <div class="card-body">
+      <h6 class="card-title">
+       Jane Smith
+      </h6>
+      <p class="card-text">
+       I love this bag! It's exactly what I was looking for.
+      </p>
+      <div class="rating">
+       ★★★★★
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="related-products">
+    <h5>
+     Related Products
+    </h5>
+    <div class="d-flex">
+     <div class="card mr-2">
+      <img alt="Related Product 1" class="card-img-top" src=""/>
+      <div class="card-body">
+       <h6 class="card-title">
+        Leather Tote
+       </h6>
+       <p class="price">
+        $149.99
+       </p>
+      </div>
+     </div>
+     <div class="card mr-2">
+      <img alt="Related Product 2" class="card-img-top" src=""/>
+      <div class="card-body">
+       <h6 class="card-title">
+        Canvas Bag
+       </h6>
+       <p class="price">
+        $89.99
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+ </body>
+</html>
+<!-- End -->

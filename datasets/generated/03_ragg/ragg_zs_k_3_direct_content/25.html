@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Healthy Recipes
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: white;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+        .category {
+            width: 90%;
+            margin: 10px 0;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .category img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .category .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #4caf50;
+            padding: 10px 0;
+        }
+        .tab {
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .tab.active {
+            border-bottom: 2px solid white;
+        }
+        .recipes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+        .recipe {
+            width: 45%;
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe .details {
+            padding: 10px;
+        }
+        .recipe .details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .recipe .details p {
+            margin: 5px 0;
+            color: #888;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #4caf50;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .bottom-nav .nav-item {
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Healthy Recipes
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search..." type="text"/>
+  </div>
+  <div class="categories">
+   <div class="category">
+    <img alt="Delicious Grilled Vegetables" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/1a323891-d6ee-4101-ae06-df7961266ab9.png"/>
+    <div class="overlay">
+     Grilled Vegetables
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Fresh Paleo Salad" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/928b27b2-9d5c-4a13-8e62-26cdea88456b.png"/>
+    <div class="overlay">
+     Paleo Salad
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Tasty Mexican Tacos" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c51efbdc-503e-45f8-a646-e3d1bb574b02.png"/>
+    <div class="overlay">
+     Mexican Tacos
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Colorful Smoothie Bowls" id="image4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/a0807c45-ff44-49d1-8347-fa91ec524a6d.png"/>
+    <div class="overlay">
+     Smoothie Bowls
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Healthy Breakfast Options" id="image5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/27226ea2-c74d-4389-b2a6-fd785bfefb57.png"/>
+    <div class="overlay">
+     Healthy Breakfast
+    </div>
+   </div>
+  </div>
+  <div class="tabs">
+   <div class="tab active">
+    Home
+   </div>
+   <div class="tab">
+    Favourites
+   </div>
+   <div class="tab">
+    Featured
+   </div>
+  </div>
+  <div class="recipes">
+   <div class="recipe">
+    <img alt="Bircher Muesli with Fruits" id="image6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/173211b7-254e-4e9d-b61a-88306809d499.png"/>
+    <div class="details">
+     <h3>
+      Bircher Muesli
+     </h3>
+     <p>
+      £0.53 per serving
+     </p>
+     <p>
+      5 min
+     </p>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Serrano Ham and Asparagus Spears" id="image7" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0489bf4e-2f27-499c-be97-f0c78338e2c1.png"/>
+    <div class="details">
+     <h3>
+      Serrano Ham and Asparagus Spears
+     </h3>
+     <p>
+      £0.52 per serving
+     </p>
+     <p>
+      15 min
+     </p>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Quinoa Salad with Avocado" id="image8" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6d4caae3-3505-43f6-afd6-cbbab579617d.png"/>
+    <div class="details">
+     <h3>
+      Quinoa Salad
+     </h3>
+     <p>
+      £0.50 per serving
+     </p>
+     <p>
+      10 min
+     </p>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Grilled Chicken Breast" id="image9" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/55651fbf-29e3-4484-b974-8bb1f5744af1.png"/>
+    <div class="details">
+     <h3>
+      Grilled Chicken Breast
+     </h3>
+     <p>
+      £0.60 per serving
+     </p>
+     <p>
+      20 min
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="bottom-nav">
+   <div class="nav-item">
+    Home
+   </div>
+   <div class="nav-item">
+    Shop
+   </div>
+   <div class="nav-item">
+    Favourites
+   </div>
+   <div class="nav-item">
+    My Account
+   </div>
+  </div>
+ </body>
+</html>

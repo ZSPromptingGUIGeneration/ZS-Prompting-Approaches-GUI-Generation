@@ -1,0 +1,142 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shop Finder
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .search-container {
+            margin: 1rem 0;
+        }
+
+        #search {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .shop-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .shop-item {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex: 1 1 calc(50% - 1rem);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .shop-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .shop-item {
+                flex: 1 1 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Shop Finder
+   </h1>
+  </header>
+  <main>
+   <p>
+    This platform helps you find the right and next possible shops for your inquiries.
+   </p>
+   <div class="search-container">
+    <input id="search" placeholder="Search for shops..." type="text"/>
+   </div>
+   <div class="shop-list">
+    <!-- Example shops -->
+    <div class="shop-item">
+     <img alt="A cozy coffee shop with outdoor seating" id="shop-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/3226c2cc-f030-40f0-8245-b1453e729c27.png"/>
+     <h2>
+      Cozy Coffee
+     </h2>
+     <p>
+      A perfect place to relax and enjoy a cup of coffee.
+     </p>
+    </div>
+    <div class="shop-item">
+     <img alt="A stylish clothing boutique with modern designs" id="shop-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/51e7360c-3f57-4878-b527-faf6712ab3a0.png"/>
+     <h2>
+      Fashion Forward
+     </h2>
+     <p>
+      Trendy clothing and accessories for all ages.
+     </p>
+    </div>
+    <div class="shop-item">
+     <img alt="A bookstore with a wide selection of books and a reading area" id="shop-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/8b89d165-a176-4e6b-b09b-5cdb46c5affe.png"/>
+     <h2>
+      Book Haven
+     </h2>
+     <p>
+      Your go-to place for books and reading materials.
+     </p>
+    </div>
+    <div class="shop-item">
+     <img alt="A tech store with the latest gadgets and electronics" id="shop-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/da155f0d-9371-44f6-8f0a-26e426cda6a0.png"/>
+     <h2>
+      Gadget World
+     </h2>
+     <p>
+      Find the latest and greatest in technology here.
+     </p>
+    </div>
+    <div class="shop-item">
+     <img alt="A bakery with a variety of freshly baked goods" id="shop-5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f1e536d7-f8b4-4f94-bfaf-8878daac5dc0.png"/>
+     <h2>
+      Bake Delight
+     </h2>
+     <p>
+      Freshly baked goods that will delight your taste buds.
+     </p>
+    </div>
+    <div class="shop-item">
+     <img alt="A florist with a beautiful array of flowers and plants" id="shop-6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6c0d50c2-5854-46c3-aa73-93a55d64ddad.png"/>
+     <h2>
+      Floral Fantasy
+     </h2>
+     <p>
+      Beautiful flowers and plants for every occasion.
+     </p>
+    </div>
+   </div>
+  </main>
+ </body>
+</html>
+<!-- End -->

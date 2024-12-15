@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Finder
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .recipe-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .recipe-content {
+            padding: 15px;
+        }
+        .recipe-title {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .recipe-summary {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .recipe-tags, .recipe-rating {
+            margin: 5px 0;
+            font-size: 12px;
+            color: #999;
+        }
+        .recipe-tags span, .recipe-rating span {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            padding: 2px 5px;
+            margin-right: 5px;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .filter-options {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .filter-options button {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .filter-options button:hover {
+            background-color: #0056b3;
+        }
+  </style>
+ </head>
+ <body>
+  <input class="search-bar" placeholder="Search for recipes..." type="text"/>
+  <div class="filter-options">
+   <button>
+    Vegetarian
+   </button>
+   <button>
+    Gluten-Free
+   </button>
+   <button>
+    Quick &amp; Easy
+   </button>
+   <button>
+    Desserts
+   </button>
+  </div>
+  <div class="container">
+   <div class="recipe-card">
+    <img alt="Delicious Pasta" src=""/>
+    <div class="recipe-content">
+     <h3 class="recipe-title">
+      Delicious Pasta
+     </h3>
+     <p class="recipe-summary">
+      A quick and easy pasta recipe that's perfect for a weeknight dinner.
+     </p>
+     <div class="recipe-tags">
+      <span>
+       Vegetarian
+      </span>
+      <span>
+       Quick &amp; Easy
+      </span>
+     </div>
+     <div class="recipe-rating">
+      <span>
+       ★★★★☆
+      </span>
+      120 reviews
+     </div>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Hearty Salad" src=""/>
+    <div class="recipe-content">
+     <h3 class="recipe-title">
+      Hearty Salad
+     </h3>
+     <p class="recipe-summary">
+      A healthy and filling salad packed with fresh vegetables and protein.
+     </p>
+     <div class="recipe-tags">
+      <span>
+       Gluten-Free
+      </span>
+      <span>
+       Low Carb
+      </span>
+     </div>
+     <div class="recipe-rating">
+      <span>
+       ★★★★★
+      </span>
+      85 reviews
+     </div>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Grilled Chicken" src=""/>
+    <div class="recipe-content">
+     <h3 class="recipe-title">
+      Grilled Chicken
+     </h3>
+     <p class="recipe-summary">
+      Juicy grilled chicken with a perfect blend of spices.
+     </p>
+     <div class="recipe-tags">
+      <span>
+       High Protein
+      </span>
+      <span>
+       Low Carb
+      </span>
+     </div>
+     <div class="recipe-rating">
+      <span>
+       ★★★★☆
+      </span>
+      200 reviews
+     </div>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Chocolate Cake" src=""/>
+    <div class="recipe-content">
+     <h3 class="recipe-title">
+      Chocolate Cake
+     </h3>
+     <p class="recipe-summary">
+      A rich and moist chocolate cake that's perfect for any occasion.
+     </p>
+     <div class="recipe-tags">
+      <span>
+       Desserts
+      </span>
+      <span>
+       Vegetarian
+      </span>
+     </div>
+     <div class="recipe-rating">
+      <span>
+       ★★★★★
+      </span>
+      150 reviews
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

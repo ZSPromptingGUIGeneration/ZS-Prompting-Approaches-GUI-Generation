@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Mobile Settings Page
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            margin-left: 10px;
+        }
+        .section {
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .section h2 {
+            margin: 0 0 10px;
+        }
+        .divider {
+            height: 1px;
+            background-color: #ddd;
+            margin: 10px 0;
+        }
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .list-item label {
+            margin-right: 10px;
+        }
+        .list-item input[type="text"], .list-item select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .list-item input[type="checkbox"] {
+            width: auto;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons .save-btn {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        .buttons .reset-btn {
+            background-color: #f44336;
+            color: #fff;
+        }
+        .links a {
+            color: #1E88E5;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <span class="material-icons">
+     search
+    </span>
+    <input placeholder="Search settings" type="text"/>
+   </div>
+   <div class="section">
+    <h2>
+     Account
+    </h2>
+    <div class="list-item">
+     <label for="username">
+      Username:
+     </label>
+     <input id="username" placeholder="john_doe" type="text"/>
+    </div>
+    <div class="list-item">
+     <label for="email">
+      Email:
+     </label>
+     <input id="email" placeholder="john.doe@example.com" type="text"/>
+    </div>
+    <div class="list-item">
+     <label for="profile-picture">
+      Profile Picture:
+     </label>
+     <img alt="Profile picture of a user" height="50" id="profile-picture" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/82090161-24ed-4148-91e1-21fa09e4a0d7.png" width="50"/>
+    </div>
+    <div class="list-item">
+     <label for="logout">
+      Logout:
+     </label>
+     <button class="reset-btn" id="logout">
+      Logout
+     </button>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Privacy
+    </h2>
+    <div class="list-item">
+     <label for="two-factor-auth">
+      Two-Factor Authentication:
+     </label>
+     <input id="two-factor-auth" type="checkbox"/>
+    </div>
+    <div class="list-item">
+     <label for="change-password">
+      Change Password:
+     </label>
+     <button class="save-btn" id="change-password">
+      Change Password
+     </button>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Notifications
+    </h2>
+    <div class="list-item">
+     <label for="notifications">
+      Enable Notifications:
+     </label>
+     <input id="notifications" type="checkbox"/>
+    </div>
+    <div class="list-item">
+     <label for="notification-types">
+      Notification Types:
+     </label>
+     <select id="notification-types">
+      <option value="email">
+       Email
+      </option>
+      <option value="sms">
+       SMS
+      </option>
+      <option value="push">
+       Push Notifications
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Customization
+    </h2>
+    <div class="list-item">
+     <label for="theme">
+      Theme:
+     </label>
+     <select id="theme">
+      <option value="light">
+       Light
+      </option>
+      <option value="dark">
+       Dark
+      </option>
+     </select>
+    </div>
+    <div class="list-item">
+     <label for="font-size">
+      Font Size:
+     </label>
+     <input id="font-size" max="24" min="12" type="range"/>
+    </div>
+    <div class="list-item">
+     <label for="background-image">
+      Background Image:
+     </label>
+     <img alt="Background image for customization" height="100" id="background-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6f3a5291-0116-4212-b795-cc8cd66acf18.png" width="100"/>
+    </div>
+   </div>
+   <div class="section links">
+    <h2>
+     Help &amp; Support
+    </h2>
+    <a href="#">
+     Help Articles
+    </a>
+    <a href="#">
+     FAQs
+    </a>
+    <a href="#">
+     Customer Support
+    </a>
+    <a href="#">
+     Privacy Policy
+    </a>
+    <a href="#">
+     Terms of Service
+    </a>
+   </div>
+   <div class="buttons">
+    <button class="save-btn">
+     Save Changes
+    </button>
+    <button class="reset-btn">
+     Reset to Defaults
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

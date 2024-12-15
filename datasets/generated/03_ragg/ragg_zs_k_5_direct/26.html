@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dream Tracker
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .header {
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            margin-top: 0;
+        }
+
+        .record-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .record-section button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .record-section button:disabled {
+            background-color: #ccc;
+        }
+
+        .dream-input {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .dream-input textarea {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .dream-input textarea:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .footer button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    Dream Tracker
+   </div>
+   <div class="content">
+    <h2>
+     Track Your Dream
+    </h2>
+    <div class="record-section">
+     <button id="recordBtn" onclick="startRecording()">
+      Start Recording
+     </button>
+     <button disabled="" id="stopBtn" onclick="stopRecording()">
+      Stop Recording
+     </button>
+    </div>
+    <div class="dream-input">
+     <textarea placeholder="Write about your dream..."></textarea>
+    </div>
+   </div>
+   <div class="footer">
+    <button>
+     Save Dream
+    </button>
+   </div>
+  </div>
+  <script>
+   let isRecording = false;
+
+        function startRecording() {
+            isRecording = true;
+            document.getElementById('recordBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = false;
+            // Add your recording logic here
+        }
+
+        function stopRecording() {
+            isRecording = false;
+            document.getElementById('recordBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+            // Add your stop recording logic here
+        }
+  </script>
+ </body>
+</html>

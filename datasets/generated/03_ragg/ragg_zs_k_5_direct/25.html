@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Healthy Meal Recipes
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .header .menu {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .header input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        .header .search-icon {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        .category-section {
+            margin: 10px;
+        }
+        .category-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .category-section h2 {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .category-section .recipe-list {
+            display: flex;
+            overflow-x: scroll;
+            padding: 10px 0;
+        }
+        .category-section .recipe-item {
+            min-width: 150px;
+            margin-right: 10px;
+        }
+        .category-section .recipe-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .category-section .recipe-item .details {
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .category-section .recipe-item .details span {
+            display: block;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .footer div {
+            text-align: center;
+        }
+        .footer div i {
+            display: block;
+            font-size: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu">
+    ☰
+   </div>
+   <input placeholder="Search..." type="text"/>
+   <div class="search-icon">
+    🔍
+   </div>
+  </div>
+  <div class="category-section">
+   <img alt="Category Image" src=""/>
+   <h2>
+    Frying Peaks
+   </h2>
+   <div class="recipe-list">
+    <div class="recipe-item">
+     <img alt="Recipe Image" src=""/>
+     <div class="details">
+      <span>
+       Paleo Granola
+      </span>
+      <span>
+       25 Min
+      </span>
+     </div>
+    </div>
+    <div class="recipe-item">
+     <img alt="Recipe Image" src=""/>
+     <div class="details">
+      <span>
+       Paleo Pancakes
+      </span>
+      <span>
+       510 Min
+      </span>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="category-section">
+   <img alt="Category Image" src=""/>
+   <h2>
+    Paleo
+   </h2>
+   <div class="recipe-list">
+    <div class="recipe-item">
+     <img alt="Recipe Image" src=""/>
+     <div class="details">
+      <span>
+       Bircher Muesli
+      </span>
+      <span>
+       5 Min
+      </span>
+     </div>
+    </div>
+    <div class="recipe-item">
+     <img alt="Recipe Image" src=""/>
+     <div class="details">
+      <span>
+       Serrano Ham
+      </span>
+      <span>
+       15 Min
+      </span>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="category-section">
+   <img alt="Category Image" src=""/>
+   <h2>
+    Mexican Recipes
+   </h2>
+   <div class="recipe-list">
+    <div class="recipe-item">
+     <img alt="Recipe Image" src=""/>
+     <div class="details">
+      <span>
+       Food Recipes Free
+      </span>
+     </div>
+    </div>
+    <div class="recipe-item">
+     <img alt="Recipe Image" src=""/>
+     <div class="details">
+      <span>
+       100+ Smoothie Recipes
+      </span>
+     </div>
+    </div>
+    <div class="recipe-item">
+     <img alt="Recipe Image" src=""/>
+     <div class="details">
+      <span>
+       Breakfast Recipes
+      </span>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <div>
+    <i>
+     ⌂
+    </i>
+    <span>
+     Home
+    </span>
+   </div>
+   <div>
+    <i>
+     🛒
+    </i>
+    <span>
+     Shop
+    </span>
+   </div>
+   <div>
+    <i>
+     ★
+    </i>
+    <span>
+     Favourites
+    </span>
+   </div>
+   <div>
+    <i>
+     👤
+    </i>
+    <span>
+     My Account
+    </span>
+   </div>
+  </div>
+ </body>
+</html>

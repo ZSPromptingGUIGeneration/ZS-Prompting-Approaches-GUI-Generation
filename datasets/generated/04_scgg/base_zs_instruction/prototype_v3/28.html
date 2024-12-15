@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Radio Player App
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            transition: background-color 0.3s;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            width: 95%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 2.5em;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .search-bar input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .search-bar button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #007bff;
+        }
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .filter-group {
+            margin-bottom: 10px;
+        }
+        .filter-group label {
+            margin-right: 10px;
+            font-size: 1em;
+            color: #333;
+        }
+        .filter-group select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .radio-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .radio-list li {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .radio-list button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: calc(100% - 50px);
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .radio-list button:hover {
+            background-color: #0056b3;
+        }
+        .radio-list button:focus {
+            outline: 3px solid #ffcc00;
+        }
+        .radio-list img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .radio-list .description {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        audio {
+            margin-top: 25px;
+            width: 100%;
+        }
+        .audio-control {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .volume-control input {
+            width: 80%;
+        }
+        .station-info {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #555;
+        }
+        .favorites, .recently-played {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .favorites h2, .recently-played h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .favorites ul, .recently-played ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .favorites li, .recently-played li {
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .favorites li button, .recently-played li button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            color: #007bff;
+        }
+        .dark-mode-toggle {
+            margin-top: 20px;
+        }
+        .dark-mode-toggle button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .dark-mode-toggle button:hover {
+            background-color: #555;
+        }
+        .dark-mode-toggle button:focus {
+            outline: 3px solid #ffcc00;
+        }
+        body.dark-mode {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+        }
+        body.dark-mode .container {
+            background: #2c3e50;
+            color: #fff;
+        }
+        body.dark-mode .search-bar input, body.dark-mode .filter-group select {
+            background: #34495e;
+            color: #fff;
+            border: 1px solid #555;
+        }
+        body.dark-mode .radio-list button {
+            background-color: #2980b9;
+        }
+        body.dark-mode .radio-list button:hover {
+            background-color: #1c5985;
+        }
+        body.dark-mode .favorites li button, body.dark-mode .recently-played li button {
+            color: #2980b9;
+        }
+        .sort-options {
+            margin-bottom: 20px;
+        }
+        .sort-options select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .sort-options label {
+            margin-right: 10px;
+            font-size: 1em;
+            color: #333;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Radio Player
+   </h1>
+   <div class="search-bar">
+    <input placeholder="Search for stations by name, genre, or country..." type="text"/>
+    <button>
+     �
+    </button>
+   </div>
+   <div class="filters">
+    <div class="filter-group">
+     <label for="categoryFilter">
+      Category
+     </label>
+     <select id="categoryFilter">
+      <option>
+       Music
+      </option>
+      <option>
+       News
+      </option>
+      <option>
+       Sports
+      </option>
+     </select>
+    </div>
+    <div class="filter-group">
+     <label for="languageFilter">
+      Language
+     </label>
+     <select id="languageFilter">
+      <option>
+       English
+      </option>
+      <option>
+       Spanish
+      </option>
+      <option>
+       French
+      </option>
+     </select>
+    </div>
+    <div class="filter-group">
+     <label for="countryFilter">
+      Country
+     </label>
+     <select id="countryFilter">
+      <option>
+       USA
+      </option>
+      <option>
+       UK
+      </option>
+      <option>
+       Canada
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="sort-options">
+    <label for="sortStations">
+     Sort by:
+    </label>
+    <select id="sortStations">
+     <option>
+      Popularity
+     </option>
+     <option>
+      Rating
+     </option>
+     <option>
+      Alphabetical
+     </option>
+    </select>
+   </div>
+   <ul class="radio-list">
+    <li>
+     <img alt="Station 1" src=""/>
+     <button>
+      <div>
+       <span>
+        Radio Station 1
+       </span>
+       <div class="description">
+        Genre: Pop, Country: USA
+       </div>
+      </div>
+      <span>
+       ★★★★☆
+      </span>
+     </button>
+    </li>
+    <li>
+     <img alt="Station 2" src=""/>
+     <button>
+      <div>
+       <span>
+        Radio Station 2
+       </span>
+       <div class="description">
+        Genre: Rock, Country: UK
+       </div>
+      </div>
+      <span>
+       ★★★☆☆
+      </span>
+     </button>
+    </li>
+    <li>
+     <img alt="Station 3" src=""/>
+     <button>
+      <div>
+       <span>
+        Radio Station 3
+       </span>
+       <div class="description">
+        Genre: Jazz, Country: Canada
+       </div>
+      </div>
+      <span>
+       ★★★★★
+      </span>
+     </button>
+    </li>
+   </ul>
+   <audio controls="" id="audioPlayer">
+   </audio>
+   <div class="audio-control">
+    <label for="volumeSlider">
+     Volume:
+    </label>
+    <input id="volumeSlider" max="1" min="0" step="0.01" type="range"/>
+   </div>
+   <div class="station-info" id="stationInfo">
+    Station Info: None
+   </div>
+   <div class="favorites">
+    <h2>
+     Favorites
+    </h2>
+    <ul>
+     <li>
+      Favorite Station 1
+      <button>
+       Remove
+      </button>
+     </li>
+     <li>
+      Favorite Station 2
+      <button>
+       Remove
+      </button>
+     </li>
+    </ul>
+   </div>
+   <div class="recently-played">
+    <h2>
+     Recently Played
+    </h2>
+    <ul>
+     <li>
+      Recently Played Station 1
+      <button>
+       Remove
+      </button>
+     </li>
+     <li>
+      Recently Played Station 2
+      <button>
+       Remove
+      </button>
+     </li>
+    </ul>
+   </div>
+   <div class="dark-mode-toggle">
+    <button onclick="toggleDarkMode()">
+     🌙 Toggle Dark Mode
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

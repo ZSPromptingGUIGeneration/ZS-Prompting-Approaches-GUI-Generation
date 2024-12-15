@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+        }
+        .search-container {
+            padding: 1rem;
+            text-align: center;
+        }
+        .search-container input[type="text"] {
+            width: 80%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .category {
+            background-color: #ff6347;
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+        }
+        .category:hover {
+            background-color: #ff4500;
+        }
+        .recipes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .recipe {
+            background-color: white;
+            color: black;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .recipe img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .recipe-title {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        .recipe-description {
+            font-size: 1rem;
+            color: #555;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   Recipe App
+  </header>
+  <div class="search-container">
+   <input placeholder="Search for recipes..." type="text"/>
+  </div>
+  <div class="categories">
+   <div class="category">
+    Breakfast
+   </div>
+   <div class="category">
+    Lunch
+   </div>
+   <div class="category">
+    Dinner
+   </div>
+   <div class="category">
+    Dessert
+   </div>
+   <div class="category">
+    Snacks
+   </div>
+   <div class="category">
+    Drinks
+   </div>
+  </div>
+  <div class="recipes">
+   <div class="recipe">
+    <img alt="A delicious stack of pancakes with syrup and berries" id="img1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6d7508db-c8fc-4991-9e5e-e72657a32381.png"/>
+    <div class="recipe-title">
+     Fluffy Pancakes
+    </div>
+    <div class="recipe-description">
+     A simple recipe for fluffy pancakes that are perfect for breakfast.
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="A bowl of fresh Caesar salad with croutons and dressing" id="img2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/65c52008-8371-4a13-91cf-00a163276574.png"/>
+    <div class="recipe-title">
+     Caesar Salad
+    </div>
+    <div class="recipe-description">
+     A classic Caesar salad with crunchy croutons and creamy dressing.
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="A plate of spaghetti carbonara with grated cheese on top" id="img3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/69a580b6-f86d-4410-aeae-150113d23dd1.png"/>
+    <div class="recipe-title">
+     Spaghetti Carbonara
+    </div>
+    <div class="recipe-description">
+     An easy recipe for traditional spaghetti carbonara with a rich, creamy sauce.
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="A slice of chocolate cake with a fork" id="img4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/9ddc4d97-0e04-4c80-8d36-41489a78834e.png"/>
+    <div class="recipe-title">
+     Chocolate Cake
+    </div>
+    <div class="recipe-description">
+     A moist and decadent chocolate cake that's perfect for dessert.
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="A bowl of mixed nuts and dried fruits" id="img5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f550e25a-03a0-49c2-8705-93b70bf55c9c.png"/>
+    <div class="recipe-title">
+     Trail Mix
+    </div>
+    <div class="recipe-description">
+     A healthy and easy-to-make trail mix for a quick snack.
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="A glass of refreshing lemonade with lemon slices" id="img6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/57257054-eb47-4b8b-9356-a56e3269af5c.png"/>
+    <div class="recipe-title">
+     Lemonade
+    </div>
+    <div class="recipe-description">
+     A refreshing homemade lemonade that's perfect for hot days.
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

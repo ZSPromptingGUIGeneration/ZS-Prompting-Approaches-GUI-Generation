@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   User Profile
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .user-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .user-bio {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .follow-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .stats div {
+            text-align: center;
+        }
+        .stats div span {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .recent-posts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .recent-posts img {
+            width: 100%;
+            border-radius: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="profile-container">
+   <img alt="Profile picture of a smiling person" class="profile-pic" id="profile-pic" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f48f62c7-cdb9-4af2-b373-85aa08becde9.png"/>
+   <div class="user-name">
+    Alex Smith
+   </div>
+   <div class="user-bio">
+    Software Engineer | Gadget Geek | Avid Reader
+   </div>
+   <button class="follow-btn">
+    Follow
+   </button>
+   <div class="stats">
+    <div>
+     <span>
+      150
+     </span>
+     Posts
+    </div>
+    <div>
+     <span>
+      500
+     </span>
+     Followers
+    </div>
+    <div>
+     <span>
+      200
+     </span>
+     Following
+    </div>
+   </div>
+   <div class="recent-posts">
+    <img alt="Sunset over a mountain range" id="post1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/86f0ef2c-db5c-4440-97f6-999410f9958e.png"/>
+    <img alt="A cup of coffee on a table with a book" id="post2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/85cd4084-775f-496f-a069-9f0eace08341.png"/>
+    <img alt="A group of friends hiking in a forest" id="post3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5612057d-a983-487a-b92d-dd44f49ccaab.png"/>
+    <img alt="A beautifully plated dish of pasta" id="post4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6915a19d-1c36-40a4-a440-304e1ef9eabf.png"/>
+    <img alt="A city skyline at night" id="post5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/aa23cfc7-6d96-410a-af85-b6c2bedf5dfd.png"/>
+    <img alt="A close-up of a blooming flower" id="post6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/52e799eb-0a46-496d-a765-08c138361565.png"/>
+   </div>
+  </div>
+ </body>
+</html>
+

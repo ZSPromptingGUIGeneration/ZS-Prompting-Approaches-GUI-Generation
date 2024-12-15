@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 25px;
+            margin-left: 10px;
+        }
+        .search-bar img {
+            width: 24px;
+            height: 24px;
+        }
+        .current-weather {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .current-weather .temperature {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .current-weather .description {
+            font-size: 18px;
+            color: #666;
+        }
+        .current-weather img {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+        }
+        .forecast {
+            display: flex;
+            overflow-x: scroll;
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+        .forecast .day-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-width: 100px;
+            text-align: center;
+        }
+        .day-card .day {
+            font-weight: bold;
+        }
+        .day-card .date {
+            color: #666;
+        }
+        .day-card img {
+            width: 40px;
+            height: 40px;
+            margin: 10px 0;
+        }
+        .day-card .temp-high {
+            color: red;
+        }
+        .day-card .temp-low {
+            color: blue;
+        }
+        .details {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .details .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .details .detail-item img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .details .detail-item span {
+            font-size: 16px;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .navigation .refresh {
+            cursor: pointer;
+        }
+        .navigation .location {
+            cursor: pointer;
+        }
+        .settings {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <img alt="Search" src=""/>
+    <input placeholder="Enter city name" type="text"/>
+   </div>
+   <div class="current-weather">
+    <div class="temperature">
+     25°C
+    </div>
+    <div class="description">
+     Sunny
+    </div>
+    <img alt="Weather Icon" src=""/>
+   </div>
+   <div class="forecast">
+    <div class="day-card">
+     <div class="day">
+      Mon
+     </div>
+     <div class="date">
+      12/12
+     </div>
+     <img alt="Weather Icon" src=""/>
+     <div class="temp-high">
+      30°C
+     </div>
+     <div class="temp-low">
+      20°C
+     </div>
+     <div class="description">
+      Partly Cloudy
+     </div>
+    </div>
+    <div class="day-card">
+     <div class="day">
+      Tue
+     </div>
+     <div class="date">
+      13/12
+     </div>
+     <img alt="Weather Icon" src=""/>
+     <div class="temp-high">
+      28°C
+     </div>
+     <div class="temp-low">
+      18°C
+     </div>
+     <div class="description">
+      Rainy
+     </div>
+    </div>
+    <!-- Add more day cards as needed -->
+   </div>
+   <div class="details">
+    <div class="detail-item">
+     <img alt="Humidity" src=""/>
+     <span>
+      Humidity: 60%
+     </span>
+    </div>
+    <div class="detail-item">
+     <img alt="Wind" src=""/>
+     <span>
+      Wind: 15 km/h NW
+     </span>
+    </div>
+    <div class="detail-item">
+     <img alt="Precipitation" src=""/>
+     <span>
+      Precipitation: 20%
+     </span>
+    </div>
+    <div class="detail-item">
+     <img alt="Sunrise" src=""/>
+     <span>
+      Sunrise: 6:00 AM
+     </span>
+    </div>
+    <div class="detail-item">
+     <img alt="Sunset" src=""/>
+     <span>
+      Sunset: 6:00 PM
+     </span>
+    </div>
+   </div>
+   <div class="navigation">
+    <div class="location">
+     <img alt="Location" src=""/>
+    </div>
+    <div class="refresh">
+     <img alt="Refresh" src=""/>
+    </div>
+   </div>
+   <div class="settings">
+    <img alt="Settings" src=""/>
+   </div>
+  </div>
+ </body>
+</html>

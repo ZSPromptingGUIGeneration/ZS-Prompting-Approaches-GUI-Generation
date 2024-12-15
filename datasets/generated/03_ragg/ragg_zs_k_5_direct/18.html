@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Translation App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .input-section, .output-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .input-section textarea, .output-section textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons .translate-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .buttons .clear-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .skip-check-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .skip-check-buttons button {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .skip-check-buttons .skip-btn {
+            background-color: #6c757d;
+            color: white;
+        }
+        .skip-check-buttons .check-btn {
+            background-color: #28a745;
+            color: white;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    English Spanish Translation
+   </h1>
+  </div>
+  <div class="container">
+   <div class="input-section">
+    <h2>
+     Text to translate:
+    </h2>
+    <textarea id="inputText" placeholder="Type the text here..."></textarea>
+    <div class="buttons">
+     <button class="translate-btn" onclick="translateText()">
+      Translate
+     </button>
+     <button class="clear-btn" onclick="clearText()">
+      Clear
+     </button>
+    </div>
+   </div>
+   <div class="output-section">
+    <h2>
+     Result:
+    </h2>
+    <textarea id="outputText" readonly=""></textarea>
+    <div class="result" id="resultText">
+    </div>
+   </div>
+   <div class="skip-check-buttons">
+    <button class="skip-btn">
+     Skip
+    </button>
+    <button class="check-btn">
+     Check
+    </button>
+   </div>
+  </div>
+  <script>
+   function translateText() {
+            var inputText = document.getElementById('inputText').value;
+            var outputText = document.getElementById('outputText');
+            var resultText = document.getElementById('resultText');
+
+            // Dummy translation logic for demonstration
+            if (inputText.toLowerCase() === 'hello') {
+                outputText.value = 'Hola';
+                resultText.innerHTML = 'Hola';
+            } else {
+                outputText.value = 'Translation not found';
+                resultText.innerHTML = 'Translation not found';
+            }
+        }
+
+        function clearText() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('outputText').value = '';
+            document.getElementById('resultText').innerHTML = '';
+        }
+  </script>
+ </body>
+</html>

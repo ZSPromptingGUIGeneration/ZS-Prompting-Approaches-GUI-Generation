@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather Notification Settings
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e0f7fa, #a7ffeb);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header p {
+            margin: 0;
+            font-size: 18px;
+            color: #666;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .section p {
+            margin: 0 0 10px 0;
+            color: #666;
+        }
+        .toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .toggle:last-child {
+            border-bottom: none;
+        }
+        .toggle input {
+            transform: scale(1.5);
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #fff;
+            border-top: 1px solid #ddd;
+        }
+        .footer button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Weather Notifications
+    </h1>
+    <p>
+     Selected Location
+    </p>
+   </div>
+   <div class="section">
+    <h2>
+     Weather Notifications
+    </h2>
+    <div class="toggle">
+     <span>
+      Severe Weather Alerts
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <p>
+     Issued by the US National Weather Service.
+    </p>
+    <div class="toggle">
+     <span>
+      Lightning Alerts
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <p>
+     Be notified when lightning strikes within 5 miles. Available only when you are within your station's broadcast area.
+    </p>
+    <div class="toggle">
+     <span>
+      Station Alerts
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <p>
+     Weather alerts issued by your local TV station.
+    </p>
+    <div class="toggle">
+     <span>
+      Precipitation Alerts
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <p>
+     Be notified when heavy precipitation is detected within 5 miles.
+    </p>
+    <div class="toggle">
+     <span>
+      Temperature Display
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <p>
+     Display the current temperature for your selected Alert Location in the status bar and notifications drawer.
+    </p>
+    <div class="toggle">
+     <span>
+      Lock Screen Weather Banner
+     </span>
+     <input checked="" type="checkbox"/>
+    </div>
+    <p>
+     Displays weather for your selected Alert Location on the lock screen.
+    </p>
+   </div>
+   <div class="section">
+    <h2>
+     Show Alerts in Status Bar
+    </h2>
+    <div class="checkbox-group">
+     <label>
+      <input checked="" type="checkbox"/>
+      Sounds
+     </label>
+     <label>
+      <input checked="" type="checkbox"/>
+      Lights
+     </label>
+     <label>
+      <input checked="" type="checkbox"/>
+      Vibration
+     </label>
+    </div>
+   </div>
+   <div class="footer">
+    <button>
+     Done
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Local Items
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .search-bar {
+            margin: 10px;
+        }
+        .category-filters {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+        }
+        .category-filters .chip {
+            margin-right: 10px;
+        }
+        .location-filter {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .location-filter .switch {
+            margin-right: 10px;
+        }
+        .suggestions, .item-listings {
+            padding: 10px;
+        }
+        .item-card {
+            margin-bottom: 20px;
+        }
+        .sort-options {
+            margin: 10px;
+        }
+        .contact-button, .favorite-button {
+            margin-top: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <div class="input-field">
+     <i class="material-icons prefix">
+      search
+     </i>
+     <input id="search" placeholder="Search for items..." type="text"/>
+    </div>
+   </div>
+   <div class="category-filters">
+    <div class="chip">
+     <i class="material-icons">
+      devices
+     </i>
+     Electronics
+    </div>
+    <div class="chip">
+     <i class="material-icons">
+      weekend
+     </i>
+     Furniture
+    </div>
+    <div class="chip">
+     <i class="material-icons">
+      checkroom
+     </i>
+     Clothing
+    </div>
+   </div>
+   <div class="location-filter">
+    <div class="switch">
+     <label>
+      Off
+      <input type="checkbox"/>
+      <span class="lever">
+      </span>
+      On
+     </label>
+    </div>
+    <select class="browser-default">
+     <option value="5">
+      5 km
+     </option>
+     <option value="10">
+      10 km
+     </option>
+     <option value="20">
+      20 km
+     </option>
+    </select>
+   </div>
+   <div class="suggestions">
+    <h5>
+     Items Near You
+    </h5>
+    <div class="row">
+     <div class="col s6">
+      <div class="card item-card">
+       <div class="card-image">
+        <img src=""/>
+       </div>
+       <div class="card-content">
+        <span class="card-title">
+         Item 1
+        </span>
+        <p>
+         Brief description of item 1
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="col s6">
+      <div class="card item-card">
+       <div class="card-image">
+        <img src=""/>
+       </div>
+       <div class="card-content">
+        <span class="card-title">
+         Item 2
+        </span>
+        <p>
+         Brief description of item 2
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="sort-options">
+    <select class="browser-default">
+     <option value="relevance">
+      Sort by Relevance
+     </option>
+     <option value="price">
+      Sort by Price
+     </option>
+     <option value="distance">
+      Sort by Distance
+     </option>
+    </select>
+   </div>
+   <div class="item-listings">
+    <div class="card item-card">
+     <div class="card-image">
+      <img src=""/>
+     </div>
+     <div class="card-content">
+      <span class="card-title">
+       Item 3
+      </span>
+      <p>
+       Brief description of item 3
+      </p>
+      <p>
+       Price: $100
+      </p>
+      <p>
+       Distance: 5 km
+      </p>
+      <a class="btn contact-button" href="#">
+       Contact Seller
+      </a>
+      <a class="btn favorite-button" href="#">
+       Add to Favorites
+      </a>
+     </div>
+    </div>
+    <div class="card item-card">
+     <div class="card-image">
+      <img src=""/>
+     </div>
+     <div class="card-content">
+      <span class="card-title">
+       Item 4
+      </span>
+      <p>
+       Brief description of item 4
+      </p>
+      <p>
+       Price: $200
+      </p>
+      <p>
+       Distance: 10 km
+      </p>
+      <a class="btn contact-button" href="#">
+       Contact Seller
+      </a>
+      <a class="btn favorite-button" href="#">
+       Add to Favorites
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+ </body>
+</html>

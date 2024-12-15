@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App Videos
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #001f3f;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #003366;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header .settings {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+        .video-list {
+            padding: 10px;
+        }
+        .video-item {
+            display: flex;
+            margin-bottom: 10px;
+            background-color: #00274d;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .video-item img {
+            width: 120px;
+            height: 70px;
+            margin-right: 10px;
+        }
+        .video-item .details {
+            flex: 1;
+        }
+        .video-item .details h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .video-item .details p {
+            margin: 5px 0;
+            font-size: 12px;
+            color: #cccccc;
+        }
+        .video-item .details .description {
+            font-size: 14px;
+            color: #ffffff;
+        }
+        .footer {
+            background-color: #003366;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer a.active {
+            font-weight: bold;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Logo" src=""/>
+   <img alt="Settings" class="settings" src=""/>
+  </div>
+  <div class="video-list">
+   <div class="video-item">
+    <img alt="Video Thumbnail" src=""/>
+    <div class="details">
+     <h3>
+      Storms, cooler temps today
+     </h3>
+     <p>
+      Mar 21, 2017 9:57 AM GMT+00:00
+     </p>
+     <p class="description">
+      Storms expected with cooler temperatures.
+     </p>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Video Thumbnail" src=""/>
+    <div class="details">
+     <h3>
+      Cooler weather and rain this week
+     </h3>
+     <p>
+      Mar 20, 2017 11:15 PM GMT+00:00
+     </p>
+     <p class="description">
+      Expect cooler weather with rain showers.
+     </p>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Video Thumbnail" src=""/>
+    <div class="details">
+     <h3>
+      Mid 80s for the start of spring
+     </h3>
+     <p>
+      Mar 20, 2017 5:34 PM GMT+00:00
+     </p>
+     <p class="description">
+      Temperatures in the mid 80s to start spring.
+     </p>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Video Thumbnail" src=""/>
+    <div class="details">
+     <h3>
+      Summer temps for first day of spring
+     </h3>
+     <p>
+      Mar 20, 2017 10:23 AM GMT+00:00
+     </p>
+     <p class="description">
+      Warm temperatures expected on the first day of spring.
+     </p>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Video Thumbnail" src=""/>
+    <div class="details">
+     <h3>
+      The start of spring will bring warm temps
+     </h3>
+     <p>
+      Mar 19, 2017 10:22 PM GMT+00:00
+     </p>
+     <p class="description">
+      Another warm day ahead Monday.
+     </p>
+    </div>
+   </div>
+   <div class="video-item">
+    <img alt="Video Thumbnail" src=""/>
+    <div class="details">
+     <h3>
+      Watching for Sunday showers
+     </h3>
+     <p>
+      Mar 19, 2017 2:48 PM GMT+00:00
+     </p>
+     <p class="description">
+      Showers expected on Sunday.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    10 Day
+   </a>
+   <a href="#">
+    Hourly
+   </a>
+   <a href="#">
+    Blog
+   </a>
+   <a class="active" href="#">
+    Video
+   </a>
+  </div>
+ </body>
+</html>

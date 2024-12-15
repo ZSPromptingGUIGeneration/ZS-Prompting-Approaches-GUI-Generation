@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   News App - Top Stories
+  </title>
+  <style>
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .header {
+      background: linear-gradient(90deg, #333, #555);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header .search-bar {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .header input[type="text"] {
+      padding: 8px;
+      width: 70%;
+      border: none;
+      border-radius: 4px;
+    }
+    .header button {
+      padding: 8px 12px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #0066cc;
+      color: white;
+      cursor: pointer;
+    }
+    .header button:hover {
+      background-color: #004a99;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+      padding: 10px 0;
+      position: sticky;
+      top: 60px;
+      z-index: 1000;
+    }
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+    .navbar a:hover, .navbar a.active {
+      background-color: #666;
+    }
+    .navbar .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .navbar .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .navbar .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .navbar .dropdown-content a:hover {
+      background-color: #666;
+    }
+    .navbar .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .story {
+      background-color: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .story img {
+      max-width: 150px;
+      margin-right: 20px;
+      border-radius: 5px;
+    }
+    .story-content {
+      flex: 1;
+    }
+    .story h2 {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+    }
+    .story p {
+      margin: 0 0 10px 0;
+      color: #555;
+    }
+    .story .meta {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+    .story .read-more {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .story .read-more:hover {
+      text-decoration: underline;
+    }
+    .story .social-share {
+      margin-top: 10px;
+    }
+    .story .social-share a {
+      margin-right: 10px;
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .story .social-share a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .breaking-news {
+      background-color: #ff0000;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .breaking-news p {
+      margin: 0;
+      font-weight: bold;
+    }
+    .dark-mode-toggle {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .dark-mode-toggle input[type="checkbox"] {
+      display: none;
+    }
+    .dark-mode-toggle label {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #444;
+      color: white;
+      border-radius: 5px;
+    }
+    .dark-mode-toggle input[type="checkbox"]:checked + label {
+      background-color: #fff;
+      color: #444;
+    }
+    .user-profile {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .user-profile a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    .user-profile a:hover {
+      text-decoration: underline;
+    }
+    .story .category-tags {
+      margin-top: 10px;
+    }
+    .story .category-tags span {
+      display: inline-block;
+      background-color: #eee;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 3px;
+      margin-right: 5px;
+      font-size: 12px;
+    }
+    .related-stories {
+      margin-top: 20px;
+    }
+    .related-stories h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .related-stories .story {
+      background-color: #f9f9f9;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+    }
+    .related-stories .story img {
+      max-width: 100px;
+      margin-right: 10px;
+    }
+    .related-stories .story-content {
+      flex: 1;
+    }
+    .comments-section {
+      margin-top: 20px;
+    }
+    .comments-section h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .comments-section .comment {
+      background-color: #f9f9f9;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 3px;
+    }
+    .comments-section .comment .meta {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 5px;
+    }
+    .comments-section .comment p {
+      margin: 0;
+    }
+    .comments-section .add-comment {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .comments-section .add-comment textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    .comments-section .add-comment button {
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #0066cc;
+      color: white;
+      cursor: pointer;
+    }
+    .comments-section .add-comment button:hover {
+      background-color: #004a99;
+    }
+    @media (max-width: 768px) {
+      .story {
+        flex-direction: column;
+        align-items: center;
+      }
+      .story img {
+        margin: 0 0 20px 0;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <div class="breaking-news">
+   <p>
+    Breaking News: Major Event Happening Now!
+   </p>
+  </div>
+  <div class="header">
+   <h1>
+    Top Stories
+   </h1>
+   <div class="search-bar">
+    <input placeholder="Search for news..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <div class="dark-mode-toggle">
+    <input id="dark-mode" type="checkbox"/>
+    <label for="dark-mode">
+     Dark Mode
+    </label>
+   </div>
+   <div class="user-profile">
+    <a href="#">
+     Login
+    </a>
+    <a href="#">
+     Signup
+    </a>
+   </div>
+  </div>
+  <div class="navbar">
+   <a class="active" href="#">
+    Home
+   </a>
+   <a href="#">
+    World
+   </a>
+   <a href="#">
+    Sports
+   </a>
+   <a href="#">
+    Technology
+   </a>
+   <a href="#">
+    Business
+   </a>
+   <div class="dropdown">
+    <a href="#">
+     Categories
+    </a>
+    <div class="dropdown-content">
+     <a href="#">
+      Politics
+     </a>
+     <a href="#">
+      Health
+     </a>
+     <a href="#">
+      Entertainment
+     </a>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+   <div class="story">
+    <img alt="Story Image" src=""/>
+    <div class="story-content">
+     <h2>
+      Story Title 1
+     </h2>
+     <p class="meta">
+      By Author Name | Date and Time
+     </p>
+     <p>
+      Summary of the first story...
+     </p>
+     <div class="category-tags">
+      <span>
+       World
+      </span>
+      <span>
+       Politics
+      </span>
+     </div>
+     <a class="read-more" href="#">
+      Read More
+     </a>
+     <div class="social-share">
+      <a href="#">
+       Share on Facebook
+      </a>
+      <a href="#">
+       Share on Twitter
+      </a>
+     </div>
+     <div class="related-stories">
+      <h3>
+       Related Stories
+      </h3>
+      <div class="story">
+       <img alt="Related Story Image" src=""/>
+       <div class="story-content">
+        <h4>
+         Related Story Title 1
+        </h4>
+        <p>
+         Summary of the related story...
+        </p>
+       </div>
+      </div>
+      <div class="story">
+       <img alt="Related Story Image" src=""/>
+       <div class="story-content">
+        <h4>
+         Related Story Title 2
+        </h4>
+        <p>
+         Summary of the related story...
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="comments-section">
+      <h3>
+       Comments
+      </h3>
+      <div class="comment">
+       <p class="meta">
+        By User1 | Date and Time
+       </p>
+       <p>
+        Comment text...
+       </p>
+      </div>
+      <div class="comment">
+       <p class="meta">
+        By User2 | Date and Time
+       </p>
+       <p>
+        Comment text...
+       </p>
+      </div>
+      <div class="add-comment">
+       <textarea placeholder="Add a comment..." rows="3"></textarea>
+       <button>
+        Submit
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story Image" src=""/>
+    <div class="story-content">
+     <h2>
+      Story Title 2
+     </h2>
+     <p class="meta">
+      By Author Name | Date and Time
+     </p>
+     <p>
+      Summary of the second story...
+     </p>
+     <div class="category-tags">
+      <span>
+       Technology
+      </span>
+      <span>
+       Business
+      </span>
+     </div>
+     <a class="read-more" href="#">
+      Read More
+     </a>
+     <div class="social-share">
+      <a href="#">
+       Share on Facebook
+      </a>
+      <a href="#">
+       Share on Twitter
+      </a>
+     </div>
+     <div class="related-stories">
+      <h3>
+       Related Stories
+      </h3>
+      <div class="story">
+       <img alt="Related Story Image" src=""/>
+       <div class="story-content">
+        <h4>
+         Related Story Title 1
+        </h4>
+        <p>
+         Summary of the related story...
+        </p>
+       </div>
+      </div>
+      <div class="story">
+       <img alt="Related Story Image" src=""/>
+       <div class="story-content">
+        <h4>
+         Related Story Title 2
+        </h4>
+        <p>
+         Summary of the related story...
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="comments-section">
+      <h3>
+       Comments
+      </h3>
+      <div class="comment">
+       <p class="meta">
+        By User1 | Date and Time
+       </p>
+       <p>
+        Comment text...
+       </p>
+      </div>
+      <div class="comment">
+       <p class="meta">
+        By User2 | Date and Time
+       </p>
+       <p>
+        Comment text...
+       </p>
+      </div>
+      <div class="add-comment">
+       <textarea placeholder="Add a comment..." rows="3"></textarea>
+       <button>
+        Submit
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- More stories can be added here -->
+   <!-- Pagination can be added here if needed -->
+  </div>
+  <div class="footer">
+   <p>
+    <a href="#">
+     Contact Us
+    </a>
+    |
+    <a href="#">
+     Privacy Policy
+    </a>
+    |
+    <a href="#">
+     About Us
+    </a>
+    |
+    <a href="#">
+     Terms of Service
+    </a>
+    |
+    <a href="#">
+     Advertise with Us
+    </a>
+    |
+      Follow us on
+    <a href="#">
+     Facebook
+    </a>
+    ,
+    <a href="#">
+     Twitter
+    </a>
+    ,
+    <a href="#">
+     Instagram
+    </a>
+   </p>
+  </div>
+ </body>
+</html>

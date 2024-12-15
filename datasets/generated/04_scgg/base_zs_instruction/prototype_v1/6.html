@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .weather-app {
+            width: 90%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: #1e90ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .header .city-selection {
+            margin-top: 10px;
+        }
+        .header select {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        .current-weather {
+            background: #e6f7ff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .current-weather p {
+            margin: 5px 0;
+        }
+        .forecast {
+            padding: 20px;
+        }
+        .day {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .day:last-child {
+            border-bottom: none;
+        }
+        .day p {
+            margin: 0;
+        }
+        .day .date {
+            font-weight: bold;
+        }
+        .day .temp {
+            color: #1e90ff;
+        }
+        .day .details {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .day .icon {
+            width: 30px;
+            height: 30px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="weather-app">
+   <div class="header">
+    <h1>
+     Weather Forecast
+    </h1>
+    <div class="city-selection">
+     <label for="city">
+      Select City:
+     </label>
+     <select id="city">
+      <option value="city1">
+       City 1
+      </option>
+      <option value="city2">
+       City 2
+      </option>
+      <option value="city3">
+       City 3
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="current-weather">
+    <p class="date">
+     Monday, Oct 4
+    </p>
+    <p class="temp">
+     27°C
+    </p>
+    <p>
+     Sunny
+    </p>
+   </div>
+   <div class="forecast">
+    <div class="day">
+     <p class="date">
+      Tuesday, Oct 5
+     </p>
+     <img alt="Sunny" class="icon" src=""/>
+     <p class="temp">
+      25°C
+     </p>
+     <p class="details">
+      Wind: 10 km/h, Humidity: 60%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Wednesday, Oct 6
+     </p>
+     <img alt="Cloudy" class="icon" src=""/>
+     <p class="temp">
+      22°C
+     </p>
+     <p class="details">
+      Wind: 15 km/h, Humidity: 70%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Thursday, Oct 7
+     </p>
+     <img alt="Rainy" class="icon" src=""/>
+     <p class="temp">
+      28°C
+     </p>
+     <p class="details">
+      Wind: 20 km/h, Humidity: 80%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Friday, Oct 8
+     </p>
+     <img alt="Sunny" class="icon" src=""/>
+     <p class="temp">
+      24°C
+     </p>
+     <p class="details">
+      Wind: 10 km/h, Humidity: 50%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Saturday, Oct 9
+     </p>
+     <img alt="Cloudy" class="icon" src=""/>
+     <p class="temp">
+      26°C
+     </p>
+     <p class="details">
+      Wind: 12 km/h, Humidity: 65%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Sunday, Oct 10
+     </p>
+     <img alt="Rainy" class="icon" src=""/>
+     <p class="temp">
+      23°C
+     </p>
+     <p class="details">
+      Wind: 18 km/h, Humidity: 75%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Monday, Oct 11
+     </p>
+     <img alt="Sunny" class="icon" src=""/>
+     <p class="temp">
+      27°C
+     </p>
+     <p class="details">
+      Wind: 10 km/h, Humidity: 60%
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

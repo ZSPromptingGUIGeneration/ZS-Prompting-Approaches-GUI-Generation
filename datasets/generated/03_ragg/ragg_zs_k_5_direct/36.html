@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Public Transport App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+        .header .back-button {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .route-info {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            background-color: #f8f8f8;
+        }
+        .route-info h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .route {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .route-title {
+            font-size: 16px;
+            margin: 0 0 5px;
+        }
+        .route-time {
+            font-size: 14px;
+            color: #666;
+        }
+        .route-map {
+            height: 200px;
+            background-color: #e0e0e0;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+        .route-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .route-details {
+            padding: 15px;
+        }
+        .route-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .route-details th, .route-details td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .route-details th {
+            background-color: #f8f8f8;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .footer button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .footer button:hover {
+            text-decoration: underline;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="back-button">
+    ←
+   </div>
+   <h1>
+    Route Results
+   </h1>
+  </div>
+  <div class="route-info">
+   <h2>
+    Surrey Quays to Southfields
+   </h2>
+  </div>
+  <div class="route">
+   <div class="route-title">
+    Fast Route
+   </div>
+   <div class="route-time">
+    47 min
+   </div>
+  </div>
+  <div class="route">
+   <div class="route-title">
+    Simple Route
+   </div>
+   <div class="route-time">
+    54 min
+   </div>
+  </div>
+  <div class="route">
+   <div class="route-title">
+    Realtime Results
+   </div>
+   <div class="route-time">
+    10:53 to 11:38 - 45 min
+   </div>
+  </div>
+  <div class="route">
+   <div class="route-title">
+    Realtime Results
+   </div>
+   <div class="route-time">
+    10:56 to 11:41 - 45 min
+   </div>
+  </div>
+  <div class="route">
+   <div class="route-title">
+    Realtime Results
+   </div>
+   <div class="route-time">
+    10:56 to 11:43 - 47 min
+   </div>
+  </div>
+  <div class="route">
+   <div class="route-title">
+    Realtime Results
+   </div>
+   <div class="route-time">
+    11:00 to 11:46 - 46 min
+   </div>
+  </div>
+  <div class="route-map">
+   <img alt="Route Map" src=""/>
+  </div>
+  <div class="route-details">
+   <table>
+    <tr>
+     <th>
+      Station Name
+     </th>
+     <th>
+      Arrival
+     </th>
+     <th>
+      Departure
+     </th>
+     <th>
+      Day
+     </th>
+     <th>
+      Distance (km)
+     </th>
+    </tr>
+    <tr>
+     <td>
+      Anand Vihar Terminal
+     </td>
+     <td>
+      SRC
+     </td>
+     <td>
+      07:30
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Ghaziabad
+     </td>
+     <td>
+      08:04
+     </td>
+     <td>
+      08:06
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      12
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Aligarh Jn
+     </td>
+     <td>
+      09:19
+     </td>
+     <td>
+      09:21
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      125
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Tundla Jn
+     </td>
+     <td>
+      10:30
+     </td>
+     <td>
+      10:32
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      203
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Kanpur Central
+     </td>
+     <td>
+      13:45
+     </td>
+     <td>
+      13:55
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      434
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Allahabad Jn
+     </td>
+     <td>
+      16:45
+     </td>
+     <td>
+      16:55
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      628
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Mirzapur
+     </td>
+     <td>
+      17:56
+     </td>
+     <td>
+      17:58
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      718
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Mughal Sarai Jn
+     </td>
+     <td>
+      19:45
+     </td>
+     <td>
+      20:05
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      782
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Dildarnagar Jn
+     </td>
+     <td>
+      20:51
+     </td>
+     <td>
+      20:53
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      840
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Danapur
+     </td>
+     <td>
+      23:03
+     </td>
+     <td>
+      23:05
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      984
+     </td>
+    </tr>
+    <tr>
+     <td>
+      Patliputra
+     </td>
+     <td>
+      23:20
+     </td>
+     <td>
+      23:30
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      990
+     </td>
+    </tr>
+   </table>
+  </div>
+  <div class="footer">
+   <button>
+    Bus Stops
+   </button>
+   <button>
+    Map
+   </button>
+   <button>
+    Timetable
+   </button>
+   <button>
+    Notice
+   </button>
+   <button>
+    Remark
+   </button>
+  </div>
+ </body>
+</html>

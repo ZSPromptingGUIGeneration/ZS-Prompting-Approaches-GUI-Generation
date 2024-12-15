@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Public Transport App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+        header button {
+            background-color: white;
+            color: #007BFF;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        main {
+            padding: 20px;
+        }
+        .route-info {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .route-info h2 {
+            margin-top: 0;
+        }
+        .steps {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .steps ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .steps li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .steps li img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <button onclick="window.history.back();">
+    <i class="fas fa-arrow-left">
+    </i>
+    Back
+   </button>
+   <h1>
+    Public Transport App
+   </h1>
+  </header>
+  <main>
+   <div class="route-info">
+    <h2>
+     Route Information
+    </h2>
+    <p>
+     <strong>
+      From:
+     </strong>
+     Central Park
+    </p>
+    <p>
+     <strong>
+      To:
+     </strong>
+     Downtown Plaza
+    </p>
+   </div>
+   <div class="steps">
+    <h2>
+     Steps
+    </h2>
+    <ul>
+     <li>
+      <img alt="Bus number 10 image" id="bus-10" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7a5f05aa-6e28-4596-8c38-e08f20cd7de5.png"/>
+      Step 1: Take bus number 10 from Central Park.
+     </li>
+     <li>
+      <img alt="Station X image" id="station-x" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/5328d440-dacc-4b3f-9ce0-deb285c05912.png"/>
+      Step 2: Get off at Station X.
+     </li>
+     <li>
+      <img alt="Metro line 2 image" id="metro-line-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/3cbaf305-ba0c-47a2-b652-fcf4c1e8fcef.png"/>
+      Step 3: Take metro line 2 towards Downtown Plaza.
+     </li>
+     <li>
+      <img alt="Downtown Plaza image" id="downtown-plaza" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e62a0a1d-63a0-4f66-b650-c841611b7799.png"/>
+      Step 4: Get off at Downtown Plaza.
+     </li>
+    </ul>
+   </div>
+  </main>
+  <footer>
+   <p>
+    Additional Information or Actions
+   </p>
+  </footer>
+ </body>
+</html>

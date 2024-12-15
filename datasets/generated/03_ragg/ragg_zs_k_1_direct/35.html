@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Study App - Latest Sessions
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            padding: 1rem;
+        }
+        .session-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+        .session-card h3 {
+            margin: 0;
+            color: #333;
+        }
+        .session-card p {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+        .session-card .date {
+            font-size: 0.9rem;
+            color: #999;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Latest Study Sessions
+   </h1>
+  </div>
+  <div class="container">
+   <div class="session-card">
+    <h3>
+     Math Study Group
+    </h3>
+    <p>
+     Topic: Algebra
+    </p>
+    <p class="date">
+     Date: 2023-10-01
+    </p>
+   </div>
+   <div class="session-card">
+    <h3>
+     Physics Study Session
+    </h3>
+    <p>
+     Topic: Quantum Mechanics
+    </p>
+    <p class="date">
+     Date: 2023-10-02
+    </p>
+   </div>
+   <div class="session-card">
+    <h3>
+     Chemistry Lab Work
+    </h3>
+    <p>
+     Topic: Organic Chemistry
+    </p>
+    <p class="date">
+     Date: 2023-10-03
+    </p>
+   </div>
+   <div class="button-container">
+    <button class="button">
+     Load More
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

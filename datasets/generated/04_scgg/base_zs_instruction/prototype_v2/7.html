@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Schedule App
+  </title>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+        }
+        .filter-sort {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .match {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .team-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .team-logo:hover {
+            transform: scale(1.1);
+        }
+        .match-info {
+            flex-grow: 1;
+            margin: 0 15px;
+        }
+        .team-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .match-details {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+        }
+        .match-status {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .status-upcoming {
+            background-color: #28a745;
+        }
+        .status-ongoing {
+            background-color: #ffc107;
+        }
+        .status-completed {
+            background-color: #dc3545;
+        }
+        .team-record {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .match-highlights {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+        .countdown {
+            font-size: 14px;
+            color: #007bff;
+            margin-top: 10px;
+        }
+        .hover-highlight:hover {
+            background-color: #f0f0f0;
+        }
+        @media (max-width: 768px) {
+            .match {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .team-logo {
+                margin-bottom: 10px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="filter-sort">
+    <input class="search-bar" placeholder="Search matches..." type="text"/>
+    <div>
+     <select>
+      <option value="date">
+       Sort by Date
+      </option>
+      <option value="team">
+       Sort by Team
+      </option>
+      <option value="status">
+       Sort by Status
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="match hover-highlight">
+    <img alt="Logo of Team 1" class="team-logo" src=""/>
+    <div class="match-info">
+     <div class="team-name">
+      <a href="#">
+       Team 1
+      </a>
+      vs.
+      <a href="#">
+       Team 2
+      </a>
+     </div>
+     <div class="team-record">
+      Team 1: 10-5, Team 2: 8-7
+     </div>
+     <div class="match-details">
+      Location: Stadium A
+     </div>
+     <div class="match-details">
+      Date: 2023-10-01
+     </div>
+     <div class="match-details">
+      Time: 19:00
+     </div>
+     <div class="match-highlights">
+      Star Players:
+      <a href="#">
+       Player A
+      </a>
+      ,
+      <a href="#">
+       Player B
+      </a>
+     </div>
+     <div class="countdown">
+      Countdown: 5 days
+     </div>
+    </div>
+    <div class="match-status status-upcoming">
+     <span>
+      Upcoming
+     </span>
+    </div>
+    <img alt="Logo of Team 2" class="team-logo" src=""/>
+   </div>
+   <div class="match hover-highlight">
+    <img alt="Logo of Team 3" class="team-logo" src=""/>
+    <div class="match-info">
+     <div class="team-name">
+      <a href="#">
+       Team 3
+      </a>
+      vs.
+      <a href="#">
+       Team 4
+      </a>
+     </div>
+     <div class="team-record">
+      Team 3: 12-3, Team 4: 9-6
+     </div>
+     <div class="match-details">
+      Location: Stadium B
+     </div>
+     <div class="match-details">
+      Date: 2023-10-05
+     </div>
+     <div class="match-details">
+      Time: 18:00
+     </div>
+     <div class="match-highlights">
+      Important Milestone: 100th Game
+     </div>
+     <div class="countdown">
+      Countdown: 9 days
+     </div>
+    </div>
+    <div class="match-status status-ongoing">
+     <span>
+      Ongoing
+     </span>
+    </div>
+    <img alt="Logo of Team 4" class="team-logo" src=""/>
+   </div>
+  </div>
+ </body>
+</html>

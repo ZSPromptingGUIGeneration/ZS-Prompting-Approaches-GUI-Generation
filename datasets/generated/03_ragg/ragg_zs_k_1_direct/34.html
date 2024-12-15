@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Child Journal
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            position: relative;
+        }
+        .header .menu-icon {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .header .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .header .tabs div {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+        }
+        .header .tabs .active {
+            border-bottom: 2px solid white;
+        }
+        .profile-card {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .profile-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .profile-card .edit-icon {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+        .profile-card h2 {
+            margin: 10px 0;
+        }
+        .growth-chart {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .growth-chart h3 {
+            color: #ff4081;
+        }
+        .growth-chart .details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .growth-chart .details div {
+            text-align: center;
+        }
+        .growth-chart .details img {
+            width: 60px;
+            height: 60px;
+        }
+        .growth-chart .update-button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .view-more {
+            text-align: center;
+            margin: 20px;
+        }
+        .view-more a {
+            color: #00bfa5;
+            text-decoration: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu-icon">
+    ☰
+   </div>
+   Babygogo
+   <div class="tabs">
+    <div>
+     FEED
+    </div>
+    <div>
+     CHAT
+    </div>
+    <div>
+     LEARN
+    </div>
+    <div class="active">
+     KIDS
+    </div>
+   </div>
+  </div>
+  <div class="profile-card">
+   <img alt="Baby Profile" src=""/>
+   <div class="edit-icon">
+    ✎
+   </div>
+   <h2>
+    allyy
+   </h2>
+   <p>
+    1 year 1 month old girl
+   </p>
+  </div>
+  <div class="growth-chart">
+   <h3>
+    Growth Chart
+   </h3>
+   <div class="details">
+    <div>
+     <img alt="Height" src=""/>
+     <p>
+      Height
+     </p>
+     <p>
+      67.7 - 78.5cm
+     </p>
+     <p>
+      (Ideal height)
+     </p>
+    </div>
+    <div>
+     <img alt="Weight" src=""/>
+     <p>
+      Weight
+     </p>
+     <p>
+      7.7 - 11.5kg
+     </p>
+     <p>
+      (Ideal weight)
+     </p>
+    </div>
+   </div>
+   <button class="update-button">
+    Update now
+   </button>
+  </div>
+  <div class="view-more">
+   <a href="#">
+    VIEW MORE
+   </a>
+  </div>
+ </body>
+</html>

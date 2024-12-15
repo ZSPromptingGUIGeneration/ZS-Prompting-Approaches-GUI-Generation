@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Organisational App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .input-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input-group button {
+            padding: 10px;
+            border: none;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+        .input-group button:hover {
+            background: #218838;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e9ecef;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+        ul li button {
+            background: #dc3545;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+        ul li button:hover {
+            background: #c82333;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Organisational App
+   </h1>
+   <div class="section">
+    <h2>
+     Grocery List
+    </h2>
+    <div class="input-group">
+     <input id="grocery-input" placeholder="Add grocery item..." type="text"/>
+     <button onclick="addGrocery()">
+      Add
+     </button>
+    </div>
+    <ul id="grocery-list">
+    </ul>
+   </div>
+   <div class="section">
+    <h2>
+     Saved Recipes
+    </h2>
+    <div class="input-group">
+     <input id="recipe-input" placeholder="Add recipe..." type="text"/>
+     <button onclick="addRecipe()">
+      Save
+     </button>
+    </div>
+    <ul id="recipe-list">
+    </ul>
+   </div>
+  </div>
+  <script>
+   function addGrocery() {
+            const input = document.getElementById('grocery-input');
+            const value = input.value.trim();
+            if (value) {
+                const list = document.getElementById('grocery-list');
+                const li = document.createElement('li');
+                li.innerHTML = `${value} <button onclick="removeItem(this)">Remove</button>`;
+                list.appendChild(li);
+                input.value = '';
+            }
+        }
+
+        function addRecipe() {
+            const input = document.getElementById('recipe-input');
+            const value = input.value.trim();
+            if (value) {
+                const list = document.getElementById('recipe-list');
+                const li = document.createElement('li');
+                li.innerHTML = `${value} <button onclick="removeItem(this)">Remove</button>`;
+                list.appendChild(li);
+                input.value = '';
+            }
+        }
+
+        function removeItem(button) {
+            const li = button.parentElement;
+            li.remove();
+        }
+  </script>
+ </body>
+</html>

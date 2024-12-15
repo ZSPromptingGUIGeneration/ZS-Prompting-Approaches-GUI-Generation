@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Player App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #2a2a2a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3e3e3e;
+            padding: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #3e3e3e;
+            padding: 10px 0;
+        }
+        .tabs div {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .tabs .active {
+            border-bottom: 2px solid #ffcc00;
+        }
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .album {
+            background-color: #4e4e4e;
+            padding: 10px;
+            text-align: center;
+        }
+        .album img {
+            width: 100%;
+        }
+        .album p {
+            margin: 5px 0;
+        }
+        .player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3e3e3e;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .player img {
+            width: 40px;
+            height: 40px;
+        }
+        .player .controls {
+            display: flex;
+            align-items: center;
+        }
+        .player .controls button {
+            background: none;
+            border: none;
+            color: #ffcc00;
+            font-size: 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .player .progress {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .player .progress input {
+            width: 100%;
+        }
+        .player .info {
+            flex: 1;
+        }
+        .player .info p {
+            margin: 0;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    My Music
+   </h1>
+   <div>
+    <button>
+     🔍
+    </button>
+    <button>
+     ⋮
+    </button>
+   </div>
+  </div>
+  <div class="tabs">
+   <div class="active">
+    TRACKS
+   </div>
+   <div>
+    ALBUMS
+   </div>
+   <div>
+    ARTISTS
+   </div>
+   <div>
+    GENRES
+   </div>
+   <div>
+    PLAYLISTS
+   </div>
+  </div>
+  <div class="album-grid">
+   <div class="album">
+    <img alt="Album" src=""/>
+    <p>
+     Album 1
+    </p>
+    <p>
+     Artist 1
+    </p>
+   </div>
+   <div class="album">
+    <img alt="Album" src=""/>
+    <p>
+     Album 2
+    </p>
+    <p>
+     Artist 2
+    </p>
+   </div>
+   <div class="album">
+    <img alt="Album" src=""/>
+    <p>
+     Album 3
+    </p>
+    <p>
+     Artist 3
+    </p>
+   </div>
+   <div class="album">
+    <img alt="Album" src=""/>
+    <p>
+     Album 4
+    </p>
+    <p>
+     Artist 4
+    </p>
+   </div>
+  </div>
+  <div class="player">
+   <img alt="Album Art" src=""/>
+   <div class="info">
+    <p>
+     Song Title
+    </p>
+    <p>
+     Artist Name
+    </p>
+   </div>
+   <div class="progress">
+    <input max="100" min="0" type="range" value="50"/>
+   </div>
+   <div class="controls">
+    <button>
+     ⏮️
+    </button>
+    <button>
+     ⏯️
+    </button>
+    <button>
+     ⏭️
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

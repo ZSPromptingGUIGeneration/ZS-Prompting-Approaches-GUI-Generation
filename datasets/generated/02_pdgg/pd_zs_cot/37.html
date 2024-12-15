@@ -1,0 +1,115 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   News App - Top Stories
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .search-bar {
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+        .story-card {
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .story-card img {
+            width: 100%;
+            height: auto;
+        }
+        .story-card h2 {
+            font-size: 1.5em;
+            margin: 10px;
+        }
+        .story-card p {
+            margin: 10px;
+            color: #555;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="logo">
+    News App
+   </div>
+   <div class="menu-icon">
+    ☰
+   </div>
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search news..." type="text"/>
+  </div>
+  <div class="container">
+   <div class="story-card">
+    <img alt="Story Image" src=""/>
+    <h2>
+     Top Story Headline
+    </h2>
+    <p>
+     This is a brief description of the top story. It provides a summary of the news content.
+    </p>
+   </div>
+   <div class="story-card">
+    <img alt="Story Image" src=""/>
+    <h2>
+     Top Story Headline
+    </h2>
+    <p>
+     This is a brief description of the top story. It provides a summary of the news content.
+    </p>
+   </div>
+   <!-- More story cards can be added here -->
+  </div>
+  <div class="footer">
+   <div>
+    Home
+   </div>
+   <div>
+    Categories
+   </div>
+   <div>
+    Profile
+   </div>
+  </div>
+ </body>
+</html>
+<!-- End -->

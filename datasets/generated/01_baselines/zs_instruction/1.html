@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Search
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #ff6347;
+            color: white;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .category {
+            flex: 1 1 calc(50% - 10px);
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+        }
+        .category img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .category h3 {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Recipe Search
+    </h1>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search for recipes..." type="text"/>
+    <button>
+     Search
+    </button>
+   </div>
+   <div class="categories">
+    <div class="category">
+     <img alt="Category 1" src=""/>
+     <h3>
+      Breakfast
+     </h3>
+    </div>
+    <div class="category">
+     <img alt="Category 2" src=""/>
+     <h3>
+      Lunch
+     </h3>
+    </div>
+    <div class="category">
+     <img alt="Category 3" src=""/>
+     <h3>
+      Dinner
+     </h3>
+    </div>
+    <div class="category">
+     <img alt="Category 4" src=""/>
+     <h3>
+      Snacks
+     </h3>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

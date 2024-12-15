@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dream Tracker
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .dream-entry {
+            margin-bottom: 20px;
+        }
+        .dream-entry textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        .dream-entry button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .dream-entry button:hover {
+            background-color: #45a049;
+        }
+        .voice-recording {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .voice-recording button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .voice-recording button:hover {
+            background-color: #45a049;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Dream Tracker
+    </h1>
+   </div>
+   <div class="content">
+    <div class="dream-entry">
+     <textarea placeholder="Write down your dream..." rows="5"></textarea>
+     <button>
+      Save Dream
+     </button>
+    </div>
+    <div class="voice-recording">
+     <button>
+      🔈
+     </button>
+     <p>
+      Tap to record your dream
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

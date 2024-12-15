@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #2980b9;
+            padding: 10px 0;
+        }
+        .tabs div {
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        .tabs div.active {
+            background-color: #3498db;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .hourly-forecast {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .hourly-forecast div {
+            text-align: center;
+        }
+        .chart {
+            margin-top: 20px;
+            background-color: #34495e;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .chart canvas {
+            width: 100%;
+        }
+        .news {
+            margin-top: 20px;
+            background-color: #34495e;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .news img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #2980b9;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer div {
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Weather App
+   </h1>
+  </div>
+  <div class="tabs">
+   <div class="tab active">
+    Hourly
+   </div>
+   <div class="tab">
+    Daily
+   </div>
+   <div class="tab">
+    Radar
+   </div>
+  </div>
+  <div class="content">
+   <div class="hourly-forecast">
+    <div>
+     <p>
+      Now
+     </p>
+     <p>
+      13°C
+     </p>
+     <p>
+      Partly Cloudy
+     </p>
+    </div>
+    <div>
+     <p>
+      08:00
+     </p>
+     <p>
+      13°C
+     </p>
+     <p>
+      Partly Cloudy
+     </p>
+    </div>
+    <div>
+     <p>
+      09:00
+     </p>
+     <p>
+      15°C
+     </p>
+     <p>
+      Partly Cloudy
+     </p>
+    </div>
+    <div>
+     <p>
+      10:00
+     </p>
+     <p>
+      18°C
+     </p>
+     <p>
+      Partly Cloudy
+     </p>
+    </div>
+    <div>
+     <p>
+      11:00
+     </p>
+     <p>
+      20°C
+     </p>
+     <p>
+      Partly Cloudy
+     </p>
+    </div>
+    <div>
+     <p>
+      12:00
+     </p>
+     <p>
+      21°C
+     </p>
+     <p>
+      Partly Cloudy
+     </p>
+    </div>
+    <div>
+     <p>
+      13:00
+     </p>
+     <p>
+      21°C
+     </p>
+     <p>
+      Partly Cloudy
+     </p>
+    </div>
+   </div>
+   <div class="chart">
+    <canvas id="weatherChart">
+    </canvas>
+   </div>
+   <div class="news">
+    <h2>
+     Trending Now
+    </h2>
+    <p>
+     WWE Legend The Undertaker Talks About His First Match, How He Got...
+    </p>
+    <img alt="News" src=""/>
+   </div>
+  </div>
+  <div class="footer">
+   <div>
+    Now
+   </div>
+   <div>
+    Details
+   </div>
+   <div>
+    Radar
+   </div>
+   <div>
+    News
+   </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js">
+  </script>
+  <script>
+   const ctx = document.getElementById('weatherChart').getContext('2d');
+        const weatherChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['11PM', '3AM', '7AM', '11AM', '3PM', '7PM'],
+                datasets: [
+                    {
+                        label: 'Temperature (°F)',
+                        data: [41, 10, 20, 49, 59, 54],
+                        borderColor: 'yellow',
+                        fill: false
+                    },
+                    {
+                        label: 'Wind Speed (mph)',
+                        data: [10, 10, 20, 49, 59, 54],
+                        borderColor: 'green',
+                        fill: false
+                    },
+                    {
+                        label: 'Probability of Precipitation (%)',
+                        data: [91, 75, 48, 49, 56, 54],
+                        borderColor: 'blue',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+  </script>
+ </body>
+</html>

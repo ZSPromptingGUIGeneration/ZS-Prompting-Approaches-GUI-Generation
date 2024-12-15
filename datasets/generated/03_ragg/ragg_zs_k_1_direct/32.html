@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1e3a5f;
+        }
+        .header img {
+            height: 30px;
+        }
+        .header .time {
+            font-size: 14px;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #2a4a7f;
+            padding: 10px 0;
+        }
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .nav a.active {
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+        }
+        .chart {
+            width: 100%;
+            height: 300px;
+            background-color: #2a4a7f;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .legend {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .day-selector {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #1e3a5f;
+            border-radius: 10px;
+        }
+        .day-selector .day {
+            font-size: 16px;
+        }
+        .day-selector .menu {
+            width: 24px;
+            height: 24px;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Sun Icon" src=""/>
+   <div class="time">
+    Updated Dec 8, 1:57 AM
+   </div>
+   <div class="settings">
+    <img alt="Settings Icon" src=""/>
+    <img alt="Refresh Icon" src=""/>
+    <img alt="Menu Icon" src=""/>
+   </div>
+  </div>
+  <div class="nav">
+   <a href="#">
+    Forecast
+   </a>
+   <a class="active" href="#">
+    Hourly
+   </a>
+   <a href="#">
+    Radar
+   </a>
+  </div>
+  <div class="content">
+   <div class="chart">
+    <!-- Chart placeholder -->
+   </div>
+   <div class="legend">
+    <div>
+     - Temperature (°F) -
+     <span style="color: yellow;">
+      Wind Speed (mph)
+     </span>
+    </div>
+    <div>
+     -
+     <span style="color: blue;">
+      Probability of Precipitation (%)
+     </span>
+    </div>
+   </div>
+   <div class="day-selector">
+    <div class="day">
+     Wednesday
+    </div>
+    <div class="menu">
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

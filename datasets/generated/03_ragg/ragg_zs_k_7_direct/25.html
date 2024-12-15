@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Healthy Meal Recipes
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: white;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .category {
+            width: 45%;
+            margin: 10px 0;
+            position: relative;
+        }
+        .category img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .category .title {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+        .recipes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .recipe {
+            width: 45%;
+            margin: 10px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .recipe img {
+            width: 100%;
+        }
+        .recipe .info {
+            padding: 10px;
+        }
+        .recipe .info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .recipe .info .details {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #888;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: white;
+            border-top: 1px solid #ccc;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 16px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   Healthy Meal Recipes
+  </div>
+  <div class="search-bar">
+   <input placeholder="Search..." type="text"/>
+  </div>
+  <div class="categories">
+   <div class="category">
+    <img alt="Frying Peaks" src=""/>
+    <div class="title">
+     Frying Peaks
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Paleo" src=""/>
+    <div class="title">
+     Paleo
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Mexican Recipes" src=""/>
+    <div class="title">
+     Mexican Recipes
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Smoothie Recipes" src=""/>
+    <div class="title">
+     Smoothie Recipes
+    </div>
+   </div>
+  </div>
+  <div class="recipes">
+   <div class="recipe">
+    <img alt="Paleo Granola" src=""/>
+    <div class="info">
+     <h3>
+      Paleo Granola
+     </h3>
+     <div class="details">
+      <span>
+       25 Min
+      </span>
+      <span>
+       £0.53 per serving
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Paleo Pancakes" src=""/>
+    <div class="info">
+     <h3>
+      Paleo Pancakes
+     </h3>
+     <div class="details">
+      <span>
+       510 Min
+      </span>
+      <span>
+       £0.52 per serving
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Bircher Muesli" src=""/>
+    <div class="info">
+     <h3>
+      Bircher Muesli
+     </h3>
+     <div class="details">
+      <span>
+       5 Min
+      </span>
+      <span>
+       £0.53 per serving
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="recipe">
+    <img alt="Serrano Ham and Asparagus Spears" src=""/>
+    <div class="info">
+     <h3>
+      Serrano Ham and Asparagus Spears
+     </h3>
+     <div class="details">
+      <span>
+       15 Min
+      </span>
+      <span>
+       £0.52 per serving
+      </span>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <a href="#">
+    Home
+   </a>
+   <a href="#">
+    Shop
+   </a>
+   <a href="#">
+    Favourites
+   </a>
+   <a href="#">
+    My Account
+   </a>
+  </div>
+ </body>
+</html>

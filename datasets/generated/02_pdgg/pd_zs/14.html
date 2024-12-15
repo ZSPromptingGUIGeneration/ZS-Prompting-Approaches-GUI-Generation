@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Streaming Platform
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            margin-left: 10px;
+        }
+        .search-bar input:focus {
+            outline: none;
+        }
+        .navigation-menu {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+        .navigation-menu a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navigation-menu a img {
+            width: 24px;
+            height: 24px;
+        }
+        .now-playing-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            bottom: 50px;
+            width: 100%;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .now-playing-bar .controls {
+            display: flex;
+            align-items: center;
+        }
+        .now-playing-bar .controls button {
+            background: none;
+            border: none;
+            margin: 0 10px;
+        }
+        .now-playing-bar .controls button img {
+            width: 24px;
+            height: 24px;
+        }
+        .now-playing-bar .song-info {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .now-playing-bar .song-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .volume-control {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .volume-control input[type="range"] {
+            width: 80%;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="search-bar">
+   <img src=""/>
+   <input placeholder="Search for songs, artists, albums..." type="text"/>
+  </div>
+  <div class="navigation-menu">
+   <a href="#">
+    <img src=""/>
+    <span>
+     Home
+    </span>
+   </a>
+   <a href="#">
+    <img src=""/>
+    <span>
+     Library
+    </span>
+   </a>
+   <a href="#">
+    <img src=""/>
+    <span>
+     Browse
+    </span>
+   </a>
+   <a href="#">
+    <img src=""/>
+    <span>
+     Settings
+    </span>
+   </a>
+  </div>
+  <div class="now-playing-bar">
+   <div class="song-info">
+    <img alt="Album Art" src=""/>
+    <div>
+     <div>
+      Song Title
+     </div>
+     <div>
+      Artist Name
+     </div>
+    </div>
+   </div>
+   <div class="controls">
+    <button>
+     <img src=""/>
+    </button>
+    <button>
+     <img src=""/>
+    </button>
+    <button>
+     <img src=""/>
+    </button>
+   </div>
+  </div>
+  <div class="volume-control">
+   <img src=""/>
+   <input max="100" min="0" type="range" value="50"/>
+   <img src=""/>
+  </div>
+ </body>
+</html>

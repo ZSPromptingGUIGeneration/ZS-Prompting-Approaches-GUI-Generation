@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather Notification Settings
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #cce0ff 0%, #99ccff 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header p {
+            margin: 0;
+            font-size: 16px;
+            color: #666;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        .section h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .section p {
+            margin: 0 0 10px;
+            color: #555;
+        }
+        .toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .toggle input[type="checkbox"] {
+            transform: scale(1.5);
+        }
+        .checkbox-group {
+            margin-left: 20px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .checkbox-group input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .footer button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer button:disabled {
+            background-color: #ccc;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Weather Notifications
+    </h1>
+    <p>
+     Little Rock, AR
+    </p>
+   </div>
+   <div class="section">
+    <h2>
+     Severe Weather Alerts
+    </h2>
+    <p>
+     Issued by the US National Weather Service.
+    </p>
+    <div class="toggle">
+     <label>
+      Enable
+     </label>
+     <input checked="" type="checkbox"/>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Lightning Alerts
+    </h2>
+    <p>
+     Be notified when lightning strikes within 5 miles. Available only when you are within your station's broadcast area.
+    </p>
+    <div class="toggle">
+     <label>
+      Enable
+     </label>
+     <input checked="" type="checkbox"/>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Station Alerts
+    </h2>
+    <p>
+     Weather alerts issued by your local TV station.
+    </p>
+    <div class="toggle">
+     <label>
+      Enable
+     </label>
+     <input checked="" type="checkbox"/>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Precipitation Alerts
+    </h2>
+    <p>
+     Be notified when heavy precipitation is detected within 5 miles.
+    </p>
+    <div class="toggle">
+     <label>
+      Enable
+     </label>
+     <input checked="" type="checkbox"/>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Temperature Display
+    </h2>
+    <p>
+     Display the current temperature for your selected Alert Location in the status bar and notifications drawer.
+    </p>
+    <div class="toggle">
+     <label>
+      Enable
+     </label>
+     <input checked="" type="checkbox"/>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Lock Screen Weather Banner
+    </h2>
+    <p>
+     Displays weather for your selected Alert Location on the lock screen.
+    </p>
+    <div class="toggle">
+     <label>
+      Enable
+     </label>
+     <input checked="" type="checkbox"/>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Show Alerts in Status Bar
+    </h2>
+    <div class="toggle">
+     <label>
+      Enable
+     </label>
+     <input checked="" type="checkbox"/>
+    </div>
+    <div class="checkbox-group">
+     <label>
+      <input checked="" type="checkbox"/>
+      Sounds
+     </label>
+     <label>
+      <input checked="" type="checkbox"/>
+      Lights
+     </label>
+     <label>
+      <input checked="" type="checkbox"/>
+      Vibration
+     </label>
+    </div>
+   </div>
+   <div class="footer">
+    <button>
+     Done
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

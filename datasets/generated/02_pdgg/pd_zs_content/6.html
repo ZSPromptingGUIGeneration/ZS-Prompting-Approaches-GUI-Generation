@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 25px;
+            margin-left: 10px;
+        }
+        .search-bar .fa-search {
+            font-size: 24px;
+        }
+        .current-weather {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .current-weather .temperature {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .current-weather .description {
+            font-size: 18px;
+            color: #666;
+        }
+        .current-weather .fa-sun {
+            font-size: 50px;
+            margin-top: 10px;
+        }
+        .forecast {
+            display: flex;
+            overflow-x: scroll;
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+        .forecast .day-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-width: 100px;
+            text-align: center;
+        }
+        .day-card .day {
+            font-weight: bold;
+        }
+        .day-card .date {
+            color: #666;
+        }
+        .day-card .fa-cloud, .day-card .fa-cloud-rain, .day-card .fa-sun, .day-card .fa-snowflake {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+        .day-card .temp-high {
+            color: red;
+        }
+        .day-card .temp-low {
+            color: blue;
+        }
+        .details {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .details .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .details .detail-item .fa-tint, .details .detail-item .fa-wind, .details .detail-item .fa-cloud-showers-heavy, .details .detail-item .fa-sun, .details .detail-item .fa-moon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .details .detail-item span {
+            font-size: 16px;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .navigation .fa-location-arrow, .navigation .fa-sync-alt {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .settings {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .settings .fa-cog {
+            font-size: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="search-bar">
+    <i class="fas fa-search">
+    </i>
+    <input placeholder="Enter city name" type="text"/>
+   </div>
+   <div class="current-weather">
+    <div class="temperature">
+     25°C
+    </div>
+    <div class="description">
+     Sunny
+    </div>
+    <i class="fas fa-sun">
+    </i>
+   </div>
+   <div class="forecast">
+    <div class="day-card">
+     <div class="day">
+      Mon
+     </div>
+     <div class="date">
+      12/12
+     </div>
+     <i class="fas fa-cloud">
+     </i>
+     <div class="temp-high">
+      30°C
+     </div>
+     <div class="temp-low">
+      20°C
+     </div>
+     <div class="description">
+      Partly Cloudy
+     </div>
+    </div>
+    <div class="day-card">
+     <div class="day">
+      Tue
+     </div>
+     <div class="date">
+      13/12
+     </div>
+     <i class="fas fa-cloud-rain">
+     </i>
+     <div class="temp-high">
+      28°C
+     </div>
+     <div class="temp-low">
+      18°C
+     </div>
+     <div class="description">
+      Rainy
+     </div>
+    </div>
+    <div class="day-card">
+     <div class="day">
+      Wed
+     </div>
+     <div class="date">
+      14/12
+     </div>
+     <i class="fas fa-sun">
+     </i>
+     <div class="temp-high">
+      32°C
+     </div>
+     <div class="temp-low">
+      22°C
+     </div>
+     <div class="description">
+      Sunny
+     </div>
+    </div>
+    <div class="day-card">
+     <div class="day">
+      Thu
+     </div>
+     <div class="date">
+      15/12
+     </div>
+     <i class="fas fa-cloud">
+     </i>
+     <div class="temp-high">
+      29°C
+     </div>
+     <div class="temp-low">
+      19°C
+     </div>
+     <div class="description">
+      Cloudy
+     </div>
+    </div>
+    <div class="day-card">
+     <div class="day">
+      Fri
+     </div>
+     <div class="date">
+      16/12
+     </div>
+     <i class="fas fa-cloud-rain">
+     </i>
+     <div class="temp-high">
+      27°C
+     </div>
+     <div class="temp-low">
+      17°C
+     </div>
+     <div class="description">
+      Showers
+     </div>
+    </div>
+    <div class="day-card">
+     <div class="day">
+      Sat
+     </div>
+     <div class="date">
+      17/12
+     </div>
+     <i class="fas fa-snowflake">
+     </i>
+     <div class="temp-high">
+      5°C
+     </div>
+     <div class="temp-low">
+      -2°C
+     </div>
+     <div class="description">
+      Snowy
+     </div>
+    </div>
+    <div class="day-card">
+     <div class="day">
+      Sun
+     </div>
+     <div class="date">
+      18/12
+     </div>
+     <i class="fas fa-sun">
+     </i>
+     <div class="temp-high">
+      26°C
+     </div>
+     <div class="temp-low">
+      16°C
+     </div>
+     <div class="description">
+      Sunny
+     </div>
+    </div>
+   </div>
+   <div class="details">
+    <div class="detail-item">
+     <i class="fas fa-tint">
+     </i>
+     <span>
+      Humidity: 60%
+     </span>
+    </div>
+    <div class="detail-item">
+     <i class="fas fa-wind">
+     </i>
+     <span>
+      Wind: 15 km/h NW
+     </span>
+    </div>
+    <div class="detail-item">
+     <i class="fas fa-cloud-showers-heavy">
+     </i>
+     <span>
+      Precipitation: 20%
+     </span>
+    </div>
+    <div class="detail-item">
+     <i class="fas fa-sun">
+     </i>
+     <span>
+      Sunrise: 6:00 AM
+     </span>
+    </div>
+    <div class="detail-item">
+     <i class="fas fa-moon">
+     </i>
+     <span>
+      Sunset: 6:00 PM
+     </span>
+    </div>
+   </div>
+   <div class="navigation">
+    <div class="location">
+     <i class="fas fa-location-arrow">
+     </i>
+    </div>
+    <div class="refresh">
+     <i class="fas fa-sync-alt">
+     </i>
+    </div>
+   </div>
+   <div class="settings">
+    <i class="fas fa-cog">
+    </i>
+   </div>
+  </div>
+ </body>
+</html>
+

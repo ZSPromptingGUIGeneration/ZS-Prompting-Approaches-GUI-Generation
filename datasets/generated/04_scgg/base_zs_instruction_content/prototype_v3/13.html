@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Online Encyclopedia
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .search-container {
+            padding: 100px 10px 10px;
+            text-align: center;
+        }
+        .search-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+        .search-container input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .search-container button {
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .search-container button:hover {
+            background-color: #555;
+        }
+        .articles {
+            padding: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .article {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .article h2 {
+            margin: 0 0 10px;
+            font-size: 1.8em;
+        }
+        .article p {
+            margin: 0 0 10px;
+        }
+        .metadata {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .metadata span {
+            margin-right: 10px;
+        }
+        .metadata span::before {
+            content: "•";
+            margin-left: 10px;
+        }
+        .metadata span:first-child::before {
+            content: "";
+            margin-left: 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .pagination {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .pagination a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        .pagination a:hover {
+            background-color: #eee;
+        }
+        .filter-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .filter-container select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .search-container input[type="text"] {
+                width: 90%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Online Encyclopedia
+   </h1>
+   <nav>
+    <a href="#">
+     Home
+    </a>
+    <a href="#">
+     Categories
+    </a>
+    <a href="#">
+     About
+    </a>
+    <a href="#">
+     Contact
+    </a>
+   </nav>
+  </header>
+  <div class="search-container">
+   <label for="search">
+    Search for articles
+   </label>
+   <input id="search" placeholder="Search for articles..." type="text"/>
+   <button type="button">
+    Search
+   </button>
+   <button type="button">
+    Clear
+   </button>
+  </div>
+  <div class="filter-container">
+   <label for="category-filter">
+    Filter by category:
+   </label>
+   <select id="category-filter">
+    <option value="">
+     All Categories
+    </option>
+    <option value="science">
+     Science
+    </option>
+    <option value="technology">
+     Technology
+    </option>
+    <option value="history">
+     History
+    </option>
+   </select>
+  </div>
+  <div class="articles">
+   <div class="article">
+    <h2>
+     The Mysteries of Quantum Physics
+    </h2>
+    <div class="metadata">
+     <span>
+      By Jane Doe
+     </span>
+     <span>
+      Jan 1, 2023
+     </span>
+     <span>
+      Category: Science
+     </span>
+    </div>
+    <p>
+     Quantum physics is a fascinating field that explores the fundamental principles of the universe at the smallest scales. It challenges our understanding of reality and opens up new possibilities for technology and discovery.
+    </p>
+    <img alt="Abstract representation of quantum particles" id="quantum-physics-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/266d10a2-bea9-4210-b07c-ad50d67725fb.png" style="width: 100%; height: auto;"/>
+   </div>
+   <div class="article">
+    <h2>
+     The Rise of Artificial Intelligence
+    </h2>
+    <div class="metadata">
+     <span>
+      By John Smith
+     </span>
+     <span>
+      Feb 15, 2023
+     </span>
+     <span>
+      Category: Technology
+     </span>
+    </div>
+    <p>
+     Artificial intelligence (AI) is transforming industries and reshaping the way we live and work. From autonomous vehicles to advanced data analysis, AI is driving innovation and efficiency.
+    </p>
+    <img alt="Illustration of artificial intelligence concepts" id="ai-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/0789593a-09fc-45af-ab29-88e9e6d87be5.png" style="width: 100%; height: auto;"/>
+   </div>
+   <div class="article">
+    <h2>
+     Ancient Civilizations: The Mayans
+    </h2>
+    <div class="metadata">
+     <span>
+      By Emily Johnson
+     </span>
+     <span>
+      Mar 10, 2023
+     </span>
+     <span>
+      Category: History
+     </span>
+    </div>
+    <p>
+     The Mayan civilization is known for its advanced knowledge of astronomy, architecture, and mathematics. Their impressive cities and temples continue to captivate historians and archaeologists.
+    </p>
+    <img alt="Ruins of a Mayan temple" id="mayan-civilization-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d02b1135-d9ca-4c32-b6c9-00a6446910bc.png" style="width: 100%; height: auto;"/>
+   </div>
+   <div class="article">
+    <h2>
+     Exploring the Depths of the Ocean
+    </h2>
+    <div class="metadata">
+     <span>
+      By Alex Brown
+     </span>
+     <span>
+      Apr 5, 2023
+     </span>
+     <span>
+      Category: Science
+     </span>
+    </div>
+    <p>
+     The ocean is a vast and largely unexplored frontier. Marine biologists and oceanographers are uncovering new species and understanding the complex ecosystems that thrive in the deep sea.
+    </p>
+    <img alt="Deep-sea exploration vehicle" id="ocean-exploration-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7ef385bf-dabb-4fa0-9211-eb25e738ff9e.png" style="width: 100%; height: auto;"/>
+   </div>
+   <div class="article">
+    <h2>
+     The Future of Renewable Energy
+    </h2>
+    <div class="metadata">
+     <span>
+      By Sarah Green
+     </span>
+     <span>
+      May 22, 2023
+     </span>
+     <span>
+      Category: Technology
+     </span>
+    </div>
+    <p>
+     Renewable energy sources like solar, wind, and hydro power are essential for a sustainable future. Innovations in this field are making clean energy more accessible and efficient.
+    </p>
+    <img alt="Solar panels and wind turbines" id="renewable-energy-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/bff89a2d-cd18-4be4-9841-92703f17b369.png" style="width: 100%; height: auto;"/>
+   </div>
+   <div class="article">
+    <h2>
+     The Impact of the Industrial Revolution
+    </h2>
+    <div class="metadata">
+     <span>
+      By Michael Lee
+     </span>
+     <span>
+      Jun 30, 2023
+     </span>
+     <span>
+      Category: History
+     </span>
+    </div>
+    <p>
+     The Industrial Revolution marked a significant turning point in history, leading to rapid advancements in manufacturing, transportation, and technology. It reshaped societies and economies around the world.
+    </p>
+    <img alt="Old factory with steam engines" id="industrial-revolution-image" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/553f8e52-1c90-4da7-9dc5-96c3e80a1fdb.png" style="width: 100%; height: auto;"/>
+   </div>
+  </div>
+  <div class="pagination">
+   <a href="#">
+    « Previous
+   </a>
+   <a href="#">
+    1
+   </a>
+   <a href="#">
+    2
+   </a>
+   <a href="#">
+    3
+   </a>
+   <a href="#">
+    Next »
+   </a>
+  </div>
+  <footer>
+   <p>
+    © 2023 Online Encyclopedia. All rights reserved.
+   </p>
+   <p>
+    <a href="#">
+     Privacy Policy
+    </a>
+    |
+    <a href="#">
+     Terms of Service
+    </a>
+   </p>
+  </footer>
+ </body>
+</html>
+

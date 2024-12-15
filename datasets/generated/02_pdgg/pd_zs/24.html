@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   App Start Page
+  </title>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        .logo {
+            margin-top: 20px;
+        }
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+        .app-name {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .welcome-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .create-account {
+            background-color: #6200ea;
+            color: #ffffff;
+        }
+        .login {
+            background-color: #03dac6;
+            color: #000000;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .social-buttons img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .forgot-password {
+            font-size: 14px;
+            color: #6200ea;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .terms {
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+        }
+        .terms a {
+            color: #6200ea;
+            text-decoration: none;
+        }
+        .language-selection {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .language-selection img {
+            width: 30px;
+            height: 30px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="language-selection">
+   <img alt="Language Selection" src=""/>
+  </div>
+  <div class="container">
+   <div class="logo">
+    <img alt="App Logo" src=""/>
+   </div>
+   <div class="app-name">
+    App Name
+   </div>
+   <div class="welcome-message">
+    Welcome to our app!
+   </div>
+   <button class="button create-account">
+    Create Account
+   </button>
+   <button class="button login">
+    Log In
+   </button>
+   <div class="social-buttons">
+    <img alt="Google Login" src=""/>
+    <img alt="Facebook Login" src=""/>
+    <img alt="Apple Login" src=""/>
+   </div>
+   <input class="input-field" placeholder="Username/Email" type="text"/>
+   <input class="input-field" placeholder="Password" type="password"/>
+   <div class="forgot-password">
+    Forgot Password?
+   </div>
+   <div class="terms">
+    <a href="#">
+     Terms and Conditions
+    </a>
+    |
+    <a href="#">
+     Privacy Policy
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

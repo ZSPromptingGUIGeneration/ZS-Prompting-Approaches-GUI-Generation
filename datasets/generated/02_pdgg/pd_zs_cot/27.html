@@ -1,0 +1,175 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Storage Manager
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   .app-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        .app-info {
+            display: flex;
+            align-items: center;
+        }
+        .app-info img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .app-info span {
+            font-size: 1.2em;
+        }
+        .delete-btn {
+            background-color: #ff5252;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <nav>
+   <div class="nav-wrapper">
+    <a class="brand-logo center" href="#">
+     Storage Manager
+    </a>
+    <ul class="left" id="nav-mobile">
+     <li>
+      <a href="#">
+       <i class="material-icons">
+        menu
+       </i>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <!-- Search Bar -->
+  <div class="container">
+   <div class="input-field">
+    <input id="search" type="text"/>
+    <label for="search">
+     <i class="material-icons">
+      search
+     </i>
+     Search Apps
+    </label>
+   </div>
+  </div>
+  <!-- Storage Location Filter -->
+  <div class="container">
+   <ul class="tabs">
+    <li class="tab col s6">
+     <a href="#phone">
+      Phone
+     </a>
+    </li>
+    <li class="tab col s6">
+     <a href="#sdcard">
+      SD Card
+     </a>
+    </li>
+   </ul>
+  </div>
+  <!-- Storage Summary -->
+  <div class="container">
+   <h6>
+    Phone Storage
+   </h6>
+   <div class="progress">
+    <div class="determinate" style="width: 70%">
+    </div>
+   </div>
+   <p>
+    Used: 14 GB / 20 GB
+   </p>
+   <h6>
+    SD Card Storage
+   </h6>
+   <div class="progress">
+    <div class="determinate" style="width: 50%">
+    </div>
+   </div>
+   <p>
+    Used: 10 GB / 20 GB
+   </p>
+  </div>
+  <!-- App List -->
+  <div class="container">
+   <div class="col s12" id="phone">
+    <div class="app-card">
+     <div class="app-info">
+      <img alt="App Icon" src=""/>
+      <span>
+       App Name
+      </span>
+     </div>
+     <div>
+      <span>
+       Size: 20 MB
+      </span>
+      <button class="delete-btn">
+       Delete
+      </button>
+     </div>
+    </div>
+    <!-- Repeat for other apps -->
+   </div>
+   <div class="col s12" id="sdcard">
+    <!-- Similar structure for SD card apps -->
+   </div>
+  </div>
+  <!-- Navigation Bar -->
+  <div class="navbar-fixed">
+   <nav>
+    <div class="nav-wrapper">
+     <ul class="center" id="nav-mobile">
+      <li>
+       <a href="#">
+        <i class="material-icons">
+         home
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        <i class="material-icons">
+         apps
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        <i class="material-icons">
+         settings
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tabs');
+            var instances = M.Tabs.init(elems);
+        });
+  </script>
+ </body>
+</html>
+<!-- End -->

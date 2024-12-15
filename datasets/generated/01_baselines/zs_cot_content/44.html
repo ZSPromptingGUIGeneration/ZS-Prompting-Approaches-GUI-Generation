@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restaurant Menu
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 1em;
+        }
+        .section-title {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+        .location-order-type, .menu-items, .order-history {
+            margin-bottom: 1.5em;
+        }
+        .input-group {
+            margin-bottom: 0.5em;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 0.3em;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 0.5em;
+        }
+        .menu-item button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .menu-item button:hover {
+            background-color: #e5533d;
+        }
+        .menu-item img {
+            max-width: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Restaurant Menu
+   </h1>
+  </header>
+  <div class="container">
+   <div class="location-order-type">
+    <div class="section-title">
+     Specify Location and Order Type
+    </div>
+    <div class="input-group">
+     <label for="location">
+      Location:
+     </label>
+     <input id="location" placeholder="Enter your location" type="text"/>
+    </div>
+    <div class="input-group">
+     <label for="order-type">
+      Order Type:
+     </label>
+     <select id="order-type">
+      <option value="dine-in">
+       Dine In
+      </option>
+      <option value="takeaway">
+       Takeaway
+      </option>
+      <option value="delivery">
+       Delivery
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="menu-items">
+    <div class="section-title">
+     Menu Items
+    </div>
+    <div class="menu-item">
+     <img alt="Cheese Pizza" id="img1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/d5085090-4ada-447f-a0c8-a32fba0deb24.png"/>
+     <span>
+      Cheese Pizza - $10.99
+     </span>
+     <button>
+      <i class="fas fa-save">
+      </i>
+      Save
+     </button>
+    </div>
+    <div class="menu-item">
+     <img alt="Grilled Chicken Burger" id="img2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/88c95d4a-cc82-44cf-bb90-8fb3886121fb.png"/>
+     <span>
+      Grilled Chicken Burger - $8.99
+     </span>
+     <button>
+      <i class="fas fa-save">
+      </i>
+      Save
+     </button>
+    </div>
+    <div class="menu-item">
+     <img alt="Spaghetti Carbonara" id="img3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/45ef247e-f10d-4e9f-8528-cce60c340aa3.png"/>
+     <span>
+      Spaghetti Carbonara - $12.99
+     </span>
+     <button>
+      <i class="fas fa-save">
+      </i>
+      Save
+     </button>
+    </div>
+    <div class="menu-item">
+     <img alt="Caesar Salad" id="img4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7db5f313-3a4c-4d86-b05b-92007579a898.png"/>
+     <span>
+      Caesar Salad - $7.99
+     </span>
+     <button>
+      <i class="fas fa-save">
+      </i>
+      Save
+     </button>
+    </div>
+    <div class="menu-item">
+     <img alt="Margarita Pizza" id="img5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/b1676bbc-e9d5-4cc6-9875-3195c96cde26.png"/>
+     <span>
+      Margarita Pizza - $9.99
+     </span>
+     <button>
+      <i class="fas fa-save">
+      </i>
+      Save
+     </button>
+    </div>
+    <div class="menu-item">
+     <img alt="BBQ Ribs" id="img6" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/ce4fd304-efe1-44c7-99da-f1c9e0340e18.png"/>
+     <span>
+      BBQ Ribs - $14.99
+     </span>
+     <button>
+      <i class="fas fa-save">
+      </i>
+      Save
+     </button>
+    </div>
+   </div>
+   <div class="order-history">
+    <div class="section-title">
+     Order History
+    </div>
+    <p>
+     No previous orders.
+    </p>
+    <!-- This section can be dynamically updated with JavaScript to show order history -->
+   </div>
+  </div>
+ </body>
+</html>
+

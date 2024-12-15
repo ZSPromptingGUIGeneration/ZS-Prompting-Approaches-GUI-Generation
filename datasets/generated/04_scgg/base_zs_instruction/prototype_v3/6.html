@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .weather-app {
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: #0288d1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .header .city-selection {
+            margin-top: 10px;
+            position: relative;
+        }
+        .header input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+            font-size: 1em;
+        }
+        .header input::placeholder {
+            color: #888;
+        }
+        .header .clear-btn {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 1.2em;
+            color: #888;
+            cursor: pointer;
+        }
+        .toggle-units {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .toggle-units button {
+            background: #fff;
+            border: 1px solid #0288d1;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: #0288d1;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 0 5px;
+        }
+        .toggle-units .active {
+            background: #0288d1;
+            color: #fff;
+        }
+        .current-weather {
+            background: #e1f5fe;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .current-weather p {
+            margin: 5px 0;
+        }
+        .current-weather .temp {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #0288d1;
+        }
+        .current-weather .details {
+            font-size: 1em;
+            color: #666;
+        }
+        .forecast {
+            padding: 20px;
+        }
+        .day {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.3s;
+        }
+        .day:hover {
+            background: #e0f7fa;
+        }
+        .day:last-child {
+            border-bottom: none;
+        }
+        .day p {
+            margin: 0;
+        }
+        .day .date {
+            font-weight: bold;
+        }
+        .day .temp {
+            color: #0288d1;
+        }
+        .day .details {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .day .icon {
+            width: 30px;
+            height: 30px;
+        }
+        .weather-alerts {
+            padding: 20px;
+            background: #ffeb3b;
+            color: #333;
+            text-align: center;
+        }
+        .hourly-forecast {
+            padding: 20px;
+            background: #e1f5fe;
+            text-align: center;
+        }
+        .hourly-forecast h2 {
+            margin: 0 0 20px;
+            font-size: 1.5em;
+        }
+        .hourly-forecast .hour {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .hourly-forecast .hour:last-child {
+            border-bottom: none;
+        }
+        .hourly-forecast .hour p {
+            margin: 0;
+        }
+        .hourly-forecast .hour .time {
+            font-weight: bold;
+        }
+        .hourly-forecast .hour .temp {
+            color: #0288d1;
+        }
+        .hourly-forecast .hour .icon {
+            width: 20px;
+            height: 20px;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .header input {
+                width: 100%;
+            }
+            .current-weather .temp {
+                font-size: 2em;
+            }
+            .hourly-forecast h2 {
+                font-size: 1.2em;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="weather-app">
+   <div class="header">
+    <h1>
+     Weather Forecast
+    </h1>
+    <div class="city-selection">
+     <label class="sr-only" for="city">
+      Select city
+     </label>
+     <input id="city" placeholder="Search for a city" type="text"/>
+     <button class="clear-btn" onclick="document.getElementById('city').value=''">
+      �
+     </button>
+    </div>
+    <div class="toggle-units">
+     <button class="active">
+      °C
+     </button>
+     <button>
+      °F
+     </button>
+    </div>
+   </div>
+   <div class="current-weather">
+    <p class="date">
+     Monday, Oct 4
+    </p>
+    <p class="temp">
+     27°C
+    </p>
+    <img alt="Sunny" class="icon" src=""/>
+    <p class="details">
+     Sunny
+    </p>
+    <p class="details">
+     Wind: 10 km/h, Humidity: 60%
+    </p>
+    <p class="details">
+     UV Index: 5, Air Quality: Good
+    </p>
+   </div>
+   <div class="weather-alerts">
+    <p>
+     No weather alerts
+    </p>
+   </div>
+   <div class="hourly-forecast">
+    <h2>
+     Hourly Forecast
+    </h2>
+    <div class="hour">
+     <p class="time">
+      10 AM
+     </p>
+     <img alt="Sunny" class="icon" src=""/>
+     <p class="temp">
+      25°C
+     </p>
+    </div>
+    <div class="hour">
+     <p class="time">
+      11 AM
+     </p>
+     <img alt="Sunny" class="icon" src=""/>
+     <p class="temp">
+      26°C
+     </p>
+    </div>
+    <div class="hour">
+     <p class="time">
+      12 PM
+     </p>
+     <img alt="Cloudy" class="icon" src=""/>
+     <p class="temp">
+      27°C
+     </p>
+    </div>
+   </div>
+   <div class="forecast">
+    <div class="day">
+     <p class="date">
+      Tuesday, Oct 5
+     </p>
+     <img alt="Sunny" class="icon" src=""/>
+     <p class="temp">
+      25°C
+     </p>
+     <p class="details">
+      Wind: 10 km/h, Humidity: 60%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Wednesday, Oct 6
+     </p>
+     <img alt="Cloudy" class="icon" src=""/>
+     <p class="temp">
+      22°C
+     </p>
+     <p class="details">
+      Wind: 15 km/h, Humidity: 70%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Thursday, Oct 7
+     </p>
+     <img alt="Rainy" class="icon" src=""/>
+     <p class="temp">
+      28°C
+     </p>
+     <p class="details">
+      Wind: 20 km/h, Humidity: 80%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Friday, Oct 8
+     </p>
+     <img alt="Sunny" class="icon" src=""/>
+     <p class="temp">
+      24°C
+     </p>
+     <p class="details">
+      Wind: 10 km/h, Humidity: 50%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Saturday, Oct 9
+     </p>
+     <img alt="Cloudy" class="icon" src=""/>
+     <p class="temp">
+      26°C
+     </p>
+     <p class="details">
+      Wind: 12 km/h, Humidity: 65%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Sunday, Oct 10
+     </p>
+     <img alt="Rainy" class="icon" src=""/>
+     <p class="temp">
+      23°C
+     </p>
+     <p class="details">
+      Wind: 18 km/h, Humidity: 75%
+     </p>
+    </div>
+    <div class="day">
+     <p class="date">
+      Monday, Oct 11
+     </p>
+     <img alt="Sunny" class="icon" src=""/>
+     <p class="temp">
+      27°C
+     </p>
+     <p class="details">
+      Wind: 10 km/h, Humidity: 60%
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

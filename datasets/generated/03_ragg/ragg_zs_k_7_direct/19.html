@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Bidding App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+        }
+        .offer {
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .offer-header {
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .offer-header.closed {
+            background-color: #6c757d;
+        }
+        .offer-header h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .offer-header span {
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .offer-body {
+            padding: 15px;
+        }
+        .offer-body p {
+            margin: 0;
+            color: #333;
+        }
+        .offer-footer {
+            padding: 10px 15px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .offer-footer button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .offer-footer button.disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="offer">
+    <div class="offer-header">
+     <h2>
+      Offer 1
+     </h2>
+     <span>
+      Open
+     </span>
+    </div>
+    <div class="offer-body">
+     <p>
+      Details about offer 1...
+     </p>
+    </div>
+    <div class="offer-footer">
+     <button>
+      Place Bid
+     </button>
+     <span>
+      Ends in: 2 days
+     </span>
+    </div>
+   </div>
+   <div class="offer">
+    <div class="offer-header closed">
+     <h2>
+      Offer 2
+     </h2>
+     <span>
+      Closed
+     </span>
+    </div>
+    <div class="offer-body">
+     <p>
+      Details about offer 2...
+     </p>
+    </div>
+    <div class="offer-footer">
+     <button class="disabled" disabled="">
+      Place Bid
+     </button>
+     <span>
+      Ended
+     </span>
+    </div>
+   </div>
+   <div class="offer">
+    <div class="offer-header">
+     <h2>
+      Offer 3
+     </h2>
+     <span>
+      Open
+     </span>
+    </div>
+    <div class="offer-body">
+     <p>
+      Details about offer 3...
+     </p>
+    </div>
+    <div class="offer-footer">
+     <button>
+      Place Bid
+     </button>
+     <span>
+      Ends in: 5 hours
+     </span>
+    </div>
+   </div>
+   <div class="offer">
+    <div class="offer-header closed">
+     <h2>
+      Offer 4
+     </h2>
+     <span>
+      Closed
+     </span>
+    </div>
+    <div class="offer-body">
+     <p>
+      Details about offer 4...
+     </p>
+    </div>
+    <div class="offer-footer">
+     <button class="disabled" disabled="">
+      Place Bid
+     </button>
+     <span>
+      Ended
+     </span>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

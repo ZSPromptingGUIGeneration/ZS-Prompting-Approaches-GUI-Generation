@@ -1,0 +1,148 @@
+<!-- Start -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Player App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header, .footer {
+            flex: 0 0 auto;
+        }
+        .main-content {
+            flex: 1 1 auto;
+            overflow-y: auto;
+        }
+        .now-playing {
+            position: fixed;
+            bottom: 56px;
+            width: 100%;
+            background: #fff;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+        }
+        .now-playing img {
+            width: 60px;
+            height: 60px;
+            border-radius: 4px;
+        }
+        .now-playing .details {
+            flex: 1;
+            margin-left: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <nav class="header">
+   <div class="nav-wrapper">
+    <form>
+     <div class="input-field">
+      <input id="search" required="" type="search"/>
+      <label class="label-icon" for="search">
+       <i class="material-icons">
+        search
+       </i>
+      </label>
+      <i class="material-icons">
+       close
+      </i>
+     </div>
+    </form>
+   </div>
+  </nav>
+  <!-- Main Content -->
+  <div class="main-content container">
+   <div class="row">
+    <!-- Example Playlist/Library Section -->
+    <div class="col s4">
+     <div class="card">
+      <div class="card-image">
+       <img alt="Album Art" src=""/>
+       <span class="card-title">
+        Album 1
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="col s4">
+     <div class="card">
+      <div class="card-image">
+       <img alt="Album Art" src=""/>
+       <span class="card-title">
+        Album 2
+       </span>
+      </div>
+     </div>
+    </div>
+    <!-- Add more albums as needed -->
+   </div>
+  </div>
+  <!-- Now Playing Section -->
+  <div class="now-playing row valign-wrapper">
+   <div class="col s2">
+    <img alt="Album Art" src=""/>
+   </div>
+   <div class="col s8 details">
+    <div>
+     Song Title
+    </div>
+    <div>
+     Artist Name
+    </div>
+   </div>
+   <div class="col s2">
+    <i class="material-icons">
+     play_arrow
+    </i>
+   </div>
+  </div>
+  <!-- Footer -->
+  <div class="footer">
+   <nav class="nav-extended">
+    <div class="nav-content">
+     <ul class="tabs tabs-transparent">
+      <li class="tab">
+       <a href="#home">
+        <i class="material-icons">
+         home
+        </i>
+       </a>
+      </li>
+      <li class="tab">
+       <a href="#search">
+        <i class="material-icons">
+         search
+        </i>
+       </a>
+      </li>
+      <li class="tab">
+       <a href="#library">
+        <i class="material-icons">
+         library_music
+        </i>
+       </a>
+      </li>
+      <li class="tab">
+       <a href="#settings">
+        <i class="material-icons">
+         settings
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </div>
+ </body>
+</html>
+<!-- End -->

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Search
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+        .header input[type="search"] {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .header .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 20px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .tags .tag {
+            background-color: #f1f1f1;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .categories {
+            padding: 20px;
+        }
+        .category {
+            margin-bottom: 20px;
+            position: relative;
+            color: white;
+        }
+        .category img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .category .title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .category .recipes {
+            display: flex;
+            overflow-x: scroll;
+            padding: 10px 0;
+        }
+        .category .recipe {
+            background-color: white;
+            border-radius: 10px;
+            margin-right: 10px;
+            width: 150px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .category .recipe img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .category .recipe .title {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .category .recipe .time {
+            color: #888;
+            font-size: 14px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer .icon {
+            font-size: 20px;
+            color: #888;
+        }
+        .footer .icon.active {
+            color: #e74c3c;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Search
+   </h1>
+   <input placeholder="Search with recipe or ingredient..." type="search"/>
+   <span class="search-icon">
+    🔍
+   </span>
+  </div>
+  <div class="tags">
+   <div class="tag">
+    meat
+   </div>
+   <div class="tag">
+    fish &amp; seafood
+   </div>
+   <div class="tag">
+    dairy-free
+   </div>
+   <div class="tag">
+    vegetarian
+   </div>
+   <div class="tag">
+    vegan
+   </div>
+   <div class="tag">
+    gluten-free
+   </div>
+   <div class="tag">
+    Spicy
+   </div>
+   <div class="tag">
+    Spicy Chicken Stew
+   </div>
+   <div class="tag">
+    Cold ramen
+   </div>
+   <div class="tag">
+    Boostup dish
+   </div>
+   <div class="tag">
+    Spam mayo
+   </div>
+   <div class="tag">
+    Hot summer
+   </div>
+  </div>
+  <div class="categories">
+   <div class="category">
+    <img alt="Daily Picks" src=""/>
+    <div class="title">
+     Daily Picks
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Yummies for U" src=""/>
+    <div class="title">
+     Yummies for U
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Hottest" src=""/>
+    <div class="title">
+     Hottest
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Aid for Clumsy Cook" src=""/>
+    <div class="title">
+     Aid for Clumsy Cook
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Speedy &amp; Simple" src=""/>
+    <div class="title">
+     Speedy &amp; Simple
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Frying Peaks" src=""/>
+    <div class="title">
+     Frying Peaks
+    </div>
+    <div class="recipes">
+     <div class="recipe">
+      <img alt="Recipe Image" src=""/>
+      <div class="title">
+       Paleo Gran...
+      </div>
+      <div class="time">
+       25 Min
+      </div>
+     </div>
+     <div class="recipe">
+      <img alt="Recipe Image" src=""/>
+      <div class="title">
+       Paleo Pal...
+      </div>
+      <div class="time">
+       510 Min
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Paleo" src=""/>
+    <div class="title">
+     Paleo
+    </div>
+    <div class="recipes">
+     <div class="recipe">
+      <img alt="Recipe Image" src=""/>
+      <div class="title">
+       Paleo Gran...
+      </div>
+      <div class="time">
+       25 Min
+      </div>
+     </div>
+     <div class="recipe">
+      <img alt="Recipe Image" src=""/>
+      <div class="title">
+       Paleo Pal...
+      </div>
+      <div class="time">
+       510 Min
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="category">
+    <img alt="Mexican Recipes" src=""/>
+    <div class="title">
+     Mexican Recipes
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <div class="icon">
+    🍴
+   </div>
+   <div class="icon">
+    📺
+   </div>
+   <div class="icon active">
+    🔍
+   </div>
+   <div class="icon">
+    ❤
+   </div>
+   <div class="icon">
+    👤
+   </div>
+  </div>
+ </body>
+</html>

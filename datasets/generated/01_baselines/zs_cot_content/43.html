@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Weather App
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Weather App
+   </h1>
+  </header>
+  <main>
+   <section class="video-container">
+    <article class="video-item">
+     <img alt="Sunny Weather Video" class="thumbnail" id="image1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/933268ca-5ce0-4eb7-9ebf-855d1a6fd9c2.png"/>
+     <h2>
+      Sunny Weather Forecast
+     </h2>
+     <p>
+      Get the latest updates on sunny weather conditions in your area.
+     </p>
+    </article>
+    <article class="video-item">
+     <img alt="Rainy Weather Video" class="thumbnail" id="image2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/464a710b-ea85-4013-9fa9-5464b01c5690.png"/>
+     <h2>
+      Rainy Weather Forecast
+     </h2>
+     <p>
+      Detailed analysis and predictions for upcoming rainy weather.
+     </p>
+    </article>
+    <article class="video-item">
+     <img alt="Snowy Weather Video" class="thumbnail" id="image3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f88232b9-82e3-4068-8e82-3915a252084c.png"/>
+     <h2>
+      Snowy Weather Forecast
+     </h2>
+     <p>
+      Stay updated with the latest snowy weather forecasts and alerts.
+     </p>
+    </article>
+    <article class="video-item">
+     <img alt="Stormy Weather Video" class="thumbnail" id="image4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/eb3af3cb-93f8-436b-be17-b8efb47fe7a5.png"/>
+     <h2>
+      Stormy Weather Forecast
+     </h2>
+     <p>
+      Find out about upcoming stormy weather and how to stay safe.
+     </p>
+    </article>
+   </section>
+  </main>
+ </body>
+</html>
+<style>
+ /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 1rem;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.video-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+.video-item h2 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.video-item p {
+    padding: 0 1rem 1rem;
+    font-size: 1rem;
+    color: #666;
+}
+</style>

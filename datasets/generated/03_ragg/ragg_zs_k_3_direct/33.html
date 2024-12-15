@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Local Marketplace
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #6200ea;
+            color: white;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .categories button {
+            padding: 10px;
+            border: none;
+            background-color: #6200ea;
+            color: white;
+            border-radius: 5px;
+        }
+        .item-list {
+            padding: 20px;
+        }
+        .item {
+            background-color: #fff;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .item-info {
+            padding: 10px 0;
+        }
+        .item-info h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .item-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .item-info .price {
+            color: #6200ea;
+            font-weight: bold;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Local Marketplace
+   </h1>
+  </header>
+  <div class="search-bar">
+   <input placeholder="Search items..." type="text"/>
+   <button>
+    Search
+   </button>
+  </div>
+  <div class="categories">
+   <button>
+    Electronics
+   </button>
+   <button>
+    Furniture
+   </button>
+   <button>
+    Clothing
+   </button>
+   <button>
+    Toys
+   </button>
+  </div>
+  <div class="item-list">
+   <div class="item">
+    <img alt="Item 1" src=""/>
+    <div class="item-info">
+     <h3>
+      Item 1
+     </h3>
+     <p>
+      Location: City A
+     </p>
+     <p class="price">
+      $100
+     </p>
+    </div>
+   </div>
+   <div class="item">
+    <img alt="Item 2" src=""/>
+    <div class="item-info">
+     <h3>
+      Item 2
+     </h3>
+     <p>
+      Location: City B
+     </p>
+     <p class="price">
+      $200
+     </p>
+    </div>
+   </div>
+   <div class="item">
+    <img alt="Item 3" src=""/>
+    <div class="item-info">
+     <h3>
+      Item 3
+     </h3>
+     <p>
+      Location: City C
+     </p>
+     <p class="price">
+      $150
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

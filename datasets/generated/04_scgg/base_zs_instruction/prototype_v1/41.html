@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   User Profile
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .profile-header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+        .profile-header h1 {
+            margin: 10px 0 5px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .profile-header p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .profile-header .edit-profile {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .profile-header .banner {
+            background-image: url('https://via.placeholder.com/800x200');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            margin-bottom: -100px;
+        }
+        .profile-content {
+            padding: 20px;
+        }
+        .profile-content h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        .profile-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .profile-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .profile-content ul li {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .profile-content ul li h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .profile-content ul li p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .profile-content ul li .timestamp {
+            font-size: 12px;
+            color: #777;
+            margin-top: 5px;
+        }
+        .contact-info, .friends-list, .photo-gallery, .activity-feed, .profile-stats, .interests-hobbies {
+            margin-bottom: 30px;
+        }
+        .contact-info a, .friends-list a, .photo-gallery a, .activity-feed a, .profile-stats a, .interests-hobbies a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .contact-info ul, .friends-list ul, .photo-gallery ul, .activity-feed ul, .profile-stats ul, .interests-hobbies ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .contact-info ul li, .friends-list ul li, .photo-gallery ul li, .activity-feed ul li, .profile-stats ul li, .interests-hobbies ul li {
+            flex: 1 1 45%;
+            margin: 10px;
+        }
+        .profile-stats ul li {
+            text-align: center;
+        }
+        .profile-stats ul li span {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .profile-stats ul li p {
+            margin: 0;
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .profile-header {
+                padding: 20px;
+            }
+            .profile-header img {
+                width: 100px;
+                height: 100px;
+            }
+            .profile-header h1 {
+                font-size: 24px;
+            }
+            .profile-header p {
+                font-size: 16px;
+            }
+            .profile-content {
+                padding: 15px;
+            }
+            .profile-content h2 {
+                font-size: 20px;
+            }
+            .profile-content ul li {
+                padding: 10px;
+            }
+            .profile-content ul li h3 {
+                font-size: 16px;
+            }
+            .profile-content ul li p {
+                font-size: 14px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="profile-header">
+   <div class="banner">
+   </div>
+   <img alt="Profile Picture" src=""/>
+   <h1>
+    John Doe
+   </h1>
+   <p>
+    @johndoe
+   </p>
+   <a class="edit-profile" href="#">
+    Edit Profile
+   </a>
+  </div>
+  <div class="profile-content">
+   <div class="profile-stats">
+    <ul>
+     <li>
+      <span>
+       120
+      </span>
+      <p>
+       Posts
+      </p>
+     </li>
+     <li>
+      <span>
+       350
+      </span>
+      <p>
+       Followers
+      </p>
+     </li>
+     <li>
+      <span>
+       180
+      </span>
+      <p>
+       Likes
+      </p>
+     </li>
+    </ul>
+   </div>
+   <div class="about-me">
+    <h2>
+     About Me
+    </h2>
+    <p>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien nec sapien vehicula condimentum.
+    </p>
+   </div>
+   <div class="contact-info">
+    <h2>
+     Contact Information
+    </h2>
+    <ul>
+     <li>
+      <a href="mailto:johndoe@example.com">
+       johndoe@example.com
+      </a>
+     </li>
+     <li>
+      <a href="tel:+1234567890">
+       +123 456 7890
+      </a>
+     </li>
+     <li>
+      <a href="https://twitter.com/johndoe" target="_blank">
+       Twitter
+      </a>
+     </li>
+     <li>
+      <a href="https://linkedin.com/in/johndoe" target="_blank">
+       LinkedIn
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="friends-list">
+    <h2>
+     Friends/Followers
+    </h2>
+    <ul>
+     <li>
+      <a href="#">
+       Friend 1
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Friend 2
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Friend 3
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Friend 4
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="photo-gallery">
+    <h2>
+     Photo Gallery
+    </h2>
+    <ul>
+     <li>
+      <a href="#">
+       <img alt="Photo 1" src=""/>
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       <img alt="Photo 2" src=""/>
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       <img alt="Photo 3" src=""/>
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       <img alt="Photo 4" src=""/>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="activity-feed">
+    <h2>
+     Activity Feed
+    </h2>
+    <ul>
+     <li>
+      <a href="#">
+       Liked a post
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Commented on a photo
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Started following Jane
+      </a>
+     </li>
+     <li>
+      <a href="#">
+       Updated profile picture
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="interests-hobbies">
+    <h2>
+     Interests and Hobbies
+    </h2>
+    <ul>
+     <li>
+      Reading
+     </li>
+     <li>
+      Traveling
+     </li>
+     <li>
+      Photography
+     </li>
+     <li>
+      Cooking
+     </li>
+    </ul>
+   </div>
+   <div class="recent-posts">
+    <h2>
+     Recent Posts
+    </h2>
+    <ul>
+     <li>
+      <h3>
+       Post Title 1
+      </h3>
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="timestamp">
+       Posted on January 1, 2023
+      </p>
+     </li>
+     <li>
+      <h3>
+       Post Title 2
+      </h3>
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="timestamp">
+       Posted on February 1, 2023
+      </p>
+     </li>
+     <li>
+      <h3>
+       Post Title 3
+      </h3>
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="timestamp">
+       Posted on March 1, 2023
+      </p>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </body>
+</html>

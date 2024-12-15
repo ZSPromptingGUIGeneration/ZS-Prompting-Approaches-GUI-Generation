@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Alarm App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1E88E5;
+            padding: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #1E88E5;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .tab.active {
+            border-bottom: 2px solid #fff;
+        }
+        .alarm-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .alarm-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #333;
+        }
+        .alarm-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .alarm-item div {
+            display: flex;
+            align-items: center;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #1E88E5;
+            padding: 10px;
+        }
+        .footer button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .footer button:focus {
+            outline: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Alarm App
+    </h1>
+    <button>
+     ✓
+    </button>
+   </div>
+   <div class="tabs">
+    <div class="tab active">
+     alarms
+    </div>
+    <div class="tab">
+     contacts
+    </div>
+   </div>
+   <ul class="alarm-list">
+    <li class="alarm-item">
+     <div>
+      <input type="checkbox"/>
+      <span>
+       Old Car Horn.mp3
+      </span>
+     </div>
+     <div>
+      <button>
+       ☰
+      </button>
+      <button>
+       ⋮
+      </button>
+     </div>
+    </li>
+    <li class="alarm-item">
+     <div>
+      <input checked="" type="checkbox"/>
+      <span>
+       Rim Shot.mp3
+      </span>
+     </div>
+     <div>
+      <button>
+       ☰
+      </button>
+      <button>
+       ⋮
+      </button>
+     </div>
+    </li>
+    <li class="alarm-item">
+     <div>
+      <input type="checkbox"/>
+      <span>
+       Uh Oh.mp3
+      </span>
+     </div>
+     <div>
+      <button>
+       ☰
+      </button>
+      <button>
+       ⋮
+      </button>
+     </div>
+    </li>
+   </ul>
+   <div class="footer">
+    <button>
+     ↑
+    </button>
+    <button>
+     ↓
+    </button>
+    <button>
+     ⏩
+    </button>
+    <button>
+     +
+    </button>
+    <button>
+     🗑
+    </button>
+    <button>
+     ▶
+    </button>
+    <button>
+     ⋮
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

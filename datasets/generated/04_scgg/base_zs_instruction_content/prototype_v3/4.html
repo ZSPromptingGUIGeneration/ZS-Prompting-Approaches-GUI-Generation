@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Alarm App
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            color: #00796b;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .audio-list, .repeat-options {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .audio-item {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f1f8e9;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .audio-name {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .audio-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .audio-controls button {
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .audio-controls button:disabled {
+            background-color: #ccc;
+        }
+        .audio-controls button:not(:last-child) {
+            margin-right: 8px;
+        }
+        .audio-controls button:hover {
+            background-color: #004d40;
+        }
+        .audio-controls input[type="range"] {
+            margin-right: 8px;
+        }
+        .audio-controls button[aria-label="Download"]:before {
+            content: "⬇️";
+            margin-right: 5px;
+        }
+        .audio-controls button[aria-label="Play"]:before {
+            content: "▶️";
+            margin-right: 5px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #00796b;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .alarm-schedule {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .alarm-schedule label {
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+        .alarm-schedule input[type="time"],
+        .alarm-schedule select,
+        .alarm-schedule input[type="text"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .repeat-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .repeat-options label {
+            font-size: 14px;
+            color: #333;
+        }
+        .repeat-options input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .custom-audio-upload {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .custom-audio-upload label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .custom-audio-upload input[type="file"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .custom-audio-upload button {
+            margin-top: 10px;
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .custom-audio-upload button:hover {
+            background-color: #004d40;
+        }
+        .snooze-options {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .snooze-options label {
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+        .snooze-options input[type="number"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Alarm App
+   </h1>
+   <div class="alarm-schedule">
+    <label for="alarm-time">
+     Set Alarm Time:
+    </label>
+    <input id="alarm-time" placeholder="HH:MM" type="time"/>
+    <label for="alarm-label">
+     Alarm Label:
+    </label>
+    <input id="alarm-label" placeholder="Morning Workout Alarm" type="text"/>
+    <label for="alarm-audio">
+     Select Alarm Sound:
+    </label>
+    <select id="alarm-audio">
+     <option value="audio1">
+      Morning Birds
+     </option>
+     <option value="audio2">
+      Ocean Waves
+     </option>
+     <option value="audio3">
+      Soft Piano
+     </option>
+    </select>
+   </div>
+   <ul class="repeat-options">
+    <li>
+     <label>
+      <input type="checkbox"/>
+      Mon
+     </label>
+    </li>
+    <li>
+     <label>
+      <input type="checkbox"/>
+      Tue
+     </label>
+    </li>
+    <li>
+     <label>
+      <input type="checkbox"/>
+      Wed
+     </label>
+    </li>
+    <li>
+     <label>
+      <input type="checkbox"/>
+      Thu
+     </label>
+    </li>
+    <li>
+     <label>
+      <input type="checkbox"/>
+      Fri
+     </label>
+    </li>
+    <li>
+     <label>
+      <input type="checkbox"/>
+      Sat
+     </label>
+    </li>
+    <li>
+     <label>
+      <input type="checkbox"/>
+      Sun
+     </label>
+    </li>
+   </ul>
+   <div class="snooze-options">
+    <label for="snooze-duration">
+     Snooze Duration (minutes):
+    </label>
+    <input id="snooze-duration" max="60" min="1" type="number" value="10"/>
+   </div>
+   <div class="custom-audio-upload">
+    <label for="custom-audio">
+     Upload Custom Audio:
+    </label>
+    <input id="custom-audio" type="file"/>
+    <button id="preview-custom-audio">
+     Preview Custom Audio
+    </button>
+   </div>
+   <ul class="audio-list">
+    <li class="audio-item">
+     <span class="audio-name">
+      Morning Birds
+     </span>
+     <div class="audio-controls">
+      <button aria-label="Download" onclick="downloadAudio('morning_birds.mp3')">
+       Download
+      </button>
+      <button aria-label="Play" onclick="playAudio('morning_birds')">
+       Play
+      </button>
+      <input aria-label="Volume" max="1" min="0" step="0.1" type="range" value="0.5"/>
+      <audio id="morning_birds" src="morning_birds.mp3">
+      </audio>
+     </div>
+    </li>
+    <li class="audio-item">
+     <span class="audio-name">
+      Ocean Waves
+     </span>
+     <div class="audio-controls">
+      <button aria-label="Download" onclick="downloadAudio('ocean_waves.mp3')">
+       Download
+      </button>
+      <button aria-label="Play" onclick="playAudio('ocean_waves')">
+       Play
+      </button>
+      <input aria-label="Volume" max="1" min="0" step="0.1" type="range" value="0.5"/>
+      <audio id="ocean_waves" src="ocean_waves.mp3">
+      </audio>
+     </div>
+    </li>
+    <li class="audio-item">
+     <span class="audio-name">
+      Soft Piano
+     </span>
+     <div class="audio-controls">
+      <button aria-label="Download" onclick="downloadAudio('soft_piano.mp3')">
+       Download
+      </button>
+      <button aria-label="Play" onclick="playAudio('soft_piano')">
+       Play
+      </button>
+      <input aria-label="Volume" max="1" min="0" step="0.1" type="range" value="0.5"/>
+      <audio id="soft_piano" src="soft_piano.mp3">
+      </audio>
+     </div>
+    </li>
+    <li class="audio-item">
+     <span class="audio-name">
+      Rain Drops
+     </span>
+     <div class="audio-controls">
+      <button aria-label="Download" onclick="downloadAudio('rain_drops.mp3')">
+       Download
+      </button>
+      <button aria-label="Play" onclick="playAudio('rain_drops')">
+       Play
+      </button>
+      <input aria-label="Volume" max="1" min="0" step="0.1" type="range" value="0.5"/>
+      <audio id="rain_drops" src="rain_drops.mp3">
+      </audio>
+     </div>
+    </li>
+   </ul>
+   <div class="footer">
+    <p>
+     Alarm App v1.0 |
+     <a href="#">
+      Contact Us
+     </a>
+     |
+     <a href="#">
+      Help
+     </a>
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

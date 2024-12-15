@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Language Learning App
+  </title>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header img {
+            width: 40px;
+            height: 40px;
+        }
+        .header .language-toggle {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .phrase-card {
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .phrase-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #4CAF50;
+        }
+        .phrase-card p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .phrase-card .actions {
+            display: flex;
+            align-items: center;
+        }
+        .phrase-card .actions button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .phrase-card .actions button img {
+            width: 24px;
+            height: 24px;
+        }
+        .category {
+            font-size: 20px;
+            margin: 20px 0 10px 0;
+            color: #4CAF50;
+        }
+        .progress-bar {
+            margin: 20px 0;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar div {
+            height: 10px;
+            width: 50%;
+            background-color: #4CAF50;
+        }
+        .feedback {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .feedback textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .feedback button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header h1 {
+                margin-bottom: 10px;
+            }
+            .header .language-toggle {
+                margin-top: 10px;
+            }
+            .search-bar input {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <img alt="App Logo" src=""/>
+    <h1>
+     Common Spanish Phrases
+    </h1>
+    <button class="language-toggle">
+     EN/ES
+    </button>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Search phrases..." type="text"/>
+   </div>
+   <div class="progress-bar">
+    <div>
+    </div>
+   </div>
+   <div class="category">
+    Greetings
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Hola
+     </h3>
+     <p>
+      Hello
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      ¿Cómo estás?
+     </h3>
+     <p>
+      How are you?
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Gracias
+     </h3>
+     <p>
+      Thank you
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Por favor
+     </h3>
+     <p>
+      Please
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Buenos días
+     </h3>
+     <p>
+      Good morning
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="phrase-card">
+    <div>
+     <h3>
+      Buenas noches
+     </h3>
+     <p>
+      Good night
+     </p>
+    </div>
+    <div class="actions">
+     <button>
+      <img alt="Play Audio" src=""/>
+     </button>
+     <button>
+      <img alt="Favorite" src=""/>
+     </button>
+    </div>
+   </div>
+   <div class="feedback">
+    <textarea placeholder="Leave your feedback..."></textarea>
+    <button>
+     Submit
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

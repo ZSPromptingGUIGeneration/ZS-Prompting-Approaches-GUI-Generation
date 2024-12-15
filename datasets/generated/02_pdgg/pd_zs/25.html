@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe Search Page
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            padding: 5px 10px;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-bar .icon {
+            font-size: 20px;
+            color: #888;
+        }
+
+        .category-filters {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 20px;
+            background-color: #fff;
+            margin-top: 60px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-filters .filter {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            margin-right: 10px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .category-filters .filter.active {
+            background-color: #ff6347;
+            color: #fff;
+        }
+
+        .category-filters .filter .icon {
+            margin-right: 5px;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .recipe-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .recipe-card .info {
+            padding: 10px;
+        }
+
+        .recipe-card .info .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .recipe-card .info .description {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .recipe-card .info .nutritional-info {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .recipe-card .favorite {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ff6347;
+            cursor: pointer;
+        }
+
+        .sorting-options {
+            padding: 10px 20px;
+            background-color: #fff;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sorting-options select {
+            padding: 5px 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="search-bar">
+    <input placeholder="Search for recipes or ingredients..." type="text"/>
+    <span class="icon">
+     🔍
+    </span>
+   </div>
+  </header>
+  <div class="category-filters">
+   <div class="filter active">
+    <span class="icon">
+     🍳
+    </span>
+    Breakfast
+   </div>
+   <div class="filter">
+    <span class="icon">
+     🍔
+    </span>
+    Lunch
+   </div>
+   <div class="filter">
+    <span class="icon">
+     🍕
+    </span>
+    Dinner
+   </div>
+   <div class="filter">
+    <span class="icon">
+     🥗
+    </span>
+    Vegetarian
+   </div>
+   <div class="filter">
+    <span class="icon">
+     🌱
+    </span>
+    Vegan
+   </div>
+   <div class="filter">
+    <span class="icon">
+     🍪
+    </span>
+    Snacks
+   </div>
+   <div class="filter">
+    <span class="icon">
+     🚫
+    </span>
+    Gluten-Free
+   </div>
+  </div>
+  <div class="sorting-options">
+   <label for="sort">
+    Sort by:
+   </label>
+   <select id="sort">
+    <option value="relevance">
+     Relevance
+    </option>
+    <option value="popularity">
+     Popularity
+    </option>
+    <option value="time">
+     Preparation Time
+    </option>
+    <option value="diet">
+     Dietary Preferences
+    </option>
+   </select>
+  </div>
+  <div class="recipe-grid">
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="info">
+     <h3 class="title">
+      Recipe Title
+     </h3>
+     <p class="description">
+      Brief description of the recipe.
+     </p>
+     <p class="nutritional-info">
+      Calories: 200
+     </p>
+    </div>
+    <div class="favorite">
+     ❤️
+    </div>
+   </div>
+   <!-- Repeat recipe-card for more recipes -->
+  </div>
+ </body>
+</html>

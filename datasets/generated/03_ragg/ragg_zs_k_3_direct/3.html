@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Organisational App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #d32f2f;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 50px;
+            z-index: 999;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .nav-bar a.active {
+            border-bottom: 2px solid white;
+        }
+
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        .grocery-list,
+        .recipes {
+            margin-bottom: 20px;
+        }
+
+        .grocery-list h2,
+        .recipes h2 {
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+
+        .grocery-list ul,
+        .recipes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .grocery-list ul li,
+        .recipes ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        .grocery-list ul li img,
+        .recipes ul li img {
+            margin-right: 10px;
+        }
+
+        .add-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .categories div {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .categories div img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .categories div span {
+            vertical-align: middle;
+        }
+
+        .footer {
+            background-color: #8bc34a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Logo" src="" width="30"/>
+   Organisational App
+  </div>
+  <div class="nav-bar">
+   <a class="active" href="#grocery-list">
+    Grocery List
+   </a>
+   <a href="#recipes">
+    Recipes
+   </a>
+  </div>
+  <div class="content">
+   <div class="grocery-list" id="grocery-list">
+    <h2>
+     Grocery List
+    </h2>
+    <div class="categories">
+     <div>
+      <img alt="Vegetables" src="" width="30"/>
+      <span>
+       Vegetables
+      </span>
+     </div>
+     <div>
+      <img alt="Fruits" src="" width="30"/>
+      <span>
+       Fruits
+      </span>
+     </div>
+     <div>
+      <img alt="Dairy &amp; Eggs" src="" width="30"/>
+      <span>
+       Dairy &amp; Eggs
+      </span>
+     </div>
+     <div>
+      <img alt="Meats" src="" width="30"/>
+      <span>
+       Meats
+      </span>
+     </div>
+     <div>
+      <img alt="Seafood" src="" width="30"/>
+      <span>
+       Seafood
+      </span>
+     </div>
+     <div>
+      <img alt="Cereal &amp; Breakfast Foods" src="" width="30"/>
+      <span>
+       Cereal &amp; Breakfast Foods
+      </span>
+     </div>
+     <div>
+      <img alt="Frozen Foods &amp; Ice Cream" src="" width="30"/>
+      <span>
+       Frozen Foods &amp; Ice Cream
+      </span>
+     </div>
+     <div>
+      <img alt="Beverages" src="" width="30"/>
+      <span>
+       Beverages
+      </span>
+     </div>
+     <div>
+      <img alt="Bread &amp; Bakery" src="" width="30"/>
+      <span>
+       Bread &amp; Bakery
+      </span>
+     </div>
+    </div>
+    <ul>
+     <li>
+      <img alt="Bread" src="" width="30"/>
+      Honey wheat berry bread
+     </li>
+    </ul>
+   </div>
+   <div class="recipes" id="recipes">
+    <h2>
+     Recipes
+    </h2>
+    <ul>
+     <li>
+      <img alt="All Recipes" src="" width="30"/>
+      All (1 recipe)
+     </li>
+     <li>
+      <img alt="Added" src="" width="30"/>
+      Added (0 recipes)
+     </li>
+     <li>
+      <img alt="Favorites" src="" width="30"/>
+      Favorites (1 recipe)
+     </li>
+     <li>
+      <img alt="Try" src="" width="30"/>
+      Try (1 recipe)
+     </li>
+    </ul>
+   </div>
+  </div>
+  <button class="add-button">
+   +
+  </button>
+  <div class="footer">
+   My Shopping List
+  </div>
+ </body>
+</html>

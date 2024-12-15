@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Mobile Organizational App
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Navigation Menu */
+        .hamburger-icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+        }
+
+        .drawer {
+            width: 250px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            left: -250px;
+            transition: left 0.3s ease;
+        }
+
+        .drawer.open {
+            left: 0;
+        }
+
+        .drawer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .drawer ul li {
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .drawer ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Floating Action Button */
+        .fab {
+            width: 56px;
+            height: 56px;
+            background-color: #6200ea;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            width: calc(100% - 30px);
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Category Filters */
+        .chips {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+        .chip {
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 50px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        /* Grocery List */
+        .grocery-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .grocery-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+            margin: 5px 15px;
+            border-radius: 5px;
+        }
+
+        .grocery-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Recipe List */
+        .recipe-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .recipe-card {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+            margin: 5px 15px;
+            border-radius: 5px;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .recipe-card h3 {
+            margin: 10px 0 0 0;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Navigation Menu -->
+  <i class="fas fa-bars hamburger-icon" onclick="toggleDrawer()">
+  </i>
+  <div class="drawer" id="drawer">
+   <ul>
+    <li>
+     <a href="#">
+      Grocery List
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Recipes
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Profile
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Settings
+     </a>
+    </li>
+   </ul>
+  </div>
+  <!-- Home Screen/Dashboard -->
+  <div class="fab" onclick="addNewItem()">
+   +
+  </div>
+  <!-- Grocery List Feature -->
+  <input class="search-bar" placeholder="Search Grocery Items" type="text"/>
+  <div class="chips">
+   <div class="chip">
+    Dairy
+   </div>
+   <div class="chip">
+    Vegetables
+   </div>
+   <div class="chip">
+    Fruits
+   </div>
+   <div class="chip">
+    Meat
+   </div>
+   <div class="chip">
+    Bakery
+   </div>
+  </div>
+  <ul class="grocery-list">
+   <li class="grocery-item">
+    <input type="checkbox"/>
+    <span>
+     Milk
+    </span>
+   </li>
+   <li class="grocery-item">
+    <input type="checkbox"/>
+    <span>
+     Eggs
+    </span>
+   </li>
+   <li class="grocery-item">
+    <input type="checkbox"/>
+    <span>
+     Bread
+    </span>
+   </li>
+   <li class="grocery-item">
+    <input type="checkbox"/>
+    <span>
+     Butter
+    </span>
+   </li>
+   <li class="grocery-item">
+    <input type="checkbox"/>
+    <span>
+     Carrots
+    </span>
+   </li>
+  </ul>
+  <!-- Recipe Saving Feature -->
+  <input class="search-bar" placeholder="Search Recipes" type="text"/>
+  <div class="chips">
+   <div class="chip">
+    Breakfast
+   </div>
+   <div class="chip">
+    Lunch
+   </div>
+   <div class="chip">
+    Dinner
+   </div>
+   <div class="chip">
+    Dessert
+   </div>
+   <div class="chip">
+    Snacks
+   </div>
+  </div>
+  <ul class="recipe-list">
+   <li class="recipe-card">
+    <img alt="A delicious breakfast dish" id="recipe-img-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/7c497cbe-4ac1-4fbd-a8b3-40b4f34975eb.png"/>
+    <h3>
+     Pancakes with Maple Syrup
+    </h3>
+   </li>
+   <li class="recipe-card">
+    <img alt="A healthy lunch salad" id="recipe-img-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f4186578-4ee4-4467-a00e-099b9fc4abf9.png"/>
+    <h3>
+     Quinoa Salad
+    </h3>
+   </li>
+   <li class="recipe-card">
+    <img alt="A hearty dinner meal" id="recipe-img-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/fcd24ea0-28d3-4816-8435-ed268413f7db.png"/>
+    <h3>
+     Grilled Chicken with Vegetables
+    </h3>
+   </li>
+   <li class="recipe-card">
+    <img alt="A sweet dessert treat" id="recipe-img-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/74f16582-8104-40a7-acca-4c32d773c293.png"/>
+    <h3>
+     Chocolate Brownies
+    </h3>
+   </li>
+   <li class="recipe-card">
+    <img alt="A tasty snack" id="recipe-img-5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/f9abe4a0-ac4c-469e-9917-1f5b203e6bca.png"/>
+    <h3>
+     Fruit Smoothie
+    </h3>
+   </li>
+  </ul>
+  <script>
+   function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
+        }
+
+        function addNewItem() {
+            alert('Add new item');
+        }
+  </script>
+ </body>
+</html>

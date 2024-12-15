@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shopping App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #3b5998;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+        .header img {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .header .back {
+            left: 10px;
+        }
+        .header .cart {
+            right: 10px;
+        }
+        .deal-banner {
+            background-color: #e0f7fa;
+            padding: 10px;
+            text-align: center;
+            color: #00796b;
+        }
+        .deal-banner a {
+            color: #00796b;
+            text-decoration: underline;
+        }
+        .content {
+            padding: 10px;
+        }
+        .content .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .content .details {
+            font-size: 14px;
+            color: #757575;
+        }
+        .content .learn-more {
+            color: #3b5998;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .product {
+            background-color: white;
+            margin: 10px 0;
+            width: 48%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product .info {
+            padding: 10px;
+        }
+        .product .info .name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .product .info .price {
+            font-size: 16px;
+            color: #e53935;
+            font-weight: bold;
+        }
+        .product .info .original-price {
+            font-size: 12px;
+            color: #757575;
+            text-decoration: line-through;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Back" class="back" src=""/>
+   <span>
+    Really Nice Rugs, Extremely Low Prices
+   </span>
+   <img alt="Cart" class="cart" src=""/>
+  </div>
+  <div class="deal-banner">
+   <span>
+    Grab a sweet deal! Items with the gift box arrive by Christmas.
+    <a href="#">
+     details
+    </a>
+   </span>
+  </div>
+  <div class="content">
+   <div class="title">
+    Really Nice Rugs, Extremely Low Prices
+   </div>
+   <div class="details">
+    Ends at Thu 12/08 at 6am pt
+   </div>
+   <div class="learn-more">
+    learn more
+   </div>
+   <div class="product-list">
+    <div class="product">
+     <img alt="Light Blue &amp; Beige Asher Rug" src=""/>
+     <div class="info">
+      <div class="name">
+       Light Blue &amp; Beige Asher Rug
+      </div>
+      <div class="price">
+       $59.99
+      </div>
+      <div class="original-price">
+       $207.96
+      </div>
+     </div>
+    </div>
+    <div class="product">
+     <img alt="Cream Inspired India Rug" src=""/>
+     <div class="info">
+      <div class="name">
+       Cream Inspired India Rug
+      </div>
+      <div class="price">
+       $139.99
+      </div>
+      <div class="original-price">
+       $350.00
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

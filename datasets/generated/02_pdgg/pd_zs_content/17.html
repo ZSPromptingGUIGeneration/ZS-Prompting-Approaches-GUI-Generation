@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Mobile Music Player
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #6200ea;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 5px 10px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            padding: 5px;
+        }
+
+        .search-bar .icon {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        .now-playing-bar {
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .now-playing-bar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        .now-playing-info {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .now-playing-info .title {
+            font-weight: bold;
+        }
+
+        .now-playing-controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .now-playing-controls .btn {
+            background-color: #6200ea;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        .nav-menu .nav-item {
+            text-align: center;
+            color: #6200ea;
+            cursor: pointer;
+        }
+
+        .nav-menu .nav-item.active {
+            color: #000;
+        }
+
+        .full-player {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            z-index: 1000;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .full-player.active {
+            display: flex;
+        }
+
+        .full-player img {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .full-player .song-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .full-player .song-info .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .full-player .song-info .artist {
+            font-size: 18px;
+            color: #888;
+        }
+
+        .full-player .progress-bar {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .full-player .progress-bar input {
+            width: 100%;
+        }
+
+        .full-player .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .full-player .controls .btn {
+            background-color: #6200ea;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .full-player .volume-control {
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        .full-player .volume-control input {
+            width: 100%;
+        }
+
+        .full-player .playlist {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .full-player .playlist .song {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #f4f4f4;
+        }
+
+        .full-player .playlist .song img {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .full-player .playlist .song .info {
+            flex: 1;
+        }
+
+        .full-player .playlist .song .info .title {
+            font-weight: bold;
+        }
+
+        .full-player .playlist .song .info .artist {
+            color: #888;
+        }
+
+        .full-player .playlist .song .btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #6200ea;
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #6200ea;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="search-bar">
+    <span class="icon">
+     🔍
+    </span>
+    <input placeholder="Search" type="text"/>
+    <span class="icon">
+     🎤
+    </span>
+   </div>
+  </div>
+  <div class="now-playing-bar">
+   <img alt="Cover of the album 'Electric Dreams'" id="now-playing-art" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6362dcdf-8f55-45b5-bf28-2875e06f312e.png"/>
+   <div class="now-playing-info">
+    <div class="title">
+     Electric Dreams
+    </div>
+    <div class="artist">
+     Synthwave Collective
+    </div>
+   </div>
+   <div class="now-playing-controls">
+    <button class="btn">
+     ⏮️
+    </button>
+    <button class="btn">
+     ⏯️
+    </button>
+    <button class="btn">
+     ⏭️
+    </button>
+   </div>
+  </div>
+  <div class="nav-menu">
+   <div class="nav-item">
+    Home
+   </div>
+   <div class="nav-item">
+    Library
+   </div>
+   <div class="nav-item">
+    Playlists
+   </div>
+   <div class="nav-item">
+    Settings
+   </div>
+  </div>
+  <div class="full-player">
+   <img alt="Cover of the album 'Electric Dreams'" id="full-player-art" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/2df7f6df-3f94-416d-b645-7c3409264564.png"/>
+   <div class="song-info">
+    <div class="title">
+     Electric Dreams
+    </div>
+    <div class="artist">
+     Synthwave Collective
+    </div>
+   </div>
+   <div class="progress-bar">
+    <input max="100" min="0" type="range" value="50"/>
+   </div>
+   <div class="controls">
+    <button class="btn">
+     ⏮️
+    </button>
+    <button class="btn">
+     ⏯️
+    </button>
+    <button class="btn">
+     ⏭️
+    </button>
+   </div>
+   <div class="volume-control">
+    <input max="100" min="0" type="range" value="50"/>
+   </div>
+   <div class="playlist">
+    <div class="song">
+     <img alt="Cover of the song 'Retro Sunset'" id="playlist-song-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/28ccce17-c04b-488a-be8a-919741b3d2ed.png"/>
+     <div class="info">
+      <div class="title">
+       Retro Sunset
+      </div>
+      <div class="artist">
+       Synthwave Collective
+      </div>
+     </div>
+     <button class="btn">
+      ❌
+     </button>
+    </div>
+    <div class="song">
+     <img alt="Cover of the song 'Neon Nights'" id="playlist-song-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/4d23519e-aea7-4938-b580-a63e56436cc1.png"/>
+     <div class="info">
+      <div class="title">
+       Neon Nights
+      </div>
+      <div class="artist">
+       Synthwave Collective
+      </div>
+     </div>
+     <button class="btn">
+      ❌
+     </button>
+    </div>
+    <div class="song">
+     <img alt="Cover of the song 'Cyber City'" id="playlist-song-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/370a939a-66e5-431a-ae91-d2cd4b5d3ea2.png"/>
+     <div class="info">
+      <div class="title">
+       Cyber City
+      </div>
+      <div class="artist">
+       Synthwave Collective
+      </div>
+     </div>
+     <button class="btn">
+      ❌
+     </button>
+    </div>
+   </div>
+  </div>
+  <button class="fab">
+   ➕
+  </button>
+  <script>
+   const nowPlayingBar = document.querySelector('.now-playing-bar');
+        const fullPlayer = document.querySelector('.full-player');
+
+        nowPlayingBar.addEventListener('click', () => {
+            fullPlayer.classList.toggle('active');
+        });
+  </script>
+ </body>
+</html>

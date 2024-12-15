@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Organisational App
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+        }
+        .navbar h1 {
+            font-size: 24px;
+        }
+        .navbar .icons {
+            font-size: 24px;
+        }
+        .tab-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #d32f2f;
+            color: white;
+        }
+        .tab-bar div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tab-bar .active {
+            border-bottom: 3px solid white;
+        }
+        .content {
+            padding: 20px;
+        }
+        .grocery-list, .recipes {
+            display: none;
+        }
+        .grocery-list.active, .recipes.active {
+            display: block;
+        }
+        .grocery-list .category, .recipes .category {
+            margin-bottom: 20px;
+        }
+        .grocery-list .category h2, .recipes .category h2 {
+            font-size: 18px;
+            color: #d32f2f;
+        }
+        .grocery-list .category ul, .recipes .category ul {
+            list-style: none;
+            padding: 0;
+        }
+        .grocery-list .category ul li, .recipes .category ul li {
+            padding: 5px 0;
+        }
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .recipes .recipe-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .recipes .recipe-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="navbar">
+   <h1>
+    Organisational App
+   </h1>
+   <div class="icons">
+    <i class="material-icons">
+     share
+    </i>
+    <i class="material-icons">
+     more_vert
+    </i>
+   </div>
+  </div>
+  <div class="tab-bar">
+   <div class="tab active" onclick="showTab('grocery-list')">
+    Grocery List
+   </div>
+   <div class="tab" onclick="showTab('recipes')">
+    Recipes
+   </div>
+  </div>
+  <div class="content">
+   <div class="grocery-list active">
+    <div class="category">
+     <h2>
+      Vegetables
+     </h2>
+     <ul>
+      <li>
+       Carrots
+      </li>
+      <li>
+       Broccoli
+      </li>
+     </ul>
+    </div>
+    <div class="category">
+     <h2>
+      Fruits
+     </h2>
+     <ul>
+      <li>
+       Apples
+      </li>
+      <li>
+       Bananas
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="recipes">
+    <div class="category">
+     <h2>
+      Recent Raves
+     </h2>
+     <img alt="Recipe Image" class="recipe-image" src=""/>
+     <div class="recipe-title">
+      Delicious Roasted Chicken
+     </div>
+     <img alt="Recipe Image" class="recipe-image" src=""/>
+     <div class="recipe-title">
+      Fruit Punch
+     </div>
+    </div>
+    <div class="category">
+     <h2>
+      By Type
+     </h2>
+     <ul>
+      <li>
+       All
+      </li>
+      <li>
+       Added
+      </li>
+      <li>
+       Favorites
+      </li>
+      <li>
+       Try
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <button class="floating-btn">
+   <i class="material-icons">
+    add
+   </i>
+  </button>
+  <script>
+   function showTab(tabName) {
+            document.querySelectorAll('.tab-bar .tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.content > div').forEach(div => div.classList.remove('active'));
+            document.querySelector(`.tab-bar .tab[onclick="showTab('${tabName}')"]`).classList.add('active');
+            document.querySelector(`.content .${tabName}`).classList.add('active');
+        }
+  </script>
+ </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Organisational App
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .input-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .input-group button {
+            padding: 10px 15px;
+            border: none;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 10px;
+            font-size: 1em;
+        }
+        .input-group button:hover {
+            background: #218838;
+        }
+        .input-group input:invalid {
+            border-color: red;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e9ecef;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul li button {
+            background: #dc3545;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+        ul li button:hover {
+            background: #c82333;
+        }
+        ul li:hover {
+            background: #d6d8db;
+        }
+        .notes {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .category {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Organisational App
+   </h1>
+   <div class="section">
+    <h2>
+     Grocery List
+    </h2>
+    <div class="input-group">
+     <input id="grocery-input" placeholder="Enter grocery item..." required="" type="text"/>
+     <button aria-label="Add grocery item" onclick="addGrocery()">
+      Add
+     </button>
+    </div>
+    <ul id="grocery-list">
+    </ul>
+   </div>
+   <div class="section">
+    <h2>
+     Saved Recipes
+    </h2>
+    <div class="input-group">
+     <input id="recipe-input" placeholder="Enter recipe name..." required="" type="text"/>
+     <button aria-label="Save recipe" onclick="addRecipe()">
+      Save
+     </button>
+    </div>
+    <ul id="recipe-list">
+    </ul>
+   </div>
+  </div>
+  <script>
+   function addGrocery() {
+            const input = document.getElementById('grocery-input');
+            const value = input.value.trim();
+            if (value) {
+                const list = document.getElementById('grocery-list');
+                const li = document.createElement('li');
+                li.innerHTML = `${value} <button onclick="removeItem(this)">Remove</button>`;
+                list.appendChild(li);
+                input.value = '';
+            } else {
+                input.setCustomValidity("Please enter a grocery item.");
+            }
+        }
+
+        function addRecipe() {
+            const input = document.getElementById('recipe-input');
+            const value = input.value.trim();
+            if (value) {
+                const list = document.getElementById('recipe-list');
+                const li = document.createElement('li');
+                li.innerHTML = `${value} <button onclick="removeItem(this)">Remove</button>`;
+                list.appendChild(li);
+                input.value = '';
+            } else {
+                input.setCustomValidity("Please enter a recipe name.");
+            }
+        }
+
+        function removeItem(button) {
+            const li = button.parentElement;
+            li.remove();
+        }
+  </script>
+ </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Organisational App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #d32f2f;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+        .navbar a:hover {
+            background-color: #b71c1c;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+        .grocery-list, .recipe-list {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px;
+        }
+        .grocery-list ul, .recipe-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .grocery-list li, .recipe-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .grocery-list li:last-child, .recipe-list li:last-child {
+            border-bottom: none;
+        }
+        .add-button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .recipe-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .recipe-images img {
+            width: calc(50% - 10px);
+            border-radius: 5px;
+        }
+        .filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .filter-bar select {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Logo" height="30" src="" width="30"/>
+   Organisational App
+  </div>
+  <div class="navbar">
+   <a href="#grocery-list">
+    Grocery List
+   </a>
+   <a href="#recipes">
+    Recipes
+   </a>
+   <a href="#menu-planner">
+    Menu Planner
+   </a>
+   <a href="#activity">
+    Activity
+   </a>
+  </div>
+  <div class="content">
+   <div class="section" id="grocery-list">
+    <h2>
+     Grocery List
+    </h2>
+    <div class="filter-bar">
+     <span>
+      By Department
+     </span>
+     <select>
+      <option value="all">
+       All
+      </option>
+      <option value="vegetables">
+       Vegetables
+      </option>
+      <option value="fruits">
+       Fruits
+      </option>
+      <option value="dairy-eggs">
+       Dairy &amp; Eggs
+      </option>
+      <option value="meats">
+       Meats
+      </option>
+      <option value="seafood">
+       Seafood
+      </option>
+      <option value="breakfast-foods">
+       Cereal &amp; Breakfast Foods
+      </option>
+      <option value="frozen-foods">
+       Frozen Foods &amp; Ice Cream
+      </option>
+      <option value="beverages">
+       Beverages
+      </option>
+      <option value="bakery">
+       Bread &amp; Bakery
+      </option>
+     </select>
+    </div>
+    <div class="grocery-list">
+     <ul>
+      <li>
+       <strong>
+        Breads
+       </strong>
+      </li>
+      <li>
+       Honey wheat berry bread
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="section" id="recipes">
+    <h2>
+     Recipes
+    </h2>
+    <div class="recipe-list">
+     <ul>
+      <li>
+       <strong>
+        All
+       </strong>
+       (1 recipe)
+      </li>
+      <li>
+       <span>
+        Added
+       </span>
+       (0 recipes)
+      </li>
+      <li>
+       <span>
+        Favorites
+       </span>
+       (1 recipe)
+      </li>
+      <li>
+       <span>
+        Try
+       </span>
+       (1 recipe)
+      </li>
+     </ul>
+    </div>
+    <div class="recipe-images">
+     <img alt="Recipe 1" src=""/>
+     <img alt="Recipe 2" src=""/>
+    </div>
+   </div>
+  </div>
+  <button class="add-button">
+   +
+  </button>
+ </body>
+</html>

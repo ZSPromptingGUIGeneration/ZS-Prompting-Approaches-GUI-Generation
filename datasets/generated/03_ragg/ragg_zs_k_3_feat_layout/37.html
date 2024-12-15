@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   News App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+        .header .logo {
+            font-size: 20px;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .nav-tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        .nav-tabs a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .main-content {
+            padding: 20px;
+            background-color: #fff;
+        }
+        .main-content img {
+            width: 100%;
+            height: auto;
+        }
+        .main-content h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .main-content p {
+            color: #666;
+        }
+        .content-feed {
+            padding: 20px;
+        }
+        .article-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .article-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .article-details {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .article-details h2 {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
+        .article-details p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .article-details .timestamp {
+            font-size: 12px;
+            color: #999;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="logo">
+    NewsApp
+   </div>
+   <div class="icons">
+    <i class="fas fa-bars">
+    </i>
+    <i class="fas fa-cog">
+    </i>
+   </div>
+  </div>
+  <div class="nav-tabs">
+   <a href="#">
+    Top Stories
+   </a>
+   <a href="#">
+    Weather
+   </a>
+   <a href="#">
+    Video
+   </a>
+   <a href="#">
+    Sections
+   </a>
+  </div>
+  <div class="main-content">
+   <img alt="Main News" src=""/>
+   <h1>
+    Main News Headline
+   </h1>
+   <p>
+    Main news brief description goes here. This is a brief summary of the main news story.
+   </p>
+  </div>
+  <div class="content-feed">
+   <div class="article-card">
+    <div class="article-details">
+     <h2>
+      Article Headline 1
+     </h2>
+     <p>
+      Snippet of the article goes here. This is a brief summary of the article.
+     </p>
+     <div class="timestamp">
+      2 hours ago
+     </div>
+    </div>
+    <img alt="Thumbnail 1" src=""/>
+   </div>
+   <div class="article-card">
+    <div class="article-details">
+     <h2>
+      Article Headline 2
+     </h2>
+     <p>
+      Snippet of the article goes here. This is a brief summary of the article.
+     </p>
+     <div class="timestamp">
+      3 hours ago
+     </div>
+    </div>
+    <img alt="Thumbnail 2" src=""/>
+   </div>
+   <div class="article-card">
+    <div class="article-details">
+     <h2>
+      Article Headline 3
+     </h2>
+     <p>
+      Snippet of the article goes here. This is a brief summary of the article.
+     </p>
+     <div class="timestamp">
+      5 hours ago
+     </div>
+    </div>
+    <img alt="Thumbnail 3" src=""/>
+   </div>
+  </div>
+  <div class="footer">
+   <i class="fas fa-home">
+   </i>
+   <i class="fas fa-search">
+   </i>
+   <i class="fas fa-user">
+   </i>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+ </body>
+</html>

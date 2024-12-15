@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   News App - Top Stories
+  </title>
+  <style>
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .header {
+      background: linear-gradient(90deg, #333, #555);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+      padding: 10px 0;
+    }
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    .navbar a:hover {
+      background-color: #666;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .story {
+      background-color: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .story img {
+      max-width: 150px;
+      margin-right: 20px;
+      border-radius: 5px;
+    }
+    .story-content {
+      flex: 1;
+    }
+    .story h2 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+    }
+    .story p {
+      margin: 0 0 10px 0;
+      color: #555;
+    }
+    .story .meta {
+      font-size: 14px;
+      color: #777;
+    }
+    .story .read-more {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .story .read-more:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .story {
+        flex-direction: column;
+        align-items: center;
+      }
+      .story img {
+        margin: 0 0 20px 0;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    Top Stories
+   </h1>
+  </div>
+  <div class="navbar">
+   <a href="#">
+    World
+   </a>
+   <a href="#">
+    Sports
+   </a>
+   <a href="#">
+    Technology
+   </a>
+   <a href="#">
+    Business
+   </a>
+  </div>
+  <div class="container">
+   <div class="story">
+    <img alt="Story Image" src=""/>
+    <div class="story-content">
+     <h2>
+      Story Title 1
+     </h2>
+     <p class="meta">
+      By Author Name | Date and Time
+     </p>
+     <p>
+      Summary of the first story...
+     </p>
+     <a class="read-more" href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story Image" src=""/>
+    <div class="story-content">
+     <h2>
+      Story Title 2
+     </h2>
+     <p class="meta">
+      By Author Name | Date and Time
+     </p>
+     <p>
+      Summary of the second story...
+     </p>
+     <a class="read-more" href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story Image" src=""/>
+    <div class="story-content">
+     <h2>
+      Story Title 3
+     </h2>
+     <p class="meta">
+      By Author Name | Date and Time
+     </p>
+     <p>
+      Summary of the third story...
+     </p>
+     <a class="read-more" href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+   <div class="story">
+    <img alt="Story Image" src=""/>
+    <div class="story-content">
+     <h2>
+      Story Title 4
+     </h2>
+     <p class="meta">
+      By Author Name | Date and Time
+     </p>
+     <p>
+      Summary of the fourth story...
+     </p>
+     <a class="read-more" href="#">
+      Read More
+     </a>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <p>
+    Contact Us | Privacy Policy | Follow us on social media
+   </p>
+  </div>
+ </body>
+</html>

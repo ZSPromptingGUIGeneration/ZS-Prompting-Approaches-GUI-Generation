@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Shop Finder
+  </title>
+  <style>
+   body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+        header img {
+            border-radius: 50%;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header h1 {
+            margin: 0;
+            margin-left: 0.5rem;
+        }
+        .container {
+            padding: 1rem;
+            padding-top: 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .search-bar {
+            display: flex;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            box-sizing: border-box;
+        }
+        .search-bar input::placeholder {
+            color: #888;
+        }
+        .search-bar button {
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+        .search-bar .clear-btn {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #888;
+        }
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .filter {
+            flex: 1;
+            min-width: 150px;
+        }
+        .filter label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .filter select, .filter input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .shop-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+        .shop-item {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            margin-bottom: 1rem;
+        }
+        .shop-item:hover {
+            transform: scale(1.02);
+        }
+        .shop-item h3 {
+            margin: 0 0 0.5rem;
+        }
+        .shop-item p {
+            margin: 0.25rem 0;
+        }
+        .shop-item .details {
+            margin-top: 0.5rem;
+        }
+        .shop-item .details p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .shop-item .details .icon {
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .pagination button {
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border: 1px solid #4CAF50;
+            background-color: white;
+            color: #4CAF50;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .pagination button:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .pagination button.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .pagination button.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        .map {
+            margin-top: 1rem;
+        }
+        .map img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .sort-options {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .sort-options select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .user-account {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .user-account button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #4CAF50;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .user-account button:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 600px) {
+            .search-bar, .filters {
+                flex-direction: column;
+            }
+            .filter {
+                min-width: 100%;
+            }
+            .sort-options {
+                justify-content: center;
+            }
+            .user-account {
+                justify-content: center;
+            }
+        }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <div class="logo-title">
+    <h1>
+     Shop Finder
+    </h1>
+   </div>
+   <nav class="nav-links">
+    <a href="#">
+     Home
+    </a>
+    <a href="#">
+     Categories
+    </a>
+    <a href="#">
+     Contact Us
+    </a>
+   </nav>
+  </header>
+  <div class="container">
+   <div class="user-account">
+    <button>
+     Login
+    </button>
+    <button>
+     Register
+    </button>
+   </div>
+   <div class="search-bar">
+    <input placeholder="Enter shop name, category, or location..." type="text"/>
+    <button>
+     Search
+    </button>
+    <button class="clear-btn">
+     ×
+    </button>
+   </div>
+   <div class="filters">
+    <div class="filter">
+     <label for="category">
+      Category
+     </label>
+     <select id="category">
+      <option value="">
+       Select Category
+      </option>
+      <option value="grocery">
+       Grocery
+      </option>
+      <option value="clothing">
+       Clothing
+      </option>
+      <option value="electronics">
+       Electronics
+      </option>
+      <option value="pharmacy">
+       Pharmacy
+      </option>
+      <option value="furniture">
+       Furniture
+      </option>
+     </select>
+    </div>
+    <div class="filter">
+     <label for="distance">
+      Distance
+     </label>
+     <select id="distance">
+      <option value="">
+       Select Distance
+      </option>
+      <option value="5km">
+       Within 5 km
+      </option>
+      <option value="10km">
+       Within 10 km
+      </option>
+      <option value="20km">
+       Within 20 km
+      </option>
+      <option value="50km">
+       Within 50 km
+      </option>
+     </select>
+    </div>
+    <div class="filter">
+     <label for="ratings">
+      Ratings
+     </label>
+     <select id="ratings">
+      <option value="">
+       Select Ratings
+      </option>
+      <option value="4">
+       4 Stars &amp; up
+      </option>
+      <option value="3">
+       3 Stars &amp; up
+      </option>
+      <option value="2">
+       2 Stars &amp; up
+      </option>
+      <option value="1">
+       1 Star &amp; up
+      </option>
+     </select>
+    </div>
+    <div class="filter">
+     <label for="open-hours">
+      Open Hours
+     </label>
+     <select id="open-hours">
+      <option value="">
+       Select Open Hours
+      </option>
+      <option value="open_now">
+       Open Now
+      </option>
+      <option value="24_hours">
+       24 Hours
+      </option>
+     </select>
+    </div>
+    <div class="filter">
+     <label for="price-range">
+      Price Range
+     </label>
+     <select id="price-range">
+      <option value="">
+       Select Price Range
+      </option>
+      <option value="low">
+       Low
+      </option>
+      <option value="medium">
+       Medium
+      </option>
+      <option value="high">
+       High
+      </option>
+     </select>
+    </div>
+   </div>
+   <div class="sort-options">
+    <label for="sort-by">
+     Sort By:
+    </label>
+    <select id="sort-by">
+     <option value="most_popular">
+      Most Popular
+     </option>
+     <option value="highest_rated">
+      Highest Rated
+     </option>
+     <option value="nearest">
+      Nearest
+     </option>
+    </select>
+   </div>
+   <ul class="shop-list">
+    <li class="shop-item">
+     <h3>
+      Green Grocers
+     </h3>
+     <p>
+      123 Market Street, Cityville
+     </p>
+     <div class="details">
+      <p>
+       <i class="fas fa-phone icon">
+       </i>
+       Contact: 123-456-7890
+      </p>
+      <p>
+       <i class="fas fa-clock icon">
+       </i>
+       Open Hours: 8 AM - 8 PM
+      </p>
+      <p>
+       <i class="fas fa-credit-card icon">
+       </i>
+       Payment Methods: Cash, Credit Card, Mobile Payment
+      </p>
+      <p>
+       Description: A popular grocery store known for fresh produce and friendly service.
+      </p>
+     </div>
+     <div class="map">
+      <img alt="Map of Green Grocers' location" id="map-image-1" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/aca9f424-6272-4687-9be8-adaa9518e1f8.png"/>
+     </div>
+    </li>
+    <li class="shop-item">
+     <h3>
+      Fashion Hub
+     </h3>
+     <p>
+      456 Style Avenue, Trendtown
+     </p>
+     <div class="details">
+      <p>
+       <i class="fas fa-phone icon">
+       </i>
+       Contact: 987-654-3210
+      </p>
+      <p>
+       <i class="fas fa-clock icon">
+       </i>
+       Open Hours: 10 AM - 9 PM
+      </p>
+      <p>
+       <i class="fas fa-credit-card icon">
+       </i>
+       Payment Methods: Cash, Credit Card, Mobile Payment
+      </p>
+      <p>
+       Description: A trendy clothing store offering the latest fashion for all ages.
+      </p>
+     </div>
+     <div class="map">
+      <img alt="Map of Fashion Hub's location" id="map-image-2" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/6cf4e307-223f-46be-9e26-72bdc63c7cd7.png"/>
+     </div>
+    </li>
+    <li class="shop-item">
+     <h3>
+      Tech World
+     </h3>
+     <p>
+      789 Innovation Drive, Tech City
+     </p>
+     <div class="details">
+      <p>
+       <i class="fas fa-phone icon">
+       </i>
+       Contact: 555-123-4567
+      </p>
+      <p>
+       <i class="fas fa-clock icon">
+       </i>
+       Open Hours: 9 AM - 9 PM
+      </p>
+      <p>
+       <i class="fas fa-credit-card icon">
+       </i>
+       Payment Methods: Cash, Credit Card, Mobile Payment
+      </p>
+      <p>
+       Description: Your one-stop shop for the latest electronics and gadgets.
+      </p>
+     </div>
+     <div class="map">
+      <img alt="Map of Tech World's location" id="map-image-3" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/e06f638d-7b2e-41af-9b14-ce8ccffac291.png"/>
+     </div>
+    </li>
+    <li class="shop-item">
+     <h3>
+      Health Pharmacy
+     </h3>
+     <p>
+      321 Wellness Way, Healthtown
+     </p>
+     <div class="details">
+      <p>
+       <i class="fas fa-phone icon">
+       </i>
+       Contact: 111-222-3333
+      </p>
+      <p>
+       <i class="fas fa-clock icon">
+       </i>
+       Open Hours: 24 Hours
+      </p>
+      <p>
+       <i class="fas fa-credit-card icon">
+       </i>
+       Payment Methods: Cash, Credit Card, Mobile Payment
+      </p>
+      <p>
+       Description: A 24-hour pharmacy providing a wide range of health products and services.
+      </p>
+     </div>
+     <div class="map">
+      <img alt="Map of Health Pharmacy's location" id="map-image-4" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/c5ab0d7c-8331-47ab-b457-d1885709fa75.png"/>
+     </div>
+    </li>
+    <li class="shop-item">
+     <h3>
+      Home Comforts Furniture
+     </h3>
+     <p>
+      654 Comfort Lane, Homestead
+     </p>
+     <div class="details">
+      <p>
+       <i class="fas fa-phone icon">
+       </i>
+       Contact: 444-555-6666
+      </p>
+      <p>
+       <i class="fas fa-clock icon">
+       </i>
+       Open Hours: 10 AM - 8 PM
+      </p>
+      <p>
+       <i class="fas fa-credit-card icon">
+       </i>
+       Payment Methods: Cash, Credit Card, Mobile Payment
+      </p>
+      <p>
+       Description: A furniture store offering a wide range of home furnishings and decor.
+      </p>
+     </div>
+     <div class="map">
+      <img alt="Map of Home Comforts Furniture's location" id="map-image-5" src="https://hacks-generated-images.s3.eu-central-1.amazonaws.com/23762ce2-17dd-4288-a1b4-a9977b53017f.png"/>
+     </div>
+    </li>
+   </ul>
+   <div class="pagination">
+    <button class="disabled">
+     First
+    </button>
+    <button class="disabled">
+     Previous
+    </button>
+    <button class="active">
+     1
+    </button>
+    <button>
+     2
+    </button>
+    <button>
+     3
+    </button>
+    <button>
+     Next
+    </button>
+    <button>
+     Last
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

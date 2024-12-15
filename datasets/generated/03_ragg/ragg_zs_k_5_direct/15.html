@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Recipe App
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            color: #ff5722;
+            margin: 0;
+        }
+        .header .menu, .header .search, .header .filter {
+            font-size: 24px;
+            color: #ff5722;
+        }
+        .tab-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #4caf50;
+            color: #fff;
+        }
+        .tab-bar div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tab-bar .active {
+            border-bottom: 4px solid #fff;
+        }
+        .recipes {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .recipe-card {
+            background-color: #fff;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: calc(50% - 20px);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: auto;
+        }
+        .recipe-info {
+            padding: 10px;
+        }
+        .recipe-info h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .recipe-info p {
+            margin: 5px 0;
+            color: #757575;
+        }
+        .recipe-time {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+        .footer {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+        .footer div {
+            text-align: center;
+            color: #757575;
+        }
+        .footer .active {
+            color: #4caf50;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu">
+    ☰
+   </div>
+   <h1>
+    Recipes
+   </h1>
+   <div class="search">
+    🔍
+   </div>
+   <div class="filter">
+    ⚙️
+   </div>
+  </div>
+  <div class="tab-bar">
+   <div class="active">
+    Home
+   </div>
+   <div>
+    Favourites
+   </div>
+   <div>
+    Featured
+   </div>
+  </div>
+  <div class="recipes">
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="recipe-time">
+     15 min
+    </div>
+    <div class="recipe-info">
+     <h2>
+      Breakfast Blueberry-Oatmeal Cakes
+     </h2>
+     <p>
+      Servings: 6
+     </p>
+     <p>
+      6 oz / 150 kcal
+     </p>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="recipe-time">
+     180 min
+    </div>
+    <div class="recipe-info">
+     <h2>
+      THM Chili
+     </h2>
+     <p>
+      Servings: 8
+     </p>
+     <p>
+      19 oz / 511 kcal
+     </p>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="recipe-time">
+     15 min
+    </div>
+    <div class="recipe-info">
+     <h2>
+      Veggie Omelette
+     </h2>
+     <p>
+      Servings: 1
+     </p>
+     <p>
+      25 oz / 459 kcal
+     </p>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="recipe-time">
+     6 min
+    </div>
+    <div class="recipe-info">
+     <h2>
+      Bacon, Egg, and Cheese Sandwich
+     </h2>
+     <p>
+      Servings: 2
+     </p>
+     <p>
+      5 oz / 443 kcal
+     </p>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="recipe-time">
+     0 min
+    </div>
+    <div class="recipe-info">
+     <h2>
+      Shredded Chicken Tacos
+     </h2>
+     <p>
+      Servings: 4
+     </p>
+     <p>
+      5 oz / 295 kcal
+     </p>
+    </div>
+   </div>
+   <div class="recipe-card">
+    <img alt="Recipe Image" src=""/>
+    <div class="recipe-time">
+     1 min
+    </div>
+    <div class="recipe-info">
+     <h2>
+      Snack 5
+     </h2>
+     <p>
+      Servings: 1
+     </p>
+     <p>
+      7 oz / 70 kcal
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <div class="active">
+    Home
+   </div>
+   <div>
+    Shop
+   </div>
+   <div>
+    Favourites
+   </div>
+   <div>
+    My Account
+   </div>
+  </div>
+ </body>
+</html>
