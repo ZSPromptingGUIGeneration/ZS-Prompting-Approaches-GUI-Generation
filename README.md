@@ -1,5 +1,7 @@
 # Zero-Shot Prompting Approaches for LLM-based Graphical User Interface Generation
 
+[![DOI](https://zenodo.org/badge/903904399.svg)](https://doi.org/10.5281/zenodo.14497967)
+
 The supplementary material of our paper **"Zero-Shot Prompting Approaches for LLM-based Graphical User Interface Generation"** is structured as follows:
 
 - **datasets**: This directory contains dataset for binary relevance annotations, the criteria used to rate GUI descriptions, the generated GUI HTML/CSS files for all the different ZS prompting approaches, the LLM-generated GUI re-rankings on the gold standard with different temperature settings, the FP analysis of the LLM-based binary relevance filtering, the annotation results of the Rico GUI samples, our official split of validation and test GUI description data and the main evaluation dataset containing all model and GUI description combinations that we annotated in Prolific
